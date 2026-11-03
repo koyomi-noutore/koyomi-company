@@ -1,4 +1,5 @@
-"""見本の画面（1920×1080）を組み立てる：左に元の絵、右に間違いのある絵、右下にこよみ先生。
+"""使い方: python3 scripts/compose_sample.py <出力フォルダ> <diffs.json>（NODE_PATH に Playwright が必要）
+見本の画面（1920×1080）を組み立てる：左に元の絵、右に間違いのある絵、右下にこよみ先生。
 文字は入れない（字幕は動画側で入れる）。答えの画面には円を描く。"""
 import json, sys
 from pathlib import Path
@@ -40,5 +41,9 @@ def compose(out_dir, diffs):
     ans = [{"id": d["id"], "level": d["level"], "label": d["label"], "box_px": d["box"],
             "box_ratio": [round(d["box"][0] / a.width, 4), round(d["box"][1] / a.height, 4),
                           round(d["box"][2] / a.width, 4), round(d["box"][3] / a.height, 4)],
-            "screen_width_pct": round((d["box"][2] - d["box"][0]) * scale / W * 100, 1)} for d in diffs]
+            "box_screen_width_pct": round((d["box"][2] - d["box"][0]) * scale / W * 100, 1)} for d in diffs]
     (out / "answers.json").write_text(json.dumps({"image_size": a.size, "answers": ans}, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+if __name__ == "__main__":
+    compose(sys.argv[1], json.load(open(sys.argv[2], encoding="utf-8")))
