@@ -28,10 +28,11 @@ DIFFS = [
     {"id": 2, "level": "ふつう", "label": "灯籠の前の紅葉の若木がない", "box": [840, 650, 1120, 880], "mode": "full",
      "prompt": "Edit this illustration: remove the small red maple sapling standing in front of and to the left of the stone "
                "lantern, showing the green bushes and grass behind it. Do not change the stone lantern."},
-    {"id": 3, "level": "むずかしい", "label": "猫のしっぽがない", "box": [1160, 1060, 1400, 1190], "feather": 16, "mode": "crop",
-     "prompt": "Edit this close-up of a picture-book illustration: completely remove the striped tail of the sleeping calico "
-               "cat. The bottom of the cat's white body should end in one clean dark outline, and the purple flower-patterned "
-               "cushion should continue where the tail was. Do not change the cat's face, paws or body pattern."},
+    # ③は crop だと形が残って白く塗られるだけだった（再審査1で不合格）。full で描き直し、
+    # 範囲の左端をしっぽの先より外へ広げて、ぼかしで元のしっぽが透けないようにした。
+    {"id": 3, "level": "むずかしい", "label": "猫のしっぽがない", "box": [1135, 1050, 1400, 1192], "feather": 16, "mode": "full",
+     "prompt": "Edit this illustration: remove the striped tail of the sleeping calico cat, so the cat has no visible tail; "
+               "show the patterned cushion where the tail was. Do not change anything else about the cat."},
 ]
 
 
