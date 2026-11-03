@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>こよみ先生 表情集</title>
+<style>
+  :root { --bg:#f6f1e7; --ink:#3b2f25; --sub:#6b5b4b; --card:#fffaf0; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family:"Hiragino Sans","Noto Sans JP",sans-serif; }
+  main { max-width:1000px; margin:0 auto; padding:24px 16px 48px; }
+  h1 { font-size:22px; margin:0 0 4px; }
+  p.note { color:var(--sub); margin:0 0 16px; font-size:14px; line-height:1.7; }
+  .faces { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  figure { margin:0; background:var(--card); border-radius:12px; padding:8px; box-shadow:0 1px 3px rgba(0,0,0,.08); }
+  figcaption { text-align:center; font-size:14px; color:var(--sub); padding-top:6px; }
+  svg { width:100%; height:auto; display:block; }
+  @media (max-width:700px){ .faces{grid-template-columns:repeat(2,1fr);} }
+</style>
+</head>
+<body>
+<main>
+  <h1>こよみ先生 表情集</h1>
+  <p class="note">最初の案と同じ、すっきりした線と塗りで描いています。合いの手の場面に合わせて使い分けます。</p>
+  <div class="faces" id="faces"></div>
+</main>
+<script>
+const INK = '#3b2f25';
+const BODY = '#b08a5f', BELLY = '#f3e3c3', BEAK = '#f0a830';
+const S = `stroke="${INK}" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"`;
+const L = `fill="none" stroke="${INK}" stroke-width="5" stroke-linecap="round"`;
+
+const pupil = (x, y, r) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${INK}"/><circle cx="${x+3}" cy="${y-4}" r="${Math.max(2, r/3.3)}" fill="#fff"/>`;
+const closed = (x, y) => `<path d="M${x-12} ${y+3} q12 -13 24 0" ${L}/>`;
+
+const FACES = {
+  normal: {
+    label: 'ふつう（出題）',
+    eyes: pupil(96,112,10) + pupil(144,112,10),
+  },
+  smile: {
+    label: 'にっこり（正解・ほめる）',
+    eyes: closed(92,110) + closed(148,110),
+    beak: `<path d="M108 132 L132 132 Q120 156 108 132Z" fill="${BEAK}" ${S}/><path d="M113 137 q7 7 14 0" fill="#d9534f"/>`,
+    cheeks: true,
+  },
+  surprise: {
+    label: 'びっくり（難問・発見）',
+    eyes: pupil(92,110,14) + pupil(148,110,14),
+    brow: `<path d="M74 68 q18 -10 36 0 M130 68 q18 -10 36 0" ${L}/>`,
+    beak: `<ellipse cx="120" cy="142" rx="9" ry="12" fill="${BEAK}" ${S}/><ellipse cx="120" cy="145" rx="4" ry="6" fill="#8c3b2e"/>`,
+    extra: `<path d="M206 34 v28" stroke="${INK}" stroke-width="7" stroke-linecap="round"/><circle cx="206" cy="76" r="4" fill="${INK}"/>`,
+  },
+  think: {
+    label: 'かんがえ中（考える時間）',
+    eyes: pupil(100,104,9) + pupil(152,104,9),
+    brow: `<path d="M76 76 q16 6 32 0 M132 74 q16 -8 32 2" ${L}/>`,
+    wing: `<path d="M184 170 C170 150 146 150 136 160 C144 174 166 180 184 170Z" fill="${BODY}" ${S}/>`,
+    extra: `<text x="190" y="66" font-size="40" font-weight="700" fill="${INK}" font-family="sans-serif">？</text>`,
+  },
+  wink: {
+    label: 'ウインク（ヒント）',
+    eyes: pupil(96,112,10) + closed(148,110),
+    beak: `<path d="M110 132 L130 132 L122 148Z" fill="${BEAK}" ${S}/>`,
+    extra: `<path d="M196 50 l5 10 l10 4 l-10 4 l-5 10 l-5 -10 l-10 -4 l10 -4z" fill="#f2c94c" ${S}/>`,
+    cheeks: true,
+  },
+  yay: {
+    label: 'やったー（全問終了）',
+    eyes: closed(92,110) + closed(148,110),
+    beak: `<path d="M108 132 L132 132 Q120 156 108 132Z" fill="${BEAK}" ${S}/><path d="M113 137 q7 7 14 0" fill="#d9534f"/>`,
+    wingsUp: true,
+    cheeks: true,
+    extra: `<path d="M26 40 l6 12 l12 6 l-12 6 l-6 12 l-6 -12 l-12 -6 l12 -6z M212 28 l5 10 l10 5 l-10 5 l-5 10 l-5 -10 l-10 -5 l10 -5z" fill="#f2c94c" ${S}/>`,
+  },
+};
+
+function fuku(key) {
+  const f = FACES[key];
+  const wingsUp = f.wingsUp
+    ? `<path d="M52 150 C22 126 22 86 38 72 C52 98 62 122 64 150Z M188 150 C218 126 218 86 202 72 C188 98 178 122 176 150Z" fill="${BODY}" ${S}/>`
+    : '';
+  const beak = f.beak || `<path d="M110 132 L120 148 L130 132Z" fill="${BEAK}" ${S}/>`;
+  const cheeks = f.cheeks
+    ? `<ellipse cx="70" cy="140" rx="10" ry="6" fill="#f2a0a0" fill-opacity=".7"/><ellipse cx="170" cy="140" rx="10" ry="6" fill="#f2a0a0" fill-opacity=".7"/>`
+    : '';
+  return `<svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="こよみ先生 ${f.label}">
+    ${wingsUp}
+    <ellipse cx="120" cy="140" rx="78" ry="86" fill="${BODY}" ${S}/>
+    <ellipse cx="120" cy="165" rx="50" ry="52" fill="${BELLY}" ${S}/>
+    <path d="M56 80 L70 46 L92 70Z M184 80 L170 46 L148 70Z" fill="${BODY}" ${S}/>
+    <circle cx="92" cy="110" r="26" fill="#fff" ${S}/><circle cx="148" cy="110" r="26" fill="#fff" ${S}/>
+    ${f.eyes}
+    <path d="M66 112 h-12 M174 112 h12" ${S}/>
+    <circle cx="92" cy="110" r="32" fill="none" stroke="${INK}" stroke-width="4"/>
+    <circle cx="148" cy="110" r="32" fill="none" stroke="${INK}" stroke-width="4"/>
+    <path d="M124 110 h-8" ${S}/>
+    ${f.brow || ''}${beak}${cheeks}${f.wing || ''}${f.extra || ''}
+  </svg>`;
+}
+
+document.getElementById('faces').innerHTML = Object.keys(FACES)
+  .map(k => `<figure>${fuku(k)}<figcaption>${FACES[k].label}</figcaption></figure>`).join('');
+</script>
+</body>
+</html>

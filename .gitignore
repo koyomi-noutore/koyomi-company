@@ -218,3 +218,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# 認証情報は絶対にコミットしない
+client_secret*.json
+token*.json
+*.secret
