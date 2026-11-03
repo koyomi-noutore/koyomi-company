@@ -10,6 +10,9 @@
 import base64, hashlib, json, os, secrets, sys, urllib.parse, urllib.request
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).parent))
+from credentials import youtube_client, youtube_refresh_token
+
 SCOPES = ["https://www.googleapis.com/auth/youtube.upload",      # 非公開アップロード
           "https://www.googleapis.com/auth/youtube.readonly",    # 自分のチャンネル・動画の確認
           "https://www.googleapis.com/auth/yt-analytics.readonly"]  # 分析部用
@@ -19,16 +22,7 @@ STATE, TOKEN = DIR / "oauth_state.json", DIR / "youtube_token.json"
 
 
 def client():
-    raw = os.environ.get("YOUTUBE_CLIENT_SECRET_JSON")
-    if not raw:
-        sys.exit("YOUTUBE_CLIENT_SECRET_JSON が設定されていません")
-    try:
-        d = json.loads(raw)
-    except json.JSONDecodeError:
-        # よくある崩れ：{"installed":"client_id":...}} のように内側の { が欠けている
-        d = json.loads(raw.replace('":"', '":{"', 1))
-        print("注意: YOUTUBE_CLIENT_SECRET_JSON の形が崩れていたので、読み込み時に補正しました。", file=sys.stderr)
-    return d.get("installed") or d.get("web")
+    return youtube_client()
 
 
 def save(path, data):
@@ -47,7 +41,7 @@ def post(url, data):
 
 
 def access_token():
-    rt = os.environ.get("YOUTUBE_REFRESH_TOKEN") or (json.loads(TOKEN.read_text())["refresh_token"] if TOKEN.exists() else None)
+    rt = youtube_refresh_token(str(TOKEN))
     if not rt:
         sys.exit("まだログインしていません（url → exchange を先に）")
     c = client()

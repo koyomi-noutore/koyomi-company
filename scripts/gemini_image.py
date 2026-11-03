@@ -1,15 +1,17 @@
 """Gemini画像APIの小さなラッパー。キーは環境変数 GEMINI_API_KEY からだけ読む。"""
 import base64, io, json, os, sys, urllib.request
+from pathlib import Path
 from PIL import Image
+
+sys.path.insert(0, str(Path(__file__).parent))
+from credentials import gemini_key
 
 API = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 DEFAULT_MODEL = "gemini-3-pro-image"
 
 
 def generate(prompt, images=(), model=DEFAULT_MODEL, aspect="16:9", size="2K"):
-    key = os.environ.get("GEMINI_API_KEY")
-    if not key:
-        sys.exit("GEMINI_API_KEY が設定されていません")
+    key = gemini_key()
     parts = [{"text": prompt}]
     for im in images:
         buf = io.BytesIO(); im.convert("RGB").save(buf, "PNG")
