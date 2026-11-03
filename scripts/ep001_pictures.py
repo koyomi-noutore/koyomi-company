@@ -172,14 +172,36 @@ def retry(q, ver, work):
     return ed
 
 
+def green_keep_mask(a, rect, ellipse):
+    """緑の薬味のような小さな物を、色で形どおりに切り抜くマスク（楕円の中だけ）。元の絵のまま残すのに使う。"""
+    import numpy as np
+    from PIL import ImageDraw, ImageFilter
+    A = np.asarray(a.crop(rect)).astype(int)
+    R, G, B = A[..., 0], A[..., 1], A[..., 2]
+    m = Image.fromarray(((G > B + 25) & (G > R - 15)).astype("uint8") * 255)
+    m = m.filter(ImageFilter.MaxFilter(9)).filter(ImageFilter.MinFilter(5)).filter(ImageFilter.MaxFilter(5))  # 穴を埋め、輪郭線まで含める
+    el = Image.new("L", m.size, 0)
+    ImageDraw.Draw(el).ellipse([ellipse[0] - rect[0], ellipse[1] - rect[1], ellipse[2] - rect[0], ellipse[3] - rect[1]], fill=255)
+    m = ImageChops.multiply(m, el).filter(ImageFilter.GaussianBlur(1.5))
+    full = Image.new("L", a.size, 0); full.paste(m, rect[:2])
+    return full
+
+
 def compose(q, work, out_dir):
     a = Image.open(Path(work) / f"q{q}_a.png").convert("RGB")
     b = a.copy()
     for d in QUESTIONS[q]["diffs"]:
         ed = Image.open(Path(work) / f"edit_{q}_{d.get('src', '1')}.png").convert("RGB")
-        m = feather_mask(a.size, d["box"], d.get("feather", 24))
-        for k in d.get("keep", []):  # 範囲の中でも、描き直しで消えてしまった物（湯気など）は元の絵のまま残す
+        f = d.get("feather", 24)
+        mb = list(d["box"])  # 絵の端に接する範囲は、ぼかしで端が薄くならないよう外へ広げてマスクを作る
+        for i, lim in ((0, 0), (1, 0), (2, a.size[0]), (3, a.size[1])):
+            if mb[i] == lim:
+                mb[i] += -3 * f if i < 2 else 3 * f
+        m = feather_mask(a.size, mb, f)
+        for k in d.get("keep", []):  # 範囲の中でも、描き直しで消えてしまった物は元の絵のまま残す
             m = ImageChops.subtract(m, feather_mask(a.size, k, 16))
+        if "keep_green" in d:
+            m = ImageChops.subtract(m, green_keep_mask(a, **d["keep_green"]))
         b = Image.composite(ed, b, m)
     out = Path(out_dir); out.mkdir(parents=True, exist_ok=True)
     a.save(out / f"q{q}_a.png"); b.save(out / f"q{q}_b.png")

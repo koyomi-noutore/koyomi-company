@@ -349,7 +349,7 @@
    "scene": "台所",
    "level": "中級",
    "hint_diff": 2,
-   "outside_box_pixels_diff_gt15": 2804,
+   "outside_box_pixels_diff_gt15": 2761,
    "outside_box_max_distance_px": 16.0,
    "answers": [
     {
@@ -389,35 +389,35 @@
     {
      "id": 2,
      "type": "向きが変わる",
-     "label": "やかんの口が右向き",
+     "label": "やかんの口が右向き（湯気もない）",
      "line": "やかんの口が、反対を向いています。",
      "box_px": [
-      180,
-      640,
+      0,
+      470,
       545,
       975
      ],
      "circle_a_px": [
-      180,
-      640,
+      20,
+      500,
       545,
       975
      ],
      "circle_b_px": [
-      180,
-      640,
+      20,
+      500,
       545,
       975
      ],
      "box_ratio": [
-      0.0654,
-      0.4167,
+      0.0,
+      0.306,
       0.198,
       0.6348
      ],
      "object_width_px": 293,
      "object_screen_width_pct": 5.2,
-     "box_screen_width_pct": 6.5,
+     "box_screen_width_pct": 9.7,
      "edit_version": "1"
     },
     {

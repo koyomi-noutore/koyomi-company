@@ -9,7 +9,7 @@ import json, math, subprocess, sys
 from functools import lru_cache
 from multiprocessing import Pool
 from pathlib import Path
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
+from PIL import Image, ImageChops, ImageDraw, ImageFont, ImageFilter
 sys.path.insert(0, str(Path(__file__).parent))
 import ep001_timeline as T
 
@@ -232,14 +232,24 @@ def answer_boxes(q, side="b"):
     return out
 
 
-def draw_circle(d, x, box, num, k=1.0):
+def circle_geom(x, box, k=1.0):
     x0, y0, x1, y1 = box
     cx, cy = x + (x0 + x1) / 2, TOP + (y0 + y1) / 2
     rx, ry = ((x1 - x0) / 2 + 10) * k, ((y1 - y0) / 2 + 10) * k
+    return cx, cy, rx, ry
+
+
+def draw_circle(d, x, box, k=1.0):
+    cx, cy, rx, ry = circle_geom(x, box, k)
     d.ellipse((cx - rx - 3, cy - ry - 3, cx + rx + 3, cy + ry + 3), outline=(255, 255, 255), width=14)
     d.ellipse((cx - rx, cy - ry, cx + rx, cy + ry), outline=RED, width=8)
+
+
+def draw_badge(d, x, box, num, k=1.0):
+    """番号札。赤丸の線に隠れないよう、赤丸を全部描いたあとに描く（監査の差し戻し(2)）。"""
+    cx, cy, rx, ry = circle_geom(x, box, k)
     bx, by = cx - rx * 0.71 - 4, cy - ry * 0.71 - 4
-    bx, by = max(x + 26, bx), max(TOP + 26, by)
+    bx, by = min(max(x + 26, bx), x + IW - 26), min(max(TOP + 26, by), TOP + IH - 26)
     d.ellipse((bx - 24, by - 24, bx + 24, by + 24), fill=RED, outline=(255, 255, 255), width=3)
     d.text((bx, by + 1), str(num), font=font(34), fill=(255, 255, 255), anchor="mm")
 
@@ -272,24 +282,32 @@ def render_question(q, t):
     else:
         text_center(d, (1290, 56), "答え合わせ", 60, fill=RED)
         times = ans_times(q)
+        shown = []
         for x, side in zip(XS, "ab"):
             for i, (ta, b) in enumerate(zip(times, answer_boxes(q, side))):
                 if t >= ta:
-                    k = 1.0 + 0.35 * (1 - ease((t - ta) / 0.3))
-                    draw_circle(d, x, b, i + 1, k)
+                    shown.append((x, b, i + 1, 1.0 + 0.35 * (1 - ease((t - ta) / 0.3))))
+        for x, b, n, k in shown:   # 先に赤丸を全部
+            draw_circle(d, x, b, k)
+        for x, b, n, k in shown:   # 最後に番号札をまとめて
+            draw_badge(d, x, b, n, k)
     return im
 
 
 def draw_hint(im, q, dt):
     Q = CTX["answers"][q]
     b = answer_boxes(q)[Q["hint_diff"] - 1]
+    # 輪は答えの赤丸より一回り大きいだけにし、絵の外にはみ出した分は描かない（監査の指摘）
     cx, cy = XS[1] + (b[0] + b[2]) / 2, TOP + (b[1] + b[3]) / 2
-    r = max(b[2] - b[0], b[3] - b[1]) * 1.0 + 70
+    rx, ry = (b[2] - b[0]) / 2 * 1.15 + 22, (b[3] - b[1]) / 2 * 1.15 + 22
     a = min(1.0, dt / 0.6, (7.0 - dt) / 0.8) * (0.75 + 0.25 * math.sin(dt * 5))
     layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     ld = ImageDraw.Draw(layer)
-    ld.ellipse((cx - r, cy - r, cx + r, cy + r), outline=(255, 214, 60, int(230 * a)), width=16)
-    layer = layer.filter(ImageFilter.GaussianBlur(5))
+    ld.ellipse((cx - rx, cy - ry, cx + rx, cy + ry), outline=(255, 214, 60, int(230 * a)), width=12)
+    layer = layer.filter(ImageFilter.GaussianBlur(4))
+    clip = Image.new("L", (W, H), 0)
+    ImageDraw.Draw(clip).rectangle((XS[1], TOP, XS[1] + IW - 1, TOP + IH - 1), fill=255)
+    layer.putalpha(ImageChops.multiply(layer.getchannel("A"), clip))
     im.paste(layer, (0, 0), layer)
 
 
@@ -299,10 +317,11 @@ def card_img(q):
     col = LEVEL_COLOR[Q["level"]]
     im = Image.new("RGB", (W, H), BG)
     d = ImageDraw.Draw(im)
-    d.rounded_rectangle((330, 150, 1590, 830), 60, fill=(255, 250, 238), outline=col, width=16)
-    text_center(d, (960, 320), f"第{q}問", 190, fill=col)
-    text_center(d, (960, 530), f"{Q['level']}　{LEVEL_STARS[Q['level']]}", 120)
-    text_center(d, (960, 710), Q["scene"], 120)
+    # こよみ先生（x1500〜）にかからないよう、カードは左寄せ（監査の指摘）
+    d.rounded_rectangle((200, 150, 1440, 830), 60, fill=(255, 250, 238), outline=col, width=16)
+    text_center(d, (820, 320), f"第{q}問", 190, fill=col)
+    text_center(d, (820, 530), f"{Q['level']}　{LEVEL_STARS[Q['level']]}", 120)
+    text_center(d, (820, 710), Q["scene"], 120)
     return im
 
 
