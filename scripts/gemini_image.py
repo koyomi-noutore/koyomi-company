@@ -10,6 +10,21 @@ API = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateC
 DEFAULT_MODEL = "gemini-3-pro-image"
 
 
+USAGE_LOG = os.environ.get("KOYOMI_IMAGE_USAGE_LOG")  # 例：outputs/<回>/image_usage.jsonl（費用の記録用）
+
+
+def _log_usage(model, size, usage):
+    """1回の呼び出しごとに、モデル・サイズ・トークン数を記録する（キーは書かない）。"""
+    if not USAGE_LOG:
+        return
+    import datetime
+    rec = {"time": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"), "model": model, "size": size,
+           "prompt_tokens": usage.get("promptTokenCount"), "output_tokens": usage.get("candidatesTokenCount"),
+           "total_tokens": usage.get("totalTokenCount")}
+    with open(USAGE_LOG, "a", encoding="utf-8") as f:
+        f.write(json.dumps(rec) + "\n")
+
+
 def generate(prompt, images=(), model=DEFAULT_MODEL, aspect="16:9", size="2K"):
     key = gemini_key()
     parts = [{"text": prompt}]
@@ -24,6 +39,7 @@ def generate(prompt, images=(), model=DEFAULT_MODEL, aspect="16:9", size="2K"):
                                  headers={"Content-Type": "application/json", "x-goog-api-key": key})
     with urllib.request.urlopen(req, timeout=300) as r:
         res = json.load(r)
+    _log_usage(model, size, res.get("usageMetadata", {}))
     for p in res["candidates"][0]["content"]["parts"]:
         d = p.get("inlineData") or p.get("inline_data")
         if d:
