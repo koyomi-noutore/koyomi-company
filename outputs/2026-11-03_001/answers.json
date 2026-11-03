@@ -1,0 +1,572 @@
+{
+ "image_size": [
+  2752,
+  1536
+ ],
+ "screen": {
+  "picture_width_px": 940,
+  "screen_width_px": 1920
+ },
+ "questions": [
+  {
+   "q": 1,
+   "scene": "縁側",
+   "level": "初級",
+   "hint_diff": 1,
+   "outside_box_pixels_diff_gt15": 1226,
+   "outside_box_max_distance_px": 14.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "消える",
+     "label": "急須がない",
+     "line": "急須がなくなっています。",
+     "box_px": [
+      700,
+      980,
+      1035,
+      1225
+     ],
+     "circle_a_px": [
+      700,
+      995,
+      1030,
+      1215
+     ],
+     "circle_b_px": [
+      700,
+      995,
+      1030,
+      1215
+     ],
+     "box_ratio": [
+      0.2544,
+      0.638,
+      0.3761,
+      0.7975
+     ],
+     "object_width_px": 284,
+     "object_screen_width_pct": 5.1,
+     "box_screen_width_pct": 6.0,
+     "edit_version": "1"
+    },
+    {
+     "id": 2,
+     "type": "増える",
+     "label": "かごに柿がいっぱい",
+     "line": "かごに、柿がいっぱい。",
+     "box_px": [
+      1475,
+      690,
+      1915,
+      1050
+     ],
+     "circle_a_px": [
+      1475,
+      690,
+      1915,
+      1050
+     ],
+     "circle_b_px": [
+      1475,
+      690,
+      1915,
+      1050
+     ],
+     "box_ratio": [
+      0.536,
+      0.4492,
+      0.6959,
+      0.6836
+     ],
+     "object_width_px": 373,
+     "object_screen_width_pct": 6.6,
+     "box_screen_width_pct": 7.8,
+     "edit_version": "1"
+    },
+    {
+     "id": 3,
+     "type": "形が変わる",
+     "label": "ねこが目をさます",
+     "line": "ねこちゃんが、目をさましましたね。",
+     "box_px": [
+      995,
+      870,
+      1445,
+      1150
+     ],
+     "circle_a_px": [
+      1000,
+      880,
+      1260,
+      1135
+     ],
+     "circle_b_px": [
+      1000,
+      880,
+      1260,
+      1135
+     ],
+     "box_ratio": [
+      0.3616,
+      0.5664,
+      0.5251,
+      0.7487
+     ],
+     "object_width_px": 413,
+     "object_screen_width_pct": 7.3,
+     "box_screen_width_pct": 8.0,
+     "edit_version": "1"
+    }
+   ]
+  },
+  {
+   "q": 2,
+   "scene": "商店街",
+   "level": "初級",
+   "hint_diff": 3,
+   "outside_box_pixels_diff_gt15": 1351,
+   "outside_box_max_distance_px": 14.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "消える",
+     "label": "自転車がない",
+     "line": "自転車がありません。",
+     "box_px": [
+      90,
+      700,
+      770,
+      1480
+     ],
+     "circle_a_px": [
+      90,
+      700,
+      770,
+      1480
+     ],
+     "circle_b_px": [
+      90,
+      700,
+      770,
+      1480
+     ],
+     "box_ratio": [
+      0.0327,
+      0.4557,
+      0.2798,
+      0.9635
+     ],
+     "object_width_px": 568,
+     "object_screen_width_pct": 10.1,
+     "box_screen_width_pct": 12.1,
+     "edit_version": "1"
+    },
+    {
+     "id": 2,
+     "type": "増える",
+     "label": "かぼちゃが2つ",
+     "line": "かぼちゃが、ふたつに増えました。",
+     "box_px": [
+      1195,
+      640,
+      1470,
+      950
+     ],
+     "circle_a_px": [
+      1195,
+      640,
+      1470,
+      950
+     ],
+     "circle_b_px": [
+      1195,
+      640,
+      1470,
+      950
+     ],
+     "box_ratio": [
+      0.4342,
+      0.4167,
+      0.5342,
+      0.6185
+     ],
+     "object_width_px": 214,
+     "object_screen_width_pct": 3.8,
+     "box_screen_width_pct": 4.9,
+     "edit_version": "1"
+    },
+    {
+     "id": 3,
+     "type": "向きが変わる",
+     "label": "犬がうしろ向き",
+     "line": "わんちゃんは、うしろ向きですね。",
+     "box_px": [
+      1610,
+      975,
+      2000,
+      1460
+     ],
+     "circle_a_px": [
+      1610,
+      975,
+      2000,
+      1460
+     ],
+     "circle_b_px": [
+      1610,
+      975,
+      2000,
+      1460
+     ],
+     "box_ratio": [
+      0.585,
+      0.6348,
+      0.7267,
+      0.9505
+     ],
+     "object_width_px": 318,
+     "object_screen_width_pct": 5.7,
+     "box_screen_width_pct": 6.9,
+     "edit_version": "1"
+    }
+   ]
+  },
+  {
+   "q": 3,
+   "scene": "山道",
+   "level": "中級",
+   "hint_diff": 3,
+   "outside_box_pixels_diff_gt15": 725,
+   "outside_box_max_distance_px": 16.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "増える",
+     "label": "リスが2ひき",
+     "line": "リスが2ひきになりました。",
+     "box_px": [
+      1008,
+      950,
+      1370,
+      1295
+     ],
+     "circle_a_px": [
+      1008,
+      950,
+      1370,
+      1295
+     ],
+     "circle_b_px": [
+      1008,
+      950,
+      1370,
+      1295
+     ],
+     "box_ratio": [
+      0.3663,
+      0.6185,
+      0.4978,
+      0.8431
+     ],
+     "object_width_px": 243,
+     "object_screen_width_pct": 4.3,
+     "box_screen_width_pct": 6.4,
+     "edit_version": "1"
+    },
+    {
+     "id": 2,
+     "type": "消える",
+     "label": "リュックがない",
+     "line": "リュックがありません。",
+     "box_px": [
+      1130,
+      645,
+      1395,
+      875
+     ],
+     "circle_a_px": [
+      1130,
+      645,
+      1395,
+      875
+     ],
+     "circle_b_px": [
+      1130,
+      645,
+      1395,
+      875
+     ],
+     "box_ratio": [
+      0.4106,
+      0.4199,
+      0.5069,
+      0.5697
+     ],
+     "object_width_px": 189,
+     "object_screen_width_pct": 3.4,
+     "box_screen_width_pct": 4.7,
+     "edit_version": "1"
+    },
+    {
+     "id": 3,
+     "type": "形が変わる",
+     "label": "石の塔が高い",
+     "line": "石の塔が、高くなりましたね。",
+     "box_px": [
+      1870,
+      830,
+      2215,
+      1195
+     ],
+     "circle_a_px": [
+      1870,
+      830,
+      2215,
+      1195
+     ],
+     "circle_b_px": [
+      1870,
+      830,
+      2215,
+      1195
+     ],
+     "box_ratio": [
+      0.6795,
+      0.5404,
+      0.8049,
+      0.778
+     ],
+     "object_width_px": 249,
+     "object_screen_width_pct": 4.4,
+     "box_screen_width_pct": 6.1,
+     "edit_version": "1"
+    }
+   ]
+  },
+  {
+   "q": 4,
+   "scene": "台所",
+   "level": "中級",
+   "hint_diff": 2,
+   "outside_box_pixels_diff_gt15": 2804,
+   "outside_box_max_distance_px": 16.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "増える",
+     "label": "さんまが3びき",
+     "line": "さんまが3びきに増えました。",
+     "box_px": [
+      1150,
+      1050,
+      1900,
+      1335
+     ],
+     "circle_a_px": [
+      1150,
+      1050,
+      1900,
+      1335
+     ],
+     "circle_b_px": [
+      1150,
+      1050,
+      1900,
+      1335
+     ],
+     "box_ratio": [
+      0.4179,
+      0.6836,
+      0.6904,
+      0.8691
+     ],
+     "object_width_px": 670,
+     "object_screen_width_pct": 11.9,
+     "box_screen_width_pct": 13.3,
+     "edit_version": "1"
+    },
+    {
+     "id": 2,
+     "type": "向きが変わる",
+     "label": "やかんの口が右向き",
+     "line": "やかんの口が、反対を向いています。",
+     "box_px": [
+      180,
+      640,
+      545,
+      975
+     ],
+     "circle_a_px": [
+      180,
+      640,
+      545,
+      975
+     ],
+     "circle_b_px": [
+      180,
+      640,
+      545,
+      975
+     ],
+     "box_ratio": [
+      0.0654,
+      0.4167,
+      0.198,
+      0.6348
+     ],
+     "object_width_px": 293,
+     "object_screen_width_pct": 5.2,
+     "box_screen_width_pct": 6.5,
+     "edit_version": "1"
+    },
+    {
+     "id": 3,
+     "type": "消える",
+     "label": "ざるのおいもがない",
+     "line": "おいもが消えて、ざるが空っぽですね。",
+     "box_px": [
+      1735,
+      860,
+      2370,
+      1190
+     ],
+     "circle_a_px": [
+      1750,
+      885,
+      2355,
+      1185
+     ],
+     "circle_b_px": [
+      1750,
+      885,
+      2355,
+      1185
+     ],
+     "box_ratio": [
+      0.6305,
+      0.5599,
+      0.8612,
+      0.7747
+     ],
+     "object_width_px": 559,
+     "object_screen_width_pct": 9.9,
+     "box_screen_width_pct": 11.3,
+     "edit_version": "2c"
+    }
+   ]
+  },
+  {
+   "q": 5,
+   "scene": "神社",
+   "level": "上級",
+   "hint_diff": 3,
+   "outside_box_pixels_diff_gt15": 1618,
+   "outside_box_max_distance_px": 17.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "増える",
+     "label": "ハトが3羽",
+     "line": "ハトが1羽増えました。",
+     "box_px": [
+      1395,
+      1225,
+      1700,
+      1470
+     ],
+     "circle_a_px": [
+      1395,
+      1225,
+      1700,
+      1470
+     ],
+     "circle_b_px": [
+      1395,
+      1225,
+      1700,
+      1470
+     ],
+     "box_ratio": [
+      0.5069,
+      0.7975,
+      0.6177,
+      0.957
+     ],
+     "object_width_px": 200,
+     "object_screen_width_pct": 3.6,
+     "box_screen_width_pct": 5.4,
+     "edit_version": "2a"
+    },
+    {
+     "id": 2,
+     "type": "向きが変わる",
+     "label": "ほうきが倒れている",
+     "line": "ほうきが、たおれています。",
+     "box_px": [
+      930,
+      520,
+      1545,
+      1180
+     ],
+     "circle_a_px": [
+      1085,
+      525,
+      1325,
+      1035
+     ],
+     "circle_b_px": [
+      935,
+      1022,
+      1545,
+      1172
+     ],
+     "box_ratio": [
+      0.3379,
+      0.3385,
+      0.5614,
+      0.7682
+     ],
+     "object_width_px": 207,
+     "object_screen_width_pct": 3.7,
+     "box_screen_width_pct": 10.9,
+     "edit_version": "1"
+    },
+    {
+     "id": 3,
+     "type": "消える",
+     "label": "奥の灯籠がない",
+     "line": "奥の灯籠が、なくなっていますね。",
+     "box_px": [
+      680,
+      620,
+      1095,
+      1015
+     ],
+     "circle_a_px": [
+      700,
+      632,
+      1078,
+      1012
+     ],
+     "circle_b_px": [
+      700,
+      632,
+      1078,
+      1012
+     ],
+     "box_ratio": [
+      0.2471,
+      0.4036,
+      0.3979,
+      0.6608
+     ],
+     "object_width_px": 354,
+     "object_screen_width_pct": 6.3,
+     "box_screen_width_pct": 7.4,
+     "edit_version": "1"
+    }
+   ]
+  }
+ ]
+}

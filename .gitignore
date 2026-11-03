@@ -223,3 +223,5 @@ __marimo__/
 client_secret*.json
 token*.json
 *.secret
+# 動画はGitHubの1ファイル100MB上限を超えるため入れない（YouTubeに非公開で保存する）
+outputs/*/video.mp4

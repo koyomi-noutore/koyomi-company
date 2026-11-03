@@ -13,11 +13,11 @@ const path = require('path');
     const shut = (x, y) => `<path d="M${x - 11} ${y} h22" fill="none" stroke="${INK}" stroke-width="5" stroke-linecap="round"/>`;
     FACES.normal_blink = { ...FACES.normal, eyes: shut(96, 112) + shut(144, 112) };
     FACES.think_blink = { ...FACES.think, eyes: shut(100, 104) + shut(152, 104) };
-    return Object.keys(FACES);
+    return Object.fromEntries(Object.keys(FACES).map(k => [k, fuku(k)]));
   });
-  for (const k of keys) {
+  for (const [k, svg] of Object.entries(keys)) {
     await pg.setContent(`<html><body style="margin:0;background:transparent"><div style="width:${size}px;height:${size}px">` +
-      (await pg.evaluate(k => fuku(k), k)).replace('<svg ', `<svg width="${size}" height="${size}" style="overflow:visible" `) +
+      svg.replace('<svg ', `<svg width="${size}" height="${size}" style="overflow:visible" `) +
       '</div></body></html>');
     await pg.locator('div').screenshot({ path: path.join(out, `koyomi_${k}.png`), omitBackground: true });
   }

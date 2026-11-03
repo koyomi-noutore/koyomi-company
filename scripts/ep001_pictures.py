@@ -6,6 +6,7 @@
   export KOYOMI_IMAGE_USAGE_LOG=outputs/2026-11-03_001/image_usage.jsonl
   python3 scripts/ep001_pictures.py base  <問> <作業フォルダ>      # 元の絵（API 1回。第1問は見本を流用＝0回）
   python3 scripts/ep001_pictures.py edit  <問> <作業フォルダ> [版]  # 3つの違いをまとめて描き直し（API 1回）
+  python3 scripts/ep001_pictures.py retry <問> <版> <作業フォルダ>     # 失敗した違いだけ切り出して描き直す（予備 1回）
   python3 scripts/ep001_pictures.py compose <問> <作業フォルダ> <出力フォルダ>  # 範囲ごとに貼り戻す（API 0回）
   python3 scripts/ep001_pictures.py answers <作業フォルダ> <出力フォルダ>       # answers.json を書く
 作業フォルダにキャッシュがあれば、APIは呼ばない（無駄打ちしない）。
@@ -62,6 +63,8 @@ SCENES = {
         "sitting on the stove, about one tenth of the picture width; (5) a clay pot (donabe) with a lid; "
         "(6) a small basket of chestnuts; (7) a few wooden ladles hanging on the wall. "
         "No clock, no calendar, no paper with writing."),
+    # 灯籠1基の幅は画面幅の約2.6%（右）・約2.95%（左）で3%未満だった。「1/10」にして描き直したが（予備1回）、
+    # かえって小さくなった（約2.4%）ので使わず、1回目の絵を使う。違い③は「灯籠が2基とも消える」に変えた（EDITS[5]）。
     5: ("Scene: the quiet grounds of a small Japanese shrine in late autumn, with a big golden ginkgo tree and "
         "yellow leaves scattered on the stone-paved path. Main objects: (1) a red torii gate on the left; "
         "(2) a pair of small stone lanterns standing side by side in the background near the ginkgo tree, "
@@ -92,8 +95,8 @@ EDITS = {
         "colander, leaving the empty colander on the table."),
     5: ("Edit this illustration and make exactly these three changes: (a) add a third grey pigeon of the same "
         "size pecking on the path near the other two; (b) the bamboo broom has fallen over and now lies flat on "
-        "the ground at the foot of the ginkgo tree; (c) remove the right one of the two small stone lanterns "
-        "in the background, showing the ground with yellow ginkgo leaves and the trees behind it."),
+        "the ground at the foot of the ginkgo tree; (c) remove both of the two small stone lanterns "
+        "in the background, showing the ground with yellow ginkgo leaves and the green bushes behind them."),
 }
 
 # 答え。box は元の絵（2752×1536）のピクセル座標。物より一回り広く取る。
@@ -139,12 +142,45 @@ def edit(q, work, ver="1", extra=""):
     return im
 
 
+# 1回目の描き直しでできなかった違いを、範囲のまわりを切り出して大きく描き直す（予備の呼び出し）。
+RETRY = {
+    # 1回目：おいもは残り、右端に空のざるが新しく出た → 失敗
+    (4, "2c"): {"crop": [1530, 700, 2570, 1285], "aspect": "16:9",
+                "prompt": "Edit this close-up of a picture-book illustration: remove all the purple sweet potatoes from the "
+                          "round bamboo colander, so the colander is completely empty and we can see its woven bamboo "
+                          "bottom. Do not change the colander's shape, size or position, and do not change the table, "
+                          "the plate of fish or the basket of chestnuts." + KEEP_ALT + KEEP_REMOVE},
+    # 1回目：ハトが増えなかった → 失敗
+    (5, "2a"): {"crop": [650, 861, 1850, 1536], "aspect": "16:9",
+                "prompt": "Edit this close-up of a picture-book illustration: add one more grey pigeon, the same size, colors "
+                          "and drawing style as the two pigeons already there, pecking on the stone path in the empty space "
+                          "to the right of them, so there are three pigeons in total. Do not move or change the two pigeons "
+                          "that are already there." + KEEP_ALT},
+}
+
+
+def retry(q, ver, work):
+    out = Path(work) / f"edit_{q}_{ver}.png"
+    if out.exists():
+        return Image.open(out)
+    from gemini_image import generate
+    r = RETRY[(q, ver)]
+    a = Image.open(Path(work) / f"q{q}_a.png").convert("RGB")
+    crop = a.crop(r["crop"])
+    im = generate(r["prompt"], images=[crop], aspect=r["aspect"], size="2K").resize(crop.size, Image.LANCZOS)
+    ed = a.copy(); ed.paste(im, r["crop"][:2]); ed.save(out)
+    return ed
+
+
 def compose(q, work, out_dir):
     a = Image.open(Path(work) / f"q{q}_a.png").convert("RGB")
     b = a.copy()
     for d in QUESTIONS[q]["diffs"]:
         ed = Image.open(Path(work) / f"edit_{q}_{d.get('src', '1')}.png").convert("RGB")
-        b = Image.composite(ed, b, feather_mask(a.size, d["box"], d.get("feather", 24)))
+        m = feather_mask(a.size, d["box"], d.get("feather", 24))
+        for k in d.get("keep", []):  # 範囲の中でも、描き直しで消えてしまった物（湯気など）は元の絵のまま残す
+            m = ImageChops.subtract(m, feather_mask(a.size, k, 16))
+        b = Image.composite(ed, b, m)
     out = Path(out_dir); out.mkdir(parents=True, exist_ok=True)
     a.save(out / f"q{q}_a.png"); b.save(out / f"q{q}_b.png")
     return a, b
@@ -177,6 +213,9 @@ def answers(work, out_dir, screen_img_w=940, screen_w=1920):
             "answers": [{
                 "id": d["id"], "type": d["type"], "label": d["label"], "line": d["line"],
                 "box_px": d["box"],
+                # 答え合わせの赤丸・ヒントの位置（既定は box と同じ）。左右で物の位置が違うときは a/b を分ける
+                "circle_a_px": d.get("circle_a", d.get("circle", d["box"])),
+                "circle_b_px": d.get("circle_b", d.get("circle", d["box"])),
                 "box_ratio": [round(d["box"][i] / SIZE[i % 2], 4) for i in range(4)],
                 "object_width_px": d["object_w"],
                 "object_screen_width_pct": round(d["object_w"] * s / screen_w * 100, 1),
@@ -193,6 +232,8 @@ if __name__ == "__main__":
         base(int(sys.argv[2]), sys.argv[3])
     elif cmd == "edit":
         edit(int(sys.argv[2]), sys.argv[3], *(sys.argv[4:5] or ["1"]))
+    elif cmd == "retry":
+        retry(int(sys.argv[2]), sys.argv[3], sys.argv[4])
     elif cmd == "compose":
         compose(int(sys.argv[2]), sys.argv[3], sys.argv[4])
     elif cmd == "answers":
