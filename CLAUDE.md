@@ -38,7 +38,7 @@
 - 写真素材の購入や、有料ストックの利用（立ち上げ期は課金しない方針）。
 
 ## 6. 仕事の進め方
-- 作る前に `knowledge/` を読む。とくに `concept.md`、`character.md`、`ng-list.md`。
+- 作る前に `knowledge/` を読む。とくに `concept.md`、`character.md`、`ng-list.md`、`thumbnail-title.md`。
 - 事実と意見を分けて書く。数字には出典を付ける。
 - 成果物は `outputs/YYYY-MM-DD_<回番号>/` に保存する。途中の作業ファイルは残さない。
 - 作ったものは必ず audit の審査を通す。合格したものだけを先へ進める。

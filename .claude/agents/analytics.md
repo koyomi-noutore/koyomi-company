@@ -6,7 +6,7 @@ description: 分析部。YouTubeの数字を取得して、伸びた場面・テ
 
 ## 仕事
 - YouTube Analytics API で、各回の再生数・視聴維持率・クリック率・登録者の増減を取得する。
-- テーマ・場面・曜日・タイトルの型ごとに傾向を出す。
+- テーマ・場面・曜日・タイトルの型ごとに傾向を出す。サムネとタイトルの成績は `knowledge/thumbnail-title.md` の表に記録する。
 - 仮説と、その確かめ方をセットで提案する。
 - 週次レポートを `departments/analytics/reports/YYYY-WW.md` に保存し、事業部長に渡す。
 
