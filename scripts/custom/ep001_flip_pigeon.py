@@ -50,6 +50,22 @@ def main(work):
     M = np.float32([[-1, 0, 2 * bx + bw - 1], [0, 1, 0]])
     fc = cv2.warpAffine(c, M, (c.shape[1], c.shape[0]))
     fm = cv2.warpAffine(m, M, (c.shape[1], c.shape[0]))
+    clean_p = w / "edit_5_clean.png"
+    if clean_p.exists():
+        # 2026-11-06 監査の差し戻し（尾の残像・道の線のぼやけ）への対応：
+        # AI（画像API 1回）で右のハトだけを消した地面を下地にし、そこへ元のハトを（足もとの影ごと）反転して重ねる。
+        bg = cv2.imread(str(clean_p))[y0:y1, x0:x1]
+        by, bh = int(st[1]), int(st[3])
+        sh = np.zeros_like(m)
+        cv2.ellipse(sh, (int(bx + bw / 2), by + bh - 6), (int(bw * 0.6), 26), 0, 0, 360, 255, -1)   # 足もとの影
+        fsh = cv2.warpAffine(sh, M, (c.shape[1], c.shape[0]))
+        body = cv2.dilate(fm, np.ones((5, 5), np.uint8))                                              # 白いふちどりまで含める
+        alpha = cv2.GaussianBlur(cv2.max(body, cv2.GaussianBlur(fsh, (0, 0), 6)), (0, 0), 1.5).astype(np.float32)[..., None] / 255
+        out = (fc * alpha + bg * (1 - alpha)).astype(np.uint8)
+        ed = a.copy(); ed[y0:y1, x0:x1] = out
+        cv2.imwrite(str(w / "edit_5_flip.png"), ed)
+        print("pigeon flipped onto clean ground; bbox in region:", [int(v) for v in st[:4]])
+        return
     hole = cv2.bitwise_and(m, cv2.bitwise_not(cv2.erode(fm, np.ones((5, 5), np.uint8))))  # 反転したハトで隠れない、元のハトの跡
     bg = cv2.inpaint(c, m, 4, cv2.INPAINT_TELEA)              # まず、ぼんやり埋める
     # 跡は、石の道のふちの線（元の絵でハトの背中の後ろに消えていた線）の左が石、右が黄色い地面。

@@ -39,12 +39,12 @@
     2088
    ],
    "content_px": [
-    138,
-    300,
-    1714,
-    2073
+    41,
+    46,
+    1815,
+    2042
    ],
-   "scale_to_screen": 0.60914,
+   "scale_to_screen": 0.54115,
    "outside_box_pixels_diff_gt15": 284,
    "outside_box_max_distance_px": 8.0,
    "answers": [
@@ -60,25 +60,25 @@
       1640
      ],
      "box_screen": [
-      217,
-      724,
-      385,
-      816
+      246,
+      780,
+      394,
+      863
      ],
      "circle_a_screen": [
-      217,
-      724,
-      385,
-      816
+      246,
+      780,
+      394,
+      863
      ],
      "circle_b_screen": [
-      217,
-      724,
-      385,
-      816
+      246,
+      780,
+      394,
+      863
      ],
      "object_w_px": 120,
-     "object_screen_width_pct": 3.81,
+     "object_screen_width_pct": 3.38,
      "in_level_range": true,
      "in_safe_y": true,
      "edit_version": "1",
@@ -97,25 +97,25 @@
       1712
      ],
      "box_screen": [
-      498,
-      734,
-      682,
-      860
+      495,
+      790,
+      659,
+      902
      ],
      "circle_a_screen": [
-      498,
-      734,
-      682,
-      860
+      495,
+      790,
+      659,
+      902
      ],
      "circle_b_screen": [
-      498,
-      734,
-      682,
-      860
+      495,
+      790,
+      659,
+      902
      ],
      "object_w_px": 125,
-     "object_screen_width_pct": 3.97,
+     "object_screen_width_pct": 3.52,
      "in_level_range": true,
      "in_safe_y": true,
      "edit_version": "1",
@@ -134,25 +134,25 @@
       1712
      ],
      "box_screen": [
-      652,
-      740,
-      739,
-      860
+      632,
+      795,
+      709,
+      902
      ],
      "circle_a_screen": [
-      652,
-      740,
-      739,
-      860
+      632,
+      795,
+      709,
+      902
      ],
      "circle_b_screen": [
-      652,
-      740,
-      739,
-      860
+      632,
+      795,
+      709,
+      902
      ],
      "object_w_px": 114,
-     "object_screen_width_pct": 3.62,
+     "object_screen_width_pct": 3.21,
      "in_level_range": true,
      "in_safe_y": true,
      "edit_version": "1",
@@ -573,7 +573,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 692,
+   "outside_box_pixels_diff_gt15": 726,
    "outside_box_max_distance_px": 12.0,
    "answers": [
     {

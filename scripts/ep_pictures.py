@@ -125,7 +125,10 @@ def export_patches(work, out_dir):
     """描き直しの絵（作業フォルダ）から、使う範囲のまわりだけを切り出して成果物フォルダの edits/ に残す（再現用・容量を小さく）。"""
     for q, ds in diffs().items():
         for d in ds:
-            ed = Image.open(Path(work) / f"edit_{q}_{d.get('src', '1')}.png").convert("RGB")
+            f = Path(work) / f"edit_{q}_{d.get('src', '1')}.png"
+            if not f.exists():      # 作業フォルダにない描き直しは、すでに edits/ に残してある
+                continue
+            ed = Image.open(f).convert("RGB")
             x0, y0, x1, y1 = d["box"]; m = PATCH_MARGIN
             r = (max(0, x0 - m), max(0, y0 - m), min(ed.width, x1 + m), min(ed.height, y1 + m))
             p = patch_path(out_dir, q, d); p.parent.mkdir(parents=True, exist_ok=True)
@@ -145,11 +148,69 @@ def edited_image(q, d, work, out_dir, a):
     return ed
 
 
+MARGIN_PROMPT = ("Edit this illustration: the left and right edges of the picture are blank white paper margins. "
+                 "Fill only those blank white margins with a natural continuation of the scene in exactly the same "
+                 "picture-book watercolor style, so the painting reaches the very edge of the picture on both sides. "
+                 "Do not add any new objects, people, animals or text in the margins; continue only the background "
+                 "(trees, ground, sky, walls, floor). Do not change anything inside the painted area.")
+
+
+def margin_strips(q, out_dir):
+    return [Path(out_dir) / "edits" / f"q{q}_margin_{side}.png" for side in ("left", "right")]
+
+
+def fill_margins(q, work, out_dir):
+    """plan.json の questions[].margins（左右の白いふちの幅 px）を、AIに描き足させる（画像API 1回）。
+    描き足した左右の帯だけを <回>/edits/ に残し、compose で左右の絵（a・b）の両方に同じものを貼る（新しい違いは生まれない）。"""
+    M = _Q[q].get("margins")
+    if not M or all(p.exists() for p in margin_strips(q, out_dir)):
+        return
+    w = Path(work)
+    src = Image.open(w / f"q{q}_src.png").convert("RGB")
+    from gemini_image import generate
+    ed = generate(MARGIN_PROMPT, images=[src], model=_I["model"], aspect=_I["aspect"], size=_I["size"])
+    if ed.size != src.size:
+        ed = ed.resize(src.size, Image.LANCZOS)
+    ed.save(w / f"q{q}_margins_src.png")
+    full = crop_89(ed)[0]
+    f = M.get("feather", 24)
+    L, R = M["left"] + f + 8, M["right"] + f + 8
+    p_left, p_right = margin_strips(q, out_dir)
+    p_left.parent.mkdir(parents=True, exist_ok=True)
+    full.crop((0, 0, L, full.height)).save(p_left)
+    full.crop((full.width - R, 0, full.width, full.height)).save(p_right)
+
+
+def apply_margins(q, im, out_dir):
+    """描き足した左右の帯を、ぼかしてつなぎながら貼る。"""
+    M = _Q[q].get("margins")
+    if not M:
+        return im
+    p_left, p_right = margin_strips(q, out_dir)
+    f = M.get("feather", 24)
+    im = im.copy()
+    for p, side in ((p_left, "left"), (p_right, "right")):
+        strip = Image.open(p).convert("RGB")
+        x0 = 0 if side == "left" else im.width - strip.width
+        edge = M[side]
+        mask = Image.new("L", strip.size, 0)
+        dr = ImageDraw.Draw(mask)
+        for i in range(strip.width):    # 白いふちの中は全部、つなぎ目 f px はなだらかに
+            dist = (edge - i) if side == "left" else (i - (strip.width - edge))
+            v = 255 if dist >= 0 else max(0, int(255 * (1 + dist / f)))
+            dr.line((i, 0, i, strip.height), fill=v)
+        im.paste(strip, (x0, 0), mask)
+    return im
+
+
 def compose(q, work, out_dir):
     """範囲ごとに貼り戻す。元の絵は作業フォルダの q{q}_a.png、なければ成果物フォルダの q{q}_a.png を使う。"""
     w = Path(work)
     src_a = w / f"q{q}_a.png" if (w / f"q{q}_a.png").exists() else Path(out_dir) / f"q{q}_a.png"
     a = Image.open(src_a).convert("RGB")
+    if _Q[q].get("margins"):
+        fill_margins(q, w, out_dir)
+        a = apply_margins(q, a, out_dir)
     b = a.copy()
     for d in diffs()[q]:
         ed = edited_image(q, d, work, out_dir, a)

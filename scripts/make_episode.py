@@ -70,27 +70,26 @@ def pictures(ep, work, args):
         return P.retry(int(args[1]), args[2], pw)
     if not args or args[0] == "compose":
         for q, ds in P.diffs().items():
-            need = {d.get("src", "1") for d in ds}
-            have_patches = all(P.patch_path(ep, q, d).exists() for d in ds)
+            # 描き直しの版ごとに、使う部分が <回>/edits/ に残っていない版だけを作る（残っている版は作り直さない：画像APIの無駄打ち防止）
+            need = sorted({d.get("src", "1") for d in ds if not P.patch_path(ep, q, d).exists()})
             if not (ep / f"q{q}_a.png").exists() and not (pw / f"q{q}_a.png").exists():
                 P.base(q, pw)
-            if not have_patches:
-                for v in sorted(need):
-                    if (pw / f"edit_{q}_{v}.png").exists():
-                        continue
-                    if (q, v) in P.PROGRAM_EDITS:
-                        if not (pw / f"q{q}_a.png").exists():
-                            (pw / f"q{q}_a.png").write_bytes((ep / f"q{q}_a.png").read_bytes())
-                        P.program_edit(q, v, pw)
-                    elif (q, v) in P.RETRY:
-                        P.retry(q, v, pw)
-                    else:
-                        P.edit(q, pw, v)
+            for v in need:
+                if (pw / f"edit_{q}_{v}.png").exists():
+                    continue
+                if (q, v) in P.PROGRAM_EDITS:
+                    if not (pw / f"q{q}_a.png").exists():
+                        (pw / f"q{q}_a.png").write_bytes((ep / f"q{q}_a.png").read_bytes())
+                    P.program_edit(q, v, pw)
+                elif (q, v) in P.RETRY:
+                    P.retry(q, v, pw)
+                else:
+                    P.edit(q, pw, v)
             P.compose(q, pw, ep)
             log(f"第{q}問の絵：OK")
     if not args or args[0] in ("compose", "answers"):
         r = P.answers(pw, ep)
-        P.export_patches(pw, ep) if any((pw / f"edit_{q}_1.png").exists() for q in P.QUESTIONS) else None
+        P.export_patches(pw, ep)
         for Q in r["questions"]:
             log(f"第{Q['q']}問 {Q['level']}：範囲外の差 {Q['outside_box_pixels_diff_gt15']}画素（最大{Q['outside_box_max_distance_px']}px） "
                 + " ".join(f"違い{a['id']}={a['object_screen_width_pct']}%{'' if a['in_level_range'] else '(目安外)'}" for a in Q["answers"]))

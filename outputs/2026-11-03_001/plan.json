@@ -492,10 +492,10 @@
    "prompt": "Scene: looking out from inside an old Japanese house across a wooden veranda (engawa) into a small autumn garden in warm late-afternoon light. Background (upper middle): a persimmon tree with orange fruit and a moss-covered stone lantern among red maple leaves. Middle: the wooden veranda. Main objects: (1) a calico cat sleeping on a flat floor cushion on the veranda, with its striped tail curled neatly around its body; (2) a round wooden tray on the veranda holding exactly three persimmons, a brown clay teapot and two teacups, with a little empty space on the tray; (3) a large woven bamboo basket standing on the veranda; (4) a flat stepping stone just below the veranda edge with a pair of wooden geta sandals on it, the pair about one fourteenth of the picture width; (5) a few strings of dried persimmons hanging from the eaves at the upper right, kept below the top tenth of the picture. Each persimmon on the tray is about one sixteenth of the picture width.",
    "edit_prompt": "Edit this illustration and make exactly these three small changes: (a) on the stepping stone, the BACK one of the two wooden geta sandals (the upper one) has no thong strap any more: only the plain wooden base is left; the front geta stays exactly the same; (b) on the round tray, add one more persimmon of the same size next to the three persimmons, so there are four; (c) the front small teacup on the tray becomes a taller, cylindrical teacup (about twice as tall), same color and same tea; the back teacup stays the same.",
    "content_box": [
-    138,
-    300,
-    1714,
-    2073
+    41,
+    46,
+    1815,
+    2042
    ],
    "retries": {},
    "program_edits": {},
@@ -552,7 +552,13 @@
      "object_w": 114,
      "src": "1"
     }
-   ]
+   ],
+   "margins": {
+    "left": 212,
+    "right": 216,
+    "feather": 24
+   },
+   "margins_note": "AIで描き足した帯の端にも細い白が残ったので、その分を切り落とした（8:9のまま、縮めるだけ）"
   },
   {
    "q": 2,
@@ -694,7 +700,12 @@
      "src": "1",
      "note": "物の幅は増えた石1つ（約1.8%で、中級の目安2〜3%を少し下回る）。塔の幅は約115px（約3.1%）、高さは約45px高くなった"
     }
-   ]
+   ],
+   "margins": {
+    "left": 145,
+    "right": 143,
+    "feather": 24
+   }
   },
   {
    "q": 4,
@@ -796,6 +807,16 @@
      ],
      "aspect": "1:1",
      "prompt": "Edit this close-up of a picture-book illustration and make exactly these two small changes: (a) the stone lantern at the upper right has a round onion-shaped knob (finial) on the very top of its roof: remove that knob completely, so the roof ends flat at the top, and show the tree trunk and bushes behind it; (b) the larger grey pigeon on the right side of the path is turned around so that it faces RIGHT: its head and beak are now on its right side pointing right, and its tail points left; same pigeon, same size, same place. The smaller pigeon on the left stays exactly the same. Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text. Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object."
+    },
+    "clean": {
+     "crop": [
+      870,
+      1430,
+      1270,
+      1730
+     ],
+     "aspect": "4:3",
+     "prompt": "Edit this close-up of a picture-book illustration: completely remove the larger grey pigeon in the middle (the one on the right, standing on the yellow ground), together with its shadow, and fill its place with the same yellow ground, scattered ginkgo leaves and the grey stone path edge that would be behind it. The smaller pigeon at the far left edge stays exactly the same. Keep everything else exactly the same: same colors, same style, same lines. Leave no faint outline, ghost or smudge. No text."
     }
    },
    "program_edits": {
@@ -853,7 +874,8 @@
      "src": "flip",
      "note": "AIでは描き直していない。scripts/ep001_flip_pigeon.py でハトだけを左右反転した。物の幅はハトの頭"
     }
-   ]
+   ],
+   "program_edits_note": "flip は edit_5_clean.png（retries.clean で作る、右のハトを消した地面）があれば、それを下地に使う。先に pictures retry 5 clean を実行する。"
   }
  ],
  "thumbnail": {

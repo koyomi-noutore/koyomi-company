@@ -267,12 +267,26 @@ def draw_circle(d, x, box, k=1.0):
     d.ellipse((cx - rx, cy - ry, cx + rx, cy + ry), outline=RED, width=7)
 
 
-def draw_badge(d, x, box, num, k=1.0):
-    """番号札。赤丸の線に隠れないよう、赤丸を全部描いたあとに描く（第1回の監査の指摘）。絵の中に収める。"""
+def badge_pos(x, box, others, k=1.0):
+    """番号札の位置。赤丸の左上・右上・右下・左下の順に試し、ほかの答えの範囲（赤丸の中）に重ならない所を選ぶ
+    （第1回作り直し版の監査：③の札が②の赤丸の中の物を隠した）。絵の中に収める。"""
     cx, cy, rx, ry = circle_geom(x, box, k)
-    bx, by = cx - rx * 0.71 - 4, cy - ry * 0.71 - 4
-    bx = min(max(x + 26, bx), x + PW - 26)
-    by = min(max(BAND_H + 26, by), int(H * 0.85) - 26)
+    best = None
+    for sx, sy in ((-1, -1), (1, -1), (1, 1), (-1, 1)):
+        bx = min(max(x + 26, cx + sx * (rx * 0.71 + 4)), x + PW - 26)
+        by = min(max(BAND_H + 26, cy + sy * (ry * 0.71 + 4)), int(H * 0.85) - 26)
+        hit = sum(1 for (ox0, oy0, ox1, oy1) in others
+                  if ox0 - 26 < bx - x < ox1 + 26 and oy0 - 26 < by < oy1 + 26)
+        if best is None or hit < best[0]:
+            best = (hit, bx, by)
+        if hit == 0:
+            break
+    return best[1], best[2]
+
+
+def draw_badge(d, x, box, num, k=1.0, others=()):
+    """番号札。赤丸の線に隠れないよう、赤丸を全部描いたあとに描く（第1回の監査の指摘）。"""
+    bx, by = badge_pos(x, box, others, k)
     d.ellipse((bx - 24, by - 24, bx + 24, by + 24), fill=RED, outline=(255, 255, 255), width=3)
     d.text((bx, by + 1), str(num), font=font(34), fill=(255, 255, 255), anchor="mm")
 
@@ -315,8 +329,9 @@ def render_question(q, t):
                     shown.append((x, b, i + 1, 1.0 + 0.35 * (1 - ease((t - ta) / 0.3))))
         for x, b, n, k in shown:     # 先に赤丸を全部
             draw_circle(d, x, b, k)
-        for x, b, n, k in shown:     # 最後に番号札
-            draw_badge(d, x, b, n, k)
+        for x, b, n, k in shown:     # 最後に番号札（ほかの答えの範囲を避ける）
+            others = [ob for (ox, ob, on, _) in shown if ox == x and on != n]
+            draw_badge(d, x, b, n, k, others)
         draw_band(im, q, t, "answer")
     draw_subtitle(im, t, (20, W - 20, H - 14))
     return im
