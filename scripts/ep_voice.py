@@ -1,21 +1,24 @@
-"""第1回（作り直し版）のセリフを Fish Audio で音声にする。キーは環境変数 FISH_AUDIO_API_KEY からだけ読む（ログに出さない）。
-モデル：63819275ce38440ea245ca988abf976e（女性アナウンス、knowledge/concept.md）。model ヘッダーは s1。
+"""セリフを Fish Audio で音声にする（make_episode.py から呼ぶ）。キーは環境変数 FISH_AUDIO_API_KEY からだけ読む（ログに出さない）。
+モデル・話す速さは plan.json の voice（knowledge/concept.md の決定どおり）。利用条件は departments/production/voice.md。
 
 使い方:
-  python3 scripts/ep001_voice_fish.py <作業フォルダ> [id ...]
+  python3 scripts/make_episode.py <回> voice [id ...]
     作業フォルダに voice_<id>.wav（48kHz・モノラルに変換したもの）と voice.json（長さ・枠・声に渡した文）を書く。
     id を指定すると、そのセリフだけ作り直す。作業フォルダにあるセリフは作り直さない（無駄打ちしない）。
     生成の回数と文字数は usage.jsonl に追記する。
-  python3 scripts/ep001_voice_fish.py --balance   残高とプランの枠を表示する
+  python3 scripts/make_episode.py <回> balance   残高とプランの枠を表示する
 """
 import datetime, json, os, subprocess, sys, urllib.request, wave
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
-from ep001_timeline import lines, VOICE_TEXT
+from ep_timeline import lines, VOICE_TEXT
+from episode_plan import plan
 
 API = "https://api.fish.audio"
-MODEL_ID = "63819275ce38440ea245ca988abf976e"
-SPEED = 0.88
+_V = plan()["voice"]
+MODEL_ID = _V["reference_id"]
+SPEED = _V["speed"]
+TTS_MODEL = _V.get("model", "s1")
 
 
 def _key():
@@ -37,7 +40,7 @@ def balance():
 def tts(text, out_wav):
     body = {"text": text, "reference_id": MODEL_ID, "format": "wav", "prosody": {"speed": SPEED}}
     req = urllib.request.Request(f"{API}/v1/tts", data=json.dumps(body).encode(),
-                                 headers={"Authorization": f"Bearer {_key()}", "model": "s1", "Content-Type": "application/json"})
+                                 headers={"Authorization": f"Bearer {_key()}", "model": TTS_MODEL, "Content-Type": "application/json"})
     raw = Path(str(out_wav) + ".raw.wav")
     raw.write_bytes(urllib.request.urlopen(req, timeout=300).read())
     # 48kHz・モノラルに変換し、前後の無音を少し整える
@@ -49,11 +52,10 @@ def tts(text, out_wav):
         return w.getnframes() / w.getframerate()
 
 
-if __name__ == "__main__":
-    if sys.argv[1] == "--balance":
-        print(json.dumps(balance(), ensure_ascii=False)); sys.exit()
-    work = Path(sys.argv[1]); work.mkdir(parents=True, exist_ok=True)
-    only = set(sys.argv[2:])
+def make_all(work, only=()):
+    """作業フォルダにあるセリフ（声に渡す文が同じもの）は作り直さない。"""
+    work = Path(work); work.mkdir(parents=True, exist_ok=True)
+    only = set(only)
     vj = work / "voice.json"
     old = {v["id"]: v for v in json.loads(vj.read_text(encoding="utf-8"))} if vj.exists() else {}
     res = []
@@ -65,11 +67,13 @@ if __name__ == "__main__":
             dur = tts(vt, wav)
             with open(work / "usage.jsonl", "a", encoding="utf-8") as f:
                 f.write(json.dumps({"time": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
-                                    "id": lid, "chars": len(vt), "model": "s1", "reference_id": MODEL_ID}, ensure_ascii=False) + "\n")
+                                    "id": lid, "chars": len(vt), "model": TTS_MODEL, "reference_id": MODEL_ID}, ensure_ascii=False) + "\n")
         else:
             dur = old[lid]["dur"]
         r = {"id": lid, "start": t0, "dur": round(dur, 2), "slot": round(t_end - t0, 2), "fits": t0 + dur <= t_end,
              "subtitle": text, "voice_text": vt}
         res.append(r)
-        print(f"{lid:9s} {t0:7.1f}s  {dur:5.2f}s / slot {t_end - t0:5.2f}s  {'OK' if r['fits'] else 'OVER'}  {'NEW' if regen else '   '}  {vt}")
+        if regen or not r["fits"]:
+            print(f"{lid:9s} {t0:7.1f}s  {dur:5.2f}s / slot {t_end - t0:5.2f}s  {'OK' if r['fits'] else 'OVER'}  {'NEW' if regen else '   '}  {vt}")
     vj.write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
+    return res

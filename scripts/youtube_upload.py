@@ -52,8 +52,23 @@ def read_metadata(desc_md):
     return title, desc, tags
 
 
-def upload(folder):
+def set_thumbnail(video_id, path, tok):
+    """サムネを設定する（thumbnails.set）。"""
+    data = Path(path).read_bytes()
+    req = urllib.request.Request(
+        f"https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId={video_id}&uploadType=media",
+        data=data, method="POST", headers={"Authorization": "Bearer " + tok, "Content-Type": "image/jpeg"})
+    try:
+        with urllib.request.urlopen(req, timeout=120) as r:
+            return json.load(r)
+    except urllib.error.HTTPError as e:
+        sys.exit(f"サムネの設定に失敗: HTTP {e.code} {e.read()[:400]!r}")
+
+
+def upload(folder, thumbnail=None):
     folder = Path(folder)
+    if thumbnail is None or not Path(thumbnail).exists():
+        sys.exit("サムネがありません（サムネなしでアップロードしない：.claude/agents/production.md）")
     video = folder / "video.mp4"
     title, desc, tags = read_metadata(folder / "description.md")
     body = {
@@ -91,11 +106,13 @@ def upload(folder):
                 f.seek(sent)
             print(f"  {sent * 100 // size}%", flush=True)
     vid = result["id"]
+    th = set_thumbnail(vid, thumbnail, access_token())
     rec = {"video_id": vid, "url": f"https://youtu.be/{vid}", "studio": f"https://studio.youtube.com/video/{vid}/edit",
-           "privacy": result["status"]["privacyStatus"], "title": result["snippet"]["title"]}
+           "privacy": result["status"]["privacyStatus"], "title": result["snippet"]["title"],
+           "thumbnail": bool(th.get("items"))}
     (folder / "upload.json").write_text(json.dumps(rec, ensure_ascii=False, indent=1), encoding="utf-8")
     print(json.dumps(rec, ensure_ascii=False))
 
 
 if __name__ == "__main__":
-    upload(sys.argv[1])
+    sys.exit("scripts/make_episode.py <回> upload を使ってください（監査の合格とサムネを確かめてから送る）")

@@ -1,0 +1,893 @@
+{
+ "episode": "001",
+ "season": "秋",
+ "topics": [
+  "柿",
+  "紅葉"
+ ],
+ "note": "第1回の中身。make_episode.py がこれを読んで動画を作る。台本の正本は plan.md、ここはその機械用の写し。",
+ "youtube": {
+  "title": "【間違い探し】3つ見つけられる？柿と紅葉の秋 全5問｜初級〜上級・1問90秒【シニアの脳トレ】",
+  "description_file": "description.md",
+  "title_note": "調査部の競合調査（knowledge/thumbnail-title.md 段階1）の推奨A。企画部の元の案「【脳トレ】柿と紅葉の秋 間違い探し5問｜こよみ先生と10分」から変更（事業部長判断・2026-11-06）"
+ },
+ "screens": {
+  "opening_title": "秋の間違い探し　5問",
+  "opening_sub": "こよみ先生のまいにち脳トレ",
+  "unchiku_header": "こよみ先生の 秋の小話",
+  "unchiku_slides": [
+   {
+    "until": 4,
+    "texts": [
+     [
+      "秋の小話",
+      700,
+      420,
+      170,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ]
+    ]
+   },
+   {
+    "until": 15,
+    "texts": [
+     [
+      "もみつ　→　もみじ",
+      700,
+      400,
+      140,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ],
+     [
+      "（葉の色が変わる）",
+      700,
+      560,
+      68,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 23,
+    "texts": [
+     [
+      "もみち",
+      700,
+      230,
+      80,
+      [
+       180,
+       70,
+       40
+      ],
+      0
+     ],
+     [
+      "黄葉",
+      700,
+      420,
+      240,
+      [
+       200,
+       150,
+       20
+      ],
+      8
+     ],
+     [
+      "万葉集のころ",
+      700,
+      640,
+      70,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 30,
+    "texts": [
+     [
+      "平安時代",
+      700,
+      300,
+      150,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ],
+     [
+      "古今集の秋の歌",
+      700,
+      470,
+      80,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ],
+    "maple": [
+     700,
+     650,
+     110,
+     [
+      205,
+      50,
+      40
+     ]
+    ]
+   }
+  ],
+  "ending_titles": [
+   [
+    "15個",
+    "秋の名探偵"
+   ],
+   [
+    "11〜14個",
+    "もみじ名人"
+   ],
+   [
+    "6〜10個",
+    "実りの秋さん"
+   ],
+   [
+    "0〜5個",
+    "どんぐりさん"
+   ]
+  ],
+  "ending_note": "どんぐりさんは、これから、ぐんぐん育ちます",
+  "ending_next": "次回も 秋の絵で 5問"
+ },
+ "timeline": {
+  "total": 615.0,
+  "opening": [
+   0.0,
+   15.0
+  ],
+  "rule": [
+   15.0,
+   25.0
+  ],
+  "q_start": {
+   "1": 25.0,
+   "2": 133.0,
+   "3": 241.0,
+   "4": 379.0,
+   "5": 487.0
+  },
+  "unchiku": [
+   349.0,
+   379.0
+  ],
+  "ending": [
+   595.0,
+   615.0
+  ],
+  "card": 3.0,
+  "solve": 90.0,
+  "answer": 15.0,
+  "hint_at": 45.0,
+  "ten_at": 80.0,
+  "ans_first": 1.6,
+  "ans_step": 4.3
+ },
+ "lines": {
+  "opening": [
+   {
+    "id": "op",
+    "at": 0.0,
+    "text": "みなさん、こんにちは。こよみ先生です。秋がふかまって、柿のおいしい季節になりましたね。今日は、秋の間違い探しを5問、いっしょに楽しみましょう。",
+    "face": "smile",
+    "until": 15.0
+   }
+  ],
+  "rule": [
+   {
+    "id": "rule",
+    "at": 0.0,
+    "text": "左と右の絵をくらべます。90秒で、右の絵の違いを3つ探してください。",
+    "face": "normal",
+    "until": 10.0
+   }
+  ],
+  "unchiku": [
+   {
+    "id": "u1",
+    "at": 0.0,
+    "text": "ここで、ひと休み。秋の小話です。",
+    "face": "smile",
+    "until": 4.0
+   },
+   {
+    "id": "u2",
+    "at": 4.0,
+    "text": "「もみじ」は、葉の色が変わることをあらわす、むかしのことば「もみつ」から生まれたといわれます。",
+    "face": "normal",
+    "until": 15.0
+   },
+   {
+    "id": "u3",
+    "at": 15.0,
+    "text": "万葉集のころは、黄色い葉と書いて「もみち」と読むのが、ふつうだったそうです。",
+    "face": "surprise",
+    "until": 23.0
+   },
+   {
+    "id": "u4",
+    "at": 23.0,
+    "text": "平安時代になると、赤いもみじが秋の主役になったといわれます。",
+    "face": "smile",
+    "until": 30.0
+   }
+  ],
+  "ending": [
+   {
+    "id": "e1",
+    "at": 0.0,
+    "text": "これで5問、おしまいです。おつかれさまでした。",
+    "face": "yay",
+    "until": 4.5
+   },
+   {
+    "id": "e2",
+    "at": 4.5,
+    "text": "15個の違い、いくつ見つかりましたか。画面で、今日の称号を見てくださいね。",
+    "face": "smile",
+    "until": 11.5
+   },
+   {
+    "id": "e3",
+    "at": 11.5,
+    "text": "次回も秋の絵で5問です。チャンネル登録をして、また来てください。",
+    "face": "wink",
+    "until": 20.0
+   }
+  ]
+ },
+ "readings": [
+  [
+   "第1問",
+   "だいいちもん"
+  ],
+  [
+   "第2問",
+   "だいにもん"
+  ],
+  [
+   "第3問",
+   "だいさんもん"
+  ],
+  [
+   "第4問",
+   "だいよんもん"
+  ],
+  [
+   "第5問",
+   "だいごもん"
+  ],
+  [
+   "初級",
+   "しょきゅう"
+  ],
+  [
+   "中級",
+   "ちゅうきゅう"
+  ],
+  [
+   "上級",
+   "じょうきゅう"
+  ],
+  [
+   "山道",
+   "やまみち"
+  ],
+  [
+   "縁側",
+   "えんがわ"
+  ],
+  [
+   "下駄",
+   "げた"
+  ],
+  [
+   "灯籠",
+   "とうろう"
+  ],
+  [
+   "お社",
+   "おやしろ"
+  ],
+  [
+   "鼻緒",
+   "はなお"
+  ],
+  [
+   "湯のみ",
+   "ゆのみ"
+  ],
+  [
+   "柿",
+   "かき"
+  ],
+  [
+   "首輪",
+   "くびわ"
+  ],
+  [
+   "提灯",
+   "ちょうちん"
+  ],
+  [
+   "水玉模様",
+   "みずたまもよう"
+  ],
+  [
+   "石の塔",
+   "いしのとう"
+  ],
+  [
+   "鳥居",
+   "とりい"
+  ],
+  [
+   "木の根もと",
+   "きのねもと"
+  ],
+  [
+   "根もと",
+   "ねもと"
+  ],
+  [
+   "柱",
+   "はしら"
+  ],
+  [
+   "万葉集",
+   "まんようしゅう"
+  ],
+  [
+   "小話",
+   "こばなし"
+  ],
+  [
+   "称号",
+   "しょうごう"
+  ],
+  [
+   "今日",
+   "きょう"
+  ],
+  [
+   "葉",
+   "は"
+  ],
+  [
+   "お店の上のほう",
+   "お店のうえのほう"
+  ],
+  [
+   "壁の道具",
+   "かべのどうぐ"
+  ],
+  [
+   "手前",
+   "てまえ"
+  ],
+  [
+   "やかんの口",
+   "やかんのくち"
+  ],
+  [
+   "台所",
+   "だいどころ"
+  ],
+  [
+   "後半",
+   "こうはん"
+  ],
+  [
+   "背の高い形",
+   "せのたかいかたち"
+  ],
+  [
+   "模様",
+   "もよう"
+  ],
+  [
+   "平安時代",
+   "へいあんじだい"
+  ],
+  [
+   "主役",
+   "しゅやく"
+  ],
+  [
+   "足もと",
+   "あしもと"
+  ],
+  [
+   "飾り",
+   "かざり"
+  ],
+  [
+   "右のハト",
+   "みぎのハト"
+  ],
+  [
+   "90秒",
+   "きゅうじゅうびょう"
+  ],
+  [
+   "10秒",
+   "じゅうびょう"
+  ],
+  [
+   "15個",
+   "じゅうごこ"
+  ],
+  [
+   "5問",
+   "ごもん"
+  ],
+  [
+   "3つ",
+   "みっつ"
+  ]
+ ],
+ "voice_override": {
+  "u2": "もみじは、葉の色が変わることをあらわす、むかしのことば、もみつから生まれたといわれます。",
+  "u3": "万葉集のころは、黄色い葉と書いて、もみちと読むのが、ふつうだったそうです。",
+  "u4": "平安時代になると、赤いもみじが秋の主役になったといわれます。"
+ },
+ "voice": {
+  "provider": "fish",
+  "reference_id": "63819275ce38440ea245ca988abf976e",
+  "model": "s1",
+  "speed": 0.88,
+  "credit": "音声：Fish Audio（AIで合成した音声です）"
+ },
+ "images": {
+  "model": "gemini-3-pro-image",
+  "size": "2K",
+  "aspect": "4:5",
+  "style": "A warm Japanese picture-book illustration in soft watercolor with gentle colored-pencil outlines, like a cozy picture book for all ages, drawn with clear, crisp details. Autumn palette: persimmon orange, maple red, ginkgo yellow, warm browns and soft greens. Natural, hand-drawn, slightly rounded shapes; not geometric, not flat vector, not photorealistic. PORTRAIT-ISH composition, slightly taller than wide (about 8:9); the scene is arranged vertically, with a near foreground, a middle ground and a background stacked from bottom to top. Keep the top 10% of the picture simple (sky, eaves or leaves only) and the bottom 20% simple (plain floor, ground or pavement only): put every main object listed below in the middle part of the picture. No people. Absolutely no text, letters, numbers, logos or symbols anywhere, including on signs, curtains, boxes and lanterns. The main objects are clearly drawn, separated from each other with a little space around each, and fully visible (not cut off by the picture edge and not hidden behind other objects).\n",
+  "keep_alt": " Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text.",
+  "keep_remove": " Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object."
+ },
+ "questions": [
+  {
+   "q": 1,
+   "scene": "縁側",
+   "level": "初級",
+   "go": "さあ、どうぞ。",
+   "hint": "ヒントです。足もとの石のあたりを、よく見てくださいね。",
+   "hint_diff": 1,
+   "answers_intro": "答えです。",
+   "prompt": "Scene: looking out from inside an old Japanese house across a wooden veranda (engawa) into a small autumn garden in warm late-afternoon light. Background (upper middle): a persimmon tree with orange fruit and a moss-covered stone lantern among red maple leaves. Middle: the wooden veranda. Main objects: (1) a calico cat sleeping on a flat floor cushion on the veranda, with its striped tail curled neatly around its body; (2) a round wooden tray on the veranda holding exactly three persimmons, a brown clay teapot and two teacups, with a little empty space on the tray; (3) a large woven bamboo basket standing on the veranda; (4) a flat stepping stone just below the veranda edge with a pair of wooden geta sandals on it, the pair about one fourteenth of the picture width; (5) a few strings of dried persimmons hanging from the eaves at the upper right, kept below the top tenth of the picture. Each persimmon on the tray is about one sixteenth of the picture width.",
+   "edit_prompt": "Edit this illustration and make exactly these three small changes: (a) on the stepping stone, the BACK one of the two wooden geta sandals (the upper one) has no thong strap any more: only the plain wooden base is left; the front geta stays exactly the same; (b) on the round tray, add one more persimmon of the same size next to the three persimmons, so there are four; (c) the front small teacup on the tray becomes a taller, cylindrical teacup (about twice as tall), same color and same tea; the back teacup stays the same.",
+   "content_box": [
+    138,
+    300,
+    1714,
+    2073
+   ],
+   "retries": {},
+   "program_edits": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "物がない",
+     "label": "奥の下駄の鼻緒がない",
+     "line": "下駄の鼻緒が、ひとつありません。",
+     "box": [
+      495,
+      1488,
+      770,
+      1640
+     ],
+     "keep": [
+      [
+       470,
+       1600,
+       645,
+       1720
+      ]
+     ],
+     "object_w": 120,
+     "src": "1",
+     "note": "物の幅は鼻緒の幅。下駄の台ごと描き直されたので、範囲は奥の下駄全体。手前の下駄は元の絵のまま（keep）"
+    },
+    {
+     "id": 2,
+     "type": "増える",
+     "label": "お盆の柿が4つ",
+     "line": "柿が、よっつに増えました。",
+     "box": [
+      955,
+      1505,
+      1258,
+      1712
+     ],
+     "object_w": 125,
+     "src": "1",
+     "note": "物の幅は増えた柿1つ。ほかの3つの柿も少し描き直されたので、範囲は柿4つ全体"
+    },
+    {
+     "id": 3,
+     "type": "形が変わる",
+     "label": "手前の湯のみが背の高い形",
+     "line": "湯のみが、背の高い形になりましたね。",
+     "box": [
+      1208,
+      1515,
+      1352,
+      1712
+     ],
+     "object_w": 114,
+     "src": "1"
+    }
+   ]
+  },
+  {
+   "q": 2,
+   "scene": "商店街",
+   "level": "初級",
+   "go": "さあ、どうぞ。",
+   "hint": "ヒントです。お店の上のほうを、よく見てくださいね。",
+   "hint_diff": 3,
+   "answers_intro": "答えです。",
+   "prompt": "Scene: a narrow old Japanese shopping street in autumn, seen from the street in front of a small fruit and vegetable shop with a wooden front and a tiled roof; the street goes back into the distance at the upper left. Main objects: (1) a wooden display stand in front of the shop with flat bamboo baskets of persimmons and sweet potatoes; (2) one big green Japanese pumpkin (kabocha) sitting alone on the stand, about one thirteenth of the picture width, with empty space next to it; (3) a round flat bamboo basket full of chestnuts on the stand, about one twelfth of the picture width; (4) an old-fashioned black bicycle with a wire front basket parked in front of the shop (the basket about one fourteenth of the picture width); (5) a Shiba dog sitting on the pavement; (6) a plain indigo shop curtain (noren) with no writing and no pattern; (7) a potted yellow chrysanthemum by the door; a few ginkgo leaves on the stone pavement. Paper lanterns, if any, are completely blank. The neighbouring shops are simple and have no writing.",
+   "edit_prompt": "Edit this illustration and make exactly these three small changes: (a) in the flat basket of purple sweet potatoes on the display stand, remove one sweet potato, showing the woven basket bottom where it was; (b) the Shiba dog now wears a simple red collar around its neck; nothing else about the dog changes; (c) the big paper lantern hanging from the eaves above the flowers becomes round like a ball instead of a long cylinder, same blank cream paper and same black top and bottom rims, same place.",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "物がない",
+     "label": "ざるのさつまいもが1本ない",
+     "line": "おいもが、ひとつありません。",
+     "box": [
+      770,
+      1140,
+      1132,
+      1356
+     ],
+     "object_w": 133,
+     "src": "1",
+     "note": "物の幅はなくなったいも1本。ほかのいもとざるも少し描き直されたので、範囲はざる全体"
+    },
+    {
+     "id": 2,
+     "type": "増える",
+     "label": "柴犬に赤い首輪",
+     "line": "わんちゃんに、首輪がつきました。",
+     "box": [
+      1130,
+      1560,
+      1300,
+      1680
+     ],
+     "object_w": 141,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "形が変わる",
+     "label": "提灯が丸い形",
+     "line": "提灯の形が、まるくなっていますね。",
+     "box": [
+      500,
+      552,
+      745,
+      875
+     ],
+     "object_w": 128,
+     "src": "1",
+     "note": "物の幅は元の提灯（細長い形）。丸くなった後の幅は約170px（画面幅の約4.6%）"
+    }
+   ]
+  },
+  {
+   "q": 3,
+   "scene": "山道",
+   "level": "中級",
+   "go": "少しむずかしくなります。どうぞ。",
+   "hint": "ヒントです。木の根もとのあたりを、よく見てくださいね。",
+   "hint_diff": 2,
+   "answers_intro": "答えです。",
+   "prompt": "Scene: a gentle mountain walking path in autumn, with rough stone steps winding up through red maple and yellow trees toward misty hills at the top. Main objects: (1) a wooden bench beside the path with a small red rucksack and a folded white hand towel (tenugui) with a blue polka-dot pattern lying on it, the towel about one eighteenth of the picture width; (2) a tree stump with one brown squirrel sitting on it, facing right and holding an acorn, about one eighteenth of the picture width; (3) a cluster of exactly three brown mushrooms at the foot of a maple tree, each mushroom about one twentieth of the picture width; (4) a small stack of round stones (a cairn) at the side of the path; (5) a few spiky chestnut burrs on the ground; (6) a small wooden footbridge over a little stream. No signposts.",
+   "edit_prompt": "Edit this illustration and make exactly these three small changes: (a) among the spiky chestnut burrs on the left side of the stone path, remove the smaller burr that is behind and to the right of the open burr with the shiny chestnut, showing the ground with leaves; (b) the cap of the middle (smallest) mushroom of the three now has small white polka dots; its shape and brown color stay the same; (c) on top of the small stack of round stones (the cairn), add one more small round grey-blue stone, so the stack is one stone taller.",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {
+    "2a": {
+     "crop": [
+      700,
+      1200,
+      1100,
+      1520
+     ],
+     "aspect": "5:4",
+     "prompt": "Edit this close-up of a picture-book illustration: there are two spiky chestnut burrs side by side. Completely remove the smaller burr on the right (the closed one without a visible chestnut), and fill its place with the same sandy ground and fallen leaves as around it. The open burr with the shiny chestnut on the left stays exactly the same. Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text. Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object."
+    }
+   },
+   "program_edits": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "本数",
+     "label": "いがぐりが1つへる",
+     "line": "いがぐりが、ひとつへりました。",
+     "box": [
+      848,
+      1300,
+      996,
+      1444
+     ],
+     "object_w": 100,
+     "src": "2a",
+     "note": "物の幅はいがぐりの実の部分。とげの先まで入れると124px（約3.3%）"
+    },
+    {
+     "id": 2,
+     "type": "模様",
+     "label": "きのこのかさに水玉模様",
+     "line": "きのこに、水玉模様がつきました。",
+     "box": [
+      585,
+      875,
+      760,
+      1060
+     ],
+     "object_w": 111,
+     "src": "1",
+     "note": "水玉は、指示した真ん中ではなく右のきのこについた。物の幅は右のきのこのかさ"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "石の塔の石が1つ増える",
+     "line": "石の塔が、ひとつ高くなりましたね。",
+     "box": [
+      650,
+      955,
+      845,
+      1295
+     ],
+     "object_w": 68,
+     "src": "1",
+     "note": "物の幅は増えた石1つ（約1.8%で、中級の目安2〜3%を少し下回る）。塔の幅は約115px（約3.1%）、高さは約45px高くなった"
+    }
+   ]
+  },
+  {
+   "q": 4,
+   "scene": "台所",
+   "level": "中級",
+   "go": "後半です。どうぞ。",
+   "hint": "ヒントです。お茶の道具のあたりを見てください。",
+   "hint_diff": 3,
+   "answers_intro": "答えです。",
+   "prompt": "Scene: an old-fashioned Japanese country kitchen in autumn with dark wooden beams, a window showing a persimmon tree outside at the top, and a clay cooking stove (kamado) at the left. Main objects: (1) a sturdy wooden table in the middle; (2) a round bamboo colander (zaru) on the table holding exactly three purple sweet potatoes, each about one eighteenth of the picture width, with space for one more; (3) a metal kettle with its spout clearly pointing to the left, sitting on the stove; (4) a small tray with a teapot and two cylindrical teacups (yunomi), each teacup about one twentieth of the picture width, both decorated with the same simple wavy blue lines; (5) an oval plate with two grilled Pacific saury fish; (6) a small basket of chestnuts; (7) a few wooden ladles hanging on the wall. No clock, no calendar, no paper with writing.",
+   "edit_prompt": "Edit this illustration and make exactly these three small changes: (a) on the wall, remove the flat wooden spatula (the second utensil from the right), showing the plain wall and the empty hook; the other three utensils stay; (b) the kettle on the stove now has its spout on the right side pointing to the right instead of the left, same kettle, same size, same place; (c) the front teacup on the small tray now has a blue checkered (grid) pattern instead of wavy lines, same blue color, same shape; the back teacup stays.",
+   "content_box": [
+    34,
+    38,
+    1822,
+    2050
+   ],
+   "retries": {},
+   "program_edits": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "本数",
+     "label": "壁のへらがない",
+     "line": "壁の道具が、ひとつへっています。",
+     "box": [
+      1540,
+      385,
+      1700,
+      812
+     ],
+     "object_w": 106,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "向き",
+     "label": "やかんの口が右向き",
+     "line": "やかんの口が、反対を向いています。",
+     "box": [
+      125,
+      690,
+      650,
+      1125
+     ],
+     "object_w": 105,
+     "src": "1",
+     "note": "物の幅は注ぎ口。やかん全体が描き直されたので、範囲はやかんとこんろ"
+    },
+    {
+     "id": 3,
+     "type": "模様",
+     "label": "湯のみの模様がごばん目",
+     "line": "湯のみの模様が、変わっていますね。",
+     "box": [
+      962,
+      1140,
+      1092,
+      1336
+     ],
+     "object_w": 102,
+     "src": "1"
+    }
+   ]
+  },
+  {
+   "q": 5,
+   "scene": "神社",
+   "level": "上級",
+   "go": "最後の問題です。じっくりどうぞ。",
+   "hint": "ヒントです。手前の道のあたりを、よく見てくださいね。",
+   "hint_diff": 3,
+   "answers_intro": "答えです。",
+   "prompt": "Scene: the quiet grounds of a small Japanese shrine in late autumn, with a tall golden ginkgo tree and yellow leaves scattered on the stone-paved path that leads up to a small wooden shrine building in the upper middle. Main objects: (1) the shrine building with a gabled roof; on the ridge of the roof there are exactly three short round crosswise logs (katsuogi), clearly separated; (2) a pair of stone guardian lion-dog statues (komainu) on pedestals on both sides of the path, the left one wearing a small red cloth bib, the bib about one twenty-eighth of the picture width; (3) a stone lantern beside the path whose light box has a round window, the window about one thirtieth of the picture width; (4) a red torii gate at the side; (5) a few grey pigeons on the path; (6) a plain wooden offering box with no writing; (7) a bamboo broom leaning against the ginkgo trunk. No wooden plaques with writing, no paper charms with letters.",
+   "edit_prompt": "Edit this illustration and make exactly these three small changes: (a) on the red torii gate, the left end of the lower crossbeam (the short block sticking out to the left of the left pillar) is gone, so the crossbeam ends at the left pillar; (b) the black band at the bottom of the left torii pillar is now red, the same red as the pillar; (c) the right one of the two grey pigeons on the path now faces right instead of left (it turned around), same size, same place.",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {
+    "2": {
+     "crop": [
+      0,
+      760,
+      1200,
+      1720
+     ],
+     "aspect": "5:4",
+     "prompt": "Edit this close-up of a picture-book illustration and make exactly these three small changes: (a) on the red torii gate at the left, the lower horizontal crossbeam has a short block sticking out to the LEFT of the left pillar: remove that sticking-out block, so the crossbeam ends at the left pillar, and show the orange autumn trees behind it; (b) the dark grey-black band at the very bottom of the left torii pillar is painted red now, the same red as the rest of the pillar; (c) the grey pigeon at the lower right turns around and now faces RIGHT: its head and beak point to the right and its tail to the left, same size and same place. Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text. Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object."
+    },
+    "3": {
+     "crop": [
+      860,
+      950,
+      1630,
+      1720
+     ],
+     "aspect": "1:1",
+     "prompt": "Edit this close-up of a picture-book illustration and make exactly these two small changes: (a) the stone lantern at the upper right has a round onion-shaped knob (finial) on the very top of its roof: remove that knob completely, so the roof ends flat at the top, and show the tree trunk and bushes behind it; (b) the larger grey pigeon on the right side of the path is turned around so that it faces RIGHT: its head and beak are now on its right side pointing right, and its tail points left; same pigeon, same size, same place. The smaller pigeon on the left stays exactly the same. Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text. Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object."
+    }
+   },
+   "program_edits": {
+    "flip": "scripts/custom/ep001_flip_pigeon.py"
+   },
+   "diffs": [
+    {
+     "id": 1,
+     "type": "物がない",
+     "label": "灯籠のてっぺんの宝珠がない",
+     "line": "灯籠のてっぺんの飾りが、ありません。",
+     "box": [
+      1440,
+      978,
+      1552,
+      1082
+     ],
+     "object_w": 77,
+     "src": "3",
+     "note": "2.07%。事業部長が「約1.5〜2%」の範囲として認めた"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "鳥居の柱の根もとが赤い",
+     "line": "鳥居の柱の根もとが、赤くなりました。",
+     "box": [
+      50,
+      1100,
+      190,
+      1345
+     ],
+     "object_w": 73,
+     "src": "2"
+    },
+    {
+     "id": 3,
+     "type": "向き",
+     "label": "右のハトが反対を向く",
+     "line": "右のハトが、反対を向いていますね。",
+     "box": [
+      950,
+      1515,
+      1175,
+      1712
+     ],
+     "circle": [
+      961,
+      1525,
+      1161,
+      1704
+     ],
+     "feather": 6,
+     "object_w": 60,
+     "src": "flip",
+     "note": "AIでは描き直していない。scripts/ep001_flip_pigeon.py でハトだけを左右反転した。物の幅はハトの頭"
+    }
+   ]
+  }
+ ],
+ "thumbnail": {
+  "question": 4,
+  "big_text": "3つ見つけられる？",
+  "highlight": "3つ",
+  "highlight_color": [
+   255,
+   214,
+   0
+  ],
+  "big_color": [
+   255,
+   255,
+   255
+  ],
+  "band_color": [
+   25,
+   35,
+   70
+  ],
+  "big_size": 120,
+  "sub_text": "全5問・1問90秒",
+  "badges": [
+   [
+    "初級〜上級",
+    [
+     176,
+     62,
+     52
+    ]
+   ]
+  ],
+  "circle_hint": false,
+  "note": "型：左右に同じ絵・上に濃紺の帯と問いかけ1行・下に小さな帯（knowledge/thumbnail-title.md 段階1の勝ちパターン）。こよみ先生は入れない（段階2で比べる）"
+ }
+}

@@ -1,13 +1,10 @@
-"""第1回（001・作り直し版）の動画を組み立てる。PILでフレームを描き、ffmpeg（libx264）にパイプで渡す。4つに分けて並列に描き、最後につなぐ。
+"""動画を組み立てる（make_episode.py から呼ぶ）。PILでフレームを描き、ffmpeg（libx264）にパイプで渡す。4つに分けて並列に描き、最後につなぐ。
 画面のつくり（knowledge/concept.md 2026-11-06）：
   - 出題中・答え合わせ中は、左右の絵（各960×1080）で画面いっぱい。上の端に細い帯（約5%）、セリフがある間だけ下の端に字幕。
     この間、こよみ先生の絵は出さない（声だけ）。
   - こよみ先生（6表情・ゆらゆら・まばたき）は、オープニング・うんちく・エンディングだけに出す（ルール説明にも出さない）。
-使い方:
-  python3 scripts/ep001_video.py <成果物フォルダ> <作業フォルダ> <フォント.ttf> <音声.wav>
-    成果物フォルダ：q1_a.png … q5_b.png、answers.json。作業フォルダ：owl/koyomi_*.png と voice/voice.json。
-  python3 scripts/ep001_video.py --frame <秒> <成果物> <作業> <フォント> <出力.png>   （1枚だけ確かめる）
-答え合わせの赤丸・ヒントの位置は answers.json（= scripts/ep001_diffs.json）から計算する。
+画面の文字（オープニングの題・うんちくの画面・称号）は plan.json の screens から読む。
+答え合わせの赤丸・ヒントの位置は answers.json（= plan.json の diffs）から計算する。
 """
 import json, math, subprocess, sys
 from functools import lru_cache
@@ -15,7 +12,8 @@ from multiprocessing import Pool
 from pathlib import Path
 from PIL import Image, ImageChops, ImageDraw, ImageFont, ImageFilter
 sys.path.insert(0, str(Path(__file__).parent))
-import ep001_timeline as T
+import ep_timeline as T
+from episode_plan import plan
 
 W, H, FPS = 1920, 1080, 30
 BG = (246, 236, 216)
@@ -362,8 +360,9 @@ def opening_base():
         th = Image.blend(Image.new("RGB", th.size, BG), th, 0.6)
         im.paste(th, (x + k * 236, 560))
     d = ImageDraw.Draw(im)
-    text_center(d, (650, 230), "秋の間違い探し　5問", 120, stroke=6, stroke_fill=(255, 250, 238))
-    text_center(d, (650, 380), "こよみ先生のまいにち脳トレ", 58, fill=(150, 90, 50))
+    SC = plan()["screens"]
+    text_center(d, (650, 230), SC["opening_title"], 120, stroke=6, stroke_fill=(255, 250, 238))
+    text_center(d, (650, 380), SC["opening_sub"], 58, fill=(150, 90, 50))
     return im
 
 
@@ -386,23 +385,16 @@ def render_unchiku(t):
     im = Image.new("RGB", (W, H), (250, 240, 222))
     d = ImageDraw.Draw(im)
     leaves(d, t)
-    text_center(d, (80, 80), "こよみ先生の 秋の小話", 56, fill=(150, 90, 50), anchor="lm")
+    SC = plan()["screens"]
+    text_center(d, (80, 80), SC["unchiku_header"], 56, fill=(150, 90, 50), anchor="lm")
     dt = t - u
-    cx = 700
-    if dt < 4:
-        text_center(d, (cx, 420), "秋の小話", 170, fill=(180, 70, 40), stroke=6, stroke_fill=(255, 250, 238))
-    elif dt < 15:
-        text_center(d, (cx, 400), "もみつ　→　もみじ", 140, stroke=6, stroke_fill=(255, 250, 238))
-        text_center(d, (cx, 560), "（葉の色が変わる）", 68, fill=(110, 84, 60))
-    elif dt < 23:
-        text_center(d, (cx, 230), "もみち", 80, fill=(180, 70, 40))
-        text_center(d, (cx, 420), "黄葉", 240, fill=(200, 150, 20), stroke=8, stroke_fill=(255, 250, 238))
-        text_center(d, (cx, 640), "万葉集のころ", 70, fill=(110, 84, 60))
-    else:
-        # plan.md 4-7：「平安時代」「古今集の秋の歌」と赤いもみじ（かえで）の葉。黄葉→紅葉の矢印は使わない
-        text_center(d, (cx, 300), "平安時代", 150, stroke=6, stroke_fill=(255, 250, 238))
-        text_center(d, (cx, 470), "古今集の秋の歌", 80, fill=(110, 84, 60))
-        draw_maple(d, cx, 650, 110, (205, 50, 40))
+    # うんちくの画面：plan.json の screens.unchiku_slides。until（うんちくの頭からの秒）までその画面を出す
+    slide = next((x for x in SC["unchiku_slides"] if dt < x["until"]), SC["unchiku_slides"][-1])
+    for text, x, y, size, col, stroke in slide["texts"]:
+        text_center(d, (x, y), text, size, fill=tuple(col), stroke=stroke, stroke_fill=(255, 250, 238) if stroke else None)
+    if slide.get("maple"):
+        mx, my, mr, mc = slide["maple"]
+        draw_maple(d, mx, my, mr, tuple(mc))
     draw_subtitle(im, t, (20, 1400, H - 24))
     draw_owl(im, t, (W - OWL_SIZE - 40, H - OWL_SIZE - 30))
     return im
@@ -440,7 +432,7 @@ def render_ending(t):
     if dt < 4.5:
         leaves(d, t, n=40, seed=7, colors=((214, 80, 50), (232, 176, 48), (96, 150, 90), (90, 120, 200)))
         text_center(d, (700, 380), "おつかれさまでした", 130, stroke=6, stroke_fill=(255, 250, 238))
-        text_center(d, (700, 540), "5問 おしまい", 90, fill=(180, 70, 40))
+        text_center(d, (700, 540), f"{len(T.QUESTIONS)}問 おしまい", 90, fill=(180, 70, 40))
     else:
         text_center(d, (420, 80), "今日の称号", 80, fill=(180, 70, 40))
         y = 170
@@ -451,7 +443,7 @@ def render_ending(t):
             y += 118
         text_center(d, (610, y + 30), T.TITLE_NOTE, 50, fill=(110, 84, 60))
         if dt >= 11.5:
-            text_center(d, (610, y + 110), "次回も 秋の絵で 5問", 60, fill=(150, 90, 50))
+            text_center(d, (610, y + 110), plan()["screens"]["ending_next"], 60, fill=(150, 90, 50))
     draw_subtitle(im, t, (20, 1400, H - 24))
     draw_owl(im, t, (W - OWL_SIZE - 40, H - OWL_SIZE - 60))
     return im
@@ -507,10 +499,6 @@ def main(out, work, fontp, audio):
                     "-movflags", "+faststart", "-shortest", str(Path(out) / "video.mp4")], check=True)
 
 
-if __name__ == "__main__":
-    if sys.argv[1] == "--frame":
-        t, out, work, fontp, png = float(sys.argv[2]), *sys.argv[3:7]
-        setup(out, work, fontp)
-        render(t).save(png)
-    else:
-        main(*sys.argv[1:5])
+def frame(t, out, work, fontp, png):
+    setup(out, work, fontp)
+    render(t).save(png)

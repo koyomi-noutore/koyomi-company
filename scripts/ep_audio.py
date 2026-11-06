@@ -1,11 +1,11 @@
-"""第1回の音（声・BGM・効果音）を1本のWAVにまとめる。BGMと効果音はすべて numpy で合成したオリジナル（外部の音源は使わない）。
-使い方: python3 scripts/ep001_audio.py <声の作業フォルダ> <出力.wav>
+"""音（声・BGM・効果音）を1本のWAVにまとめる（make_episode.py から呼ぶ）。BGMと効果音はすべて numpy で合成したオリジナル（外部の音源は使わない）。
+時刻は plan.json（ep_timeline）から読む。
 """
 import json, sys, wave
 from pathlib import Path
 import numpy as np
 sys.path.insert(0, str(Path(__file__).parent))
-import ep001_timeline as T
+import ep_timeline as T
 
 SR = 48000
 N = int(T.TOTAL * SR)
@@ -103,7 +103,7 @@ def add(track, x, at):
 
 
 def sfx_events():
-    ev = [(0.2, chime((79, 84, 88), 0.18)), (349.0, chime((84, 88), 0.25, 0.16)), (595.0, fanfare())]
+    ev = [(T.OPENING[0] + 0.2, chime((79, 84, 88), 0.18)), (T.UNCHIKU[0], chime((84, 88), 0.25, 0.16)), (T.ENDING[0], fanfare())]
     for q, s in T.Q_START.items():
         ev.append((s, swoosh()))
         ev.append((s + T.CARD, chime((88, 84))))  # 出題スタート
@@ -155,7 +155,7 @@ def main(voice_dir, out):
     print(json.dumps({"peak_before_norm": round(float(peak), 3),
                       "voice_rms_db_while_speaking": round(rms(voice[speak]), 1),
                       "bgm_rms_db_while_speaking": round(rms((music * gain * duck * fade)[speak]), 1),
-                      "bgm_rms_db_silent_solve": round(rms((music * gain * duck)[int(40 * SR):int(70 * SR)]), 1)}))
+                      "bgm_rms_db_silent_solve": round(rms((music * gain * duck)[int((T.Q_START[min(T.Q_START)] + T.CARD + 12) * SR):int((T.Q_START[min(T.Q_START)] + T.CARD + 42) * SR)]), 1)}))
 
 
 if __name__ == "__main__":
