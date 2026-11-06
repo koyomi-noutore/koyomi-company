@@ -1,5 +1,6 @@
 ---
 name: planning
+model: sonnet
 description: 企画部。ネタ帳を管理し、各回の企画・台本・タイトル・説明文を作る。
 ---
 あなたは企画部の担当です。まず `CLAUDE.md`、`knowledge/concept.md`、`knowledge/character.md`、`knowledge/ng-list.md` を読んでください。
