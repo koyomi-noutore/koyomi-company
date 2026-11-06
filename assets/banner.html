@@ -1,0 +1,46 @@
+<!doctype html><html><head><meta charset="utf-8"><style>body{margin:0}</style></head><body>
+<svg id="b" width="2560" height="1440" viewBox="0 0 2560 1440" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans CJK JP">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fdf3dc"/><stop offset="1" stop-color="#f7dfae"/></linearGradient></defs>
+<rect width="2560" height="1440" fill="url(#g)"/>
+<path d="M0 1000 C500 940 900 1010 1300 980 S2100 930 2560 990 V1440 H0Z" fill="#e8c27a" opacity=".6"/>
+<g id="leaves"></g>
+<!-- owl in safe area (x507-2053, y508-931) -->
+<g transform="translate(600 500) scale(1.75)">
+<ellipse cx="120" cy="140" rx="78" ry="86" fill="#b08a5f" stroke="#3b2f25" stroke-width="4"/>
+<ellipse cx="120" cy="165" rx="50" ry="52" fill="#f3e3c3" stroke="#3b2f25" stroke-width="4"/>
+<path d="M56 80 L70 46 L92 70Z M184 80 L170 46 L148 70Z" fill="#b08a5f" stroke="#3b2f25" stroke-width="4" stroke-linejoin="round"/>
+<circle cx="92" cy="110" r="26" fill="#fff" stroke="#3b2f25" stroke-width="4"/><circle cx="148" cy="110" r="26" fill="#fff" stroke="#3b2f25" stroke-width="4"/>
+<path d="M80 113 q12 -13 24 0 M136 113 q12 -13 24 0" fill="none" stroke="#3b2f25" stroke-width="5" stroke-linecap="round"/>
+<path d="M66 112 h-12 M174 112 h12 M124 110 h-8" stroke="#3b2f25" stroke-width="4" stroke-linecap="round"/>
+<circle cx="92" cy="110" r="32" fill="none" stroke="#3b2f25" stroke-width="4"/><circle cx="148" cy="110" r="32" fill="none" stroke="#3b2f25" stroke-width="4"/>
+<path d="M108 132 L132 132 Q120 156 108 132Z" fill="#f0a830" stroke="#3b2f25" stroke-width="4" stroke-linejoin="round"/>
+<ellipse cx="70" cy="140" rx="10" ry="6" fill="#f2a0a0" fill-opacity=".7"/><ellipse cx="170" cy="140" rx="10" ry="6" fill="#f2a0a0" fill-opacity=".7"/>
+</g>
+<text x="1050" y="680" font-size="54" font-weight="700" fill="#8a5a3b">季節の絵で、毎日の頭の体操</text>
+<text x="1046" y="800" font-size="104" font-weight="900" fill="#3b2f25">こよみ先生の</text>
+<text x="1046" y="915" font-size="104" font-weight="900" fill="#c9463d">まいにち脳トレ</text>
+<g font-size="40" font-weight="700" fill="#fff">
+<rect x="1800" y="530" width="250" height="66" rx="33" fill="#c9463d"/><text x="1925" y="577" text-anchor="middle">毎日投稿</text>
+</g>
+</svg>
+<script>
+const INK='#3b2f25';
+function sakura(x,y,s,r){let d='';for(let i=0;i<5;i++){d+=`<g transform="rotate(${i*72})"><path d="M0 0 C${-s*0.45} ${-s*0.35} ${-s*0.35} ${-s*0.95} ${-s*0.1} ${-s*1.0} L0 ${-s*0.85} L${s*0.1} ${-s*1.0} C${s*0.35} ${-s*0.95} ${s*0.45} ${-s*0.35} 0 0Z" fill="#f7b6c8" stroke="${INK}" stroke-width="4" stroke-linejoin="round"/></g>`;}
+return `<g transform="translate(${x} ${y}) rotate(${r})">${d}<circle r="${s*0.16}" fill="#f2c94c" stroke="${INK}" stroke-width="3"/></g>`;}
+function himawari(x,y,s,r){let d='';for(let i=0;i<12;i++){d+=`<ellipse cx="0" cy="${-s*0.72}" rx="${s*0.18}" ry="${s*0.38}" transform="rotate(${i*30})" fill="#f6c23a" stroke="${INK}" stroke-width="4"/>`;}
+return `<g transform="translate(${x} ${y}) rotate(${r})">${d}<circle r="${s*0.42}" fill="#8a5a3b" stroke="${INK}" stroke-width="4"/><circle r="${s*0.25}" fill="#6b4329"/></g>`;}
+function maple(x,y,s,c,r){let d='';for(let k=0;k<5;k++){const a=-Math.PI/2+k*2*Math.PI/5,b=a+Math.PI/5;const tip=[s*Math.cos(a),s*Math.sin(a)],v=[0.38*s*Math.cos(b),0.38*s*Math.sin(b)];const l1=[0.75*s*Math.cos(a-0.22),0.75*s*Math.sin(a-0.22)],r1=[0.75*s*Math.cos(a+0.22),0.75*s*Math.sin(a+0.22)];if(k==0){const pb=a-Math.PI/5;d+='M'+(0.38*s*Math.cos(pb)).toFixed(1)+' '+(0.38*s*Math.sin(pb)).toFixed(1);}d+=` Q${(l1[0]*0.9).toFixed(1)} ${(l1[1]*0.9).toFixed(1)} ${l1[0].toFixed(1)} ${l1[1].toFixed(1)} L${tip[0].toFixed(1)} ${tip[1].toFixed(1)} L${r1[0].toFixed(1)} ${r1[1].toFixed(1)} Q${(r1[0]*0.9).toFixed(1)} ${(r1[1]*0.9).toFixed(1)} ${v[0].toFixed(1)} ${v[1].toFixed(1)}`;}
+return `<g transform="translate(${x} ${y}) rotate(${r})"><path d="M0 ${s*0.2} Q${s*0.1} ${s*0.7} ${s*0.05} ${s*0.95}" fill="none" stroke="${INK}" stroke-width="5" stroke-linecap="round"/><path d="${d}Z" fill="${c}" stroke="${INK}" stroke-width="5" stroke-linejoin="round"/></g>`;}
+function yuki(x,y,s,r){let d='';for(let i=0;i<6;i++){d+=`<g transform="rotate(${i*60})"><path d="M0 0 V${-s} M0 ${-s*0.55} l${-s*0.22} ${-s*0.22} M0 ${-s*0.55} l${s*0.22} ${-s*0.22}" stroke="#7fb0d8" stroke-width="${s*0.12}" stroke-linecap="round" fill="none"/></g>`;}
+return `<g transform="translate(${x} ${y}) rotate(${r})">${d}<circle r="${s*0.12}" fill="#7fb0d8"/></g>`;}
+const g=[];
+// 春（左上）
+g.push(sakura(170,200,62,10),sakura(380,110,44,-20),sakura(300,370,50,30),sakura(80,430,36,5));
+// 夏（右上）
+g.push(himawari(2380,210,70,0),himawari(2170,110,48,15),himawari(2440,440,44,-10));
+// 秋（左下）
+g.push(maple(180,1180,66,'#d2452c',-15),maple(400,1290,50,'#e3a134',20),maple(110,1000,44,'#c73d2a',10),maple(640,1330,40,'#d2452c',5));
+// 冬（右下）
+g.push(yuki(2360,1200,70,0),yuki(2150,1310,46,15),yuki(2450,1000,44,0),yuki(1930,1350,38,10));
+document.getElementById('leaves').innerHTML=g.join('');
+</script></body></html>
