@@ -94,36 +94,66 @@ SCENES = {
         "No wooden plaques with writing, no paper charms with letters."),
 }
 
+# 違いは outputs/2026-11-03_001/diff_candidates.md で選び直したもの（plan.md 3章の物は大きすぎたため。事業部長の指示・案C）
 EDITS = {
-    1: ("Edit this illustration and make exactly these three changes: (a) remove the pair of wooden geta "
-        "sandals from the stepping stone, showing the plain stone; (b) add one more persimmon of the same "
-        "size on the round tray, so there are four persimmons; (c) the calico cat's striped tail is no longer "
-        "curled around its body: it stretches straight out behind the cat on the cushion. Do not change the "
-        "cat's body, face or fur pattern."),
-    2: ("Edit this illustration and make exactly these three changes: (a) remove the wire front basket from "
-        "the bicycle, showing the bare handlebar and the shop behind it; (b) add a second green pumpkin of the "
-        "same size right next to the first one on the display stand; (c) the chestnuts are now in a square "
-        "wooden box instead of the round bamboo basket, same size, same place, same chestnuts."),
-    3: ("Edit this illustration and make exactly these three changes: (a) remove one of the three mushrooms "
-        "at the foot of the maple tree, so only two remain; (b) the squirrel on the tree stump now faces left "
-        "instead of right, same squirrel, same place, still holding the acorn; (c) the folded hand towel on "
-        "the bench now has blue stripes instead of blue polka dots, same white and blue colors, same shape."),
-    4: ("Edit this illustration and make exactly these three changes: (a) add one more purple sweet potato of "
-        "the same size in the bamboo colander, so there are four; (b) turn the kettle on the stove so that "
-        "its spout points to the right instead of the left, same kettle, same place; (c) the front teacup on "
-        "the small tray now has a blue checkered (grid) pattern instead of wavy lines, same blue color, same "
-        "shape; the other teacup stays the same."),
-    5: ("Edit this illustration and make exactly these three changes: (a) the small cloth bib on the left "
-        "stone lion-dog statue is now blue instead of red, same shape; (b) on the ridge of the shrine roof "
-        "there are now only two short crosswise logs instead of three, evenly spaced; (c) the window of the "
-        "stone lantern's light box is now square instead of round, same size, same place."),
+    1: ("Edit this illustration and make exactly these three small changes: (a) on the stepping stone, the BACK one "
+        "of the two wooden geta sandals (the upper one) has no thong strap any more: only the plain wooden base is "
+        "left; the front geta stays exactly the same; (b) on the round tray, add one more persimmon of the same size "
+        "next to the three persimmons, so there are four; (c) the front small teacup on the tray becomes a taller, "
+        "cylindrical teacup (about twice as tall), same color and same tea; the back teacup stays the same."),
+    2: ("Edit this illustration and make exactly these three small changes: (a) in the flat basket of purple sweet "
+        "potatoes on the display stand, remove one sweet potato, showing the woven basket bottom where it was; "
+        "(b) the Shiba dog now wears a simple red collar around its neck; nothing else about the dog changes; "
+        "(c) the big paper lantern hanging from the eaves above the flowers becomes round like a ball instead of a "
+        "long cylinder, same blank cream paper and same black top and bottom rims, same place."),
+    3: ("Edit this illustration and make exactly these three small changes: (a) among the spiky chestnut burrs on "
+        "the left side of the stone path, remove the smaller burr that is behind and to the right of the open burr "
+        "with the shiny chestnut, showing the ground with leaves; (b) the cap of the middle (smallest) mushroom of "
+        "the three now has small white polka dots; its shape and brown color stay the same; (c) on top of the small "
+        "stack of round stones (the cairn), add one more small round grey-blue stone, so the stack is one stone "
+        "taller."),
+    4: ("Edit this illustration and make exactly these three small changes: (a) on the wall, remove the flat wooden "
+        "spatula (the second utensil from the right), showing the plain wall and the empty hook; the other three "
+        "utensils stay; (b) the kettle on the stove now has its spout on the right side pointing to the right "
+        "instead of the left, same kettle, same size, same place; (c) the front teacup on the small tray now has a "
+        "blue checkered (grid) pattern instead of wavy lines, same blue color, same shape; the back teacup stays."),
+    5: ("Edit this illustration and make exactly these three small changes: (a) on the red torii gate, the left end "
+        "of the lower crossbeam (the short block sticking out to the left of the left pillar) is gone, so the "
+        "crossbeam ends at the left pillar; (b) the black band at the bottom of the left torii pillar is now red, "
+        "the same red as the pillar; (c) the right one of the two grey pigeons on the path now faces right instead "
+        "of left (it turned around), same size, same place."),
 }
 
 # うまくいかなかった違いだけを、範囲のまわりを切り出して描き直す（予備の呼び出し）。必要になったら足す。
-RETRY = {}
+RETRY = {
+    # 1回目：いがぐりが消えず、2つとも描き直されただけだった → 切り出して描き直す
+    (3, "2a"): {"crop": [700, 1200, 1100, 1520], "aspect": "5:4",
+                "prompt": "Edit this close-up of a picture-book illustration: there are two spiky chestnut burrs side by side. "
+                          "Completely remove the smaller burr on the right (the closed one without a visible chestnut), "
+                          "and fill its place with the same sandy ground and fallen leaves as around it. The open burr with "
+                          "the shiny chestnut on the left stays exactly the same." + KEEP_ALT + KEEP_REMOVE},
+    # 1回目：3つとも変わらなかった → 鳥居の左側とハトを含む範囲を切り出して描き直す
+    (5, "2"): {"crop": [0, 760, 1200, 1720], "aspect": "5:4",
+               "prompt": "Edit this close-up of a picture-book illustration and make exactly these three small changes: "
+                         "(a) on the red torii gate at the left, the lower horizontal crossbeam has a short block sticking "
+                         "out to the LEFT of the left pillar: remove that sticking-out block, so the crossbeam ends at the left "
+                         "pillar, and show the orange autumn trees behind it; (b) the dark grey-black band at the very bottom "
+                         "of the left torii pillar is painted red now, the same red as the rest of the pillar; (c) the grey "
+                         "pigeon at the lower right turns around and now faces RIGHT: its head and beak point to the right "
+                         "and its tail to the left, same size and same place." + KEEP_ALT + KEEP_REMOVE},
+    # 2回目：(b)の根巻きの色だけできた。(a)(c)はできなかったので、(a)は灯籠の宝珠に替え、(c)と合わせて小さく切り出して描き直す（予備の最後の1回）
+    (5, "3"): {"crop": [860, 950, 1630, 1720], "aspect": "1:1",
+               "prompt": "Edit this close-up of a picture-book illustration and make exactly these two small changes: "
+                         "(a) the stone lantern at the upper right has a round onion-shaped knob (finial) on the very top of "
+                         "its roof: remove that knob completely, so the roof ends flat at the top, and show the tree trunk and "
+                         "bushes behind it; (b) the larger grey pigeon on the right side of the path is turned around so that "
+                         "it faces RIGHT: its head and beak are now on its right side pointing right, and its tail points left; "
+                         "same pigeon, same size, same place. The smaller pigeon on the left stays exactly the same."
+                         + KEEP_ALT + KEEP_REMOVE},
+}
 
 DIFFS_FILE = Path(__file__).with_name("ep001_diffs.json")
-QUESTIONS = {1: ("縁側", "初級", 1), 2: ("商店街", "初級", 3), 3: ("山道", "中級", 3), 4: ("台所", "中級", 3), 5: ("神社", "上級", 2)}
+QUESTIONS = {1: ("縁側", "初級", 1), 2: ("商店街", "初級", 3), 3: ("山道", "中級", 2), 4: ("台所", "中級", 3), 5: ("神社", "上級", 3)}  # (場面, 難易度, ヒントで示す違いの id。企画部の確定版で変わりうる)
 LEVEL_RANGE = {"初級": (3.0, 4.0), "中級": (2.0, 3.0), "上級": (1.5, 2.0)}  # 画面幅に対する%（concept.md）
 
 
