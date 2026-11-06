@@ -1,122 +1,163 @@
 {
- "image_size": [
-  2752,
-  1536
- ],
  "screen": {
-  "picture_width_px": 940,
-  "screen_width_px": 1920
+  "size": [
+   1920,
+   1080
+  ],
+  "picture_size_on_screen": [
+   960,
+   1080
+  ],
+  "safe_y_on_screen": [
+   54,
+   918
+  ],
+  "level_range_pct_of_screen_width": {
+   "初級": [
+    3.0,
+    4.0
+   ],
+   "中級": [
+    2.0,
+    3.0
+   ],
+   "上級": [
+    1.5,
+    2.0
+   ]
+  }
  },
+ "note": "box_px・circle_px は 8:9 に切り抜いた高解像度の絵（qN_a.png、1856×2088）のピクセル。content_px はそのうち画面に出す範囲（白いふちを除いた8:9）。*_screen は画面の上での座標（右の絵は x に960を足す）。object_screen_width_pct は、変わる物そのものの幅を画面幅で割った値。",
  "questions": [
   {
    "q": 1,
    "scene": "縁側",
    "level": "初級",
    "hint_diff": 1,
-   "outside_box_pixels_diff_gt15": 1226,
-   "outside_box_max_distance_px": 14.0,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    138,
+    300,
+    1714,
+    2073
+   ],
+   "scale_to_screen": 0.60914,
+   "outside_box_pixels_diff_gt15": 284,
+   "outside_box_max_distance_px": 8.0,
    "answers": [
     {
      "id": 1,
-     "type": "消える",
-     "label": "急須がない",
-     "line": "急須がなくなっています。",
+     "type": "物がない",
+     "label": "奥の下駄の鼻緒がない",
+     "line": "下駄の鼻緒が、ひとつありません。",
      "box_px": [
-      700,
-      980,
-      1035,
-      1225
+      495,
+      1488,
+      770,
+      1640
      ],
-     "circle_a_px": [
-      700,
-      995,
-      1030,
-      1215
+     "box_screen": [
+      217,
+      724,
+      385,
+      816
      ],
-     "circle_b_px": [
-      700,
-      995,
-      1030,
-      1215
+     "circle_a_screen": [
+      217,
+      724,
+      385,
+      816
      ],
-     "box_ratio": [
-      0.2544,
-      0.638,
-      0.3761,
-      0.7975
+     "circle_b_screen": [
+      217,
+      724,
+      385,
+      816
      ],
-     "object_width_px": 284,
-     "object_screen_width_pct": 5.1,
-     "box_screen_width_pct": 6.0,
-     "edit_version": "1"
+     "object_w_px": 120,
+     "object_screen_width_pct": 3.81,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": "物の幅は鼻緒の幅。下駄の台ごと描き直されたので、範囲は奥の下駄全体。手前の下駄は元の絵のまま（keep）"
     },
     {
      "id": 2,
      "type": "増える",
-     "label": "かごに柿がいっぱい",
-     "line": "かごに、柿がいっぱい。",
+     "label": "お盆の柿が4つ",
+     "line": "柿が、よっつに増えました。",
      "box_px": [
-      1475,
-      690,
-      1915,
-      1050
+      955,
+      1505,
+      1258,
+      1712
      ],
-     "circle_a_px": [
-      1475,
-      690,
-      1915,
-      1050
+     "box_screen": [
+      498,
+      734,
+      682,
+      860
      ],
-     "circle_b_px": [
-      1475,
-      690,
-      1915,
-      1050
+     "circle_a_screen": [
+      498,
+      734,
+      682,
+      860
      ],
-     "box_ratio": [
-      0.536,
-      0.4492,
-      0.6959,
-      0.6836
+     "circle_b_screen": [
+      498,
+      734,
+      682,
+      860
      ],
-     "object_width_px": 373,
-     "object_screen_width_pct": 6.6,
-     "box_screen_width_pct": 7.8,
-     "edit_version": "1"
+     "object_w_px": 125,
+     "object_screen_width_pct": 3.97,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": "物の幅は増えた柿1つ。ほかの3つの柿も少し描き直されたので、範囲は柿4つ全体"
     },
     {
      "id": 3,
      "type": "形が変わる",
-     "label": "ねこが目をさます",
-     "line": "ねこちゃんが、目をさましましたね。",
+     "label": "手前の湯のみが背の高い形",
+     "line": "湯のみが、背の高い形になりましたね。",
      "box_px": [
-      995,
-      870,
-      1445,
-      1150
+      1208,
+      1515,
+      1352,
+      1712
      ],
-     "circle_a_px": [
-      1000,
-      880,
-      1260,
-      1135
+     "box_screen": [
+      652,
+      740,
+      739,
+      860
      ],
-     "circle_b_px": [
-      1000,
-      880,
-      1260,
-      1135
+     "circle_a_screen": [
+      652,
+      740,
+      739,
+      860
      ],
-     "box_ratio": [
-      0.3616,
-      0.5664,
-      0.5251,
-      0.7487
+     "circle_b_screen": [
+      652,
+      740,
+      739,
+      860
      ],
-     "object_width_px": 413,
-     "object_screen_width_pct": 7.3,
-     "box_screen_width_pct": 8.0,
-     "edit_version": "1"
+     "object_w_px": 114,
+     "object_screen_width_pct": 3.62,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
     }
    ]
   },
@@ -125,110 +166,130 @@
    "scene": "商店街",
    "level": "初級",
    "hint_diff": 3,
-   "outside_box_pixels_diff_gt15": 1351,
-   "outside_box_max_distance_px": 14.0,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 973,
+   "outside_box_max_distance_px": 11.0,
    "answers": [
     {
      "id": 1,
-     "type": "消える",
-     "label": "自転車がない",
-     "line": "自転車がありません。",
+     "type": "物がない",
+     "label": "ざるのさつまいもが1本ない",
+     "line": "おいもが、ひとつありません。",
      "box_px": [
-      90,
-      700,
       770,
-      1480
+      1140,
+      1132,
+      1356
      ],
-     "circle_a_px": [
-      90,
-      700,
-      770,
-      1480
+     "box_screen": [
+      398,
+      590,
+      586,
+      701
      ],
-     "circle_b_px": [
-      90,
-      700,
-      770,
-      1480
+     "circle_a_screen": [
+      398,
+      590,
+      586,
+      701
      ],
-     "box_ratio": [
-      0.0327,
-      0.4557,
-      0.2798,
-      0.9635
+     "circle_b_screen": [
+      398,
+      590,
+      586,
+      701
      ],
-     "object_width_px": 568,
-     "object_screen_width_pct": 10.1,
-     "box_screen_width_pct": 12.1,
-     "edit_version": "1"
+     "object_w_px": 133,
+     "object_screen_width_pct": 3.58,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": "物の幅はなくなったいも1本。ほかのいもとざるも少し描き直されたので、範囲はざる全体"
     },
     {
      "id": 2,
      "type": "増える",
-     "label": "かぼちゃが2つ",
-     "line": "かぼちゃが、ふたつに増えました。",
+     "label": "柴犬に赤い首輪",
+     "line": "わんちゃんに、首輪がつきました。",
      "box_px": [
-      1195,
-      640,
-      1470,
-      950
+      1130,
+      1560,
+      1300,
+      1680
      ],
-     "circle_a_px": [
-      1195,
-      640,
-      1470,
-      950
+     "box_screen": [
+      584,
+      807,
+      672,
+      869
      ],
-     "circle_b_px": [
-      1195,
-      640,
-      1470,
-      950
+     "circle_a_screen": [
+      584,
+      807,
+      672,
+      869
      ],
-     "box_ratio": [
-      0.4342,
-      0.4167,
-      0.5342,
-      0.6185
+     "circle_b_screen": [
+      584,
+      807,
+      672,
+      869
      ],
-     "object_width_px": 214,
+     "object_w_px": 141,
      "object_screen_width_pct": 3.8,
-     "box_screen_width_pct": 4.9,
-     "edit_version": "1"
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
     },
     {
      "id": 3,
-     "type": "向きが変わる",
-     "label": "犬がうしろ向き",
-     "line": "わんちゃんは、うしろ向きですね。",
+     "type": "形が変わる",
+     "label": "提灯が丸い形",
+     "line": "提灯の形が、まるくなっていますね。",
      "box_px": [
-      1610,
-      975,
-      2000,
-      1460
+      500,
+      552,
+      745,
+      875
      ],
-     "circle_a_px": [
-      1610,
-      975,
-      2000,
-      1460
+     "box_screen": [
+      259,
+      286,
+      385,
+      453
      ],
-     "circle_b_px": [
-      1610,
-      975,
-      2000,
-      1460
+     "circle_a_screen": [
+      259,
+      286,
+      385,
+      453
      ],
-     "box_ratio": [
-      0.585,
-      0.6348,
-      0.7267,
-      0.9505
+     "circle_b_screen": [
+      259,
+      286,
+      385,
+      453
      ],
-     "object_width_px": 318,
-     "object_screen_width_pct": 5.7,
-     "box_screen_width_pct": 6.9,
-     "edit_version": "1"
+     "object_w_px": 128,
+     "object_screen_width_pct": 3.45,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": "物の幅は元の提灯（細長い形）。丸くなった後の幅は約170px（画面幅の約4.6%）"
     }
    ]
   },
@@ -236,111 +297,131 @@
    "q": 3,
    "scene": "山道",
    "level": "中級",
-   "hint_diff": 3,
-   "outside_box_pixels_diff_gt15": 725,
-   "outside_box_max_distance_px": 16.0,
+   "hint_diff": 2,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 456,
+   "outside_box_max_distance_px": 10.0,
    "answers": [
     {
      "id": 1,
-     "type": "増える",
-     "label": "リスが2ひき",
-     "line": "リスが2ひきになりました。",
+     "type": "本数",
+     "label": "いがぐりが1つへる",
+     "line": "いがぐりが、ひとつへりました。",
      "box_px": [
-      1008,
-      950,
-      1370,
-      1295
+      848,
+      1300,
+      996,
+      1444
      ],
-     "circle_a_px": [
-      1008,
-      950,
-      1370,
-      1295
+     "box_screen": [
+      439,
+      672,
+      515,
+      747
      ],
-     "circle_b_px": [
-      1008,
-      950,
-      1370,
-      1295
+     "circle_a_screen": [
+      439,
+      672,
+      515,
+      747
      ],
-     "box_ratio": [
-      0.3663,
-      0.6185,
-      0.4978,
-      0.8431
+     "circle_b_screen": [
+      439,
+      672,
+      515,
+      747
      ],
-     "object_width_px": 243,
-     "object_screen_width_pct": 4.3,
-     "box_screen_width_pct": 6.4,
-     "edit_version": "1"
+     "object_w_px": 100,
+     "object_screen_width_pct": 2.69,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "2a",
+     "made_by": "gemini",
+     "note": "物の幅はいがぐりの実の部分。とげの先まで入れると124px（約3.3%）"
     },
     {
      "id": 2,
-     "type": "消える",
-     "label": "リュックがない",
-     "line": "リュックがありません。",
+     "type": "模様",
+     "label": "きのこのかさに水玉模様",
+     "line": "きのこに、水玉模様がつきました。",
      "box_px": [
-      1130,
-      645,
-      1395,
-      875
+      585,
+      875,
+      760,
+      1060
      ],
-     "circle_a_px": [
-      1130,
-      645,
-      1395,
-      875
+     "box_screen": [
+      303,
+      453,
+      393,
+      548
      ],
-     "circle_b_px": [
-      1130,
-      645,
-      1395,
-      875
+     "circle_a_screen": [
+      303,
+      453,
+      393,
+      548
      ],
-     "box_ratio": [
-      0.4106,
-      0.4199,
-      0.5069,
-      0.5697
+     "circle_b_screen": [
+      303,
+      453,
+      393,
+      548
      ],
-     "object_width_px": 189,
-     "object_screen_width_pct": 3.4,
-     "box_screen_width_pct": 4.7,
-     "edit_version": "1"
+     "object_w_px": 111,
+     "object_screen_width_pct": 2.99,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": "水玉は、指示した真ん中ではなく右のきのこについた。物の幅は右のきのこのかさ"
     },
     {
      "id": 3,
-     "type": "形が変わる",
-     "label": "石の塔が高い",
-     "line": "石の塔が、高くなりましたね。",
+     "type": "増える",
+     "label": "石の塔の石が1つ増える",
+     "line": "石の塔が、ひとつ高くなりましたね。",
      "box_px": [
-      1870,
-      830,
-      2215,
-      1195
+      650,
+      955,
+      845,
+      1295
      ],
-     "circle_a_px": [
-      1870,
-      830,
-      2215,
-      1195
+     "box_screen": [
+      336,
+      494,
+      437,
+      670
      ],
-     "circle_b_px": [
-      1870,
-      830,
-      2215,
-      1195
+     "circle_a_screen": [
+      336,
+      494,
+      437,
+      670
      ],
-     "box_ratio": [
-      0.6795,
-      0.5404,
-      0.8049,
-      0.778
+     "circle_b_screen": [
+      336,
+      494,
+      437,
+      670
      ],
-     "object_width_px": 249,
-     "object_screen_width_pct": 4.4,
-     "box_screen_width_pct": 6.1,
-     "edit_version": "1"
+     "object_w_px": 68,
+     "object_screen_width_pct": 1.83,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": "物の幅は増えた石1つ（約1.8%で、中級の目安2〜3%を少し下回る）。塔の幅は約115px（約3.1%）、高さは約45px高くなった"
     }
    ]
   },
@@ -348,111 +429,131 @@
    "q": 4,
    "scene": "台所",
    "level": "中級",
-   "hint_diff": 2,
-   "outside_box_pixels_diff_gt15": 2761,
-   "outside_box_max_distance_px": 16.0,
+   "hint_diff": 3,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    34,
+    38,
+    1822,
+    2050
+   ],
+   "scale_to_screen": 0.53691,
+   "outside_box_pixels_diff_gt15": 291,
+   "outside_box_max_distance_px": 10.0,
    "answers": [
     {
      "id": 1,
-     "type": "増える",
-     "label": "さんまが3びき",
-     "line": "さんまが3びきに増えました。",
+     "type": "本数",
+     "label": "壁のへらがない",
+     "line": "壁の道具が、ひとつへっています。",
      "box_px": [
-      1150,
-      1050,
-      1900,
-      1335
+      1540,
+      385,
+      1700,
+      812
      ],
-     "circle_a_px": [
-      1150,
-      1050,
-      1900,
-      1335
+     "box_screen": [
+      809,
+      186,
+      894,
+      416
      ],
-     "circle_b_px": [
-      1150,
-      1050,
-      1900,
-      1335
+     "circle_a_screen": [
+      809,
+      186,
+      894,
+      416
      ],
-     "box_ratio": [
-      0.4179,
-      0.6836,
-      0.6904,
-      0.8691
+     "circle_b_screen": [
+      809,
+      186,
+      894,
+      416
      ],
-     "object_width_px": 670,
-     "object_screen_width_pct": 11.9,
-     "box_screen_width_pct": 13.3,
-     "edit_version": "1"
+     "object_w_px": 106,
+     "object_screen_width_pct": 2.96,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
     },
     {
      "id": 2,
-     "type": "向きが変わる",
-     "label": "やかんの口が右向き（湯気もない）",
+     "type": "向き",
+     "label": "やかんの口が右向き",
      "line": "やかんの口が、反対を向いています。",
      "box_px": [
-      0,
-      470,
-      545,
-      975
+      125,
+      690,
+      650,
+      1125
      ],
-     "circle_a_px": [
-      20,
-      500,
-      545,
-      975
+     "box_screen": [
+      49,
+      350,
+      331,
+      584
      ],
-     "circle_b_px": [
-      20,
-      500,
-      545,
-      975
+     "circle_a_screen": [
+      49,
+      350,
+      331,
+      584
      ],
-     "box_ratio": [
-      0.0,
-      0.306,
-      0.198,
-      0.6348
+     "circle_b_screen": [
+      49,
+      350,
+      331,
+      584
      ],
-     "object_width_px": 293,
-     "object_screen_width_pct": 5.2,
-     "box_screen_width_pct": 9.7,
-     "edit_version": "1"
+     "object_w_px": 105,
+     "object_screen_width_pct": 2.94,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": "物の幅は注ぎ口。やかん全体が描き直されたので、範囲はやかんとこんろ"
     },
     {
      "id": 3,
-     "type": "消える",
-     "label": "ざるのおいもがない",
-     "line": "おいもが消えて、ざるが空っぽですね。",
+     "type": "模様",
+     "label": "湯のみの模様がごばん目",
+     "line": "湯のみの模様が、変わっていますね。",
      "box_px": [
-      1735,
-      860,
-      2370,
-      1190
+      962,
+      1140,
+      1092,
+      1336
      ],
-     "circle_a_px": [
-      1750,
-      885,
-      2355,
-      1185
+     "box_screen": [
+      498,
+      592,
+      568,
+      697
      ],
-     "circle_b_px": [
-      1750,
-      885,
-      2355,
-      1185
+     "circle_a_screen": [
+      498,
+      592,
+      568,
+      697
      ],
-     "box_ratio": [
-      0.6305,
-      0.5599,
-      0.8612,
-      0.7747
+     "circle_b_screen": [
+      498,
+      592,
+      568,
+      697
      ],
-     "object_width_px": 559,
-     "object_screen_width_pct": 9.9,
-     "box_screen_width_pct": 11.3,
-     "edit_version": "2c"
+     "object_w_px": 102,
+     "object_screen_width_pct": 2.85,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
     }
    ]
   },
@@ -461,110 +562,130 @@
    "scene": "神社",
    "level": "上級",
    "hint_diff": 3,
-   "outside_box_pixels_diff_gt15": 1618,
-   "outside_box_max_distance_px": 17.0,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 692,
+   "outside_box_max_distance_px": 12.0,
    "answers": [
     {
      "id": 1,
-     "type": "増える",
-     "label": "ハトが3羽",
-     "line": "ハトが1羽増えました。",
+     "type": "物がない",
+     "label": "灯籠のてっぺんの宝珠がない",
+     "line": "灯籠のてっぺんの飾りが、ありません。",
      "box_px": [
-      1395,
-      1225,
-      1700,
-      1470
+      1440,
+      978,
+      1552,
+      1082
      ],
-     "circle_a_px": [
-      1395,
-      1225,
-      1700,
-      1470
+     "box_screen": [
+      745,
+      506,
+      803,
+      560
      ],
-     "circle_b_px": [
-      1395,
-      1225,
-      1700,
-      1470
+     "circle_a_screen": [
+      745,
+      506,
+      803,
+      560
      ],
-     "box_ratio": [
-      0.5069,
-      0.7975,
-      0.6177,
-      0.957
+     "circle_b_screen": [
+      745,
+      506,
+      803,
+      560
      ],
-     "object_width_px": 200,
-     "object_screen_width_pct": 3.6,
-     "box_screen_width_pct": 5.4,
-     "edit_version": "2a"
+     "object_w_px": 77,
+     "object_screen_width_pct": 2.07,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "3",
+     "made_by": "gemini",
+     "note": "2.07%。事業部長が「約1.5〜2%」の範囲として認めた"
     },
     {
      "id": 2,
-     "type": "向きが変わる",
-     "label": "ほうきが倒れている",
-     "line": "ほうきが、たおれています。",
+     "type": "色",
+     "label": "鳥居の柱の根もとが赤い",
+     "line": "鳥居の柱の根もとが、赤くなりました。",
      "box_px": [
-      930,
-      520,
-      1545,
-      1180
+      50,
+      1100,
+      190,
+      1345
      ],
-     "circle_a_px": [
-      1085,
-      525,
-      1325,
-      1035
+     "box_screen": [
+      26,
+      569,
+      98,
+      696
      ],
-     "circle_b_px": [
-      935,
-      1022,
-      1545,
-      1172
+     "circle_a_screen": [
+      26,
+      569,
+      98,
+      696
      ],
-     "box_ratio": [
-      0.3379,
-      0.3385,
-      0.5614,
-      0.7682
+     "circle_b_screen": [
+      26,
+      569,
+      98,
+      696
      ],
-     "object_width_px": 207,
-     "object_screen_width_pct": 3.7,
-     "box_screen_width_pct": 10.9,
-     "edit_version": "1"
+     "object_w_px": 73,
+     "object_screen_width_pct": 1.97,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "2",
+     "made_by": "gemini",
+     "note": ""
     },
     {
      "id": 3,
-     "type": "消える",
-     "label": "奥の灯籠がない",
-     "line": "奥の灯籠が、なくなっていますね。",
+     "type": "向き",
+     "label": "右のハトが反対を向く",
+     "line": "右のハトが、反対を向いていますね。",
      "box_px": [
-      680,
-      620,
-      1095,
-      1015
+      950,
+      1515,
+      1175,
+      1712
      ],
-     "circle_a_px": [
-      700,
-      632,
-      1078,
-      1012
+     "box_screen": [
+      491,
+      784,
+      608,
+      886
      ],
-     "circle_b_px": [
-      700,
-      632,
-      1078,
-      1012
+     "circle_a_screen": [
+      497,
+      789,
+      601,
+      881
      ],
-     "box_ratio": [
-      0.2471,
-      0.4036,
-      0.3979,
-      0.6608
+     "circle_b_screen": [
+      497,
+      789,
+      601,
+      881
      ],
-     "object_width_px": 354,
-     "object_screen_width_pct": 6.3,
-     "box_screen_width_pct": 7.4,
-     "edit_version": "1"
+     "object_w_px": 60,
+     "object_screen_width_pct": 1.62,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "flip",
+     "made_by": "program",
+     "note": "AIでは描き直していない。scripts/ep001_flip_pigeon.py でハトだけを左右反転した。物の幅はハトの頭"
     }
    ]
   }

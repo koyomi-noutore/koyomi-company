@@ -1,8 +1,12 @@
-"""第1回（001）の動画を組み立てる。PILでフレームを描き、ffmpeg（libx264）にパイプで渡す。4つに分けて並列に描き、最後につなぐ。
+"""第1回（001・作り直し版）の動画を組み立てる。PILでフレームを描き、ffmpeg（libx264）にパイプで渡す。4つに分けて並列に描き、最後につなぐ。
+画面のつくり（knowledge/concept.md 2026-11-06）：
+  - 出題中・答え合わせ中は、左右の絵（各960×1080）で画面いっぱい。上の端に細い帯（約5%）、セリフがある間だけ下の端に字幕。
+    この間、こよみ先生の絵は出さない（声だけ）。
+  - こよみ先生（6表情・ゆらゆら・まばたき）は、オープニング・うんちく・エンディングだけに出す（ルール説明にも出さない）。
 使い方:
   python3 scripts/ep001_video.py <成果物フォルダ> <作業フォルダ> <フォント.ttf> <音声.wav>
-  成果物フォルダ：q1_a.png … q5_b.png、answers.json があること。作業フォルダ：koyomi_*.png（render_expressions.js）と voice/voice.json。
-  単体のフレーム確認：python3 scripts/ep001_video.py --frame <秒> <成果物> <作業> <フォント> <出力.png>
+    成果物フォルダ：q1_a.png … q5_b.png、answers.json。作業フォルダ：owl/koyomi_*.png と voice/voice.json。
+  python3 scripts/ep001_video.py --frame <秒> <成果物> <作業> <フォント> <出力.png>   （1枚だけ確かめる）
 答え合わせの赤丸・ヒントの位置は answers.json（= scripts/ep001_diffs.json）から計算する。
 """
 import json, math, subprocess, sys
@@ -16,14 +20,15 @@ import ep001_timeline as T
 W, H, FPS = 1920, 1080, 30
 BG = (246, 236, 216)
 INK = (59, 47, 37)
-IW, IH, TOP, GAP = 940, 525, 110, 13
-XS = [(W - 2 * IW - GAP) // 2, (W - 2 * IW - GAP) // 2 + IW + GAP]
-OWL_SIZE, OWL_XY = 380, (W - 380 - 40, H - 380 - 10)
-SUB_SIZE = 72                       # 字幕：画面の高さの6.7%
-SUB_BOX = (24, 1480, 1046)          # 字幕の箱：左端・右端・下端（右下のこよみ先生と重ならない）
+PW, PH = 960, 1080                  # 絵1枚の大きさ（画面の半分）
+XS = [0, 960]                       # 左の絵・右の絵の左端
+BAND_H = 54                         # 上の帯（画面の高さの5%）
+SUB_SIZE = 68                       # 字幕の文字の高さ（画面の高さの6.3%）
+OWL_SIZE = 420
 LEVEL_COLOR = {"初級": (96, 150, 90), "中級": (214, 128, 48), "上級": (176, 62, 52)}
 LEVEL_STARS = {"初級": "★☆☆", "中級": "★★☆", "上級": "★★★"}
 RED = (220, 30, 30)
+OWL_SEGMENTS = ("op", "unchiku", "end")   # こよみ先生の絵を出す場面
 
 OUT = WORK = FONT = None
 CTX = {}
@@ -43,12 +48,10 @@ def setup(out, work, fontp):
     OUT, WORK, FONT = Path(out), Path(work), str(fontp)
     ans = json.loads((OUT / "answers.json").read_text(encoding="utf-8"))
     CTX["answers"] = {Q["q"]: Q for Q in ans["questions"]}
-    CTX["scale"] = IW / ans["image_size"][0], IH / ans["image_size"][1]
     CTX["voice"] = {v["id"]: v for v in json.loads((WORK / "voice" / "voice.json").read_text(encoding="utf-8"))}
     CTX["lines"] = T.lines()
 
 
-# ---------- 部品 ----------
 def ease(x):
     x = min(max(x, 0.0), 1.0)
     return 1 - (1 - x) ** 3
@@ -58,28 +61,24 @@ def text_center(d, xy, s, size, fill=INK, stroke=0, stroke_fill=None, anchor="mm
     d.text(xy, s, font=font(size), fill=fill, anchor=anchor, stroke_width=stroke, stroke_fill=stroke_fill)
 
 
-@lru_cache(maxsize=8)
+@lru_cache(maxsize=12)
 def picture(q, side):
-    return Image.open(OUT / f"q{q}_{side}.png").convert("RGB").resize((IW, IH), Image.LANCZOS)
+    """8:9 の高解像度の絵（1856×2088）を 960×1080 に縮める（引き伸ばしはしない）。"""
+    im = Image.open(OUT / f"q{q}_{side}.png").convert("RGB").crop(tuple(CTX["answers"][q]["content_px"]))
+    assert im.width >= PW and im.height >= PH, "絵が画面の大きさより小さい"
+    return im.resize((PW, PH), Image.LANCZOS)
 
 
+# ---------- こよみ先生（オープニング・うんちく・エンディングだけ） ----------
 @lru_cache(maxsize=None)
 def owl_img(face, angle_q):
     im = Image.open(WORK / "owl" / f"koyomi_{face}.png").convert("RGBA").resize((OWL_SIZE, OWL_SIZE), Image.LANCZOS)
     return im.rotate(angle_q / 4, resample=Image.BICUBIC, center=(OWL_SIZE / 2, OWL_SIZE * 0.85))
 
 
-def face_events():
-    ev = [(ln[1], ln[3]) for ln in CTX["lines"] if not ln[0].endswith("_card")]
-    for q, s in T.Q_START.items():
-        ev.append((s, T.QUESTIONS[q]["card_face"]))
-        ev += [(s + 8.0, "think"), (s + T.CARD + T.HINT_AT + 7.0, "think"), (s + T.CARD + T.TEN_AT + 3.0, "think")]
-    return sorted(ev)
-
-
 def face_at(t):
     if "faces" not in CTX:
-        CTX["faces"] = face_events()
+        CTX["faces"] = sorted((ln[1], ln[3]) for ln in CTX["lines"] if ln[0][0] in "oue")
     f = "smile"
     for t0, face in CTX["faces"]:
         if t0 <= t:
@@ -89,14 +88,14 @@ def face_at(t):
     return f
 
 
-def draw_owl(im, t):
+def draw_owl(im, t, xy):
     face = face_at(t)
-    if face in ("normal", "think") and (t % 4.1) < 0.14:  # まばたき
+    if face in ("normal", "think") and (t % 4.1) < 0.14:   # まばたき
         face += "_blink"
-    ang = 3.0 * math.sin(2 * math.pi * t / 3.2)          # ゆらゆら
+    ang = 3.0 * math.sin(2 * math.pi * t / 3.2)             # ゆらゆら
     bob = int(round(6 * math.sin(2 * math.pi * t / 1.6)))
     o = owl_img(face, int(round(ang * 4)))
-    im.paste(o, (OWL_XY[0], OWL_XY[1] + bob), o)
+    im.paste(o, (xy[0], xy[1] + bob), o)
 
 
 # ---------- 字幕 ----------
@@ -110,6 +109,16 @@ def wrap(s, maxc):
     best = None
     for k in range(1, len(s)):
         if s[k - 1] == "、" or s[k] == "「":
+            a, b = s[:k], s[k:]
+            if len(a) <= maxc + 1 and len(b) <= maxc + 1:
+                sc = max(len(a), len(b))
+                if best is None or sc < best[0]:
+                    best = (sc, [a, b])
+    if best:
+        return best[1]
+    # 読点で分けられないときは、助詞（が・は・を・に・の・と）の後ろで分ける（ことばの途中で切らない）
+    for k in range(1, len(s)):
+        if s[k - 1] in "がはをにのと" and s[k] not in PUNCT:
             a, b = s[:k], s[k:]
             if len(a) <= maxc + 1 and len(b) <= maxc + 1:
                 sc = max(len(a), len(b))
@@ -145,13 +154,14 @@ def chunks(text, maxc=18):
 
 
 def subtitle_schedule():
+    """セリフがある間だけ出す字幕の表。難易度カードの読み上げは、カードの字が字幕の代わり。"""
     if "subs" in CTX:
         return CTX["subs"]
     subs = []
     L = CTX["lines"]
-    for i, (lid, t0, text, face, t_end) in enumerate(L):
+    for lid, t0, text, face, t_end in L:
         if lid.endswith("_card"):
-            continue  # カードの文字がそのまま字幕の代わり
+            continue
         dur = CTX["voice"][lid]["dur"]
         cs = chunks(text)
         total = sum(len(c) for c in cs)
@@ -159,34 +169,34 @@ def subtitle_schedule():
         tt = t0
         for j, c in enumerate(cs):
             d = dur * len(c) / total
-            end = tt + d if j < len(cs) - 1 else min(t0 + dur + 0.8, nxt)
+            end = tt + d if j < len(cs) - 1 else min(t0 + dur + 0.6, nxt)
             subs.append((tt, end, c)); tt += d
     CTX["subs"] = subs
     return subs
 
 
 @lru_cache(maxsize=256)
-def sub_img(text):
-    ls = wrap(text, 18)
+def sub_img(text, maxc):
+    ls = wrap(text, maxc)
     f = font(SUB_SIZE)
-    lh = SUB_SIZE + 22
+    lh = SUB_SIZE + 16
     wmax = max(f.getlength(l) for l in ls)
-    bw, bh = int(wmax + 64), int(lh * len(ls) + 40)
+    bw, bh = int(wmax + 60), int(lh * len(ls) + 26)
     im = Image.new("RGBA", (bw, bh), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
-    d.rounded_rectangle((0, 0, bw - 1, bh - 1), 22, fill=(52, 40, 30, 235), outline=(255, 248, 230, 255), width=4)
+    d.rounded_rectangle((0, 0, bw - 1, bh - 1), 20, fill=(52, 40, 30, 235), outline=(255, 248, 230, 255), width=4)
     for k, l in enumerate(ls):
-        d.text((bw / 2, 20 + lh * k + lh / 2), l, font=f, fill=(255, 255, 255), anchor="mm")
+        d.text((bw / 2, 13 + lh * k + lh / 2), l, font=f, fill=(255, 255, 255), anchor="mm")
     return im
 
 
-def draw_subtitle(im, t):
+def draw_subtitle(im, t, area):
+    """area＝(左端, 右端, 下端)。出題・答え合わせでは画面の下の端（下15%の中）に出す。"""
     for t0, t1, c in subtitle_schedule():
         if t0 <= t < t1:
-            s = sub_img(c)
-            x0, x1, yb = SUB_BOX
-            x = x0 + (x1 - x0 - s.width) // 2
-            im.paste(s, (x, yb - s.height), s)
+            x0, x1, yb = area
+            s = sub_img(c, int((x1 - x0 - 80) / (SUB_SIZE * 1.02)))   # 字幕の箱が area からはみ出さない字数で折り返す
+            im.paste(s, (x0 + (x1 - x0 - s.width) // 2, yb - s.height), s)
             return
 
 
@@ -205,51 +215,66 @@ def leaves(d, t, n=18, seed=3, colors=((214, 80, 50), (232, 176, 48), (200, 110,
         d.polygon(pts, fill=c)
 
 
-# ---------- 画面ごとの描画 ----------
-@lru_cache(maxsize=8)
-def question_base(q, guide=True):
+# ---------- 出題・答え合わせ（画面いっぱい） ----------
+@lru_cache(maxsize=10)
+def question_base(q):
     im = Image.new("RGB", (W, H), BG)
-    d = ImageDraw.Draw(im)
     for x, side in zip(XS, "ab"):
-        d.rounded_rectangle((x - 6, TOP - 6, x + IW + 6, TOP + IH + 6), 10, fill=(120, 90, 60))
-        im.paste(picture(q, side), (x, TOP))
-    Q = T.QUESTIONS[q]
-    col = LEVEL_COLOR[Q["level"]]
-    d.rounded_rectangle((20, 18, 250, 92), 37, fill=col)
-    text_center(d, (135, 55), f"第{q}問", 54, fill=(255, 255, 255))
-    text_center(d, (270, 55), f"{Q['level']}　{Q['scene']}", 54, anchor="lm")
-    if guide:
-        text_center(d, (24 + (1480 - 24) / 2, 700), "右の絵で、違いを3つ さがしましょう", 60, fill=(110, 84, 60))
+        im.paste(picture(q, side), (x, 0))
+    d = ImageDraw.Draw(im)
+    d.line((W // 2, 0, W // 2, H), fill=(255, 250, 238), width=4)   # 左右の絵の境目
     return im
 
 
+def draw_band(im, q, t, mode):
+    """上の端の細い帯（高さ54px＝5%）。半透明で、絵をなるべく隠さない。"""
+    Q = T.QUESTIONS[q]
+    layer = Image.new("RGBA", (W, BAND_H), (52, 40, 30, 165))
+    d = ImageDraw.Draw(layer)
+    col = LEVEL_COLOR[Q["level"]]
+    d.rounded_rectangle((10, 7, 150, BAND_H - 7), 18, fill=col + (255,))
+    d.text((80, BAND_H // 2), f"第{q}問", font=font(34), fill=(255, 255, 255), anchor="mm")
+    d.text((168, BAND_H // 2), f"{Q['level']}　{Q['scene']}", font=font(34), fill=(255, 255, 255), anchor="lm")
+    if mode == "solve":
+        rem = max(0.0, T.SOLVE - (t - T.Q_START[q] - T.CARD))
+        bx0, bx1, by0, by1 = 1100, 1790, 15, BAND_H - 15
+        d.rounded_rectangle((bx0, by0, bx1, by1), 12, fill=(225, 212, 188, 230))
+        frac = rem / T.SOLVE
+        c = (110, 180, 100) if rem > 30 else (236, 170, 50) if rem > 10 else (230, 70, 60)
+        if frac > 0:
+            d.rounded_rectangle((bx0 + 3, by0 + 3, bx0 + 3 + (bx1 - bx0 - 6) * frac, by1 - 3), 9, fill=c + (255,))
+        num = math.ceil(rem - 1e-6)
+        d.text((1855, BAND_H // 2), f"{num}", font=font(42 if rem <= 10 and (rem % 1) > 0.6 else 36),
+               fill=(255, 120, 100) if rem <= 10 else (255, 255, 255), anchor="mm")
+    else:
+        d.text((W - 30, BAND_H // 2), "答え合わせ", font=font(36), fill=(255, 210, 120), anchor="rm")
+    im.paste(layer, (0, 0), layer)
+
+
 def answer_boxes(q, side="b"):
-    sx, sy = CTX["scale"]
-    out = []
-    for a in CTX["answers"][q]["answers"]:
-        x0, y0, x1, y1 = a[f"circle_{side}_px"]
-        out.append((x0 * sx, y0 * sy, x1 * sx, y1 * sy))
-    return out
+    """絵の上での、赤丸の範囲（絵の左上からの画面の座標）。answers.json の circle_a_screen / circle_b_screen。"""
+    return [tuple(a[f"circle_{side}_screen"]) for a in CTX["answers"][q]["answers"]]
 
 
 def circle_geom(x, box, k=1.0):
     x0, y0, x1, y1 = box
-    cx, cy = x + (x0 + x1) / 2, TOP + (y0 + y1) / 2
-    rx, ry = ((x1 - x0) / 2 + 10) * k, ((y1 - y0) / 2 + 10) * k
+    cx, cy = x + (x0 + x1) / 2, (y0 + y1) / 2
+    rx, ry = ((x1 - x0) / 2 + 8) * k, ((y1 - y0) / 2 + 8) * k
     return cx, cy, rx, ry
 
 
 def draw_circle(d, x, box, k=1.0):
     cx, cy, rx, ry = circle_geom(x, box, k)
-    d.ellipse((cx - rx - 3, cy - ry - 3, cx + rx + 3, cy + ry + 3), outline=(255, 255, 255), width=14)
-    d.ellipse((cx - rx, cy - ry, cx + rx, cy + ry), outline=RED, width=8)
+    d.ellipse((cx - rx - 3, cy - ry - 3, cx + rx + 3, cy + ry + 3), outline=(255, 255, 255), width=12)
+    d.ellipse((cx - rx, cy - ry, cx + rx, cy + ry), outline=RED, width=7)
 
 
 def draw_badge(d, x, box, num, k=1.0):
-    """番号札。赤丸の線に隠れないよう、赤丸を全部描いたあとに描く（監査の差し戻し(2)）。"""
+    """番号札。赤丸の線に隠れないよう、赤丸を全部描いたあとに描く（第1回の監査の指摘）。絵の中に収める。"""
     cx, cy, rx, ry = circle_geom(x, box, k)
     bx, by = cx - rx * 0.71 - 4, cy - ry * 0.71 - 4
-    bx, by = min(max(x + 26, bx), x + IW - 26), min(max(TOP + 26, by), TOP + IH - 26)
+    bx = min(max(x + 26, bx), x + PW - 26)
+    by = min(max(BAND_H + 26, by), int(H * 0.85) - 26)
     d.ellipse((bx - 24, by - 24, bx + 24, by + 24), fill=RED, outline=(255, 255, 255), width=3)
     d.text((bx, by + 1), str(num), font=font(34), fill=(255, 255, 255), anchor="mm")
 
@@ -258,57 +283,45 @@ def ans_times(q):
     return [ln[1] for ln in CTX["lines"] if ln[0].startswith(f"q{q}_ans") and not ln[0].endswith("ans0")]
 
 
-def render_question(q, t):
-    s = T.Q_START[q]
-    st = s + T.CARD
-    im = question_base(q, t < st + T.SOLVE).copy()
-    d = ImageDraw.Draw(im)
-    if t < st + T.SOLVE:
-        el = t - st
-        rem = max(0.0, T.SOLVE - el)
-        x0, x1, y0, y1 = 760, 1760, 36, 76
-        d.rounded_rectangle((x0, y0, x1, y1), 20, fill=(225, 212, 188), outline=(150, 120, 90), width=3)
-        frac = rem / T.SOLVE
-        col = (96, 160, 90) if rem > 30 else (226, 150, 40) if rem > 10 else (214, 60, 50)
-        if frac > 0:
-            d.rounded_rectangle((x0 + 4, y0 + 4, x0 + 4 + (x1 - x0 - 8) * frac, y1 - 4), 16, fill=col)
-        num = math.ceil(rem - 1e-6)
-        big = rem <= 10 and (rem % 1) > 0.6
-        text_center(d, (1840, 56), f"{num}", 70 if big else 60, fill=(214, 60, 50) if rem <= 10 else INK)
-        # 45秒のヒント：違い（hint_diff）のある辺りを、広めの光の輪でそっと示す
-        h0 = st + T.HINT_AT
-        if h0 <= t < h0 + 7.0:
-            draw_hint(im, q, t - h0)
-    else:
-        text_center(d, (1290, 56), "答え合わせ", 60, fill=RED)
-        times = ans_times(q)
-        shown = []
-        for x, side in zip(XS, "ab"):
-            for i, (ta, b) in enumerate(zip(times, answer_boxes(q, side))):
-                if t >= ta:
-                    shown.append((x, b, i + 1, 1.0 + 0.35 * (1 - ease((t - ta) / 0.3))))
-        for x, b, n, k in shown:   # 先に赤丸を全部
-            draw_circle(d, x, b, k)
-        for x, b, n, k in shown:   # 最後に番号札をまとめて
-            draw_badge(d, x, b, n, k)
-    return im
-
-
 def draw_hint(im, q, dt):
+    """45秒のヒント：違いのある辺りを、右の絵の中だけで、うっすら光る輪でそっと示す（7秒）。"""
     Q = CTX["answers"][q]
     b = answer_boxes(q)[Q["hint_diff"] - 1]
-    # 輪は答えの赤丸より一回り大きいだけにし、絵の外にはみ出した分は描かない（監査の指摘）
-    cx, cy = XS[1] + (b[0] + b[2]) / 2, TOP + (b[1] + b[3]) / 2
-    rx, ry = (b[2] - b[0]) / 2 * 1.15 + 22, (b[3] - b[1]) / 2 * 1.15 + 22
-    a = min(1.0, dt / 0.6, (7.0 - dt) / 0.8) * (0.75 + 0.25 * math.sin(dt * 5))
+    cx, cy = XS[1] + (b[0] + b[2]) / 2, (b[1] + b[3]) / 2
+    rx, ry = (b[2] - b[0]) / 2 * 1.2 + 30, (b[3] - b[1]) / 2 * 1.2 + 30
+    a = min(1.0, dt / 0.8, (7.0 - dt) / 1.0) * (0.7 + 0.3 * math.sin(dt * 4))
     layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     ld = ImageDraw.Draw(layer)
     ld.ellipse((cx - rx, cy - ry, cx + rx, cy + ry), outline=(255, 214, 60, int(230 * a)), width=12)
-    layer = layer.filter(ImageFilter.GaussianBlur(4))
+    layer = layer.filter(ImageFilter.GaussianBlur(3))
     clip = Image.new("L", (W, H), 0)
-    ImageDraw.Draw(clip).rectangle((XS[1], TOP, XS[1] + IW - 1, TOP + IH - 1), fill=255)
+    ImageDraw.Draw(clip).rectangle((XS[1] + 2, BAND_H, W - 1, H - 1), fill=255)
     layer.putalpha(ImageChops.multiply(layer.getchannel("A"), clip))
     im.paste(layer, (0, 0), layer)
+
+
+def render_question(q, t):
+    st = T.Q_START[q] + T.CARD
+    im = question_base(q).copy()
+    if t < st + T.SOLVE:
+        h0 = st + T.HINT_AT
+        if h0 <= t < h0 + 7.0:
+            draw_hint(im, q, t - h0)
+        draw_band(im, q, t, "solve")
+    else:
+        d = ImageDraw.Draw(im)
+        shown = []
+        for x, side in zip(XS, "ab"):
+            for i, (ta, b) in enumerate(zip(ans_times(q), answer_boxes(q, side))):
+                if t >= ta:
+                    shown.append((x, b, i + 1, 1.0 + 0.35 * (1 - ease((t - ta) / 0.3))))
+        for x, b, n, k in shown:     # 先に赤丸を全部
+            draw_circle(d, x, b, k)
+        for x, b, n, k in shown:     # 最後に番号札
+            draw_badge(d, x, b, n, k)
+        draw_band(im, q, t, "answer")
+    draw_subtitle(im, t, (20, W - 20, H - 14))
+    return im
 
 
 @lru_cache(maxsize=8)
@@ -317,57 +330,54 @@ def card_img(q):
     col = LEVEL_COLOR[Q["level"]]
     im = Image.new("RGB", (W, H), BG)
     d = ImageDraw.Draw(im)
-    # こよみ先生（x1500〜）にかからないよう、カードは左寄せ（監査の指摘）
-    d.rounded_rectangle((200, 150, 1440, 830), 60, fill=(255, 250, 238), outline=col, width=16)
-    text_center(d, (820, 320), f"第{q}問", 190, fill=col)
-    text_center(d, (820, 530), f"{Q['level']}　{LEVEL_STARS[Q['level']]}", 120)
-    text_center(d, (820, 710), Q["scene"], 120)
+    d.rounded_rectangle((340, 170, 1580, 850), 60, fill=(255, 250, 238), outline=col, width=16)
+    text_center(d, (960, 340), f"第{q}問", 190, fill=col)
+    text_center(d, (960, 550), f"{Q['level']}　{LEVEL_STARS[Q['level']]}", 120)
+    text_center(d, (960, 730), Q["scene"], 120)
     return im
 
 
 def render_card(q, t):
+    """難易度カード：右からスライドして入り、最後の0.4秒で出題画面へフェード。"""
     s = T.Q_START[q]
     dt = t - s
-    prev = CTX.setdefault(("prev", q), None)
-    if prev is None:
-        prev = CTX[("prev", q)] = render_base(s - 1 / FPS)
+    key = ("prev", q)
+    if key not in CTX:
+        CTX[key] = render(s - 1 / FPS)
     if dt < 2.6:
         off = int((1 - ease(dt / 0.45)) * W)
-        im = prev.copy()
+        im = CTX[key].copy()
         im.paste(card_img(q).crop((0, 0, W - off, H)), (off, 0))
-    else:
-        k = ease((dt - 2.6) / 0.4)
-        im = Image.blend(card_img(q), render_question(q, t), k)
-    return im
+        return im
+    return Image.blend(card_img(q), render_question(q, t), ease((dt - 2.6) / 0.4))
 
 
+# ---------- オープニング・ルール説明・うんちく・エンディング ----------
 @lru_cache(maxsize=1)
 def opening_base():
     im = Image.new("RGB", (W, H), BG)
-    thumbs = [picture(q, "a").resize((360, 201), Image.LANCZOS) for q in range(1, 6)]
-    x = (W - (5 * 360 + 4 * 16)) // 2
+    thumbs = [picture(q, "a").resize((216, 243), Image.LANCZOS) for q in range(1, 6)]
+    x = 60
     for k, th in enumerate(thumbs):
-        th = Image.blend(Image.new("RGB", th.size, BG), th, 0.55)
-        im.paste(th, (x + k * 376, 430))
+        th = Image.blend(Image.new("RGB", th.size, BG), th, 0.6)
+        im.paste(th, (x + k * 236, 560))
     d = ImageDraw.Draw(im)
-    text_center(d, (960, 200), "秋の間違い探し　5問", 130, stroke=6, stroke_fill=(255, 250, 238))
-    text_center(d, (960, 340), "こよみ先生のまいにち脳トレ", 60, fill=(150, 90, 50))
+    text_center(d, (650, 230), "秋の間違い探し　5問", 120, stroke=6, stroke_fill=(255, 250, 238))
+    text_center(d, (650, 380), "こよみ先生のまいにち脳トレ", 58, fill=(150, 90, 50))
     return im
 
 
 @lru_cache(maxsize=1)
 def rule_base():
+    """ルール説明：左右に絵の枠。こよみ先生は出さない（concept.md の登場場面にないため）。"""
     im = Image.new("RGB", (W, H), BG)
     d = ImageDraw.Draw(im)
     for x, label in zip(XS, ("左の絵", "右の絵")):
-        d.rounded_rectangle((x - 6, TOP - 6, x + IW + 6, TOP + IH + 6), 10, fill=(120, 90, 60))
-        d.rectangle((x, TOP, x + IW, TOP + IH), fill=(255, 250, 238))
-        text_center(d, (x + IW / 2, TOP + 120), label, 90)
-    text_center(d, (XS[1] + IW / 2, TOP + 300), "違いは 3つ", 110, fill=RED)
-    text_center(d, (XS[0] + IW / 2, TOP + 300), "くらべて みよう", 80, fill=(110, 84, 60))
-    d.rounded_rectangle((760, 36, 1760, 76), 20, fill=(96, 160, 90))
-    text_center(d, (1840, 56), "90", 60)
-    text_center(d, (380, 56), "1問 90秒", 60, fill=INK)
+        d.rounded_rectangle((x + 40, 60, x + PW - 40, 840), 24, fill=(255, 250, 238), outline=(150, 115, 80), width=6)
+        text_center(d, (x + PW / 2, 200), label, 100)
+    text_center(d, (XS[0] + PW / 2, 480), "くらべて みよう", 84, fill=(110, 84, 60))
+    text_center(d, (XS[1] + PW / 2, 430), "違いは 3つ", 120, fill=RED)
+    text_center(d, (XS[1] + PW / 2, 640), "1問 90秒", 100, fill=INK)
     return im
 
 
@@ -376,20 +386,50 @@ def render_unchiku(t):
     im = Image.new("RGB", (W, H), (250, 240, 222))
     d = ImageDraw.Draw(im)
     leaves(d, t)
-    text_center(d, (300, 70), "こよみ先生の 秋の小話", 56, fill=(150, 90, 50), anchor="lm")
+    text_center(d, (80, 80), "こよみ先生の 秋の小話", 56, fill=(150, 90, 50), anchor="lm")
     dt = t - u
+    cx = 700
     if dt < 4:
-        text_center(d, (760, 400), "秋の小話", 170, fill=(180, 70, 40), stroke=6, stroke_fill=(255, 250, 238))
+        text_center(d, (cx, 420), "秋の小話", 170, fill=(180, 70, 40), stroke=6, stroke_fill=(255, 250, 238))
     elif dt < 15:
-        text_center(d, (760, 400), "もみつ　→　もみじ", 150, stroke=6, stroke_fill=(255, 250, 238))
-        text_center(d, (760, 560), "（葉の色が変わる）", 70, fill=(110, 84, 60))
+        text_center(d, (cx, 400), "もみつ　→　もみじ", 140, stroke=6, stroke_fill=(255, 250, 238))
+        text_center(d, (cx, 560), "（葉の色が変わる）", 68, fill=(110, 84, 60))
     elif dt < 23:
-        text_center(d, (760, 250), "もみち", 80, fill=(180, 70, 40))
-        text_center(d, (760, 430), "黄葉", 240, fill=(200, 150, 20), stroke=8, stroke_fill=(255, 250, 238))
-        text_center(d, (760, 650), "万葉集のころ", 70, fill=(110, 84, 60))
+        text_center(d, (cx, 230), "もみち", 80, fill=(180, 70, 40))
+        text_center(d, (cx, 420), "黄葉", 240, fill=(200, 150, 20), stroke=8, stroke_fill=(255, 250, 238))
+        text_center(d, (cx, 640), "万葉集のころ", 70, fill=(110, 84, 60))
     else:
-        text_center(d, (760, 400), "黄葉　→　紅葉", 160, stroke=6, stroke_fill=(255, 250, 238))
-        text_center(d, (760, 570), "平安時代から", 70, fill=(110, 84, 60))
+        # plan.md 4-7：「平安時代」「古今集の秋の歌」と赤いもみじ（かえで）の葉。黄葉→紅葉の矢印は使わない
+        text_center(d, (cx, 300), "平安時代", 150, stroke=6, stroke_fill=(255, 250, 238))
+        text_center(d, (cx, 470), "古今集の秋の歌", 80, fill=(110, 84, 60))
+        draw_maple(d, cx, 650, 110, (205, 50, 40))
+    draw_subtitle(im, t, (20, 1400, H - 24))
+    draw_owl(im, t, (W - OWL_SIZE - 40, H - OWL_SIZE - 30))
+    return im
+
+
+def draw_maple(d, cx, cy, r, col):
+    """かえでの葉（5つに分かれた形）を簡単に描く。"""
+    pts = []
+    for k in range(10):
+        a = -math.pi / 2 + k * math.pi / 5
+        rr = r if k % 2 == 0 else r * 0.45
+        pts.append((cx + rr * math.cos(a), cy + rr * math.sin(a) * 0.95))
+    d.polygon(pts, fill=col, outline=(120, 30, 25))
+    d.line((cx, cy, cx, cy + r * 1.1), fill=(120, 30, 25), width=6)
+
+
+def render_opening(t):
+    im = opening_base().copy()
+    leaves(ImageDraw.Draw(im), t, n=12)
+    draw_subtitle(im, t, (20, 1400, H - 24))
+    draw_owl(im, t, (W - OWL_SIZE - 60, 140))
+    return im
+
+
+def render_rule(t):
+    im = rule_base().copy()
+    draw_subtitle(im, t, (20, W - 20, H - 24))
     return im
 
 
@@ -399,8 +439,8 @@ def render_ending(t):
     dt = t - T.ENDING[0]
     if dt < 4.5:
         leaves(d, t, n=40, seed=7, colors=((214, 80, 50), (232, 176, 48), (96, 150, 90), (90, 120, 200)))
-        text_center(d, (760, 380), "おつかれさまでした", 130, stroke=6, stroke_fill=(255, 250, 238))
-        text_center(d, (760, 540), "5問 おしまい", 90, fill=(180, 70, 40))
+        text_center(d, (700, 380), "おつかれさまでした", 130, stroke=6, stroke_fill=(255, 250, 238))
+        text_center(d, (700, 540), "5問 おしまい", 90, fill=(180, 70, 40))
     else:
         text_center(d, (420, 80), "今日の称号", 80, fill=(180, 70, 40))
         y = 170
@@ -412,6 +452,8 @@ def render_ending(t):
         text_center(d, (610, y + 30), T.TITLE_NOTE, 50, fill=(110, 84, 60))
         if dt >= 11.5:
             text_center(d, (610, y + 110), "次回も 秋の絵で 5問", 60, fill=(150, 90, 50))
+    draw_subtitle(im, t, (20, 1400, H - 24))
+    draw_owl(im, t, (W - OWL_SIZE - 40, H - OWL_SIZE - 60))
     return im
 
 
@@ -430,28 +472,11 @@ def segment_of(t):
     raise ValueError(t)
 
 
-def render_base(t):
-    seg = segment_of(t)
-    if seg[0] == "op":
-        im = opening_base().copy(); leaves(ImageDraw.Draw(im), t, n=12)
-    elif seg[0] == "rule":
-        im = rule_base().copy()
-    elif seg[0] == "unchiku":
-        im = render_unchiku(t)
-    elif seg[0] == "end":
-        im = render_ending(t)
-    elif seg[0] == "card":
-        return render_card(seg[1], t)
-    else:
-        im = render_question(seg[1], t)
-    return im
-
-
 def render(t):
-    im = render_base(t)
-    draw_subtitle(im, t)
-    draw_owl(im, t)
-    return im
+    seg = segment_of(t)
+    return {"op": lambda: render_opening(t), "rule": lambda: render_rule(t), "unchiku": lambda: render_unchiku(t),
+            "end": lambda: render_ending(t), "card": lambda: render_card(seg[1], t),
+            "q": lambda: render_question(seg[1], t)}[seg[0]]()
 
 
 def encode_part(args):
