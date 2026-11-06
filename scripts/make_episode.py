@@ -125,7 +125,7 @@ def thumbnail(ep, font):
 def check(ep, work):
     import ep_check as C
     r = C.numeric(ep, work)
-    sheet = C.contact_sheet(ep, work, work / "sheet.png") if (ep / "video.mp4").exists() else None
+    sheet = C.contact_sheet(ep, work, work / "sheet.png", setup(work)) if (ep / "video.mp4").exists() else None
     log(f"数値チェック：{'問題なし' if not r['problems'] else '問題あり'}")
     for p in r["problems"]:
         log(f"  - {p}")

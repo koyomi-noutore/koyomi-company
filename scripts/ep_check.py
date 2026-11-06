@@ -4,13 +4,13 @@ import json
 import subprocess
 from pathlib import Path
 
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFont
 
 import ep_timeline as T
 from episode_plan import plan
 
 LEVEL_RANGE = {"初級": (3.0, 4.0), "中級": (2.0, 3.0), "上級": (1.5, 2.0)}   # concept.md（画面幅に対する%）
-TOL = 0.1   # 「約」の幅（ポイント）
+TOL = 0.2   # 難易度表の「約」の幅（ポイント）。第5問の宝珠 2.07%・第3問の石 1.83% を「約」として扱った（事業部長判断 2026-11-06、監査で確認）
 
 
 def probe(path):
@@ -66,7 +66,7 @@ def numeric(out_dir, work):
     return res
 
 
-def contact_sheet(out_dir, work, path):
+def contact_sheet(out_dir, work, path, fontp=None):
     """主な場面を1枚にまとめる：オープニング・各問の答え合わせの最後・うんちく・エンディング・サムネ。"""
     out, work = Path(out_dir), Path(work)
     times = [("オープニング", 8)] + [(f"第{q}問 答え", s + T.CARD + T.SOLVE + T.ANSWER - 0.5) for q, s in T.Q_START.items()]
@@ -86,6 +86,6 @@ def contact_sheet(out_dir, work, path):
     for k, (label, im) in enumerate(tiles):
         x, y = (k % cols) * 650, (k // cols) * 390
         sheet.paste(im, (x, y + 25))
-        d.text((x + 4, y + 4), label, fill=(0, 0, 0))
+        d.text((x + 4, y + 2), label, fill=(0, 0, 0), font=ImageFont.truetype(str(fontp), 20) if fontp else None)
     sheet.save(path)
     return path
