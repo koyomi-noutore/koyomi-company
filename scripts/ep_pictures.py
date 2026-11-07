@@ -34,6 +34,12 @@ KEEP_ALT, KEEP_REMOVE = _I["keep_alt"], _I["keep_remove"]
 _Q = questions()
 SCENES = {q: Q["prompt"] for q, Q in _Q.items()}
 EDITS = {q: Q["edit_prompt"] for q, Q in _Q.items()}
+# 2つ目以降の描き直し（版ごとの指示）。plan.json の questions[].edit_prompts：{版: 指示}。版"1"は edit_prompt
+EDITS_V = {(q, v): t for q, Q in _Q.items() for v, t in Q.get("edit_prompts", {}).items()}
+
+
+def edit_prompt(q, ver="1"):
+    return EDITS_V.get((q, ver), EDITS[q]) + KEEP_ALT + KEEP_REMOVE
 # うまくいかなかった違いだけを、範囲のまわりを切り出して描き直す（予備の呼び出し）。plan.json の questions[].retries
 RETRY = {(q, v): r for q, Q in _Q.items() for v, r in Q.get("retries", {}).items()}
 # AIで描き直さず、プログラムで作る違い（plan.json の questions[].program_edits：{版: スクリプト}）。
@@ -80,7 +86,7 @@ def edit(q, work, ver="1"):
         return Image.open(out)
     from gemini_image import generate
     src = Image.open(w / f"q{q}_src.png").convert("RGB")
-    prompt = EDITS[q] + KEEP_ALT + KEEP_REMOVE
+    prompt = edit_prompt(q, ver)
     ed = generate(prompt, images=[src], model=_I["model"], aspect=_I["aspect"], size=_I["size"])
     if ed.size != src.size:
         ed = ed.resize(src.size, Image.LANCZOS)
@@ -113,7 +119,7 @@ def edit_batch(qs, work, ver="1"):
         return
     from gemini_image import generate_batch
     srcs = {q: Image.open(w / f"q{q}_src.png").convert("RGB") for q in qs}
-    prompt = lambda q: EDITS[q] + KEEP_ALT + KEEP_REMOVE
+    prompt = lambda q: edit_prompt(q, ver)
     res = generate_batch({f"edit{q}": {"prompt": prompt(q), "images": [srcs[q]], "aspect": _I["aspect"], "size": _I["size"]}
                           for q in qs}, model=_I["model"], name="koyomi-edit")
     for q in qs:
