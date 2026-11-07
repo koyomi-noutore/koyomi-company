@@ -45,7 +45,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 267,
+   "outside_box_pixels_diff_gt15": 144,
    "outside_box_max_distance_px": 8.0,
    "answers": [
     {
@@ -88,39 +88,39 @@
     {
      "id": 2,
      "type": "増える",
-     "label": "菊が5輪に増える",
-     "line": "菊の花が、増えました。",
+     "label": "菊が4輪に増える",
+     "line": "菊の花が、ひとつ増えました。",
      "box_px": [
       222,
       948,
-      658,
-      1185
+      390,
+      1118
      ],
      "box_screen": [
       115,
       490,
-      340,
-      613
+      202,
+      578
      ],
      "circle_a_screen": [
       115,
       490,
-      340,
-      613
+      202,
+      578
      ],
      "circle_b_screen": [
       115,
       490,
-      340,
-      613
+      202,
+      578
      ],
-     "object_w_px": 138,
-     "object_screen_width_pct": 3.72,
+     "object_w_px": 133,
+     "object_screen_width_pct": 3.58,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "one",
      "made_by": "gemini",
-     "note": "物の幅は増えた花1輪。花束全体が描き直されたので、範囲は花束全体（花瓶は元の絵のまま）"
+     "note": "版1は花束全体が5輪に描き直されたので、増えた1輪（左上）だけを元の絵の壁の所に貼った（scripts/custom/ep002_q1_one_flower.py、監査の差し戻し1）。元の3輪は元の絵のまま"
     },
     {
      "id": 3,
@@ -441,8 +441,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 473,
-   "outside_box_max_distance_px": 10.0,
+   "outside_box_pixels_diff_gt15": 250,
+   "outside_box_max_distance_px": 8.0,
    "answers": [
     {
      "id": 1,
@@ -487,26 +487,26 @@
      "label": "じょうろのはす口がない",
      "line": "じょうろの先が、ありません。",
      "box_px": [
-      165,
-      1295,
+      150,
+      1288,
       262,
       1388
      ],
      "box_screen": [
-      85,
-      670,
+      78,
+      666,
       136,
       718
      ],
      "circle_a_screen": [
-      85,
-      670,
+      78,
+      666,
       136,
       718
      ],
      "circle_b_screen": [
-      85,
-      670,
+      78,
+      666,
       136,
       718
      ],
@@ -514,46 +514,46 @@
      "object_screen_width_pct": 2.07,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "2",
+     "edit_version": "2c",
      "made_by": "gemini",
-     "note": "消した物の輪郭が紙の地より2〜5段階だけ暗く残る（画面の大きさでは見えない。監査で確認）"
+     "note": "消した物の輪郭が薄く残った（監査の差し戻し1）ので、元の物の形を広げた範囲の紙の地をうめた（scripts/custom/ep002_clean_ghost.py）"
     },
     {
      "id": 3,
      "type": "向き",
-     "label": "けむりの向き",
-     "line": "けむりの向きが、反対になりました。",
+     "label": "落ち葉の向きが反対",
+     "line": "落ち葉が、反対を向いています。",
      "box_px": [
-      650,
-      610,
-      1020,
-      1330
+      366,
+      1603,
+      466,
+      1675
      ],
      "box_screen": [
-      336,
-      316,
-      528,
-      688
+      189,
+      829,
+      241,
+      866
      ],
      "circle_a_screen": [
-      336,
-      316,
-      528,
-      688
+      189,
+      829,
+      241,
+      866
      ],
      "circle_b_screen": [
-      336,
-      316,
-      528,
-      688
+      189,
+      829,
+      241,
+      866
      ],
-     "object_w_px": 110,
-     "object_screen_width_pct": 2.96,
-     "in_level_range": true,
+     "object_w_px": 70,
+     "object_screen_width_pct": 1.89,
+     "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "2",
-     "made_by": "gemini",
-     "note": "物の幅はけむりの筋の太さの幅"
+     "edit_version": "flip",
+     "made_by": "program",
+     "note": "けむりの向きは変わる範囲が広く易しすぎた（監査の差し戻し1）ので差し替え。プログラムで葉を左右反対にした（scripts/custom/ep002_q4_leaf_flip.py）"
     }
    ]
   },
@@ -573,8 +573,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 86,
-   "outside_box_max_distance_px": 8.0,
+   "outside_box_pixels_diff_gt15": 168,
+   "outside_box_max_distance_px": 10.0,
    "answers": [
     {
      "id": 1,
@@ -619,26 +619,26 @@
      "label": "屋根の鳥が1羽いない",
      "line": "屋根の上の鳥が、一羽いません。",
      "box_px": [
-      505,
-      226,
+      488,
+      220,
       596,
       314
      ],
      "box_screen": [
-      261,
-      117,
+      252,
+      114,
       308,
       162
      ],
      "circle_a_screen": [
-      261,
-      117,
+      252,
+      114,
       308,
       162
      ],
      "circle_b_screen": [
-      261,
-      117,
+      252,
+      114,
       308,
       162
      ],
@@ -646,9 +646,9 @@
      "object_screen_width_pct": 1.86,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "2",
+     "edit_version": "2c",
      "made_by": "gemini",
-     "note": "消した物の輪郭が紙の地より2〜5段階だけ暗く残る（画面の大きさでは見えない。監査で確認）"
+     "note": "消した物の輪郭が薄く残った（監査の差し戻し1）ので、元の物の形を広げた範囲の紙の地をうめた（scripts/custom/ep002_clean_ghost.py）"
     },
     {
      "id": 3,
