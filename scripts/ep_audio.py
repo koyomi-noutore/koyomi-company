@@ -107,7 +107,8 @@ def sfx_events():
     for q, s in T.Q_START.items():
         ev.append((s, swoosh()))
         ev.append((s + T.CARD, chime((88, 84))))  # 出題スタート
-        ev.append((s + T.CARD + T.HINT_AT, sparkle()))
+        if T.HINT_AT is not None and T.QUESTIONS[q]["hint"]:
+            ev.append((s + T.CARD + T.HINT_AT, sparkle()))
         for k in range(10):  # 残り10秒〜1秒
             ev.append((s + T.CARD + T.TEN_AT + k, tick()))
         ev.append((s + T.CARD + T.SOLVE, chime((84, 79), 0.25)))  # 時間切れ

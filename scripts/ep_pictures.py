@@ -39,7 +39,7 @@ RETRY = {(q, v): r for q, Q in _Q.items() for v, r in Q.get("retries", {}).items
 # AIで描き直さず、プログラムで作る違い（plan.json の questions[].program_edits：{版: スクリプト}）。
 # スクリプトは「python3 <スクリプト> <作業フォルダ>」で <作業>/edit_<問>_<版>.png を書く。
 PROGRAM_EDITS = {(q, v): sc for q, Q in _Q.items() for v, sc in Q.get("program_edits", {}).items()}
-QUESTIONS = {q: (Q["scene"], Q["level"], Q["hint_diff"]) for q, Q in _Q.items()}
+QUESTIONS = {q: (Q["scene"], Q["level"], Q.get("hint_diff")) for q, Q in _Q.items()}
 # 画面に出す範囲（x0, y0, x1, y1）。8:9 のまま、Gemini が絵の左右に残した白いふちを切り落とす（縮めるだけ。引き伸ばしはしない）
 CONTENT = {q: tuple(Q["content_box"]) for q, Q in _Q.items()}
 LEVEL_RANGE = {"初級": (3.0, 4.0), "中級": (2.0, 3.0), "上級": (1.5, 2.0)}  # 画面幅に対する%（concept.md）
@@ -88,6 +88,43 @@ def edit(q, work, ver="1"):
     crop_89(ed)[0].save(out)
     (w / f"edit_{q}_{ver}.prompt.txt").write_text(prompt, encoding="utf-8")
     return Image.open(out)
+
+
+def base_batch(qs, work):
+    """元の絵をまとめてバッチで作る（約半額・急がないとき）。作業フォルダにあるものは頼まない。"""
+    w = Path(work)
+    qs = [q for q in qs if not (w / f"q{q}_src.png").exists()]
+    if not qs:
+        return
+    from gemini_image import generate_batch
+    res = generate_batch({f"base{q}": {"prompt": STYLE + SCENES[q], "aspect": _I["aspect"], "size": _I["size"]} for q in qs},
+                         model=_I["model"], name="koyomi-base")
+    for q in qs:
+        if f"base{q}" in res:
+            res[f"base{q}"].save(w / f"q{q}_src.png")
+            base(q, w)
+
+
+def edit_batch(qs, work, ver="1"):
+    """描き直し（違い3つをまとめて）をバッチで頼む。元の絵（q{q}_src.png）がある問だけ。"""
+    w = Path(work)
+    qs = [q for q in qs if not (w / f"edit_{q}_{ver}.png").exists() and (w / f"q{q}_src.png").exists()]
+    if not qs:
+        return
+    from gemini_image import generate_batch
+    srcs = {q: Image.open(w / f"q{q}_src.png").convert("RGB") for q in qs}
+    prompt = lambda q: EDITS[q] + KEEP_ALT + KEEP_REMOVE
+    res = generate_batch({f"edit{q}": {"prompt": prompt(q), "images": [srcs[q]], "aspect": _I["aspect"], "size": _I["size"]}
+                          for q in qs}, model=_I["model"], name="koyomi-edit")
+    for q in qs:
+        ed = res.get(f"edit{q}")
+        if ed is None:
+            continue
+        if ed.size != srcs[q].size:
+            ed = ed.resize(srcs[q].size, Image.LANCZOS)
+        ed.save(w / f"edit_{q}_{ver}_src.png")
+        crop_89(ed)[0].save(w / f"edit_{q}_{ver}.png")
+        (w / f"edit_{q}_{ver}.prompt.txt").write_text(prompt(q), encoding="utf-8")
 
 
 def program_edit(q, ver, work):

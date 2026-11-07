@@ -1,0 +1,573 @@
+{
+ "episode": "002",
+ "season": "秋",
+ "topics": [
+  "いちょう",
+  "菊"
+ ],
+ "note": "第2回の中身。make_episode.py がこれを読んで動画を作る。台本の正本は plan.md、ここはその機械用の写し。",
+ "youtube": {
+  "title": "【間違い探し】3つ見つけられる？いちょうと菊の秋 全5問｜初級〜上級・1問90秒【シニアの脳トレ】",
+  "description_file": "description.md",
+  "title_note": "第1回と同じ型（thumbnail-title.md 段階1の推奨A）。題材だけを変えた。",
+  "publish_plan": "2026-11-11（水）7:00 JST。CEOがYouTube Studioで予約公開を設定"
+ },
+ "screens": {
+  "opening_title": "秋の間違い探し　5問",
+  "opening_sub": "こよみ先生のまいにち脳トレ",
+  "unchiku_header": "こよみ先生の 秋の小話",
+  "unchiku_slides": [
+   {
+    "until": 4,
+    "texts": [
+     [
+      "秋の小話",
+      700,
+      420,
+      170,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ]
+    ]
+   },
+   {
+    "until": 15,
+    "texts": [
+     [
+      "鴨脚（ヤーチャオ）",
+      700,
+      380,
+      130,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ],
+     [
+      "→　いちょう",
+      700,
+      560,
+      110,
+      [
+       200,
+       150,
+       20
+      ],
+      6
+     ]
+    ]
+   },
+   {
+    "until": 23,
+    "texts": [
+     [
+      "鴨の脚",
+      700,
+      400,
+      200,
+      [
+       59,
+       47,
+       37
+      ],
+      8
+     ],
+     [
+      "葉の形を見立てた",
+      700,
+      620,
+      80,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 30,
+    "texts": [
+     [
+      "銀杏",
+      700,
+      330,
+      220,
+      [
+       200,
+       150,
+       20
+      ],
+      8
+     ],
+     [
+      "ぎんあん　→　ぎんなん",
+      700,
+      580,
+      90,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   }
+  ],
+  "ending_titles": [
+   [
+    "15個",
+    "秋の名探偵"
+   ],
+   [
+    "11〜14個",
+    "いちょう名人"
+   ],
+   [
+    "6〜10個",
+    "菊びより さん"
+   ],
+   [
+    "0〜5個",
+    "ぎんなんさん"
+   ]
+  ],
+  "ending_note": "ぎんなんさんは、これから、ぐんぐん育ちます",
+  "ending_next": "次回も 秋の絵で 5問"
+ },
+ "timeline": {
+  "total": 615.0,
+  "opening": [
+   0.0,
+   15.0
+  ],
+  "rule": [
+   15.0,
+   25.0
+  ],
+  "q_start": {
+   "1": 25.0,
+   "2": 133.0,
+   "3": 241.0,
+   "4": 379.0,
+   "5": 487.0
+  },
+  "unchiku": [
+   349.0,
+   379.0
+  ],
+  "ending": [
+   595.0,
+   615.0
+  ],
+  "card": 3.0,
+  "solve": 90.0,
+  "answer": 15.0,
+  "hint_at": null,
+  "ten_at": 80.0,
+  "ans_first": 1.6,
+  "ans_step": 4.3
+ },
+ "lines": {
+  "opening": [
+   {
+    "id": "op",
+    "at": 0.0,
+    "text": "みなさん、こんにちは。こよみ先生です。いちょうの葉が、黄色くなってきましたね。今日は、秋の間違い探しを5問、いっしょに楽しみましょう。",
+    "face": "smile",
+    "until": 15.0
+   }
+  ],
+  "rule": [
+   {
+    "id": "rule",
+    "at": 0.0,
+    "text": "左と右の絵をくらべます。90秒で、右の絵の違いを3つ探してください。",
+    "face": "normal",
+    "until": 10.0
+   }
+  ],
+  "unchiku": [
+   {
+    "id": "u1",
+    "at": 0.0,
+    "text": "ここで、ひと休み。秋の小話です。",
+    "face": "smile",
+    "until": 4.0
+   },
+   {
+    "id": "u2",
+    "at": 4.0,
+    "text": "「いちょう」という名前は、中国のことば「ヤーチャオ」から来たといわれます。",
+    "face": "normal",
+    "until": 15.0
+   },
+   {
+    "id": "u3",
+    "at": 15.0,
+    "text": "漢字では「鴨の脚」と書きます。葉の形を、水鳥の足に見立てたそうです。",
+    "face": "surprise",
+    "until": 23.0
+   },
+   {
+    "id": "u4",
+    "at": 23.0,
+    "text": "実の「ぎんなん」は、「ぎんあん」がなまった読み方なんですよ。",
+    "face": "smile",
+    "until": 30.0
+   }
+  ],
+  "ending": [
+   {
+    "id": "e1",
+    "at": 0.0,
+    "text": "これで5問、おしまいです。おつかれさまでした。",
+    "face": "yay",
+    "until": 4.5
+   },
+   {
+    "id": "e2",
+    "at": 4.5,
+    "text": "15個の違い、いくつ見つかりましたか。画面で、今日の称号を見てくださいね。",
+    "face": "smile",
+    "until": 11.5
+   },
+   {
+    "id": "e3",
+    "at": 11.5,
+    "text": "次回も秋の絵で5問です。チャンネル登録をして、また来てください。",
+    "face": "wink",
+    "until": 20.0
+   }
+  ]
+ },
+ "readings": [
+  [
+   "駅のホーム",
+   "えきのホーム"
+  ],
+  [
+   "焚き火の庭",
+   "たきびのにわ"
+  ],
+  [
+   "郵便局の前",
+   "ゆうびんきょくのまえ"
+  ],
+  [
+   "郵便ポスト",
+   "ゆうびんポスト"
+  ],
+  [
+   "和菓子屋",
+   "わがしや"
+  ],
+  [
+   "竹ぼうき",
+   "たけぼうき"
+  ],
+  [
+   "手ぬぐい",
+   "てぬぐい"
+  ],
+  [
+   "第1問",
+   "だいいちもん"
+  ],
+  [
+   "第2問",
+   "だいにもん"
+  ],
+  [
+   "第3問",
+   "だいさんもん"
+  ],
+  [
+   "第4問",
+   "だいよんもん"
+  ],
+  [
+   "第5問",
+   "だいごもん"
+  ],
+  [
+   "足もと",
+   "あしもと"
+  ],
+  [
+   "90秒",
+   "きゅうじゅうびょう"
+  ],
+  [
+   "10秒",
+   "じゅうびょう"
+  ],
+  [
+   "15個",
+   "じゅうごこ"
+  ],
+  [
+   "湯のみ",
+   "ゆのみ"
+  ],
+  [
+   "植木鉢",
+   "うえきばち"
+  ],
+  [
+   "自転車",
+   "じてんしゃ"
+  ],
+  [
+   "前かご",
+   "まえかご"
+  ],
+  [
+   "初級",
+   "しょきゅう"
+  ],
+  [
+   "中級",
+   "ちゅうきゅう"
+  ],
+  [
+   "上級",
+   "じょうきゅう"
+  ],
+  [
+   "小話",
+   "こばなし"
+  ],
+  [
+   "称号",
+   "しょうごう"
+  ],
+  [
+   "今日",
+   "きょう"
+  ],
+  [
+   "手前",
+   "てまえ"
+  ],
+  [
+   "後半",
+   "こうはん"
+  ],
+  [
+   "模様",
+   "もよう"
+  ],
+  [
+   "5問",
+   "ごもん"
+  ],
+  [
+   "3つ",
+   "みっつ"
+  ],
+  [
+   "居間",
+   "いま"
+  ],
+  [
+   "時計",
+   "とけい"
+  ],
+  [
+   "床几",
+   "しょうぎ"
+  ],
+  [
+   "熊手",
+   "くまで"
+  ],
+  [
+   "水鳥",
+   "みずどり"
+  ],
+  [
+   "実の",
+   "みの"
+  ],
+  [
+   "漢字",
+   "かんじ"
+  ],
+  [
+   "中国",
+   "ちゅうごく"
+  ],
+  [
+   "街灯",
+   "がいとう"
+  ],
+  [
+   "屋根",
+   "やね"
+  ],
+  [
+   "葉",
+   "は"
+  ],
+  [
+   "菊",
+   "きく"
+  ]
+ ],
+ "voice_override": {
+  "u2": "いちょうという名前は、中国のことば、ヤーチャオから来たといわれます。",
+  "u3": "漢字では、かもの、あし、と書きます。葉の形を、水鳥の足に見立てたそうです。",
+  "u4": "実のぎんなんは、ぎんあんが、なまった読み方なんですよ。"
+ },
+ "voice": {
+  "provider": "fish",
+  "reference_id": "63819275ce38440ea245ca988abf976e",
+  "model": "s1",
+  "speed": 0.88,
+  "credit": "音声：Fish Audio（AIで合成した音声です）"
+ },
+ "images": {
+  "model": "gemini-3-pro-image",
+  "size": "2K",
+  "aspect": "4:5",
+  "style": "A warm Japanese picture-book illustration in soft watercolor with gentle colored-pencil outlines, like a cozy picture book for all ages, drawn with clear, crisp details. Late-autumn palette: bright ginkgo yellow, chrysanthemum yellow, white and soft purple, warm browns, muted reds and soft greens. Natural, hand-drawn, slightly rounded shapes; not geometric, not flat vector, not photorealistic. PORTRAIT-ISH composition, slightly taller than wide (about 8:9); the scene is arranged vertically, with a near foreground, a middle ground and a background stacked from bottom to top. Keep the top 10% of the picture simple (sky, eaves or leaves only) and the bottom 20% simple (plain floor, ground or pavement only): put every main object listed below in the middle part of the picture. The painting fills the entire canvas edge to edge: no white border, no blank paper margin on any side. No people. Absolutely no text, letters, numbers, logos or symbols anywhere, including on signs, curtains, boxes and lanterns. The main objects are clearly drawn, separated from each other with a little space around each, and fully visible (not cut off by the picture edge and not hidden behind other objects).\n",
+  "keep_alt": " Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text.",
+  "keep_remove": " Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object.",
+  "batch": true
+ },
+ "questions": [
+  {
+   "q": 1,
+   "scene": "居間",
+   "level": "初級",
+   "go": "さあ、どうぞ。",
+   "prompt": "Scene: a cozy old Japanese living room (ima) with tatami mats in soft afternoon light. Background (upper middle): a sliding glass window with wooden frames, through which a big bright-yellow ginkgo tree is seen; a plain round wooden wall clock without any numbers on the wall to the left of the window, about one ninth of the picture width. Middle: a round low wooden table (chabudai). Main objects on the table: (1) a small white vase holding exactly three yellow chrysanthemum flowers, each flower about one fourteenth of the picture width; (2) a brown clay teapot; (3) one small round green teacup next to the teapot, about one fifteenth of the picture width; (4) a small plate with three round rice crackers. Beside the table on the tatami: a flat purple floor cushion. Each main object is clearly separated from the others.",
+   "edit_prompt": "Edit this illustration and make exactly these three small changes: (a) the small round green teacup on the table is gone, showing the table surface where it was; (b) the white vase now holds four yellow chrysanthemum flowers instead of three, the new one the same size; (c) the round wall clock becomes a square wall clock of the same size, same wood color, same plain face without numbers.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {},
+   "diffs": []
+  },
+  {
+   "q": 2,
+   "scene": "和菓子屋",
+   "level": "初級",
+   "go": "さあ、どうぞ。",
+   "prompt": "Scene: the front of a small old Japanese sweets shop (wagashi-ya) on a quiet street in late autumn. Background (upper middle): the wooden shop front with a plain indigo noren curtain without any letters, and a yellow ginkgo tree beside the shop. Middle: a low glass-front wooden display case. Main objects: (1) on top of the display case, a black lacquered tray with exactly four yellow ginkgo-leaf-shaped sweets (nerikiri) in a row, each sweet about one sixteenth of the picture width; (2) next to it, a plate with a white chrysanthemum-shaped sweet; (3) in front of the shop, two small round wooden stools side by side, each about one ninth of the picture width; (4) a potted white chrysanthemum in a round brown pot by the door, the pot about one twelfth of the picture width; (5) a red paper umbrella (nodate-gasa) standing closed against the wall. No text on the curtain, case or anything.",
+   "edit_prompt": "Edit this illustration and make exactly these three small changes: (a) the right one of the two small round wooden stools is gone, showing the ground where it was; the left stool stays; (b) on the black tray, add one more yellow ginkgo-leaf-shaped sweet of the same size and shape at the end of the row, so there are five; (c) the round brown flower pot of the white chrysanthemum becomes a tall square wooden box planter, same width, same chrysanthemum.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {},
+   "diffs": []
+  },
+  {
+   "q": 3,
+   "scene": "駅のホーム",
+   "level": "中級",
+   "go": "少しむずかしくなります。どうぞ。",
+   "prompt": "Scene: the platform of a small, quiet country railway station in late autumn, no train. Background (upper middle): a low wooden fence at the back of the platform and a row of big bright-yellow ginkgo trees behind it; a small station roof with wooden posts on the left. Main objects (middle): (1) a long wooden bench on the platform; (2) a cloth tote bag sitting on the bench, plain mustard color, about one eighteenth of the picture width; (3) a closed long dark-green umbrella leaning against the right end of the bench, tilting to the left; (4) exactly three small brown sparrows sitting in a row on the top rail of the fence, each about one twenty-fifth of the picture width; (5) a round metal trash bin; (6) an old round platform clock without numbers hanging under the roof. Scattered yellow ginkgo leaves on the platform floor. No signs with text.",
+   "edit_prompt": "Edit this illustration and make exactly these three small changes: (a) the closed umbrella leaning on the bench now tilts the other way (to the right), still leaning at the right end of the bench, same umbrella; (b) the plain tote bag on the bench now has thin white horizontal stripes, same shape, same mustard color; (c) on the fence rail, the middle one of the three sparrows is gone, showing the rail and background where it was.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {},
+   "diffs": []
+  },
+  {
+   "q": 4,
+   "scene": "焚き火の庭",
+   "level": "中級",
+   "go": "後半です。どうぞ。",
+   "prompt": "Scene: a small Japanese back garden in late autumn where fallen leaves are being gathered. Background (upper middle): a wooden board fence and a tall yellow ginkgo tree. Main objects (middle): (1) a round pile of fallen yellow and brown leaves on the ground with a thin wisp of white smoke rising from it (a small leaf bonfire, only a tiny glow, no big flames); (2) a bamboo rake and a bamboo broom leaning against the fence; (3) a white tenugui towel, plain without pattern, hanging on a nail on the fence, about one eighteenth of the picture width; (4) a tin watering can on the ground with its spout pointing to the left, about one twelfth of the picture width; (5) a clay pot of yellow chrysanthemums with exactly three flowers, each flower about one twentieth of the picture width; (6) a metal bucket. Scattered ginkgo leaves on the ground.",
+   "edit_prompt": "Edit this illustration and make exactly these three small changes: (a) the potted yellow chrysanthemum now has only two flowers: remove one of the three flowers, showing green leaves where it was; (b) the tin watering can now faces the other way, with its spout pointing to the right, same can, same size, same place; (c) the plain white towel hanging on the fence now has thin blue horizontal stripes, same shape, same place.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {},
+   "diffs": []
+  },
+  {
+   "q": 5,
+   "scene": "郵便局の前",
+   "level": "上級",
+   "go": "最後の問題です。じっくりどうぞ。",
+   "prompt": "Scene: in front of a small old-fashioned town post office building in late autumn, quiet morning. Background (upper middle): the post office front with two windows with white curtains, a small roof, and a big yellow ginkgo tree next to it, with a few small birds on the roof edge. Main objects (middle), many small details: (1) a classic red cylindrical Japanese postbox with a round top, plain without letters or marks; (2) a bicycle parked by the wall with a small wire front basket about one twenty-eighth of the picture width; (3) a long planter box of chrysanthemums with several small yellow flowers and one white flower, each flower about one thirtieth of the picture width; (4) an old street lamp with a round glass lamp head, the head about one twenty-sixth of the picture width; (5) a small wooden bench; (6) scattered ginkgo leaves on the pavement. No text, numbers, symbols or postal marks anywhere.",
+   "edit_prompt": "Edit this illustration and make exactly these three small changes: (a) in the chrysanthemum planter, one of the small yellow flowers next to the white flower becomes white, same size and shape; (b) the small wire front basket of the bicycle is gone, showing the bicycle handlebar and the wall behind; (c) the round glass lamp head of the street lamp becomes a square lantern-shaped lamp head of the same size.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {},
+   "diffs": []
+  }
+ ],
+ "thumbnail": {
+  "question": 3,
+  "big_text": "秋の間違いさがし",
+  "highlight": "間違いさがし",
+  "highlight_color": [
+   255,
+   214,
+   0
+  ],
+  "big_color": [
+   255,
+   255,
+   255
+  ],
+  "band_color": [
+   25,
+   35,
+   70
+  ],
+  "big_size": 132,
+  "sub_text": "3つ見つけられる？全5問",
+  "badges": [
+   [
+    "初級〜上級",
+    [
+     176,
+     62,
+     52
+    ]
+   ]
+  ],
+  "circle_hint": false,
+  "note": "第1回と同じ型（変えた所なし）。左右に同じ絵・上に濃紺の帯で「秋の間違いさがし」・下に難易度と問いかけ。こよみ先生は入れない"
+ }
+}

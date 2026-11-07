@@ -13,6 +13,8 @@
                               → 貼り戻し → answers.json → 描き直しの使う部分を <回>/edits/ に残す。
                               作業フォルダか <回>/edits/ にあるものは作り直さない（画像APIの無駄打ちをしない）
   pictures base|edit <問> [版]  1問ずつ（edit の版は省略で "1"）
+  pictures batch base|edit [問 ...]  まとめてバッチ（約半額）で頼み、終わるまで待つ。問を省くと全問。
+                              plan.json の images.batch が true なら、pictures（引数なし）も元の絵と描き直し(版1)をバッチで先に作る
   pictures retry <問> <版>      予備の描き直し（plan.json の retries）
   pictures compose|answers    貼り戻しだけ／answers.json だけ
   voice [id ...]              声（Fish Audio）。声に渡す文が変わったセリフだけ作り直す。id を書くとそのセリフを作り直す
@@ -66,6 +68,15 @@ def pictures(ep, work, args):
     if args and args[0] in ("base", "edit"):
         q = int(args[1])
         return P.base(q, pw) if args[0] == "base" else P.edit(q, pw, *(args[2:3] or ["1"]))
+    if args and args[0] == "batch":
+        qs = [int(x) for x in args[2:]] or list(P.diffs())
+        return P.base_batch(qs, pw) if args[1] == "base" else P.edit_batch(qs, pw, "1")
+    if not args and P._I.get("batch"):
+        todo = [q for q in P.diffs() if not (ep / f"q{q}_a.png").exists()]
+        P.base_batch(todo, pw)
+        need1 = [q for q, ds in P.diffs().items() if any(d.get("src", "1") == "1" and not P.patch_path(ep, q, d).exists() for d in ds)
+                 and (q, "1") not in P.PROGRAM_EDITS and (q, "1") not in P.RETRY]
+        P.edit_batch(need1, pw, "1")
     if args and args[0] == "retry":
         return P.retry(int(args[1]), args[2], pw)
     if not args or args[0] == "compose":

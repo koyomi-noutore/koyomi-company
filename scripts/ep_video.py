@@ -316,8 +316,8 @@ def render_question(q, t):
     st = T.Q_START[q] + T.CARD
     im = question_base(q).copy()
     if t < st + T.SOLVE:
-        h0 = st + T.HINT_AT
-        if h0 <= t < h0 + 7.0:
+        h0 = None if T.HINT_AT is None or not T.QUESTIONS[q]["hint"] else st + T.HINT_AT
+        if h0 is not None and h0 <= t < h0 + 7.0:
             draw_hint(im, q, t - h0)
         draw_band(im, q, t, "solve")
     else:

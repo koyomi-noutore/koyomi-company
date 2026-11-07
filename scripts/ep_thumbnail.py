@@ -73,7 +73,7 @@ def make(out_dir, fontp):
         d.text((TW - 28, y + 60), cfg["sub_text"], font=_font(fp, 58), fill=(255, 240, 200), anchor="rm")
     # 違いの1つに丸（右の絵）
     if cfg.get("circle_hint"):
-        dd = next(x for x in Q["diffs"] if x["id"] == cfg.get("circle_diff", Q["hint_diff"]))
+        dd = next(x for x in Q["diffs"] if x["id"] == cfg.get("circle_diff", Q.get("hint_diff") or 1))
         bx0, by0, bx1, by1 = dd.get("circle_b", dd.get("circle", dd["box"]))
         sx = lambda v: pw + (v - x0) * s - left
         sy = lambda v: (v - y0) * s

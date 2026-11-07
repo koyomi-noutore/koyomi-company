@@ -12,9 +12,9 @@ TOTAL = _T["total"]
 OPENING, RULE, UNCHIKU, ENDING = tuple(_T["opening"]), tuple(_T["rule"]), tuple(_T["unchiku"]), tuple(_T["ending"])
 Q_START = {int(k): v for k, v in _T["q_start"].items()}
 CARD, SOLVE, ANSWER = _T["card"], _T["solve"], _T["answer"]
-HINT_AT, TEN_AT = _T["hint_at"], _T["ten_at"]      # 出題の頭からの秒
+HINT_AT, TEN_AT = _T.get("hint_at"), _T["ten_at"]      # 出題の頭からの秒。hint_at が null ならヒントなし（2026-11-07 CEO決定で標準はヒントなし）
 ANS_FIRST, ANS_STEP = _T["ans_first"], _T["ans_step"]
-QUESTIONS = {q: {"scene": Q["scene"], "level": Q["level"], "go": Q["go"], "hint": Q["hint"],
+QUESTIONS = {q: {"scene": Q["scene"], "level": Q["level"], "go": Q["go"], "hint": Q.get("hint"),
                  "answers": [d["line"] for d in Q["diffs"]], "answers_intro": Q.get("answers_intro", "答えです。")}
              for q, Q in questions().items()}
 LEVEL_NUM = {"初級": "第{}問、初級。", "中級": "第{}問、中級。", "上級": "第{}問、上級。"}
@@ -36,7 +36,8 @@ def lines():
         # カードの読み上げは3秒を少し超えてもよい（「どうぞ」を出題開始の0.8秒後にしてある）
         L.append((f"q{q}_card", s, LEVEL_NUM[Q["level"]].format(q) + Q["scene"] + "です。", "normal", s + CARD + 0.8))
         L.append((f"q{q}_go", s + CARD + 0.8, Q["go"], "normal", s + CARD + 8))
-        L.append((f"q{q}_hint", s + CARD + HINT_AT, Q["hint"], "wink", s + CARD + HINT_AT + 7))
+        if HINT_AT is not None and Q["hint"]:
+            L.append((f"q{q}_hint", s + CARD + HINT_AT, Q["hint"], "wink", s + CARD + HINT_AT + 7))
         L.append((f"q{q}_ten", s + CARD + TEN_AT, "あと10秒です。", "normal", s + CARD + TEN_AT + 3))
         a = s + CARD + SOLVE
         L.append((f"q{q}_ans0", a, Q["answers_intro"], "smile", a + ANS_FIRST))
@@ -62,7 +63,7 @@ def export(path):
     data = {"total_sec": TOTAL, "fps": 30, "opening": OPENING, "rule": RULE, "unchiku": UNCHIKU, "ending": ENDING,
             "questions": {q: {"start": Q_START[q], "card": [Q_START[q], Q_START[q] + CARD],
                               "solve": [Q_START[q] + CARD, Q_START[q] + CARD + SOLVE],
-                              "hint_at": Q_START[q] + CARD + HINT_AT, "ten_sec_at": Q_START[q] + CARD + TEN_AT,
+                              "hint_at": None if HINT_AT is None else Q_START[q] + CARD + HINT_AT, "ten_sec_at": Q_START[q] + CARD + TEN_AT,
                               "answer": [Q_START[q] + CARD + SOLVE, Q_START[q] + CARD + SOLVE + ANSWER], **QUESTIONS[q]}
                           for q in QUESTIONS},
             "lines": [{"id": l[0], "start": l[1], "slot_end": l[4], "subtitle": l[2], "voice_text": VOICE_TEXT[l[0]], "face": l[3]}
