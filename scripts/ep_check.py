@@ -19,6 +19,10 @@ def probe(path):
     return json.loads(r.stdout)
 
 
+MIN_CENTER_DIST_PCT = 30  # 絵の幅に対する、違いの中心どうしの最小距離（%）
+MIN_GAP_PCT = 10          # 違いの範囲どうしの最小のすき間（%）
+
+
 def numeric(out_dir, work):
     out, work = Path(out_dir), Path(work)
     problems, info = [], {}
@@ -29,6 +33,21 @@ def numeric(out_dir, work):
             problems.append(f"第{Q['q']}問：違いが3つではない")
         if Q["outside_box_max_distance_px"] > 24:
             problems.append(f"第{Q['q']}問：範囲の外に差（範囲から{Q['outside_box_max_distance_px']}px）")
+        # 違いどうしの散らばり（2026-11-06 CEO指示）：中心どうしの距離が絵の幅の30%以上、かつ範囲どうしが重ならず離れていること
+        cx0, cy0, cx1, cy1 = Q["content_px"]
+        cw = cx1 - cx0
+        boxes = [(a["id"], a["box_px"]) for a in Q["answers"]]
+        for i in range(len(boxes)):
+            for j in range(i + 1, len(boxes)):
+                (ia, A), (ib, B) = boxes[i], boxes[j]
+                ca = ((A[0] + A[2]) / 2, (A[1] + A[3]) / 2)
+                cb = ((B[0] + B[2]) / 2, (B[1] + B[3]) / 2)
+                dist = ((ca[0] - cb[0]) ** 2 + (ca[1] - cb[1]) ** 2) ** 0.5 / cw * 100
+                gap_x = max(B[0] - A[2], A[0] - B[2], 0)
+                gap_y = max(B[1] - A[3], A[1] - B[3], 0)
+                gap = max(gap_x, gap_y) / cw * 100
+                if dist < MIN_CENTER_DIST_PCT or gap < MIN_GAP_PCT:
+                    problems.append(f"第{Q['q']}問 違い{ia}と{ib}：近すぎる（中心の距離 {dist:.0f}%・すき間 {gap:.0f}%。目安は中心{MIN_CENTER_DIST_PCT}%以上・すき間{MIN_GAP_PCT}%以上）")
         for a in Q["answers"]:
             p = a["object_screen_width_pct"]
             if not (lo - TOL <= p <= hi + TOL):
