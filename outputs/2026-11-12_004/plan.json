@@ -255,6 +255,10 @@
    "せんたくばさみ"
   ],
   [
+   "木のみかん",
+   "きのみかん"
+  ],
+  [
    "物干し場",
    "ものほしば"
   ],
@@ -265,6 +269,18 @@
   [
    "手ぬぐい",
    "てぬぐい"
+  ],
+  [
+   "米だわら",
+   "こめだわら"
+  ],
+  [
+   "くつした",
+   "くつした"
+  ],
+  [
+   "ひしゃく",
+   "ひしゃく"
   ],
   [
    "第1問",
@@ -317,6 +333,14 @@
   [
    "植木鉢",
    "うえきばち"
+  ],
+  [
+   "稲の束",
+   "いねのたば"
+  ],
+  [
+   "舞って",
+   "まって"
   ],
   [
    "初級",
@@ -455,6 +479,22 @@
    "いっそく"
   ],
   [
+   "かま",
+   "かま"
+  ],
+  [
+   "小鳥",
+   "ことり"
+  ],
+  [
+   "お魚",
+   "おさかな"
+  ],
+  [
+   "灯籠",
+   "とうろう"
+  ],
+  [
    "葉",
    "は"
   ],
@@ -503,9 +543,74 @@
     2088
    ],
    "retries": {},
-   "program_edits": {},
-   "diffs": [],
-   "hint_diff": null
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   },
+   "diffs": [
+    {
+     "id": 1,
+     "type": "物がない",
+     "label": "かまがない",
+     "line": "かまが、ありません。",
+     "box": [
+      1096,
+      1395,
+      1237,
+      1580
+     ],
+     "object_w": 115,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "物がない",
+     "label": "稲の束が1つへる",
+     "line": "稲の束が、ひとつへりました。",
+     "box": [
+      1442,
+      764,
+      1611,
+      1055
+     ],
+     "object_w": 150,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "米だわらが2つ",
+     "line": "米だわらが、ひとつ増えました。",
+     "box": [
+      50,
+      1516,
+      200,
+      1711
+     ],
+     "object_w": 130,
+     "src": "p",
+     "note": "プログラムで足した（scripts/program_diffs.py。plan.json の program_ops）"
+    }
+   ],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else: (a) the sickle lying on the wooden cart is gone, showing the plain cart; (b) the straw hat of the scarecrow is gone, showing its head; (c) the rightmost rice bundle on the drying rack is gone; (d) the small round window of the hut becomes a square window; (e) the thin smoke from the hut's chimney is gone.",
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "src": [
+       230,
+       1305,
+       555,
+       1755
+      ],
+      "dst": [
+       60,
+       1525
+      ],
+      "width": 130
+     }
+    ]
+   }
   },
   {
    "q": 2,
@@ -515,15 +620,99 @@
    "prompt": "Scene: a sunny drying area (monohoshiba) behind an old Japanese house in late autumn, with a long bamboo pole for laundry. Spread the listed objects over the whole picture at the positions given (upper left, upper right, middle, lower left, lower right), far apart from each other, never clustered. Draw every listed object SMALL, about half the size you would normally draw it. Objects: (upper left) a mandarin orange tree branch with a few oranges peeking over the fence; (upper right) a small bird sitting on the end of the bamboo pole; (middle) laundry on the bamboo pole: a white towel, a striped shirt and a pair of socks, held with clothespins; (lower left) a round bamboo basket on the ground; (lower right) a small wooden stool with a watering can next to it. No people.",
    "answers_intro": "答えです。",
    "content_box": [
-    0,
-    0,
-    1856,
-    2088
+    168,
+    188,
+    1690,
+    1900
    ],
    "retries": {},
-   "program_edits": {},
-   "diffs": [],
-   "hint_diff": null
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   },
+   "diffs": [
+    {
+     "id": 1,
+     "type": "物がない",
+     "label": "くつしたが片方ない",
+     "line": "くつしたが、片方ありません。",
+     "box": [
+      1132,
+      767,
+      1239,
+      1011
+     ],
+     "object_w": 91,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "増える",
+     "label": "小鳥が増える",
+     "line": "小鳥が、一羽増えました。",
+     "box": [
+      415,
+      442,
+      535,
+      524
+     ],
+     "object_w": 100,
+     "src": "p",
+     "note": "プログラムで足した（scripts/program_diffs.py。plan.json の program_ops）"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "かごが増える",
+     "line": "かごが、ひとつ増えました。",
+     "box": [
+      225,
+      1430,
+      355,
+      1507
+     ],
+     "object_w": 110,
+     "src": "p",
+     "note": "プログラムで足した（scripts/program_diffs.py。plan.json の program_ops）"
+    }
+   ],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else: (a) the small bird on the end of the bamboo pole is gone; (b) the left sock on the bamboo pole is gone (only the right sock remains); (c) on the orange tree branch at the upper left, add one more orange of the same size; (d) the small wooden stool becomes a round-topped stool; (e) the watering can now has its spout pointing to the left.",
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "src": [
+       1350,
+       626,
+       1498,
+       716
+      ],
+      "dst": [
+       425,
+       452
+      ],
+      "width": 100,
+      "thr": 30,
+      "mask": "hull"
+     },
+     {
+      "op": "copy",
+      "src": [
+       460,
+       1385,
+       795,
+       1580
+      ],
+      "dst": [
+       235,
+       1440
+      ],
+      "width": 110,
+      "thr": 28,
+      "mask": "hull"
+     }
+    ]
+   }
   },
   {
    "q": 3,
@@ -533,15 +722,99 @@
    "prompt": "Scene: inside an old Japanese penny-candy shop (dagashiya) in late autumn, seen from a little distance, warm light, shelves and glass jars. Spread the listed objects over the whole picture at the positions given (upper left, upper right, middle, lower left, lower right), far apart from each other, never clustered. Draw every listed object SMALL, about half the size you would normally draw it. Objects: (upper left) a paper pinwheel (kazaguruma) stuck in a holder; (upper right) a round wall clock without numbers; (middle) a row of four glass candy jars with round lids on the counter; (lower left) a small wooden box of mandarin oranges; (lower right) a red toy spinning top (koma) and a small ball on a low shelf. No text on anything. No people.",
    "answers_intro": "答えです。",
    "content_box": [
-    0,
-    0,
-    1856,
-    2088
+    157,
+    175,
+    1701,
+    1912
    ],
    "retries": {},
-   "program_edits": {},
-   "diffs": [],
-   "hint_diff": null
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   },
+   "diffs": [
+    {
+     "id": 1,
+     "type": "本数",
+     "label": "みかんが1つへる",
+     "line": "みかんが、ひとつへりました。",
+     "box": [
+      358,
+      1399,
+      471,
+      1491
+     ],
+     "object_w": 90,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "増える",
+     "label": "こまが増える",
+     "line": "こまが、ひとつ増えました。",
+     "box": [
+      1550,
+      1195,
+      1655,
+      1293
+     ],
+     "object_w": 85,
+     "src": "p",
+     "note": "プログラムで足した（scripts/program_diffs.py。plan.json の program_ops）"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "まりが増える",
+     "line": "まりが、ひとつ増えました。",
+     "box": [
+      890,
+      1536,
+      995,
+      1630
+     ],
+     "object_w": 85,
+     "src": "p",
+     "note": "プログラムで足した（scripts/program_diffs.py。plan.json の program_ops）"
+    }
+   ],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else: (a) the red toy spinning top on the low shelf is gone; (b) on the round wall clock, the hands point to a different time (the long hand points down); (c) the pinwheel has one blade fewer; (d) in the wooden box of mandarin oranges, one orange on top is gone; (e) the small ball on the shelf has blue and white stripes instead of its pattern.",
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "src": [
+       1300,
+       1460,
+       1460,
+       1612
+      ],
+      "dst": [
+       1560,
+       1205
+      ],
+      "width": 85,
+      "thr": 45,
+      "mask": "outline"
+     },
+     {
+      "op": "copy",
+      "src": [
+       1462,
+       1450,
+       1622,
+       1612
+      ],
+      "dst": [
+       900,
+       1545
+      ],
+      "width": 85,
+      "thr": 45,
+      "mask": "outline"
+     }
+    ]
+   }
   },
   {
    "q": 4,
@@ -557,9 +830,95 @@
     2088
    ],
    "retries": {},
-   "program_edits": {},
-   "diffs": [],
-   "hint_diff": null
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   },
+   "diffs": [
+    {
+     "id": 1,
+     "type": "物がない",
+     "label": "ひしゃくがない",
+     "line": "ひしゃくが、ありません。",
+     "box": [
+      388,
+      1392,
+      507,
+      1543
+     ],
+     "object_w": 92,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "増える",
+     "label": "魚が1匹増える",
+     "line": "お魚が、一匹増えました。",
+     "box": [
+      1150,
+      1092,
+      1242,
+      1224
+     ],
+     "object_w": 72,
+     "src": "p",
+     "note": "プログラムで足した（scripts/program_diffs.py。plan.json の program_ops）"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "舞う葉が増える",
+     "line": "舞っている葉が、一枚増えました。",
+     "box": [
+      855,
+      471,
+      957,
+      535
+     ],
+     "object_w": 85,
+     "src": "p",
+     "note": "プログラムで足した（scripts/program_diffs.py。plan.json の program_ops）。葉は第5問の絵から切り抜いた"
+    }
+   ],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else: (a) of the pair of rubber boots by the door, the right boot is gone; (b) the wooden ladle in the blue bucket is gone; (c) on the fish display, the rightmost fish is gone, showing the ice; (d) the round wall mirror becomes a square mirror of the same size; (e) the white paper tag stuck in the ice is gone.",
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "from_q": 5,
+      "src": [
+       55,
+       418,
+       180,
+       486
+      ],
+      "dst": [
+       860,
+       470
+      ],
+      "width": 85,
+      "rot": -15,
+      "thr": 30,
+      "mask": "hull"
+     },
+     {
+      "op": "copy",
+      "src": [
+       1100,
+       1168,
+       1172,
+       1278
+      ],
+      "dst": [
+       1160,
+       1102
+      ],
+      "width": 72,
+      "mask": "hull",
+      "thr": 35
+     }
+    ]
+   }
   },
   {
    "q": 5,
@@ -575,9 +934,73 @@
     2088
    ],
    "retries": {},
-   "program_edits": {},
-   "diffs": [],
-   "hint_diff": null
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   },
+   "diffs": [
+    {
+     "id": 1,
+     "type": "物がない",
+     "label": "灯籠のてっぺんがない",
+     "line": "灯籠のてっぺんが、ありません。",
+     "box": [
+      280,
+      1004,
+      352,
+      1074
+     ],
+     "object_w": 55,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "物がない",
+     "label": "木のみかんが1つへる",
+     "line": "木のみかんが、ひとつへりました。",
+     "box": [
+      1370,
+      955,
+      1450,
+      1033
+     ],
+     "object_w": 60,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "葉が1枚緑",
+     "line": "葉が、一枚緑色になりました。",
+     "box": [
+      39,
+      377,
+      143,
+      440
+     ],
+     "object_w": 78,
+     "src": "p",
+     "note": "プログラムで色を変えた（scripts/program_diffs.py）"
+    }
+   ],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else: (a) the paper strip hanging from the wind chime becomes light blue; (b) the bamboo ladder leaning on the tree has one rung fewer; (c) in the basket of picked oranges on the bench, one orange on top is gone; (d) the small knob on top of the stone lantern is gone; (e) one of the oranges on the tree, near the lower right of the tree, is gone.",
+   "program_ops": {
+    "p": [
+     {
+      "op": "recolor",
+      "box": [
+       42,
+       372,
+       142,
+       432
+      ],
+      "hue": 60,
+      "sat": 0.8,
+      "thr": 30,
+      "mask": "hull"
+     }
+    ]
+   }
   }
  ],
  "thumbnail": {
