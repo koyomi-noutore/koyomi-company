@@ -1,0 +1,622 @@
+{
+ "episode": "004",
+ "season": "秋",
+ "topics": [
+  "新米",
+  "みかん"
+ ],
+ "note": "第4回の中身。make_episode.py がこれを読んで動画を作る。",
+ "youtube": {
+  "title": "【間違い探し】3つ見つけられる？新米とみかんの秋 全5問｜初級〜上級・1問90秒【シニアの脳トレ】",
+  "description_file": "description.md",
+  "title_note": "第1〜3回と同じ型。題材だけを変えた。",
+  "publish_plan": "2026-11-12（木）6:00 JST、ショート12:00（knowledge/schedule.md）"
+ },
+ "screens": {
+  "opening_title": "秋の間違い探し　5問",
+  "opening_sub": "こよみ先生のまいにち脳トレ",
+  "unchiku_header": "こよみ先生の 秋の小話",
+  "unchiku_slides": [
+   {
+    "until": 4,
+    "texts": [
+     [
+      "秋の小話",
+      700,
+      420,
+      170,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ]
+    ]
+   },
+   {
+    "until": 15,
+    "texts": [
+     [
+      "11月23日",
+      700,
+      330,
+      120,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ],
+     [
+      "勤労感謝の日",
+      700,
+      520,
+      150,
+      [
+       59,
+       47,
+       37
+      ],
+      8
+     ]
+    ]
+   },
+   {
+    "until": 23,
+    "texts": [
+     [
+      "新嘗祭",
+      700,
+      380,
+      210,
+      [
+       180,
+       70,
+       40
+      ],
+      8
+     ],
+     [
+      "にいなめさい",
+      700,
+      580,
+      80,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 30,
+    "texts": [
+     [
+      "新しいお米を供えて",
+      700,
+      360,
+      100,
+      [
+       59,
+       47,
+       37
+      ],
+      4
+     ],
+     [
+      "収穫に感謝",
+      700,
+      540,
+      130,
+      [
+       200,
+       150,
+       20
+      ],
+      6
+     ]
+    ]
+   }
+  ],
+  "ending_titles": [
+   [
+    "15個",
+    "秋の名探偵"
+   ],
+   [
+    "11〜14個",
+    "みかん名人"
+   ],
+   [
+    "6〜10個",
+    "新米さん"
+   ],
+   [
+    "0〜5個",
+    "もみさん"
+   ]
+  ],
+  "ending_note": "もみさんは、これから、おいしいお米に育ちます",
+  "ending_next": "次回も 秋の絵で 5問"
+ },
+ "timeline": {
+  "total": 615.0,
+  "opening": [
+   0.0,
+   15.0
+  ],
+  "rule": [
+   15.0,
+   25.0
+  ],
+  "q_start": {
+   "1": 25.0,
+   "2": 133.0,
+   "3": 241.0,
+   "4": 379.0,
+   "5": 487.0
+  },
+  "unchiku": [
+   349.0,
+   379.0
+  ],
+  "ending": [
+   595.0,
+   615.0
+  ],
+  "card": 3.0,
+  "solve": 90.0,
+  "answer": 15.0,
+  "hint_at": null,
+  "ten_at": 80.0,
+  "ans_first": 1.6,
+  "ans_step": 4.3
+ },
+ "lines": {
+  "opening": [
+   {
+    "id": "op",
+    "at": 0.0,
+    "text": "みなさん、こんにちは。こよみ先生です。新米と、みかんがおいしい季節になりましたね。今日は、秋の間違い探しを5問、いっしょに楽しみましょう。",
+    "face": "smile",
+    "until": 15.0
+   }
+  ],
+  "rule": [
+   {
+    "id": "rule",
+    "at": 0.0,
+    "text": "左と右の絵をくらべます。90秒で、右の絵の違いを3つ探してください。",
+    "face": "normal",
+    "until": 10.0
+   }
+  ],
+  "unchiku": [
+   {
+    "id": "u1",
+    "at": 0.0,
+    "text": "ここで、ひと休み。秋の小話です。",
+    "face": "smile",
+    "until": 4.0
+   },
+   {
+    "id": "u2",
+    "at": 4.0,
+    "text": "11月23日の勤労感謝の日は、もとは「新嘗祭」という日でした。",
+    "face": "normal",
+    "until": 15.0
+   },
+   {
+    "id": "u3",
+    "at": 15.0,
+    "text": "その年にとれた新しいお米を神さまに供えて、収穫に感謝するお祭りです。",
+    "face": "surprise",
+    "until": 23.0
+   },
+   {
+    "id": "u4",
+    "at": 23.0,
+    "text": "昭和23年から、勤労感謝の日という祝日になりました。",
+    "face": "smile",
+    "until": 30.0
+   }
+  ],
+  "ending": [
+   {
+    "id": "e1",
+    "at": 0.0,
+    "text": "これで5問、おしまいです。おつかれさまでした。",
+    "face": "yay",
+    "until": 4.5
+   },
+   {
+    "id": "e2",
+    "at": 4.5,
+    "text": "15個の違い、いくつ見つかりましたか。画面で、今日の称号を見てくださいね。",
+    "face": "smile",
+    "until": 11.5
+   },
+   {
+    "id": "e3",
+    "at": 11.5,
+    "text": "次回も秋の絵で5問です。チャンネル登録をして、また来てください。",
+    "face": "wink",
+    "until": 20.0
+   }
+  ]
+ },
+ "readings": [
+  [
+   "洗濯ばさみ",
+   "せんたくばさみ"
+  ],
+  [
+   "物干し場",
+   "ものほしば"
+  ],
+  [
+   "駄菓子屋",
+   "だがしや"
+  ],
+  [
+   "手ぬぐい",
+   "てぬぐい"
+  ],
+  [
+   "第1問",
+   "だいいちもん"
+  ],
+  [
+   "第2問",
+   "だいにもん"
+  ],
+  [
+   "第3問",
+   "だいさんもん"
+  ],
+  [
+   "第4問",
+   "だいよんもん"
+  ],
+  [
+   "第5問",
+   "だいごもん"
+  ],
+  [
+   "90秒",
+   "きゅうじゅうびょう"
+  ],
+  [
+   "10秒",
+   "じゅうびょう"
+  ],
+  [
+   "15個",
+   "じゅうごこ"
+  ],
+  [
+   "自転車",
+   "じてんしゃ"
+  ],
+  [
+   "落ち葉",
+   "おちば"
+  ],
+  [
+   "田んぼ",
+   "たんぼ"
+  ],
+  [
+   "竹ざお",
+   "たけざお"
+  ],
+  [
+   "植木鉢",
+   "うえきばち"
+  ],
+  [
+   "初級",
+   "しょきゅう"
+  ],
+  [
+   "中級",
+   "ちゅうきゅう"
+  ],
+  [
+   "上級",
+   "じょうきゅう"
+  ],
+  [
+   "小話",
+   "こばなし"
+  ],
+  [
+   "称号",
+   "しょうごう"
+  ],
+  [
+   "今日",
+   "きょう"
+  ],
+  [
+   "手前",
+   "てまえ"
+  ],
+  [
+   "後半",
+   "こうはん"
+  ],
+  [
+   "模様",
+   "もよう"
+  ],
+  [
+   "5問",
+   "ごもん"
+  ],
+  [
+   "3つ",
+   "みっつ"
+  ],
+  [
+   "時計",
+   "とけい"
+  ],
+  [
+   "屋根",
+   "やね"
+  ],
+  [
+   "一輪",
+   "いちりん"
+  ],
+  [
+   "一羽",
+   "いちわ"
+  ],
+  [
+   "一枚",
+   "いちまい"
+  ],
+  [
+   "茶色",
+   "ちゃいろ"
+  ],
+  [
+   "一本",
+   "いっぽん"
+  ],
+  [
+   "一匹",
+   "いっぴき"
+  ],
+  [
+   "一つ",
+   "ひとつ"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "帽子",
+   "ぼうし"
+  ],
+  [
+   "水玉",
+   "みずたま"
+  ],
+  [
+   "緑色",
+   "みどりいろ"
+  ],
+  [
+   "魚屋",
+   "さかなや"
+  ],
+  [
+   "庭先",
+   "にわさき"
+  ],
+  [
+   "新米",
+   "しんまい"
+  ],
+  [
+   "一束",
+   "ひとたば"
+  ],
+  [
+   "一個",
+   "いっこ"
+  ],
+  [
+   "一尾",
+   "いちび"
+  ],
+  [
+   "一匹",
+   "いっぴき"
+  ],
+  [
+   "風車",
+   "かざぐるま"
+  ],
+  [
+   "縁台",
+   "えんだい"
+  ],
+  [
+   "一足",
+   "いっそく"
+  ],
+  [
+   "葉",
+   "は"
+  ],
+  [
+   "傘",
+   "かさ"
+  ],
+  [
+   "稲",
+   "いね"
+  ]
+ ],
+ "voice_override": {
+  "u2": "じゅういちがつにじゅうさんにちの、きんろうかんしゃのひは、もとは、にいなめさいという日でした。",
+  "u3": "その年にとれた新しいお米を、神さまに供えて、しゅうかくに感謝するお祭りです。",
+  "u4": "しょうわにじゅうさんねんから、きんろうかんしゃのひという、しゅくじつになりました。"
+ },
+ "voice": {
+  "provider": "fish",
+  "reference_id": "63819275ce38440ea245ca988abf976e",
+  "model": "s1",
+  "speed": 0.88,
+  "credit": "音声：Fish Audio（AIで合成した音声です）"
+ },
+ "images": {
+  "model": "gemini-3-pro-image",
+  "size": "2K",
+  "aspect": "4:5",
+  "style": "A warm Japanese picture-book illustration in soft watercolor with gentle colored-pencil outlines, like a cozy picture book for all ages, drawn with clear, crisp details. Late-autumn palette: mandarin orange, golden rice straw, warm browns, soft blue sky and muted greens. Natural, hand-drawn, slightly rounded shapes; not geometric, not flat vector, not photorealistic. PORTRAIT-ISH composition, slightly taller than wide (about 8:9); the scene is arranged vertically, with a near foreground, a middle ground and a background stacked from bottom to top. Keep the top 10% of the picture simple (sky, eaves or leaves only) and the bottom 20% simple (plain floor, ground or pavement only): put every main object listed below in the middle part of the picture. The painting fills the entire canvas edge to edge: no white border, no blank paper margin on any side. No people. Absolutely no text, letters, numbers, logos or symbols anywhere, including on signs, curtains, boxes and lanterns. Draw the scene from a little distance, so every listed object is SMALL in the picture, with plenty of space between objects. The main objects are clearly drawn, separated from each other with a little space around each, and fully visible (not cut off by the picture edge and not hidden behind other objects).\n",
+  "keep_alt": " Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text.",
+  "keep_remove": " Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object.",
+  "batch": true
+ },
+ "questions": [
+  {
+   "q": 1,
+   "scene": "田んぼ",
+   "level": "初級",
+   "go": "さあ、どうぞ。",
+   "prompt": "Scene: a harvested rice field in late autumn in the Japanese countryside, with bundles of rice drying on a wooden rack (hazakake), soft blue sky and low hills. Spread the listed objects over the whole picture at the positions given (upper left, upper right, middle, lower left, lower right), far apart from each other, never clustered. Draw every listed object SMALL, about half the size you would normally draw it. Objects: (upper left) a scarecrow with a straw hat; (upper right) a small wooden hut with a round window; (middle) the long wooden drying rack with many golden rice bundles hanging; (lower left) a straw rice bag (komedawara) standing on the ground; (lower right) a wooden cart with one wheel visible and a sickle lying on it.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {},
+   "diffs": [],
+   "hint_diff": null
+  },
+  {
+   "q": 2,
+   "scene": "物干し場",
+   "level": "初級",
+   "go": "さあ、どうぞ。",
+   "prompt": "Scene: a sunny drying area (monohoshiba) behind an old Japanese house in late autumn, with a long bamboo pole for laundry. Spread the listed objects over the whole picture at the positions given (upper left, upper right, middle, lower left, lower right), far apart from each other, never clustered. Draw every listed object SMALL, about half the size you would normally draw it. Objects: (upper left) a mandarin orange tree branch with a few oranges peeking over the fence; (upper right) a small bird sitting on the end of the bamboo pole; (middle) laundry on the bamboo pole: a white towel, a striped shirt and a pair of socks, held with clothespins; (lower left) a round bamboo basket on the ground; (lower right) a small wooden stool with a watering can next to it. No people.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {},
+   "diffs": [],
+   "hint_diff": null
+  },
+  {
+   "q": 3,
+   "scene": "駄菓子屋",
+   "level": "中級",
+   "go": "少しむずかしくなります。どうぞ。",
+   "prompt": "Scene: inside an old Japanese penny-candy shop (dagashiya) in late autumn, seen from a little distance, warm light, shelves and glass jars. Spread the listed objects over the whole picture at the positions given (upper left, upper right, middle, lower left, lower right), far apart from each other, never clustered. Draw every listed object SMALL, about half the size you would normally draw it. Objects: (upper left) a paper pinwheel (kazaguruma) stuck in a holder; (upper right) a round wall clock without numbers; (middle) a row of four glass candy jars with round lids on the counter; (lower left) a small wooden box of mandarin oranges; (lower right) a red toy spinning top (koma) and a small ball on a low shelf. No text on anything. No people.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {},
+   "diffs": [],
+   "hint_diff": null
+  },
+  {
+   "q": 4,
+   "scene": "魚屋",
+   "level": "中級",
+   "go": "後半です。どうぞ。",
+   "prompt": "Scene: the front of a small old Japanese fish shop (sakanaya) in late autumn, seen from across the street, with a plain blue awning without letters. Spread the listed objects over the whole picture at the positions given (upper left, upper right, middle, lower left, lower right), far apart from each other, never clustered. Draw every listed object SMALL, about half the size you would normally draw it. Objects: (upper left) a hanging round paper lantern, plain without letters; (upper right) a small round wall mirror; (middle) a tilted display table with ice and a few whole fish in rows; (lower left) a blue plastic bucket with a ladle; (lower right) a pair of rubber boots standing by the door. No text, no prices, no people.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {},
+   "diffs": [],
+   "hint_diff": null
+  },
+  {
+   "q": 5,
+   "scene": "庭先",
+   "level": "上級",
+   "go": "最後の問題です。じっくりどうぞ。",
+   "prompt": "Scene: a small Japanese front garden (niwasaki) in late autumn with a mandarin orange tree full of small oranges, a wooden fence and a little stone path. Many small details. Spread the listed objects over the whole picture at the positions given (upper left, upper right, middle, lower left, lower right), far apart from each other, never clustered. Draw every listed object SMALL, about half the size you would normally draw it. Objects: (upper left) a small bird on a fence post; (upper right) a wind chime hanging from the eaves; (middle) the mandarin tree with many small oranges and a bamboo ladder leaning on it; (lower left) a small stone lantern; (lower right) a wooden bench with a small basket of picked oranges on it.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {},
+   "diffs": [],
+   "hint_diff": null
+  }
+ ],
+ "thumbnail": {
+  "question": 3,
+  "big_text": "秋の間違いさがし",
+  "highlight": "間違いさがし",
+  "highlight_color": [
+   255,
+   214,
+   0
+  ],
+  "big_color": [
+   255,
+   255,
+   255
+  ],
+  "band_color": [
+   25,
+   35,
+   70
+  ],
+  "big_size": 132,
+  "sub_text": "3つ見つけられる？全5問",
+  "badges": [
+   [
+    "初級〜上級",
+    [
+     176,
+     62,
+     52
+    ]
+   ]
+  ],
+  "circle_hint": false,
+  "note": "第1回と同じ型（変えた所なし）。左右に同じ絵・上に濃紺の帯で「秋の間違いさがし」・下に難易度と問いかけ。こよみ先生は入れない"
+ },
+ "short": {
+  "question": 3,
+  "answer_gap": 3.5,
+  "note": "knowledge/shorts.md。違いの散らばりを満たす中級の問"
+ }
+}
