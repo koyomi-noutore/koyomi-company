@@ -65,9 +65,10 @@ def set_thumbnail(video_id, path, tok):
         sys.exit(f"サムネの設定に失敗: HTTP {e.code} {e.read()[:400]!r}")
 
 
-def upload(folder, thumbnail=None):
+def upload(folder, thumbnail=None, short=False):
+    """short=True はショート（<回>/short/）。ショートはサムネを設定しない（ショートの画面ではサムネが出ないため）。"""
     folder = Path(folder)
-    if thumbnail is None or not Path(thumbnail).exists():
+    if not short and (thumbnail is None or not Path(thumbnail).exists()):
         sys.exit("サムネがありません（サムネなしでアップロードしない：.claude/agents/production.md）")
     video = folder / "video.mp4"
     title, desc, tags = read_metadata(folder / "description.md")
@@ -106,10 +107,10 @@ def upload(folder, thumbnail=None):
                 f.seek(sent)
             print(f"  {sent * 100 // size}%", flush=True)
     vid = result["id"]
-    th = set_thumbnail(vid, thumbnail, access_token())
+    th = set_thumbnail(vid, thumbnail, access_token()) if not short else {}
     rec = {"video_id": vid, "url": f"https://youtu.be/{vid}", "studio": f"https://studio.youtube.com/video/{vid}/edit",
            "privacy": result["status"]["privacyStatus"], "title": result["snippet"]["title"],
-           "thumbnail": bool(th.get("items"))}
+           "thumbnail": bool(th.get("items")), "short": short}
     (folder / "upload.json").write_text(json.dumps(rec, ensure_ascii=False, indent=1), encoding="utf-8")
     print(json.dumps(rec, ensure_ascii=False))
 
