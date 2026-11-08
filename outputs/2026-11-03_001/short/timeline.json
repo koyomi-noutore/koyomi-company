@@ -26,7 +26,7 @@
   {
    "id": "s_intro",
    "start": 0.3,
-   "dur": 4.6,
+   "dur": 4.59,
    "slot": 24.7,
    "fits": true,
    "subtitle": "上と下の絵で、違いが3つあります。見つけられますか。",
@@ -44,7 +44,7 @@
   {
    "id": "s_ans1",
    "start": 26.6,
-   "dur": 2.56,
+   "dur": 2.48,
    "slot": 3.2,
    "fits": true,
    "subtitle": "壁の道具が、ひとつへっています。",
@@ -53,7 +53,7 @@
   {
    "id": "s_ans2",
    "start": 29.8,
-   "dur": 2.92,
+   "dur": 2.76,
    "slot": 3.2,
    "fits": true,
    "subtitle": "やかんの口が、反対を向いています。",
@@ -62,7 +62,7 @@
   {
    "id": "s_ans3",
    "start": 33.0,
-   "dur": 2.63,
+   "dur": 2.53,
    "slot": 4.0,
    "fits": true,
    "subtitle": "湯のみの模様が、変わっていますね。",
@@ -71,7 +71,7 @@
   {
    "id": "s_end",
    "start": 37.0,
-   "dur": 4.4,
+   "dur": 4.18,
    "slot": 5.6,
    "fits": true,
    "subtitle": "続きは、長い動画で。ほかにも問題がありますよ。",
