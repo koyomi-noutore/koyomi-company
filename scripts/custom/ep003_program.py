@@ -69,3 +69,4 @@ fix &= ~ndimage.binary_dilation((L <= 165) | red, iterations=6)       # 本物�
 c2 = np.where(fix[..., None], paper, c)
 e.paste(Image.fromarray(c2.astype(np.uint8)), R[:2])
 e.save(w / "edit_4_1c.png")
+
