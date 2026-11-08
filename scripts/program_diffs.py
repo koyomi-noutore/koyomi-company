@@ -6,6 +6,7 @@ program_ops の書き方：{"<版>": [操作, ...]}。版の絵は元の絵（q<
   {"op": "copy", "src": [x0,y0,x1,y1], "dst": [x, y], "width": 目標の幅px, "rot": 角度, "flip": true/false}
       src の中の物を、まわりの地との色の差で切り抜き、width に縮め（拡げ）て dst（左上）に貼る ＝「増える」
       "from_q": n で、同じ回の別の問の元の絵から切り抜く（同じ絵柄の物を足すとき）
+      "poly": [[x,y], ...] で、物を手で囲んだ多角形（元の絵の座標）で切り抜く（自動の切り抜きで地が付いてくるとき）
   {"op": "recolor", "box": [x0,y0,x1,y1], "hue": 色相（0〜255）, "sat": 彩度の倍率, "val": 明るさの倍率}
       box の中の物（地と色が違う所）の色を変える ＝「色」（上級だけ）
   {"op": "flip", "box": [x0,y0,x1,y1]}
@@ -104,7 +105,13 @@ def apply(im, op, work=None):
     if op["op"] == "copy":
         src_im = Image.open(Path(work) / f"q{op['from_q']}_a.png").convert("RGB") if op.get("from_q") else im
         crop = src_im.crop(tuple(op["src"]))
-        m, _ = obj_mask(crop, op.get("thr", THR), op.get("mask"))
+        if op.get("poly"):      # 物のまわりを手で囲んだ多角形（元の絵の座標）。地に模様があって自動の切り抜きができないとき
+            from PIL import ImageDraw
+            pm = Image.new("L", crop.size, 0)
+            ImageDraw.Draw(pm).polygon([(x - op["src"][0], y - op["src"][1]) for x, y in op["poly"]], fill=255)
+            m = np.asarray(pm) > 0
+        else:
+            m, _ = obj_mask(crop, op.get("thr", THR), op.get("mask"))
         ys, xs = np.nonzero(m)
         crop = crop.crop((xs.min(), ys.min(), xs.max() + 1, ys.max() + 1))
         m = m[ys.min():ys.max() + 1, xs.min():xs.max() + 1]
