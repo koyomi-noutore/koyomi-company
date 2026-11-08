@@ -86,6 +86,32 @@ def voice(ep, work):
 
 
 # ---------- 音 ----------
+VOICE_RMS_DB = -16.0   # セリフごとにそろえる声の大きさ（話している所の平均）
+
+
+def voice_stats(work):
+    """声のファイルごとの、割れ（最大振幅に近いサンプル数）と大きさ。第1回ショートで1セリフだけ割れて大きかった反省（2026-11-08）。"""
+    import ep_audio as A
+    vd = Path(work) / "short"
+    out = {}
+    for v in json.loads((vd / "voice.json").read_text(encoding="utf-8")):
+        x = A.read_wav(vd / f"voice_{v['id']}.wav")
+        sp = x[np.abs(x) > 0.01]
+        out[v["id"]] = {"clipped": int((np.abs(x) >= 0.976).sum()), "rms_db": round(float(20 * np.log10(np.sqrt(np.mean(sp ** 2)) + 1e-12)), 1)}
+    return out
+
+
+def remux(ep, work):
+    """絵はそのままで、音だけを作り直した mix.wav に入れ替える（動画の映像は再エンコードしない）。"""
+    out = Path(ep) / "short"
+    tmp = out / "video_newaudio.mp4"
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(out / "video.mp4"), "-i", str(Path(work) / "short" / "mix.wav"),
+                    "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
+                    "-movflags", "+faststart", "-shortest", str(tmp)], check=True)
+    tmp.replace(out / "video.mp4")
+    return out / "video.mp4"
+
+
 def audio(ep, work):
     import ep_audio as A
     vd = Path(work) / "short"
@@ -97,8 +123,10 @@ def audio(ep, work):
         s = int(at * SR); e = min(n, s + len(x)); track[s:e] += x[:e - s]
     vo = np.zeros(n)
     for v in vs:
-        put(vo, A.read_wav(vd / f"voice_{v['id']}.wav"), v["start"])
-    vo *= 0.6 / np.abs(vo).max()
+        x = A.read_wav(vd / f"voice_{v['id']}.wav")
+        x = x * (10 ** (VOICE_RMS_DB / 20) / (np.sqrt(np.mean(x[np.abs(x) > 0.01] ** 2)) + 1e-9))   # セリフごとに声の大きさをそろえる
+        put(vo, np.clip(x, -0.9, 0.9), v["start"])
+    vo *= 0.6 / max(np.abs(vo).max(), 1e-9)
     sfx = np.zeros(n)
     c = cfg()
     put(sfx, A.chime((79, 84, 88), 0.18), 0.0)
@@ -306,8 +334,15 @@ def check(ep, work):
     over = [x["id"] for x in vs if not x["fits"]]
     if over:
         problems.append(f"声が枠に収まらない：{over}")
+    st = voice_stats(work)
+    clipped = [k for k, v in st.items() if v["clipped"] > 0]
+    if clipped:
+        problems.append(f"声が割れている（元の声のファイル）：{clipped}")
+    lv = [v["rms_db"] for v in st.values()]
+    if max(lv) - min(lv) > 6:
+        problems.append(f"セリフごとの声の大きさの差が6dBを超える（元の声のファイル）：{st}")
     tl = json.loads((out / "timeline.json").read_text(encoding="utf-8"))
-    res = {"duration": round(dur, 2), "size": [v["width"], v["height"]], "question": tl["question"], "problems": problems}
+    res = {"voice": st, "duration": round(dur, 2), "size": [v["width"], v["height"]], "question": tl["question"], "problems": problems}
     (out / "check.json").write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
     return res
 
