@@ -208,14 +208,17 @@ def main():
         log(f"ショートの声：{len(res)}セリフ、枠を超えたもの {[r['id'] for r in res if not r['fits']] or 'なし'}")
         S.audio(ep, work)
         log(f"ショートの動画：{S.video(ep, work, font)}")
-        S.description(ep)
+        if (ep / "upload.json").exists():   # 説明欄には長尺のURLが要る。まだなら short-upload のときに書く
+            S.description(ep)
         r = S.check(ep, work)
         log(f"ショートの数値チェック：{r['duration']}秒 {r['size']} {'問題なし' if not r['problems'] else r['problems']}")
         log(f"一覧画像：{S.contact_sheet(ep, work, font, work / 'short' / 'sheet.png')}")
     elif step == "short-upload":
         if not (ep / "short" / "audit_passed").exists():
             raise SystemExit("ショートの監査の合格（<回>/short/audit_passed）がありません")
+        import ep_short as S
         import youtube_upload as U
+        S.description(ep)
         U.upload(ep / "short", short=True)
     else:
         raise SystemExit(__doc__)

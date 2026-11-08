@@ -191,8 +191,8 @@ def render(t):
     # 上の帯
     d.rectangle((0, 0, W, BAND_H), fill=(52, 40, 30))
     sub = current_sub(t) if t < CTX["end_at"] else None
-    if sub and not (t < c["solve"] and sub == CTX["voice"][0]["subtitle"] and t > 3.5):
-        ls = wrap2(sub, 16)
+    if sub:
+        ls = wrap2(sub, 17)
         size = 64 if len(ls) == 1 else 58
         for i, l in enumerate(ls):
             y = BAND_H / 2 + (i - (len(ls) - 1) / 2) * (size + 14)

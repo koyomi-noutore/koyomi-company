@@ -1,0 +1,900 @@
+{
+ "episode": "003",
+ "season": "秋",
+ "topics": [
+  "さざんか",
+  "りんご"
+ ],
+ "note": "第3回の中身。make_episode.py がこれを読んで動画を作る。台本の正本は plan.md、ここはその機械用の写し。",
+ "youtube": {
+  "title": "【間違い探し】3つ見つけられる？さざんかとりんごの秋 全5問｜初級〜上級・1問90秒【シニアの脳トレ】",
+  "description_file": "description.md",
+  "title_note": "第1・2回と同じ型（thumbnail-title.md 段階1の推奨A）。題材だけを変えた。",
+  "publish_plan": "2026-11-11（水）7:00 JST（knowledge/schedule.md）"
+ },
+ "screens": {
+  "opening_title": "秋の間違い探し　5問",
+  "opening_sub": "こよみ先生のまいにち脳トレ",
+  "unchiku_header": "こよみ先生の 秋の小話",
+  "unchiku_slides": [
+   {
+    "until": 4,
+    "texts": [
+     [
+      "秋の小話",
+      700,
+      420,
+      170,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ]
+    ]
+   },
+   {
+    "until": 15,
+    "texts": [
+     [
+      "山茶始開",
+      700,
+      380,
+      200,
+      [
+       59,
+       47,
+       37
+      ],
+      8
+     ],
+     [
+      "つばきはじめてひらく",
+      700,
+      580,
+      80,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 23,
+    "texts": [
+     [
+      "咲くのは",
+      700,
+      330,
+      90,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ],
+     [
+      "さざんか",
+      700,
+      500,
+      200,
+      [
+       200,
+       80,
+       110
+      ],
+      8
+     ]
+    ]
+   },
+   {
+    "until": 30,
+    "texts": [
+     [
+      "山茶＝つばき",
+      700,
+      330,
+      130,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ],
+     [
+      "さんさか → さざんか",
+      700,
+      560,
+      90,
+      [
+       200,
+       80,
+       110
+      ],
+      0
+     ]
+    ]
+   }
+  ],
+  "ending_titles": [
+   [
+    "15個",
+    "秋の名探偵"
+   ],
+   [
+    "11〜14個",
+    "りんご名人"
+   ],
+   [
+    "6〜10個",
+    "さざんか さん"
+   ],
+   [
+    "0〜5個",
+    "こりんごさん"
+   ]
+  ],
+  "ending_note": "こりんごさんは、これから、ぐんぐん育ちます",
+  "ending_next": "次回も 秋の絵で 5問"
+ },
+ "timeline": {
+  "total": 615.0,
+  "opening": [
+   0.0,
+   15.0
+  ],
+  "rule": [
+   15.0,
+   25.0
+  ],
+  "q_start": {
+   "1": 25.0,
+   "2": 133.0,
+   "3": 241.0,
+   "4": 379.0,
+   "5": 487.0
+  },
+  "unchiku": [
+   349.0,
+   379.0
+  ],
+  "ending": [
+   595.0,
+   615.0
+  ],
+  "card": 3.0,
+  "solve": 90.0,
+  "answer": 15.0,
+  "hint_at": null,
+  "ten_at": 80.0,
+  "ans_first": 1.6,
+  "ans_step": 4.3
+ },
+ "lines": {
+  "opening": [
+   {
+    "id": "op",
+    "at": 0.0,
+    "text": "みなさん、こんにちは。こよみ先生です。さざんかの花が、咲きはじめましたね。今日は、秋の間違い探しを5問、いっしょに楽しみましょう。",
+    "face": "smile",
+    "until": 15.0
+   }
+  ],
+  "rule": [
+   {
+    "id": "rule",
+    "at": 0.0,
+    "text": "左と右の絵をくらべます。90秒で、右の絵の違いを3つ探してください。",
+    "face": "normal",
+    "until": 10.0
+   }
+  ],
+  "unchiku": [
+   {
+    "id": "u1",
+    "at": 0.0,
+    "text": "ここで、ひと休み。秋の小話です。",
+    "face": "smile",
+    "until": 4.0
+   },
+   {
+    "id": "u2",
+    "at": 4.0,
+    "text": "今ごろの季節を、七十二候で「山茶始開」、「つばきはじめてひらく」といいます。",
+    "face": "normal",
+    "until": 15.0
+   },
+   {
+    "id": "u3",
+    "at": 15.0,
+    "text": "でも、この時期に咲きはじめるのは、さざんかの花なんです。",
+    "face": "surprise",
+    "until": 23.0
+   },
+   {
+    "id": "u4",
+    "at": 23.0,
+    "text": "「山茶」は、つばきの中国の名前。さざんかは「さんさか」がなまったそうです。",
+    "face": "smile",
+    "until": 30.0
+   }
+  ],
+  "ending": [
+   {
+    "id": "e1",
+    "at": 0.0,
+    "text": "これで5問、おしまいです。おつかれさまでした。",
+    "face": "yay",
+    "until": 4.5
+   },
+   {
+    "id": "e2",
+    "at": 4.5,
+    "text": "15個の違い、いくつ見つかりましたか。画面で、今日の称号を見てくださいね。",
+    "face": "smile",
+    "until": 11.5
+   },
+   {
+    "id": "e3",
+    "at": 11.5,
+    "text": "次回も秋の絵で5問です。チャンネル登録をして、また来てください。",
+    "face": "wink",
+    "until": 20.0
+   }
+  ]
+ },
+ "readings": [
+  [
+   "麦わら帽子",
+   "むぎわらぼうし"
+  ],
+  [
+   "七十二候",
+   "しちじゅうにこう"
+  ],
+  [
+   "郵便受け",
+   "ゆうびんうけ"
+  ],
+  [
+   "第1問",
+   "だいいちもん"
+  ],
+  [
+   "第2問",
+   "だいにもん"
+  ],
+  [
+   "第3問",
+   "だいさんもん"
+  ],
+  [
+   "第4問",
+   "だいよんもん"
+  ],
+  [
+   "第5問",
+   "だいごもん"
+  ],
+  [
+   "足もと",
+   "あしもと"
+  ],
+  [
+   "90秒",
+   "きゅうじゅうびょう"
+  ],
+  [
+   "10秒",
+   "じゅうびょう"
+  ],
+  [
+   "15個",
+   "じゅうごこ"
+  ],
+  [
+   "持ち手",
+   "もちて"
+  ],
+  [
+   "八百屋",
+   "やおや"
+  ],
+  [
+   "玄関先",
+   "げんかんさき"
+  ],
+  [
+   "喫茶店",
+   "きっさてん"
+  ],
+  [
+   "バス停",
+   "バスてい"
+  ],
+  [
+   "果樹園",
+   "かじゅえん"
+  ],
+  [
+   "山茶花",
+   "さざんか"
+  ],
+  [
+   "呼び名",
+   "よびな"
+  ],
+  [
+   "傘立て",
+   "かさたて"
+  ],
+  [
+   "白い帯",
+   "しろいおび"
+  ],
+  [
+   "植木鉢",
+   "うえきばち"
+  ],
+  [
+   "自転車",
+   "じてんしゃ"
+  ],
+  [
+   "舞って",
+   "まって"
+  ],
+  [
+   "落ち葉",
+   "おちば"
+  ],
+  [
+   "青い線",
+   "あおいせん"
+  ],
+  [
+   "初級",
+   "しょきゅう"
+  ],
+  [
+   "中級",
+   "ちゅうきゅう"
+  ],
+  [
+   "上級",
+   "じょうきゅう"
+  ],
+  [
+   "小話",
+   "こばなし"
+  ],
+  [
+   "称号",
+   "しょうごう"
+  ],
+  [
+   "今日",
+   "きょう"
+  ],
+  [
+   "手前",
+   "てまえ"
+  ],
+  [
+   "後半",
+   "こうはん"
+  ],
+  [
+   "模様",
+   "もよう"
+  ],
+  [
+   "5問",
+   "ごもん"
+  ],
+  [
+   "3つ",
+   "みっつ"
+  ],
+  [
+   "時計",
+   "とけい"
+  ],
+  [
+   "中国",
+   "ちゅうごく"
+  ],
+  [
+   "屋根",
+   "やね"
+  ],
+  [
+   "一輪",
+   "いちりん"
+  ],
+  [
+   "一羽",
+   "いちわ"
+  ],
+  [
+   "一枚",
+   "いちまい"
+  ],
+  [
+   "茶色",
+   "ちゃいろ"
+  ],
+  [
+   "山茶",
+   "さんちゃ"
+  ],
+  [
+   "時期",
+   "じき"
+  ],
+  [
+   "一個",
+   "いっこ"
+  ],
+  [
+   "一本",
+   "いっぽん"
+  ],
+  [
+   "一匹",
+   "いっぴき"
+  ],
+  [
+   "一つ",
+   "ひとつ"
+  ],
+  [
+   "脚立",
+   "きゃたつ"
+  ],
+  [
+   "大根",
+   "だいこん"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "帽子",
+   "ぼうし"
+  ],
+  [
+   "包み",
+   "つつみ"
+  ],
+  [
+   "水玉",
+   "みずたま"
+  ],
+  [
+   "緑色",
+   "みどりいろ"
+  ],
+  [
+   "時刻",
+   "じこく"
+  ],
+  [
+   "葉",
+   "は"
+  ],
+  [
+   "段",
+   "だん"
+  ],
+  [
+   "針",
+   "はり"
+  ],
+  [
+   "傘",
+   "かさ"
+  ]
+ ],
+ "voice_override": {
+  "u2": "今ごろの季節を、しちじゅうにこうで、つばきはじめてひらく、といいます。",
+  "u3": "でも、この時期に咲きはじめるのは、さざんかの花なんです。",
+  "u4": "さんちゃは、つばきの中国の名前。さざんかは、さんさかが、なまったそうです。"
+ },
+ "voice": {
+  "provider": "fish",
+  "reference_id": "63819275ce38440ea245ca988abf976e",
+  "model": "s1",
+  "speed": 0.88,
+  "credit": "音声：Fish Audio（AIで合成した音声です）"
+ },
+ "images": {
+  "model": "gemini-3-pro-image",
+  "size": "2K",
+  "aspect": "4:5",
+  "style": "A warm Japanese picture-book illustration in soft watercolor with gentle colored-pencil outlines, like a cozy picture book for all ages, drawn with clear, crisp details. Late-autumn palette: sasanqua pink and white, apple red, warm browns, soft yellow and muted greens. Natural, hand-drawn, slightly rounded shapes; not geometric, not flat vector, not photorealistic. PORTRAIT-ISH composition, slightly taller than wide (about 8:9); the scene is arranged vertically, with a near foreground, a middle ground and a background stacked from bottom to top. Keep the top 10% of the picture simple (sky, eaves or leaves only) and the bottom 20% simple (plain floor, ground or pavement only): put every main object listed below in the middle part of the picture. The painting fills the entire canvas edge to edge: no white border, no blank paper margin on any side. No people. Absolutely no text, letters, numbers, logos or symbols anywhere, including on signs, curtains, boxes and lanterns. Draw the scene from a little distance, so every listed object is SMALL in the picture, with plenty of space between objects. The main objects are clearly drawn, separated from each other with a little space around each, and fully visible (not cut off by the picture edge and not hidden behind other objects).\n",
+  "keep_alt": " Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text.",
+  "keep_remove": " Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object.",
+  "batch": true
+ },
+ "questions": [
+  {
+   "q": 1,
+   "scene": "八百屋",
+   "level": "初級",
+   "go": "さあ、どうぞ。",
+   "prompt": "Scene: the front of a small old Japanese greengrocer (yaoya) in late autumn, seen from across the street, with a plain green awning without letters. Spread the main objects over the whole picture as described (upper left, upper right, middle, lower left, lower right), never clustered together. Objects: (upper left) a hanging round scale with a shallow pan, about one thirtieth of the picture width; (upper right) a row of three small red paper lanterns hanging from the awning, each about one fortieth of the picture width; (middle) a tilted wooden display stand with a flat basket holding exactly three red apples, each apple about one thirtieth of the picture width; (lower left) a wooden crate with white daikon radishes; (lower right) a small blue plastic bucket and a broom leaning on the stand; a pink sasanqua shrub beside the shop.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "増える",
+     "label": "りんごが4つ",
+     "line": "りんごが、ひとつ増えました。",
+     "box": [
+      1085,
+      1108,
+      1225,
+      1282
+     ],
+     "object_w": 128,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "物がない",
+     "label": "大根が1本へる",
+     "line": "大根が、一本へりました。",
+     "box": [
+      580,
+      1528,
+      755,
+      1655
+     ],
+     "object_w": 149,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "物がない",
+     "label": "さざんかの花が1輪ない",
+     "line": "さざんかの花が、ひとつありません。",
+     "box": [
+      1595,
+      900,
+      1732,
+      1020
+     ],
+     "object_w": 110,
+     "src": "2"
+    }
+   ],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these three small changes: (a) in the flat basket on the display stand, add one more red apple of the same size next to the three apples, so there are four; (b) the round white dial of the hanging scale at the upper left becomes a square dial of the same size, same color, no numbers; (c) in the wooden crate at the lower left, one of the white daikon radishes is gone (the front one), showing the crate where it was.",
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly this one small change: on the pink sasanqua shrub at the right side of the shop, the large pink flower near the top of the shrub (the highest flower) is gone, showing green leaves where it was."
+   }
+  },
+  {
+   "q": 2,
+   "scene": "玄関先",
+   "level": "初級",
+   "go": "さあ、どうぞ。",
+   "prompt": "Scene: the entrance (genkan-saki) of an old Japanese house in late autumn, seen from a little distance, with a wooden sliding lattice door and a small tiled roof. Spread the main objects over the whole picture as described (upper left, upper right, middle, lower left, lower right), never clustered together. Objects: (upper left) a pink sasanqua shrub with several small flowers; (upper right) a small round wall lamp next to the door, about one thirtieth of the picture width; (middle) a wooden mailbox on a post, about one twenty-eighth of the picture width; (lower left) a ceramic umbrella stand with one closed umbrella; (lower right) a flat stepping stone with a pair of small sandals, each sandal about one thirty-fifth of the picture width; a small potted plant by the door.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "増える",
+     "label": "傘が2本",
+     "line": "傘が、一本増えました。",
+     "box": [
+      485,
+      1037,
+      622,
+      1409
+     ],
+     "object_w": 120,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "形が変わる",
+     "label": "ランプのかさが四角い",
+     "line": "ランプの形が、四角くなりました。",
+     "box": [
+      990,
+      565,
+      1165,
+      738
+     ],
+     "object_w": 153,
+     "src": "2",
+     "note": "物の幅はランプのガラスの部分（形が変わる所）。腕木は同じ"
+    },
+    {
+     "id": 3,
+     "type": "物がない",
+     "label": "ぞうりが片方ない",
+     "line": "ぞうりが、片方ありません。",
+     "box": [
+      1245,
+      1558,
+      1400,
+      1702
+     ],
+     "object_w": 110,
+     "src": "2"
+    }
+   ],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these three small changes: (a) the round wall lamp next to the door becomes a square lantern-shaped lamp of the same size and color; (b) the pair of sandals on the flat stepping stone is gone, showing the plain stone; (c) in the ceramic umbrella stand, add a second closed umbrella of a different color (red) next to the first one, same size.",
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these two small changes: (a) the round glass globe of the wall lamp next to the door becomes a square glass box of the same size; the metal bracket arm stays exactly the same; (b) of the pair of sandals on the flat stepping stone, the right sandal is gone, showing the plain stone; the left sandal stays exactly the same."
+   }
+  },
+  {
+   "q": 3,
+   "scene": "喫茶店",
+   "level": "中級",
+   "go": "少しむずかしくなります。どうぞ。",
+   "prompt": "Scene: inside a quiet old-fashioned Japanese coffee shop (kissaten) in late autumn, a window table seen from a little distance. Spread the main objects over the whole picture as described (upper left, upper right, middle, lower left, lower right), never clustered together. Objects: (upper left) a round wall clock without numbers, about one thirtieth of the picture width; (upper right) a window with a pink sasanqua branch outside and a small potted plant on the sill; (middle) a wooden table with a slice of apple pie on a plate and a coffee cup with a saucer, the cup about one fortieth of the picture width; (lower left) a wooden chair with a folded striped scarf on the seat; (lower right) a coat rack with one hat, the hat about one fortieth of the picture width; a small sugar pot and a spoon on the table.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "向き",
+     "label": "時計の針の向き",
+     "line": "時計の針が、ちがう時刻を指しています。",
+     "box": [
+      387,
+      454,
+      501,
+      584
+     ],
+     "object_w": 97,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "模様",
+     "label": "帽子に白い帯",
+     "line": "帽子に、白い帯がつきました。",
+     "box": [
+      1459,
+      1304,
+      1553,
+      1457
+     ],
+     "object_w": 77,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "模様",
+     "label": "植木鉢に青い線",
+     "line": "植木鉢に、青い線が入りました。",
+     "box": [
+      1176,
+      695,
+      1283,
+      742
+     ],
+     "object_w": 97,
+     "src": "2"
+    }
+   ],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these three small changes: (a) on the round wall clock, the two clock hands point to a different time (the long hand points down, the short hand points left), still no numbers; (b) the small potted plant on the window sill is gone, showing the plain window sill; (c) the brown hat on the coat rack now has a white band around it, same hat, same place.",
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly this one small change: the small flower pot on the window sill now has one blue horizontal stripe around its middle; the plant and the pot shape stay exactly the same."
+   }
+  },
+  {
+   "q": 4,
+   "scene": "バス停",
+   "level": "中級",
+   "go": "後半です。どうぞ。",
+   "prompt": "Scene: a small country bus stop in late autumn, no bus, seen from across the road. Spread the main objects over the whole picture as described (upper left, upper right, middle, lower left, lower right), never clustered together. Objects: (upper left) electric wires with two small crows sitting on them, each crow about one forty-fifth of the picture width; (upper right) a round bus stop sign on a pole, plain without any letters or numbers, about one thirtieth of the picture width; (middle) a wooden bench with a small cloth bag on it; (lower left) a pink sasanqua hedge with many small flowers; (lower right) a red bicycle parked by the pole; a few fallen leaves on the road.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {
+    "leaf": "scripts/custom/ep003_program.py",
+    "1c": "scripts/custom/ep003_program.py"
+   },
+   "diffs": [
+    {
+     "id": 1,
+     "type": "模様",
+     "label": "包みが水玉",
+     "line": "包みの模様が、水玉になりました。",
+     "box": [
+      1009,
+      1285,
+      1145,
+      1410
+     ],
+     "object_w": 110,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "物がない",
+     "label": "自転車のかごがない",
+     "line": "自転車のかごが、ありません。",
+     "box": [
+      1612,
+      1268,
+      1748,
+      1402
+     ],
+     "object_w": 105,
+     "src": "1c",
+     "note": "かごの跡のうすいにじみを scripts/custom/ep003_program.py で紙の色にもどした"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "舞う紅葉が1枚増える",
+     "line": "舞っている葉が、一枚増えました。",
+     "box": [
+      512,
+      632,
+      650,
+      765
+     ],
+     "object_w": 80,
+     "src": "leaf",
+     "note": "プログラムで空の紅葉を1.25倍にして足した（scripts/custom/ep003_program.py）"
+    }
+   ],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these three small changes: (a) of the two crows on the electric wire, the right crow is gone, showing the sky and the wire; (b) the small cloth bag on the bench now has white polka dots, same shape, same color; (c) the wire basket on the front of the red bicycle is gone, showing the handlebar."
+  },
+  {
+   "q": 5,
+   "scene": "果樹園",
+   "level": "上級",
+   "go": "最後の問題です。じっくりどうぞ。",
+   "prompt": "Scene: an apple orchard (kajuen) in late autumn, rows of small apple trees full of red apples, seen from a little distance. Spread the main objects over the whole picture as described (upper left, upper right, middle, lower left, lower right), never clustered together. Many small details. Objects: (upper left) a small bird on a branch, about one fiftieth of the picture width; (upper right) a straw hat hanging on a fence post, about one fortieth of the picture width; (middle) a wooden ladder against a tree; (lower left) two bamboo baskets full of apples, each apple about one fiftieth of the picture width; (lower right) a wooden wheelbarrow; a pink sasanqua bush at the edge of the orchard.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {
+    "color": "scripts/custom/ep003_program.py"
+   },
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "さざんかの花が白い",
+     "line": "さざんかの花が、ひとつ白くなりました。",
+     "box": [
+      1546,
+      1259,
+      1632,
+      1361
+     ],
+     "object_w": 74,
+     "src": "color",
+     "note": "プログラムで色を変えた（scripts/custom/ep003_program.py）"
+    },
+    {
+     "id": 2,
+     "type": "本数",
+     "label": "はしごの段が1つへる",
+     "line": "はしごの段が、ひとつへりました。",
+     "box": [
+      994,
+      1086,
+      1062,
+      1121
+     ],
+     "object_w": 65,
+     "src": "1",
+     "feather": 6,
+     "note": "版1は段の位置がいくつも動いたので、左右の柱の間の1段の所だけを貼る"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "落ち葉が緑",
+     "line": "落ち葉が、一枚緑色になりました。",
+     "box": [
+      976,
+      1670,
+      1068,
+      1712
+     ],
+     "object_w": 80,
+     "src": "color",
+     "feather": 6,
+     "note": "プログラムで色を変えた（scripts/custom/ep003_program.py）"
+    }
+   ],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these three small changes: (a) on the pink sasanqua bush at the right, one of the pink flowers becomes white, same size; (b) the wooden ladder against the tree has one rung fewer (remove the middle rung); (c) the wheel of the wheelbarrow becomes smaller and solid (no spokes), same place."
+  }
+ ],
+ "thumbnail": {
+  "question": 3,
+  "big_text": "秋の間違いさがし",
+  "highlight": "間違いさがし",
+  "highlight_color": [
+   255,
+   214,
+   0
+  ],
+  "big_color": [
+   255,
+   255,
+   255
+  ],
+  "band_color": [
+   25,
+   35,
+   70
+  ],
+  "big_size": 132,
+  "sub_text": "3つ見つけられる？全5問",
+  "badges": [
+   [
+    "初級〜上級",
+    [
+     176,
+     62,
+     52
+    ]
+   ]
+  ],
+  "circle_hint": false,
+  "note": "第1回と同じ型（変えた所なし）。左右に同じ絵・上に濃紺の帯で「秋の間違いさがし」・下に難易度と問いかけ。こよみ先生は入れない"
+ },
+ "short": {
+  "question": 3,
+  "note": "knowledge/shorts.md。違いの散らばりを満たす中級の問",
+  "answer_gap": 3.5
+ }
+}

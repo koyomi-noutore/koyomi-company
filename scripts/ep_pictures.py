@@ -33,7 +33,7 @@ STYLE = _I["style"]
 KEEP_ALT, KEEP_REMOVE = _I["keep_alt"], _I["keep_remove"]
 _Q = questions()
 SCENES = {q: Q["prompt"] for q, Q in _Q.items()}
-EDITS = {q: Q["edit_prompt"] for q, Q in _Q.items()}
+EDITS = {q: Q.get("edit_prompt", "") for q, Q in _Q.items()}   # 元の絵を見てから書くので、はじめは空でよい
 # 2つ目以降の描き直し（版ごとの指示）。plan.json の questions[].edit_prompts：{版: 指示}。版"1"は edit_prompt
 EDITS_V = {(q, v): t for q, Q in _Q.items() for v, t in Q.get("edit_prompts", {}).items()}
 
