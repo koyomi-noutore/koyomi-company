@@ -1,0 +1,511 @@
+{
+ "total_sec": 615.0,
+ "fps": 30,
+ "opening": [
+  0.0,
+  15.0
+ ],
+ "rule": [
+  15.0,
+  25.0
+ ],
+ "unchiku": [
+  349.0,
+  379.0
+ ],
+ "ending": [
+  595.0,
+  615.0
+ ],
+ "questions": {
+  "1": {
+   "start": 25.0,
+   "card": [
+    25.0,
+    28.0
+   ],
+   "solve": [
+    28.0,
+    118.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 108.0,
+   "answer": [
+    118.0,
+    133.0
+   ],
+   "scene": "七五三の参道",
+   "level": "初級",
+   "go": "さあ、どうぞ。",
+   "hint": null,
+   "answers": [
+    "ぞうりが、片方ありません。",
+    "ゆずの木に、小鳥がとまりました。",
+    "千歳飴の袋が、ひとつへりました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "2": {
+   "start": 133.0,
+   "card": [
+    133.0,
+    136.0
+   ],
+   "solve": [
+    136.0,
+    226.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 216.0,
+   "answer": [
+    226.0,
+    241.0
+   ],
+   "scene": "床の間",
+   "level": "初級",
+   "go": "さあ、どうぞ。",
+   "hint": null,
+   "answers": [
+    "掛け軸に、赤いお日さまが出ました。",
+    "花びんが、細長くなりました。",
+    "たたみに、ゆずがひとつ増えました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "3": {
+   "start": 241.0,
+   "card": [
+    241.0,
+    244.0
+   ],
+   "solve": [
+    244.0,
+    334.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 324.0,
+   "answer": [
+    334.0,
+    349.0
+   ],
+   "scene": "路面電車",
+   "level": "中級",
+   "go": "少しむずかしくなります。どうぞ。",
+   "hint": null,
+   "answers": [
+    "つり革が、ひとつありません。",
+    "時計の針が、ちがう時刻を指しています。",
+    "ゆずが、ひとつ増えました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "4": {
+   "start": 379.0,
+   "card": [
+    379.0,
+    382.0
+   ],
+   "solve": [
+    382.0,
+    472.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 462.0,
+   "answer": [
+    472.0,
+    487.0
+   ],
+   "scene": "公民館",
+   "level": "中級",
+   "go": "後半です。どうぞ。",
+   "hint": null,
+   "answers": [
+    "飾りの三角が、ひとつありません。",
+    "時計の針が、ちがう時刻を指しています。",
+    "植木の葉が、一枚増えました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "5": {
+   "start": 487.0,
+   "card": [
+    487.0,
+    490.0
+   ],
+   "solve": [
+    490.0,
+    580.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 570.0,
+   "answer": [
+    580.0,
+    595.0
+   ],
+   "scene": "里山の小道",
+   "level": "上級",
+   "go": "最後の問題です。じっくりどうぞ。",
+   "hint": null,
+   "answers": [
+    "柿が、ひとつへりました。",
+    "帽子のリボンが、赤くなりました。",
+    "川に、小石がひとつ増えました。"
+   ],
+   "answers_intro": "答えです。"
+  }
+ },
+ "lines": [
+  {
+   "id": "op",
+   "start": 0.0,
+   "slot_end": 15.0,
+   "subtitle": "みなさん、こんにちは。こよみ先生です。もうすぐ七五三ですね。ゆずの実も色づいてきました。今日は、秋の間違い探しを5問、いっしょに楽しみましょう。",
+   "voice_text": "みなさん、こんにちは。こよみ先生です。もうすぐしちごさんですね。ゆずの実も色づいてきました。きょうは、秋の間違い探しをごもん、いっしょに楽しみましょう。",
+   "face": "smile"
+  },
+  {
+   "id": "rule",
+   "start": 15.0,
+   "slot_end": 25.0,
+   "subtitle": "左と右の絵をくらべます。90秒で、右の絵の違いを3つ探してください。",
+   "voice_text": "左と右の絵をくらべます。きゅうじゅうびょうで、右の絵の違いをみっつ探してください。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_card",
+   "start": 25.0,
+   "slot_end": 28.8,
+   "subtitle": "第1問、初級。七五三の参道です。",
+   "voice_text": "だいいちもん、しょきゅう。しちごさんのさんどうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_go",
+   "start": 28.8,
+   "slot_end": 36.0,
+   "subtitle": "さあ、どうぞ。",
+   "voice_text": "さあ、どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_ten",
+   "start": 108.0,
+   "slot_end": 111.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_ans0",
+   "start": 118.0,
+   "slot_end": 119.6,
+   "subtitle": "答えです。",
+   "voice_text": "答えです。",
+   "face": "smile"
+  },
+  {
+   "id": "q1_ans1",
+   "start": 119.6,
+   "slot_end": 123.89999999999999,
+   "subtitle": "ぞうりが、片方ありません。",
+   "voice_text": "ぞうりが、かたほうありません。",
+   "face": "smile"
+  },
+  {
+   "id": "q1_ans2",
+   "start": 123.89999999999999,
+   "slot_end": 128.2,
+   "subtitle": "ゆずの木に、小鳥がとまりました。",
+   "voice_text": "ゆずの木に、ことりがとまりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q1_ans3",
+   "start": 128.2,
+   "slot_end": 132.5,
+   "subtitle": "千歳飴の袋が、ひとつへりました。",
+   "voice_text": "ちとせあめのふくろが、ひとつへりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_card",
+   "start": 133.0,
+   "slot_end": 136.8,
+   "subtitle": "第2問、初級。床の間です。",
+   "voice_text": "だいにもん、しょきゅう。とこのまです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_go",
+   "start": 136.8,
+   "slot_end": 144.0,
+   "subtitle": "さあ、どうぞ。",
+   "voice_text": "さあ、どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_ten",
+   "start": 216.0,
+   "slot_end": 219.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_ans0",
+   "start": 226.0,
+   "slot_end": 227.6,
+   "subtitle": "答えです。",
+   "voice_text": "答えです。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_ans1",
+   "start": 227.6,
+   "slot_end": 231.9,
+   "subtitle": "掛け軸に、赤いお日さまが出ました。",
+   "voice_text": "かけじくに、赤いおひさまが出ました。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_ans2",
+   "start": 231.9,
+   "slot_end": 236.2,
+   "subtitle": "花びんが、細長くなりました。",
+   "voice_text": "かびんが、細長くなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_ans3",
+   "start": 236.2,
+   "slot_end": 240.5,
+   "subtitle": "たたみに、ゆずがひとつ増えました。",
+   "voice_text": "たたみに、ゆずがひとつ増えました。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_card",
+   "start": 241.0,
+   "slot_end": 244.8,
+   "subtitle": "第3問、中級。路面電車です。",
+   "voice_text": "だいさんもん、ちゅうきゅう。ろめんでんしゃです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_go",
+   "start": 244.8,
+   "slot_end": 252.0,
+   "subtitle": "少しむずかしくなります。どうぞ。",
+   "voice_text": "少しむずかしくなります。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_ten",
+   "start": 324.0,
+   "slot_end": 327.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_ans0",
+   "start": 334.0,
+   "slot_end": 335.6,
+   "subtitle": "答えです。",
+   "voice_text": "答えです。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_ans1",
+   "start": 335.6,
+   "slot_end": 339.90000000000003,
+   "subtitle": "つり革が、ひとつありません。",
+   "voice_text": "つりかわが、ひとつありません。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_ans2",
+   "start": 339.90000000000003,
+   "slot_end": 344.20000000000005,
+   "subtitle": "時計の針が、ちがう時刻を指しています。",
+   "voice_text": "とけいのはりが、ちがうじこくを指しています。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_ans3",
+   "start": 344.20000000000005,
+   "slot_end": 348.5,
+   "subtitle": "ゆずが、ひとつ増えました。",
+   "voice_text": "ゆずが、ひとつ増えました。",
+   "face": "smile"
+  },
+  {
+   "id": "q4_card",
+   "start": 379.0,
+   "slot_end": 382.8,
+   "subtitle": "第4問、中級。公民館です。",
+   "voice_text": "だいよんもん、ちゅうきゅう。こうみんかんです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_go",
+   "start": 382.8,
+   "slot_end": 390.0,
+   "subtitle": "後半です。どうぞ。",
+   "voice_text": "こうはんです。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_ten",
+   "start": 462.0,
+   "slot_end": 465.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_ans0",
+   "start": 472.0,
+   "slot_end": 473.6,
+   "subtitle": "答えです。",
+   "voice_text": "答えです。",
+   "face": "smile"
+  },
+  {
+   "id": "q4_ans1",
+   "start": 473.6,
+   "slot_end": 477.90000000000003,
+   "subtitle": "飾りの三角が、ひとつありません。",
+   "voice_text": "かざりのさんかくが、ひとつありません。",
+   "face": "smile"
+  },
+  {
+   "id": "q4_ans2",
+   "start": 477.90000000000003,
+   "slot_end": 482.20000000000005,
+   "subtitle": "時計の針が、ちがう時刻を指しています。",
+   "voice_text": "とけいのはりが、ちがうじこくを指しています。",
+   "face": "smile"
+  },
+  {
+   "id": "q4_ans3",
+   "start": 482.20000000000005,
+   "slot_end": 486.5,
+   "subtitle": "植木の葉が、一枚増えました。",
+   "voice_text": "うえきのはが、いちまい増えました。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_card",
+   "start": 487.0,
+   "slot_end": 490.8,
+   "subtitle": "第5問、上級。里山の小道です。",
+   "voice_text": "だいごもん、じょうきゅう。さとやまのこみちです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_go",
+   "start": 490.8,
+   "slot_end": 498.0,
+   "subtitle": "最後の問題です。じっくりどうぞ。",
+   "voice_text": "最後の問題です。じっくりどうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_ten",
+   "start": 570.0,
+   "slot_end": 573.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_ans0",
+   "start": 580.0,
+   "slot_end": 581.6,
+   "subtitle": "答えです。",
+   "voice_text": "答えです。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_ans1",
+   "start": 581.6,
+   "slot_end": 585.9,
+   "subtitle": "柿が、ひとつへりました。",
+   "voice_text": "かきが、ひとつへりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_ans2",
+   "start": 585.9,
+   "slot_end": 590.2,
+   "subtitle": "帽子のリボンが、赤くなりました。",
+   "voice_text": "ぼうしのリボンが、赤くなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_ans3",
+   "start": 590.2,
+   "slot_end": 594.5,
+   "subtitle": "川に、小石がひとつ増えました。",
+   "voice_text": "川に、こいしがひとつ増えました。",
+   "face": "smile"
+  },
+  {
+   "id": "u1",
+   "start": 349.0,
+   "slot_end": 353.0,
+   "subtitle": "ここで、ひと休み。秋の小話です。",
+   "voice_text": "ここで、ひと休み。秋のこばなしです。",
+   "face": "smile"
+  },
+  {
+   "id": "u2",
+   "start": 353.0,
+   "slot_end": 364.0,
+   "subtitle": "七五三の千歳飴は、江戸時代に浅草の飴売りが売った「千年飴」が始まりといわれます。",
+   "voice_text": "しちごさんの、ちとせあめは、えどじだいに、あさくさのあめうりが売った、せんねんあめが始まりといわれます。",
+   "face": "normal"
+  },
+  {
+   "id": "u3",
+   "start": 364.0,
+   "slot_end": 372.0,
+   "subtitle": "「千歳」という名前には、長生きを願う気持ちがこめられています。",
+   "voice_text": "ちとせという名前には、長生きを願う気持ちがこめられています。",
+   "face": "surprise"
+  },
+  {
+   "id": "u4",
+   "start": 372.0,
+   "slot_end": 379.0,
+   "subtitle": "袋には、鶴と亀や松竹梅など、おめでたい絵が描かれていますね。",
+   "voice_text": "ふくろには、つるとかめや、しょうちくばいなど、おめでたい絵が描かれていますね。",
+   "face": "smile"
+  },
+  {
+   "id": "e1",
+   "start": 595.0,
+   "slot_end": 599.5,
+   "subtitle": "これで5問、おしまいです。おつかれさまでした。",
+   "voice_text": "これでごもん、おしまいです。おつかれさまでした。",
+   "face": "yay"
+  },
+  {
+   "id": "e2",
+   "start": 599.5,
+   "slot_end": 606.5,
+   "subtitle": "15個の違い、いくつ見つかりましたか。画面で、今日の称号を見てくださいね。",
+   "voice_text": "じゅうごこの違い、いくつ見つかりましたか。画面で、きょうのしょうごうを見てくださいね。",
+   "face": "smile"
+  },
+  {
+   "id": "e3",
+   "start": 606.5,
+   "slot_end": 615.0,
+   "subtitle": "次回も秋の絵で5問です。チャンネル登録をして、また来てください。",
+   "voice_text": "次回も秋の絵でごもんです。チャンネル登録をして、また来てください。",
+   "face": "wink"
+  }
+ ]
+}

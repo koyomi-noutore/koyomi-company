@@ -6,6 +6,7 @@ program_ops の書き方：{"<版>": [操作, ...]}。版の絵は元の絵（q<
   {"op": "copy", "src": [x0,y0,x1,y1], "dst": [x, y], "width": 目標の幅px, "rot": 角度, "flip": true/false}
       src の中の物を、まわりの地との色の差で切り抜き、width に縮め（拡げ）て dst（左上）に貼る ＝「増える」
       "from_q": n で、同じ回の別の問の元の絵から切り抜く（同じ絵柄の物を足すとき）
+      "from_file": "<作業フォルダの絵>" で、描き直しの版などから切り抜く／"circle": [cx,cy,r] で円で切り抜く
       "poly": [[x,y], ...] で、物を手で囲んだ多角形（元の絵の座標）で切り抜く（自動の切り抜きで地が付いてくるとき）
   {"op": "recolor", "box": [x0,y0,x1,y1], "hue": 色相（0〜255）, "sat": 彩度の倍率, "val": 明るさの倍率}
       box の中の物（地と色が違う所）の色を変える ＝「色」（上級だけ）
@@ -103,8 +104,17 @@ def fill_bg(C, m, iters=150):
 
 def apply(im, op, work=None):
     if op["op"] == "copy":
-        src_im = Image.open(Path(work) / f"q{op['from_q']}_a.png").convert("RGB") if op.get("from_q") else im
+        if op.get("from_file"):     # 作業フォルダの別の絵（描き直しの版など）から切り抜く
+            src_im = Image.open(Path(work) / op["from_file"]).convert("RGB")
+        elif op.get("from_q"):
+            src_im = Image.open(Path(work) / f"q{op['from_q']}_a.png").convert("RGB")
+        else:
+            src_im = im
         crop = src_im.crop(tuple(op["src"]))
+        if op.get("circle"):    # [cx, cy, r]：丸い物を円で切り抜く（元の絵の座標）
+            cx, cy, rr = op["circle"]
+            import math
+            op = dict(op, poly=[[cx + rr * math.cos(t / 36 * 2 * math.pi), cy + rr * math.sin(t / 36 * 2 * math.pi)] for t in range(36)])
         if op.get("poly"):      # 物のまわりを手で囲んだ多角形（元の絵の座標）。地に模様があって自動の切り抜きができないとき
             from PIL import ImageDraw
             pm = Image.new("L", crop.size, 0)

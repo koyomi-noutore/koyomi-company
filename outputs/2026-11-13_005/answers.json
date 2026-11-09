@@ -1,0 +1,693 @@
+{
+ "screen": {
+  "size": [
+   1920,
+   1080
+  ],
+  "picture_size_on_screen": [
+   960,
+   1080
+  ],
+  "safe_y_on_screen": [
+   54,
+   918
+  ],
+  "level_range_pct_of_screen_width": {
+   "初級": [
+    3.0,
+    4.0
+   ],
+   "中級": [
+    2.0,
+    3.0
+   ],
+   "上級": [
+    1.5,
+    2.0
+   ]
+  }
+ },
+ "note": "box_px・circle_px は 8:9 に切り抜いた高解像度の絵（qN_a.png、1856×2088）のピクセル。content_px はそのうち画面に出す範囲（白いふちを除いた8:9）。*_screen は画面の上での座標（右の絵は x に960を足す）。object_screen_width_pct は、変わる物そのものの幅を画面幅で割った値。",
+ "questions": [
+  {
+   "q": 1,
+   "scene": "七五三の参道",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 238,
+   "outside_box_max_distance_px": 9.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "物がない",
+     "label": "ぞうりが片方ない",
+     "line": "ぞうりが、片方ありません。",
+     "box_px": [
+      428,
+      1558,
+      576,
+      1730
+     ],
+     "box_screen": [
+      221,
+      806,
+      298,
+      895
+     ],
+     "circle_a_screen": [
+      221,
+      806,
+      298,
+      895
+     ],
+     "circle_b_screen": [
+      221,
+      806,
+      298,
+      895
+     ],
+     "object_w_px": 135,
+     "object_screen_width_pct": 3.64,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "増える",
+     "label": "ゆずの木に小鳥",
+     "line": "ゆずの木に、小鳥がとまりました。",
+     "box_px": [
+      1361,
+      270,
+      1506,
+      380
+     ],
+     "box_screen": [
+      704,
+      140,
+      779,
+      197
+     ],
+     "circle_a_screen": [
+      704,
+      140,
+      779,
+      197
+     ],
+     "circle_b_screen": [
+      704,
+      140,
+      779,
+      197
+     ],
+     "object_w_px": 132,
+     "object_screen_width_pct": 3.56,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "物がない",
+     "label": "千歳飴の袋が1つへる",
+     "line": "千歳飴の袋が、ひとつへりました。",
+     "box_px": [
+      980,
+      849,
+      1133,
+      1022
+     ],
+     "box_screen": [
+      507,
+      439,
+      586,
+      529
+     ],
+     "circle_a_screen": [
+      507,
+      439,
+      586,
+      529
+     ],
+     "circle_b_screen": [
+      507,
+      439,
+      586,
+      529
+     ],
+     "object_w_px": 140,
+     "object_screen_width_pct": 3.77,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 2,
+   "scene": "床の間",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 20,
+   "outside_box_max_distance_px": 4.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "増える",
+     "label": "掛け軸に赤い太陽",
+     "line": "掛け軸に、赤いお日さまが出ました。",
+     "box_px": [
+      332,
+      464,
+      454,
+      586
+     ],
+     "box_screen": [
+      172,
+      240,
+      235,
+      303
+     ],
+     "circle_a_screen": [
+      172,
+      240,
+      235,
+      303
+     ],
+     "circle_b_screen": [
+      172,
+      240,
+      235,
+      303
+     ],
+     "object_w_px": 110,
+     "object_screen_width_pct": 2.96,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": "描き直し（版3）の小さな太陽を、プログラムで110pxに大きくして貼った（scripts/program_diffs.py）"
+    },
+    {
+     "id": 2,
+     "type": "形が変わる",
+     "label": "花びんが細長い",
+     "line": "花びんが、細長くなりました。",
+     "box_px": [
+      823,
+      671,
+      1089,
+      1199
+     ],
+     "box_screen": [
+      426,
+      347,
+      563,
+      620
+     ],
+     "circle_a_screen": [
+      426,
+      347,
+      563,
+      620
+     ],
+     "circle_b_screen": [
+      426,
+      347,
+      563,
+      620
+     ],
+     "object_w_px": 140,
+     "object_screen_width_pct": 3.77,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": "花びんと一緒に枝も描き直されたので、範囲は枝を含む"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "たたみにゆず",
+     "line": "たたみに、ゆずがひとつ増えました。",
+     "box_px": [
+      1144,
+      1474,
+      1282,
+      1612
+     ],
+     "box_screen": [
+      592,
+      762,
+      663,
+      834
+     ],
+     "circle_a_screen": [
+      592,
+      762,
+      663,
+      834
+     ],
+     "circle_b_screen": [
+      592,
+      762,
+      663,
+      834
+     ],
+     "object_w_px": 125,
+     "object_screen_width_pct": 3.37,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": "お皿のゆずをプログラムで円で切り抜いて貼った（scripts/program_diffs.py）"
+    }
+   ]
+  },
+  {
+   "q": 3,
+   "scene": "路面電車",
+   "level": "中級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 237,
+   "outside_box_max_distance_px": 10.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "物がない",
+     "label": "つり革が1つない",
+     "line": "つり革が、ひとつありません。",
+     "box_px": [
+      389,
+      390,
+      480,
+      632
+     ],
+     "box_screen": [
+      201,
+      202,
+      248,
+      327
+     ],
+     "circle_a_screen": [
+      201,
+      202,
+      248,
+      327
+     ],
+     "circle_b_screen": [
+      201,
+      202,
+      248,
+      327
+     ],
+     "object_w_px": 78,
+     "object_screen_width_pct": 2.1,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "向き",
+     "label": "時計の針の向き",
+     "line": "時計の針が、ちがう時刻を指しています。",
+     "box_px": [
+      1290,
+      350,
+      1400,
+      500
+     ],
+     "box_screen": [
+      667,
+      181,
+      724,
+      259
+     ],
+     "circle_a_screen": [
+      667,
+      181,
+      724,
+      259
+     ],
+     "circle_b_screen": [
+      667,
+      181,
+      724,
+      259
+     ],
+     "object_w_px": 110,
+     "object_screen_width_pct": 2.96,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "ゆずが3つ",
+     "line": "ゆずが、ひとつ増えました。",
+     "box_px": [
+      347,
+      1428,
+      475,
+      1528
+     ],
+     "box_screen": [
+      179,
+      739,
+      246,
+      790
+     ],
+     "circle_a_screen": [
+      179,
+      739,
+      246,
+      790
+     ],
+     "circle_b_screen": [
+      179,
+      739,
+      246,
+      790
+     ],
+     "object_w_px": 115,
+     "object_screen_width_pct": 3.1,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 4,
+   "scene": "公民館",
+   "level": "中級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 172,
+   "outside_box_max_distance_px": 9.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "物がない",
+     "label": "飾りの三角が1つない",
+     "line": "飾りの三角が、ひとつありません。",
+     "box_px": [
+      70,
+      755,
+      205,
+      905
+     ],
+     "box_screen": [
+      36,
+      391,
+      106,
+      468
+     ],
+     "circle_a_screen": [
+      36,
+      391,
+      106,
+      468
+     ],
+     "circle_b_screen": [
+      36,
+      391,
+      106,
+      468
+     ],
+     "object_w_px": 94,
+     "object_screen_width_pct": 2.53,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "2c",
+     "made_by": "gemini",
+     "note": "消した三角のうすい輪郭を scripts/custom/ep005_clean.py で地にうめた"
+    },
+    {
+     "id": 2,
+     "type": "向き",
+     "label": "時計の針の向き",
+     "line": "時計の針が、ちがう時刻を指しています。",
+     "box_px": [
+      1392,
+      622,
+      1535,
+      791
+     ],
+     "box_screen": [
+      720,
+      322,
+      794,
+      409
+     ],
+     "circle_a_screen": [
+      720,
+      322,
+      794,
+      409
+     ],
+     "circle_b_screen": [
+      720,
+      322,
+      794,
+      409
+     ],
+     "object_w_px": 115,
+     "object_screen_width_pct": 3.1,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": "物の幅は針の広がり"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "植木の葉が1枚増える",
+     "line": "植木の葉が、一枚増えました。",
+     "box_px": [
+      1494,
+      1245,
+      1614,
+      1360
+     ],
+     "box_screen": [
+      773,
+      644,
+      835,
+      703
+     ],
+     "circle_a_screen": [
+      773,
+      644,
+      835,
+      703
+     ],
+     "circle_b_screen": [
+      773,
+      644,
+      835,
+      703
+     ],
+     "object_w_px": 107,
+     "object_screen_width_pct": 2.88,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 5,
+   "scene": "里山の小道",
+   "level": "上級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 239,
+   "outside_box_max_distance_px": 11.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "物がない",
+     "label": "柿が1つへる",
+     "line": "柿が、ひとつへりました。",
+     "box_px": [
+      1622,
+      262,
+      1735,
+      364
+     ],
+     "box_screen": [
+      839,
+      136,
+      897,
+      188
+     ],
+     "circle_a_screen": [
+      839,
+      136,
+      897,
+      188
+     ],
+     "circle_b_screen": [
+      839,
+      136,
+      897,
+      188
+     ],
+     "object_w_px": 56,
+     "object_screen_width_pct": 1.51,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1c",
+     "made_by": "gemini",
+     "note": "いちばん下の柿だけを、元の絵から scripts/custom/ep005_clean.py で消した（へたと枝は残す。画像APIの描き直しは2つ消したので使わない）"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "帽子のリボンが赤",
+     "line": "帽子のリボンが、赤くなりました。",
+     "box_px": [
+      1029,
+      1229,
+      1168,
+      1476
+     ],
+     "box_screen": [
+      532,
+      636,
+      604,
+      763
+     ],
+     "circle_a_screen": [
+      532,
+      636,
+      604,
+      763
+     ],
+     "circle_b_screen": [
+      532,
+      636,
+      604,
+      763
+     ],
+     "object_w_px": 60,
+     "object_screen_width_pct": 1.62,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "川に小石",
+     "line": "川に、小石がひとつ増えました。",
+     "box_px": [
+      614,
+      1675,
+      705,
+      1748
+     ],
+     "box_screen": [
+      318,
+      866,
+      365,
+      904
+     ],
+     "circle_a_screen": [
+      318,
+      866,
+      365,
+      904
+     ],
+     "circle_b_screen": [
+      318,
+      866,
+      365,
+      904
+     ],
+     "object_w_px": 70,
+     "object_screen_width_pct": 1.89,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "2",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  }
+ ]
+}

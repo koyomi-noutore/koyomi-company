@@ -1,0 +1,927 @@
+{
+ "episode": "005",
+ "season": "秋",
+ "topics": [
+  "七五三（千歳飴）",
+  "ゆず"
+ ],
+ "note": "第5回の中身。make_episode.py がこれを読んで動画を作る。",
+ "youtube": {
+  "title": "【間違い探し】3つ見つけられる？七五三とゆずの秋 全5問｜初級〜上級・1問90秒【シニアの脳トレ】",
+  "description_file": "description.md",
+  "title_note": "第1〜4回と同じ型。題材だけを変えた。",
+  "publish_plan": "2026-11-13（金）6:00 JST、ショート12:00（knowledge/schedule.md）"
+ },
+ "screens": {
+  "opening_title": "秋の間違い探し　5問",
+  "opening_sub": "こよみ先生のまいにち脳トレ",
+  "unchiku_header": "こよみ先生の 秋の小話",
+  "unchiku_slides": [
+   {
+    "until": 4,
+    "texts": [
+     [
+      "秋の小話",
+      700,
+      420,
+      170,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ]
+    ]
+   },
+   {
+    "until": 15,
+    "texts": [
+     [
+      "千歳飴",
+      700,
+      350,
+      200,
+      [
+       200,
+       60,
+       60
+      ],
+      8
+     ],
+     [
+      "はじまりは 江戸・浅草の「千年飴」",
+      700,
+      580,
+      64,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 23,
+    "texts": [
+     [
+      "千歳",
+      700,
+      360,
+      200,
+      [
+       59,
+       47,
+       37
+      ],
+      8
+     ],
+     [
+      "長生きを願う名前",
+      700,
+      580,
+      90,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 30,
+    "texts": [
+     [
+      "鶴と亀・松竹梅",
+      700,
+      380,
+      120,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ],
+     [
+      "おめでたい絵の袋",
+      700,
+      560,
+      90,
+      [
+       200,
+       60,
+       60
+      ],
+      0
+     ]
+    ]
+   }
+  ],
+  "ending_titles": [
+   [
+    "15個",
+    "秋の名探偵"
+   ],
+   [
+    "11〜14個",
+    "千歳飴名人"
+   ],
+   [
+    "6〜10個",
+    "ゆずさん"
+   ],
+   [
+    "0〜5個",
+    "あめ玉さん"
+   ]
+  ],
+  "ending_note": "あめ玉さんは、これから、ぐんぐん育ちます",
+  "ending_next": "次回も 秋の絵で 5問"
+ },
+ "timeline": {
+  "total": 615.0,
+  "opening": [
+   0.0,
+   15.0
+  ],
+  "rule": [
+   15.0,
+   25.0
+  ],
+  "q_start": {
+   "1": 25.0,
+   "2": 133.0,
+   "3": 241.0,
+   "4": 379.0,
+   "5": 487.0
+  },
+  "unchiku": [
+   349.0,
+   379.0
+  ],
+  "ending": [
+   595.0,
+   615.0
+  ],
+  "card": 3.0,
+  "solve": 90.0,
+  "answer": 15.0,
+  "hint_at": null,
+  "ten_at": 80.0,
+  "ans_first": 1.6,
+  "ans_step": 4.3
+ },
+ "lines": {
+  "opening": [
+   {
+    "id": "op",
+    "at": 0.0,
+    "text": "みなさん、こんにちは。こよみ先生です。もうすぐ七五三ですね。ゆずの実も色づいてきました。今日は、秋の間違い探しを5問、いっしょに楽しみましょう。",
+    "face": "smile",
+    "until": 15.0
+   }
+  ],
+  "rule": [
+   {
+    "id": "rule",
+    "at": 0.0,
+    "text": "左と右の絵をくらべます。90秒で、右の絵の違いを3つ探してください。",
+    "face": "normal",
+    "until": 10.0
+   }
+  ],
+  "unchiku": [
+   {
+    "id": "u1",
+    "at": 0.0,
+    "text": "ここで、ひと休み。秋の小話です。",
+    "face": "smile",
+    "until": 4.0
+   },
+   {
+    "id": "u2",
+    "at": 4.0,
+    "text": "七五三の千歳飴は、江戸時代に浅草の飴売りが売った「千年飴」が始まりといわれます。",
+    "face": "normal",
+    "until": 15.0
+   },
+   {
+    "id": "u3",
+    "at": 15.0,
+    "text": "「千歳」という名前には、長生きを願う気持ちがこめられています。",
+    "face": "surprise",
+    "until": 23.0
+   },
+   {
+    "id": "u4",
+    "at": 23.0,
+    "text": "袋には、鶴と亀や松竹梅など、おめでたい絵が描かれていますね。",
+    "face": "smile",
+    "until": 30.0
+   }
+  ],
+  "ending": [
+   {
+    "id": "e1",
+    "at": 0.0,
+    "text": "これで5問、おしまいです。おつかれさまでした。",
+    "face": "yay",
+    "until": 4.5
+   },
+   {
+    "id": "e2",
+    "at": 4.5,
+    "text": "15個の違い、いくつ見つかりましたか。画面で、今日の称号を見てくださいね。",
+    "face": "smile",
+    "until": 11.5
+   },
+   {
+    "id": "e3",
+    "at": 11.5,
+    "text": "次回も秋の絵で5問です。チャンネル登録をして、また来てください。",
+    "face": "wink",
+    "until": 20.0
+   }
+  ]
+ },
+ "readings": [
+  [
+   "七五三の参道",
+   "しちごさんのさんどう"
+  ],
+  [
+   "里山の小道",
+   "さとやまのこみち"
+  ],
+  [
+   "千歳飴の袋",
+   "ちとせあめのふくろ"
+  ],
+  [
+   "飾りの三角",
+   "かざりのさんかく"
+  ],
+  [
+   "路面電車",
+   "ろめんでんしゃ"
+  ],
+  [
+   "お日さま",
+   "おひさま"
+  ],
+  [
+   "第1問",
+   "だいいちもん"
+  ],
+  [
+   "第2問",
+   "だいにもん"
+  ],
+  [
+   "第3問",
+   "だいさんもん"
+  ],
+  [
+   "第4問",
+   "だいよんもん"
+  ],
+  [
+   "第5問",
+   "だいごもん"
+  ],
+  [
+   "90秒",
+   "きゅうじゅうびょう"
+  ],
+  [
+   "10秒",
+   "じゅうびょう"
+  ],
+  [
+   "15個",
+   "じゅうごこ"
+  ],
+  [
+   "七五三",
+   "しちごさん"
+  ],
+  [
+   "床の間",
+   "とこのま"
+  ],
+  [
+   "公民館",
+   "こうみんかん"
+  ],
+  [
+   "千歳飴",
+   "ちとせあめ"
+  ],
+  [
+   "掛け軸",
+   "かけじく"
+  ],
+  [
+   "風呂敷",
+   "ふろしき"
+  ],
+  [
+   "つり革",
+   "つりかわ"
+  ],
+  [
+   "ぞうり",
+   "ぞうり"
+  ],
+  [
+   "花びん",
+   "かびん"
+  ],
+  [
+   "初級",
+   "しょきゅう"
+  ],
+  [
+   "中級",
+   "ちゅうきゅう"
+  ],
+  [
+   "上級",
+   "じょうきゅう"
+  ],
+  [
+   "小話",
+   "こばなし"
+  ],
+  [
+   "称号",
+   "しょうごう"
+  ],
+  [
+   "今日",
+   "きょう"
+  ],
+  [
+   "手前",
+   "てまえ"
+  ],
+  [
+   "後半",
+   "こうはん"
+  ],
+  [
+   "模様",
+   "もよう"
+  ],
+  [
+   "5問",
+   "ごもん"
+  ],
+  [
+   "3つ",
+   "みっつ"
+  ],
+  [
+   "時計",
+   "とけい"
+  ],
+  [
+   "屋根",
+   "やね"
+  ],
+  [
+   "一輪",
+   "いちりん"
+  ],
+  [
+   "一羽",
+   "いちわ"
+  ],
+  [
+   "一枚",
+   "いちまい"
+  ],
+  [
+   "茶色",
+   "ちゃいろ"
+  ],
+  [
+   "一本",
+   "いっぽん"
+  ],
+  [
+   "一匹",
+   "いっぴき"
+  ],
+  [
+   "一つ",
+   "ひとつ"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "帽子",
+   "ぼうし"
+  ],
+  [
+   "水玉",
+   "みずたま"
+  ],
+  [
+   "一匹",
+   "いっぴき"
+  ],
+  [
+   "参道",
+   "さんどう"
+  ],
+  [
+   "一個",
+   "いっこ"
+  ],
+  [
+   "一冊",
+   "いっさつ"
+  ],
+  [
+   "一脚",
+   "いっきゃく"
+  ],
+  [
+   "小鳥",
+   "ことり"
+  ],
+  [
+   "植木",
+   "うえき"
+  ],
+  [
+   "小石",
+   "こいし"
+  ],
+  [
+   "時刻",
+   "じこく"
+  ],
+  [
+   "葉",
+   "は"
+  ],
+  [
+   "傘",
+   "かさ"
+  ],
+  [
+   "柿",
+   "かき"
+  ],
+  [
+   "針",
+   "はり"
+  ]
+ ],
+ "voice_override": {
+  "u2": "しちごさんの、ちとせあめは、えどじだいに、あさくさのあめうりが売った、せんねんあめが始まりといわれます。",
+  "u3": "ちとせという名前には、長生きを願う気持ちがこめられています。",
+  "u4": "ふくろには、つるとかめや、しょうちくばいなど、おめでたい絵が描かれていますね。"
+ },
+ "voice": {
+  "provider": "fish",
+  "reference_id": "63819275ce38440ea245ca988abf976e",
+  "model": "s1",
+  "speed": 0.88,
+  "credit": "音声：Fish Audio（AIで合成した音声です）"
+ },
+ "images": {
+  "model": "gemini-3-pro-image",
+  "size": "2K",
+  "aspect": "4:5",
+  "style": "A warm Japanese picture-book illustration in soft watercolor with gentle colored-pencil outlines, like a cozy picture book for all ages, drawn with clear, crisp details. Late-autumn palette: yuzu yellow, festive red and white, warm browns, soft blue sky and muted greens. Natural, hand-drawn, slightly rounded shapes; not geometric, not flat vector, not photorealistic. PORTRAIT-ISH composition, slightly taller than wide (about 8:9); the scene is arranged vertically, with a near foreground, a middle ground and a background stacked from bottom to top. Keep the top 10% of the picture simple (sky, eaves or leaves only) and the bottom 20% simple (plain floor, ground or pavement only): put every main object listed below in the middle part of the picture. The painting fills the entire canvas edge to edge: no white border, no blank paper margin on any side. No people. Absolutely no text, letters, numbers, logos or symbols anywhere, including on signs, curtains, boxes and lanterns. Draw the scene from a little distance, so every listed object is SMALL in the picture, with plenty of space between objects. The main objects are clearly drawn, separated from each other with a little space around each, and fully visible (not cut off by the picture edge and not hidden behind other objects).\n",
+  "keep_alt": " Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text.",
+  "keep_remove": " Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object.",
+  "batch": true
+ },
+ "questions": [
+  {
+   "q": 1,
+   "scene": "七五三の参道",
+   "level": "初級",
+   "go": "さあ、どうぞ。",
+   "prompt": "Scene: a stone-paved approach to a small shrine on a sunny late-autumn day during the Shichi-Go-San season, seen from a little distance, with a small red torii far in the back. No people. Spread the listed objects over the whole picture at the positions given, far apart from each other, never clustered. Draw every listed object SMALL, about half the size you would normally draw it, each standing on its own with plain background (wall, sky, floor) around it, not overlapping other objects. Objects: (upper left) a hanging paper lantern, plain without letters; (upper right) a small yuzu tree with a few yellow fruits; (middle) a small wooden stall table with long chitose-ame candy bags (plain red and white bags, no letters) standing in a basket; (lower left) a pair of small red zori sandals on a flat stone; (lower right) a small wooden bench with a folded furoshiki cloth on it.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {},
+   "program_ops": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "物がない",
+     "label": "ぞうりが片方ない",
+     "line": "ぞうりが、片方ありません。",
+     "box": [
+      428,
+      1558,
+      576,
+      1730
+     ],
+     "object_w": 135,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "増える",
+     "label": "ゆずの木に小鳥",
+     "line": "ゆずの木に、小鳥がとまりました。",
+     "box": [
+      1361,
+      270,
+      1506,
+      380
+     ],
+     "object_w": 132,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "物がない",
+     "label": "千歳飴の袋が1つへる",
+     "line": "千歳飴の袋が、ひとつへりました。",
+     "box": [
+      980,
+      849,
+      1133,
+      1022
+     ],
+     "object_w": 140,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else: (a) of the pair of red zori sandals on the stone, the right sandal is gone; (b) in the basket on the stall table, the rightmost red-and-white candy bag is gone; (c) the round paper lantern becomes a tall cylindrical lantern of the same width; (d) the small red torii in the background is gone; (e) the knot on top of the furoshiki bundle on the bench is gone (the bundle is a plain wrapped box); (f) the yuzu tree has a small bird sitting on its top branch."
+  },
+  {
+   "q": 2,
+   "scene": "床の間",
+   "level": "初級",
+   "go": "さあ、どうぞ。",
+   "prompt": "Scene: a Japanese tokonoma alcove in a tatami room, quiet and tidy, seen from a little distance. Spread the listed objects over the whole picture at the positions given, far apart from each other, never clustered. Draw every listed object SMALL, about half the size you would normally draw it, each standing on its own with plain background (wall, sky, floor) around it, not overlapping other objects. Objects: (upper left) a hanging scroll with a simple painting of a crane, no letters; (upper right) a small round window (shoji) with a yuzu branch outside; (middle) a low wooden stand with a small vase holding one branch; (lower left) a small plate with three yellow yuzu fruits on the tatami; (lower right) a small folded red and white chitose-ame bag (no letters) lying on a cushion.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   },
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "from_file": "edit_2_3.png",
+      "src": [
+       349,
+       477,
+       438,
+       562
+      ],
+      "dst": [
+       338,
+       470
+      ],
+      "width": 110,
+      "thr": 40
+     },
+     {
+      "op": "copy",
+      "src": [
+       360,
+       1560,
+       570,
+       1760
+      ],
+      "circle": [
+       463,
+       1664,
+       92
+      ],
+      "dst": [
+       1150,
+       1482
+      ],
+      "width": 125
+     }
+    ]
+   },
+   "diffs": [
+    {
+     "id": 1,
+     "type": "増える",
+     "label": "掛け軸に赤い太陽",
+     "line": "掛け軸に、赤いお日さまが出ました。",
+     "box": [
+      332,
+      464,
+      454,
+      586
+     ],
+     "object_w": 110,
+     "src": "p",
+     "note": "描き直し（版3）の小さな太陽を、プログラムで110pxに大きくして貼った（scripts/program_diffs.py）"
+    },
+    {
+     "id": 2,
+     "type": "形が変わる",
+     "label": "花びんが細長い",
+     "line": "花びんが、細長くなりました。",
+     "box": [
+      823,
+      671,
+      1089,
+      1199
+     ],
+     "object_w": 140,
+     "src": "1",
+     "note": "花びんと一緒に枝も描き直されたので、範囲は枝を含む"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "たたみにゆず",
+     "line": "たたみに、ゆずがひとつ増えました。",
+     "box": [
+      1144,
+      1474,
+      1282,
+      1612
+     ],
+     "object_w": 125,
+     "src": "p",
+     "note": "お皿のゆずをプログラムで円で切り抜いて貼った（scripts/program_diffs.py）"
+    }
+   ],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else: (a) the small vase on the low stand becomes a tall slim vase of the same color; (b) on the plate on the tatami, one of the three yuzu fruits is gone; (c) the crane in the hanging scroll now faces left; (d) the red and white chitose-ame bag on the cushion has its red stripes changed to blue stripes; (e) the tassel at the corner of the cushion is gone; (f) on the yuzu branch in the round window, one yuzu fruit is gone.",
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else: (a) in the painting of the hanging scroll, add a small red round sun in the upper right corner of the painting, about one sixteenth of the picture width; the crane stays the same; (b) on the plate on the tatami, the back (top) yuzu fruit is gone, so only the two front yuzu remain on the plate.",
+    "3": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else: (a) in the painting of the hanging scroll, add a red round sun in the UPPER LEFT part of the painting, above the crane's head, about one sixteenth of the picture width, fully inside the white paper; (b) on the tatami in the lower right, to the left of the red cushion, add one yuzu fruit with a small leaf, about one sixteenth of the picture width."
+   }
+  },
+  {
+   "q": 3,
+   "scene": "路面電車",
+   "level": "中級",
+   "go": "少しむずかしくなります。どうぞ。",
+   "prompt": "Scene: inside an old-fashioned Japanese streetcar (romen densha) in late autumn, empty, warm sunlight through the windows, seen from a little distance. Spread the listed objects over the whole picture at the positions given, far apart from each other, never clustered. Draw every listed object SMALL, about half the size you would normally draw it, each standing on its own with plain background (wall, sky, floor) around it, not overlapping other objects. Objects: (upper left) a row of hanging hand straps, each a small white ring; (upper right) a small round clock without numbers above the door; (middle) a wooden bench seat with a small wrapped bundle on it; (lower left) a small paper bag with two yuzu fruits on the floor; (lower right) a folded umbrella hooked on a pole. Through the windows: autumn trees. No text, no signs with letters.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {},
+   "program_ops": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "物がない",
+     "label": "つり革が1つない",
+     "line": "つり革が、ひとつありません。",
+     "box": [
+      389,
+      390,
+      480,
+      632
+     ],
+     "object_w": 78,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "向き",
+     "label": "時計の針の向き",
+     "line": "時計の針が、ちがう時刻を指しています。",
+     "box": [
+      1290,
+      350,
+      1400,
+      500
+     ],
+     "object_w": 110,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "ゆずが3つ",
+     "line": "ゆずが、ひとつ増えました。",
+     "box": [
+      347,
+      1428,
+      475,
+      1528
+     ],
+     "object_w": 115,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else: (a) of the row of hand straps, the second ring from the left is gone; (b) the small round clock above the door shows a different time (the long hand points down); (c) the wrapped bundle on the bench becomes a different pattern (white polka dots); (d) in the paper bag on the floor, there are three yuzu fruits instead of two; (e) the folded umbrella hanging on the pole is gone; (f) the window frame in the middle has one vertical bar fewer."
+  },
+  {
+   "q": 4,
+   "scene": "公民館",
+   "level": "中級",
+   "go": "後半です。どうぞ。",
+   "prompt": "Scene: a small community hall room (kominkan) in late autumn prepared for a seasonal gathering, wooden floor, a few folding tables, seen from a little distance. No people. Spread the listed objects over the whole picture at the positions given, far apart from each other, never clustered. Draw every listed object SMALL, about half the size you would normally draw it, each standing on its own with plain background (wall, sky, floor) around it, not overlapping other objects. Objects: (upper left) a paper garland of small colored triangles; (upper right) a round wall clock without numbers; (middle) a table with a tray of small round cups of tea and a plate of yuzu; (lower left) a stack of three floor cushions; (lower right) a small potted chrysanthemum-free green plant in a pot (no flowers). No text.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {
+    "2c": "scripts/custom/ep005_clean.py"
+   },
+   "program_ops": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "物がない",
+     "label": "飾りの三角が1つない",
+     "line": "飾りの三角が、ひとつありません。",
+     "box": [
+      70,
+      755,
+      205,
+      905
+     ],
+     "object_w": 94,
+     "src": "2c",
+     "note": "消した三角のうすい輪郭を scripts/custom/ep005_clean.py で地にうめた"
+    },
+    {
+     "id": 2,
+     "type": "向き",
+     "label": "時計の針の向き",
+     "line": "時計の針が、ちがう時刻を指しています。",
+     "box": [
+      1392,
+      622,
+      1535,
+      791
+     ],
+     "object_w": 115,
+     "src": "1",
+     "note": "物の幅は針の広がり"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "植木の葉が1枚増える",
+     "line": "植木の葉が、一枚増えました。",
+     "box": [
+      1494,
+      1245,
+      1614,
+      1360
+     ],
+     "object_w": 107,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else: (a) in the paper garland, one of the small triangles (the red one in the middle) becomes blue; (b) the round wall clock shows a different time (the long hand points down); (c) on the tray, one of the small tea cups is gone; (d) the top cushion of the stack has a different pattern (stripes); (e) the potted plant has one leaf more on the top; (f) on the plate, one yuzu is gone.",
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else: (a) in the paper garland, the leftmost small triangle (the red one at the left end) is gone, the string stays; (b) the stack of floor cushions has two cushions instead of three (the top cushion is gone)."
+   }
+  },
+  {
+   "q": 5,
+   "scene": "里山の小道",
+   "level": "上級",
+   "go": "最後の問題です。じっくりどうぞ。",
+   "prompt": "Scene: a narrow path through a satoyama countryside in late autumn, with a small yuzu tree full of small yellow fruits, a bamboo fence, a little stream with stepping stones, a straw hat on a fence post, and distant hills. Many small details. Spread the listed objects over the whole picture at the positions given, far apart from each other, never clustered. Draw every listed object SMALL, about half the size you would normally draw it, each standing on its own with plain background (wall, sky, floor) around it, not overlapping other objects. Objects: (upper left) a small kite caught in a tree; (upper right) two small birds on a wire; (middle) the yuzu tree with many small yellow fruits; (lower left) three stepping stones in the stream; (lower right) a small wooden signpost without letters and a basket of yuzu.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {
+    "1c": "scripts/custom/ep005_clean.py"
+   },
+   "program_ops": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "物がない",
+     "label": "柿が1つへる",
+     "line": "柿が、ひとつへりました。",
+     "box": [
+      1622,
+      262,
+      1735,
+      364
+     ],
+     "object_w": 56,
+     "src": "1c",
+     "note": "いちばん下の柿だけを、元の絵から scripts/custom/ep005_clean.py で消した（へたと枝は残す。画像APIの描き直しは2つ消したので使わない）"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "帽子のリボンが赤",
+     "line": "帽子のリボンが、赤くなりました。",
+     "box": [
+      1029,
+      1229,
+      1168,
+      1476
+     ],
+     "object_w": 60,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "川に小石",
+     "line": "川に、小石がひとつ増えました。",
+     "box": [
+      614,
+      1675,
+      705,
+      1748
+     ],
+     "object_w": 70,
+     "src": "2"
+    }
+   ],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else: (a) the tail ribbon of the kite in the tree is gone; (b) of the two small birds on the wire, the left bird is gone; (c) the straw hat on the fence post has a red ribbon instead of a blue one; (d) one of the three stepping stones in the stream is gone; (e) the small wooden signpost has a second small board below the first; (f) one of the hanging persimmons at the upper right is gone.",
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else: (a) in the stream, add one small round grey pebble, about one fiftieth of the picture width, in the water to the right of the stepping stones; (b) the small wooden signpost loses its small pointed top."
+   }
+  }
+ ],
+ "thumbnail": {
+  "question": 3,
+  "big_text": "秋の間違いさがし",
+  "highlight": "間違いさがし",
+  "highlight_color": [
+   255,
+   214,
+   0
+  ],
+  "big_color": [
+   255,
+   255,
+   255
+  ],
+  "band_color": [
+   25,
+   35,
+   70
+  ],
+  "big_size": 132,
+  "sub_text": "3つ見つけられる？全5問",
+  "badges": [
+   [
+    "初級〜上級",
+    [
+     176,
+     62,
+     52
+    ]
+   ]
+  ],
+  "circle_hint": false,
+  "note": "第1回と同じ型（変えた所なし）。左右に同じ絵・上に濃紺の帯で「秋の間違いさがし」・下に難易度と問いかけ。こよみ先生は入れない"
+ },
+ "short": {
+  "question": 4,
+  "answer_gap": 3.5,
+  "note": "knowledge/shorts.md。違いがショートの画面下の文字にかからない第4問（最も下の葉が y≈1530）"
+ }
+}
