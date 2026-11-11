@@ -343,6 +343,10 @@
    "かびん"
   ],
   [
+   "木の頭",
+   "きのあたま"
+  ],
+  [
    "初級",
    "しょきゅう"
   ],
@@ -485,6 +489,10 @@
   [
    "針",
    "はり"
+  ],
+  [
+   "梁",
+   "はり"
   ]
  ],
  "voice_override": {
@@ -587,7 +595,8 @@
    ],
    "retries": {},
    "program_edits": {
-    "p": "scripts/program_diffs.py"
+    "p": "scripts/program_diffs.py",
+    "1v": "scripts/custom/ep005_clean.py"
    },
    "program_ops": {
     "p": [
@@ -621,8 +630,8 @@
        92
       ],
       "dst": [
-       1150,
-       1482
+       1140,
+       1545
       ],
       "width": 125
      }
@@ -647,17 +656,17 @@
     {
      "id": 2,
      "type": "形が変わる",
-     "label": "花びんが細長い",
-     "line": "花びんが、細長くなりました。",
+     "label": "花びんが細い",
+     "line": "花びんが、細くなりました。",
      "box": [
-      823,
-      671,
-      1089,
-      1199
+      845,
+      1015,
+      1010,
+      1185
      ],
-     "object_w": 140,
-     "src": "1",
-     "note": "花びんと一緒に枝も描き直されたので、範囲は枝を含む"
+     "object_w": 136,
+     "src": "1v",
+     "note": "描き直しは枝まで変わったので使わず、元の絵の花びんの胴だけをプログラムで細くした（scripts/custom/ep005_clean.py、監査の差し戻し1）。枝は元の絵のまま"
     },
     {
      "id": 3,
@@ -665,10 +674,10 @@
      "label": "たたみにゆず",
      "line": "たたみに、ゆずがひとつ増えました。",
      "box": [
-      1144,
-      1474,
-      1282,
-      1612
+      1134,
+      1537,
+      1272,
+      1675
      ],
      "object_w": 125,
      "src": "p",
@@ -781,18 +790,19 @@
     },
     {
      "id": 2,
-     "type": "向き",
-     "label": "時計の針の向き",
-     "line": "時計の針が、ちがう時刻を指しています。",
+     "type": "物がない",
+     "label": "梁の上の木の頭がない",
+     "line": "梁から出ている、木の頭がありません。",
      "box": [
-      1392,
-      622,
-      1535,
-      791
+      1503,
+      236,
+      1580,
+      296
      ],
-     "object_w": 115,
-     "src": "1",
-     "note": "物の幅は針の広がり"
+     "object_w": 71,
+     "src": "3",
+     "feather": 8,
+     "note": "AIの描き直し（版3）は斜めの木（方づえ）ごと消したので、梁から上に出た四角い木の頭の所だけを貼った。時計の針の向き（前の回とくり返し）から差し替え（監査の注意）"
     },
     {
      "id": 3,
@@ -812,7 +822,8 @@
    "hint_diff": null,
    "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else: (a) in the paper garland, one of the small triangles (the red one in the middle) becomes blue; (b) the round wall clock shows a different time (the long hand points down); (c) on the tray, one of the small tea cups is gone; (d) the top cushion of the stack has a different pattern (stripes); (e) the potted plant has one leaf more on the top; (f) on the plate, one yuzu is gone.",
    "edit_prompts": {
-    "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else: (a) in the paper garland, the leftmost small triangle (the red one at the left end) is gone, the string stays; (b) the stack of floor cushions has two cushions instead of three (the top cushion is gone)."
+    "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else: (a) in the paper garland, the leftmost small triangle (the red one at the left end) is gone, the string stays; (b) the stack of floor cushions has two cushions instead of three (the top cushion is gone).",
+    "3": "Edit this illustration and make exactly this one small change, and nothing else: in the upper right, the short slanted wooden brace between the horizontal roof beam and the vertical wooden pillar (above the clock) is gone, showing the plain beam and the wall/pillar behind it. Keep the clock and everything else exactly the same."
    }
   },
   {

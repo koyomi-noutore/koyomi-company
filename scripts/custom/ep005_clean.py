@@ -56,3 +56,26 @@ sm = np.asarray(Image.fromarray(B.astype(np.uint8)).filter(ImageFilter.GaussianB
 B[fruit] = sm[fruit]
 out = a_im.copy(); out.paste(Image.fromarray(np.clip(B, 0, 255).astype(np.uint8)), R5[:2])
 out.save(w / "edit_5_1c.png")
+
+# 第2問：花びんの描き直しで枝・ゆずまで変わった（監査の差し戻し1）。描き直しは使わず、元の絵の花びんの胴だけを横に細くする（枝はそのまま）
+a2_im = Image.open(w / "q2_a.png").convert("RGB")
+A2 = np.asarray(a2_im).astype(float)
+B2 = A2.copy()
+K = 0.62                     # 細くする割合
+rng = np.random.default_rng(5)
+for y in range(1022, 1196):        # 花びんの胴だけ（下の台のふち・影の行は入れない）
+    L = A2[y, 855:1002].mean(1)
+    dark = np.nonzero(L < 130)[0]
+    if len(dark) < 2 or dark.max() - dark.min() < 30:
+        continue
+    l, r = 855 + dark.min(), 855 + dark.max()
+    left, right = A2[y, l - 6], A2[y, r + 6]
+    t = np.linspace(0, 1, r - l + 13)[:, None]
+    B2[y, l - 6:r + 7] = left * (1 - t) + right * t + rng.normal(0, 1.5, (r - l + 13, 3))   # 花びんのない背景（壁・台）
+    seg = A2[y, l - 1:r + 2]
+    nw = max(3, round(seg.shape[0] * K))
+    xs = np.linspace(0, seg.shape[0] - 1, nw)
+    sq = np.stack([np.interp(xs, np.arange(seg.shape[0]), seg[:, c]) for c in range(3)], 1)
+    c0 = round((l + r) / 2 - nw / 2)
+    B2[y, c0:c0 + nw] = sq
+Image.fromarray(np.clip(B2, 0, 255).astype(np.uint8)).save(w / "edit_2_1v.png")

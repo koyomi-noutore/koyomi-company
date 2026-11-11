@@ -177,8 +177,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 20,
-   "outside_box_max_distance_px": 4.0,
+   "outside_box_pixels_diff_gt15": 215,
+   "outside_box_max_distance_px": 8.0,
    "answers": [
     {
      "id": 1,
@@ -220,39 +220,39 @@
     {
      "id": 2,
      "type": "形が変わる",
-     "label": "花びんが細長い",
-     "line": "花びんが、細長くなりました。",
+     "label": "花びんが細い",
+     "line": "花びんが、細くなりました。",
      "box_px": [
-      823,
-      671,
-      1089,
-      1199
+      845,
+      1015,
+      1010,
+      1185
      ],
      "box_screen": [
-      426,
-      347,
-      563,
-      620
+      437,
+      525,
+      522,
+      613
      ],
      "circle_a_screen": [
-      426,
-      347,
-      563,
-      620
+      437,
+      525,
+      522,
+      613
      ],
      "circle_b_screen": [
-      426,
-      347,
-      563,
-      620
+      437,
+      525,
+      522,
+      613
      ],
-     "object_w_px": 140,
-     "object_screen_width_pct": 3.77,
+     "object_w_px": 136,
+     "object_screen_width_pct": 3.66,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "1v",
      "made_by": "gemini",
-     "note": "花びんと一緒に枝も描き直されたので、範囲は枝を含む"
+     "note": "描き直しは枝まで変わったので使わず、元の絵の花びんの胴だけをプログラムで細くした（scripts/custom/ep005_clean.py、監査の差し戻し1）。枝は元の絵のまま"
     },
     {
      "id": 3,
@@ -260,28 +260,28 @@
      "label": "たたみにゆず",
      "line": "たたみに、ゆずがひとつ増えました。",
      "box_px": [
-      1144,
-      1474,
-      1282,
-      1612
+      1134,
+      1537,
+      1272,
+      1675
      ],
      "box_screen": [
-      592,
-      762,
-      663,
-      834
+      587,
+      795,
+      658,
+      866
      ],
      "circle_a_screen": [
-      592,
-      762,
-      663,
-      834
+      587,
+      795,
+      658,
+      866
      ],
      "circle_b_screen": [
-      592,
-      762,
-      663,
-      834
+      587,
+      795,
+      658,
+      866
      ],
      "object_w_px": 125,
      "object_screen_width_pct": 3.37,
@@ -441,8 +441,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 172,
-   "outside_box_max_distance_px": 9.0,
+   "outside_box_pixels_diff_gt15": 162,
+   "outside_box_max_distance_px": 8.0,
    "answers": [
     {
      "id": 1,
@@ -483,40 +483,40 @@
     },
     {
      "id": 2,
-     "type": "向き",
-     "label": "時計の針の向き",
-     "line": "時計の針が、ちがう時刻を指しています。",
+     "type": "物がない",
+     "label": "梁の上の木の頭がない",
+     "line": "梁から出ている、木の頭がありません。",
      "box_px": [
-      1392,
-      622,
-      1535,
-      791
+      1503,
+      236,
+      1580,
+      296
      ],
      "box_screen": [
-      720,
-      322,
-      794,
-      409
+      777,
+      122,
+      817,
+      153
      ],
      "circle_a_screen": [
-      720,
-      322,
-      794,
-      409
+      777,
+      122,
+      817,
+      153
      ],
      "circle_b_screen": [
-      720,
-      322,
-      794,
-      409
+      777,
+      122,
+      817,
+      153
      ],
-     "object_w_px": 115,
-     "object_screen_width_pct": 3.1,
+     "object_w_px": 71,
+     "object_screen_width_pct": 1.91,
      "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "3",
      "made_by": "gemini",
-     "note": "物の幅は針の広がり"
+     "note": "AIの描き直し（版3）は斜めの木（方づえ）ごと消したので、梁から上に出た四角い木の頭の所だけを貼った。時計の針の向き（前の回とくり返し）から差し替え（監査の注意）"
     },
     {
      "id": 3,
