@@ -31,6 +31,7 @@
   short                       ショート（knowledge/shorts.md）：plan.json の short.question の1問を縦1080×1920に（上下2枚・15〜45秒・
                               最後に長尺へ案内）。声→音→動画→説明欄→数値チェック→一覧画像。画像APIは使わない
   short-voice [id ...]        ショートの声だけを作り直して、映像はそのままで音を入れ替える（id を書くとそのセリフだけ、省くと全部）
+  retitle [サムネ]             アップ済みの動画のタイトル（description.md）とサムネ（既定 thumbnail_v3.jpg）だけを差し替える（説明欄・タグは変えない）
   short-upload                ショートを非公開でアップロード（<回>/short/audit_passed と、長尺の <回>/upload.json が必要）
 
 費用の記録：画像APIは <回>/image_usage.jsonl、声は <作業>/voice/usage.jsonl に自動で残る。cost.md は制作部が書く。
@@ -202,6 +203,9 @@ def main():
         check(ep, work)
     elif step == "upload":
         upload(ep)
+    elif step == "retitle":
+        import youtube_upload as U
+        U.retitle_and_thumbnail(ep, ep / (args[0] if args else "thumbnail_v3.jpg"))
     elif step == "short":
         import ep_short as S
         font = setup(work)

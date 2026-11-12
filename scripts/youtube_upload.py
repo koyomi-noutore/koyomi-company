@@ -115,5 +115,29 @@ def upload(folder, thumbnail=None, short=False):
     print(json.dumps(rec, ensure_ascii=False))
 
 
+def retitle_and_thumbnail(folder, thumbnail):
+    """公開済み・アップロード済みの動画の、タイトルだけとサムネを差し替える（2026-11-12 立て直し・CEO承認）。
+    videos.update の snippet は全体を置き換えるので、いまの snippet を読んでタイトルだけ変えて送る（説明欄・タグは変えない）。"""
+    folder = Path(folder)
+    vid = json.loads((folder / "upload.json").read_text(encoding="utf-8"))["video_id"]
+    title = read_metadata(folder / "description.md")[0]
+    tok = access_token()
+    with urllib.request.urlopen(urllib.request.Request(f"https://www.googleapis.com/youtube/v3/videos?part=snippet&id={vid}",
+                                                       headers={"Authorization": "Bearer " + tok}), timeout=60) as r:
+        sn = json.load(r)["items"][0]["snippet"]
+    old = sn["title"]
+    body = {"id": vid, "snippet": {k: sn[k] for k in ("title", "description", "tags", "categoryId", "defaultLanguage", "defaultAudioLanguage") if k in sn}}
+    body["snippet"]["title"] = title
+    req = urllib.request.Request("https://www.googleapis.com/youtube/v3/videos?part=snippet", data=json.dumps(body).encode(), method="PUT",
+                                 headers={"Authorization": "Bearer " + tok, "Content-Type": "application/json; charset=UTF-8"})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        new = json.load(r)["snippet"]["title"]
+    th = set_thumbnail(vid, thumbnail, tok)
+    rec = {"video_id": vid, "old_title": old, "title": new, "thumbnail": str(Path(thumbnail).name), "thumbnail_set": bool(th.get("items"))}
+    with open(folder / "retitle_log.jsonl", "a", encoding="utf-8") as f:
+        f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+    print(json.dumps(rec, ensure_ascii=False))
+
+
 if __name__ == "__main__":
     sys.exit("scripts/make_episode.py <回> upload を使ってください（監査の合格とサムネを確かめてから送る）")
