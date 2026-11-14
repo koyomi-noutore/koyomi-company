@@ -53,20 +53,20 @@
   {
    "id": "s_ans2",
    "start": 29.900000000000002,
-   "dur": 1.7,
+   "dur": 2.25,
    "slot": 3.3,
    "fits": true,
-   "subtitle": "大根おろしが、ありません。",
-   "voice_text": "だいこんおろしが、ありません。"
+   "subtitle": "お皿の、すだちがありません。",
+   "voice_text": "お皿の、すだちがありません。"
   },
   {
    "id": "s_ans3",
    "start": 33.2,
-   "dur": 2.36,
+   "dur": 2.51,
    "slot": 4.1,
    "fits": true,
-   "subtitle": "すだちが、ひとつ増えました。",
-   "voice_text": "すだちが、ひとつ増えました。"
+   "subtitle": "お盆の上に、すだちが増えました。",
+   "voice_text": "おぼんの上に、すだちが増えました。"
   },
   {
    "id": "s_end",

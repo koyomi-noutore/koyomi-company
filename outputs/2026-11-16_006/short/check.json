@@ -25,13 +25,11 @@
    "rms_db": -15.1
   }
  },
- "duration": 45.1,
+ "duration": 44.2,
  "size": [
   1080,
   1920
  ],
  "question": 4,
- "problems": [
-  "長さ 45.1秒 が15〜45秒の外"
- ]
+ "problems": []
 }

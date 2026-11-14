@@ -4,10 +4,10 @@
   1920
  ],
  "fps": 30,
- "total_sec": 45.1,
+ "total_sec": 44.2,
  "question": 4,
  "solve_sec": 25.0,
- "end_card_at": 37.5,
+ "end_card_at": 36.6,
  "pictures": {
   "a": [
    180,
@@ -45,32 +45,32 @@
    "id": "s_ans1",
    "start": 26.6,
    "dur": 2.87,
-   "slot": 3.5,
+   "slot": 3.2,
    "fits": true,
    "subtitle": "灯台のてっぺんの形が、変わりました。",
    "voice_text": "とうだいのてっぺんの形が、変わりました。"
   },
   {
    "id": "s_ans2",
-   "start": 30.1,
+   "start": 29.8,
    "dur": 2.57,
-   "slot": 3.5,
+   "slot": 3.2,
    "fits": true,
    "subtitle": "干したさんまが、一匹へりました。",
    "voice_text": "ほしたさんまが、いっぴきへりました。"
   },
   {
    "id": "s_ans3",
-   "start": 33.6,
+   "start": 33.0,
    "dur": 2.12,
-   "slot": 4.3,
+   "slot": 4.0,
    "fits": true,
    "subtitle": "カモメが、一羽増えました。",
    "voice_text": "カモメが、いちわ増えました。"
   },
   {
    "id": "s_end",
-   "start": 37.9,
+   "start": 37.0,
    "dur": 6.8,
    "slot": 7.2,
    "fits": true,
