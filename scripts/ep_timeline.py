@@ -14,6 +14,7 @@ Q_START = {int(k): v for k, v in _T["q_start"].items()}
 CARD, SOLVE, ANSWER = _T["card"], _T["solve"], _T["answer"]
 HINT_AT, TEN_AT = _T.get("hint_at"), _T["ten_at"]      # 出題の頭からの秒。hint_at が null ならヒントなし（2026-11-07 CEO決定で標準はヒントなし）
 ANS_FIRST, ANS_STEP = _T["ans_first"], _T["ans_step"]
+CTA = tuple(_T["cta"]) if _T.get("cta") else None     # 登録のお願いの区切り（2026-11-14 CEO指示：1問目の答え合わせの直後）
 QUESTIONS = {q: {"scene": Q["scene"], "level": Q["level"], "go": Q["go"], "hint": Q.get("hint"),
                  "answers": [d["line"] for d in Q["diffs"]], "answers_intro": Q.get("answers_intro", "答えです。")}
              for q, Q in questions().items()}
@@ -46,7 +47,7 @@ def lines():
         L.append((f"q{q}_ans0", a, Q["answers_intro"], "smile", a + ANS_FIRST))
         for i, line in enumerate(Q["answers"]):
             L.append((f"q{q}_ans{i + 1}", a + ANS_FIRST + ANS_STEP * i, line, "smile", a + ANS_FIRST + ANS_STEP * (i + 1)))
-    for part, base in (("unchiku", UNCHIKU[0]), ("ending", ENDING[0])):
+    for part, base in (("unchiku", UNCHIKU[0]), ("ending", ENDING[0])) + ((("cta", CTA[0]),) if CTA else ()):
         L += [(x["id"], base + x["at"], x["text"], x["face"], base + x["until"]) for x in Ls[part]]
     # 決まった時刻に入れるセリフ（例：中盤のコメントのお願い）。lines.extra の at・until は動画の頭からの秒
     L += [(x["id"], x["at"], x["text"], x.get("face", "smile"), x["until"]) for x in Ls.get("extra", [])]
@@ -65,7 +66,7 @@ VOICE_TEXT = {ln[0]: to_voice(ln[0], ln[2]) for ln in lines()}
 
 def export(path):
     """編集の設計（タイムライン）を JSON で書き出す（リポジトリに残す素材）。"""
-    data = {"total_sec": TOTAL, "fps": 30, "opening": OPENING, "rule": RULE, "unchiku": UNCHIKU, "ending": ENDING,
+    data = {"total_sec": TOTAL, "fps": 30, "opening": OPENING, "rule": RULE, "unchiku": UNCHIKU, "ending": ENDING, "cta": CTA,
             "questions": {q: {"start": Q_START[q], "card": [Q_START[q], Q_START[q] + CARD],
                               "solve": [Q_START[q] + CARD, Q_START[q] + CARD + SOLVE],
                               "hint_at": None if HINT_AT is None else Q_START[q] + CARD + HINT_AT, "ten_sec_at": Q_START[q] + CARD + TEN_AT,

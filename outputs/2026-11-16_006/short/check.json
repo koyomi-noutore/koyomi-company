@@ -22,14 +22,16 @@
   },
   "s_end": {
    "clipped": 0,
-   "rms_db": -14.9
+   "rms_db": -15.1
   }
  },
- "duration": 43.5,
+ "duration": 45.1,
  "size": [
   1080,
   1920
  ],
  "question": 4,
- "problems": []
+ "problems": [
+  "長さ 45.1秒 が15〜45秒の外"
+ ]
 }

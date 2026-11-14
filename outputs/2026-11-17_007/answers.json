@@ -1,0 +1,697 @@
+{
+ "screen": {
+  "size": [
+   1920,
+   1080
+  ],
+  "picture_size_on_screen": [
+   960,
+   1080
+  ],
+  "safe_y_on_screen": [
+   54,
+   918
+  ],
+  "level_range_pct_of_screen_width": {
+   "やさしい": [
+    4.0,
+    6.0
+   ],
+   "初級": [
+    3.0,
+    4.0
+   ],
+   "中級": [
+    2.0,
+    3.0
+   ],
+   "上級": [
+    1.5,
+    2.0
+   ]
+  }
+ },
+ "note": "box_px・circle_px は 8:9 に切り抜いた高解像度の絵（qN_a.png、1856×2088）のピクセル。content_px はそのうち画面に出す範囲（白いふちを除いた8:9）。*_screen は画面の上での座標（右の絵は x に960を足す）。object_screen_width_pct は、変わる物そのものの幅を画面幅で割った値。",
+ "questions": [
+  {
+   "q": 1,
+   "scene": "おでんの屋台",
+   "level": "やさしい",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    52,
+    58,
+    1805,
+    2030
+   ],
+   "scale_to_screen": 0.54763,
+   "outside_box_pixels_diff_gt15": 235,
+   "outside_box_max_distance_px": 9.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "形が変わる",
+     "label": "大根がたまごに",
+     "line": "大根が、たまごになりました。",
+     "box_px": [
+      300,
+      980,
+      575,
+      1220
+     ],
+     "box_screen": [
+      136,
+      505,
+      286,
+      636
+     ],
+     "circle_a_screen": [
+      136,
+      505,
+      286,
+      636
+     ],
+     "circle_b_screen": [
+      136,
+      505,
+      286,
+      636
+     ],
+     "object_w_px": 205,
+     "object_screen_width_pct": 5.85,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "3",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "物がない",
+     "label": "とっくりがない",
+     "line": "とっくりが、ありません。",
+     "box_px": [
+      1355,
+      335,
+      1630,
+      855
+     ],
+     "box_screen": [
+      714,
+      152,
+      864,
+      436
+     ],
+     "circle_a_screen": [
+      714,
+      152,
+      864,
+      436
+     ],
+     "circle_b_screen": [
+      714,
+      152,
+      864,
+      436
+     ],
+     "object_w_px": 150,
+     "object_screen_width_pct": 4.28,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "5",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "からしの小皿が増える",
+     "line": "からしの小皿が、ひとつ増えました。",
+     "box_px": [
+      1620,
+      1308,
+      1800,
+      1470
+     ],
+     "box_screen": [
+      859,
+      685,
+      957,
+      773
+     ],
+     "circle_a_screen": [
+      859,
+      685,
+      957,
+      773
+     ],
+     "circle_b_screen": [
+      859,
+      685,
+      957,
+      773
+     ],
+     "object_w_px": 160,
+     "object_screen_width_pct": 4.56,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": "プログラムで足した（scripts/program_diffs.py）"
+    }
+   ]
+  },
+  {
+   "q": 2,
+   "scene": "畑",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 0,
+   "outside_box_max_distance_px": 0.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "増える",
+     "label": "チョウが飛ぶ",
+     "line": "チョウが、飛んでいます。",
+     "box_px": [
+      140,
+      590,
+      290,
+      735
+     ],
+     "box_screen": [
+      72,
+      305,
+      150,
+      380
+     ],
+     "circle_a_screen": [
+      72,
+      305,
+      150,
+      380
+     ],
+     "circle_b_screen": [
+      72,
+      305,
+      150,
+      380
+     ],
+     "object_w_px": 126,
+     "object_screen_width_pct": 3.39,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": "プログラムで足した（scripts/program_diffs.py）"
+    },
+    {
+     "id": 2,
+     "type": "増える",
+     "label": "小鳥が増える",
+     "line": "小鳥が、一羽増えました。",
+     "box_px": [
+      1440,
+      1130,
+      1580,
+      1262
+     ],
+     "box_screen": [
+      745,
+      584,
+      817,
+      653
+     ],
+     "circle_a_screen": [
+      745,
+      584,
+      817,
+      653
+     ],
+     "circle_b_screen": [
+      745,
+      584,
+      817,
+      653
+     ],
+     "object_w_px": 128,
+     "object_screen_width_pct": 3.45,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": "プログラムで足した（scripts/program_diffs.py）（さくの小鳥を左右反対にして小さく）"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "にんじんが増える",
+     "line": "にんじんが、増えました。",
+     "box_px": [
+      970,
+      1590,
+      1135,
+      1695
+     ],
+     "box_screen": [
+      502,
+      822,
+      587,
+      877
+     ],
+     "circle_a_screen": [
+      502,
+      822,
+      587,
+      877
+     ],
+     "circle_b_screen": [
+      502,
+      822,
+      587,
+      877
+     ],
+     "object_w_px": 145,
+     "object_screen_width_pct": 3.91,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": "プログラムで足した（scripts/program_diffs.py）"
+    }
+   ]
+  },
+  {
+   "q": 3,
+   "scene": "銭湯",
+   "level": "中級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 0,
+   "outside_box_max_distance_px": 0.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "増える",
+     "label": "もみじが1枚増える",
+     "line": "もみじが、一枚増えました。",
+     "box_px": [
+      90,
+      1112,
+      220,
+      1245
+     ],
+     "box_screen": [
+      47,
+      575,
+      114,
+      644
+     ],
+     "circle_a_screen": [
+      47,
+      575,
+      114,
+      644
+     ],
+     "circle_b_screen": [
+      47,
+      575,
+      114,
+      644
+     ],
+     "object_w_px": 95,
+     "object_screen_width_pct": 2.56,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "増える",
+     "label": "のれんにもみじ",
+     "line": "右上に、もみじがもう一枚あります。",
+     "box_px": [
+      1475,
+      712,
+      1596,
+      820
+     ],
+     "box_screen": [
+      763,
+      368,
+      826,
+      424
+     ],
+     "circle_a_screen": [
+      763,
+      368,
+      826,
+      424
+     ],
+     "circle_b_screen": [
+      763,
+      368,
+      826,
+      424
+     ],
+     "object_w_px": 90,
+     "object_screen_width_pct": 2.42,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": "プログラムで足した（scripts/program_diffs.py）"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "どんぐりが増える",
+     "line": "どんぐりが、ひとつ増えました。",
+     "box_px": [
+      1053,
+      1640,
+      1155,
+      1746
+     ],
+     "box_screen": [
+      545,
+      848,
+      597,
+      903
+     ],
+     "circle_a_screen": [
+      545,
+      848,
+      597,
+      903
+     ],
+     "circle_b_screen": [
+      545,
+      848,
+      597,
+      903
+     ],
+     "object_w_px": 85,
+     "object_screen_width_pct": 2.29,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": "プログラムで足した（scripts/program_diffs.py）"
+    }
+   ]
+  },
+  {
+   "q": 4,
+   "scene": "紅葉狩りの川辺",
+   "level": "中級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 1040,
+   "outside_box_max_distance_px": 8.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "増える",
+     "label": "たまごが増える",
+     "line": "たまごが、ひとつ増えました。",
+     "box_px": [
+      843,
+      904,
+      1048,
+      1101
+     ],
+     "box_screen": [
+      436,
+      468,
+      542,
+      569
+     ],
+     "circle_a_screen": [
+      436,
+      468,
+      542,
+      569
+     ],
+     "circle_b_screen": [
+      436,
+      468,
+      542,
+      569
+     ],
+     "object_w_px": 115,
+     "object_screen_width_pct": 3.1,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "増える",
+     "label": "川にもみじ",
+     "line": "川に、もみじが流れています。",
+     "box_px": [
+      1622,
+      726,
+      1788,
+      866
+     ],
+     "box_screen": [
+      839,
+      376,
+      925,
+      448
+     ],
+     "circle_a_screen": [
+      839,
+      376,
+      925,
+      448
+     ],
+     "circle_b_screen": [
+      839,
+      376,
+      925,
+      448
+     ],
+     "object_w_px": 95,
+     "object_screen_width_pct": 2.56,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "2",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "敷物にもみじ",
+     "line": "敷物に、もみじが一枚増えました。",
+     "box_px": [
+      814,
+      1575,
+      922,
+      1681
+     ],
+     "box_screen": [
+      421,
+      815,
+      477,
+      869
+     ],
+     "circle_a_screen": [
+      421,
+      815,
+      477,
+      869
+     ],
+     "circle_b_screen": [
+      421,
+      815,
+      477,
+      869
+     ],
+     "object_w_px": 90,
+     "object_screen_width_pct": 2.42,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": "プログラムで足した（scripts/program_diffs.py）"
+    }
+   ]
+  },
+  {
+   "q": 5,
+   "scene": "お寺の山門",
+   "level": "上級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 168,
+   "outside_box_max_distance_px": 9.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "物がない",
+     "label": "ちょうちんの金具がない",
+     "line": "ちょうちんの上の金具が、ありません。",
+     "box_px": [
+      485,
+      240,
+      590,
+      356
+     ],
+     "box_screen": [
+      251,
+      124,
+      305,
+      184
+     ],
+     "circle_a_screen": [
+      251,
+      124,
+      305,
+      184
+     ],
+     "circle_b_screen": [
+      251,
+      124,
+      305,
+      184
+     ],
+     "object_w_px": 60,
+     "object_screen_width_pct": 1.62,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "2",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "増える",
+     "label": "いちょうの葉が1枚増える",
+     "line": "いちょうの葉が、一枚増えました。",
+     "box_px": [
+      1470,
+      680,
+      1560,
+      770
+     ],
+     "box_screen": [
+      760,
+      352,
+      807,
+      398
+     ],
+     "circle_a_screen": [
+      760,
+      352,
+      807,
+      398
+     ],
+     "circle_b_screen": [
+      760,
+      352,
+      807,
+      398
+     ],
+     "object_w_px": 66,
+     "object_screen_width_pct": 1.78,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": "プログラムで足した（葉を消すと軸が残るため、足す形にした）"
+    },
+    {
+     "id": 3,
+     "type": "物がない",
+     "label": "もみじが1枚ない",
+     "line": "小さなもみじが、一枚ありません。",
+     "box_px": [
+      108,
+      1136,
+      220,
+      1224
+     ],
+     "box_screen": [
+      56,
+      588,
+      114,
+      633
+     ],
+     "circle_a_screen": [
+      56,
+      588,
+      114,
+      633
+     ],
+     "circle_b_screen": [
+      56,
+      588,
+      114,
+      633
+     ],
+     "object_w_px": 70,
+     "object_screen_width_pct": 1.89,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "leaf",
+     "made_by": "gemini",
+     "note": "プログラムで消した（scripts/custom/ep007_fix.py）"
+    }
+   ]
+  }
+ ]
+}

@@ -26,7 +26,7 @@ OWL_SIZE = 420
 LEVEL_COLOR = {"やさしい": (70, 140, 190), "初級": (96, 150, 90), "中級": (214, 128, 48), "上級": (176, 62, 52)}
 LEVEL_STARS = {"やさしい": "☆☆☆", "初級": "★☆☆", "中級": "★★☆", "上級": "★★★"}
 RED = (220, 30, 30)
-OWL_SEGMENTS = ("op", "unchiku", "end")   # こよみ先生の絵を出す場面
+OWL_SEGMENTS = ("op", "unchiku", "end", "cta")   # こよみ先生の絵を出す場面
 # こよみ先生の位置（2026-11-12 CEO指示）：plan.json の screens.owl_layout が "bottom" なら、画面の左下に置き、字幕をそのすぐ右に出す
 OWL_BOTTOM = 340
 
@@ -92,7 +92,7 @@ def owl_img(face, angle_q, size=OWL_SIZE):
 
 def face_at(t):
     if "faces" not in CTX:
-        CTX["faces"] = sorted((ln[1], ln[3]) for ln in CTX["lines"] if ln[0][0] in "oue")
+        CTX["faces"] = sorted((ln[1], ln[3]) for ln in CTX["lines"] if ln[0][0] in "ouec")
     f = "smile"
     for t0, face in CTX["faces"]:
         if t0 <= t:
@@ -458,10 +458,13 @@ def render_rule(t):
 
 
 def render_ending(t):
+    dt = t - T.ENDING[0]
+    es = plan()["screens"].get("endscreen_at")      # エンディングの頭からこの秒数より後は、終了画面の型の画面
+    if es is not None and dt >= es:
+        return render_endscreen(t, dt)
     im = Image.new("RGB", (W, H), BG)
     d = ImageDraw.Draw(im)
-    dt = t - T.ENDING[0]
-    if dt < 4.5:
+    if dt < (0 if es is not None else 4.5):
         leaves(d, t, n=40, seed=7, colors=((214, 80, 50), (232, 176, 48), (96, 150, 90), (90, 120, 200)))
         cx = 1060 if owl_bottom() else 700
         text_center(d, (cx, 380), "おつかれさまでした", 130, stroke=6, stroke_fill=(255, 250, 238))
@@ -482,7 +485,35 @@ def render_ending(t):
     return im
 
 
+def render_cta(t):
+    """登録のお願い（2026-11-14 CEO指示）：理由つき。画面に大きく「毎朝8時半に新しい問題が届きます」。先生は左下・字幕の横。"""
+    im = Image.new("RGB", (W, H), (250, 240, 222))
+    d = ImageDraw.Draw(im)
+    leaves(d, t, n=10, seed=5)
+    for text, x, y, size, col, stroke in plan()["screens"].get("cta_texts", [
+            ["チャンネル登録 と ベル", 960, 260, 110, [180, 70, 40], 6],
+            ["毎朝8時半に 新しい問題が届きます", 960, 450, 84, [59, 47, 37], 0],
+            ["毎日の 頭の体操の習慣に", 960, 590, 72, [110, 84, 60], 0]]):
+        text_center(d, (x, y), text, size, fill=tuple(col), stroke=stroke, stroke_fill=(255, 250, 238) if stroke else None)
+    draw_owl_and_sub(im, t, (W - OWL_SIZE - 40, H - OWL_SIZE - 30), (20, 1400, H - 24))
+    return im
+
+
+def render_endscreen(t, dt):
+    """エンディングの最後：YouTubeの終了画面の型「左にチャンネル登録の丸・右に動画の枠」の位置を空けておく（2026-11-14 CEO指示）。
+    「おつかれさまでした」は上部中央に小さく。こよみ先生は画面下中央、字幕の横。"""
+    im = Image.new("RGB", (W, H), BG)
+    d = ImageDraw.Draw(im)
+    text_center(d, (W / 2, 70), "おつかれさまでした", 60, fill=(150, 90, 50))
+    ox = 470
+    draw_owl(im, t, (ox, H - OWL_BOTTOM - 8), OWL_BOTTOM)
+    draw_subtitle(im, t, (ox + OWL_BOTTOM + 8, W - 30, H - 24), align="left")
+    return im
+
+
 def segment_of(t):
+    if T.CTA and T.CTA[0] <= t < T.CTA[1]:
+        return ("cta",)
     if t < T.OPENING[1]:
         return ("op",)
     if t < T.RULE[1]:
@@ -500,6 +531,7 @@ def segment_of(t):
 def render(t):
     seg = segment_of(t)
     return {"op": lambda: render_opening(t), "rule": lambda: render_rule(t), "unchiku": lambda: render_unchiku(t),
+            "cta": lambda: render_cta(t),
             "end": lambda: render_ending(t), "card": lambda: render_card(seg[1], t),
             "q": lambda: render_question(seg[1], t)}[seg[0]]()
 

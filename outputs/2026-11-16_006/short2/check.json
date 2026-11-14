@@ -1,0 +1,35 @@
+{
+ "voice": {
+  "s_intro": {
+   "clipped": 0,
+   "rms_db": -15.8
+  },
+  "s_ans0": {
+   "clipped": 0,
+   "rms_db": -15.8
+  },
+  "s_ans1": {
+   "clipped": 0,
+   "rms_db": -15.3
+  },
+  "s_ans2": {
+   "clipped": 0,
+   "rms_db": -15.1
+  },
+  "s_ans3": {
+   "clipped": 0,
+   "rms_db": -15.2
+  },
+  "s_end": {
+   "clipped": 0,
+   "rms_db": -15.3
+  }
+ },
+ "duration": 44.5,
+ "size": [
+  1080,
+  1920
+ ],
+ "question": 1,
+ "problems": []
+}

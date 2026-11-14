@@ -29,15 +29,30 @@ BAND_H = 200
 LEVEL_COLOR = {"やさしい": (70, 140, 190), "初級": (96, 150, 90), "中級": (214, 128, 48), "上級": (176, 62, 52)}
 SR = 48000
 
-DEFAULT = {"solve": 25.0, "intro_at": 0.3, "answer_gap": 3.2, "end_len": 6.0,
+DEFAULT = {"solve": 25.0, "intro_at": 0.3, "answer_gap": 3.2, "end_len": 7.6,
            "intro": "上と下の絵で、違いが3つあります。見つけられますか。",
-           "end": "続きは、長い動画で。ほかにも問題がありますよ。",
-           "end_title": "続きは 長い動画で", "end_sub": "全5問・1問90秒"}
+           "end": "続きの問題は、長い動画で。毎朝8時半に、新しい問題が届きます。",   # 2026-11-14 戦略会議（shorts.md）
+           "end_title": "続きは 長い動画で", "end_sub": "毎朝8時半に 新しい問題"}
+
+
+# 1本の長尺から、ショートを複数作る（2026-11-14 CEO決定：1日2本・14:00と18:00）。
+# plan.json の "shorts": [{...1本目...}, {...2本目...}]（なければ "short"）。1本目は <回>/short/、2本目は <回>/short2/
+SUB = "short"
+VARIANT = 1
+
+
+def use(n):
+    global SUB, VARIANT
+    VARIANT = int(n)
+    SUB = "short" if VARIANT <= 1 else f"short{VARIANT}"
 
 
 def cfg():
     c = dict(DEFAULT)
     c.update(plan().get("short", {}))
+    sh = plan().get("shorts")
+    if sh:
+        c.update(sh[VARIANT - 1])
     return c
 
 
@@ -61,7 +76,7 @@ def lines(ep):
 # ---------- 声 ----------
 def voice(ep, work):
     import ep_voice as V
-    vd = Path(work) / "short"; vd.mkdir(parents=True, exist_ok=True)
+    vd = Path(work) / SUB; vd.mkdir(parents=True, exist_ok=True)
     vj = vd / "voice.json"
     old = {v["id"]: v for v in json.loads(vj.read_text(encoding="utf-8"))} if vj.exists() else {}
     L, end_at, total = lines(ep)
@@ -92,7 +107,7 @@ VOICE_RMS_DB = -16.0   # セリフごとにそろえる声の大きさ（話し�
 def voice_stats(work):
     """声のファイルごとの、割れ（最大振幅に近いサンプル数）と大きさ。第1回ショートで1セリフだけ割れて大きかった反省（2026-11-08）。"""
     import ep_audio as A
-    vd = Path(work) / "short"
+    vd = Path(work) / SUB
     out = {}
     for v in json.loads((vd / "voice.json").read_text(encoding="utf-8")):
         x = A.read_wav(vd / f"voice_{v['id']}.wav")
@@ -103,9 +118,9 @@ def voice_stats(work):
 
 def remux(ep, work):
     """絵はそのままで、音だけを作り直した mix.wav に入れ替える（動画の映像は再エンコードしない）。"""
-    out = Path(ep) / "short"
+    out = Path(ep) / SUB
     tmp = out / "video_newaudio.mp4"
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(out / "video.mp4"), "-i", str(Path(work) / "short" / "mix.wav"),
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(out / "video.mp4"), "-i", str(Path(work) / SUB / "mix.wav"),
                     "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
                     "-movflags", "+faststart", "-shortest", str(tmp)], check=True)
     tmp.replace(out / "video.mp4")
@@ -114,7 +129,7 @@ def remux(ep, work):
 
 def audio(ep, work):
     import ep_audio as A
-    vd = Path(work) / "short"
+    vd = Path(work) / SUB
     vs = json.loads((vd / "voice.json").read_text(encoding="utf-8"))
     _, end_at, total = lines(ep)
     n = int(total * SR)
@@ -164,7 +179,7 @@ def setup(ep, work, fontp):
     q = c["question"]
     ans = {Q["q"]: Q for Q in json.loads((Path(ep) / "answers.json").read_text(encoding="utf-8"))["questions"]}[q]
     CTX["Q"] = ans
-    CTX["voice"] = json.loads((Path(work) / "short" / "voice.json").read_text(encoding="utf-8"))
+    CTX["voice"] = json.loads((Path(work) / SUB / "voice.json").read_text(encoding="utf-8"))
     CTX["lines"], CTX["end_at"], CTX["total"] = lines(ep)
     pics = {}
     for side in "ab":
@@ -283,16 +298,16 @@ def render(t):
 
 def video(ep, work, fontp):
     setup(ep, work, fontp)
-    out = Path(ep) / "short"; out.mkdir(exist_ok=True)
+    out = Path(ep) / SUB; out.mkdir(exist_ok=True)
     total = CTX["total"]
-    tmp = Path(work) / "short" / "video_noaudio.mp4"
+    tmp = Path(work) / SUB / "video_noaudio.mp4"
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS),
            "-i", "-", "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-tune", "animation", "-pix_fmt", "yuv420p", str(tmp)]
     p = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     for i in range(int(total * FPS)):
         p.stdin.write(render(i / FPS).tobytes())
     p.stdin.close(); assert p.wait() == 0
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(tmp), "-i", str(Path(work) / "short" / "mix.wav"),
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(tmp), "-i", str(Path(work) / SUB / "mix.wav"),
                     "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
                     "-movflags", "+faststart", "-shortest", str(out / "video.mp4")], check=True)
     tmp.unlink()
@@ -319,7 +334,7 @@ def contact_sheet(ep, work, fontp, path):
 
 def check(ep, work):
     """数値チェック：大きさ・長さ（15〜45秒）・声が枠に収まるか。"""
-    out = Path(ep) / "short"
+    out = Path(ep) / SUB
     problems = []
     r = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration:stream=codec_type,width,height", "-of", "json",
                         str(out / "video.mp4")], capture_output=True, text=True, check=True)
@@ -330,7 +345,7 @@ def check(ep, work):
         problems.append(f"大きさが {v['width']}×{v['height']}")
     if not 15 <= dur <= 45:
         problems.append(f"長さ {dur:.1f}秒 が15〜45秒の外")
-    vs = json.loads((Path(work) / "short" / "voice.json").read_text(encoding="utf-8"))
+    vs = json.loads((Path(work) / SUB / "voice.json").read_text(encoding="utf-8"))
     over = [x["id"] for x in vs if not x["fits"]]
     if over:
         problems.append(f"声が枠に収まらない：{over}")
@@ -352,13 +367,14 @@ def description(ep):
     c = cfg()
     up = json.loads((Path(ep) / "upload.json").read_text(encoding="utf-8"))
     Q = {x["q"]: x for x in plan()["questions"]}[c["question"]]
-    title = c.get("title") or f"3つ見つけられる？秋の間違いさがし（{Q['scene']}・{Q['level']}）#Shorts"
+    star = plan().get("topics", [Q["scene"]])[0]
+    title = c.get("title") or f"間違い探し シニア｜{star}の1問 #間違い探し #脳トレ #シニア"    # shorts.md 2026-11-14
     desc = (f"上と下の絵で、違いを3つ探してください。{Q['level']}の1問です。\n\n"
-            f"続きは長い動画で（全5問・1問90秒）\n{up['title']}\n{up['url']}\n\n"
+            f"続きの問題は長い動画で（全{len(plan()['questions'])}問）\n{up['title']}\n{up['url']}\n\n"
             "こよみ先生のまいにち脳トレ：毎日朝8時半に新しい問題をお届けします。\n\n"
             "【クレジット】\n音声：Fish Audio\n\n"
             "#Shorts #間違い探し #脳トレ #頭の体操")
     tags = "脳トレ, 間違い探し, 頭の体操, 秋の間違い探し, シニア 脳トレ, ショート, こよみ先生"
-    md = (f"# {plan()['episode']} ショート 投稿用メタデータ\n\n- 長尺：{up['url']}（関連動画はCEOがStudioで設定する。APIでは設定できない）\n\n"
+    md = (f"# {plan()['episode']} ショート{VARIANT} 投稿用メタデータ（第{c['question']}問 {Q['scene']}）\n\n- 長尺：{up['url']}（関連動画はCEOがStudioで設定する。APIでは設定できない）\n\n"
           f"## タイトル\n```\n{title}\n```\n\n## 説明欄\n```\n{desc}\n```\n\n## タグ\n```\n{tags}\n```\n")
-    (Path(ep) / "short" / "description.md").write_text(md, encoding="utf-8")
+    (Path(ep) / SUB / "description.md").write_text(md, encoding="utf-8")

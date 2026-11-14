@@ -32,7 +32,15 @@ def make(ep, q, out, top_text=("3つ", "見つけたら", "天才！")):
     d.rectangle([636, top, 644, 720], fill=(25, 25, 25)); d.rectangle([0, 0, 1280, top], fill=(0, 0, 0))
     f = ImageFont.truetype(F, 112)
     cols = [(255, 221, 0), (255, 255, 255), (255, 45, 45)]
-    tw = sum(d.textlength(s, font=f) for s in top_text); x = (1280 - tw) / 2
+    # 色は意味のまとまりごと（2026-11-14 CEO指摘）：先頭が * なら赤（一番大事な語だけ）、^ なら黄、印がなければ白
+    if any(t[:1] in "*^" for t in top_text):
+        cmap = {"*": (255, 45, 45), "^": (255, 221, 0)}
+        cols = [cmap.get(t[:1], (255, 255, 255)) for t in top_text]
+        top_text = [t[1:] if t[:1] in "*^" else t for t in top_text]
+    tw = sum(d.textlength(s, font=f) for s in top_text)
+    if tw > 1240:                                   # 帯からはみ出すときは小さく
+        f = ImageFont.truetype(F, int(112 * 1240 / tw)); tw = sum(d.textlength(s, font=f) for s in top_text)
+    x = (1280 - tw) / 2
     for s, c in zip(top_text, cols):
         d.text((x, top / 2 + 4), s, font=f, fill=c, anchor='lm', stroke_width=3, stroke_fill=(0, 0, 0)); x += d.textlength(s, font=f)
     g = Image.new('L', (1280, 220), 0); gd = ImageDraw.Draw(g)
@@ -44,5 +52,5 @@ def make(ep, q, out, top_text=("3つ", "見つけたら", "天才！")):
     T.save(out, quality=92)
 
 if __name__ == '__main__':
-    # 上の文字は「黄|白|赤」の3つに分けて渡す（例：3つ|見つけたら|天才！）
+    # 上の文字は意味のまとまりで | に分け、色の印を付ける（例：^3つ|見つけたら|*天才！ ＝黄・白・赤）。印なしの3つは黄・白・赤
     make(sys.argv[1], int(sys.argv[2]), sys.argv[3], tuple(sys.argv[4].split('|')) if len(sys.argv) > 4 else ("3つ", "見つけたら", "天才！"))

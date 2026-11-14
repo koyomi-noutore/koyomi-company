@@ -1,0 +1,1141 @@
+{
+ "episode": "007",
+ "season": "秋",
+ "topics": [
+  "おでん"
+ ],
+ "note": "第7回。2026-11-14 CEO指示（concept.md「冒頭・つなぎ・登録・エンディング」）を入れた最初の回。",
+ "youtube": {
+  "title": "【間違い探し】シニアの脳トレクイズ｜おでんのイラスト全5問【60代・70代の頭の体操】",
+  "description_file": "description.md",
+  "title_note": "thumbnail-title.md 2026-11-14 のテスト用3案のA（同じ言葉を2回使わない）。ab/ に3案",
+  "publish_plan": "2026-11-17（火）8:30、ショート14:00・18:00"
+ },
+ "screens": {
+  "opening_title": "おでんの間違い探し　全5問",
+  "opening_sub": "最後は難問です",
+  "unchiku_header": "こよみ先生の 秋の小話",
+  "unchiku_slides": [
+   {
+    "until": 7,
+    "texts": [
+     [
+      "ひと休み",
+      960,
+      330,
+      130,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "こよみ先生の 季節のお話",
+      960,
+      520,
+      80,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 15,
+    "texts": [
+     [
+      "おでんの「でん」って？",
+      960,
+      380,
+      120,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ]
+    ]
+   },
+   {
+    "until": 24,
+    "texts": [
+     [
+      "田楽（でんがく）",
+      960,
+      320,
+      130,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "お田楽 → おでん",
+      960,
+      520,
+      100,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 30,
+    "texts": [
+     [
+      "関西では「関東煮」",
+      960,
+      320,
+      110,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ],
+     [
+      "かんとだき",
+      960,
+      480,
+      80,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ],
+     [
+      "今夜の 話のタネに",
+      960,
+      620,
+      80,
+      [
+       200,
+       120,
+       40
+      ],
+      0
+     ]
+    ]
+   }
+  ],
+  "ending_titles": [
+   [
+    "15個",
+    "おでん名人"
+   ],
+   [
+    "11〜14個",
+    "味しみ名探偵"
+   ],
+   [
+    "6〜10個",
+    "ほかほかさん"
+   ],
+   [
+    "0〜5個",
+    "こんぶさん"
+   ]
+  ],
+  "ending_note": "こんぶさんは、これから、いいおだしが出ます",
+  "ending_next": "次の動画も つづけて どうぞ",
+  "owl_layout": "bottom",
+  "endscreen_at": 9.0
+ },
+ "timeline": {
+  "total": 634.0,
+  "opening": [
+   0.0,
+   15.0
+  ],
+  "rule": [
+   15.0,
+   25.0
+  ],
+  "q_start": {
+   "1": 25.0,
+   "2": 143.0,
+   "3": 251.0,
+   "4": 389.0,
+   "5": 497.0
+  },
+  "unchiku": [
+   359.0,
+   389.0
+  ],
+  "ending": [
+   605.0,
+   634.0
+  ],
+  "cta": [
+   133.0,
+   143.0
+  ],
+  "card": 3.0,
+  "solve": 90.0,
+  "answer": 15.0,
+  "hint_at": null,
+  "ten_at": 80.0,
+  "ans_first": 1.6,
+  "ans_step": 4.3,
+  "solve_calls": [
+   [
+    30,
+    "あと60秒です。"
+   ],
+   [
+    60,
+    "あと30秒です。"
+   ]
+  ]
+ },
+ "lines": {
+  "opening": [
+   {
+    "id": "op",
+    "at": 0.0,
+    "text": "こよみ先生です。今日は、おでんの間違い探し、全5問。最後は難問です。3問目のあとには、おでんの意外なお話も。",
+    "face": "smile",
+    "until": 10.6
+   },
+   {
+    "id": "op2",
+    "at": 10.6,
+    "text": "ぜひ最後まで、一緒に解いてくださいね。",
+    "face": "wink",
+    "until": 15.0
+   }
+  ],
+  "rule": [
+   {
+    "id": "rule",
+    "at": 0.0,
+    "text": "それでは、ルールです。左と右の絵をくらべて、90秒で、右の絵の違いを3つ探してください。",
+    "face": "normal",
+    "until": 10.0
+   }
+  ],
+  "unchiku": [
+   {
+    "id": "u1",
+    "at": 0.0,
+    "text": "ここでひと休み。こよみ先生の季節のお話です。",
+    "face": "smile",
+    "until": 7.0
+   },
+   {
+    "id": "u2",
+    "at": 7.0,
+    "text": "おでんの「でん」って、何のことでしょう？",
+    "face": "think",
+    "until": 15.0
+   },
+   {
+    "id": "u3",
+    "at": 15.0,
+    "text": "答えは田楽。「お田楽」が縮まって、「おでん」になったといわれます。",
+    "face": "surprise",
+    "until": 24.0
+   },
+   {
+    "id": "u4",
+    "at": 24.0,
+    "text": "関西では「関東煮」とも呼びます。今夜の話のタネにどうぞ。",
+    "face": "wink",
+    "until": 30.0
+   }
+  ],
+  "ending": [
+   {
+    "id": "e1",
+    "at": 0.0,
+    "text": "これで5問、おしまいです。おつかれさまでした。",
+    "face": "yay",
+    "until": 3.6
+   },
+   {
+    "id": "e2",
+    "at": 3.6,
+    "text": "15個の違い、いくつ見つかりましたか。今日の称号です。",
+    "face": "smile",
+    "until": 9.0
+   },
+   {
+    "id": "e3",
+    "at": 9.0,
+    "text": "チャンネル登録とベルで、毎朝8時半に、新しい問題が届きます。",
+    "face": "smile",
+    "until": 18.0
+   },
+   {
+    "id": "e4",
+    "at": 18.0,
+    "text": "左の丸を押すと登録、右の動画で、次の問題に挑戦できますよ。",
+    "face": "wink",
+    "until": 29.0
+   }
+  ],
+  "extra": [
+   {
+    "id": "c_comment",
+    "at": 266.0,
+    "text": "見つかった数を、あとでコメントで教えてくださいね。",
+    "face": "smile",
+    "until": 273.0
+   }
+  ],
+  "cta": [
+   {
+    "id": "cta",
+    "at": 0.0,
+    "text": "チャンネル登録とベルを押すと、毎朝8時半に新しい問題が届きます。毎日の頭の体操の習慣にどうぞ。",
+    "face": "smile",
+    "until": 10.0
+   }
+  ]
+ },
+ "readings": [
+  [
+   "紅葉狩りの川辺",
+   "もみじがりのかわべ"
+  ],
+  [
+   "おでんの屋台",
+   "おでんのやたい"
+  ],
+  [
+   "お寺の山門",
+   "おてらのさんもん"
+  ],
+  [
+   "おちょこ",
+   "おちょこ"
+  ],
+  [
+   "にんじん",
+   "にんじん"
+  ],
+  [
+   "どんぐり",
+   "どんぐり"
+  ],
+  [
+   "第1問",
+   "だいいちもん"
+  ],
+  [
+   "第2問",
+   "だいにもん"
+  ],
+  [
+   "第3問",
+   "だいさんもん"
+  ],
+  [
+   "第4問",
+   "だいよんもん"
+  ],
+  [
+   "第5問",
+   "だいごもん"
+  ],
+  [
+   "90秒",
+   "きゅうじゅうびょう"
+  ],
+  [
+   "10秒",
+   "じゅうびょう"
+  ],
+  [
+   "15個",
+   "じゅうごこ"
+  ],
+  [
+   "60秒",
+   "ろくじゅうびょう"
+  ],
+  [
+   "30秒",
+   "さんじゅうびょう"
+  ],
+  [
+   "3問目",
+   "さんもんめ"
+  ],
+  [
+   "8時半",
+   "はちじはん"
+  ],
+  [
+   "関東煮",
+   "かんとだき"
+  ],
+  [
+   "ルール",
+   "ルール"
+  ],
+  [
+   "からし",
+   "からし"
+  ],
+  [
+   "チョウ",
+   "ちょう"
+  ],
+  [
+   "もみじ",
+   "もみじ"
+  ],
+  [
+   "落ち葉",
+   "おちば"
+  ],
+  [
+   "取っ手",
+   "とって"
+  ],
+  [
+   "初級",
+   "しょきゅう"
+  ],
+  [
+   "中級",
+   "ちゅうきゅう"
+  ],
+  [
+   "上級",
+   "じょうきゅう"
+  ],
+  [
+   "称号",
+   "しょうごう"
+  ],
+  [
+   "今日",
+   "きょう"
+  ],
+  [
+   "手前",
+   "てまえ"
+  ],
+  [
+   "模様",
+   "もよう"
+  ],
+  [
+   "5問",
+   "ごもん"
+  ],
+  [
+   "3つ",
+   "みっつ"
+  ],
+  [
+   "一羽",
+   "いちわ"
+  ],
+  [
+   "一枚",
+   "いちまい"
+  ],
+  [
+   "一本",
+   "いっぽん"
+  ],
+  [
+   "一匹",
+   "いっぴき"
+  ],
+  [
+   "一つ",
+   "ひとつ"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "一匹",
+   "いっぴき"
+  ],
+  [
+   "難問",
+   "なんもん"
+  ],
+  [
+   "意外",
+   "いがい"
+  ],
+  [
+   "一個",
+   "いっこ"
+  ],
+  [
+   "屋台",
+   "やたい"
+  ],
+  [
+   "銭湯",
+   "せんとう"
+  ],
+  [
+   "山門",
+   "さんもん"
+  ],
+  [
+   "川辺",
+   "かわべ"
+  ],
+  [
+   "田楽",
+   "でんがく"
+  ],
+  [
+   "関西",
+   "かんさい"
+  ],
+  [
+   "一緒",
+   "いっしょ"
+  ],
+  [
+   "登録",
+   "とうろく"
+  ],
+  [
+   "大根",
+   "だいこん"
+  ],
+  [
+   "小鳥",
+   "ことり"
+  ],
+  [
+   "金具",
+   "かなぐ"
+  ],
+  [
+   "葉",
+   "は"
+  ],
+  [
+   "畑",
+   "はたけ"
+  ],
+  [
+   "小皿",
+   "こざら"
+  ],
+  [
+   "敷物",
+   "しきもの"
+  ],
+  [
+   "右上",
+   "みぎうえ"
+  ],
+  [
+   "とっくり",
+   "とっくり"
+  ]
+ ],
+ "voice_override": {
+  "u2": "おでんの、でんって、何のことでしょう？",
+  "u3": "答えは、でんがく。おでんがくが縮まって、おでんになったといわれます。",
+  "u4": "かんさいでは、かんとだき、とも呼びます。今夜の、はなしのタネにどうぞ。",
+  "cta": "チャンネル登録と、ベルを押すと、毎朝8時半に、新しい問題が届きます。毎日の、頭の体操の、習慣にどうぞ。"
+ },
+ "voice": {
+  "provider": "fish",
+  "reference_id": "63819275ce38440ea245ca988abf976e",
+  "model": "s1",
+  "speed": 0.88,
+  "credit": "音声：Fish Audio（AIで合成した音声です）"
+ },
+ "images": {
+  "model": "gemini-3-pro-image",
+  "size": "2K",
+  "aspect": "4:5",
+  "style": "A Japanese picture-book illustration in watercolor, but with BOLD, THICK, DARK ink outlines around every object (like a clear picture book for seniors), and CLEAR, SATURATED colors (not pale). Bright, clean background. Natural, hand-drawn, slightly rounded shapes; not geometric, not flat vector, not photorealistic. CLOSE-UP composition (not a wide landscape): the scene is seen from close, filling the picture. PORTRAIT-ISH composition, about 8:9. The painting fills the entire canvas edge to edge: no white border. No people. Absolutely no text, letters, numbers, logos or symbols anywhere. The MAIN SUBJECT named in the scene is drawn LARGE in the center of the picture. Around it, only a few other objects, each clearly separated with space around it, fully visible.\n",
+  "keep_alt": " Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text.",
+  "keep_remove": " Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object.",
+  "batch": true
+ },
+ "questions": [
+  {
+   "q": 1,
+   "scene": "おでんの屋台",
+   "level": "やさしい",
+   "go": "さあ、第1問です。やさしい問題から。どうぞ。",
+   "prompt": "Scene: close-up of a small Japanese oden food stall at night in late autumn, warm lantern light. CENTER, LARGE (main subject): a square oden pot with compartments, simmering daikon radish rounds, boiled eggs, triangle konnyaku, chikuwa and skewered items, steam rising. Around it, few objects with space between: (upper left) a red paper lantern without letters; (upper right) a small sake bottle and a cup; (lower left) a small plate with a dab of yellow mustard; (lower right) a pair of chopsticks in a holder and a small bowl. Each side object about one seventh of the picture width.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    52,
+    58,
+    1805,
+    2030
+   ],
+   "retries": {},
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   },
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "src": [
+       230,
+       1705,
+       510,
+       1940
+      ],
+      "circle": [
+       369,
+       1823,
+       132
+      ],
+      "dst": [
+       1630,
+       1318
+      ],
+      "width": 160
+     }
+    ]
+   },
+   "diffs": [
+    {
+     "id": 1,
+     "type": "形が変わる",
+     "label": "大根がたまごに",
+     "line": "大根が、たまごになりました。",
+     "box": [
+      300,
+      980,
+      575,
+      1220
+     ],
+     "object_w": 205,
+     "src": "3"
+    },
+    {
+     "id": 2,
+     "type": "物がない",
+     "label": "とっくりがない",
+     "line": "とっくりが、ありません。",
+     "box": [
+      1355,
+      335,
+      1630,
+      855
+     ],
+     "object_w": 150,
+     "src": "5"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "からしの小皿が増える",
+     "line": "からしの小皿が、ひとつ増えました。",
+     "box": [
+      1620,
+      1308,
+      1800,
+      1470
+     ],
+     "object_w": 160,
+     "src": "p",
+     "note": "プログラムで足した（scripts/program_diffs.py）"
+    }
+   ],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors. When an object is removed, remove it COMPLETELY (no leftover strings, stems, outlines, shadows or pieces), and fill the place naturally with what is behind it: (a) the small sake cup at the upper right is gone; (b) the yellow mustard on the small plate is gone (the plate is empty); (c) in the oden pot, one more boiled egg next to the eggs; (d) the small bowl at the lower right is gone; (e) the sake bottle becomes white instead of dark blue; (f) the steam above the pot has one wisp fewer.",
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors. When an object is removed, remove it COMPLETELY (no leftover strings, stems, outlines, shadows or pieces): (a) on the empty white table at the right side, between the oden tray and the round bowl, add one small white teacup, about one twelfth of the picture width.",
+    "3": "Edit this illustration and make exactly this one change, and nothing else. Keep the same thick outlines and colors: in the oden pot, the big round daikon radish slice at the upper left corner of the left compartment becomes one big boiled egg (white with a yellow yolk showing) of the same size, in the same place.",
+    "5": "Edit this illustration and make exactly this one change, and nothing else. Keep the same thick outlines and colors: the tall dark blue sake bottle (tokkuri) at the upper right is gone completely, showing the plain wall and white table behind it. The small sake cup next to it stays exactly the same."
+   }
+  },
+  {
+   "q": 2,
+   "scene": "畑",
+   "level": "初級",
+   "go": "では、第2問。どうぞ。",
+   "prompt": "Scene: close-up of a vegetable field (hatake) in late autumn morning. CENTER, LARGE (main subject): three big white daikon radishes with green leaves lying on the dark soil, just pulled. Around them, few objects: (upper left) a scarecrow's straw hat on a stick far behind; (upper right) a small bird on a wooden fence post; (lower left) a woven bamboo basket; (lower right) a small hand hoe and a pair of work gloves; a few rows of green leaves in the soil.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   },
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "from_file": "edit_2_2.png",
+      "src": [
+       80,
+       560,
+       305,
+       750
+      ],
+      "thr": 35,
+      "dst": [
+       150,
+       600
+      ],
+      "width": 130
+     },
+     {
+      "op": "copy",
+      "from_file": "edit_2_2.png",
+      "src": [
+       1010,
+       1560,
+       1260,
+       1720
+      ],
+      "thr": 40,
+      "dst": [
+       980,
+       1600
+      ],
+      "width": 145,
+      "mask": "hull"
+     },
+     {
+      "op": "copy",
+      "src": [
+       1405,
+       40,
+       1640,
+       260
+      ],
+      "mask": "hull",
+      "thr": 30,
+      "dst": [
+       1450,
+       1140
+      ],
+      "width": 120,
+      "flip": true
+     }
+    ]
+   },
+   "diffs": [
+    {
+     "id": 1,
+     "type": "増える",
+     "label": "チョウが飛ぶ",
+     "line": "チョウが、飛んでいます。",
+     "box": [
+      140,
+      590,
+      290,
+      735
+     ],
+     "object_w": 126,
+     "src": "p",
+     "note": "プログラムで足した（scripts/program_diffs.py）"
+    },
+    {
+     "id": 2,
+     "type": "増える",
+     "label": "小鳥が増える",
+     "line": "小鳥が、一羽増えました。",
+     "box": [
+      1440,
+      1130,
+      1580,
+      1262
+     ],
+     "object_w": 128,
+     "src": "p",
+     "note": "プログラムで足した（scripts/program_diffs.py）（さくの小鳥を左右反対にして小さく）"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "にんじんが増える",
+     "line": "にんじんが、増えました。",
+     "box": [
+      970,
+      1590,
+      1135,
+      1695
+     ],
+     "object_w": 145,
+     "src": "p",
+     "note": "プログラムで足した（scripts/program_diffs.py）"
+    }
+   ],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors. When an object is removed, remove it COMPLETELY (no leftover strings, stems, outlines, shadows or pieces), and fill the place naturally with what is behind it: (a) the small bird on the fence post is gone; (b) of the pair of work gloves, the right glove is gone; (c) the hand hoe is gone completely; (d) the woven basket becomes taller; (e) one more small green cabbage at the lower middle; (f) the straw hat on the stick becomes red.",
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors. When an object is removed, remove it COMPLETELY (no leftover strings, stems, outlines, shadows or pieces): (a) on the dark soil at the lower middle, between the basket and the gloves, add one small orange carrot lying flat, about one fourteenth of the picture width; (b) above the cabbages at the left, add one small white butterfly flying, about one fourteenth of the picture width."
+   }
+  },
+  {
+   "q": 3,
+   "scene": "銭湯",
+   "level": "中級",
+   "go": "少しむずかしくなります。どうぞ。",
+   "prompt": "Scene: close-up of the entrance of an old Japanese public bathhouse (sento) in late autumn evening, warm light from inside. CENTER, LARGE (main subject): a plain indigo noren curtain without letters over the wooden entrance, with steam drifting out. Around it, few objects: (upper left) a round wall lamp; (upper right) a small potted pine tree on a shelf; (lower left) a wooden bench with a folded towel and a small wash bucket; (lower right) a pair of wooden geta sandals; a small cat sitting on the step. No text anywhere.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   },
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "src": [
+       90,
+       1112,
+       220,
+       1245
+      ],
+      "mask": "hull",
+      "thr": 35,
+      "dst": [
+       1470,
+       700
+      ],
+      "width": 90,
+      "rot": -30,
+      "from_file": "edit_3_1.png"
+     },
+     {
+      "op": "copy",
+      "from_file": "edit_3_2.png",
+      "src": [
+       975,
+       1855,
+       1105,
+       1980
+      ],
+      "mask": "hull",
+      "thr": 35,
+      "dst": [
+       1060,
+       1650
+      ],
+      "width": 85
+     }
+    ]
+   },
+   "diffs": [
+    {
+     "id": 1,
+     "type": "増える",
+     "label": "もみじが1枚増える",
+     "line": "もみじが、一枚増えました。",
+     "box": [
+      90,
+      1112,
+      220,
+      1245
+     ],
+     "object_w": 95,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "増える",
+     "label": "のれんにもみじ",
+     "line": "右上に、もみじがもう一枚あります。",
+     "box": [
+      1475,
+      712,
+      1596,
+      820
+     ],
+     "object_w": 90,
+     "src": "p",
+     "note": "プログラムで足した（scripts/program_diffs.py）"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "どんぐりが増える",
+     "line": "どんぐりが、ひとつ増えました。",
+     "box": [
+      1053,
+      1640,
+      1155,
+      1746
+     ],
+     "object_w": 85,
+     "src": "p",
+     "note": "プログラムで足した（scripts/program_diffs.py）"
+    }
+   ],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors. When an object is removed, remove it COMPLETELY (no leftover strings, stems, outlines, shadows or pieces), and fill the place naturally with what is behind it: (a) the small cat on the step is gone; (b) of the pair of geta sandals, the right one is gone; (c) the small wooden wash bucket on the bench is gone; (d) one more red maple leaf falling at the left side; (e) the folded towel on the bench becomes light blue; (f) the small potted pine tree has one branch fewer.",
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors. When an object is removed, remove it COMPLETELY (no leftover strings, stems, outlines, shadows or pieces): (a) the small round metal hook on top of the wall lamp is gone; (b) on the stone step to the left of the geta sandals, add one small brown acorn, about one twentieth of the picture width; (c) one of the small falling leaves at the upper right is gone."
+   }
+  },
+  {
+   "q": 4,
+   "scene": "紅葉狩りの川辺",
+   "level": "中級",
+   "go": "後半です。第4問、どうぞ。",
+   "prompt": "Scene: close-up at a riverside during autumn leaf viewing. CENTER, LARGE (main subject): a portable gas stove with a clay pot of oden simmering, steam rising, on a picnic mat. Around it, few objects: (upper left) red maple branches; (upper right) a small bird on a rock in the river; (lower left) a thermos bottle and two cups; (lower right) a picnic basket and a folded blanket; a few red maple leaves on the mat.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   },
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "src": [
+       950,
+       1850,
+       1150,
+       2050
+      ],
+      "circle": [
+       1048,
+       1950,
+       95
+      ],
+      "thr_in_circle": 120,
+      "dst": [
+       810,
+       1570
+      ],
+      "width": 90,
+      "rot": 20
+     }
+    ]
+   },
+   "diffs": [
+    {
+     "id": 1,
+     "type": "増える",
+     "label": "たまごが増える",
+     "line": "たまごが、ひとつ増えました。",
+     "box": [
+      843,
+      904,
+      1048,
+      1101
+     ],
+     "object_w": 115,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "増える",
+     "label": "川にもみじ",
+     "line": "川に、もみじが流れています。",
+     "box": [
+      1622,
+      726,
+      1788,
+      866
+     ],
+     "object_w": 95,
+     "src": "2",
+     "feather": 8
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "敷物にもみじ",
+     "line": "敷物に、もみじが一枚増えました。",
+     "box": [
+      814,
+      1575,
+      922,
+      1681
+     ],
+     "object_w": 90,
+     "src": "p",
+     "note": "プログラムで足した（scripts/program_diffs.py）"
+    }
+   ],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors. When an object is removed, remove it COMPLETELY (no leftover strings, stems, outlines, shadows or pieces), and fill the place naturally with what is behind it: (a) the small bird on the rock is gone; (b) the red cup at the lower left is gone; (c) in the pot, one more boiled egg; (d) one red maple leaf on the mat at the right is gone; (e) the thermos bottle cap becomes red; (f) the checkered cloth in the basket becomes blue and white.",
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors. When an object is removed, remove it COMPLETELY (no leftover strings, stems, outlines, shadows or pieces): (a) on the water of the river at the right, add one small red maple leaf floating, about one twentieth of the picture width; (b) the handle of the blue cup is gone; (c) the smallest stone in the river at the far right is gone, showing water."
+   }
+  },
+  {
+   "q": 5,
+   "scene": "お寺の山門",
+   "level": "上級",
+   "go": "いよいよ最後の難問です。じっくりどうぞ。",
+   "prompt": "Scene: close-up in front of an old temple gate (sanmon) in late autumn, with a small oden stall for visitors beside the stone path. CENTER, LARGE (main subject): a big pot of oden on the stall table with steam. Many small details around: (upper left) a hanging temple bell rope and a paper lantern without letters; (upper right) ginkgo branches with yellow leaves; (lower left) a stone lantern; (lower right) a wooden donation box without letters and a broom; small fallen leaves on the stone path.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {
+    "leaf": "scripts/custom/ep007_fix.py",
+    "p": "scripts/program_diffs.py"
+   },
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "src": [
+       700,
+       1715,
+       820,
+       1815
+      ],
+      "circle": [
+       760,
+       1765,
+       44
+      ],
+      "thr_in_circle": 110,
+      "dst": [
+       1480,
+       690
+      ],
+      "width": 66,
+      "rot": -20
+     }
+    ]
+   },
+   "diffs": [
+    {
+     "id": 1,
+     "type": "物がない",
+     "label": "ちょうちんの金具がない",
+     "line": "ちょうちんの上の金具が、ありません。",
+     "box": [
+      485,
+      240,
+      590,
+      356
+     ],
+     "object_w": 60,
+     "src": "2"
+    },
+    {
+     "id": 2,
+     "type": "増える",
+     "label": "いちょうの葉が1枚増える",
+     "line": "いちょうの葉が、一枚増えました。",
+     "box": [
+      1470,
+      680,
+      1560,
+      770
+     ],
+     "object_w": 66,
+     "src": "p",
+     "note": "プログラムで足した（葉を消すと軸が残るため、足す形にした）"
+    },
+    {
+     "id": 3,
+     "type": "物がない",
+     "label": "もみじが1枚ない",
+     "line": "小さなもみじが、一枚ありません。",
+     "box": [
+      108,
+      1136,
+      220,
+      1224
+     ],
+     "object_w": 70,
+     "src": "leaf",
+     "note": "プログラムで消した（scripts/custom/ep007_fix.py）"
+    }
+   ],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors. When an object is removed, remove it COMPLETELY (no leftover strings, stems, outlines, shadows or pieces), and fill the place naturally with what is behind it: (a) one yellow ginkgo leaf at the upper right is gone; (b) the bottom tassel of the hanging rope is gone; (c) in the pot, one more boiled egg; (d) the small wooden box at the lower right is gone; (e) the paper lantern becomes red; (f) one small red maple leaf on the stone path is gone.",
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors. When an object is removed, remove it COMPLETELY (no leftover strings, stems, outlines, shadows or pieces): (a) one small red maple leaf lying on the stone path at the lower left is gone; (b) the small metal ring at the top of the paper lantern is gone; (c) on the ginkgo branch, one of the smallest yellow leaves at the lower tip is gone; (d) one small round pebble on the stone path near the stone lantern is gone."
+   }
+  }
+ ],
+ "thumbnail": {
+  "question": 1,
+  "big_text": "秋の間違いさがし",
+  "highlight": "間違いさがし",
+  "highlight_color": [
+   255,
+   214,
+   0
+  ],
+  "big_color": [
+   255,
+   255,
+   255
+  ],
+  "band_color": [
+   25,
+   35,
+   70
+  ],
+  "big_size": 132,
+  "sub_text": "3つ見つけられる？全5問",
+  "badges": [
+   [
+    "初級〜上級",
+    [
+     176,
+     62,
+     52
+    ]
+   ]
+  ],
+  "circle_hint": false,
+  "note": "第1回と同じ型（変えた所なし）。左右に同じ絵・上に濃紺の帯で「秋の間違いさがし」・下に難易度と問いかけ。こよみ先生は入れない"
+ },
+ "shorts": [
+  {
+   "question": 2,
+   "answer_gap": 3.3,
+   "note": "1本目：第2問 畑・初級"
+  },
+  {
+   "question": 4,
+   "answer_gap": 3.3,
+   "note": "2本目：第4問 紅葉狩りの川辺・中級（1本目と別の問題・別の場面）"
+  }
+ ]
+}

@@ -108,3 +108,31 @@ def contact_sheet(out_dir, work, path, fontp=None):
         d.text((x + 4, y + 2), label, fill=(0, 0, 0), font=ImageFont.truetype(str(fontp), 20) if fontp else None)
     sheet.save(path)
     return path
+
+
+def zoom_sheet(out_dir, path, cols=3):
+    """消し残りの拡大チェック（2026-11-14 CEO指摘・audit チェックリスト）：違いごとに、範囲のまわりを画面の大きさに縮めてから3倍にし、
+    左（元の絵）・右（違いのある絵）を並べた一覧を作る。ひも・尾・輪郭の切れ端・影が残っていないかを見る。"""
+    import json
+    from PIL import Image, ImageDraw
+    out = Path(out_dir)
+    ans = json.loads((out / "answers.json").read_text(encoding="utf-8"))
+    tiles = []
+    for Q in ans["questions"]:
+        cx0, cy0, cx1, cy1 = Q["content_px"]; s = 960 / (cx1 - cx0)
+        ims = {k: Image.open(out / f"q{Q['q']}_{k}.png").convert("RGB").crop((cx0, cy0, cx1, cy1)).resize((960, 1080), Image.LANCZOS) for k in "ab"}
+        for a in Q["answers"]:
+            x0, y0, x1, y1 = a["box_screen"]; m = 14
+            r = (max(0, x0 - m), max(0, y0 - m), min(960, x1 + m), min(1080, y1 + m))
+            k = 3 if max(r[2] - r[0], r[3] - r[1]) * 3 <= 330 else 330 / max(r[2] - r[0], r[3] - r[1])
+            pair = [ims[x].crop(r).resize((int((r[2] - r[0]) * k), int((r[3] - r[1]) * k)), Image.LANCZOS) for x in "ab"]
+            t = Image.new("RGB", (pair[0].width * 2 + 8, pair[0].height + 26), "white")
+            t.paste(pair[0], (0, 26)); t.paste(pair[1], (pair[0].width + 8, 26))
+            ImageDraw.Draw(t).text((4, 4), f"Q{Q['q']}-{a['id']} {a['type']} {a['label']}", fill=(200, 0, 0))
+            tiles.append(t)
+    W = max(t.width for t in tiles) + 10; H = max(t.height for t in tiles) + 10
+    sheet = Image.new("RGB", (W * cols, H * ((len(tiles) + cols - 1) // cols)), (230, 230, 230))
+    for i, t in enumerate(tiles):
+        sheet.paste(t, ((i % cols) * W, (i // cols) * H))
+    sheet.save(path)
+    return path

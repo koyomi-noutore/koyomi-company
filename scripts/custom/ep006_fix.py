@@ -64,3 +64,20 @@ bl = np.asarray(Image.fromarray(np.clip(C, 0, 255).astype(np.uint8)).filter(Imag
 C = np.where(handle[..., None], bl + rng3.normal(0, 1, C.shape) * gstd * 0.8, C)      # 行のすじをならして、扉のざらつきを足す
 A3[y0:y1, x0:x1] = C
 Image.fromarray(np.clip(A3, 0, 255).astype(np.uint8)).save(w / "edit_3_noh.png")
+
+
+# 第4問②：干したさんまを消した所に、空の輪のひもが残った（2026-11-14 CEO指摘：消し残りの切れ端）。輪を、左右の空の色で行ごとにうめる → edit_4_1c.png
+e4 = Image.open(w / "edit_4_1.png").convert("RGB")
+E4 = np.asarray(e4).astype(float)
+x0, x1 = 664, 786
+for yy in range(802, 930):
+    def sky(xa, xb):
+        px = E4[yy, xa:xb]
+        ok = px[(px.mean(1) > 120) & (px[:, 2] > px[:, 0] + 30)]          # 青い空の画素だけ（線やさおは使わない）
+        return np.median(ok, 0) if len(ok) else None
+    lft, rgt = sky(x0 - 14, x0), sky(x1, x1 + 14)
+    if lft is None or rgt is None:
+        continue
+    t = np.linspace(0, 1, x1 - x0)[:, None]
+    E4[yy, x0:x1] = lft * (1 - t) + rgt * t + np.random.default_rng(yy).normal(0, 1.5, (x1 - x0, 3))
+Image.fromarray(np.clip(E4, 0, 255).astype(np.uint8)).save(w / "edit_4_1c.png")
