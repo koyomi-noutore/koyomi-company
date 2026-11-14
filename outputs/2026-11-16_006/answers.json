@@ -1,0 +1,697 @@
+{
+ "screen": {
+  "size": [
+   1920,
+   1080
+  ],
+  "picture_size_on_screen": [
+   960,
+   1080
+  ],
+  "safe_y_on_screen": [
+   54,
+   918
+  ],
+  "level_range_pct_of_screen_width": {
+   "やさしい": [
+    4.0,
+    6.0
+   ],
+   "初級": [
+    3.0,
+    4.0
+   ],
+   "中級": [
+    2.0,
+    3.0
+   ],
+   "上級": [
+    1.5,
+    2.0
+   ]
+  }
+ },
+ "note": "box_px・circle_px は 8:9 に切り抜いた高解像度の絵（qN_a.png、1856×2088）のピクセル。content_px はそのうち画面に出す範囲（白いふちを除いた8:9）。*_screen は画面の上での座標（右の絵は x に960を足す）。object_screen_width_pct は、変わる物そのものの幅を画面幅で割った値。",
+ "questions": [
+  {
+   "q": 1,
+   "scene": "食卓",
+   "level": "やさしい",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 132,
+   "outside_box_max_distance_px": 10.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "増える",
+     "label": "小皿が増える",
+     "line": "つけものの小皿が、ひとつ増えました。",
+     "box_px": [
+      812,
+      142,
+      1018,
+      317
+     ],
+     "box_screen": [
+      420,
+      73,
+      527,
+      164
+     ],
+     "circle_a_screen": [
+      420,
+      73,
+      527,
+      164
+     ],
+     "circle_b_screen": [
+      420,
+      73,
+      527,
+      164
+     ],
+     "object_w_px": 190,
+     "object_screen_width_pct": 5.12,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": "右のつけものの小皿をプログラムで小さくして貼った（scripts/program_diffs.py）"
+    },
+    {
+     "id": 2,
+     "type": "物がない",
+     "label": "さんまの尾びれがない",
+     "line": "さんまの尾びれが、ありません。",
+     "box_px": [
+      1569,
+      478,
+      1813,
+      717
+     ],
+     "box_screen": [
+      812,
+      247,
+      938,
+      371
+     ],
+     "circle_a_screen": [
+      812,
+      247,
+      938,
+      371
+     ],
+     "circle_b_screen": [
+      812,
+      247,
+      938,
+      371
+     ],
+     "object_w_px": 200,
+     "object_screen_width_pct": 5.39,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "すだちが増える",
+     "line": "すだちが、ひとつ増えました。",
+     "box_px": [
+      722,
+      1177,
+      898,
+      1353
+     ],
+     "box_screen": [
+      373,
+      609,
+      464,
+      700
+     ],
+     "circle_a_screen": [
+      373,
+      609,
+      464,
+      700
+     ],
+     "circle_b_screen": [
+      373,
+      609,
+      464,
+      700
+     ],
+     "object_w_px": 168,
+     "object_screen_width_pct": 4.53,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": "お皿のすだちをプログラムで切り抜いて貼った（scripts/program_diffs.py）"
+    }
+   ]
+  },
+  {
+   "q": 2,
+   "scene": "漁港",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    30,
+    34,
+    1828,
+    2057
+   ],
+   "scale_to_screen": 0.53393,
+   "outside_box_pixels_diff_gt15": 312,
+   "outside_box_max_distance_px": 11.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "物がない",
+     "label": "船の黄色い浮きがない",
+     "line": "船の黄色い浮きが、ありません。",
+     "box_px": [
+      700,
+      582,
+      837,
+      715
+     ],
+     "box_screen": [
+      358,
+      293,
+      431,
+      364
+     ],
+     "circle_a_screen": [
+      358,
+      293,
+      431,
+      364
+     ],
+     "circle_b_screen": [
+      358,
+      293,
+      431,
+      364
+     ],
+     "object_w_px": 124,
+     "object_screen_width_pct": 3.45,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "2",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "増える",
+     "label": "海に浮きが増える",
+     "line": "海に、浮きがひとつ増えました。",
+     "box_px": [
+      1676,
+      463,
+      1816,
+      593
+     ],
+     "box_screen": [
+      879,
+      229,
+      954,
+      298
+     ],
+     "circle_a_screen": [
+      879,
+      229,
+      954,
+      298
+     ],
+     "circle_b_screen": [
+      879,
+      229,
+      954,
+      298
+     ],
+     "object_w_px": 127,
+     "object_screen_width_pct": 3.53,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "3",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "物がない",
+     "label": "浮きのひもの結び目がない",
+     "line": "赤い浮きの、ひもの結び目がありません。",
+     "box_px": [
+      180,
+      1565,
+      335,
+      1745
+     ],
+     "box_screen": [
+      80,
+      817,
+      163,
+      914
+     ],
+     "circle_a_screen": [
+      80,
+      817,
+      163,
+      914
+     ],
+     "circle_b_screen": [
+      80,
+      817,
+      163,
+      914
+     ],
+     "object_w_px": 128,
+     "object_screen_width_pct": 3.56,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "3",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 3,
+   "scene": "七輪の路地",
+   "level": "中級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 9,
+   "outside_box_max_distance_px": 2.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "増える",
+     "label": "窓の花が1つ増える",
+     "line": "窓の花が、ひとつ増えました。",
+     "box_px": [
+      1576,
+      396,
+      1677,
+      505
+     ],
+     "box_screen": [
+      815,
+      205,
+      867,
+      261
+     ],
+     "circle_a_screen": [
+      815,
+      205,
+      867,
+      261
+     ],
+     "circle_b_screen": [
+      815,
+      205,
+      867,
+      261
+     ],
+     "object_w_px": 82,
+     "object_screen_width_pct": 2.21,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": "右の花をプログラムで切り抜いて貼った"
+    },
+    {
+     "id": 2,
+     "type": "増える",
+     "label": "壁にひしゃく",
+     "line": "壁に、ひしゃくがかかりました。",
+     "box_px": [
+      150,
+      640,
+      340,
+      1110
+     ],
+     "box_screen": [
+      78,
+      331,
+      176,
+      574
+     ],
+     "circle_a_screen": [
+      78,
+      331,
+      176,
+      574
+     ],
+     "circle_b_screen": [
+      78,
+      331,
+      176,
+      574
+     ],
+     "object_w_px": 85,
+     "object_screen_width_pct": 2.29,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "4",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "向き",
+     "label": "通風口の取っ手の向き",
+     "line": "七輪の取っ手が、反対を向いています。",
+     "box_px": [
+      970,
+      1660,
+      1088,
+      1726
+     ],
+     "box_screen": [
+      502,
+      859,
+      563,
+      893
+     ],
+     "circle_a_screen": [
+      502,
+      859,
+      563,
+      893
+     ],
+     "circle_b_screen": [
+      502,
+      859,
+      563,
+      893
+     ],
+     "object_w_px": 100,
+     "object_screen_width_pct": 2.69,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": "取っ手をプログラムで左右反対にした"
+    }
+   ]
+  },
+  {
+   "q": 4,
+   "scene": "海辺",
+   "level": "中級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 341,
+   "outside_box_max_distance_px": 10.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "形が変わる",
+     "label": "灯台のてっぺんの形",
+     "line": "灯台のてっぺんの形が、変わりました。",
+     "box_px": [
+      112,
+      284,
+      210,
+      398
+     ],
+     "box_screen": [
+      58,
+      147,
+      109,
+      206
+     ],
+     "circle_a_screen": [
+      58,
+      147,
+      109,
+      206
+     ],
+     "circle_b_screen": [
+      58,
+      147,
+      109,
+      206
+     ],
+     "object_w_px": 95,
+     "object_screen_width_pct": 2.56,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "2",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "本数",
+     "label": "干したさんまが1匹へる",
+     "line": "干したさんまが、一匹へりました。",
+     "box_px": [
+      640,
+      816,
+      796,
+      1330
+     ],
+     "box_screen": [
+      331,
+      422,
+      412,
+      688
+     ],
+     "circle_a_screen": [
+      331,
+      422,
+      412,
+      688
+     ],
+     "circle_b_screen": [
+      331,
+      422,
+      412,
+      688
+     ],
+     "object_w_px": 100,
+     "object_screen_width_pct": 2.69,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "カモメが増える",
+     "line": "カモメが、一羽増えました。",
+     "box_px": [
+      1490,
+      180,
+      1610,
+      322
+     ],
+     "box_screen": [
+      771,
+      93,
+      833,
+      167
+     ],
+     "circle_a_screen": [
+      771,
+      93,
+      833,
+      167
+     ],
+     "circle_b_screen": [
+      771,
+      93,
+      833,
+      167
+     ],
+     "object_w_px": 100,
+     "object_screen_width_pct": 2.69,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": "左のカモメをプログラムで小さく左右反対にして貼った（scripts/program_diffs.py）"
+    }
+   ]
+  },
+  {
+   "q": 5,
+   "scene": "囲炉裏端",
+   "level": "上級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 379,
+   "outside_box_max_distance_px": 10.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "物がない",
+     "label": "干し柿が1つへる",
+     "line": "干し柿が、ひとつへりました。",
+     "box_px": [
+      150,
+      433,
+      243,
+      567
+     ],
+     "box_screen": [
+      78,
+      224,
+      126,
+      293
+     ],
+     "circle_a_screen": [
+      78,
+      224,
+      126,
+      293
+     ],
+     "circle_b_screen": [
+      78,
+      224,
+      126,
+      293
+     ],
+     "object_w_px": 80,
+     "object_screen_width_pct": 2.16,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "3",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "物がない",
+     "label": "みのの結びひもがない",
+     "line": "みのの、結びひもがありません。",
+     "box_px": [
+      1503,
+      215,
+      1592,
+      300
+     ],
+     "box_screen": [
+      777,
+      111,
+      823,
+      155
+     ],
+     "circle_a_screen": [
+      777,
+      111,
+      823,
+      155
+     ],
+     "circle_b_screen": [
+      777,
+      111,
+      823,
+      155
+     ],
+     "object_w_px": 70,
+     "object_screen_width_pct": 1.89,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "3",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "物がない",
+     "label": "鉄びんのふたのつまみがない",
+     "line": "鉄びんのふたの、つまみがありません。",
+     "box_px": [
+      846,
+      428,
+      998,
+      560
+     ],
+     "box_screen": [
+      438,
+      221,
+      516,
+      290
+     ],
+     "circle_a_screen": [
+      438,
+      221,
+      516,
+      290
+     ],
+     "circle_b_screen": [
+      438,
+      221,
+      516,
+      290
+     ],
+     "object_w_px": 70,
+     "object_screen_width_pct": 1.89,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "2",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  }
+ ]
+}

@@ -290,6 +290,18 @@
    "いろりばた"
   ],
   [
+   "ひしゃく",
+   "ひしゃく"
+  ],
+  [
+   "結びひも",
+   "むすびひも"
+  ],
+  [
+   "夕ごはん",
+   "ゆうごはん"
+  ],
+  [
    "第1問",
    "だいいちもん"
   ],
@@ -336,6 +348,30 @@
   [
    "3問目",
    "さんもんめ"
+  ],
+  [
+   "注ぎ口",
+   "つぎぐち"
+  ],
+  [
+   "尾びれ",
+   "おびれ"
+  ],
+  [
+   "結び目",
+   "むすびめ"
+  ],
+  [
+   "干した",
+   "ほした"
+  ],
+  [
+   "干し柿",
+   "ほしがき"
+  ],
+  [
+   "鉄びん",
+   "てつびん"
   ],
   [
    "初級",
@@ -446,6 +482,26 @@
    "いっこ"
   ],
   [
+   "急須",
+   "きゅうす"
+  ],
+  [
+   "浮き",
+   "うき"
+  ],
+  [
+   "灯台",
+   "とうだい"
+  ],
+  [
+   "目黒",
+   "めぐろ"
+  ],
+  [
+   "殿様",
+   "とのさま"
+  ],
+  [
    "葉",
    "は"
   ],
@@ -456,6 +512,30 @@
   [
    "針",
    "はり"
+  ],
+  [
+   "炭",
+   "すみ"
+  ],
+  [
+   "脂",
+   "あぶら"
+  ],
+  [
+   "取っ手",
+   "とって"
+  ],
+  [
+   "通風口",
+   "つうふうぐち"
+  ],
+  [
+   "小皿",
+   "こざら"
+  ],
+  [
+   "つけもの",
+   "つけもの"
   ]
  ],
  "voice_override": {
@@ -495,9 +575,97 @@
     2088
    ],
    "retries": {},
-   "program_edits": {},
-   "program_ops": {},
-   "diffs": [],
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   },
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "src": [
+       1240,
+       892,
+       1444,
+       1096
+      ],
+      "circle": [
+       1342,
+       994,
+       98
+      ],
+      "dst": [
+       730,
+       1185
+      ],
+      "width": 160
+     },
+     {
+      "op": "copy",
+      "src": [
+       1425,
+       1190,
+       1856,
+       1535
+      ],
+      "circle": [
+       1645,
+       1363,
+       205
+      ],
+      "dst": [
+       820,
+       150
+      ],
+      "width": 190
+     }
+    ]
+   },
+   "diffs": [
+    {
+     "id": 1,
+     "type": "増える",
+     "label": "小皿が増える",
+     "line": "つけものの小皿が、ひとつ増えました。",
+     "box": [
+      812,
+      142,
+      1018,
+      317
+     ],
+     "object_w": 190,
+     "src": "p",
+     "note": "右のつけものの小皿をプログラムで小さくして貼った（scripts/program_diffs.py）"
+    },
+    {
+     "id": 2,
+     "type": "物がない",
+     "label": "さんまの尾びれがない",
+     "line": "さんまの尾びれが、ありません。",
+     "box": [
+      1569,
+      478,
+      1813,
+      717
+     ],
+     "object_w": 200,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "すだちが増える",
+     "line": "すだちが、ひとつ増えました。",
+     "box": [
+      722,
+      1177,
+      898,
+      1353
+     ],
+     "object_w": 168,
+     "src": "p",
+     "note": "お皿のすだちをプログラムで切り抜いて貼った（scripts/program_diffs.py）"
+    }
+   ],
    "hint_diff": null,
    "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors: (a) the green sudachi lime half on the plate is gone; (b) the spout of the teapot is gone; (c) the chopstick rest becomes round (a small ball shape); (d) the rice bowl has a red rim instead of a blue one; (e) in the miso soup, one more white tofu cube; (f) the tail fin of the grilled sanma is gone."
   },
@@ -517,11 +685,55 @@
    "retries": {},
    "program_edits": {},
    "program_ops": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "物がない",
+     "label": "船の黄色い浮きがない",
+     "line": "船の黄色い浮きが、ありません。",
+     "box": [
+      700,
+      582,
+      837,
+      715
+     ],
+     "object_w": 124,
+     "src": "2"
+    },
+    {
+     "id": 2,
+     "type": "増える",
+     "label": "海に浮きが増える",
+     "line": "海に、浮きがひとつ増えました。",
+     "box": [
+      1676,
+      463,
+      1816,
+      593
+     ],
+     "object_w": 127,
+     "src": "3"
+    },
+    {
+     "id": 3,
+     "type": "物がない",
+     "label": "浮きのひもの結び目がない",
+     "line": "赤い浮きの、ひもの結び目がありません。",
+     "box": [
+      180,
+      1565,
+      335,
+      1745
+     ],
+     "object_w": 128,
+     "src": "3"
+    }
+   ],
    "hint_diff": null,
    "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors: (a) the red flag on the boat is gone; (b) the seagull on the post now faces left; (c) of the pair of yellow boots, the right boot is gone; (d) the blue bucket has no handle; (e) the orange buoy becomes green; (f) in the crate, one more sanma lies on top of the others.",
    "edit_prompts": {
-    "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors: (a) the red flag cloth on the boat is gone, only the thin pole stays; (b) the small yellow float hanging on the side of the boat is gone; (c) the rope wrapped around the wooden post under the seagull is gone; (d) the handle of the blue bucket is gone; (e) on the deck in front of the crate, add one small white seashell."
+    "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors: (a) the red flag cloth on the boat is gone, only the thin pole stays; (b) the small yellow float hanging on the side of the boat is gone; (c) the rope wrapped around the wooden post under the seagull is gone; (d) the handle of the blue bucket is gone; (e) on the deck in front of the crate, add one small white seashell.",
+    "3": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors: (a) on the big orange buoy at the lower left, the small blue cap and the rope knot on its right side are gone (the buoy is a plain orange ball); (b) on the blue sea to the right of the wooden post with the seagull, add one small orange buoy floating on the water, about one sixteenth of the picture width."
    }
   },
   {
@@ -538,14 +750,94 @@
     2088
    ],
    "retries": {},
-   "program_edits": {},
-   "program_ops": {},
-   "diffs": [],
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   },
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "src": [
+       1600,
+       280,
+       1705,
+       385
+      ],
+      "circle": [
+       1652,
+       333,
+       42
+      ],
+      "thr_in_circle": 45,
+      "dst": [
+       1585,
+       405
+      ],
+      "width": 82
+     },
+     {
+      "op": "flip",
+      "box": [
+       976,
+       1662,
+       1080,
+       1722
+      ]
+     }
+    ]
+   },
+   "diffs": [
+    {
+     "id": 1,
+     "type": "増える",
+     "label": "窓の花が1つ増える",
+     "line": "窓の花が、ひとつ増えました。",
+     "box": [
+      1576,
+      396,
+      1677,
+      505
+     ],
+     "object_w": 82,
+     "src": "p",
+     "note": "右の花をプログラムで切り抜いて貼った"
+    },
+    {
+     "id": 2,
+     "type": "増える",
+     "label": "壁にひしゃく",
+     "line": "壁に、ひしゃくがかかりました。",
+     "box": [
+      150,
+      640,
+      340,
+      1110
+     ],
+     "object_w": 85,
+     "src": "4"
+    },
+    {
+     "id": 3,
+     "type": "向き",
+     "label": "通風口の取っ手の向き",
+     "line": "七輪の取っ手が、反対を向いています。",
+     "box": [
+      970,
+      1660,
+      1088,
+      1726
+     ],
+     "object_w": 100,
+     "src": "p",
+     "note": "取っ手をプログラムで左右反対にした"
+    }
+   ],
    "hint_diff": null,
    "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors: (a) the small flower pot on the window sill has one flower fewer; (b) the cat's tail is gone; (c) the top cap of the paper lantern is gone; (d) the handle of the round uchiwa fan is gone; (e) one more piece of charcoal in the bucket; (f) the window becomes square instead of arched.",
    "edit_prompts": {
     "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors: (a) the handle of the round uchiwa fan is half as long; (b) on the grill, the upper sanma has no tail fin; (c) the bottom black ring of the paper lantern is gone; (d) the small bucket of charcoal has a thin wire handle; (e) the cat's left ear is folded down.",
-    "3": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors: (a) the black wire handle on top of the red paper lantern is gone; (b) in the charcoal bucket, the tallest piece of charcoal sticking up is gone; (c) a small red string is tied near the end of the bamboo handle of the uchiwa fan; (d) the cat's nose becomes black; (e) one of the round metal studs on the wooden box under the fan is gone."
+    "3": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors: (a) the black wire handle on top of the red paper lantern is gone; (b) in the charcoal bucket, the tallest piece of charcoal sticking up is gone; (c) a small red string is tied near the end of the bamboo handle of the uchiwa fan; (d) the cat's nose becomes black; (e) one of the round metal studs on the wooden box under the fan is gone.",
+    "4": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors: (a) on the plain plaster wall at the left side, at middle height, add a small wooden ladle hanging on a nail, about one eighteenth of the picture width; (b) the cat now wears a small red collar around its neck."
    }
   },
   {
@@ -562,11 +854,79 @@
     2088
    ],
    "retries": {},
-   "program_edits": {},
-   "program_ops": {},
-   "diffs": [],
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   },
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "src": [
+       1140,
+       90,
+       1410,
+       410
+      ],
+      "dst": [
+       1500,
+       190
+      ],
+      "width": 100,
+      "thr": 40,
+      "flip": true
+     }
+    ]
+   },
+   "diffs": [
+    {
+     "id": 1,
+     "type": "形が変わる",
+     "label": "灯台のてっぺんの形",
+     "line": "灯台のてっぺんの形が、変わりました。",
+     "box": [
+      112,
+      284,
+      210,
+      398
+     ],
+     "object_w": 95,
+     "src": "2"
+    },
+    {
+     "id": 2,
+     "type": "本数",
+     "label": "干したさんまが1匹へる",
+     "line": "干したさんまが、一匹へりました。",
+     "box": [
+      640,
+      816,
+      796,
+      1330
+     ],
+     "object_w": 100,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "カモメが増える",
+     "line": "カモメが、一羽増えました。",
+     "box": [
+      1490,
+      180,
+      1610,
+      322
+     ],
+     "object_w": 100,
+     "src": "p",
+     "note": "左のカモメをプログラムで小さく左右反対にして貼った（scripts/program_diffs.py）"
+    }
+   ],
    "hint_diff": null,
-   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors: (a) one of the hanging sanma on the drying rack (the third from the left) is gone; (b) the top of the lighthouse is gone; (c) one more small shell on the sand at the lower right; (d) the straw hat in the bucket is gone; (e) the left seagull is gone; (f) one of the glass floats in the net becomes red."
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors: (a) one of the hanging sanma on the drying rack (the third from the left) is gone; (b) the top of the lighthouse is gone; (c) one more small shell on the sand at the lower right; (d) the straw hat in the bucket is gone; (e) the left seagull is gone; (f) one of the glass floats in the net becomes red.",
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors: (a) on the sand at the right side, in front of the sea and above the wooden bucket, add one small pink seashell, about one twentieth of the picture width; (b) the round window at the top of the lighthouse is gone."
+   }
   },
   {
    "q": 5,
@@ -582,9 +942,54 @@
     2088
    ],
    "retries": {},
-   "program_edits": {},
+   "program_edits": {
+    "fix": "scripts/custom/ep006_fix.py"
+   },
    "program_ops": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "物がない",
+     "label": "干し柿が1つへる",
+     "line": "干し柿が、ひとつへりました。",
+     "box": [
+      150,
+      433,
+      243,
+      567
+     ],
+     "object_w": 80,
+     "src": "3"
+    },
+    {
+     "id": 2,
+     "type": "物がない",
+     "label": "みのの結びひもがない",
+     "line": "みのの、結びひもがありません。",
+     "box": [
+      1503,
+      215,
+      1592,
+      300
+     ],
+     "object_w": 70,
+     "src": "3"
+    },
+    {
+     "id": 3,
+     "type": "物がない",
+     "label": "鉄びんのふたのつまみがない",
+     "line": "鉄びんのふたの、つまみがありません。",
+     "box": [
+      846,
+      428,
+      998,
+      560
+     ],
+     "object_w": 70,
+     "src": "2"
+    }
+   ],
    "hint_diff": null,
    "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors: (a) on the string of dried persimmons, one persimmon is gone; (b) the knob on the lid of the iron kettle is gone; (c) on the tray, one of the two tea cups is gone; (d) the tongs on the floor are gone; (e) one more small piece of charcoal on the floor at the bottom; (f) the small tea caddy on the tray is gone.",
    "edit_prompts": {
@@ -628,8 +1033,8 @@
   "note": "第1回と同じ型（変えた所なし）。左右に同じ絵・上に濃紺の帯で「秋の間違いさがし」・下に難易度と問いかけ。こよみ先生は入れない"
  },
  "short": {
-  "question": 2,
+  "question": 4,
   "answer_gap": 3.5,
-  "note": "ショートの下の絵で違いが y≈1550 より上に来る問を選ぶ（作成後に確認）"
+  "note": "違いがショートの下の絵で y≈1550 より上に来る第4問"
  }
 }

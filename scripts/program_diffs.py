@@ -111,11 +111,24 @@ def apply(im, op, work=None):
         else:
             src_im = im
         crop = src_im.crop(tuple(op["src"]))
-        if op.get("circle"):    # [cx, cy, r]：丸い物を円で切り抜く（元の絵の座標）
+        if op.get("circle") and op.get("thr_in_circle"):   # 円の中で、まわりの地の色と違う所だけ（花びらのように地がすけて見える物）
+            cx, cy, rr = op["circle"]
+            C = np.asarray(crop).astype(float)
+            yy, xx = np.mgrid[0:C.shape[0], 0:C.shape[1]]
+            inc = (xx + op["src"][0] - cx) ** 2 + (yy + op["src"][1] - cy) ** 2 <= rr ** 2
+            bg = np.median(C[~inc], 0) if (~inc).any() else np.median(C.reshape(-1, 3), 0)
+            m = inc & (np.sqrt(((C - bg) ** 2).sum(2)) > op["thr_in_circle"])
+            m = ndimage.binary_fill_holes(ndimage.binary_closing(m, iterations=2)) & inc
+            op = dict(op, _mask=m)
+        if op.get("_mask") is not None:
+            m = op["_mask"]
+        elif op.get("circle"):    # [cx, cy, r]：丸い物を円で切り抜く（元の絵の座標）
             cx, cy, rr = op["circle"]
             import math
             op = dict(op, poly=[[cx + rr * math.cos(t / 36 * 2 * math.pi), cy + rr * math.sin(t / 36 * 2 * math.pi)] for t in range(36)])
-        if op.get("poly"):      # 物のまわりを手で囲んだ多角形（元の絵の座標）。地に模様があって自動の切り抜きができないとき
+        if op.get("_mask") is not None:
+            pass
+        elif op.get("poly"):      # 物のまわりを手で囲んだ多角形（元の絵の座標）。地に模様があって自動の切り抜きができないとき
             from PIL import ImageDraw
             pm = Image.new("L", crop.size, 0)
             ImageDraw.Draw(pm).polygon([(x - op["src"][0], y - op["src"][1]) for x, y in op["poly"]], fill=255)

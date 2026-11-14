@@ -9,7 +9,10 @@ from scipy import ndimage
 
 w = Path(sys.argv[1])
 p = w / "q5_a.png"
-im = Image.open(p).convert("RGB")
+orig = w / "q5_a_orig.png"
+if not orig.exists():
+    Image.open(p).save(orig)
+im = Image.open(orig).convert("RGB")
 A = np.asarray(im).astype(float)
 def fill(A, mask, iters=200):
     """mask の所を、まわりの色から少しずつぼかしてうめる。"""
@@ -31,3 +34,5 @@ noise = rng.normal(0, 2.0, C.shape)
 noise = np.asarray(Image.fromarray(np.clip(128 + noise * 4, 0, 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(1))).astype(float) - 128
 A[y0:y1, x0:x1] = np.clip(paper + noise / 4, 0, 255)
 Image.fromarray(np.clip(A, 0, 255).astype(np.uint8)).save(p)
+
+
