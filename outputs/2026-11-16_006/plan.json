@@ -751,7 +751,8 @@
    ],
    "retries": {},
    "program_edits": {
-    "p": "scripts/program_diffs.py"
+    "p": "scripts/program_diffs.py",
+    "noh": "scripts/custom/ep006_fix.py"
    },
    "program_ops": {
     "p": [
@@ -774,15 +775,6 @@
        405
       ],
       "width": 82
-     },
-     {
-      "op": "flip",
-      "box": [
-       976,
-       1662,
-       1080,
-       1722
-      ]
      }
     ]
    },
@@ -818,18 +810,18 @@
     },
     {
      "id": 3,
-     "type": "向き",
-     "label": "通風口の取っ手の向き",
-     "line": "七輪の取っ手が、反対を向いています。",
+     "type": "物がない",
+     "label": "七輪の取っ手がない",
+     "line": "七輪の取っ手が、ありません。",
      "box": [
-      970,
-      1660,
-      1088,
-      1726
+      960,
+      1650,
+      1096,
+      1734
      ],
      "object_w": 100,
-     "src": "p",
-     "note": "取っ手をプログラムで左右反対にした"
+     "src": "noh",
+     "note": "取っ手をプログラムで消し、無地の扉の色でうめた（scripts/custom/ep006_fix.py、監査の差し戻し1）"
     }
    ],
    "hint_diff": null,

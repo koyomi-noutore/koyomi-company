@@ -36,3 +36,31 @@ A[y0:y1, x0:x1] = np.clip(paper + noise / 4, 0, 255)
 Image.fromarray(np.clip(A, 0, 255).astype(np.uint8)).save(p)
 
 
+
+
+# 第3問③：七輪の通風口の取っ手を消す（監査の差し戻し1：左右反対では見分けられない）。無地の扉なので、扉の色でうめる → edit_3_noh.png
+a3 = Image.open(w / "q3_a.png").convert("RGB")
+A3 = np.asarray(a3).astype(float)
+x0, y0, x1, y1 = 966, 1655, 1090, 1728
+C = A3[y0:y1, x0:x1]
+L = C.mean(2)
+door = np.median(C[(L > np.percentile(L, 10)) & (L < np.percentile(L, 60))], 0)
+handle = np.abs(L - door.mean()) > 28                                     # 扉の色と違う所（取っ手と、その黒い線）
+handle = ndimage.binary_dilation(handle, iterations=3)
+handle = ndimage.binary_dilation(np.abs(L - door.mean()) > 28, iterations=2)
+rng3 = np.random.default_rng(9)
+grain = C - np.asarray(Image.fromarray(C.astype(np.uint8)).filter(ImageFilter.GaussianBlur(4))).astype(float)
+gstd = grain[~handle].std(0)
+for yy in range(C.shape[0]):                       # 行ごとに、取っ手の左右の扉の色をつないでうめる
+    xs = np.nonzero(handle[yy])[0]
+    if len(xs) == 0:
+        continue
+    l, r = max(xs.min() - 1, 0), min(xs.max() + 1, C.shape[1] - 1)
+    left = C[yy, max(l - 4, 0):l + 1].mean(0); right = C[yy, r:r + 5].mean(0)
+    t = np.linspace(0, 1, r - l + 1)[:, None]
+    seg = left * (1 - t) + right * t + rng3.normal(0, 1, (r - l + 1, 3)) * gstd
+    C[yy, l:r + 1] = np.where(handle[yy, l:r + 1, None], seg, C[yy, l:r + 1])
+bl = np.asarray(Image.fromarray(np.clip(C, 0, 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(3))).astype(float)
+C = np.where(handle[..., None], bl + rng3.normal(0, 1, C.shape) * gstd * 0.8, C)      # 行のすじをならして、扉のざらつきを足す
+A3[y0:y1, x0:x1] = C
+Image.fromarray(np.clip(A3, 0, 255).astype(np.uint8)).save(w / "edit_3_noh.png")

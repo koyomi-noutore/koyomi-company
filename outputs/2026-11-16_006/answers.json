@@ -392,40 +392,40 @@
     },
     {
      "id": 3,
-     "type": "向き",
-     "label": "通風口の取っ手の向き",
-     "line": "七輪の取っ手が、反対を向いています。",
+     "type": "物がない",
+     "label": "七輪の取っ手がない",
+     "line": "七輪の取っ手が、ありません。",
      "box_px": [
-      970,
-      1660,
-      1088,
-      1726
+      960,
+      1650,
+      1096,
+      1734
      ],
      "box_screen": [
-      502,
-      859,
-      563,
-      893
+      497,
+      853,
+      567,
+      897
      ],
      "circle_a_screen": [
-      502,
-      859,
-      563,
-      893
+      497,
+      853,
+      567,
+      897
      ],
      "circle_b_screen": [
-      502,
-      859,
-      563,
-      893
+      497,
+      853,
+      567,
+      897
      ],
      "object_w_px": 100,
      "object_screen_width_pct": 2.69,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "p",
+     "edit_version": "noh",
      "made_by": "gemini",
-     "note": "取っ手をプログラムで左右反対にした"
+     "note": "取っ手をプログラムで消し、無地の扉の色でうめた（scripts/custom/ep006_fix.py、監査の差し戻し1）"
     }
    ]
   },
