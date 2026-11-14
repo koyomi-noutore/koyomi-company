@@ -1,0 +1,627 @@
+{
+ "total_sec": 634.0,
+ "fps": 30,
+ "opening": [
+  0.0,
+  15.0
+ ],
+ "rule": [
+  15.0,
+  25.0
+ ],
+ "unchiku": [
+  359.0,
+  389.0
+ ],
+ "ending": [
+  605.0,
+  634.0
+ ],
+ "cta": [
+  133.0,
+  143.0
+ ],
+ "questions": {
+  "1": {
+   "start": 25.0,
+   "card": [
+    25.0,
+    28.0
+   ],
+   "solve": [
+    28.0,
+    118.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 108.0,
+   "answer": [
+    118.0,
+    133.0
+   ],
+   "scene": "おでんの屋台",
+   "level": "やさしい",
+   "go": "さあ、第1問です。やさしい問題から。どうぞ。",
+   "hint": null,
+   "answers": [
+    "大根が、たまごになりました。",
+    "とっくりが、ありません。",
+    "からしの小皿が、ひとつ増えました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "2": {
+   "start": 143.0,
+   "card": [
+    143.0,
+    146.0
+   ],
+   "solve": [
+    146.0,
+    236.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 226.0,
+   "answer": [
+    236.0,
+    251.0
+   ],
+   "scene": "畑",
+   "level": "初級",
+   "go": "では、第2問。どうぞ。",
+   "hint": null,
+   "answers": [
+    "チョウが、飛んでいます。",
+    "小鳥が、一羽増えました。",
+    "にんじんが、増えました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "3": {
+   "start": 251.0,
+   "card": [
+    251.0,
+    254.0
+   ],
+   "solve": [
+    254.0,
+    344.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 334.0,
+   "answer": [
+    344.0,
+    359.0
+   ],
+   "scene": "銭湯",
+   "level": "中級",
+   "go": "少しむずかしくなります。どうぞ。",
+   "hint": null,
+   "answers": [
+    "もみじが、一枚増えました。",
+    "右上に、もみじがもう一枚あります。",
+    "どんぐりが、ひとつ増えました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "4": {
+   "start": 389.0,
+   "card": [
+    389.0,
+    392.0
+   ],
+   "solve": [
+    392.0,
+    482.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 472.0,
+   "answer": [
+    482.0,
+    497.0
+   ],
+   "scene": "紅葉狩りの川辺",
+   "level": "中級",
+   "go": "後半です。第4問、どうぞ。",
+   "hint": null,
+   "answers": [
+    "たまごが、ひとつ増えました。",
+    "川に、もみじが流れています。",
+    "敷物に、もみじが一枚増えました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "5": {
+   "start": 497.0,
+   "card": [
+    497.0,
+    500.0
+   ],
+   "solve": [
+    500.0,
+    590.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 580.0,
+   "answer": [
+    590.0,
+    605.0
+   ],
+   "scene": "お寺の山門",
+   "level": "上級",
+   "go": "いよいよ最後の難問です。じっくりどうぞ。",
+   "hint": null,
+   "answers": [
+    "ちょうちんの上の金具が、ありません。",
+    "いちょうの葉が、一枚増えました。",
+    "小さなもみじが、一枚ありません。"
+   ],
+   "answers_intro": "答えです。"
+  }
+ },
+ "lines": [
+  {
+   "id": "op",
+   "start": 0.0,
+   "slot_end": 10.6,
+   "subtitle": "こよみ先生です。今日は、おでんの間違い探し、全5問。最後は難問です。3問目のあとには、おでんの意外なお話も。",
+   "voice_text": "こよみ先生です。きょうは、おでんの間違い探し、全ごもん。最後はなんもんです。さんもんめのあとには、おでんのいがいなお話も。",
+   "face": "smile"
+  },
+  {
+   "id": "op2",
+   "start": 10.6,
+   "slot_end": 15.0,
+   "subtitle": "ぜひ最後まで、一緒に解いてくださいね。",
+   "voice_text": "ぜひ最後まで、いっしょに解いてくださいね。",
+   "face": "wink"
+  },
+  {
+   "id": "rule",
+   "start": 15.0,
+   "slot_end": 25.0,
+   "subtitle": "それでは、ルールです。左と右の絵をくらべて、90秒で、右の絵の違いを3つ探してください。",
+   "voice_text": "それでは、ルールです。左と右の絵をくらべて、きゅうじゅうびょうで、右の絵の違いをみっつ探してください。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_card",
+   "start": 25.0,
+   "slot_end": 28.8,
+   "subtitle": "第1問、やさしい問題。おでんの屋台です。",
+   "voice_text": "だいいちもん、やさしい問題。おでんのやたいです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_go",
+   "start": 28.8,
+   "slot_end": 36.0,
+   "subtitle": "さあ、第1問です。やさしい問題から。どうぞ。",
+   "voice_text": "さあ、だいいちもんです。やさしい問題から。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_call0",
+   "start": 58.0,
+   "slot_end": 62.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_call1",
+   "start": 88.0,
+   "slot_end": 92.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_ten",
+   "start": 108.0,
+   "slot_end": 111.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_ans0",
+   "start": 118.0,
+   "slot_end": 119.6,
+   "subtitle": "答えです。",
+   "voice_text": "答えです。",
+   "face": "smile"
+  },
+  {
+   "id": "q1_ans1",
+   "start": 119.6,
+   "slot_end": 123.89999999999999,
+   "subtitle": "大根が、たまごになりました。",
+   "voice_text": "だいこんが、たまごになりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q1_ans2",
+   "start": 123.89999999999999,
+   "slot_end": 128.2,
+   "subtitle": "とっくりが、ありません。",
+   "voice_text": "とっくりが、ありません。",
+   "face": "smile"
+  },
+  {
+   "id": "q1_ans3",
+   "start": 128.2,
+   "slot_end": 132.5,
+   "subtitle": "からしの小皿が、ひとつ増えました。",
+   "voice_text": "からしのこざらが、ひとつ増えました。",
+   "face": "smile"
+  },
+  {
+   "id": "cta",
+   "start": 133.0,
+   "slot_end": 143.0,
+   "subtitle": "チャンネル登録とベルを押すと、毎朝8時半に新しい問題が届きます。毎日の頭の体操の習慣にどうぞ。",
+   "voice_text": "チャンネルとうろくと、ベルを押すと、毎朝はちじはんに、新しい問題が届きます。毎日の、頭の体操の、習慣にどうぞ。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_card",
+   "start": 143.0,
+   "slot_end": 146.8,
+   "subtitle": "第2問、初級。畑です。",
+   "voice_text": "だいにもん、しょきゅう。はたけです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_go",
+   "start": 146.8,
+   "slot_end": 154.0,
+   "subtitle": "では、第2問。どうぞ。",
+   "voice_text": "では、だいにもん。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_call0",
+   "start": 176.0,
+   "slot_end": 180.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_call1",
+   "start": 206.0,
+   "slot_end": 210.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_ten",
+   "start": 226.0,
+   "slot_end": 229.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_ans0",
+   "start": 236.0,
+   "slot_end": 237.6,
+   "subtitle": "答えです。",
+   "voice_text": "答えです。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_ans1",
+   "start": 237.6,
+   "slot_end": 241.9,
+   "subtitle": "チョウが、飛んでいます。",
+   "voice_text": "ちょうが、飛んでいます。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_ans2",
+   "start": 241.9,
+   "slot_end": 246.2,
+   "subtitle": "小鳥が、一羽増えました。",
+   "voice_text": "ことりが、いちわ増えました。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_ans3",
+   "start": 246.2,
+   "slot_end": 250.5,
+   "subtitle": "にんじんが、増えました。",
+   "voice_text": "にんじんが、増えました。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_card",
+   "start": 251.0,
+   "slot_end": 254.8,
+   "subtitle": "第3問、中級。銭湯です。",
+   "voice_text": "だいさんもん、ちゅうきゅう。せんとうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_go",
+   "start": 254.8,
+   "slot_end": 262.0,
+   "subtitle": "少しむずかしくなります。どうぞ。",
+   "voice_text": "少しむずかしくなります。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "c_comment",
+   "start": 266.0,
+   "slot_end": 273.0,
+   "subtitle": "見つかった数を、あとでコメントで教えてくださいね。",
+   "voice_text": "見つかった数を、あとでコメントで教えてくださいね。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_call0",
+   "start": 284.0,
+   "slot_end": 288.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_call1",
+   "start": 314.0,
+   "slot_end": 318.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_ten",
+   "start": 334.0,
+   "slot_end": 337.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_ans0",
+   "start": 344.0,
+   "slot_end": 345.6,
+   "subtitle": "答えです。",
+   "voice_text": "答えです。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_ans1",
+   "start": 345.6,
+   "slot_end": 349.90000000000003,
+   "subtitle": "もみじが、一枚増えました。",
+   "voice_text": "もみじが、いちまい増えました。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_ans2",
+   "start": 349.90000000000003,
+   "slot_end": 354.20000000000005,
+   "subtitle": "右上に、もみじがもう一枚あります。",
+   "voice_text": "みぎうえに、もみじがもういちまいあります。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_ans3",
+   "start": 354.20000000000005,
+   "slot_end": 358.5,
+   "subtitle": "どんぐりが、ひとつ増えました。",
+   "voice_text": "どんぐりが、ひとつ増えました。",
+   "face": "smile"
+  },
+  {
+   "id": "u1",
+   "start": 359.0,
+   "slot_end": 366.0,
+   "subtitle": "ここでひと休み。こよみ先生の季節のお話です。",
+   "voice_text": "ここでひと休み。こよみ先生の季節のお話です。",
+   "face": "smile"
+  },
+  {
+   "id": "u2",
+   "start": 366.0,
+   "slot_end": 374.0,
+   "subtitle": "おでんの「でん」って、何のことでしょう？",
+   "voice_text": "おでんの、でんって、何のことでしょう？",
+   "face": "think"
+  },
+  {
+   "id": "u3",
+   "start": 374.0,
+   "slot_end": 383.0,
+   "subtitle": "答えは田楽。「お田楽」が縮まって、「おでん」になったといわれます。",
+   "voice_text": "答えは、でんがく。おでんがくが縮まって、おでんになったといわれます。",
+   "face": "surprise"
+  },
+  {
+   "id": "u4",
+   "start": 383.0,
+   "slot_end": 389.0,
+   "subtitle": "関西では「関東煮」とも呼びます。今夜の話のタネにどうぞ。",
+   "voice_text": "かんさいでは、かんとだき、とも呼びます。今夜の、はなしのタネにどうぞ。",
+   "face": "wink"
+  },
+  {
+   "id": "q4_card",
+   "start": 389.0,
+   "slot_end": 392.8,
+   "subtitle": "第4問、中級。紅葉狩りの川辺です。",
+   "voice_text": "だいよんもん、ちゅうきゅう。もみじがりのかわべです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_go",
+   "start": 392.8,
+   "slot_end": 400.0,
+   "subtitle": "後半です。第4問、どうぞ。",
+   "voice_text": "後半です。だいよんもん、どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_call0",
+   "start": 422.0,
+   "slot_end": 426.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_call1",
+   "start": 452.0,
+   "slot_end": 456.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_ten",
+   "start": 472.0,
+   "slot_end": 475.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_ans0",
+   "start": 482.0,
+   "slot_end": 483.6,
+   "subtitle": "答えです。",
+   "voice_text": "答えです。",
+   "face": "smile"
+  },
+  {
+   "id": "q4_ans1",
+   "start": 483.6,
+   "slot_end": 487.90000000000003,
+   "subtitle": "たまごが、ひとつ増えました。",
+   "voice_text": "たまごが、ひとつ増えました。",
+   "face": "smile"
+  },
+  {
+   "id": "q4_ans2",
+   "start": 487.90000000000003,
+   "slot_end": 492.20000000000005,
+   "subtitle": "川に、もみじが流れています。",
+   "voice_text": "川に、もみじが流れています。",
+   "face": "smile"
+  },
+  {
+   "id": "q4_ans3",
+   "start": 492.20000000000005,
+   "slot_end": 496.5,
+   "subtitle": "敷物に、もみじが一枚増えました。",
+   "voice_text": "しきものに、もみじがいちまい増えました。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_card",
+   "start": 497.0,
+   "slot_end": 500.8,
+   "subtitle": "第5問、上級。お寺の山門です。",
+   "voice_text": "だいごもん、じょうきゅう。おてらのさんもんです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_go",
+   "start": 500.8,
+   "slot_end": 508.0,
+   "subtitle": "いよいよ最後の難問です。じっくりどうぞ。",
+   "voice_text": "いよいよ最後のなんもんです。じっくりどうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_call0",
+   "start": 530.0,
+   "slot_end": 534.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_call1",
+   "start": 560.0,
+   "slot_end": 564.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_ten",
+   "start": 580.0,
+   "slot_end": 583.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_ans0",
+   "start": 590.0,
+   "slot_end": 591.6,
+   "subtitle": "答えです。",
+   "voice_text": "答えです。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_ans1",
+   "start": 591.6,
+   "slot_end": 595.9,
+   "subtitle": "ちょうちんの上の金具が、ありません。",
+   "voice_text": "ちょうちんの上のかなぐが、ありません。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_ans2",
+   "start": 595.9,
+   "slot_end": 600.2,
+   "subtitle": "いちょうの葉が、一枚増えました。",
+   "voice_text": "いちょうのはが、いちまい増えました。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_ans3",
+   "start": 600.2,
+   "slot_end": 604.5,
+   "subtitle": "小さなもみじが、一枚ありません。",
+   "voice_text": "小さなもみじが、いちまいありません。",
+   "face": "smile"
+  },
+  {
+   "id": "e1",
+   "start": 605.0,
+   "slot_end": 608.6,
+   "subtitle": "これで5問、おしまいです。おつかれさまでした。",
+   "voice_text": "これでごもん、おしまいです。おつかれさまでした。",
+   "face": "yay"
+  },
+  {
+   "id": "e2",
+   "start": 608.6,
+   "slot_end": 614.0,
+   "subtitle": "15個の違い、いくつ見つかりましたか。今日の称号です。",
+   "voice_text": "じゅうごこの違い、いくつ見つかりましたか。きょうのしょうごうです。",
+   "face": "smile"
+  },
+  {
+   "id": "e3",
+   "start": 614.0,
+   "slot_end": 623.0,
+   "subtitle": "チャンネル登録とベルで、毎朝8時半に、新しい問題が届きます。",
+   "voice_text": "チャンネルとうろくとベルで、毎朝はちじはんに、新しい問題が届きます。",
+   "face": "smile"
+  },
+  {
+   "id": "e4",
+   "start": 623.0,
+   "slot_end": 634.0,
+   "subtitle": "左の丸を押すと登録、右の動画で、次の問題に挑戦できますよ。",
+   "voice_text": "左の丸を押すととうろく、右の動画で、次の問題に挑戦できますよ。",
+   "face": "wink"
+  }
+ ]
+}

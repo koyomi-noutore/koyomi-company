@@ -445,7 +445,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 1040,
+   "outside_box_pixels_diff_gt15": 173,
    "outside_box_max_distance_px": 8.0,
    "answers": [
     {
@@ -491,36 +491,36 @@
      "label": "川にもみじ",
      "line": "川に、もみじが流れています。",
      "box_px": [
-      1622,
-      726,
-      1788,
-      866
+      1460,
+      790,
+      1590,
+      920
      ],
      "box_screen": [
-      839,
-      376,
-      925,
-      448
+      755,
+      409,
+      822,
+      476
      ],
      "circle_a_screen": [
-      839,
-      376,
-      925,
-      448
+      755,
+      409,
+      822,
+      476
      ],
      "circle_b_screen": [
-      839,
-      376,
-      925,
-      448
+      755,
+      409,
+      822,
+      476
      ],
      "object_w_px": 95,
      "object_screen_width_pct": 2.56,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "2",
+     "edit_version": "p",
      "made_by": "gemini",
-     "note": ""
+     "note": "描き直しの葉を、岩にかからない水の上へプログラムで置いた"
     },
     {
      "id": 3,
