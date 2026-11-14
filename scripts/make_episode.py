@@ -136,6 +136,11 @@ def video(ep, work, font):
 
 
 def thumbnail(ep, font):
+    # テストと比較の案（<回>/ab/thumb_A.jpg）があれば、それをアップロード用のサムネにする（2026-11-14 監査：旧型で上書きしていた）
+    if (ep / "ab" / "thumb_A.jpg").exists():
+        (ep / "thumbnail.jpg").write_bytes((ep / "ab" / "thumb_A.jpg").read_bytes())
+        log(f"サムネ：{ep / 'thumbnail.jpg'}（ab/thumb_A.jpg を写した）")
+        return
     import ep_thumbnail as Th
     log(f"サムネ：{Th.make(ep, font)}")
 
