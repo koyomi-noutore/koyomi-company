@@ -39,7 +39,7 @@ SOURCE_JA = {"SHORTS": "ショートフィード", "RELATED_VIDEO": "関連動�
              "YT_SEARCH": "YouTube検索", "BROWSE": "ブラウジング（ホーム）", "EXT_URL": "外部サイト",
              "NO_LINK_OTHER": "直接・不明", "PLAYLIST": "再生リスト", "YT_CHANNEL": "チャンネルページ",
              "YT_OTHER_PAGE": "その他のYouTube", "NOTIFICATION": "通知", "END_SCREEN": "終了画面",
-             "ANNOTATION": "カード等", "HASHTAGS": "ハッシュタグ", "SOUND_PAGE": "サウンド", "CAMPAIGN_CARD": "キャンペーン"}
+             "ANNOTATION": "カード等", "HASHTAGS": "ハッシュタグ", "SOUND_PAGE": "サウンド", "SHORTS_CONTENT_LINKS": "ショートからのリンク（ショート→長尺）", "CAMPAIGN_CARD": "キャンペーン"}
 
 
 class ApiError(Exception):
@@ -249,6 +249,9 @@ def main():
         else:
             L.append(f"| {t} | {len(vs)} | {sum(v['data_views'] for v in vs):,}（Data API） | — | — | — | — | — |")
 
+    pending = [v["name"] for v in videos if not by_video[v["id"]]]
+    if daily and pending:
+        L.append(f"\n上の表は Analytics API にデータが出ている分だけ。まだ出ていない動画（{'、'.join(pending)}）は入っていない（動画別の表に Data API の累計あり）。")
     if not blocked:
         weeks = max((GOAL_DATE - today).days / 7, 1)
         L += ["", "## 収益化の4,000時間（長尺だけ・直近12か月）",
