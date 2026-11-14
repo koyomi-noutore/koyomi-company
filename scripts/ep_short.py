@@ -368,8 +368,9 @@ def description(ep):
     up = json.loads((Path(ep) / "upload.json").read_text(encoding="utf-8"))
     Q = {x["q"]: x for x in plan()["questions"]}[c["question"]]
     star = plan().get("topics", [Q["scene"]])[0]
-    title = c.get("title") or f"間違い探し シニア｜{star}の1問 #間違い探し #脳トレ #シニア"    # shorts.md 2026-11-14
-    desc = (f"上と下の絵で、違いを3つ探してください。{Q['level']}の1問です。\n\n"
+    title = c.get("title") or f"間違い探し シニア｜{star}の1問（{Q['scene']}） #間違い探し #脳トレ #シニア"    # shorts.md 2026-11-14
+    lv = "やさしい1問" if Q["level"] == "やさしい" else f"{Q['level']}の1問"
+    desc = (f"上と下の絵で、違いを3つ探してください。{lv}です。\n\n"
             f"続きの問題は長い動画で（全{len(plan()['questions'])}問）\n{up['title']}\n{up['url']}\n\n"
             "こよみ先生のまいにち脳トレ：毎日朝8時半に新しい問題をお届けします。\n\n"
             "【クレジット】\n音声：Fish Audio\n\n"

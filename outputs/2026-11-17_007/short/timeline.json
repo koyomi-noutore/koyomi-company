@@ -1,0 +1,81 @@
+{
+ "size": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "total_sec": 44.5,
+ "question": 2,
+ "solve_sec": 25.0,
+ "end_card_at": 36.9,
+ "pictures": {
+  "a": [
+   180,
+   205,
+   900,
+   1015
+  ],
+  "b": [
+   180,
+   1025,
+   900,
+   1835
+  ]
+ },
+ "lines": [
+  {
+   "id": "s_intro",
+   "start": 0.3,
+   "dur": 4.36,
+   "slot": 24.7,
+   "fits": true,
+   "subtitle": "上と下の絵で、違いが3つあります。見つけられますか。",
+   "voice_text": "上と下の絵で、違いがみっつあります。見つけられますか。"
+  },
+  {
+   "id": "s_ans0",
+   "start": 25.0,
+   "dur": 0.87,
+   "slot": 1.6,
+   "fits": true,
+   "subtitle": "答えです。",
+   "voice_text": "答えです。"
+  },
+  {
+   "id": "s_ans1",
+   "start": 26.6,
+   "dur": 1.63,
+   "slot": 3.3,
+   "fits": true,
+   "subtitle": "チョウが、飛んでいます。",
+   "voice_text": "ちょうが、飛んでいます。"
+  },
+  {
+   "id": "s_ans2",
+   "start": 29.900000000000002,
+   "dur": 2.15,
+   "slot": 3.3,
+   "fits": true,
+   "subtitle": "小鳥が、一羽増えました。",
+   "voice_text": "ことりが、いちわ増えました。"
+  },
+  {
+   "id": "s_ans3",
+   "start": 33.2,
+   "dur": 1.67,
+   "slot": 4.1,
+   "fits": true,
+   "subtitle": "にんじんが、増えました。",
+   "voice_text": "にんじんが、増えました。"
+  },
+  {
+   "id": "s_end",
+   "start": 37.3,
+   "dur": 6.62,
+   "slot": 7.2,
+   "fits": true,
+   "subtitle": "続きの問題は、長い動画で。毎朝8時半に、新しい問題が届きます。",
+   "voice_text": "続きの問題は、長い動画で。毎朝はちじはんに、新しい問題が届きます。"
+  }
+ ]
+}

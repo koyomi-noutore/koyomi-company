@@ -49,8 +49,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 171,
-   "outside_box_max_distance_px": 8.0,
+   "outside_box_pixels_diff_gt15": 206,
+   "outside_box_max_distance_px": 11.0,
    "answers": [
     {
      "id": 1,
@@ -92,45 +92,45 @@
     {
      "id": 2,
      "type": "物がない",
-     "label": "大根おろしがない",
-     "line": "大根おろしが、ありません。",
+     "label": "お皿のすだちがない",
+     "line": "お皿の、すだちがありません。",
      "box_px": [
-      1395,
-      750,
-      1690,
-      1075
+      1222,
+      880,
+      1492,
+      1150
      ],
      "box_screen": [
-      722,
-      388,
-      874,
-      556
+      632,
+      455,
+      772,
+      595
      ],
      "circle_a_screen": [
-      722,
-      388,
-      874,
-      556
+      632,
+      455,
+      772,
+      595
      ],
      "circle_b_screen": [
-      722,
-      388,
-      874,
-      556
+      632,
+      455,
+      772,
+      595
      ],
-     "object_w_px": 228,
-     "object_screen_width_pct": 6.14,
-     "in_level_range": false,
+     "object_w_px": 220,
+     "object_screen_width_pct": 5.93,
+     "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "2",
+     "edit_version": "1",
      "made_by": "gemini",
-     "note": "さんまの尾びれを消す違いは、尾の切れ端が残って不自然（2026-11-14 CEO指摘）なので差し替えた。白い山の幅は約228〜235px（6.1〜6.3%）"
+     "note": "大根おろしは影が残り大きすぎた（監査の差し戻し2）ので差し替えた。範囲は大根おろしにかからない所まで"
     },
     {
      "id": 3,
      "type": "増える",
-     "label": "すだちが増える",
-     "line": "すだちが、ひとつ増えました。",
+     "label": "お盆にすだちが増える",
+     "line": "お盆の上に、すだちが増えました。",
      "box_px": [
       722,
       1177,
@@ -481,7 +481,7 @@
      "object_screen_width_pct": 2.56,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "2",
+     "edit_version": "2c",
      "made_by": "gemini",
      "note": ""
     },
@@ -577,7 +577,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 379,
+   "outside_box_pixels_diff_gt15": 444,
    "outside_box_max_distance_px": 10.0,
    "answers": [
     {
@@ -623,28 +623,28 @@
      "label": "みのの結びひもがない",
      "line": "みのの、結びひもがありません。",
      "box_px": [
-      1503,
-      215,
-      1592,
-      300
+      1468,
+      198,
+      1612,
+      322
      ],
      "box_screen": [
-      777,
-      111,
-      823,
-      155
+      759,
+      102,
+      834,
+      167
      ],
      "circle_a_screen": [
-      777,
-      111,
-      823,
-      155
+      759,
+      102,
+      834,
+      167
      ],
      "circle_b_screen": [
-      777,
-      111,
-      823,
-      155
+      759,
+      102,
+      834,
+      167
      ],
      "object_w_px": 70,
      "object_screen_width_pct": 1.89,

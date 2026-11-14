@@ -69,15 +69,35 @@ Image.fromarray(np.clip(A3, 0, 255).astype(np.uint8)).save(w / "edit_3_noh.png")
 # 第4問②：干したさんまを消した所に、空の輪のひもが残った（2026-11-14 CEO指摘：消し残りの切れ端）。輪を、左右の空の色で行ごとにうめる → edit_4_1c.png
 e4 = Image.open(w / "edit_4_1.png").convert("RGB")
 E4 = np.asarray(e4).astype(float)
-x0, x1 = 664, 786
-for yy in range(802, 930):
+x0, x1, y0, y1 = 664, 786, 816, 945
+base = np.zeros((y1 - y0, x1 - x0, 3))
+for yy in range(y0, y1):                       # 行ごとに、左右の空の色をつなぐ（空のグラデーション）
     def sky(xa, xb):
         px = E4[yy, xa:xb]
-        ok = px[(px.mean(1) > 120) & (px[:, 2] > px[:, 0] + 30)]          # 青い空の画素だけ（線やさおは使わない）
-        return np.median(ok, 0) if len(ok) else None
-    lft, rgt = sky(x0 - 14, x0), sky(x1, x1 + 14)
-    if lft is None or rgt is None:
-        continue
+        ok = px[(px.mean(1) > 90) & (px[:, 2] > px[:, 0] + 45)]       # 青い空だけ（線・さおの白を除く）
+        return np.median(ok, 0) if len(ok) else np.array([150., 200., 230.])
+    lft, rgt = sky(x0 - 24, x0), sky(x1, x1 + 24)
     t = np.linspace(0, 1, x1 - x0)[:, None]
-    E4[yy, x0:x1] = lft * (1 - t) + rgt * t + np.random.default_rng(yy).normal(0, 1.5, (x1 - x0, 3))
+    base[yy - y0] = lft * (1 - t) + rgt * t
+base = np.asarray(Image.fromarray(np.clip(base, 0, 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(2))).astype(float)
+# 水彩のむら：すぐ下の空から切り出した模様を足す（監査の差し戻し2：平らな四角に見える）
+patch = E4[y1 + 5:y1 + 5 + (y1 - y0), x0:x1].copy()        # すぐ下の、さんまを消した後の空（同じ列）の模様
+tex = patch - np.asarray(Image.fromarray(patch.astype(np.uint8)).filter(ImageFilter.GaussianBlur(6))).astype(float)
+fillp = base + tex
+yy_, xx_ = np.mgrid[0:y1 - y0, 0:x1 - x0]
+edge = np.minimum.reduce([xx_, x1 - x0 - 1 - xx_, yy_, y1 - y0 - 1 - yy_]).astype(float)
+wgt = np.clip(edge / 10.0, 0, 1)[..., None]           # ふち10pxはなだらかにまぜる
+E4[y0:y1, x0:x1] = E4[y0:y1, x0:x1] * (1 - wgt) + fillp * wgt
 Image.fromarray(np.clip(E4, 0, 255).astype(np.uint8)).save(w / "edit_4_1c.png")
+
+
+# 第4問①：灯台の新しい屋根の上に残った、とんがりの先の点を空の色でうめる → edit_4_2c.png
+e42 = Image.open(w / "edit_4_2.png").convert("RGB")
+E42 = np.asarray(e42).astype(float)
+bx0, by0, bx1, by1 = 140, 255, 182, 312
+C = E42[by0:by1, bx0:bx1]
+L = C.mean(2)
+cap = ndimage.binary_dilation(L < 120, iterations=3)         # 屋根の輪郭（残す）
+dot = (L < np.median(L) - 6) & ~cap
+E42[by0:by1, bx0:bx1] = fill(C, ndimage.binary_dilation(dot, iterations=3) & ~cap, 200)
+Image.fromarray(np.clip(E42, 0, 255).astype(np.uint8)).save(w / "edit_4_2c.png")
