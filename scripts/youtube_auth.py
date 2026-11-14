@@ -4,7 +4,7 @@
 
 使い方:
   python3 scripts/youtube_auth.py url              # 許可ページのURLを出す
-  python3 scripts/youtube_auth.py exchange '<URL>' # 許可後に飛んだ http://localhost/?code=... を渡す
+  python3 scripts/youtube_auth.py exchange '<URL>' --show # 許可後に飛んだ http://localhost/?code=... を渡す（--show で環境変数用の値を1回表示）
   python3 scripts/youtube_auth.py check            # ログイン中のチャンネルを確認
 """
 import base64, hashlib, json, os, secrets, sys, urllib.parse, urllib.request
@@ -15,7 +15,8 @@ from credentials import youtube_client, youtube_refresh_token
 
 SCOPES = ["https://www.googleapis.com/auth/youtube.upload",      # 非公開アップロード
           "https://www.googleapis.com/auth/youtube.readonly",    # 自分のチャンネル・動画の確認
-          "https://www.googleapis.com/auth/yt-analytics.readonly"]  # 分析部用
+          "https://www.googleapis.com/auth/yt-analytics.readonly",  # マーケティング部（分析）用
+          "https://www.googleapis.com/auth/youtube.force-ssl"]     # タイトル・説明欄の変更、再生リスト（2026-11-14 追加）
 REDIRECT = "http://localhost"
 DIR = Path.home() / ".config" / "koyomi-noutore"
 STATE, TOKEN = DIR / "oauth_state.json", DIR / "youtube_token.json"
@@ -74,7 +75,12 @@ def cmd_exchange(redirected):
         sys.exit("refresh_token が返りませんでした。url からやり直してください。")
     save(TOKEN, {"refresh_token": tok["refresh_token"], "scope": tok.get("scope")})
     STATE.unlink()
-    print("ログインできました。トークンは", TOKEN, "に保存しました（中身は表示しません）。")
+    print("ログインできました。トークンは", TOKEN, "に保存しました。")
+    print("許可された権限:", tok.get("scope"))
+    if "--show" in sys.argv:
+        # 環境変数 YOUTUBE_REFRESH_TOKEN を差し替えるときだけ使う。ログやファイルには書かない。
+        print("\n▼CEOが環境変数 YOUTUBE_REFRESH_TOKEN に貼る値（1回だけ表示。会話以外に残さない）▼")
+        print(tok["refresh_token"])
     cmd_check()
 
 
