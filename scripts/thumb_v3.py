@@ -5,7 +5,9 @@
 import json, sys
 from PIL import Image, ImageDraw, ImageFont, ImageEnhance, ImageFilter
 
-F = '/usr/share/fonts/opentype/noto/NotoSansCJK-Black.ttc'
+import glob, os
+F = next((f for f in ['/usr/share/fonts/opentype/noto/NotoSansCJK-Black.ttc', os.environ.get('KOYOMI_THUMB_FONT', '')] if f and os.path.exists(f)), None) \
+    or next(iter(glob.glob(os.path.expanduser('~/.cache/koyomi/*/fontpkg/package/700Bold/*.ttf'))), None)   # 太いゴシックがなければ丸ゴシック（Zen Maru Gothic Bold, OFL）
 
 def make(ep, q, out, top_text=("3つ", "見つけたら", "天才！")):
     a = Image.open(f'{ep}/q{q}_a.png').convert('RGB'); b = Image.open(f'{ep}/q{q}_b.png').convert('RGB')
@@ -28,7 +30,7 @@ def make(ep, q, out, top_text=("3つ", "見つけたら", "天才！")):
     T.paste(prep(a), (0, top)); T.paste(prep(b), (644, top))
     d = ImageDraw.Draw(T)
     d.rectangle([636, top, 644, 720], fill=(25, 25, 25)); d.rectangle([0, 0, 1280, top], fill=(0, 0, 0))
-    f = ImageFont.truetype(F, 112, index=0)
+    f = ImageFont.truetype(F, 112)
     cols = [(255, 221, 0), (255, 255, 255), (255, 45, 45)]
     tw = sum(d.textlength(s, font=f) for s in top_text); x = (1280 - tw) / 2
     for s, c in zip(top_text, cols):
@@ -36,10 +38,11 @@ def make(ep, q, out, top_text=("3つ", "見つけたら", "天才！")):
     g = Image.new('L', (1280, 220), 0); gd = ImageDraw.Draw(g)
     for i in range(220): gd.line([(0, i), (1280, i)], fill=int(170 * i / 220))
     T.paste(Image.new('RGB', (1280, 220), (0, 0, 0)), (0, 500), g)
-    f2 = ImageFont.truetype(F, 190, index=0)
+    f2 = ImageFont.truetype(F, 190)
     d.text((640, 612), "間違い探し", font=f2, fill=(0, 0, 0), anchor='mm', stroke_width=26, stroke_fill=(0, 0, 0))
     d.text((640, 612), "間違い探し", font=f2, fill=(255, 230, 0), anchor='mm', stroke_width=14, stroke_fill=(215, 25, 25))
     T.save(out, quality=92)
 
 if __name__ == '__main__':
-    make(sys.argv[1], int(sys.argv[2]), sys.argv[3])
+    # 上の文字は「黄|白|赤」の3つに分けて渡す（例：3つ|見つけたら|天才！）
+    make(sys.argv[1], int(sys.argv[2]), sys.argv[3], tuple(sys.argv[4].split('|')) if len(sys.argv) > 4 else ("3つ", "見つけたら", "天才！"))

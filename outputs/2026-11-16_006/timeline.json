@@ -1,0 +1,599 @@
+{
+ "total_sec": 615.0,
+ "fps": 30,
+ "opening": [
+  0.0,
+  15.0
+ ],
+ "rule": [
+  15.0,
+  25.0
+ ],
+ "unchiku": [
+  349.0,
+  379.0
+ ],
+ "ending": [
+  595.0,
+  615.0
+ ],
+ "questions": {
+  "1": {
+   "start": 25.0,
+   "card": [
+    25.0,
+    28.0
+   ],
+   "solve": [
+    28.0,
+    118.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 108.0,
+   "answer": [
+    118.0,
+    133.0
+   ],
+   "scene": "食卓",
+   "level": "やさしい",
+   "go": "まずは、やさしい問題です。どうぞ。",
+   "hint": null,
+   "answers": [
+    "つけものの小皿が、ひとつ増えました。",
+    "さんまの尾びれが、ありません。",
+    "すだちが、ひとつ増えました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "2": {
+   "start": 133.0,
+   "card": [
+    133.0,
+    136.0
+   ],
+   "solve": [
+    136.0,
+    226.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 216.0,
+   "answer": [
+    226.0,
+    241.0
+   ],
+   "scene": "漁港",
+   "level": "初級",
+   "go": "さあ、どうぞ。",
+   "hint": null,
+   "answers": [
+    "船の黄色い浮きが、ありません。",
+    "海に、浮きがひとつ増えました。",
+    "赤い浮きの、ひもの結び目がありません。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "3": {
+   "start": 241.0,
+   "card": [
+    241.0,
+    244.0
+   ],
+   "solve": [
+    244.0,
+    334.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 324.0,
+   "answer": [
+    334.0,
+    349.0
+   ],
+   "scene": "七輪の路地",
+   "level": "中級",
+   "go": "少しむずかしくなります。どうぞ。",
+   "hint": null,
+   "answers": [
+    "窓の花が、ひとつ増えました。",
+    "壁に、ひしゃくがかかりました。",
+    "七輪の取っ手が、反対を向いています。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "4": {
+   "start": 379.0,
+   "card": [
+    379.0,
+    382.0
+   ],
+   "solve": [
+    382.0,
+    472.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 462.0,
+   "answer": [
+    472.0,
+    487.0
+   ],
+   "scene": "海辺",
+   "level": "中級",
+   "go": "後半です。どうぞ。",
+   "hint": null,
+   "answers": [
+    "灯台のてっぺんの形が、変わりました。",
+    "干したさんまが、一匹へりました。",
+    "カモメが、一羽増えました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "5": {
+   "start": 487.0,
+   "card": [
+    487.0,
+    490.0
+   ],
+   "solve": [
+    490.0,
+    580.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 570.0,
+   "answer": [
+    580.0,
+    595.0
+   ],
+   "scene": "囲炉裏端",
+   "level": "上級",
+   "go": "最後の問題です。じっくりどうぞ。",
+   "hint": null,
+   "answers": [
+    "干し柿が、ひとつへりました。",
+    "みのの、結びひもがありません。",
+    "鉄びんのふたの、つまみがありません。"
+   ],
+   "answers_intro": "答えです。"
+  }
+ },
+ "lines": [
+  {
+   "id": "op",
+   "start": 0.0,
+   "slot_end": 15.0,
+   "subtitle": "こよみ先生です。今日は、さんまの間違い探し、全5問。最後は難問です。3問目のあとには、さんまの意外なお話もありますよ。",
+   "voice_text": "こよみ先生です。きょうは、さんまの間違い探し、全ごもん。最後はなんもんです。さんもんめのあとには、さんまのいがいなお話もありますよ。",
+   "face": "smile"
+  },
+  {
+   "id": "rule",
+   "start": 15.0,
+   "slot_end": 25.0,
+   "subtitle": "左と右の絵をくらべます。90秒で、右の絵の違いを3つ探してください。",
+   "voice_text": "左と右の絵をくらべます。きゅうじゅうびょうで、右の絵の違いをみっつ探してください。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_card",
+   "start": 25.0,
+   "slot_end": 28.8,
+   "subtitle": "第1問、やさしい問題。食卓です。",
+   "voice_text": "だいいちもん、やさしい問題。しょくたくです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_go",
+   "start": 28.8,
+   "slot_end": 36.0,
+   "subtitle": "まずは、やさしい問題です。どうぞ。",
+   "voice_text": "まずは、やさしい問題です。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_call0",
+   "start": 58.0,
+   "slot_end": 62.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_call1",
+   "start": 88.0,
+   "slot_end": 92.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_ten",
+   "start": 108.0,
+   "slot_end": 111.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_ans0",
+   "start": 118.0,
+   "slot_end": 119.6,
+   "subtitle": "答えです。",
+   "voice_text": "答えです。",
+   "face": "smile"
+  },
+  {
+   "id": "q1_ans1",
+   "start": 119.6,
+   "slot_end": 123.89999999999999,
+   "subtitle": "つけものの小皿が、ひとつ増えました。",
+   "voice_text": "つけもののこざらが、ひとつ増えました。",
+   "face": "smile"
+  },
+  {
+   "id": "q1_ans2",
+   "start": 123.89999999999999,
+   "slot_end": 128.2,
+   "subtitle": "さんまの尾びれが、ありません。",
+   "voice_text": "さんまのおびれが、ありません。",
+   "face": "smile"
+  },
+  {
+   "id": "q1_ans3",
+   "start": 128.2,
+   "slot_end": 132.5,
+   "subtitle": "すだちが、ひとつ増えました。",
+   "voice_text": "すだちが、ひとつ増えました。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_card",
+   "start": 133.0,
+   "slot_end": 136.8,
+   "subtitle": "第2問、初級。漁港です。",
+   "voice_text": "だいにもん、しょきゅう。ぎょこうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_go",
+   "start": 136.8,
+   "slot_end": 144.0,
+   "subtitle": "さあ、どうぞ。",
+   "voice_text": "さあ、どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_call0",
+   "start": 166.0,
+   "slot_end": 170.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_call1",
+   "start": 196.0,
+   "slot_end": 200.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_ten",
+   "start": 216.0,
+   "slot_end": 219.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_ans0",
+   "start": 226.0,
+   "slot_end": 227.6,
+   "subtitle": "答えです。",
+   "voice_text": "答えです。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_ans1",
+   "start": 227.6,
+   "slot_end": 231.9,
+   "subtitle": "船の黄色い浮きが、ありません。",
+   "voice_text": "船の黄色いうきが、ありません。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_ans2",
+   "start": 231.9,
+   "slot_end": 236.2,
+   "subtitle": "海に、浮きがひとつ増えました。",
+   "voice_text": "海に、うきがひとつ増えました。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_ans3",
+   "start": 236.2,
+   "slot_end": 240.5,
+   "subtitle": "赤い浮きの、ひもの結び目がありません。",
+   "voice_text": "赤いうきの、ひものむすびめがありません。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_card",
+   "start": 241.0,
+   "slot_end": 244.8,
+   "subtitle": "第3問、中級。七輪の路地です。",
+   "voice_text": "だいさんもん、ちゅうきゅう。しちりんのろじです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_go",
+   "start": 244.8,
+   "slot_end": 252.0,
+   "subtitle": "少しむずかしくなります。どうぞ。",
+   "voice_text": "少しむずかしくなります。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "c_comment",
+   "start": 256.0,
+   "slot_end": 263.0,
+   "subtitle": "見つかった数を、あとでコメントで教えてくださいね。",
+   "voice_text": "見つかった数を、あとでコメントで教えてくださいね。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_call0",
+   "start": 274.0,
+   "slot_end": 278.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_call1",
+   "start": 304.0,
+   "slot_end": 308.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_ten",
+   "start": 324.0,
+   "slot_end": 327.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_ans0",
+   "start": 334.0,
+   "slot_end": 335.6,
+   "subtitle": "答えです。",
+   "voice_text": "答えです。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_ans1",
+   "start": 335.6,
+   "slot_end": 339.90000000000003,
+   "subtitle": "窓の花が、ひとつ増えました。",
+   "voice_text": "窓の花が、ひとつ増えました。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_ans2",
+   "start": 339.90000000000003,
+   "slot_end": 344.20000000000005,
+   "subtitle": "壁に、ひしゃくがかかりました。",
+   "voice_text": "壁に、ひしゃくがかかりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_ans3",
+   "start": 344.20000000000005,
+   "slot_end": 348.5,
+   "subtitle": "七輪の取っ手が、反対を向いています。",
+   "voice_text": "しちりんのとってが、反対を向いています。",
+   "face": "smile"
+  },
+  {
+   "id": "u1",
+   "start": 349.0,
+   "slot_end": 356.0,
+   "subtitle": "「さんまは目黒に限る」。目黒は海から遠いのに、なぜでしょう。",
+   "voice_text": "さんまは、めぐろにかぎる。めぐろは海から遠いのに、なぜでしょう。",
+   "face": "think"
+  },
+  {
+   "id": "u2",
+   "start": 356.0,
+   "slot_end": 366.4,
+   "subtitle": "落語のお話です。殿様が目黒で食べた焼きたてのさんまを、お屋敷で出させると、脂を抜いた料理でがっかり。",
+   "voice_text": "らくごのお話です。とのさまが、めぐろで食べた焼きたてのさんまを、おやしきで出させると、あぶらを抜いた料理で、がっかり。",
+   "face": "surprise"
+  },
+  {
+   "id": "u3",
+   "start": 366.4,
+   "slot_end": 373.0,
+   "subtitle": "そこで殿様は「さんまは目黒に限る」。かんちがいが、オチなんです。",
+   "voice_text": "そこで、とのさまは、さんまは、めぐろにかぎる。かんちがいが、オチなんです。",
+   "face": "smile"
+  },
+  {
+   "id": "u4",
+   "start": 373.0,
+   "slot_end": 379.0,
+   "subtitle": "さんまは焼きたてがいちばん。今夜の話のタネにどうぞ。",
+   "voice_text": "さんまは、焼きたてがいちばん。今夜の、はなしのタネにどうぞ。",
+   "face": "wink"
+  },
+  {
+   "id": "q4_card",
+   "start": 379.0,
+   "slot_end": 382.8,
+   "subtitle": "第4問、中級。海辺です。",
+   "voice_text": "だいよんもん、ちゅうきゅう。うみべです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_go",
+   "start": 382.8,
+   "slot_end": 390.0,
+   "subtitle": "後半です。どうぞ。",
+   "voice_text": "後半です。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_call0",
+   "start": 412.0,
+   "slot_end": 416.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_call1",
+   "start": 442.0,
+   "slot_end": 446.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_ten",
+   "start": 462.0,
+   "slot_end": 465.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_ans0",
+   "start": 472.0,
+   "slot_end": 473.6,
+   "subtitle": "答えです。",
+   "voice_text": "答えです。",
+   "face": "smile"
+  },
+  {
+   "id": "q4_ans1",
+   "start": 473.6,
+   "slot_end": 477.90000000000003,
+   "subtitle": "灯台のてっぺんの形が、変わりました。",
+   "voice_text": "とうだいのてっぺんの形が、変わりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q4_ans2",
+   "start": 477.90000000000003,
+   "slot_end": 482.20000000000005,
+   "subtitle": "干したさんまが、一匹へりました。",
+   "voice_text": "ほしたさんまが、いっぴきへりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q4_ans3",
+   "start": 482.20000000000005,
+   "slot_end": 486.5,
+   "subtitle": "カモメが、一羽増えました。",
+   "voice_text": "カモメが、いちわ増えました。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_card",
+   "start": 487.0,
+   "slot_end": 490.8,
+   "subtitle": "第5問、上級。囲炉裏端です。",
+   "voice_text": "だいごもん、じょうきゅう。いろりばたです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_go",
+   "start": 490.8,
+   "slot_end": 498.0,
+   "subtitle": "最後の問題です。じっくりどうぞ。",
+   "voice_text": "最後の問題です。じっくりどうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_call0",
+   "start": 520.0,
+   "slot_end": 524.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_call1",
+   "start": 550.0,
+   "slot_end": 554.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_ten",
+   "start": 570.0,
+   "slot_end": 573.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_ans0",
+   "start": 580.0,
+   "slot_end": 581.6,
+   "subtitle": "答えです。",
+   "voice_text": "答えです。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_ans1",
+   "start": 581.6,
+   "slot_end": 585.9,
+   "subtitle": "干し柿が、ひとつへりました。",
+   "voice_text": "ほしがきが、ひとつへりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_ans2",
+   "start": 585.9,
+   "slot_end": 590.2,
+   "subtitle": "みのの、結びひもがありません。",
+   "voice_text": "みのの、むすびひもがありません。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_ans3",
+   "start": 590.2,
+   "slot_end": 594.5,
+   "subtitle": "鉄びんのふたの、つまみがありません。",
+   "voice_text": "てつびんのふたの、つまみがありません。",
+   "face": "smile"
+  },
+  {
+   "id": "e1",
+   "start": 595.0,
+   "slot_end": 599.5,
+   "subtitle": "これで5問、おしまいです。おつかれさまでした。",
+   "voice_text": "これでごもん、おしまいです。おつかれさまでした。",
+   "face": "yay"
+  },
+  {
+   "id": "e2",
+   "start": 599.5,
+   "slot_end": 606.5,
+   "subtitle": "15個の違い、いくつ見つかりましたか。画面で、今日の称号を見てくださいね。",
+   "voice_text": "じゅうごこの違い、いくつ見つかりましたか。画面で、きょうのしょうごうを見てくださいね。",
+   "face": "smile"
+  },
+  {
+   "id": "e3",
+   "start": 606.5,
+   "slot_end": 615.0,
+   "subtitle": "次の動画も、続けて楽しんでくださいね。チャンネル登録も、お待ちしています。",
+   "voice_text": "次の動画も、続けて楽しんでくださいね。チャンネル登録も、お待ちしています。",
+   "face": "wink"
+  }
+ ]
+}
