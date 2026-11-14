@@ -23,10 +23,26 @@ XS = [0, 960]                       # 左の絵・右の絵の左端
 BAND_H = 54                         # 上の帯（画面の高さの5%）
 SUB_SIZE = 68                       # 字幕の文字の高さ（画面の高さの6.3%）
 OWL_SIZE = 420
-LEVEL_COLOR = {"初級": (96, 150, 90), "中級": (214, 128, 48), "上級": (176, 62, 52)}
-LEVEL_STARS = {"初級": "★☆☆", "中級": "★★☆", "上級": "★★★"}
+LEVEL_COLOR = {"やさしい": (70, 140, 190), "初級": (96, 150, 90), "中級": (214, 128, 48), "上級": (176, 62, 52)}
+LEVEL_STARS = {"やさしい": "☆☆☆", "初級": "★☆☆", "中級": "★★☆", "上級": "★★★"}
 RED = (220, 30, 30)
 OWL_SEGMENTS = ("op", "unchiku", "end")   # こよみ先生の絵を出す場面
+# こよみ先生の位置（2026-11-12 CEO指示）：plan.json の screens.owl_layout が "bottom" なら、画面の左下に置き、字幕をそのすぐ右に出す
+OWL_BOTTOM = 340
+
+
+def owl_bottom():
+    return plan()["screens"].get("owl_layout") == "bottom"
+
+
+def draw_owl_and_sub(im, t, default_owl_xy, sub_area):
+    """こよみ先生と字幕。bottom なら左下に先生、そのすぐ右に字幕（話している人の位置）。"""
+    if owl_bottom():
+        draw_owl(im, t, (24, H - OWL_BOTTOM - 8), OWL_BOTTOM)
+        draw_subtitle(im, t, (24 + OWL_BOTTOM + 8, W - 30, H - 24), align="left")
+    else:
+        draw_subtitle(im, t, sub_area)
+        draw_owl(im, t, default_owl_xy)
 
 OUT = WORK = FONT = None
 CTX = {}
@@ -69,9 +85,9 @@ def picture(q, side):
 
 # ---------- こよみ先生（オープニング・うんちく・エンディングだけ） ----------
 @lru_cache(maxsize=None)
-def owl_img(face, angle_q):
-    im = Image.open(WORK / "owl" / f"koyomi_{face}.png").convert("RGBA").resize((OWL_SIZE, OWL_SIZE), Image.LANCZOS)
-    return im.rotate(angle_q / 4, resample=Image.BICUBIC, center=(OWL_SIZE / 2, OWL_SIZE * 0.85))
+def owl_img(face, angle_q, size=OWL_SIZE):
+    im = Image.open(WORK / "owl" / f"koyomi_{face}.png").convert("RGBA").resize((size, size), Image.LANCZOS)
+    return im.rotate(angle_q / 4, resample=Image.BICUBIC, center=(size / 2, size * 0.85))
 
 
 def face_at(t):
@@ -86,13 +102,13 @@ def face_at(t):
     return f
 
 
-def draw_owl(im, t, xy):
+def draw_owl(im, t, xy, size=OWL_SIZE):
     face = face_at(t)
     if face in ("normal", "think") and (t % 4.1) < 0.14:   # まばたき
         face += "_blink"
     ang = 3.0 * math.sin(2 * math.pi * t / 3.2)             # ゆらゆら
     bob = int(round(6 * math.sin(2 * math.pi * t / 1.6)))
-    o = owl_img(face, int(round(ang * 4)))
+    o = owl_img(face, int(round(ang * 4)), size)
     im.paste(o, (xy[0], xy[1] + bob), o)
 
 
@@ -188,13 +204,15 @@ def sub_img(text, maxc):
     return im
 
 
-def draw_subtitle(im, t, area):
-    """area＝(左端, 右端, 下端)。出題・答え合わせでは画面の下の端（下15%の中）に出す。"""
+def draw_subtitle(im, t, area, align="center"):
+    """area＝(左端, 右端, 下端)。出題・答え合わせでは画面の下の端（下15%の中）に出す。
+    align="left" は左端にそろえる（こよみ先生のすぐ横に字幕を出すとき）。"""
     for t0, t1, c in subtitle_schedule():
         if t0 <= t < t1:
             x0, x1, yb = area
             s = sub_img(c, int((x1 - x0 - 80) / (SUB_SIZE * 1.02)))   # 字幕の箱が area からはみ出さない字数で折り返す
-            im.paste(s, (x0 + (x1 - x0 - s.width) // 2, yb - s.height), s)
+            x = x0 if align == "left" else x0 + (x1 - x0 - s.width) // 2
+            im.paste(s, (x, yb - s.height), s)
             return
 
 
@@ -370,14 +388,15 @@ def render_card(q, t):
 def opening_base():
     im = Image.new("RGB", (W, H), BG)
     thumbs = [picture(q, "a").resize((216, 243), Image.LANCZOS) for q in range(1, 6)]
-    x = 60
+    x, y = (420, 460) if owl_bottom() else (60, 560)    # 先生が左下にいるときは、絵を右上へ
     for k, th in enumerate(thumbs):
         th = Image.blend(Image.new("RGB", th.size, BG), th, 0.6)
-        im.paste(th, (x + k * 236, 560))
+        im.paste(th, (x + k * 236, y))
     d = ImageDraw.Draw(im)
     SC = plan()["screens"]
-    text_center(d, (650, 230), SC["opening_title"], 120, stroke=6, stroke_fill=(255, 250, 238))
-    text_center(d, (650, 380), SC["opening_sub"], 58, fill=(150, 90, 50))
+    cx = 960 if owl_bottom() else 650
+    text_center(d, (cx, 200), SC["opening_title"], 120, stroke=6, stroke_fill=(255, 250, 238))
+    text_center(d, (cx, 340), SC["opening_sub"], 58, fill=(150, 90, 50))
     return im
 
 
@@ -410,8 +429,7 @@ def render_unchiku(t):
     if slide.get("maple"):
         mx, my, mr, mc = slide["maple"]
         draw_maple(d, mx, my, mr, tuple(mc))
-    draw_subtitle(im, t, (20, 1400, H - 24))
-    draw_owl(im, t, (W - OWL_SIZE - 40, H - OWL_SIZE - 30))
+    draw_owl_and_sub(im, t, (W - OWL_SIZE - 40, H - OWL_SIZE - 30), (20, 1400, H - 24))
     return im
 
 
@@ -429,8 +447,7 @@ def draw_maple(d, cx, cy, r, col):
 def render_opening(t):
     im = opening_base().copy()
     leaves(ImageDraw.Draw(im), t, n=12)
-    draw_subtitle(im, t, (20, 1400, H - 24))
-    draw_owl(im, t, (W - OWL_SIZE - 60, 140))
+    draw_owl_and_sub(im, t, (W - OWL_SIZE - 60, 140), (20, 1400, H - 24))
     return im
 
 
@@ -446,21 +463,22 @@ def render_ending(t):
     dt = t - T.ENDING[0]
     if dt < 4.5:
         leaves(d, t, n=40, seed=7, colors=((214, 80, 50), (232, 176, 48), (96, 150, 90), (90, 120, 200)))
-        text_center(d, (700, 380), "おつかれさまでした", 130, stroke=6, stroke_fill=(255, 250, 238))
-        text_center(d, (700, 540), f"{len(T.QUESTIONS)}問 おしまい", 90, fill=(180, 70, 40))
+        cx = 1060 if owl_bottom() else 700
+        text_center(d, (cx, 380), "おつかれさまでした", 130, stroke=6, stroke_fill=(255, 250, 238))
+        text_center(d, (cx, 540), f"{len(T.QUESTIONS)}問 おしまい", 90, fill=(180, 70, 40))
     else:
-        text_center(d, (420, 80), "今日の称号", 80, fill=(180, 70, 40))
+        ox = 360 if owl_bottom() else 0       # 先生が左下にいるときは、称号の表を右へ
+        text_center(d, (420 + ox, 80), "今日の称号", 80, fill=(180, 70, 40))
         y = 170
         for i, (cnt, name) in enumerate(T.TITLES):
-            d.rounded_rectangle((60, y, 1160, y + 100), 24, fill=(255, 250, 238), outline=(180, 140, 100), width=4)
-            text_center(d, (110, y + 50), cnt, 60, anchor="lm")
-            text_center(d, (520, y + 50), name, 68, fill=(180, 70, 40) if i == 0 else INK, anchor="lm")
+            d.rounded_rectangle((60 + ox, y, 1160 + ox, y + 100), 24, fill=(255, 250, 238), outline=(180, 140, 100), width=4)
+            text_center(d, (110 + ox, y + 50), cnt, 60, anchor="lm")
+            text_center(d, (520 + ox, y + 50), name, 68, fill=(180, 70, 40) if i == 0 else INK, anchor="lm")
             y += 118
-        text_center(d, (610, y + 30), T.TITLE_NOTE, 50, fill=(110, 84, 60))
+        text_center(d, (610 + ox, y + 30), T.TITLE_NOTE, 50, fill=(110, 84, 60))
         if dt >= 11.5:
-            text_center(d, (610, y + 110), plan()["screens"]["ending_next"], 60, fill=(150, 90, 50))
-    draw_subtitle(im, t, (20, 1400, H - 24))
-    draw_owl(im, t, (W - OWL_SIZE - 40, H - OWL_SIZE - 60))
+            text_center(d, (610 + ox, y + 110), plan()["screens"]["ending_next"], 60, fill=(150, 90, 50))
+    draw_owl_and_sub(im, t, (W - OWL_SIZE - 40, H - OWL_SIZE - 60), (20, 1400, H - 24))
     return im
 
 

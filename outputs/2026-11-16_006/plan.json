@@ -1,0 +1,635 @@
+{
+ "episode": "006",
+ "season": "秋",
+ "topics": [
+  "さんま"
+ ],
+ "note": "第6回の中身。立て直し後の最初の回（youtube-playbook.md・concept.md「絵の見やすさ」「こよみ先生の位置」「うんちくの役割」）。",
+ "youtube": {
+  "title": "【間違い探し】シニアの脳トレ｜さんまのイラスト 全5問【60代・70代の脳トレ】",
+  "description_file": "description.md",
+  "title_note": "youtube-playbook.md 4章の型。XXX＝季節の主役（案A）。ab/ に3案",
+  "publish_plan": "2026-11-16（月）8:30 JST、ショート18:00"
+ },
+ "screens": {
+  "opening_title": "さんまの間違い探し　全5問",
+  "opening_sub": "最後は難問です",
+  "unchiku_header": "こよみ先生の 秋の小話",
+  "unchiku_slides": [
+   {
+    "until": 7,
+    "texts": [
+     [
+      "さんまは目黒に限る？",
+      960,
+      330,
+      120,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ],
+     [
+      "目黒は 海から遠いのに…",
+      960,
+      520,
+      80,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 17,
+    "texts": [
+     [
+      "落語「目黒のさんま」",
+      960,
+      300,
+      110,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "焼きたて ＞ お屋敷の料理",
+      960,
+      500,
+      90,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 24,
+    "texts": [
+     [
+      "「さんまは目黒に限る」",
+      960,
+      380,
+      110,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "殿様の かんちがいが オチ",
+      960,
+      560,
+      80,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 30,
+    "texts": [
+     [
+      "さんまは 焼きたてが いちばん",
+      960,
+      360,
+      96,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ],
+     [
+      "今夜の 話のタネに",
+      960,
+      540,
+      90,
+      [
+       200,
+       120,
+       40
+      ],
+      0
+     ]
+    ]
+   }
+  ],
+  "ending_titles": [
+   [
+    "15個",
+    "さんま名人"
+   ],
+   [
+    "11〜14個",
+    "秋の名探偵"
+   ],
+   [
+    "6〜10個",
+    "焼きたてさん"
+   ],
+   [
+    "0〜5個",
+    "こさんまさん"
+   ]
+  ],
+  "ending_note": "こさんまさんは、これから、ぐんぐん育ちます",
+  "ending_next": "次の動画も つづけて どうぞ",
+  "owl_layout": "bottom"
+ },
+ "timeline": {
+  "total": 615.0,
+  "opening": [
+   0.0,
+   15.0
+  ],
+  "rule": [
+   15.0,
+   25.0
+  ],
+  "q_start": {
+   "1": 25.0,
+   "2": 133.0,
+   "3": 241.0,
+   "4": 379.0,
+   "5": 487.0
+  },
+  "unchiku": [
+   349.0,
+   379.0
+  ],
+  "ending": [
+   595.0,
+   615.0
+  ],
+  "card": 3.0,
+  "solve": 90.0,
+  "answer": 15.0,
+  "hint_at": null,
+  "ten_at": 80.0,
+  "ans_first": 1.6,
+  "ans_step": 4.3,
+  "solve_calls": [
+   [
+    30,
+    "あと60秒です。"
+   ],
+   [
+    60,
+    "あと30秒です。"
+   ]
+  ]
+ },
+ "lines": {
+  "opening": [
+   {
+    "id": "op",
+    "at": 0.0,
+    "text": "こよみ先生です。今日は、さんまの間違い探し、全5問。最後は難問です。3問目のあとには、さんまの意外なお話もありますよ。",
+    "face": "smile",
+    "until": 15.0
+   }
+  ],
+  "rule": [
+   {
+    "id": "rule",
+    "at": 0.0,
+    "text": "左と右の絵をくらべます。90秒で、右の絵の違いを3つ探してください。",
+    "face": "normal",
+    "until": 10.0
+   }
+  ],
+  "unchiku": [
+   {
+    "id": "u1",
+    "at": 0.0,
+    "text": "「さんまは目黒に限る」。目黒は海から遠いのに、なぜでしょう。",
+    "face": "think",
+    "until": 7.0
+   },
+   {
+    "id": "u2",
+    "at": 7.0,
+    "text": "落語のお話です。殿様が目黒で食べた焼きたてのさんまが忘れられず、お屋敷で出させると、脂を抜いた料理でがっかり。",
+    "face": "surprise",
+    "until": 17.0
+   },
+   {
+    "id": "u3",
+    "at": 17.0,
+    "text": "そこで殿様は「さんまは目黒に限る」。かんちがいが、オチなんです。",
+    "face": "smile",
+    "until": 24.0
+   },
+   {
+    "id": "u4",
+    "at": 24.0,
+    "text": "さんまは焼きたてがいちばん。今夜の話のタネにどうぞ。",
+    "face": "wink",
+    "until": 30.0
+   }
+  ],
+  "ending": [
+   {
+    "id": "e1",
+    "at": 0.0,
+    "text": "これで5問、おしまいです。おつかれさまでした。",
+    "face": "yay",
+    "until": 4.5
+   },
+   {
+    "id": "e2",
+    "at": 4.5,
+    "text": "15個の違い、いくつ見つかりましたか。画面で、今日の称号を見てくださいね。",
+    "face": "smile",
+    "until": 11.5
+   },
+   {
+    "id": "e3",
+    "at": 11.5,
+    "text": "次の動画も、続けて楽しんでくださいね。チャンネル登録も、お待ちしています。",
+    "face": "wink",
+    "until": 20.0
+   }
+  ],
+  "extra": [
+   {
+    "id": "c_comment",
+    "at": 256.0,
+    "text": "見つかった数を、あとでコメントで教えてくださいね。",
+    "face": "smile",
+    "until": 263.0
+   }
+  ]
+ },
+ "readings": [
+  [
+   "七輪の路地",
+   "しちりんのろじ"
+  ],
+  [
+   "囲炉裏端",
+   "いろりばた"
+  ],
+  [
+   "第1問",
+   "だいいちもん"
+  ],
+  [
+   "第2問",
+   "だいにもん"
+  ],
+  [
+   "第3問",
+   "だいさんもん"
+  ],
+  [
+   "第4問",
+   "だいよんもん"
+  ],
+  [
+   "第5問",
+   "だいごもん"
+  ],
+  [
+   "90秒",
+   "きゅうじゅうびょう"
+  ],
+  [
+   "10秒",
+   "じゅうびょう"
+  ],
+  [
+   "15個",
+   "じゅうごこ"
+  ],
+  [
+   "囲炉裏",
+   "いろり"
+  ],
+  [
+   "60秒",
+   "ろくじゅうびょう"
+  ],
+  [
+   "30秒",
+   "さんじゅうびょう"
+  ],
+  [
+   "3問目",
+   "さんもんめ"
+  ],
+  [
+   "初級",
+   "しょきゅう"
+  ],
+  [
+   "中級",
+   "ちゅうきゅう"
+  ],
+  [
+   "上級",
+   "じょうきゅう"
+  ],
+  [
+   "称号",
+   "しょうごう"
+  ],
+  [
+   "今日",
+   "きょう"
+  ],
+  [
+   "手前",
+   "てまえ"
+  ],
+  [
+   "模様",
+   "もよう"
+  ],
+  [
+   "5問",
+   "ごもん"
+  ],
+  [
+   "3つ",
+   "みっつ"
+  ],
+  [
+   "一羽",
+   "いちわ"
+  ],
+  [
+   "一枚",
+   "いちまい"
+  ],
+  [
+   "茶色",
+   "ちゃいろ"
+  ],
+  [
+   "一本",
+   "いっぽん"
+  ],
+  [
+   "一匹",
+   "いっぴき"
+  ],
+  [
+   "一つ",
+   "ひとつ"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "帽子",
+   "ぼうし"
+  ],
+  [
+   "一匹",
+   "いっぴき"
+  ],
+  [
+   "時刻",
+   "じこく"
+  ],
+  [
+   "食卓",
+   "しょくたく"
+  ],
+  [
+   "漁港",
+   "ぎょこう"
+  ],
+  [
+   "七輪",
+   "しちりん"
+  ],
+  [
+   "海辺",
+   "うみべ"
+  ],
+  [
+   "難問",
+   "なんもん"
+  ],
+  [
+   "意外",
+   "いがい"
+  ],
+  [
+   "一尾",
+   "いちび"
+  ],
+  [
+   "一個",
+   "いっこ"
+  ],
+  [
+   "葉",
+   "は"
+  ],
+  [
+   "傘",
+   "かさ"
+  ],
+  [
+   "針",
+   "はり"
+  ]
+ ],
+ "voice_override": {
+  "u1": "さんまは、めぐろにかぎる。めぐろは海から遠いのに、なぜでしょう。",
+  "u2": "らくごのお話です。とのさまが、めぐろで食べた、焼きたてのさんまが忘れられず、おやしきで出させると、あぶらを抜いた料理で、がっかり。",
+  "u3": "そこで、とのさまは、さんまは、めぐろにかぎる。かんちがいが、オチなんです。",
+  "u4": "さんまは、焼きたてがいちばん。今夜の、はなしのタネにどうぞ。"
+ },
+ "voice": {
+  "provider": "fish",
+  "reference_id": "63819275ce38440ea245ca988abf976e",
+  "model": "s1",
+  "speed": 0.88,
+  "credit": "音声：Fish Audio（AIで合成した音声です）"
+ },
+ "images": {
+  "model": "gemini-3-pro-image",
+  "size": "2K",
+  "aspect": "4:5",
+  "style": "A Japanese picture-book illustration in watercolor, but with BOLD, THICK, DARK ink outlines around every object (like a clear picture book for seniors), and CLEAR, SATURATED colors (not pale). Bright, clean background. Natural, hand-drawn, slightly rounded shapes; not geometric, not flat vector, not photorealistic. CLOSE-UP composition (not a wide landscape): the scene is seen from close, filling the picture. PORTRAIT-ISH composition, about 8:9. The painting fills the entire canvas edge to edge: no white border. No people. Absolutely no text, letters, numbers, logos or symbols anywhere. THE MAIN SUBJECT (SANMA, Pacific saury) is drawn LARGE in the center of the picture. Around it, only a few other objects, each clearly separated with space around it, fully visible.\n",
+  "keep_alt": " Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text.",
+  "keep_remove": " Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object.",
+  "batch": true
+ },
+ "questions": [
+  {
+   "q": 1,
+   "scene": "食卓",
+   "level": "やさしい",
+   "go": "まずは、やさしい問題です。どうぞ。",
+   "prompt": "Scene: close-up of a Japanese dinner table (tabletop seen from slightly above). CENTER, LARGE: one whole grilled sanma (Pacific saury) on a long rectangular white plate, with a small mound of grated daikon and half a green sudachi lime beside it. Around it, few objects with space between: (upper left) a bowl of white rice; (upper right) a small teapot; (lower left) a bowl of miso soup; (lower right) a pair of chopsticks on a small chopstick rest; a small dish of pickles. Each side object about one seventh of the picture width.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {},
+   "program_ops": {},
+   "diffs": [],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors: (a) the green sudachi lime half on the plate is gone; (b) the spout of the teapot is gone; (c) the chopstick rest becomes round (a small ball shape); (d) the rice bowl has a red rim instead of a blue one; (e) in the miso soup, one more white tofu cube; (f) the tail fin of the grilled sanma is gone."
+  },
+  {
+   "q": 2,
+   "scene": "漁港",
+   "level": "初級",
+   "go": "さあ、どうぞ。",
+   "prompt": "Scene: close-up at a small fishing harbor in autumn morning. CENTER, LARGE: a wooden fish crate full of shiny silver-blue sanma (Pacific saury) on crushed ice. Around it, few objects: (upper left) part of a small fishing boat with a red flag; (upper right) a seagull on a wooden post; (lower left) a coiled rope and an orange round buoy; (lower right) a pair of yellow rubber boots and a blue bucket. Bright sky and sea in the back.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    30,
+    34,
+    1828,
+    2057
+   ],
+   "retries": {},
+   "program_edits": {},
+   "program_ops": {},
+   "diffs": [],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors: (a) the red flag on the boat is gone; (b) the seagull on the post now faces left; (c) of the pair of yellow boots, the right boot is gone; (d) the blue bucket has no handle; (e) the orange buoy becomes green; (f) in the crate, one more sanma lies on top of the others.",
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors: (a) the red flag cloth on the boat is gone, only the thin pole stays; (b) the small yellow float hanging on the side of the boat is gone; (c) the rope wrapped around the wooden post under the seagull is gone; (d) the handle of the blue bucket is gone; (e) on the deck in front of the crate, add one small white seashell."
+   }
+  },
+  {
+   "q": 3,
+   "scene": "七輪の路地",
+   "level": "中級",
+   "go": "少しむずかしくなります。どうぞ。",
+   "prompt": "Scene: close-up in a narrow old Japanese alley in autumn evening. CENTER, LARGE: a round clay shichirin charcoal grill with two sanma (Pacific saury) grilling on the wire net, a little smoke rising. Around it, few objects: (upper left) a paper lantern without letters hanging on the wall; (upper right) a small window with a potted plant; (lower left) a round uchiwa fan leaning on a wooden box; (lower right) a cat sitting and looking at the grill; a small bucket of charcoal.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {},
+   "program_ops": {},
+   "diffs": [],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors: (a) the small flower pot on the window sill has one flower fewer; (b) the cat's tail is gone; (c) the top cap of the paper lantern is gone; (d) the handle of the round uchiwa fan is gone; (e) one more piece of charcoal in the bucket; (f) the window becomes square instead of arched.",
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors: (a) the handle of the round uchiwa fan is half as long; (b) on the grill, the upper sanma has no tail fin; (c) the bottom black ring of the paper lantern is gone; (d) the small bucket of charcoal has a thin wire handle; (e) the cat's left ear is folded down.",
+    "3": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors: (a) the black wire handle on top of the red paper lantern is gone; (b) in the charcoal bucket, the tallest piece of charcoal sticking up is gone; (c) a small red string is tied near the end of the bamboo handle of the uchiwa fan; (d) the cat's nose becomes black; (e) one of the round metal studs on the wooden box under the fan is gone."
+   }
+  },
+  {
+   "q": 4,
+   "scene": "海辺",
+   "level": "中級",
+   "go": "後半です。どうぞ。",
+   "prompt": "Scene: close-up at a seaside in autumn. CENTER, LARGE: a bamboo drying rack with several sanma (Pacific saury) hung in a row to dry in the sun. Around it, few objects: (upper left) a small white lighthouse far away; (upper right) two seagulls flying; (lower left) a fishing net in a pile with floats; (lower right) a wooden bucket and a straw hat on the sand; a few shells on the sand.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {},
+   "program_ops": {},
+   "diffs": [],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors: (a) one of the hanging sanma on the drying rack (the third from the left) is gone; (b) the top of the lighthouse is gone; (c) one more small shell on the sand at the lower right; (d) the straw hat in the bucket is gone; (e) the left seagull is gone; (f) one of the glass floats in the net becomes red."
+  },
+  {
+   "q": 5,
+   "scene": "囲炉裏端",
+   "level": "上級",
+   "go": "最後の問題です。じっくりどうぞ。",
+   "prompt": "Scene: close-up of an old Japanese farmhouse irori (sunken hearth) in autumn. CENTER, LARGE: four sanma (Pacific saury) on bamboo skewers stuck in the ash around the glowing charcoal, an iron kettle hanging above from a hook. Many small details around: (upper left) a hanging dried-persimmon string on the wall; (upper right) a straw raincoat on a hook; (lower left) a small tea set on a tray; (lower right) a cushion and a pair of tongs; small pieces of charcoal.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {},
+   "program_ops": {},
+   "diffs": [],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors: (a) on the string of dried persimmons, one persimmon is gone; (b) the knob on the lid of the iron kettle is gone; (c) on the tray, one of the two tea cups is gone; (d) the tongs on the floor are gone; (e) one more small piece of charcoal on the floor at the bottom; (f) the small tea caddy on the tray is gone.",
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors: (a) the small round knob on the iron kettle lid is gone, the lid stays; (b) the lowest dried persimmon on the string is gone; (c) the blue pattern on the left tea cup becomes red; (d) one small piece of charcoal lying on the wooden floor at the bottom is gone; (e) the tip of the iron hook above the kettle is gone.",
+    "3": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors: (a) the small rope tie at the neck of the straw raincoat is gone; (b) the small knob on the lid of the teapot on the tray is gone; (c) one of the small red dots on the teapot becomes blue; (d) the top end of the rightmost bamboo skewer is shorter; (e) the second persimmon from the top on the string is gone."
+   }
+  }
+ ],
+ "thumbnail": {
+  "question": 1,
+  "big_text": "秋の間違いさがし",
+  "highlight": "間違いさがし",
+  "highlight_color": [
+   255,
+   214,
+   0
+  ],
+  "big_color": [
+   255,
+   255,
+   255
+  ],
+  "band_color": [
+   25,
+   35,
+   70
+  ],
+  "big_size": 132,
+  "sub_text": "3つ見つけられる？全5問",
+  "badges": [
+   [
+    "初級〜上級",
+    [
+     176,
+     62,
+     52
+    ]
+   ]
+  ],
+  "circle_hint": false,
+  "note": "第1回と同じ型（変えた所なし）。左右に同じ絵・上に濃紺の帯で「秋の間違いさがし」・下に難易度と問いかけ。こよみ先生は入れない"
+ },
+ "short": {
+  "question": 2,
+  "answer_gap": 3.5,
+  "note": "ショートの下の絵で違いが y≈1550 より上に来る問を選ぶ（作成後に確認）"
+ }
+}

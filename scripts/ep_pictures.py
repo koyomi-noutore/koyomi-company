@@ -48,7 +48,7 @@ PROGRAM_EDITS = {(q, v): sc for q, Q in _Q.items() for v, sc in Q.get("program_e
 QUESTIONS = {q: (Q["scene"], Q["level"], Q.get("hint_diff")) for q, Q in _Q.items()}
 # 画面に出す範囲（x0, y0, x1, y1）。8:9 のまま、Gemini が絵の左右に残した白いふちを切り落とす（縮めるだけ。引き伸ばしはしない）
 CONTENT = {q: tuple(Q["content_box"]) for q, Q in _Q.items()}
-LEVEL_RANGE = {"初級": (3.0, 4.0), "中級": (2.0, 3.0), "上級": (1.5, 2.0)}  # 画面幅に対する%（concept.md）
+LEVEL_RANGE = {"やさしい": (4.0, 6.0), "初級": (3.0, 4.0), "中級": (2.0, 3.0), "上級": (1.5, 2.0)}  # 画面幅に対する%（concept.md）
 
 
 def diffs():

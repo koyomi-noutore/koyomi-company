@@ -17,7 +17,7 @@ ANS_FIRST, ANS_STEP = _T["ans_first"], _T["ans_step"]
 QUESTIONS = {q: {"scene": Q["scene"], "level": Q["level"], "go": Q["go"], "hint": Q.get("hint"),
                  "answers": [d["line"] for d in Q["diffs"]], "answers_intro": Q.get("answers_intro", "答えです。")}
              for q, Q in questions().items()}
-LEVEL_NUM = {"初級": "第{}問、初級。", "中級": "第{}問、中級。", "上級": "第{}問、上級。"}
+LEVEL_NUM = {"やさしい": "第{}問、やさしい問題。", "初級": "第{}問、初級。", "中級": "第{}問、中級。", "上級": "第{}問、上級。"}
 _S = plan()["screens"]
 TITLES = [tuple(x) for x in _S["ending_titles"]]
 TITLE_NOTE = _S["ending_note"]
@@ -38,6 +38,9 @@ def lines():
         L.append((f"q{q}_go", s + CARD + 0.8, Q["go"], "normal", s + CARD + 8))
         if HINT_AT is not None and Q["hint"]:
             L.append((f"q{q}_hint", s + CARD + HINT_AT, Q["hint"], "wink", s + CARD + HINT_AT + 7))
+        # 出題中の声かけ（ヒントではない）：plan.json の timeline.solve_calls ＝ [[出題の頭からの秒, 文], ...]（2026-11-12 youtube-playbook 5章）
+        for k, (at, text) in enumerate(_T.get("solve_calls", [])):
+            L.append((f"q{q}_call{k}", s + CARD + at, text, "normal", s + CARD + at + 4))
         L.append((f"q{q}_ten", s + CARD + TEN_AT, "あと10秒です。", "normal", s + CARD + TEN_AT + 3))
         a = s + CARD + SOLVE
         L.append((f"q{q}_ans0", a, Q["answers_intro"], "smile", a + ANS_FIRST))
@@ -45,7 +48,9 @@ def lines():
             L.append((f"q{q}_ans{i + 1}", a + ANS_FIRST + ANS_STEP * i, line, "smile", a + ANS_FIRST + ANS_STEP * (i + 1)))
     for part, base in (("unchiku", UNCHIKU[0]), ("ending", ENDING[0])):
         L += [(x["id"], base + x["at"], x["text"], x["face"], base + x["until"]) for x in Ls[part]]
-    return L
+    # 決まった時刻に入れるセリフ（例：中盤のコメントのお願い）。lines.extra の at・until は動画の頭からの秒
+    L += [(x["id"], x["at"], x["text"], x.get("face", "smile"), x["until"]) for x in Ls.get("extra", [])]
+    return sorted(L, key=lambda l: l[1])
 
 
 def to_voice(lid, text):

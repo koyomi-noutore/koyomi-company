@@ -9,7 +9,7 @@ from PIL import Image, ImageDraw, ImageFont
 import ep_timeline as T
 from episode_plan import plan
 
-LEVEL_RANGE = {"初級": (3.0, 4.0), "中級": (2.0, 3.0), "上級": (1.5, 2.0)}   # concept.md（画面幅に対する%）
+LEVEL_RANGE = {"やさしい": (4.0, 6.0), "初級": (3.0, 4.0), "中級": (2.0, 3.0), "上級": (1.5, 2.0)}   # concept.md（画面幅に対する%）
 TOL = 0.2   # 難易度表の「約」の幅（ポイント）。第5問の宝珠 2.07%・第3問の石 1.83% を「約」として扱った（事業部長判断 2026-11-06、監査で確認）
 
 
@@ -54,7 +54,7 @@ def numeric(out_dir, work):
                 problems.append(f"第{Q['q']}問 違い{a['id']}：大きさ {p}% が{Q['level']}の目安 {lo}〜{hi}% の外")
             if not a["in_safe_y"]:
                 problems.append(f"第{Q['q']}問 違い{a['id']}：上の帯か字幕の場所にかかる")
-            if Q["level"] != "上級" and a["type"] == "色":
+            if Q["level"] != "上級" and a["type"] == "色":   # やさしい・初級・中級は色だけの違いにしない
                 problems.append(f"第{Q['q']}問 違い{a['id']}：{Q['level']}で色だけの違い")
     vj = work / "voice" / "voice.json"
     if vj.exists():
