@@ -90,14 +90,3 @@ wgt = np.clip(edge / 10.0, 0, 1)[..., None]           # ふち10pxはなだら�
 E4[y0:y1, x0:x1] = E4[y0:y1, x0:x1] * (1 - wgt) + fillp * wgt
 Image.fromarray(np.clip(E4, 0, 255).astype(np.uint8)).save(w / "edit_4_1c.png")
 
-
-# 第4問①：灯台の新しい屋根の上に残った、とんがりの先の点を空の色でうめる → edit_4_2c.png
-e42 = Image.open(w / "edit_4_2.png").convert("RGB")
-E42 = np.asarray(e42).astype(float)
-bx0, by0, bx1, by1 = 140, 255, 182, 312
-C = E42[by0:by1, bx0:bx1]
-L = C.mean(2)
-cap = ndimage.binary_dilation(L < 120, iterations=3)         # 屋根の輪郭（残す）
-dot = (L < np.median(L) - 6) & ~cap
-E42[by0:by1, bx0:bx1] = fill(C, ndimage.binary_dilation(dot, iterations=3) & ~cap, 200)
-Image.fromarray(np.clip(E42, 0, 255).astype(np.uint8)).save(w / "edit_4_2c.png")

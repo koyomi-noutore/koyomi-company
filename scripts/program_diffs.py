@@ -134,7 +134,8 @@ def apply(im, op, work=None):
             ImageDraw.Draw(pm).polygon([(x - op["src"][0], y - op["src"][1]) for x, y in op["poly"]], fill=255)
             m = np.asarray(pm) > 0
         else:
-            m, _ = obj_mask(crop, op.get("thr", THR), op.get("mask"))
+            m, _ = (outline_mask(crop, close=op["close"]) if op.get("mask") == "outline" and op.get("close")
+                    else obj_mask(crop, op.get("thr", THR), op.get("mask")))
         ys, xs = np.nonzero(m)
         crop = crop.crop((xs.min(), ys.min(), xs.max() + 1, ys.max() + 1))
         m = m[ys.min():ys.max() + 1, xs.min():xs.max() + 1]
