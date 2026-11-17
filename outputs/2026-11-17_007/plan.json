@@ -197,7 +197,8 @@
     60,
     "あと30秒です。"
    ]
-  ]
+  ],
+  "go_delay": 1.3
  },
  "lines": {
   "opening": [
@@ -275,18 +276,18 @@
     "at": 3.6,
     "text": "15個の違い、いくつ見つかりましたか。今日の称号です。",
     "face": "smile",
-    "until": 9.6
+    "until": 10.2
    },
    {
     "id": "e3",
-    "at": 9.6,
-    "text": "チャンネル登録とベルで、毎朝8時半に新しい問題が届きます。毎日の頭の体操にどうぞ。",
+    "at": 10.2,
+    "text": "チャンネル登録とベルで、毎朝8時半に問題が届きます。毎日の頭の体操にどうぞ。",
     "face": "smile",
-    "until": 20.0
+    "until": 21.0
    },
    {
     "id": "e4",
-    "at": 20.0,
+    "at": 21.0,
     "text": "左の丸を押すと登録、右の動画で、次の問題に挑戦できますよ。",
     "face": "wink",
     "until": 30.0
@@ -303,6 +304,70 @@
   ]
  },
  "readings": [
+  [
+   "黄色い",
+   "きいろい"
+  ],
+  [
+   "短く",
+   "みじかく"
+  ],
+  [
+   "大きく",
+   "おおきく"
+  ],
+  [
+   "頭",
+   "あたま"
+  ],
+  [
+   "刃",
+   "は"
+  ],
+  [
+   "舞って",
+   "まって"
+  ],
+  [
+   "葉っぱ",
+   "はっぱ"
+  ],
+  [
+   "魔法瓶",
+   "まほうびん"
+  ],
+  [
+   "高く",
+   "たかく"
+  ],
+  [
+   "黄色",
+   "きいろ"
+  ],
+  [
+   "小さな",
+   "ちいさな"
+  ],
+  [
+   "少なく",
+   "すくなく"
+  ],
+  [
+   "向いて",
+   "むいて"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "青い",
+   "あおい"
+  ],
+  [
+   "白い",
+   "しろい"
+  ],
   [
    "紅葉狩りの川辺",
    "もみじがりのかわべ"
@@ -400,10 +465,6 @@
    "りょう"
   ],
   [
-   "少なく",
-   "すくなく"
-  ],
-  [
    "小鳥",
    "ことり"
   ],
@@ -432,10 +493,6 @@
    "ひとつ"
   ],
   [
-   "白い",
-   "しろい"
-  ],
-  [
    "丸",
    "まる"
   ],
@@ -446,10 +503,6 @@
   [
    "下駄",
    "げた"
-  ],
-  [
-   "片方",
-   "かたほう"
   ],
   [
    "桶",
@@ -478,10 +531,6 @@
   [
    "向い",
    "むい"
-  ],
-  [
-   "青い",
-   "あおい"
   ],
   [
    "取っ手",
@@ -571,7 +620,7 @@
   "u4": "かんさいでは、かんとだき、ともよびます。はなしのタネにどうぞ。",
   "e1": "これでごもん、おしまいです。",
   "e2": "じゅうごこのちがい、いくつみつかりましたか。きょうのしょうごうです。",
-  "e3": "チャンネルとうろくとベルで、まいあさはちじはんに、あたらしいもんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。",
+  "e3": "チャンネルとうろくとベルで、まいあさはちじはんに、もんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。",
   "e4": "ひだりのまるをおすととうろく、みぎのどうがで、つぎのもんだいに、ちょうせんできますよ。",
   "c_comment": "みつかったかずを、あとでコメントでおしえてくださいね。",
   "s_intro": "うえとしたのえで、ちがいがみっつあります。みつけられますか。",
@@ -598,7 +647,7 @@
    "q": 1,
    "scene": "おでんの屋台",
    "level": "やさしい",
-   "go": "さあ、第1問です。やさしい問題から。どうぞ。",
+   "go": "さあ、第1問。やさしい問題からどうぞ。",
    "prompt": "Scene: close-up of a small Japanese oden food stall at night in late autumn, warm lantern light. CENTER, LARGE (main subject): a square oden pot with compartments, simmering daikon radish rounds, boiled eggs, triangle konnyaku, chikuwa and skewered items, steam rising. Around it, few objects with space between: (upper left) a red paper lantern without letters; (upper right) a small sake bottle and a cup; (lower left) a small plate with a dab of yellow mustard; (lower right) a pair of chopsticks in a holder and a small bowl. Each side object about one seventh of the picture width.",
    "answers_intro": "答えです。",
    "content_box": [
@@ -611,7 +660,7 @@
    "diffs": [
     {
      "id": 1,
-     "type": "形が変わる",
+     "type": "入れ替え",
      "label": "大根がたまごに",
      "line": "大根が、たまごになりました。",
      "box": [
@@ -625,7 +674,7 @@
     },
     {
      "id": 2,
-     "type": "物がない",
+     "type": "なくなる",
      "label": "とっくりがない",
      "line": "とっくりが、ありません。",
      "box": [
@@ -639,18 +688,18 @@
     },
     {
      "id": 3,
-     "type": "増える",
-     "label": "からしが増える",
-     "line": "からしが、ひとつ増えました。",
+     "type": "大きさ",
+     "label": "たまごが大きい",
+     "line": "たまごが、ひとつ大きくなりました。",
      "box": [
-      1620,
-      1308,
-      1800,
-      1470
+      850,
+      880,
+      1085,
+      1115
      ],
-     "object_w": 160,
+     "object_w": 175,
      "src": "p",
-     "note": "プログラムで足した（scripts/program_diffs.py）"
+     "note": "プログラムで大きくした（元のたまごの上に重ねた）"
     }
    ],
    "hint_diff": null,
@@ -659,7 +708,34 @@
     "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors. When an object is removed, remove it COMPLETELY (no leftover strings, stems, outlines, shadows or pieces): (a) on the empty white table at the right side, between the oden tray and the round bowl, add one small white teacup, about one twelfth of the picture width.",
     "3": "Edit this illustration and make exactly this one change, and nothing else. Keep the same thick outlines and colors: in the oden pot, the big round daikon radish slice at the upper left corner of the left compartment becomes one big boiled egg (white with a yellow yolk showing) of the same size, in the same place.",
     "5": "Edit this illustration and make exactly this one change, and nothing else. Keep the same thick outlines and colors: the tall dark blue sake bottle (tokkuri) at the upper right is gone completely, showing the plain wall and white table behind it. The small sake cup next to it stays exactly the same.",
-    "n": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new objects. Changes: (a) the yellow mustard on the small round plate at the lower left becomes much smaller, about one third of its size (the plate stays the same)."
+    "n": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new objects. Changes: (a) the yellow mustard on the small round plate at the lower left becomes much smaller, about one third of its size (the plate stays the same).",
+    "j": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Changes: (a) on the skewer of round fish balls at the right side of the oden tray, one ball fewer (the skewer is shorter); (b) at the top middle, one vertical bar of the wooden window lattice is gone; (c) the small sake cup next to the sake bottle becomes about twice as big."
+   },
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   },
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "src": [
+       887,
+       917,
+       1047,
+       1077
+      ],
+      "circle": [
+       967,
+       997,
+       80
+      ],
+      "dst": [
+       869,
+       899
+      ],
+      "width": 196
+     }
+    ]
    }
   },
   {
@@ -679,55 +755,54 @@
    "diffs": [
     {
      "id": 1,
-     "type": "増える",
-     "label": "チョウが飛ぶ",
-     "line": "チョウが、飛んでいます。",
+     "type": "形",
+     "label": "くいの頭がとがる",
+     "line": "くいの頭が、とがっています。",
      "box": [
-      140,
-      590,
-      290,
-      735
+      1499,
+      228,
+      1684,
+      384
      ],
-     "object_w": 126,
-     "src": "p",
-     "note": "プログラムで足した（scripts/program_diffs.py）"
+     "object_w": 125,
+     "src": "m"
     },
     {
      "id": 2,
-     "type": "増える",
-     "label": "小鳥が増える",
-     "line": "小鳥が、一羽増えました。",
+     "type": "大きさ",
+     "label": "くわの刃が小さい",
+     "line": "くわの刃が、小さくなりました。",
      "box": [
-      1440,
-      1130,
-      1580,
-      1262
+      1369,
+      1360,
+      1752,
+      1717
      ],
-     "object_w": 128,
-     "src": "p",
-     "note": "プログラムで足した（scripts/program_diffs.py）（さくの小鳥を左右反対にして小さく）"
+     "object_w": 150,
+     "src": "m"
     },
     {
      "id": 3,
      "type": "増える",
-     "label": "にんじんが増える",
-     "line": "にんじんが、増えました。",
+     "label": "キャベツが増える",
+     "line": "キャベツが、ひとつ増えました。",
      "box": [
-      970,
-      1590,
-      1135,
-      1695
+      639,
+      698,
+      930,
+      957
      ],
-     "object_w": 145,
-     "src": "p",
-     "note": "プログラムで足した（scripts/program_diffs.py）"
+     "object_w": 140,
+     "src": "k"
     }
    ],
    "hint_diff": null,
    "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors. When an object is removed, remove it COMPLETELY (no leftover strings, stems, outlines, shadows or pieces), and fill the place naturally with what is behind it: (a) the small bird on the fence post is gone; (b) of the pair of work gloves, the right glove is gone; (c) the hand hoe is gone completely; (d) the woven basket becomes taller; (e) one more small green cabbage at the lower middle; (f) the straw hat on the stick becomes red.",
    "edit_prompts": {
     "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors. When an object is removed, remove it COMPLETELY (no leftover strings, stems, outlines, shadows or pieces): (a) on the dark soil at the lower middle, between the basket and the gloves, add one small orange carrot lying flat, about one fourteenth of the picture width; (b) above the cabbages at the left, add one small white butterfly flying, about one fourteenth of the picture width.",
-    "n": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new objects. Changes: (a) the small sparrow on the fence post at the upper right faces the opposite direction (mirror it left-right, same size, same post); (b) the leftmost small green cabbage in the row at the left middle becomes about half its size; (c) one small green seedling at the bottom middle (the smallest one) is gone, showing the dark soil."
+    "n": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new objects. Changes: (a) the small sparrow on the fence post at the upper right faces the opposite direction (mirror it left-right, same size, same post); (b) the leftmost small green cabbage in the row at the left middle becomes about half its size; (c) one small green seedling at the bottom middle (the smallest one) is gone, showing the dark soil.",
+    "m": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new objects. Changes: (a) the metal blade of the hand hoe at the lower right becomes about half as long; (b) the flat top of the wooden fence post under the sparrow becomes pointed like a roof (the sparrow stays); (c) the small green cabbage at the bottom left loses one outer leaf.",
+    "k": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Changes: (a) in the row of green cabbages at the middle left, add one more small cabbage at the right end of the row, the same size as the smallest cabbage there, sitting on the soil; (b) the sparrow on the fence post has a much shorter tail; (c) the rim of the round woven basket at the lower left becomes a thick braided rope rim."
    }
   },
   {
@@ -747,54 +822,93 @@
    "diffs": [
     {
      "id": 1,
-     "type": "増える",
-     "label": "もみじが1枚増える",
-     "line": "もみじが、一枚増えました。",
+     "type": "模様",
+     "label": "のれんに丸の模様",
+     "line": "のれんに、白い丸の模様があります。",
      "box": [
-      90,
-      1112,
-      220,
-      1245
-     ],
-     "object_w": 95,
-     "src": "1"
-    },
-    {
-     "id": 2,
-     "type": "増える",
-     "label": "桶の上にもみじ",
-     "line": "桶の上に、もみじが一枚あります。",
-     "box": [
-      1475,
-      712,
-      1596,
-      820
+      985,
+      571,
+      1095,
+      681
      ],
      "object_w": 90,
      "src": "p",
-     "note": "プログラムで足した（scripts/program_diffs.py）"
+     "note": "描き直し(m)の丸を、プログラムで小さくして元の絵に置いた"
+    },
+    {
+     "id": 2,
+     "type": "向き",
+     "label": "黄色い葉っぱの向き",
+     "line": "黄色い葉っぱが、反対を向いています。",
+     "box": [
+      1615,
+      1385,
+      1740,
+      1495
+     ],
+     "object_w": 80,
+     "src": "p",
+     "note": "プログラムで左右反対にした"
     },
     {
      "id": 3,
      "type": "増える",
-     "label": "どんぐりが増える",
-     "line": "どんぐりが、ひとつ増えました。",
+     "label": "もみじが増える",
+     "line": "左に、もみじが一枚増えました。",
      "box": [
-      1053,
-      1640,
-      1155,
-      1746
+      85,
+      1108,
+      225,
+      1250
      ],
-     "object_w": 85,
-     "src": "p",
-     "note": "プログラムで足した（scripts/program_diffs.py）"
+     "object_w": 95,
+     "src": "1"
     }
    ],
    "hint_diff": null,
    "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors. When an object is removed, remove it COMPLETELY (no leftover strings, stems, outlines, shadows or pieces), and fill the place naturally with what is behind it: (a) the small cat on the step is gone; (b) of the pair of geta sandals, the right one is gone; (c) the small wooden wash bucket on the bench is gone; (d) one more red maple leaf falling at the left side; (e) the folded towel on the bench becomes light blue; (f) the small potted pine tree has one branch fewer.",
    "edit_prompts": {
     "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors. When an object is removed, remove it COMPLETELY (no leftover strings, stems, outlines, shadows or pieces): (a) the small round metal hook on top of the wall lamp is gone; (b) on the stone step to the left of the geta sandals, add one small brown acorn, about one twentieth of the picture width; (c) one of the small falling leaves at the upper right is gone.",
-    "n": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new objects. Changes: (a) on the middle panel of the dark blue noren curtain, add a white circle crest pattern printed on the cloth, about one sixteenth of the picture width; (b) of the pair of wooden geta sandals near the cat, the right one is gone, showing the stone step; (c) the wooden wash bucket on the bench: its metal hoop band around the middle is gone (plain wood)."
+    "n": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new objects. Changes: (a) on the middle panel of the dark blue noren curtain, add a white circle crest pattern printed on the cloth, about one sixteenth of the picture width; (b) of the pair of wooden geta sandals near the cat, the right one is gone, showing the stone step; (c) the wooden wash bucket on the bench: its metal hoop band around the middle is gone (plain wood).",
+    "m": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new objects. Changes: (a) on the middle panel of the dark blue noren curtain, print one small white circle crest, only about one twentieth of the picture width; (b) the wooden wash bucket on the bench: its metal hoop band around the middle is gone (plain wood); (c) the square pot of the small bonsai pine becomes a round pot."
+   },
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   },
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "from_file": "edit_3_m.png",
+      "src": [
+       952,
+       537,
+       1127,
+       714
+      ],
+      "circle": [
+       1040,
+       626,
+       80
+      ],
+      "thr_in_circle": 60,
+      "dst": [
+       995,
+       581
+      ],
+      "width": 90
+     },
+     {
+      "op": "flip",
+      "box": [
+       1615,
+       1385,
+       1740,
+       1495
+      ],
+      "dilate": 6
+     }
+    ]
    }
   },
   {
@@ -828,40 +942,40 @@
     },
     {
      "id": 2,
-     "type": "増える",
-     "label": "川にもみじ",
-     "line": "川に、もみじが流れています。",
+     "type": "形",
+     "label": "小鳥のしっぽが短い",
+     "line": "小鳥のしっぽが、短くなりました。",
      "box": [
-      1460,
-      790,
-      1590,
-      920
+      1560,
+      186,
+      1729,
+      311
      ],
      "object_w": 95,
-     "src": "p",
-     "note": "描き直しの葉を、岩にかからない水の上へプログラムで置いた"
+     "src": "j"
     },
     {
      "id": 3,
-     "type": "増える",
-     "label": "敷物にもみじ",
-     "line": "敷物に、もみじが一枚増えました。",
+     "type": "大きさ",
+     "label": "魔法瓶のふたが高い",
+     "line": "魔法瓶のふたが、高くなりました。",
      "box": [
-      814,
-      1575,
-      922,
-      1681
+      125,
+      1350,
+      384,
+      1560
      ],
-     "object_w": 90,
-     "src": "p",
-     "note": "プログラムで足した（scripts/program_diffs.py）"
+     "object_w": 110,
+     "src": "m"
     }
    ],
    "hint_diff": null,
    "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors. When an object is removed, remove it COMPLETELY (no leftover strings, stems, outlines, shadows or pieces), and fill the place naturally with what is behind it: (a) the small bird on the rock is gone; (b) the red cup at the lower left is gone; (c) in the pot, one more boiled egg; (d) one red maple leaf on the mat at the right is gone; (e) the thermos bottle cap becomes red; (f) the checkered cloth in the basket becomes blue and white.",
    "edit_prompts": {
     "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors. When an object is removed, remove it COMPLETELY (no leftover strings, stems, outlines, shadows or pieces): (a) on the water of the river at the right, add one small red maple leaf floating, about one twentieth of the picture width; (b) the handle of the blue cup is gone; (c) the smallest stone in the river at the far right is gone, showing water.",
-    "n": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new objects. Changes: (a) the round control knob on the front of the portable gas stove is turned: its pointer line points straight up instead of sideways; (b) the handle of the blue cup at the lower left is gone (the cup has no handle)."
+    "n": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new objects. Changes: (a) the round control knob on the front of the portable gas stove is turned: its pointer line points straight up instead of sideways; (b) the handle of the blue cup at the lower left is gone (the cup has no handle).",
+    "m": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new objects. Changes: (a) the red cup at the lower left gets small white polka dots; (b) the cap of the thermos bottle becomes twice as tall; (c) the smallest round stone in the river at the right becomes a pointed triangular stone.",
+    "j": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Changes: (a) the red maple leaf lying on the mat at the right side becomes a yellow ginkgo leaf of the same size; (b) the small sparrow on the rock in the river has a much shorter tail."
    }
   },
   {
@@ -879,12 +993,12 @@
    ],
    "retries": {},
    "program_edits": {
-    "leaf": "scripts/custom/ep007_fix.py"
+    "p": "scripts/program_diffs.py"
    },
    "diffs": [
     {
      "id": 1,
-     "type": "物がない",
+     "type": "一部欠け",
      "label": "ちょうちんの金具がない",
      "line": "ちょうちんの上の金具が、ありません。",
      "box": [
@@ -899,32 +1013,32 @@
     {
      "id": 2,
      "type": "増える",
-     "label": "いちょうの葉が1枚増える",
-     "line": "いちょうの葉が、一枚増えました。",
+     "label": "いちょうの葉が増える",
+     "line": "いちょうの葉が、一枚舞っています。",
      "box": [
-      1470,
-      680,
-      1560,
-      770
+      1315,
+      440,
+      1415,
+      540
      ],
      "object_w": 66,
      "src": "p",
-     "note": "プログラムで足した（葉を消すと軸が残るため、足す形にした）"
+     "note": "プログラムで足した（木の葉を1枚、空に舞わせた）"
     },
     {
      "id": 3,
-     "type": "物がない",
-     "label": "もみじが1枚ない",
-     "line": "小さなもみじが、一枚ありません。",
+     "type": "色",
+     "label": "もみじが黄色",
+     "line": "小さなもみじが、黄色になりました。",
      "box": [
-      108,
-      1136,
-      220,
-      1224
+      95,
+      1120,
+      235,
+      1240
      ],
      "object_w": 70,
-     "src": "leaf",
-     "note": "プログラムで消した（scripts/custom/ep007_fix.py）"
+     "src": "p",
+     "note": "プログラムで色を変えた"
     }
    ],
    "hint_diff": null,
@@ -932,6 +1046,43 @@
    "edit_prompts": {
     "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines and colors. When an object is removed, remove it COMPLETELY (no leftover strings, stems, outlines, shadows or pieces): (a) one small red maple leaf lying on the stone path at the lower left is gone; (b) the small metal ring at the top of the paper lantern is gone; (c) on the ginkgo branch, one of the smallest yellow leaves at the lower tip is gone; (d) one small round pebble on the stone path near the stone lantern is gone.",
     "n": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new objects. Changes: (a) one small yellow ginkgo leaf at the lower tip of the ginkgo branch at the upper right becomes green."
+   },
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "src": [
+       1300,
+       90,
+       1420,
+       205
+      ],
+      "circle": [
+       1360,
+       148,
+       54
+      ],
+      "thr_in_circle": 60,
+      "dst": [
+       1330,
+       455
+      ],
+      "width": 66,
+      "rot": 25
+     },
+     {
+      "op": "recolor",
+      "box": [
+       95,
+       1120,
+       235,
+       1240
+      ],
+      "hue": 32,
+      "sat": 1.0,
+      "val": 1.12
+     }
+    ]
    }
   }
  ],

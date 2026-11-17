@@ -165,7 +165,12 @@ def apply(im, op, work=None):
         crop = im.crop(box)
         m, _ = obj_mask(crop)
         C = np.asarray(crop).astype(float)
-        B = fill_bg(C, ndimage.binary_dilation(m, iterations=2))
+        # 細い軸（葉の柄など）は切り抜きに入りにくいので、うめる範囲は "dilate"（既定2）だけ広げ、地との差が残る所もうめる
+        fm = ndimage.binary_dilation(m, iterations=op.get("dilate", 2))
+        if op.get("dilate"):
+            border = np.concatenate([C[0], C[-1], C[:, 0], C[:, -1]]); bg = np.median(border, 0)
+            fm |= ndimage.binary_dilation(np.sqrt(((C - bg) ** 2).sum(2)) > op.get("thr", THR) * 0.6, iterations=2)
+        B = fill_bg(C, fm)
         out = Image.fromarray(np.clip(B, 0, 255).astype(np.uint8))
         mk = Image.fromarray((m[:, ::-1] * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(0.8))
         out.paste(crop.transpose(Image.FLIP_LEFT_RIGHT), (0, 0), mk)

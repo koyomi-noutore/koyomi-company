@@ -1,0 +1,137 @@
+{
+ "screen": {
+  "size": [
+   1920,
+   1080
+  ],
+  "picture_size_on_screen": [
+   960,
+   1080
+  ],
+  "safe_y_on_screen": [
+   54,
+   918
+  ],
+  "level_range_pct_of_screen_width": {
+   "やさしい": [
+    4.0,
+    6.0
+   ],
+   "初級": [
+    3.0,
+    4.0
+   ],
+   "中級": [
+    2.0,
+    3.0
+   ],
+   "上級": [
+    1.5,
+    2.0
+   ]
+  }
+ },
+ "note": "box_px・circle_px は 8:9 に切り抜いた高解像度の絵（qN_a.png、1856×2088）のピクセル。content_px はそのうち画面に出す範囲（白いふちを除いた8:9）。*_screen は画面の上での座標（右の絵は x に960を足す）。object_screen_width_pct は、変わる物そのものの幅を画面幅で割った値。",
+ "questions": [
+  {
+   "q": 1,
+   "scene": "山小屋",
+   "level": "やさしい",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 0,
+   "outside_box_max_distance_px": 0.0,
+   "answers": []
+  },
+  {
+   "q": 2,
+   "scene": "道の駅",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 0,
+   "outside_box_max_distance_px": 0.0,
+   "answers": []
+  },
+  {
+   "q": 3,
+   "scene": "渓流",
+   "level": "中級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 0,
+   "outside_box_max_distance_px": 0.0,
+   "answers": []
+  },
+  {
+   "q": 4,
+   "scene": "湖のほとり",
+   "level": "中級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 0,
+   "outside_box_max_distance_px": 0.0,
+   "answers": []
+  },
+  {
+   "q": 5,
+   "scene": "牧場",
+   "level": "上級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 0,
+   "outside_box_max_distance_px": 0.0,
+   "answers": []
+  }
+ ]
+}

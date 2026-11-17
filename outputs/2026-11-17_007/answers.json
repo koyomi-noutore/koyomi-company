@@ -54,7 +54,7 @@
    "answers": [
     {
      "id": 1,
-     "type": "形が変わる",
+     "type": "入れ替え",
      "label": "大根がたまごに",
      "line": "大根が、たまごになりました。",
      "box_px": [
@@ -91,7 +91,7 @@
     },
     {
      "id": 2,
-     "type": "物がない",
+     "type": "なくなる",
      "label": "とっくりがない",
      "line": "とっくりが、ありません。",
      "box_px": [
@@ -128,40 +128,40 @@
     },
     {
      "id": 3,
-     "type": "増える",
-     "label": "からしが増える",
-     "line": "からしが、ひとつ増えました。",
+     "type": "大きさ",
+     "label": "たまごが大きい",
+     "line": "たまごが、ひとつ大きくなりました。",
      "box_px": [
-      1620,
-      1308,
-      1800,
-      1470
+      850,
+      880,
+      1085,
+      1115
      ],
      "box_screen": [
-      859,
-      685,
-      957,
-      773
+      437,
+      450,
+      566,
+      579
      ],
      "circle_a_screen": [
-      859,
-      685,
-      957,
-      773
+      437,
+      450,
+      566,
+      579
      ],
      "circle_b_screen": [
-      859,
-      685,
-      957,
-      773
+      437,
+      450,
+      566,
+      579
      ],
-     "object_w_px": 160,
-     "object_screen_width_pct": 4.56,
+     "object_w_px": 175,
+     "object_screen_width_pct": 4.99,
      "in_level_range": true,
      "in_safe_y": true,
      "edit_version": "p",
      "made_by": "gemini",
-     "note": "プログラムで足した（scripts/program_diffs.py）"
+     "note": "プログラムで大きくした（元のたまごの上に重ねた）"
     }
    ]
   },
@@ -181,119 +181,119 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 0,
-   "outside_box_max_distance_px": 0.0,
+   "outside_box_pixels_diff_gt15": 328,
+   "outside_box_max_distance_px": 11.0,
    "answers": [
     {
      "id": 1,
-     "type": "増える",
-     "label": "チョウが飛ぶ",
-     "line": "チョウが、飛んでいます。",
+     "type": "形",
+     "label": "くいの頭がとがる",
+     "line": "くいの頭が、とがっています。",
      "box_px": [
-      140,
-      590,
-      290,
-      735
+      1499,
+      228,
+      1684,
+      384
      ],
      "box_screen": [
-      72,
-      305,
-      150,
-      380
+      775,
+      118,
+      871,
+      199
      ],
      "circle_a_screen": [
-      72,
-      305,
-      150,
-      380
+      775,
+      118,
+      871,
+      199
      ],
      "circle_b_screen": [
-      72,
-      305,
-      150,
-      380
+      775,
+      118,
+      871,
+      199
      ],
-     "object_w_px": 126,
-     "object_screen_width_pct": 3.39,
+     "object_w_px": 125,
+     "object_screen_width_pct": 3.37,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "p",
+     "edit_version": "m",
      "made_by": "gemini",
-     "note": "プログラムで足した（scripts/program_diffs.py）"
+     "note": ""
     },
     {
      "id": 2,
-     "type": "増える",
-     "label": "小鳥が増える",
-     "line": "小鳥が、一羽増えました。",
+     "type": "大きさ",
+     "label": "くわの刃が小さい",
+     "line": "くわの刃が、小さくなりました。",
      "box_px": [
-      1440,
-      1130,
-      1580,
-      1262
+      1369,
+      1360,
+      1752,
+      1717
      ],
      "box_screen": [
-      745,
-      584,
-      817,
-      653
+      708,
+      703,
+      906,
+      888
      ],
      "circle_a_screen": [
-      745,
-      584,
-      817,
-      653
+      708,
+      703,
+      906,
+      888
      ],
      "circle_b_screen": [
-      745,
-      584,
-      817,
-      653
+      708,
+      703,
+      906,
+      888
      ],
-     "object_w_px": 128,
-     "object_screen_width_pct": 3.45,
-     "in_level_range": true,
+     "object_w_px": 150,
+     "object_screen_width_pct": 4.04,
+     "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "p",
+     "edit_version": "m",
      "made_by": "gemini",
-     "note": "プログラムで足した（scripts/program_diffs.py）（さくの小鳥を左右反対にして小さく）"
+     "note": ""
     },
     {
      "id": 3,
      "type": "増える",
-     "label": "にんじんが増える",
-     "line": "にんじんが、増えました。",
+     "label": "キャベツが増える",
+     "line": "キャベツが、ひとつ増えました。",
      "box_px": [
-      970,
-      1590,
-      1135,
-      1695
+      639,
+      698,
+      930,
+      957
      ],
      "box_screen": [
-      502,
-      822,
-      587,
-      877
+      331,
+      361,
+      481,
+      495
      ],
      "circle_a_screen": [
-      502,
-      822,
-      587,
-      877
+      331,
+      361,
+      481,
+      495
      ],
      "circle_b_screen": [
-      502,
-      822,
-      587,
-      877
+      331,
+      361,
+      481,
+      495
      ],
-     "object_w_px": 145,
-     "object_screen_width_pct": 3.91,
+     "object_w_px": 140,
+     "object_screen_width_pct": 3.77,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "p",
+     "edit_version": "k",
      "made_by": "gemini",
-     "note": "プログラムで足した（scripts/program_diffs.py）"
+     "note": ""
     }
    ]
   },
@@ -318,32 +318,106 @@
    "answers": [
     {
      "id": 1,
-     "type": "増える",
-     "label": "もみじが1枚増える",
-     "line": "もみじが、一枚増えました。",
+     "type": "模様",
+     "label": "のれんに丸の模様",
+     "line": "のれんに、白い丸の模様があります。",
      "box_px": [
-      90,
-      1112,
-      220,
-      1245
+      985,
+      571,
+      1095,
+      681
      ],
      "box_screen": [
-      47,
-      575,
-      114,
-      644
+      509,
+      295,
+      566,
+      352
      ],
      "circle_a_screen": [
-      47,
-      575,
-      114,
-      644
+      509,
+      295,
+      566,
+      352
      ],
      "circle_b_screen": [
-      47,
-      575,
-      114,
-      644
+      509,
+      295,
+      566,
+      352
+     ],
+     "object_w_px": 90,
+     "object_screen_width_pct": 2.42,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": "描き直し(m)の丸を、プログラムで小さくして元の絵に置いた"
+    },
+    {
+     "id": 2,
+     "type": "向き",
+     "label": "黄色い葉っぱの向き",
+     "line": "黄色い葉っぱが、反対を向いています。",
+     "box_px": [
+      1615,
+      1385,
+      1740,
+      1495
+     ],
+     "box_screen": [
+      835,
+      716,
+      900,
+      773
+     ],
+     "circle_a_screen": [
+      835,
+      716,
+      900,
+      773
+     ],
+     "circle_b_screen": [
+      835,
+      716,
+      900,
+      773
+     ],
+     "object_w_px": 80,
+     "object_screen_width_pct": 2.16,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": "プログラムで左右反対にした"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "もみじが増える",
+     "line": "左に、もみじが一枚増えました。",
+     "box_px": [
+      85,
+      1108,
+      225,
+      1250
+     ],
+     "box_screen": [
+      44,
+      573,
+      116,
+      647
+     ],
+     "circle_a_screen": [
+      44,
+      573,
+      116,
+      647
+     ],
+     "circle_b_screen": [
+      44,
+      573,
+      116,
+      647
      ],
      "object_w_px": 95,
      "object_screen_width_pct": 2.56,
@@ -352,80 +426,6 @@
      "edit_version": "1",
      "made_by": "gemini",
      "note": ""
-    },
-    {
-     "id": 2,
-     "type": "増える",
-     "label": "桶の上にもみじ",
-     "line": "桶の上に、もみじが一枚あります。",
-     "box_px": [
-      1475,
-      712,
-      1596,
-      820
-     ],
-     "box_screen": [
-      763,
-      368,
-      826,
-      424
-     ],
-     "circle_a_screen": [
-      763,
-      368,
-      826,
-      424
-     ],
-     "circle_b_screen": [
-      763,
-      368,
-      826,
-      424
-     ],
-     "object_w_px": 90,
-     "object_screen_width_pct": 2.42,
-     "in_level_range": true,
-     "in_safe_y": true,
-     "edit_version": "p",
-     "made_by": "gemini",
-     "note": "プログラムで足した（scripts/program_diffs.py）"
-    },
-    {
-     "id": 3,
-     "type": "増える",
-     "label": "どんぐりが増える",
-     "line": "どんぐりが、ひとつ増えました。",
-     "box_px": [
-      1053,
-      1640,
-      1155,
-      1746
-     ],
-     "box_screen": [
-      545,
-      848,
-      597,
-      903
-     ],
-     "circle_a_screen": [
-      545,
-      848,
-      597,
-      903
-     ],
-     "circle_b_screen": [
-      545,
-      848,
-      597,
-      903
-     ],
-     "object_w_px": 85,
-     "object_screen_width_pct": 2.29,
-     "in_level_range": true,
-     "in_safe_y": true,
-     "edit_version": "p",
-     "made_by": "gemini",
-     "note": "プログラムで足した（scripts/program_diffs.py）"
     }
    ]
   },
@@ -445,8 +445,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 173,
-   "outside_box_max_distance_px": 8.0,
+   "outside_box_pixels_diff_gt15": 1713,
+   "outside_box_max_distance_px": 12.0,
    "answers": [
     {
      "id": 1,
@@ -487,77 +487,77 @@
     },
     {
      "id": 2,
-     "type": "増える",
-     "label": "川にもみじ",
-     "line": "川に、もみじが流れています。",
+     "type": "形",
+     "label": "小鳥のしっぽが短い",
+     "line": "小鳥のしっぽが、短くなりました。",
      "box_px": [
-      1460,
-      790,
-      1590,
-      920
+      1560,
+      186,
+      1729,
+      311
      ],
      "box_screen": [
-      755,
-      409,
-      822,
-      476
+      807,
+      96,
+      894,
+      161
      ],
      "circle_a_screen": [
-      755,
-      409,
-      822,
-      476
+      807,
+      96,
+      894,
+      161
      ],
      "circle_b_screen": [
-      755,
-      409,
-      822,
-      476
+      807,
+      96,
+      894,
+      161
      ],
      "object_w_px": 95,
      "object_screen_width_pct": 2.56,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "p",
+     "edit_version": "j",
      "made_by": "gemini",
-     "note": "描き直しの葉を、岩にかからない水の上へプログラムで置いた"
+     "note": ""
     },
     {
      "id": 3,
-     "type": "増える",
-     "label": "敷物にもみじ",
-     "line": "敷物に、もみじが一枚増えました。",
+     "type": "大きさ",
+     "label": "魔法瓶のふたが高い",
+     "line": "魔法瓶のふたが、高くなりました。",
      "box_px": [
-      814,
-      1575,
-      922,
-      1681
+      125,
+      1350,
+      384,
+      1560
      ],
      "box_screen": [
-      421,
-      815,
-      477,
-      869
+      65,
+      698,
+      199,
+      807
      ],
      "circle_a_screen": [
-      421,
-      815,
-      477,
-      869
+      65,
+      698,
+      199,
+      807
      ],
      "circle_b_screen": [
-      421,
-      815,
-      477,
-      869
+      65,
+      698,
+      199,
+      807
      ],
-     "object_w_px": 90,
-     "object_screen_width_pct": 2.42,
+     "object_w_px": 110,
+     "object_screen_width_pct": 2.96,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "p",
+     "edit_version": "m",
      "made_by": "gemini",
-     "note": "プログラムで足した（scripts/program_diffs.py）"
+     "note": ""
     }
    ]
   },
@@ -582,7 +582,7 @@
    "answers": [
     {
      "id": 1,
-     "type": "物がない",
+     "type": "一部欠け",
      "label": "ちょうちんの金具がない",
      "line": "ちょうちんの上の金具が、ありません。",
      "box_px": [
@@ -620,31 +620,31 @@
     {
      "id": 2,
      "type": "増える",
-     "label": "いちょうの葉が1枚増える",
-     "line": "いちょうの葉が、一枚増えました。",
+     "label": "いちょうの葉が増える",
+     "line": "いちょうの葉が、一枚舞っています。",
      "box_px": [
-      1470,
-      680,
-      1560,
-      770
+      1315,
+      440,
+      1415,
+      540
      ],
      "box_screen": [
-      760,
-      352,
-      807,
-      398
+      680,
+      228,
+      732,
+      279
      ],
      "circle_a_screen": [
-      760,
-      352,
-      807,
-      398
+      680,
+      228,
+      732,
+      279
      ],
      "circle_b_screen": [
-      760,
-      352,
-      807,
-      398
+      680,
+      228,
+      732,
+      279
      ],
      "object_w_px": 66,
      "object_screen_width_pct": 1.78,
@@ -652,44 +652,44 @@
      "in_safe_y": true,
      "edit_version": "p",
      "made_by": "gemini",
-     "note": "プログラムで足した（葉を消すと軸が残るため、足す形にした）"
+     "note": "プログラムで足した（木の葉を1枚、空に舞わせた）"
     },
     {
      "id": 3,
-     "type": "物がない",
-     "label": "もみじが1枚ない",
-     "line": "小さなもみじが、一枚ありません。",
+     "type": "色",
+     "label": "もみじが黄色",
+     "line": "小さなもみじが、黄色になりました。",
      "box_px": [
-      108,
-      1136,
-      220,
-      1224
+      95,
+      1120,
+      235,
+      1240
      ],
      "box_screen": [
-      56,
-      588,
-      114,
-      633
+      49,
+      579,
+      122,
+      641
      ],
      "circle_a_screen": [
-      56,
-      588,
-      114,
-      633
+      49,
+      579,
+      122,
+      641
      ],
      "circle_b_screen": [
-      56,
-      588,
-      114,
-      633
+      49,
+      579,
+      122,
+      641
      ],
      "object_w_px": 70,
      "object_screen_width_pct": 1.89,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "leaf",
+     "edit_version": "p",
      "made_by": "gemini",
-     "note": "プログラムで消した（scripts/custom/ep007_fix.py）"
+     "note": "プログラムで色を変えた"
     }
    ]
   }

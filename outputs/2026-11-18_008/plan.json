@@ -197,7 +197,8 @@
     60,
     "あと30秒です。"
    ]
-  ]
+  ],
+  "go_delay": 1.3
  },
  "lines": {
   "opening": [
@@ -275,18 +276,18 @@
     "at": 3.6,
     "text": "15個の違い、いくつ見つかりましたか。今日の称号です。",
     "face": "smile",
-    "until": 9.6
+    "until": 10.2
    },
    {
     "id": "e3",
-    "at": 9.6,
-    "text": "チャンネル登録とベルで、毎朝8時半に新しい問題が届きます。毎日の頭の体操にどうぞ。",
+    "at": 10.2,
+    "text": "チャンネル登録とベルで、毎朝8時半に問題が届きます。毎日の頭の体操にどうぞ。",
     "face": "smile",
-    "until": 20.0
+    "until": 21.0
    },
    {
     "id": "e4",
-    "at": 20.0,
+    "at": 21.0,
     "text": "左の丸を押すと登録、右の動画で、次の問題に挑戦できますよ。",
     "face": "wink",
     "until": 30.0
@@ -570,7 +571,7 @@
   "u1": "ここでひとやすみ。こよみせんせいの、きせつのおはなしです。",
   "e1": "これでごもん、おしまいです。",
   "e2": "じゅうごこのちがい、いくつみつかりましたか。きょうのしょうごうです。",
-  "e3": "チャンネルとうろくとベルで、まいあさはちじはんに、あたらしいもんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。",
+  "e3": "チャンネルとうろくとベルで、まいあさはちじはんに、もんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。",
   "e4": "ひだりのまるをおすととうろく、みぎのどうがで、つぎのもんだいに、ちょうせんできますよ。",
   "c_comment": "みつかったかずを、あとでコメントでおしえてくださいね。",
   "s_intro": "うえとしたのえで、ちがいがみっつあります。みつけられますか。",
@@ -602,7 +603,7 @@
    "q": 1,
    "scene": "山小屋",
    "level": "やさしい",
-   "go": "さあ、第1問です。やさしい問題から。どうぞ。",
+   "go": "さあ、第1問。やさしい問題からどうぞ。",
    "prompt": "Scene: close-up of a wooden table in a cozy mountain hut in late autumn. CENTER, LARGE (main subject): a big clay pot of mushroom rice (kinoko gohan) with shiitake, shimeji and maitake mushrooms, steam rising. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Each listed side object is SMALL (about one twelfth of the picture width), fully visible (never cut off by the picture edge), standing alone on a plain area (plain table, floor, ground, wall or sky) so it could be removed or added cleanly. Objects: (upper left) a small kerosene lamp; (upper right) a round wall clock without numbers; (lower left) a small bowl of pickles; (lower right) a teacup and a wooden spoon; (middle right) a small basket of fresh shiitake mushrooms.",
    "answers_intro": "答えです。",
    "content_box": [
@@ -616,7 +617,10 @@
    "program_ops": {},
    "diffs": [],
    "hint_diff": null,
-   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new kinds of objects. Changes: (a) the hands of the round wall clock point to a clearly different time; (b) the teacup gets a blue stripe pattern around it; (c) in the small basket of shiitake mushrooms, one more shiitake; (d) the wooden spoon lies the opposite way (handle on the other side); (e) the kerosene lamp's glass chimney becomes taller."
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new kinds of objects. Changes: (a) the hands of the round wall clock point to a clearly different time; (b) the teacup gets a blue stripe pattern around it; (c) in the small basket of shiitake mushrooms, one more shiitake; (d) the wooden spoon lies the opposite way (handle on the other side); (e) the kerosene lamp's glass chimney becomes taller.",
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Changes: (a) in the clay pot, the big shiitake mushroom cap on the RIGHT side of the rice becomes a small cluster of white shimeji mushrooms of the same size; (b) in the small basket of shiitake at the right, one more shiitake mushroom; (c) the clay pot's handle on the LEFT side is gone (plain pot wall)."
+   }
   },
   {
    "q": 2,
@@ -636,7 +640,10 @@
    "program_ops": {},
    "diffs": [],
    "hint_diff": null,
-   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new kinds of objects. Changes: (a) the hanging paper lantern becomes round instead of long; (b) the red shopping basket's handle is gone; (c) one bundle of white enoki mushrooms becomes a bunch of brown shiitake; (d) the needle of the small scale points to the other side; (e) the potted green plant becomes about half its size."
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new kinds of objects. Changes: (a) the hanging paper lantern becomes round instead of long; (b) the red shopping basket's handle is gone; (c) one bundle of white enoki mushrooms becomes a bunch of brown shiitake; (d) the needle of the small scale points to the other side; (e) the potted green plant becomes about half its size.",
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Changes: (a) the hanging paper lantern at the upper left: its black bottom ring is gone; (b) in the top right basket of king oyster mushrooms (white thick stems), one more king oyster mushroom, the same size as the others."
+   }
   },
   {
    "q": 3,
@@ -656,7 +663,10 @@
    "program_ops": {},
    "diffs": [],
    "hint_diff": null,
-   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new kinds of objects. Changes: (a) the small bird on the rock faces the opposite direction; (b) the small white flower on the bank has only three petals; (c) one orange mushroom on the log becomes about twice as big; (d) one red maple leaf on the branch is gone; (e) the small round stone in the water becomes long and flat."
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new kinds of objects. Changes: (a) the small bird on the rock faces the opposite direction; (b) the small white flower on the bank has only three petals; (c) one orange mushroom on the log becomes about twice as big; (d) one red maple leaf on the branch is gone; (e) the small round stone in the water becomes long and flat.",
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Changes: (a) on the mossy log, the smallest orange mushroom at the far right end is gone (moss only there); (b) one small orange mushroom near the left end of the log becomes about twice as big."
+   }
   },
   {
    "q": 4,
@@ -676,7 +686,10 @@
    "program_ops": {},
    "diffs": [],
    "hint_diff": null,
-   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new kinds of objects. Changes: (a) the duck on the water faces the opposite direction; (b) the handle of the cup is gone; (c) the folded picnic blanket's check pattern becomes stripes; (d) one more mushroom skewer on the grill; (e) the small lantern's top ring is gone."
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new kinds of objects. Changes: (a) the duck on the water faces the opposite direction; (b) the handle of the cup is gone; (c) the folded picnic blanket's check pattern becomes stripes; (d) one more mushroom skewer on the grill; (e) the small lantern's top ring is gone.",
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Changes: (a) on the grill, one mushroom on a skewer becomes a round onion slice of the same size; (b) the cap of the thermos bottle at the lower left becomes twice as tall."
+   }
   },
   {
    "q": 5,
@@ -696,7 +709,10 @@
    "program_ops": {},
    "diffs": [],
    "hint_diff": null,
-   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new kinds of objects. Changes: (a) the small bell on the fence is gone; (b) the black spots on the far cow are in a different pattern; (c) the lid of the milk can becomes red; (d) one of the pair of boots faces the other way; (e) one small mushroom in the grass becomes twice as big; (f) the handle of the trowel becomes blue."
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new kinds of objects. Changes: (a) the small bell on the fence is gone; (b) the black spots on the far cow are in a different pattern; (c) the lid of the milk can becomes red; (d) one of the pair of boots faces the other way; (e) one small mushroom in the grass becomes twice as big; (f) the handle of the trowel becomes blue.",
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Changes: (a) the small round knob on top of the lid of the cooking pot is gone; (b) the cow in the far field has a much shorter tail; (c) in the basket on the table, one small brown mushroom on the LEFT side becomes white."
+   }
   }
  ],
  "thumbnail": {

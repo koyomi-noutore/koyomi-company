@@ -2,30 +2,30 @@
  "voice": {
   "s_intro": {
    "clipped": 0,
-   "rms_db": -15.3
+   "rms_db": -15.5
   },
   "s_ans0": {
    "clipped": 0,
-   "rms_db": -16.8
+   "rms_db": -15.8
   },
   "s_ans1": {
    "clipped": 0,
-   "rms_db": -15.3
+   "rms_db": -12.6
   },
   "s_ans2": {
    "clipped": 0,
-   "rms_db": -15.2
+   "rms_db": -15.6
   },
   "s_ans3": {
    "clipped": 0,
-   "rms_db": -12.2
+   "rms_db": -16.6
   },
   "s_end": {
    "clipped": 0,
-   "rms_db": -15.3
+   "rms_db": -15.4
   }
  },
- "duration": 44.5,
+ "duration": 44.9,
  "size": [
   1080,
   1920

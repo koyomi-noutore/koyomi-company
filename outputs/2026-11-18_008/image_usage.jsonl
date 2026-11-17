@@ -1,0 +1,15 @@
+{"time": "2026-11-17T21:52:41+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 352, "output_tokens": 1426, "total_tokens": 2037, "batch": true, "key": "base1"}
+{"time": "2026-11-17T21:52:41+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 364, "output_tokens": 1424, "total_tokens": 2049, "batch": true, "key": "base2"}
+{"time": "2026-11-17T21:52:41+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 345, "output_tokens": 1888, "total_tokens": 2532, "batch": true, "key": "base3"}
+{"time": "2026-11-17T21:52:41+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 334, "output_tokens": 1366, "total_tokens": 1903, "batch": true, "key": "base4"}
+{"time": "2026-11-17T21:52:41+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 278, "output_tokens": 1365, "total_tokens": 1882, "batch": true, "key": "base5"}
+{"time": "2026-11-17T21:56:29+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 453, "output_tokens": 1284, "total_tokens": 1900, "batch": true, "key": "edit1"}
+{"time": "2026-11-17T21:56:29+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 447, "output_tokens": 1257, "total_tokens": 1879, "batch": true, "key": "edit2"}
+{"time": "2026-11-17T21:56:30+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 447, "output_tokens": 1335, "total_tokens": 1895, "batch": true, "key": "edit3"}
+{"time": "2026-11-17T21:56:30+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 438, "output_tokens": 1310, "total_tokens": 1879, "batch": true, "key": "edit4"}
+{"time": "2026-11-17T21:56:30+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 455, "output_tokens": 1314, "total_tokens": 1976, "batch": true, "key": "edit5"}
+{"time": "2026-11-17T22:16:37+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 442, "output_tokens": 1302, "total_tokens": 1888, "batch": true, "key": "edit1"}
+{"time": "2026-11-17T22:16:37+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 415, "output_tokens": 1284, "total_tokens": 1859, "batch": true, "key": "edit2"}
+{"time": "2026-11-17T22:16:37+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 411, "output_tokens": 1281, "total_tokens": 1812, "batch": true, "key": "edit3"}
+{"time": "2026-11-17T22:16:37+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 407, "output_tokens": 1286, "total_tokens": 1868, "batch": true, "key": "edit4"}
+{"time": "2026-11-17T22:16:37+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 421, "output_tokens": 1263, "total_tokens": 1803, "batch": true, "key": "edit5"}

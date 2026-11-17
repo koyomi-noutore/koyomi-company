@@ -14,6 +14,7 @@ TOTAL = _T["total"]
 OPENING, RULE, UNCHIKU, ENDING = tuple(_T["opening"]), tuple(_T["rule"]), tuple(_T["unchiku"]), tuple(_T["ending"])
 Q_START = {int(k): v for k, v in _T["q_start"].items()}
 CARD, SOLVE, ANSWER = _T["card"], _T["solve"], _T["answer"]
+GO_DELAY = _T.get("go_delay", 0.8)   # 札の読み上げのあと「どうぞ」までの秒（出題の頭から）。間を0.4秒以上とるため 1.3 にする（2026-11-18）
 HINT_AT, TEN_AT = _T.get("hint_at"), _T["ten_at"]      # 出題の頭からの秒。hint_at が null ならヒントなし（2026-11-07 CEO決定で標準はヒントなし）
 ANS_FIRST, ANS_STEP = _T["ans_first"], _T["ans_step"]
 CTA = tuple(_T["cta"]) if _T.get("cta") else None     # 登録のお願いの区切り（2026-11-14 CEO指示：1問目の答え合わせの直後）
@@ -37,8 +38,8 @@ def lines():
     for q, Q in QUESTIONS.items():
         s = Q_START[q]
         # カードの読み上げは3秒を少し超えてもよい（「どうぞ」を出題開始の0.8秒後にしてある）
-        L.append((f"q{q}_card", s, LEVEL_NUM[Q["level"]].format(q) + Q["scene"] + "です。", "normal", s + CARD + 0.8))
-        L.append((f"q{q}_go", s + CARD + 0.8, Q["go"], "normal", s + CARD + 8))
+        L.append((f"q{q}_card", s, LEVEL_NUM[Q["level"]].format(q) + Q["scene"] + "です。", "normal", s + CARD + GO_DELAY))
+        L.append((f"q{q}_go", s + CARD + GO_DELAY, Q["go"], "normal", s + CARD + 8))
         if HINT_AT is not None and Q["hint"]:
             L.append((f"q{q}_hint", s + CARD + HINT_AT, Q["hint"], "wink", s + CARD + HINT_AT + 7))
         # 出題中の声かけ（ヒントではない）：plan.json の timeline.solve_calls ＝ [[出題の頭からの秒, 文], ...]（2026-11-12 youtube-playbook 5章）
