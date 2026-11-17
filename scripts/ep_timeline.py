@@ -1,9 +1,11 @@
 """台本のタイムライン。plan.json の timeline・lines・questions から、セリフの一覧と声に渡す文を作る。
 - 時刻は動画の頭からの秒。
 - 表情はこよみ先生が出るオープニング・うんちく・エンディングだけで使う（出題中・答え合わせ中・ルール説明は絵を出さない）。
-- 声に渡す文は、字幕の文からかぎかっこを外し、plan.json の readings（読みの表）の語をひらがなにしたもの。
+- 声に渡す文は、字幕の文からかぎかっこを外し、plan.json の voice_override・readings（読みの表）で漢字を全部ひらがなにしたもの。
+  漢字が1字でも残ったら声を作らずに止める（2026-11-15 最低品質1：読み間違いゼロ）。対照表は <回>/readings_check.md。
+- 間のチェック（最低品質2）：1つのセリフは1〜2文、枠に対して1秒あたりの文字数が多すぎない（MAX_CPS）。
 """
-import json
+import json, re
 from pathlib import Path
 from episode_plan import plan, questions
 
@@ -62,6 +64,44 @@ def to_voice(lid, text):
 
 
 VOICE_TEXT = {ln[0]: to_voice(ln[0], ln[2]) for ln in lines()}
+
+KANJI = re.compile(r"[\u3400-\u9fff々〆ヶ]")
+SENT = re.compile(r"[^。！？!?]+[。！？!?]*")
+MAX_CPS = 6.0          # 声に渡す文（ひらがな）の文字数 ÷ 枠の秒。これを超えると詰まって聞こえる（第7回の反省）
+
+
+def sentences(t):
+    return [x.strip() for x in SENT.findall(t) if x.strip(" 、。！？")]
+
+
+def voice_problems():
+    """読み（漢字の残り）と間（文の数・詰まり）の問題を一覧にする。"""
+    P = []
+    for lid, t0, text, face, t_end in lines():
+        vt = VOICE_TEXT[lid]
+        k = KANJI.findall(vt)
+        if k:
+            P.append(f"{lid}：声に渡す文に漢字が残っている {''.join(k)}（readings か voice_override に読みを足す）")
+        n = len(sentences(vt))
+        if n > 2:
+            P.append(f"{lid}：1つのセリフに{n}文（1〜2文まで）")
+        chars = len(re.sub(r"[\s、。！？!?「」・…ー]", "", vt))
+        slot = t_end - t0
+        if slot > 0 and chars / slot > MAX_CPS:
+            P.append(f"{lid}：枠 {slot:.1f}秒に{chars}字（{chars / slot:.1f}字/秒、上限{MAX_CPS}）。枠を延ばすか文を減らす")
+    return P
+
+
+def readings_check(path):
+    """字幕の文と声に渡す文の対照表（監査で読みを全部確かめる）。問題があれば先頭に書く。"""
+    P = voice_problems()
+    out = ["# 読みの対照表（字幕 → 声に渡す文）", "", "監査は全行の読みを確かめる。声に渡す文に漢字は残さない。", ""]
+    out += ["## 問題", ""] + [f"- {p}" for p in P] + [""] if P else ["問題：なし（漢字の残り・文の数・詰まり）", ""]
+    out += ["| id | 秒 | 字幕 | 声に渡す文 |", "|---|---|---|---|"]
+    for lid, t0, text, face, t_end in lines():
+        out.append(f"| {lid} | {t0:.1f} | {text} | {VOICE_TEXT[lid]} |")
+    Path(path).write_text("\n".join(out) + "\n", encoding="utf-8")
+    return P
 
 
 def export(path):

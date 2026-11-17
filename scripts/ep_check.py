@@ -23,6 +23,9 @@ MIN_CENTER_DIST_PCT = 30  # 絵の幅に対する、違いの中心どうしの�
 MIN_GAP_PCT = 10          # 違いの範囲どうしの最小のすき間（%）
 
 
+DIFF_TYPES = ("増える", "なくなる", "色", "形", "向き", "模様", "大きさ", "数", "一部欠け", "入れ替え")
+
+
 def numeric(out_dir, work):
     out, work = Path(out_dir), Path(work)
     problems, info = [], {}
@@ -56,11 +59,25 @@ def numeric(out_dir, work):
                 problems.append(f"第{Q['q']}問 違い{a['id']}：上の帯か字幕の場所にかかる")
             if Q["level"] != "上級" and a["type"] == "色":   # やさしい・初級・中級は色だけの違いにしない
                 problems.append(f"第{Q['q']}問 違い{a['id']}：{Q['level']}で色だけの違い")
+        # 違いの種類を混ぜる（2026-11-15 最低品質4）：「増える・なくなる」は1問に1つまで。type は決まった種類から
+        types = [a["type"] for a in Q["answers"]]
+        bad = [t for t in types if t not in DIFF_TYPES]
+        if bad:
+            problems.append(f"第{Q['q']}問：違いの type が決まりの種類にない {bad}（{'・'.join(DIFF_TYPES)}）")
+        if sum(t in ("増える", "なくなる") for t in types) > 1:
+            problems.append(f"第{Q['q']}問：「増える・なくなる」が{sum(t in ('増える', 'なくなる') for t in types)}つ（1つまで）")
     vj = work / "voice" / "voice.json"
+    import ep_timeline as T
+    problems += [f"読み・間：{p}" for p in T.readings_check(out / "readings_check.md")]
+    if T.CTA:
+        problems.append("timeline.cta がある（登録のお願いはエンディングだけ。2026-11-15）")
     if vj.exists():
-        over = [v["id"] for v in json.loads(vj.read_text(encoding="utf-8")) if not v["fits"]]
+        import ep_voice as V
+        res = json.loads(vj.read_text(encoding="utf-8"))
+        over = [v["id"] for v in res if not v["fits"]]
         if over:
             problems.append(f"声が枠に収まらない：{over}")
+        problems += [f"間が0.4秒未満：{g}" for g in V.gap_problems(res)]
     else:
         problems.append("声がまだない")
     vid = out / "video.mp4"

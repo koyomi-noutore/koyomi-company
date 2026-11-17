@@ -11,7 +11,8 @@
 import datetime, json, os, subprocess, sys, urllib.request, wave
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
-from ep_timeline import lines, VOICE_TEXT
+from ep_timeline import lines, VOICE_TEXT, sentences
+GAP = 0.45     # 1つのセリフの中の文と文の間（秒）。最低品質2：0.4秒以上
 from episode_plan import plan
 
 API = "https://api.fish.audio"
@@ -52,6 +53,34 @@ def tts(text, out_wav):
         return w.getnframes() / w.getframerate()
 
 
+def tts_line(text, out_wav):
+    """2文のセリフは1文ずつ声にして、間に GAP 秒の無音をはさんでつなぐ（文の間を詰めない）。"""
+    S = sentences(text)
+    if len(S) <= 1:
+        return tts(text, out_wav)
+    parts = []
+    for i, s in enumerate(S):
+        p = Path(f"{out_wav}.part{i}.wav"); tts(s, p); parts.append(p)
+    inputs, filt = [], ""
+    for i, p in enumerate(parts):
+        inputs += ["-i", str(p)]
+    n = len(parts)
+    chain = "".join(f"[{i}]apad=pad_dur={GAP}[p{i}];" for i in range(n - 1))
+    filt = chain + "".join(f"[p{i}]" for i in range(n - 1)) + f"[{n - 1}]concat=n={n}:v=0:a=1"
+    subprocess.run(["ffmpeg", "-v", "error", "-y", *inputs, "-filter_complex", filt, "-ac", "1", "-ar", "48000", str(out_wav)], check=True)
+    for p in parts:
+        p.unlink()
+    with wave.open(str(out_wav)) as w:
+        return w.getnframes() / w.getframerate()
+
+
+def gap_problems(res, min_gap=0.4):
+    """前のセリフの声の終わりから次のセリフまで min_gap 秒以上あいているか（最低品質2）。"""
+    R = sorted(res, key=lambda r: r["start"])
+    return [f"{a['id']}→{b['id']}：間 {b['start'] - a['start'] - a['dur']:.2f}秒" for a, b in zip(R, R[1:])
+            if b["start"] - a["start"] - a["dur"] < min_gap]
+
+
 def make_all(work, only=()):
     """作業フォルダにあるセリフ（声に渡す文が同じもの）は作り直さない。"""
     work = Path(work); work.mkdir(parents=True, exist_ok=True)
@@ -64,7 +93,7 @@ def make_all(work, only=()):
         wav = work / f"voice_{lid}.wav"
         regen = (lid in only) or not wav.exists() or old.get(lid, {}).get("voice_text") != vt
         if regen:
-            dur = tts(vt, wav)
+            dur = tts_line(vt, wav)
             with open(work / "usage.jsonl", "a", encoding="utf-8") as f:
                 f.write(json.dumps({"time": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
                                     "id": lid, "chars": len(vt), "model": TTS_MODEL, "reference_id": MODEL_ID}, ensure_ascii=False) + "\n")

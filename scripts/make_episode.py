@@ -114,11 +114,17 @@ def pictures(ep, work, args):
                 + " ".join(f"違い{a['id']}={a['object_screen_width_pct']}%{'' if a['in_level_range'] else '(目安外)'}" for a in Q["answers"]))
 
 
-def voice(work, ids):
+def voice(work, ids, ep=None):
+    import ep_timeline as T
     import ep_voice as V
+    # 最低品質1・2：漢字が残っている／文が多い／詰まっているなら、声を作らずに止める（対照表は readings_check.md）
+    P = T.readings_check((ep or Path(os.environ["KOYOMI_EPISODE_DIR"])) / "readings_check.md")
+    if P:
+        raise SystemExit("声を作る前に直すこと：\n" + "\n".join(P))
     res = V.make_all(work / "voice", ids)
     over = [r["id"] for r in res if not r["fits"]]
-    log(f"声：{len(res)}セリフ、枠を超えたもの {over or 'なし'}")
+    gaps = V.gap_problems(res)
+    log(f"声：{len(res)}セリフ、枠を超えたもの {over or 'なし'}、間が0.4秒未満 {gaps or 'なし'}")
 
 
 def audio(work):

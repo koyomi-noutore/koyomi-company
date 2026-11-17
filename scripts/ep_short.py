@@ -29,10 +29,16 @@ BAND_H = 200
 LEVEL_COLOR = {"やさしい": (70, 140, 190), "初級": (96, 150, 90), "中級": (214, 128, 48), "上級": (176, 62, 52)}
 SR = 48000
 
-DEFAULT = {"solve": 25.0, "intro_at": 0.3, "answer_gap": 3.2, "end_len": 7.6,
+DEFAULT = {"solve": 25.0, "intro_at": 0.3, "answer_gap": 3.2, "end_len": 8.0,
            "intro": "上と下の絵で、違いが3つあります。見つけられますか。",
-           "end": "続きの問題は、長い動画で。毎朝8時半に、新しい問題が届きます。",   # 2026-11-14 戦略会議（shorts.md）
-           "end_title": "続きは 長い動画で", "end_sub": "毎朝8時半に 新しい問題"}
+           # 2026-11-18 CEO指示（shorts.md）：どこを押すか具体的に言い、矢印で関連動画のリンクの位置を示す
+           "end": "続きは長い動画で。左下をクリックして、挑戦してみてくださいね。",
+           "end_title": "続きは 長い動画で", "end_sub": "左下を クリック！"}
+# こよみ先生は最初から最後まで左下に出す（2026-11-18）。絵（x 180〜900）に重ねず、
+# スマホで隠れる下の約2割（y 1536〜）と右側のボタンの帯を避けて、左のすき間の下のほうに置く
+OWL_SIZE = 168
+OWL_XY = (6, 1340)
+LINK_XY = (150, 1630)      # 関連動画のリンクが出るあたり（画面の左下、タイトルの上）。矢印の先
 
 
 # 1本の長尺から、ショートを複数作る（2026-11-14 CEO決定：1日2本・14:00と18:00）。
@@ -70,7 +76,11 @@ def lines(ep):
     end_at = a0 + 1.6 + c["answer_gap"] * len(Q["diffs"]) + 0.4
     L.append(("s_end", end_at + 0.4, c["end"]))
     total = round(end_at + c["end_len"], 1)
-    return [(lid, t, s, T.to_voice(lid, s)) for lid, t, s in L], end_at, total
+    out = [(lid, t, s, T.to_voice(lid, s)) for lid, t, s in L]
+    left = [(lid, "".join(T.KANJI.findall(vt))) for lid, t, s, vt in out if T.KANJI.search(vt)]
+    if left:   # 読み間違いゼロ（2026-11-15）：声に渡す文に漢字を残さない
+        raise SystemExit(f"ショートの声に渡す文に漢字が残っている：{left}（plan.json の readings に読みを足す）")
+    return out, end_at, total
 
 
 # ---------- 声 ----------
@@ -86,7 +96,7 @@ def voice(ep, work):
         if wav.exists() and old.get(lid, {}).get("voice_text") == vt:
             dur = old[lid]["dur"]
         else:
-            dur = V.tts(vt, wav)
+            dur = V.tts_line(vt, wav)
             import datetime
             with open(vd / "usage.jsonl", "a", encoding="utf-8") as f:   # 声の費用の記録（cost.md 用）
                 f.write(json.dumps({"time": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
@@ -192,7 +202,7 @@ def setup(ep, work, fontp):
     CTX["base"] = base
     owl = Path(work) / "owl" / "koyomi_smile.png"
     CTX["owl"] = Image.open(owl).convert("RGBA").resize((300, 300), Image.LANCZOS) if owl.exists() else None
-    CTX["owl_s"] = CTX["owl"].resize((150, 150), Image.LANCZOS) if CTX["owl"] else None
+    CTX["owl_s"] = CTX["owl"].resize((OWL_SIZE, OWL_SIZE), Image.LANCZOS) if CTX["owl"] else None
 
 
 def circle_box(a, side):
@@ -272,11 +282,6 @@ def render(t):
             bx, by = min(max(x1 + 4, PX + 22), PX + PW - 22), min(max(y0 - 4, YS[side] + 22), YS[side] + PH - 22)
             d.ellipse((bx - 22, by - 22, bx + 22, by + 22), fill=RED, outline=(255, 255, 255), width=3)
             d.text((bx, by + 1), str(i + 1), font=font(30), fill=(255, 255, 255), anchor="mm")
-    # こよみ先生（冒頭に小さく）
-    if CTX["owl_s"] is not None and t < 3.0:
-        o = CTX["owl_s"]
-        bob = int(6 * math.sin(2 * math.pi * t / 1.6))
-        im.paste(o, ((PX - o.width) // 2, YS["a"] + 30 + bob), o)    # 左のすき間に
     # 長尺への案内
     e0 = CTX["end_at"]
     if t >= e0:
@@ -284,15 +289,29 @@ def render(t):
         layer = Image.new("RGBA", (W, H), (246, 236, 216, int(235 * k)))
         ld = ImageDraw.Draw(layer)
         a = int(255 * k)
-        ld.text((W / 2, 640), c["end_title"], font=font(96), fill=INK + (a,), anchor="mm")
-        ld.text((W / 2, 780), c["end_sub"], font=font(64), fill=(176, 62, 52, a), anchor="mm")
-        ld.text((W / 2, 880), "こよみ先生のまいにち脳トレ", font=font(48), fill=(110, 84, 60, a), anchor="mm")
-        ld.polygon([(W / 2 - 60, 960), (W / 2 + 60, 960), (W / 2, 1040)], fill=(214, 128, 48, a))
+        ld.text((W / 2, 560), c["end_title"], font=font(96), fill=INK + (a,), anchor="mm")
+        ld.text((W / 2, 720), c["end_sub"], font=font(88), fill=(176, 62, 52, a), anchor="mm")
+        ld.text((W / 2, 840), "こよみ先生のまいにち脳トレ", font=font(48), fill=(110, 84, 60, a), anchor="mm")
         im.paste(layer, (0, 0), layer)
-        if CTX["owl"] is not None:
-            o = CTX["owl"].copy(); o.putalpha(o.getchannel("A").point(lambda v: int(v * k)))
-            bob = int(8 * math.sin(2 * math.pi * t / 1.6))
-            im.paste(o, ((W - o.width) // 2, 1120 + bob), o)
+        # 左下の関連動画のリンクを指す矢印（ゆっくり動かして目を引く）
+        if t >= e0 + 0.5:
+            d2 = ImageDraw.Draw(im)
+            wig = 14 * math.sin(2 * math.pi * (t - e0) / 1.0)
+            tx, ty = LINK_XY[0] + 60 + wig * 0.7, LINK_XY[1] - 40 + wig * 0.7     # 矢印の先
+            sx, sy = 560, 1080                                                  # 矢印の根元
+            ang = math.atan2(ty - sy, tx - sx)
+            hx, hy = tx - 90 * math.cos(ang), ty - 90 * math.sin(ang)
+            px, py = -math.sin(ang), math.cos(ang)
+            for wdt, col in ((44, (255, 255, 255)), (28, (214, 80, 40))):
+                d2.line((sx, sy, hx, hy), fill=col, width=wdt)
+                e = wdt / 28
+                d2.polygon([(tx + 8 * (e - 1) * math.cos(ang), ty + 8 * (e - 1) * math.sin(ang)),
+                            (hx + 52 * e * px, hy + 52 * e * py), (hx - 52 * e * px, hy - 52 * e * py)], fill=col)
+    # こよみ先生（最初から最後まで左下。2026-11-18）
+    if CTX["owl_s"] is not None:
+        o = CTX["owl_s"]
+        bob = int(5 * math.sin(2 * math.pi * t / 1.6))
+        im.paste(o, (OWL_XY[0], OWL_XY[1] + bob), o)
     return im
 
 
