@@ -6,10 +6,10 @@
  ],
  "note": "第8回。2026-11-14の新ルール（冒頭の一言・つなぎ・理由つき登録・EDの余白）と2026-11-15の社則7章で作る。",
  "youtube": {
-  "title": "【間違い探し】シニアの脳トレクイズ｜きのこのイラスト全5問【60代・70代の頭の体操】",
+  "title": "【秋の間違い探し】シニアの脳トレクイズ｜きのこのイラスト全5問【60代・70代の頭の体操】",
   "description_file": "description.md",
-  "title_note": "thumbnail-title.md の型A（同じ言葉を2回使わない）。3案は ab/",
-  "publish_plan": "2026-11-18（水）8:30、ショート14:00・18:00"
+  "title_note": "タイトルに季節の言葉（秋）。サムネは訴求軸の違う3案（ab/）",
+  "publish_plan": "2026-11-19（木）8:30、ショート14:00・18:00"
  },
  "screens": {
   "opening_title": "きのこの間違い探し　全5問",
@@ -157,33 +157,29 @@
   "endscreen_at": 9.0
  },
  "timeline": {
-  "total": 634.0,
+  "total": 630.0,
   "opening": [
    0.0,
-   15.0
+   19.0
   ],
   "rule": [
-   15.0,
-   25.0
+   19.0,
+   30.0
   ],
   "q_start": {
-   "1": 25.0,
-   "2": 143.0,
-   "3": 251.0,
-   "4": 389.0,
-   "5": 497.0
+   "1": 30.0,
+   "2": 138.0,
+   "3": 246.0,
+   "4": 384.0,
+   "5": 492.0
   },
   "unchiku": [
-   359.0,
-   389.0
+   354.0,
+   384.0
   ],
   "ending": [
-   605.0,
-   634.0
-  ],
-  "cta": [
-   133.0,
-   143.0
+   600.0,
+   630.0
   ],
   "card": 3.0,
   "solve": 90.0,
@@ -208,25 +204,32 @@
    {
     "id": "op",
     "at": 0.0,
-    "text": "こよみ先生です。今日は、きのこの間違い探し、全5問。最後は難問です。3問目のあとには、きのこの意外なお話も。",
+    "text": "こよみ先生です。今日は、きのこの間違い探し、全5問です。",
     "face": "smile",
-    "until": 10.6
+    "until": 7.0
    },
    {
     "id": "op2",
-    "at": 10.6,
+    "at": 7.0,
+    "text": "最後は難問です。3問目のあとには、きのこの意外なお話も。",
+    "face": "surprise",
+    "until": 14.0
+   },
+   {
+    "id": "op3",
+    "at": 14.0,
     "text": "ぜひ最後まで、一緒に解いてくださいね。",
     "face": "wink",
-    "until": 15.0
+    "until": 19.0
    }
   ],
   "rule": [
    {
     "id": "rule",
     "at": 0.0,
-    "text": "それでは、ルールです。左と右の絵をくらべて、90秒で、右の絵の違いを3つ探してください。",
+    "text": "ルールです。左と右の絵をくらべて、90秒で、右の絵の違いを3つ探してください。",
     "face": "normal",
-    "until": 10.0
+    "until": 11.0
    }
   ],
   "unchiku": [
@@ -247,7 +250,7 @@
    {
     "id": "u3",
     "at": 15.0,
-    "text": "答えは、木の子。木に生える、子どものような形だからだそうです。",
+    "text": "答えは、木の子。木に生える、子どものような形からだそうです。",
     "face": "surprise",
     "until": 24.0
    },
@@ -272,46 +275,53 @@
     "at": 3.6,
     "text": "15個の違い、いくつ見つかりましたか。今日の称号です。",
     "face": "smile",
-    "until": 9.0
+    "until": 9.6
    },
    {
     "id": "e3",
-    "at": 9.0,
-    "text": "登録とベルで、毎朝8時半に問題が届きます。",
+    "at": 9.6,
+    "text": "チャンネル登録とベルで、毎朝8時半に新しい問題が届きます。毎日の頭の体操にどうぞ。",
     "face": "smile",
-    "until": 18.0
+    "until": 20.0
    },
    {
     "id": "e4",
-    "at": 18.0,
+    "at": 20.0,
     "text": "左の丸を押すと登録、右の動画で、次の問題に挑戦できますよ。",
     "face": "wink",
-    "until": 29.0
+    "until": 30.0
    }
   ],
   "extra": [
    {
     "id": "c_comment",
-    "at": 266.0,
+    "at": 261.0,
     "text": "見つかった数を、あとでコメントで教えてくださいね。",
     "face": "smile",
-    "until": 273.0
-   }
-  ],
-  "cta": [
-   {
-    "id": "cta",
-    "at": 0.0,
-    "text": "チャンネル登録とベルで、毎朝8時半に新しい問題が届きます。毎日の頭の体操にどうぞ。",
-    "face": "smile",
-    "until": 10.0
+    "until": 268.0
    }
   ]
  },
  "readings": [
   [
+   "山小屋",
+   "やまごや"
+  ],
+  [
+   "道の駅",
+   "みちのえき"
+  ],
+  [
+   "渓流",
+   "けいりゅう"
+  ],
+  [
    "湖のほとり",
    "みずうみのほとり"
+  ],
+  [
+   "牧場",
+   "ぼくじょう"
   ],
   [
    "第1問",
@@ -334,18 +344,6 @@
    "だいごもん"
   ],
   [
-   "90秒",
-   "きゅうじゅうびょう"
-  ],
-  [
-   "10秒",
-   "じゅうびょう"
-  ],
-  [
-   "15個",
-   "じゅうごこ"
-  ],
-  [
    "60秒",
    "ろくじゅうびょう"
   ],
@@ -354,40 +352,24 @@
    "さんじゅうびょう"
   ],
   [
-   "3問目",
-   "さんもんめ"
+   "10秒",
+   "じゅうびょう"
   ],
   [
-   "8時半",
-   "はちじはん"
+   "後半",
+   "こうはん"
   ],
   [
-   "ルール",
-   "ルール"
+   "最後",
+   "さいご"
   ],
   [
-   "落ち葉",
-   "おちば"
+   "難問",
+   "なんもん"
   ],
   [
-   "取っ手",
-   "とって"
-  ],
-  [
-   "山小屋",
-   "やまごや"
-  ],
-  [
-   "道の駅",
-   "みちのえき"
-  ],
-  [
-   "木の子",
-   "きのこ"
-  ],
-  [
-   "子ども",
-   "こども"
+   "問題",
+   "もんだい"
   ],
   [
    "初級",
@@ -402,107 +384,202 @@
    "じょうきゅう"
   ],
   [
-   "称号",
-   "しょうごう"
+   "答え",
+   "こたえ"
   ],
   [
-   "今日",
-   "きょう"
+   "少し",
+   "すこし"
   ],
   [
-   "手前",
-   "てまえ"
-  ],
-  [
-   "模様",
-   "もよう"
-  ],
-  [
-   "5問",
-   "ごもん"
-  ],
-  [
-   "3つ",
-   "みっつ"
-  ],
-  [
-   "一羽",
-   "いちわ"
-  ],
-  [
-   "一枚",
-   "いちまい"
-  ],
-  [
-   "一本",
-   "いっぽん"
-  ],
-  [
-   "一匹",
-   "いっぴき"
-  ],
-  [
-   "一つ",
-   "ひとつ"
-  ],
-  [
-   "片方",
-   "かたほう"
-  ],
-  [
-   "一匹",
-   "いっぴき"
-  ],
-  [
-   "難問",
-   "なんもん"
-  ],
-  [
-   "意外",
-   "いがい"
-  ],
-  [
-   "一個",
-   "いっこ"
-  ],
-  [
-   "一緒",
-   "いっしょ"
-  ],
-  [
-   "登録",
-   "とうろく"
-  ],
-  [
-   "小鳥",
-   "ことり"
+   "大根",
+   "だいこん"
   ],
   [
    "小皿",
    "こざら"
   ],
   [
-   "右上",
-   "みぎうえ"
+   "量",
+   "りょう"
   ],
   [
-   "渓流",
-   "けいりゅう"
+   "少なく",
+   "すくなく"
   ],
   [
-   "牧場",
-   "ぼくじょう"
+   "小鳥",
+   "ことり"
+  ],
+  [
+   "向き",
+   "むき"
+  ],
+  [
+   "反対",
+   "はんたい"
+  ],
+  [
+   "小さく",
+   "ちいさく"
+  ],
+  [
+   "苗",
+   "なえ"
+  ],
+  [
+   "一本",
+   "いっぽん"
+  ],
+  [
+   "一つ",
+   "ひとつ"
+  ],
+  [
+   "白い",
+   "しろい"
+  ],
+  [
+   "丸",
+   "まる"
+  ],
+  [
+   "模様",
+   "もよう"
+  ],
+  [
+   "下駄",
+   "げた"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "桶",
+   "おけ"
+  ],
+  [
+   "金属",
+   "きんぞく"
+  ],
+  [
+   "輪",
+   "わ"
+  ],
+  [
+   "無く",
+   "なく"
+  ],
+  [
+   "増え",
+   "ふえ"
+  ],
+  [
+   "火",
+   "ひ"
+  ],
+  [
+   "向い",
+   "むい"
+  ],
+  [
+   "青い",
+   "あおい"
+  ],
+  [
+   "取っ手",
+   "とって"
+  ],
+  [
+   "上",
+   "うえ"
+  ],
+  [
+   "金具",
+   "かなぐ"
   ],
   [
    "葉",
    "は"
+  ],
+  [
+   "一枚",
+   "いちまい"
+  ],
+  [
+   "緑",
+   "みどり"
+  ],
+  [
+   "色",
+   "いろ"
+  ],
+  [
+   "鍋",
+   "なべ"
+  ],
+  [
+   "真上",
+   "まうえ"
+  ],
+  [
+   "屋台",
+   "やたい"
+  ],
+  [
+   "銭湯",
+   "せんとう"
+  ],
+  [
+   "畑",
+   "はたけ"
+  ],
+  [
+   "絵",
+   "え"
+  ],
+  [
+   "左",
+   "ひだり"
+  ],
+  [
+   "右",
+   "みぎ"
+  ],
+  [
+   "今日",
+   "きょう"
+  ],
+  [
+   "一緒",
+   "いっしょ"
+  ],
+  [
+   "山門",
+   "さんもん"
+  ],
+  [
+   "川辺",
+   "かわべ"
   ]
  ],
  "voice_override": {
-  "u2": "きのこという名前、どこから来たのでしょう？",
-  "u3": "答えは、きのこ。木に生える、子どものような形だからだそうです。",
-  "u4": "むかしは、たけ、とも呼びました。しいたけの、たけです。",
-  "cta": "チャンネル登録とベルで、毎朝8時半に、新しい問題が届きます。毎日の、頭の体操にどうぞ。"
+  "op3": "ぜひさいごまで、いっしょにといてくださいね。",
+  "rule": "ルールです。ひだりとみぎのえをくらべて、きゅうじゅうびょうで、みぎのえのちがいを、みっつさがしてください。",
+  "u1": "ここでひとやすみ。こよみせんせいの、きせつのおはなしです。",
+  "e1": "これでごもん、おしまいです。",
+  "e2": "じゅうごこのちがい、いくつみつかりましたか。きょうのしょうごうです。",
+  "e3": "チャンネルとうろくとベルで、まいあさはちじはんに、あたらしいもんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。",
+  "e4": "ひだりのまるをおすととうろく、みぎのどうがで、つぎのもんだいに、ちょうせんできますよ。",
+  "c_comment": "みつかったかずを、あとでコメントでおしえてくださいね。",
+  "s_intro": "うえとしたのえで、ちがいがみっつあります。みつけられますか。",
+  "s_end": "つづきは、ながいどうがで。ひだりしたをクリックして、ちょうせんしてみてくださいね。",
+  "op": "こよみせんせいです。きょうは、きのこのまちがいさがし、ぜんごもんです。",
+  "op2": "さいごは、なんもんです。さんもんめのあとには、きのこの、いがいなおはなしも。",
+  "u2": "きのこ、というなまえ、どこからきたのでしょう？",
+  "u3": "こたえは、きのこ。きにはえる、こどものようなかたちからだそうです。",
+  "u4": "むかしは、たけ、ともよびました。しいたけの、たけです。"
  },
  "voice": {
   "provider": "fish",
@@ -538,7 +615,8 @@
    "program_edits": {},
    "program_ops": {},
    "diffs": [],
-   "hint_diff": null
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new kinds of objects. Changes: (a) the hands of the round wall clock point to a clearly different time; (b) the teacup gets a blue stripe pattern around it; (c) in the small basket of shiitake mushrooms, one more shiitake; (d) the wooden spoon lies the opposite way (handle on the other side); (e) the kerosene lamp's glass chimney becomes taller."
   },
   {
    "q": 2,
@@ -557,7 +635,8 @@
    "program_edits": {},
    "program_ops": {},
    "diffs": [],
-   "hint_diff": null
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new kinds of objects. Changes: (a) the hanging paper lantern becomes round instead of long; (b) the red shopping basket's handle is gone; (c) one bundle of white enoki mushrooms becomes a bunch of brown shiitake; (d) the needle of the small scale points to the other side; (e) the potted green plant becomes about half its size."
   },
   {
    "q": 3,
@@ -576,7 +655,8 @@
    "program_edits": {},
    "program_ops": {},
    "diffs": [],
-   "hint_diff": null
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new kinds of objects. Changes: (a) the small bird on the rock faces the opposite direction; (b) the small white flower on the bank has only three petals; (c) one orange mushroom on the log becomes about twice as big; (d) one red maple leaf on the branch is gone; (e) the small round stone in the water becomes long and flat."
   },
   {
    "q": 4,
@@ -595,7 +675,8 @@
    "program_edits": {},
    "program_ops": {},
    "diffs": [],
-   "hint_diff": null
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new kinds of objects. Changes: (a) the duck on the water faces the opposite direction; (b) the handle of the cup is gone; (c) the folded picnic blanket's check pattern becomes stripes; (d) one more mushroom skewer on the grill; (e) the small lantern's top ring is gone."
   },
   {
    "q": 5,
@@ -614,7 +695,8 @@
    "program_edits": {},
    "program_ops": {},
    "diffs": [],
-   "hint_diff": null
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new kinds of objects. Changes: (a) the small bell on the fence is gone; (b) the black spots on the far cow are in a different pattern; (c) the lid of the milk can becomes red; (d) one of the pair of boots faces the other way; (e) one small mushroom in the grass becomes twice as big; (f) the handle of the trowel becomes blue."
   }
  ],
  "thumbnail": {
@@ -651,5 +733,18 @@
   "circle_hint": false,
   "note": "第1回と同じ型（変えた所なし）。左右に同じ絵・上に濃紺の帯で「秋の間違いさがし」・下に難易度と問いかけ。こよみ先生は入れない"
  },
- "shorts": []
+ "shorts": [
+  {
+   "question": 2,
+   "answer_gap": 3.3,
+   "note": "1本目：第2問 道の駅・初級",
+   "title": "シニアの間違い探し｜道の駅のきのこの1問 #脳トレ #頭の体操"
+  },
+  {
+   "question": 4,
+   "answer_gap": 3.3,
+   "note": "2本目：第4問 湖のほとり・中級",
+   "title": "シニアの間違い探し｜秋の湖でBBQ #脳トレ #頭の体操"
+  }
+ ]
 }

@@ -67,7 +67,8 @@ VOICE_TEXT = {ln[0]: to_voice(ln[0], ln[2]) for ln in lines()}
 
 KANJI = re.compile(r"[\u3400-\u9fff々〆ヶ]")
 SENT = re.compile(r"[^。！？!?]+[。！？!?]*")
-MAX_CPS = 6.0          # 声に渡す文（ひらがな）の文字数 ÷ 枠の秒。これを超えると詰まって聞こえる（第7回の反省）
+MAX_CPS = 5.0          # 声に渡す文（ひらがな）の文字数 ÷ 枠の秒。声の速さは約5.5字/秒（第7回の実測）なので、5.0を超えると枠いっぱいで詰まって聞こえる
+MAX_CPS_CARD = 6.2     # 問題の札（第○問、○級。場面です。）だけは決まった短い文で、どうぞの手前まで使ってよい
 
 
 def sentences(t):
@@ -87,8 +88,9 @@ def voice_problems():
             P.append(f"{lid}：1つのセリフに{n}文（1〜2文まで）")
         chars = len(re.sub(r"[\s、。！？!?「」・…ー]", "", vt))
         slot = t_end - t0
-        if slot > 0 and chars / slot > MAX_CPS:
-            P.append(f"{lid}：枠 {slot:.1f}秒に{chars}字（{chars / slot:.1f}字/秒、上限{MAX_CPS}）。枠を延ばすか文を減らす")
+        lim = MAX_CPS_CARD if lid.endswith("_card") else MAX_CPS
+        if slot > 0 and chars / slot > lim:
+            P.append(f"{lid}：枠 {slot:.1f}秒に{chars}字（{chars / slot:.1f}字/秒、上限{lim}）。枠を延ばすか文を減らす")
     return P
 
 
