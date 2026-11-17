@@ -1,0 +1,655 @@
+{
+ "episode": "008",
+ "season": "秋",
+ "topics": [
+  "きのこ"
+ ],
+ "note": "第8回。2026-11-14の新ルール（冒頭の一言・つなぎ・理由つき登録・EDの余白）と2026-11-15の社則7章で作る。",
+ "youtube": {
+  "title": "【間違い探し】シニアの脳トレクイズ｜きのこのイラスト全5問【60代・70代の頭の体操】",
+  "description_file": "description.md",
+  "title_note": "thumbnail-title.md の型A（同じ言葉を2回使わない）。3案は ab/",
+  "publish_plan": "2026-11-18（水）8:30、ショート14:00・18:00"
+ },
+ "screens": {
+  "opening_title": "きのこの間違い探し　全5問",
+  "opening_sub": "最後は難問です",
+  "unchiku_header": "こよみ先生の 秋の小話",
+  "unchiku_slides": [
+   {
+    "until": 7,
+    "texts": [
+     [
+      "ひと休み",
+      960,
+      330,
+      130,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "こよみ先生の 季節のお話",
+      960,
+      520,
+      80,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 15,
+    "texts": [
+     [
+      "「きのこ」の名前の由来は？",
+      960,
+      380,
+      110,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ]
+    ]
+   },
+   {
+    "until": 24,
+    "texts": [
+     [
+      "木 ＋ の ＋ 子",
+      960,
+      330,
+      150,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "木に生える 子ども",
+      960,
+      520,
+      90,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 30,
+    "texts": [
+     [
+      "むかしの名前は「たけ」",
+      960,
+      330,
+      110,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ],
+     [
+      "しいたけ・まつたけ の「たけ」",
+      960,
+      500,
+      80,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ],
+     [
+      "話のタネに",
+      960,
+      630,
+      80,
+      [
+       200,
+       120,
+       40
+      ],
+      0
+     ]
+    ]
+   }
+  ],
+  "ending_titles": [
+   [
+    "15個",
+    "きのこ名人"
+   ],
+   [
+    "11〜14個",
+    "秋の名探偵"
+   ],
+   [
+    "6〜10個",
+    "しめじさん"
+   ],
+   [
+    "0〜5個",
+    "こきのこさん"
+   ]
+  ],
+  "ending_note": "こきのこさんは、これから、ぐんぐん育ちます",
+  "ending_next": "次の動画も つづけて どうぞ",
+  "owl_layout": "bottom",
+  "endscreen_at": 9.0
+ },
+ "timeline": {
+  "total": 634.0,
+  "opening": [
+   0.0,
+   15.0
+  ],
+  "rule": [
+   15.0,
+   25.0
+  ],
+  "q_start": {
+   "1": 25.0,
+   "2": 143.0,
+   "3": 251.0,
+   "4": 389.0,
+   "5": 497.0
+  },
+  "unchiku": [
+   359.0,
+   389.0
+  ],
+  "ending": [
+   605.0,
+   634.0
+  ],
+  "cta": [
+   133.0,
+   143.0
+  ],
+  "card": 3.0,
+  "solve": 90.0,
+  "answer": 15.0,
+  "hint_at": null,
+  "ten_at": 80.0,
+  "ans_first": 1.6,
+  "ans_step": 4.3,
+  "solve_calls": [
+   [
+    30,
+    "あと60秒です。"
+   ],
+   [
+    60,
+    "あと30秒です。"
+   ]
+  ]
+ },
+ "lines": {
+  "opening": [
+   {
+    "id": "op",
+    "at": 0.0,
+    "text": "こよみ先生です。今日は、きのこの間違い探し、全5問。最後は難問です。3問目のあとには、きのこの意外なお話も。",
+    "face": "smile",
+    "until": 10.6
+   },
+   {
+    "id": "op2",
+    "at": 10.6,
+    "text": "ぜひ最後まで、一緒に解いてくださいね。",
+    "face": "wink",
+    "until": 15.0
+   }
+  ],
+  "rule": [
+   {
+    "id": "rule",
+    "at": 0.0,
+    "text": "それでは、ルールです。左と右の絵をくらべて、90秒で、右の絵の違いを3つ探してください。",
+    "face": "normal",
+    "until": 10.0
+   }
+  ],
+  "unchiku": [
+   {
+    "id": "u1",
+    "at": 0.0,
+    "text": "ここでひと休み。こよみ先生の季節のお話です。",
+    "face": "smile",
+    "until": 7.0
+   },
+   {
+    "id": "u2",
+    "at": 7.0,
+    "text": "「きのこ」という名前、どこから来たのでしょう？",
+    "face": "think",
+    "until": 15.0
+   },
+   {
+    "id": "u3",
+    "at": 15.0,
+    "text": "答えは、木の子。木に生える、子どものような形だからだそうです。",
+    "face": "surprise",
+    "until": 24.0
+   },
+   {
+    "id": "u4",
+    "at": 24.0,
+    "text": "むかしは「たけ」とも呼びました。しいたけの「たけ」です。",
+    "face": "wink",
+    "until": 30.0
+   }
+  ],
+  "ending": [
+   {
+    "id": "e1",
+    "at": 0.0,
+    "text": "これで5問、おしまいです。",
+    "face": "yay",
+    "until": 3.6
+   },
+   {
+    "id": "e2",
+    "at": 3.6,
+    "text": "15個の違い、いくつ見つかりましたか。今日の称号です。",
+    "face": "smile",
+    "until": 9.0
+   },
+   {
+    "id": "e3",
+    "at": 9.0,
+    "text": "登録とベルで、毎朝8時半に問題が届きます。",
+    "face": "smile",
+    "until": 18.0
+   },
+   {
+    "id": "e4",
+    "at": 18.0,
+    "text": "左の丸を押すと登録、右の動画で、次の問題に挑戦できますよ。",
+    "face": "wink",
+    "until": 29.0
+   }
+  ],
+  "extra": [
+   {
+    "id": "c_comment",
+    "at": 266.0,
+    "text": "見つかった数を、あとでコメントで教えてくださいね。",
+    "face": "smile",
+    "until": 273.0
+   }
+  ],
+  "cta": [
+   {
+    "id": "cta",
+    "at": 0.0,
+    "text": "チャンネル登録とベルで、毎朝8時半に新しい問題が届きます。毎日の頭の体操にどうぞ。",
+    "face": "smile",
+    "until": 10.0
+   }
+  ]
+ },
+ "readings": [
+  [
+   "湖のほとり",
+   "みずうみのほとり"
+  ],
+  [
+   "第1問",
+   "だいいちもん"
+  ],
+  [
+   "第2問",
+   "だいにもん"
+  ],
+  [
+   "第3問",
+   "だいさんもん"
+  ],
+  [
+   "第4問",
+   "だいよんもん"
+  ],
+  [
+   "第5問",
+   "だいごもん"
+  ],
+  [
+   "90秒",
+   "きゅうじゅうびょう"
+  ],
+  [
+   "10秒",
+   "じゅうびょう"
+  ],
+  [
+   "15個",
+   "じゅうごこ"
+  ],
+  [
+   "60秒",
+   "ろくじゅうびょう"
+  ],
+  [
+   "30秒",
+   "さんじゅうびょう"
+  ],
+  [
+   "3問目",
+   "さんもんめ"
+  ],
+  [
+   "8時半",
+   "はちじはん"
+  ],
+  [
+   "ルール",
+   "ルール"
+  ],
+  [
+   "落ち葉",
+   "おちば"
+  ],
+  [
+   "取っ手",
+   "とって"
+  ],
+  [
+   "山小屋",
+   "やまごや"
+  ],
+  [
+   "道の駅",
+   "みちのえき"
+  ],
+  [
+   "木の子",
+   "きのこ"
+  ],
+  [
+   "子ども",
+   "こども"
+  ],
+  [
+   "初級",
+   "しょきゅう"
+  ],
+  [
+   "中級",
+   "ちゅうきゅう"
+  ],
+  [
+   "上級",
+   "じょうきゅう"
+  ],
+  [
+   "称号",
+   "しょうごう"
+  ],
+  [
+   "今日",
+   "きょう"
+  ],
+  [
+   "手前",
+   "てまえ"
+  ],
+  [
+   "模様",
+   "もよう"
+  ],
+  [
+   "5問",
+   "ごもん"
+  ],
+  [
+   "3つ",
+   "みっつ"
+  ],
+  [
+   "一羽",
+   "いちわ"
+  ],
+  [
+   "一枚",
+   "いちまい"
+  ],
+  [
+   "一本",
+   "いっぽん"
+  ],
+  [
+   "一匹",
+   "いっぴき"
+  ],
+  [
+   "一つ",
+   "ひとつ"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "一匹",
+   "いっぴき"
+  ],
+  [
+   "難問",
+   "なんもん"
+  ],
+  [
+   "意外",
+   "いがい"
+  ],
+  [
+   "一個",
+   "いっこ"
+  ],
+  [
+   "一緒",
+   "いっしょ"
+  ],
+  [
+   "登録",
+   "とうろく"
+  ],
+  [
+   "小鳥",
+   "ことり"
+  ],
+  [
+   "小皿",
+   "こざら"
+  ],
+  [
+   "右上",
+   "みぎうえ"
+  ],
+  [
+   "渓流",
+   "けいりゅう"
+  ],
+  [
+   "牧場",
+   "ぼくじょう"
+  ],
+  [
+   "葉",
+   "は"
+  ]
+ ],
+ "voice_override": {
+  "u2": "きのこという名前、どこから来たのでしょう？",
+  "u3": "答えは、きのこ。木に生える、子どものような形だからだそうです。",
+  "u4": "むかしは、たけ、とも呼びました。しいたけの、たけです。",
+  "cta": "チャンネル登録とベルで、毎朝8時半に、新しい問題が届きます。毎日の、頭の体操にどうぞ。"
+ },
+ "voice": {
+  "provider": "fish",
+  "reference_id": "63819275ce38440ea245ca988abf976e",
+  "model": "s1",
+  "speed": 0.88,
+  "credit": "音声：Fish Audio（AIで合成した音声です）"
+ },
+ "images": {
+  "model": "gemini-3-pro-image",
+  "size": "2K",
+  "aspect": "4:5",
+  "style": "A Japanese picture-book illustration in watercolor, but with BOLD, THICK, DARK ink outlines around every object (like a clear picture book for seniors), and CLEAR, SATURATED colors (not pale). Bright, clean background. Natural, hand-drawn, slightly rounded shapes; not geometric, not flat vector, not photorealistic. CLOSE-UP composition (not a wide landscape): the scene is seen from close, filling the picture. PORTRAIT-ISH composition, about 8:9. The painting fills the entire canvas edge to edge: no white border. No people. Absolutely no text, letters, numbers, logos or symbols anywhere. The MAIN SUBJECT named in the scene is drawn LARGE in the center of the picture. Around it, only a few other objects, each clearly separated with space around it, fully visible.\n",
+  "keep_alt": " Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text.",
+  "keep_remove": " Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object.",
+  "batch": true
+ },
+ "questions": [
+  {
+   "q": 1,
+   "scene": "山小屋",
+   "level": "やさしい",
+   "go": "さあ、第1問です。やさしい問題から。どうぞ。",
+   "prompt": "Scene: close-up of a wooden table in a cozy mountain hut in late autumn. CENTER, LARGE (main subject): a big clay pot of mushroom rice (kinoko gohan) with shiitake, shimeji and maitake mushrooms, steam rising. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Each listed side object is SMALL (about one twelfth of the picture width), fully visible (never cut off by the picture edge), standing alone on a plain area (plain table, floor, ground, wall or sky) so it could be removed or added cleanly. Objects: (upper left) a small kerosene lamp; (upper right) a round wall clock without numbers; (lower left) a small bowl of pickles; (lower right) a teacup and a wooden spoon; (middle right) a small basket of fresh shiitake mushrooms.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {},
+   "program_ops": {},
+   "diffs": [],
+   "hint_diff": null
+  },
+  {
+   "q": 2,
+   "scene": "道の駅",
+   "level": "初級",
+   "go": "では、第2問。どうぞ。",
+   "prompt": "Scene: close-up of a vegetable stand at a Japanese roadside station (michi-no-eki) in late autumn. CENTER, LARGE (main subject): a wooden display shelf with baskets of fresh mushrooms (shiitake, eryngii, enoki, shimeji). Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Each listed side object is SMALL (about one twelfth of the picture width), fully visible (never cut off by the picture edge), standing alone on a plain area (plain table, floor, ground, wall or sky) so it could be removed or added cleanly. Objects: (upper left) a small hanging paper lantern without letters; (upper right) a small potted chrysanthemum-free green plant; (lower left) a red shopping basket on the floor; (lower right) a small wooden stool; (middle left) a small scale. No text, no prices, no people.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {},
+   "program_ops": {},
+   "diffs": [],
+   "hint_diff": null
+  },
+  {
+   "q": 3,
+   "scene": "渓流",
+   "level": "中級",
+   "go": "少しむずかしくなります。どうぞ。",
+   "prompt": "Scene: close-up at a mountain stream (keiryu) in late autumn. CENTER, LARGE (main subject): a mossy fallen log on the bank with a cluster of orange and brown wild mushrooms growing on it. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Each listed side object is SMALL (about one twelfth of the picture width), fully visible (never cut off by the picture edge), standing alone on a plain area (plain table, floor, ground, wall or sky) so it could be removed or added cleanly. Objects: (upper left) a red maple branch; (upper right) a small bird on a rock; (lower left) a bamboo basket with a few mushrooms; (lower right) a small round stone in the water; (middle) a small white flower on the bank.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {},
+   "program_ops": {},
+   "diffs": [],
+   "hint_diff": null
+  },
+  {
+   "q": 4,
+   "scene": "湖のほとり",
+   "level": "中級",
+   "go": "後半です。第4問、どうぞ。",
+   "prompt": "Scene: close-up of a picnic by a lake (mizuumi no hotori) in late autumn. CENTER, LARGE (main subject): a small camp grill with skewered mushrooms grilling. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Each listed side object is SMALL (about one twelfth of the picture width), fully visible (never cut off by the picture edge), standing alone on a plain area (plain table, floor, ground, wall or sky) so it could be removed or added cleanly. Objects: (upper left) a small boat far on the lake; (upper right) a duck on the water; (lower left) a thermos bottle; (lower right) a folded picnic blanket and a cup; (middle left) a small lantern.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {},
+   "program_ops": {},
+   "diffs": [],
+   "hint_diff": null
+  },
+  {
+   "q": 5,
+   "scene": "牧場",
+   "level": "上級",
+   "go": "いよいよ最後の難問です。じっくりどうぞ。",
+   "prompt": "Scene: close-up at the edge of a pasture (bokujo) by a forest in late autumn. CENTER, LARGE (main subject): a wooden picnic table with a basket full of picked mushrooms and a small cooking pot. Many small details around: (upper left) a wooden fence with a small bell hanging; (upper right) a cow far in the field; (lower left) a milk can; (lower right) a pair of boots and a small trowel; (middle) a few small mushrooms in the grass.",
+   "answers_intro": "答えです。",
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "program_edits": {},
+   "program_ops": {},
+   "diffs": [],
+   "hint_diff": null
+  }
+ ],
+ "thumbnail": {
+  "question": 1,
+  "big_text": "秋の間違いさがし",
+  "highlight": "間違いさがし",
+  "highlight_color": [
+   255,
+   214,
+   0
+  ],
+  "big_color": [
+   255,
+   255,
+   255
+  ],
+  "band_color": [
+   25,
+   35,
+   70
+  ],
+  "big_size": 132,
+  "sub_text": "3つ見つけられる？全5問",
+  "badges": [
+   [
+    "初級〜上級",
+    [
+     176,
+     62,
+     52
+    ]
+   ]
+  ],
+  "circle_hint": false,
+  "note": "第1回と同じ型（変えた所なし）。左右に同じ絵・上に濃紺の帯で「秋の間違いさがし」・下に難易度と問いかけ。こよみ先生は入れない"
+ },
+ "shorts": []
+}
