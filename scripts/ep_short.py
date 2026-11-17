@@ -22,9 +22,11 @@ W, H, FPS = 1080, 1920, 30
 BG = (246, 236, 216)
 INK = (59, 47, 37)
 RED = (220, 30, 30)
-PW, PH = 720, 810
+# 絵は上下2枚。下の絵の下の端を y1535 までにする（スマホで画面下の約2割が隠れるため。2026-11-18 監査の差し戻し）
+PW, PH = 587, 660
 PX = (W - PW) // 2
-YS = {"a": 205, "b": 1025}
+YS = {"a": 205, "b": 875}
+HIDDEN_Y = 1536     # これより下はタイトル・チャンネル名・関連動画のリンクで隠れる
 BAND_H = 200
 LEVEL_COLOR = {"やさしい": (70, 140, 190), "初級": (96, 150, 90), "中級": (214, 128, 48), "上級": (176, 62, 52)}
 SR = 48000
@@ -376,6 +378,18 @@ def check(ep, work):
     if max(lv) - min(lv) > 6:
         problems.append(f"セリフごとの声の大きさの差が6dBを超える（元の声のファイル）：{st}")
     tl = json.loads((out / "timeline.json").read_text(encoding="utf-8"))
+    # 違いの赤丸が、隠れる帯（画面下の約2割）や右側のボタンの帯にかからないか（2026-11-18 監査）
+    try:
+        setup_q = {Q["q"]: Q for Q in json.loads((Path(ep) / "answers.json").read_text(encoding="utf-8"))["questions"]}[cfg()["question"]]
+        for i, a in enumerate(setup_q["answers"]):
+            for side in "ab":
+                x0, y0, x1, y1 = circle_box(a, side)
+                if y1 + 9 > HIDDEN_Y:
+                    problems.append(f"違い{i + 1}（{side}）が画面下の隠れる帯にかかる（y{y1:.0f}）")
+                if x1 + 9 > W - 120:
+                    problems.append(f"違い{i + 1}（{side}）が右側のボタンの帯にかかる（x{x1:.0f}）")
+    except Exception as e:
+        problems.append(f"違いの位置を確かめられない：{e}")
     res = {"voice": st, "duration": round(dur, 2), "size": [v["width"], v["height"]], "question": tl["question"], "problems": problems}
     (out / "check.json").write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
     return res
