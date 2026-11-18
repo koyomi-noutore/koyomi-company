@@ -7,22 +7,24 @@ from PIL import Image, ImageDraw, ImageFont, ImageEnhance, ImageFilter
 
 import os, subprocess
 from pathlib import Path
-# 書体は太い角ゴシック（Noto Sans CJK JP Black）に固定（2026-11-18 CEO指摘）。丸ゴシックには替えない。無ければ止める。
-# 入手：npm の @expo-google-fonts/noto-sans-jp（Noto Sans JP Black＝Noto Sans CJK JP Black と同じ書体のGoogle Fonts版, OFL）
+# 書体はショートと同じ Zen Maru Gothic Bold（太い丸ゴシック・OFL）。縁取りで太く見せる（thumbnail-title.md「書体（2026-11-18 夜）」）。
+# 前の「Noto Sans CJK JP Black に固定」はこれに置き換えた。書体が無ければ npm から取る。それでも無ければ止める。
 FONT_DIR = Path.home() / ".cache/koyomi/fonts"
-FONT_CANDIDATES = ['/usr/share/fonts/opentype/noto/NotoSansCJK-Black.ttc', str(FONT_DIR / "package/900Black/NotoSansJP_900Black.ttf")]
+FONT_CANDIDATES = [str(FONT_DIR / "zenmaru/package/700Bold/ZenMaruGothic_700Bold.ttf")]
 
 
 def font_path():
-    f = next((f for f in FONT_CANDIDATES if os.path.exists(f)), None)
+    import glob
+    f = next((f for f in FONT_CANDIDATES + glob.glob(str(Path.home() / ".cache/koyomi/*/fontpkg/package/700Bold/ZenMaruGothic_700Bold.ttf"))
+              if os.path.exists(f)), None)
     if not f:
-        FONT_DIR.mkdir(parents=True, exist_ok=True)
-        subprocess.run(["npm", "pack", "--silent", "@expo-google-fonts/noto-sans-jp@0.4.4"], cwd=FONT_DIR, stdout=subprocess.DEVNULL)
-        for t in FONT_DIR.glob("*.tgz"):
-            subprocess.run(["tar", "xzf", t.name], cwd=FONT_DIR)
+        d = FONT_DIR / "zenmaru"; d.mkdir(parents=True, exist_ok=True)
+        subprocess.run(["npm", "pack", "--silent", "@expo-google-fonts/zen-maru-gothic@0.4.2"], cwd=d, stdout=subprocess.DEVNULL)
+        for t in d.glob("*.tgz"):
+            subprocess.run(["tar", "xzf", t.name], cwd=d)
         f = next((f for f in FONT_CANDIDATES if os.path.exists(f)), None)
     if not f:
-        raise SystemExit("サムネの書体（Noto Sans CJK JP Black）が見つからない。丸ゴシックには替えずに止める。")
+        raise SystemExit("サムネの書体（Zen Maru Gothic Bold）が見つからない。止める。")
     return f
 
 
@@ -61,7 +63,7 @@ def make(ep, q, out, top_text=("3つ", "見つけたら", "天才！"), bottom=(
         f = ImageFont.truetype(F, int(150 * 1250 / tw)); tw = sum(d.textlength(s, font=f) for s in top_text)
     x = (1280 - tw) / 2
     for s, c in zip(top_text, cols):
-        d.text((x, top / 2 + 4), s, font=f, fill=c, anchor='lm', stroke_width=2, stroke_fill=(0, 0, 0)); x += d.textlength(s, font=f)
+        d.text((x, top / 2 + 4), s, font=f, fill=c, anchor='lm', stroke_width=7, stroke_fill=(0, 0, 0)); x += d.textlength(s, font=f)
     g = Image.new('L', (1280, 220), 0); gd = ImageDraw.Draw(g)
     for i in range(220): gd.line([(0, i), (1280, i)], fill=int(170 * i / 220))
     T.paste(Image.new('RGB', (1280, 220), (0, 0, 0)), (0, 500), g)
@@ -74,7 +76,7 @@ def make(ep, q, out, top_text=("3つ", "見つけたら", "天才！"), bottom=(
         f2 = ImageFont.truetype(F, int(158 * 1150 / bw)); bw = sum(d.textlength(s, font=f2) for s in bottom)
     x = (1280 - bw) / 2
     for s, c in zip(bottom, bcol):
-        d.text((x, 618), s, font=f2, fill=c, anchor='lm', stroke_width=14, stroke_fill=(0, 0, 0)); x += d.textlength(s, font=f2)
+        d.text((x, 618), s, font=f2, fill=c, anchor='lm', stroke_width=18, stroke_fill=(0, 0, 0)); x += d.textlength(s, font=f2)
     T.save(out, quality=92)
 
 if __name__ == '__main__':

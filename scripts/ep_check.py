@@ -63,6 +63,12 @@ def numeric(out_dir, work):
                 problems.append(f"第{Q['q']}問 違い{a['id']}：上の帯か字幕の場所にかかる")
             if a["type"] not in LEVEL_TYPES[Q["level"]]:   # 難易度ごとに使える違いの種類（concept.md 2026-11-18 の表）
                 problems.append(f"第{Q['q']}問 違い{a['id']}：{Q['level']}では使わない種類「{a['type']}」")
+        # 足す・入れ替える違いには context（この場所に、この置かれ方で普通あるか）を書く（concept.md「第10回からの改善」）
+        from episode_plan import plan as _plan
+        _pq = {x["q"]: x for x in _plan()["questions"]}[Q["q"]]
+        for dd in _pq.get("diffs", []):
+            if dd["type"] in ("増える", "入れ替え") and not str(dd.get("context", "")).strip():
+                problems.append(f"第{Q['q']}問 違い{dd['id']}：{dd['type']}なのに context（置かれ方）が空")
         # 違いの種類を混ぜる（2026-11-15 最低品質4）：「増える・なくなる」は1問に1つまで。type は決まった種類から
         types = [a["type"] for a in Q["answers"]]
         bad = [t for t in types if t not in DIFF_TYPES]

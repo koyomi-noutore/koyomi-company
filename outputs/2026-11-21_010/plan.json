@@ -1,0 +1,917 @@
+{
+ "episode": "010",
+ "season": "秋",
+ "topics": [
+  "栗"
+ ],
+ "note": "第10回（栗）。第10回からの改善（読みの固定・context・背景）を入れた最初の回。",
+ "youtube": {
+  "title": "【秋の間違い探し】シニアの脳トレクイズ｜栗のイラスト全5問【60代・70代の頭の体操】",
+  "description_file": "description.md",
+  "title_note": "タイトルに季節の言葉（秋）。サムネは「サムネの文言の型」から主役の軸が違う3案（ab/）",
+  "publish_plan": "2026-11-21（土）8:30、ショート14:00・18:00"
+ },
+ "screens": {
+  "opening_title": "栗の間違い探し　全5問",
+  "opening_sub": "最後は難問です",
+  "unchiku_header": "こよみ先生の 秋の小話",
+  "unchiku_slides": [
+   {
+    "until": 7,
+    "texts": [
+     [
+      "ひと休み",
+      960,
+      330,
+      130,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "こよみ先生の 季節のお話",
+      960,
+      520,
+      80,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 15,
+    "texts": [
+     [
+      "「栗の節句」って いつ？",
+      960,
+      380,
+      110,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ]
+    ]
+   },
+   {
+    "until": 24,
+    "texts": [
+     [
+      "九月九日 重陽の節句",
+      960,
+      330,
+      110,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "栗ご飯で 長生きを願う",
+      960,
+      520,
+      90,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 30,
+    "texts": [
+     [
+      "今年の秋は 栗ご飯で",
+      960,
+      360,
+      100,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ],
+     [
+      "話のタネに",
+      960,
+      560,
+      80,
+      [
+       200,
+       120,
+       40
+      ],
+      0
+     ]
+    ]
+   }
+  ],
+  "ending_titles": [
+   [
+    "15個",
+    "栗名人"
+   ],
+   [
+    "11〜14個",
+    "ほっこり名探偵"
+   ],
+   [
+    "6〜10個",
+    "いがぐりさん"
+   ],
+   [
+    "0〜5個",
+    "こぐりさん"
+   ]
+  ],
+  "ending_note": "こぐりさんは、これから大きく実ります",
+  "ending_next": "次の動画も つづけて どうぞ",
+  "owl_layout": "bottom",
+  "endscreen_at": 9.0
+ },
+ "timeline": {
+  "total": 630.0,
+  "opening": [
+   0.0,
+   19.0
+  ],
+  "rule": [
+   19.0,
+   30.0
+  ],
+  "q_start": {
+   "1": 30.0,
+   "2": 138.0,
+   "3": 246.0,
+   "4": 384.0,
+   "5": 492.0
+  },
+  "unchiku": [
+   354.0,
+   384.0
+  ],
+  "ending": [
+   600.0,
+   630.0
+  ],
+  "card": 3.0,
+  "solve": 90.0,
+  "answer": 15.0,
+  "hint_at": null,
+  "ten_at": 80.0,
+  "ans_first": 1.6,
+  "ans_step": 4.3,
+  "solve_calls": [
+   [
+    30,
+    "あと60秒です。"
+   ],
+   [
+    60,
+    "あと30秒です。"
+   ]
+  ],
+  "go_delay": 1.8
+ },
+ "lines": {
+  "opening": [
+   {
+    "id": "op",
+    "at": 0.0,
+    "text": "こよみ先生です。今日は、栗の間違い探し、全5問です。",
+    "face": "smile",
+    "until": 7.0
+   },
+   {
+    "id": "op2",
+    "at": 7.0,
+    "text": "最後は難問です。3問目のあとには、栗の意外なお話も。",
+    "face": "surprise",
+    "until": 14.0
+   },
+   {
+    "id": "op3",
+    "at": 14.0,
+    "text": "ぜひ最後まで、一緒に解いてくださいね。",
+    "face": "wink",
+    "until": 19.0
+   }
+  ],
+  "rule": [
+   {
+    "id": "rule",
+    "at": 0.0,
+    "text": "ルールです。左と右の絵をくらべて、90秒で、右の絵の違いを3つ探してください。",
+    "face": "normal",
+    "until": 11.0
+   }
+  ],
+  "unchiku": [
+   {
+    "id": "u1",
+    "at": 0.0,
+    "text": "ここでひと休み。こよみ先生の季節のお話です。",
+    "face": "smile",
+    "until": 7.0
+   },
+   {
+    "id": "u2",
+    "at": 7.0,
+    "text": "「栗の節句」って、いつのことでしょう？",
+    "face": "think",
+    "until": 15.0
+   },
+   {
+    "id": "u3",
+    "at": 15.0,
+    "text": "答えは、九月九日の重陽の節句。栗ご飯で長生きを願いました。",
+    "face": "surprise",
+    "until": 24.0
+   },
+   {
+    "id": "u4",
+    "at": 24.0,
+    "text": "今年の秋は、栗ご飯で話のタネにどうぞ。",
+    "face": "wink",
+    "until": 30.0
+   }
+  ],
+  "ending": [
+   {
+    "id": "e1",
+    "at": 0.0,
+    "text": "これで5問、おしまいです。",
+    "face": "yay",
+    "until": 3.6
+   },
+   {
+    "id": "e2",
+    "at": 3.6,
+    "text": "15個の違い、いくつ見つかりましたか。今日の称号です。",
+    "face": "smile",
+    "until": 10.2
+   },
+   {
+    "id": "e3",
+    "at": 10.2,
+    "text": "チャンネル登録とベルで、毎朝8時半に問題が届きます。毎日の頭の体操にどうぞ。",
+    "face": "smile",
+    "until": 21.0
+   },
+   {
+    "id": "e4",
+    "at": 21.0,
+    "text": "左の丸を押すと登録、右の動画で、次の問題に挑戦できますよ。",
+    "face": "wink",
+    "until": 30.0
+   }
+  ],
+  "extra": [
+   {
+    "id": "c_comment",
+    "at": 261.0,
+    "text": "見つかった数を、あとでコメントで教えてくださいね。",
+    "face": "smile",
+    "until": 268.0
+   }
+  ]
+ },
+ "readings": [
+  [
+   "甘栗の屋台",
+   "あまぐりのやたい"
+  ],
+  [
+   "旅館の朝ごはん",
+   "りょかんのあさごはん"
+  ],
+  [
+   "洋菓子店",
+   "ようがしてん"
+  ],
+  [
+   "山里の茶屋",
+   "やまざとのちゃや"
+  ],
+  [
+   "栗林",
+   "くりばやし"
+  ],
+  [
+   "栗",
+   "くり"
+  ],
+  [
+   "緑",
+   "みどり"
+  ],
+  [
+   "机",
+   "つくえ"
+  ],
+  [
+   "まん中",
+   "まんなか"
+  ],
+  [
+   "赤く",
+   "あかく"
+  ],
+  [
+   "赤い",
+   "あかい"
+  ],
+  [
+   "赤いふた",
+   "あかいふた"
+  ],
+  [
+   "干し柿",
+   "ほしがき"
+  ],
+  [
+   "麦わら帽子",
+   "むぎわらぼうし"
+  ],
+  [
+   "色えんぴつ",
+   "いろえんぴつ"
+  ],
+  [
+   "筆箱",
+   "ふでばこ"
+  ],
+  [
+   "大学いも",
+   "だいがくいも"
+  ],
+  [
+   "ゆで卵",
+   "ゆでたまご"
+  ],
+  [
+   "木箱",
+   "きばこ"
+  ],
+  [
+   "湯気",
+   "ゆげ"
+  ],
+  [
+   "紙袋",
+   "かみぶくろ"
+  ],
+  [
+   "消え",
+   "きえ"
+  ],
+  [
+   "数",
+   "かず"
+  ],
+  [
+   "付き",
+   "つき"
+  ],
+  [
+   "水筒",
+   "すいとう"
+  ],
+  [
+   "帽子",
+   "ぼうし"
+  ],
+  [
+   "上級",
+   "じょうきゅう"
+  ],
+  [
+   "中級",
+   "ちゅうきゅう"
+  ],
+  [
+   "初級",
+   "しょきゅう"
+  ],
+  [
+   "右はし",
+   "みぎはし"
+  ],
+  [
+   "形",
+   "かたち"
+  ],
+  [
+   "茶色い",
+   "ちゃいろい"
+  ],
+  [
+   "先",
+   "さき"
+  ],
+  [
+   "数",
+   "かず"
+  ],
+  [
+   "花びら",
+   "はなびら"
+  ],
+  [
+   "花",
+   "はな"
+  ],
+  [
+   "上",
+   "うえ"
+  ],
+  [
+   "土なべ",
+   "どなべ"
+  ],
+  [
+   "下",
+   "した"
+  ],
+  [
+   "玉ねぎ",
+   "たまねぎ"
+  ],
+  [
+   "白く",
+   "しろく"
+  ],
+  [
+   "黒い",
+   "くろい"
+  ],
+  [
+   "輪",
+   "わ"
+  ],
+  [
+   "針",
+   "はり"
+  ],
+  [
+   "変わり",
+   "かわり"
+  ],
+  [
+   "一本",
+   "いっぽん"
+  ],
+  [
+   "牛",
+   "うし"
+  ],
+  [
+   "左",
+   "ひだり"
+  ],
+  [
+   "右",
+   "みぎ"
+  ],
+  [
+   "落ち葉",
+   "おちば"
+  ],
+  [
+   "高く",
+   "たかく"
+  ],
+  [
+   "黄色い",
+   "きいろい"
+  ],
+  [
+   "短く",
+   "みじかく"
+  ],
+  [
+   "大きく",
+   "おおきく"
+  ],
+  [
+   "頭",
+   "あたま"
+  ],
+  [
+   "刃",
+   "は"
+  ],
+  [
+   "舞って",
+   "まって"
+  ],
+  [
+   "葉っぱ",
+   "はっぱ"
+  ],
+  [
+   "魔法瓶",
+   "まほうびん"
+  ],
+  [
+   "黄色",
+   "きいろ"
+  ],
+  [
+   "小さな",
+   "ちいさな"
+  ],
+  [
+   "少なく",
+   "すくなく"
+  ],
+  [
+   "向いて",
+   "むいて"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "青い",
+   "あおい"
+  ],
+  [
+   "白い",
+   "しろい"
+  ],
+  [
+   "第1問",
+   "だいいちもん"
+  ],
+  [
+   "第2問",
+   "だいにもん"
+  ],
+  [
+   "第3問",
+   "だいさんもん"
+  ],
+  [
+   "第4問",
+   "だいよんもん"
+  ],
+  [
+   "第5問",
+   "だいごもん"
+  ],
+  [
+   "60秒",
+   "ろくじゅうびょう"
+  ],
+  [
+   "30秒",
+   "さんじゅうびょう"
+  ],
+  [
+   "10秒",
+   "じゅうびょう"
+  ],
+  [
+   "後半",
+   "こうはん"
+  ],
+  [
+   "最後",
+   "さいご"
+  ],
+  [
+   "難問",
+   "なんもん"
+  ],
+  [
+   "問題",
+   "もんだい"
+  ],
+  [
+   "答え",
+   "こたえ"
+  ],
+  [
+   "少し",
+   "すこし"
+  ],
+  [
+   "大根",
+   "だいこん"
+  ],
+  [
+   "小皿",
+   "こざら"
+  ],
+  [
+   "量",
+   "りょう"
+  ],
+  [
+   "小鳥",
+   "ことり"
+  ],
+  [
+   "向き",
+   "むき"
+  ],
+  [
+   "反対",
+   "はんたい"
+  ],
+  [
+   "小さく",
+   "ちいさく"
+  ],
+  [
+   "苗",
+   "なえ"
+  ],
+  [
+   "一つ",
+   "ひとつ"
+  ],
+  [
+   "丸",
+   "まる"
+  ],
+  [
+   "模様",
+   "もよう"
+  ],
+  [
+   "下駄",
+   "げた"
+  ],
+  [
+   "桶",
+   "おけ"
+  ],
+  [
+   "金属",
+   "きんぞく"
+  ],
+  [
+   "無く",
+   "なく"
+  ],
+  [
+   "増え",
+   "ふえ"
+  ],
+  [
+   "火",
+   "ひ"
+  ],
+  [
+   "向い",
+   "むい"
+  ],
+  [
+   "取っ手",
+   "とって"
+  ],
+  [
+   "金具",
+   "かなぐ"
+  ],
+  [
+   "葉",
+   "は"
+  ],
+  [
+   "一枚",
+   "いちまい"
+  ],
+  [
+   "緑",
+   "みどり"
+  ],
+  [
+   "色",
+   "いろ"
+  ],
+  [
+   "鍋",
+   "なべ"
+  ],
+  [
+   "真上",
+   "まうえ"
+  ],
+  [
+   "屋台",
+   "やたい"
+  ],
+  [
+   "銭湯",
+   "せんとう"
+  ],
+  [
+   "畑",
+   "はたけ"
+  ],
+  [
+   "絵",
+   "え"
+  ],
+  [
+   "今日",
+   "きょう"
+  ],
+  [
+   "一緒",
+   "いっしょ"
+  ],
+  [
+   "山門",
+   "さんもん"
+  ],
+  [
+   "川辺",
+   "かわべ"
+  ]
+ ],
+ "voice_override": {
+  "op3": "ぜひさいごまで、いっしょにといてくださいね。",
+  "rule": "ルールです。ひだりとみぎのえをくらべて、きゅうじゅうびょうで、みぎのえのちがいを、みっつさがしてください。",
+  "u1": "ここでひとやすみ。こよみせんせいの、きせつのおはなしです。",
+  "e1": "これでごもん、おしまいです。",
+  "e2": "じゅうごこのちがい、いくつみつかりましたか。きょうのしょうごうです。",
+  "e3": "チャンネルとうろくとベルで、まいあさはちじはんに、もんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。",
+  "e4": "ひだりのまるをおすととうろく、みぎのどうがで、つぎのもんだいに、ちょうせんできますよ。",
+  "c_comment": "みつかったかずを、あとでコメントでおしえてくださいね。",
+  "s_intro": "うえとしたのえで、ちがいがみっつあります。みつけられますか。",
+  "s_end": "つづきは、ながいどうがで。ひだりしたをクリックして、ちょうせんしてみてくださいね。",
+  "op": "こよみせんせいです。きょうは、くりのまちがいさがし、ぜんごもんです。",
+  "op2": "さいごは、なんもんです。さんもんめのあとには、くりの、いがいなおはなしも。",
+  "u2": "くりのせっく、って、いつのことでしょう？",
+  "u3": "こたえは、くがつここのかの、ちょうようのせっく。くりごはんで、ながいきをねがいました。",
+  "u4": "ことしのあきは、くりごはんで、はなしのタネにどうぞ。"
+ },
+ "voice": {
+  "provider": "fish",
+  "reference_id": "63819275ce38440ea245ca988abf976e",
+  "model": "s1",
+  "speed": 0.88,
+  "credit": "音声：Fish Audio（AIで合成した音声です）"
+ },
+ "images": {
+  "model": "gemini-3-pro-image",
+  "size": "2K",
+  "aspect": "4:5",
+  "style": "A Japanese picture-book illustration in watercolor, but with BOLD, THICK, DARK ink outlines around every object (like a clear picture book for seniors), and CLEAR, SATURATED colors (not pale). Bright, clean background. Natural, hand-drawn, slightly rounded shapes; not geometric, not flat vector, not photorealistic. CLOSE-UP composition (not a wide landscape): the scene is seen from close, filling the picture. PORTRAIT-ISH composition, about 8:9. The painting fills the entire canvas edge to edge: no white border. No people. Absolutely no text, letters, numbers, logos or symbols anywhere. The MAIN SUBJECT named in the scene is drawn LARGE in the center of the picture. Around it, only a few other objects, each clearly separated with space around it, fully visible.\n",
+  "keep_alt": " Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text.",
+  "keep_remove": " Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object.",
+  "batch": true
+ },
+ "questions": [
+  {
+   "q": 1,
+   "scene": "栗林",
+   "level": "やさしい",
+   "go": "さあ、第1問。やさしい問題からどうぞ。",
+   "prompt": "Scene: close-up of the ground in a chestnut grove (kuri-bayashi) in autumn, sunlight through the trees, fallen leaves and spiky chestnut burs everywhere on the ground. CENTER, LARGE (main subject): a bamboo basket full of shiny brown chestnuts on the leafy ground. Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests naturally on a table, shelf, floor or ground, or hangs from something. Side objects are LARGE: about one seventh of the picture width each. Objects: (upper left) a chestnut tree branch with green burs; (upper right) a straw hat hanging on a branch stub; (middle left) a pair of work gloves on a tree stump; (middle right) a pair of long metal tongs leaning on a tree trunk; (lower middle, above the bottom fifth) a cloth bag of chestnuts on the ground.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [],
+   "hint_diff": null,
+   "edit_prompt": "",
+   "edit_prompts": {},
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
+  },
+  {
+   "q": 2,
+   "scene": "甘栗の屋台",
+   "level": "初級",
+   "go": "では、第2問。どうぞ。",
+   "prompt": "Scene: close-up of a roasted chestnut stall (amaguri no yatai) at an autumn festival in the evening, red lanterns and a wooden stall roof behind. CENTER, LARGE (main subject): a big black iron pan with roasted chestnuts in hot black pebbles, steam rising. Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests naturally on a table, shelf, floor or ground, or hangs from something. Side objects are about one ninth of the picture width each. Objects: (upper left) a red paper lantern without letters; (upper right) a wind chime of colored glass; (middle left) a stack of paper bags; (middle right) a small hand fan on the counter; (center above the pan) a bamboo scoop hanging on a hook.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [],
+   "hint_diff": null,
+   "edit_prompt": "",
+   "edit_prompts": {},
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
+  },
+  {
+   "q": 3,
+   "scene": "旅館の朝ごはん",
+   "level": "初級",
+   "go": "もうひとつ初級です。どうぞ。",
+   "prompt": "Scene: close-up of a Japanese inn breakfast table (ryokan) in autumn, tatami room with a sliding paper window showing autumn leaves outside. CENTER, LARGE (main subject): a bowl of chestnut rice (kuri gohan) on a lacquered tray. Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests naturally on a table, shelf, floor or ground, or hangs from something. Side objects are about one ninth of the picture width each. Objects: (upper left) a hanging scroll on the wall; (upper right) a small vase with one red maple branch; (middle left) a teapot and a teacup; (middle right) a grilled fish on a long plate; (center above the tray) a small dish of pickles.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [],
+   "hint_diff": null,
+   "edit_prompt": "",
+   "edit_prompts": {},
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
+  },
+  {
+   "q": 4,
+   "scene": "洋菓子店",
+   "level": "中級",
+   "go": "後半です。第4問、どうぞ。",
+   "prompt": "Scene: close-up of a glass showcase in a small Western-style cake shop in autumn, warm wooden shelves and a window behind. CENTER, LARGE (main subject): a big chestnut Mont Blanc cake on a white plate with a chestnut on top. Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests naturally on a table, shelf, floor or ground, or hangs from something. Side objects are about one eleventh of the picture width each. Objects: (upper left) a small chalkboard sign without letters; (upper right) a hanging bell over the door; (middle left) a jar of candies; (middle right) a row of three small cupcakes; (upper middle) a shelf with a teapot.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [],
+   "hint_diff": null,
+   "edit_prompt": "",
+   "edit_prompts": {},
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
+  },
+  {
+   "q": 5,
+   "scene": "山里の茶屋",
+   "level": "上級",
+   "go": "いよいよ最後の難問です。じっくりどうぞ。",
+   "prompt": "Scene: close-up of an old mountain tea house (chaya) in autumn, a red bench with a red parasol, wooden building and autumn mountains behind. CENTER, LARGE (main subject): a plate of chestnut dumplings (kuri dango) on skewers and a cup of green tea on the red bench. Many small details around (each about one fourteenth of the picture width): (upper left) a hanging cloth curtain (noren) without letters; (upper right) a small bird on the roof edge; (middle left) a straw sandal pair on a stepping stone; (middle right) a small stone lantern; (upper middle) a hanging paper lantern.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [],
+   "hint_diff": null,
+   "edit_prompt": "",
+   "edit_prompts": {},
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
+  }
+ ],
+ "thumbnail": {
+  "question": 1,
+  "big_text": "秋の間違いさがし",
+  "highlight": "間違いさがし",
+  "highlight_color": [
+   255,
+   214,
+   0
+  ],
+  "big_color": [
+   255,
+   255,
+   255
+  ],
+  "band_color": [
+   25,
+   35,
+   70
+  ],
+  "big_size": 132,
+  "sub_text": "3つ見つけられる？全5問",
+  "badges": [
+   [
+    "初級〜上級",
+    [
+     176,
+     62,
+     52
+    ]
+   ]
+  ],
+  "circle_hint": false,
+  "note": "第1回と同じ型（変えた所なし）。左右に同じ絵・上に濃紺の帯で「秋の間違いさがし」・下に難易度と問いかけ。こよみ先生は入れない"
+ },
+ "shorts": []
+}

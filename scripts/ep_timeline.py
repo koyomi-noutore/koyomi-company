@@ -57,8 +57,48 @@ def lines():
     return sorted(L, key=lambda l: l[1])
 
 
+# 数字＋助数詞の読みを固定する（concept.md「第10回からの改善」2026-11-18 夜：第4問＝だいよんもん。4＝よん、7＝なな、9＝きゅう）
+_D = {0: "", 1: "いち", 2: "に", 3: "さん", 4: "よん", 5: "ご", 6: "ろく", 7: "なな", 8: "はち", 9: "きゅう"}
+
+
+def num_kana(n):
+    """0〜999 の数をひらがなに（よん・なな・きゅうに固定。百の位の音便も入れる）。"""
+    if n == 0:
+        return "ぜろ"
+    h, r = divmod(n, 100)
+    t, o = divmod(r, 10)
+    hs = {0: "", 1: "ひゃく", 3: "さんびゃく", 6: "ろっぴゃく", 8: "はっぴゃく"}.get(h, _D[h] + "ひゃく")
+    ts = "" if t == 0 else ("じゅう" if t == 1 else _D[t] + "じゅう")
+    return hs + ts + _D[o]
+
+
+_TSU = {1: "ひとつ", 2: "ふたつ", 3: "みっつ", 4: "よっつ", 5: "いつつ", 6: "むっつ", 7: "ななつ", 8: "やっつ", 9: "ここのつ", 10: "とお"}
+_COUNTERS = [   # (正規表現, 読みを作る関数)。長い物から順に置き換える
+    (r"第(\d+)問", lambda n: "だい" + num_kana(n) + "もん"),
+    (r"(\d+)問目", lambda n: num_kana(n) + "もんめ"),
+    (r"(\d+)問", lambda n: num_kana(n) + "もん"),
+    (r"(\d+)時半", lambda n: {4: "よじ", 7: "しちじ", 9: "くじ"}.get(n, num_kana(n) + "じ") + "はん"),
+    (r"(\d+)秒", lambda n: num_kana(n) + "びょう"),
+    (r"(\d+)分", lambda n: {1: "いっぷん", 3: "さんぷん", 4: "よんぷん", 6: "ろっぷん", 8: "はっぷん", 10: "じゅっぷん"}.get(n, num_kana(n) + "ふん")),
+    (r"(\d+)個", lambda n: {1: "いっこ", 6: "ろっこ", 8: "はっこ", 10: "じゅっこ"}.get(n, num_kana(n) + "こ")),
+    (r"(\d+)枚", lambda n: num_kana(n) + "まい"),
+    (r"(\d+)本", lambda n: {1: "いっぽん", 3: "さんぼん", 6: "ろっぽん", 8: "はっぽん", 10: "じゅっぽん"}.get(n, num_kana(n) + "ほん")),
+    (r"(\d+)代", lambda n: num_kana(n) + "だい"),
+    (r"(\d+)つ", lambda n: _TSU.get(n, num_kana(n))),
+    (r"(\d+)", lambda n: num_kana(n)),
+]
+
+
+def fix_numbers(t):
+    import re as _re
+    for pat, f in _COUNTERS:
+        t = _re.sub(pat, lambda m: f(int(m.group(1))), t)
+    return t
+
+
 def to_voice(lid, text):
     t = VOICE_OVERRIDE.get(lid, text).replace("「", "").replace("」", "")
+    t = fix_numbers(t)     # 数字＋助数詞の読みを先に固定する（読みの表より優先）
     for a, b in READINGS:  # 上から順に置き換える（長い語を先に書く）
         t = t.replace(a, b)
     return t

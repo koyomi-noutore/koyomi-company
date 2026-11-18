@@ -30,6 +30,11 @@ SAFE_Y = (54, 918)                # 画面での「違いを置いてよい」�
 _P = plan()
 _I = _P["images"]
 STYLE = _I["style"]
+# 背景も画面いっぱいに描く（concept.md「第10回からの改善」2026-11-18 夜）。白い余白の多い絵・物が宙に浮く配置にしない
+BACKGROUND_RULE = (" Paint the background of the scene to fill the whole picture (walls, floor, ground, windows, shelves, sky): "
+                   "do not leave large blank white areas, and no object should float in empty space; every object rests on a "
+                   "table, floor, shelf, ground or hangs from something. ")
+STYLE = STYLE.rstrip() + BACKGROUND_RULE
 KEEP_ALT, KEEP_REMOVE = _I["keep_alt"], _I["keep_remove"]
 _Q = questions()
 SCENES = {q: Q["prompt"] for q, Q in _Q.items()}

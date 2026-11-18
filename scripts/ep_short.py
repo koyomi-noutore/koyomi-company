@@ -208,9 +208,14 @@ def setup(ep, work, fontp):
         base.paste(pics[side], (PX, y))
         ImageDraw.Draw(base).rectangle((PX - 4, y - 4, PX + PW + 3, y + PH + 3), outline=(255, 250, 238), width=4)
     CTX["base"] = base
-    # 幕の上の大きな文字は、サムネと同じ太い角ゴシック（Noto Sans CJK JP Black）
-    import thumb_v3
-    CTX["bold"] = thumb_v3.F
+    # 幕の上の大きな文字は太い角ゴシック（Noto Sans JP Black）。CEOが「とても読みやすい」と評価した第8回・第9回のショートと同じ。
+    # （サムネは 2026-11-18 夜から Zen Maru Gothic Bold。ショートの書体は変えていない）
+    nb = Path.home() / ".cache/koyomi/fonts/package/900Black/NotoSansJP_900Black.ttf"
+    if not nb.exists():
+        subprocess.run(["npm", "pack", "--silent", "@expo-google-fonts/noto-sans-jp@0.4.4"], cwd=nb.parents[2], stdout=subprocess.DEVNULL)
+        for t_ in nb.parents[2].glob("noto*.tgz"):
+            subprocess.run(["tar", "xzf", t_.name], cwd=nb.parents[2])
+    CTX["bold"] = str(nb)
 
 
 def circle_box(a, side):
