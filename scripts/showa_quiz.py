@@ -217,10 +217,13 @@ def frame_long(P, work, st, t, cache):
         name = it["name"]; sz = 130 if len(name) <= 4 else 96
         draw_center(d, (px, 420), name, f_bold(sz), INK)
         draw_center(d, (px, 540), f"（{it['reading']}）", f_round(44), (110, 84, 60))
-        if k == "trivia":
-            lines = wrap(it["trivia"], 11)
+        if k == "trivia":       # 右の欄（x 1310〜1910）の中に収める
+            fz = 50
+            lines = wrap_px(it["trivia"], f_round(fz), 560)
+            while len(lines) > 4:
+                fz -= 4; lines = wrap_px(it["trivia"], f_round(fz), 560)
             for i, l in enumerate(lines):
-                draw_center(d, (px, 680 + i * 70), l, f_round(52), INK)
+                draw_center(d, (px, 680 + i * (fz + 18)), l, f_round(fz), INK)
     return im
 
 
@@ -238,6 +241,28 @@ def wrap(s, n):
             res.append(l[:n]); l = l[n:]
         res.append(l)
     return res
+
+
+def wrap_px(s, f, maxw):
+    """文を、実際の文字幅（px）で maxw に収まるように改行する。読点・句点・助詞のあとを優先して切る（2026-11-18 監査 M-2）。"""
+    d = ImageDraw.Draw(Image.new("RGB", (10, 10)))
+    lines, cur, last_break = [], "", -1
+    for ch in s:
+        if d.textlength(cur + ch, font=f) > maxw and cur and ch not in "、。」）":   # 句読点は行の頭に置かない（前の行の終わりにぶら下げる）
+            if last_break > 0 and last_break >= len(cur) // 2:
+                lines.append(cur[:last_break]); cur = cur[last_break:]
+            else:
+                lines.append(cur); cur = ""
+            last_break = -1
+        cur += ch
+        if ch in "、。」）":
+            last_break = len(cur)
+    if cur:
+        lines.append(cur)
+    for l in lines:     # 念のため：枠をはみ出す行があれば止める
+        if d.textlength(l.rstrip("、。」）"), font=f) > maxw + 1:
+            raise SystemExit(f"文字が枠に収まらない：{l}")
+    return lines
 
 
 def subtitle(im, sub, W, H, y, size):
@@ -265,8 +290,8 @@ def frame_short(P, work, st, t, cache, end=False, t_end=0):
     if k in ("ans", "trivia"):
         draw_center(d, (W / 2, 1150), "答え", f_bold(64), (180, 70, 40))
         draw_center(d, (W / 2, 1270), it["name"], f_bold(130 if len(it["name"]) <= 4 else 100), INK)
-        if k == "trivia":
-            for i, l in enumerate(wrap(it["trivia"], 13)[:3]):
+        if k == "trivia":       # 左右36pxより内側（幅 900px まで）に収める
+            for i, l in enumerate(wrap_px(it["trivia"], f_round(54), 900)[:3]):
                 draw_center(d, (W / 2, 1410 + i * 66), l, f_round(54), INK)
     # 最初：暗い幕と大きな文字（ショートの形 2026-11-18 夜）
     if st.get("intro"):
