@@ -10,6 +10,7 @@ import ep_timeline as T
 from episode_plan import plan
 
 LEVEL_RANGE = {"やさしい": (6.0, 8.0), "初級": (5.0, 6.0), "中級": (4.0, 5.0), "上級": (3.0, 4.0)}   # concept.md「難易度の引き下げ（2026-11-18）」：画面幅に対する%（2026-11-18 CEO確認）
+TOL_UP = 1.5   # 大きすぎる側（易しくなる向き）は広めに許す：監査は2回とも軽微扱い（第8回 2026-11-18）。難易度を下げる方針（2026-11-18）にも沿う
 TOL = 0.3   # 難易度表の「約」の幅（ポイント）。第5問の宝珠 2.07%・第3問の石 1.83% を「約」として扱った（事業部長判断 2026-11-06、監査で確認）
 
 
@@ -56,7 +57,7 @@ def numeric(out_dir, work):
                     problems.append(f"第{Q['q']}問 違い{ia}と{ib}：近すぎる（中心の距離 {dist:.0f}%・すき間 {gap:.0f}%。目安は中心{MIN_CENTER_DIST_PCT}%以上・すき間{MIN_GAP_PCT}%以上）")
         for a in Q["answers"]:
             p = a["object_screen_width_pct"]
-            if not (lo - TOL <= p <= hi + TOL):
+            if not (lo - TOL <= p <= hi + TOL_UP):
                 problems.append(f"第{Q['q']}問 違い{a['id']}：大きさ {p}% が{Q['level']}の目安 {lo}〜{hi}% の外")
             if not a["in_safe_y"]:
                 problems.append(f"第{Q['q']}問 違い{a['id']}：上の帯か字幕の場所にかかる")

@@ -1,0 +1,712 @@
+{
+ "screen": {
+  "size": [
+   1920,
+   1080
+  ],
+  "picture_size_on_screen": [
+   960,
+   1080
+  ],
+  "safe_y_on_screen": [
+   54,
+   918
+  ],
+  "level_range_pct_of_screen_width": {
+   "やさしい": [
+    6.0,
+    8.0
+   ],
+   "初級": [
+    5.0,
+    6.0
+   ],
+   "中級": [
+    4.0,
+    5.0
+   ],
+   "上級": [
+    3.0,
+    4.0
+   ]
+  }
+ },
+ "note": "box_px・circle_px は 8:9 に切り抜いた高解像度の絵（qN_a.png、1856×2088）のピクセル。content_px はそのうち画面に出す範囲（白いふちを除いた8:9）。*_screen は画面の上での座標（右の絵は x に960を足す）。object_screen_width_pct は、変わる物そのものの幅を画面幅で割った値（難易度の基準）。object_picture_width_pct は片方の絵の幅で割った値（参考）。",
+ "questions": [
+  {
+   "q": 1,
+   "scene": "焼き芋の屋台",
+   "level": "やさしい",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 267,
+   "outside_box_max_distance_px": 9.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "ちょうちんが白い",
+     "line": "ちょうちんが、白くなりました。",
+     "box_px": [
+      168,
+      160,
+      568,
+      631
+     ],
+     "box_screen": [
+      87,
+      83,
+      294,
+      326
+     ],
+     "circle_a_screen": [
+      87,
+      83,
+      294,
+      326
+     ],
+     "circle_b_screen": [
+      87,
+      83,
+      294,
+      326
+     ],
+     "object_w_px": 297,
+     "object_picture_width_pct": 16.0,
+     "object_screen_width_pct": 8.0,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "焼き芋がひとつない",
+     "line": "まん中の焼き芋が、ひとつありません。",
+     "box_px": [
+      880,
+      760,
+      1140,
+      925
+     ],
+     "box_screen": [
+      455,
+      393,
+      590,
+      478
+     ],
+     "circle_a_screen": [
+      455,
+      393,
+      590,
+      478
+     ],
+     "circle_b_screen": [
+      455,
+      393,
+      590,
+      478
+     ],
+     "object_w_px": 212,
+     "object_picture_width_pct": 11.42,
+     "object_screen_width_pct": 5.71,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "2",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "紙袋が白い",
+     "line": "焼き芋の紙袋が、白くなりました。",
+     "box_px": [
+      1457,
+      1254,
+      1778,
+      1605
+     ],
+     "box_screen": [
+      754,
+      649,
+      920,
+      830
+     ],
+     "circle_a_screen": [
+      754,
+      649,
+      920,
+      830
+     ],
+     "circle_b_screen": [
+      754,
+      649,
+      920,
+      830
+     ],
+     "object_w_px": 302,
+     "object_picture_width_pct": 16.27,
+     "object_screen_width_pct": 8.14,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 2,
+   "scene": "落ち葉の公園",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 2709,
+   "outside_box_max_distance_px": 12.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "湯気がない",
+     "line": "焼き芋の湯気が、消えました。",
+     "box_px": [
+      740,
+      230,
+      1030,
+      920
+     ],
+     "box_screen": [
+      383,
+      119,
+      533,
+      476
+     ],
+     "circle_a_screen": [
+      383,
+      119,
+      533,
+      476
+     ],
+     "circle_b_screen": [
+      383,
+      119,
+      533,
+      476
+     ],
+     "object_w_px": 264,
+     "object_picture_width_pct": 14.22,
+     "object_screen_width_pct": 7.11,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "2",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "大きさ",
+     "label": "水筒が大きい",
+     "line": "赤いふたの水筒が、大きくなりました。",
+     "box_px": [
+      69,
+      790,
+      308,
+      1478
+     ],
+     "box_screen": [
+      36,
+      409,
+      159,
+      764
+     ],
+     "circle_a_screen": [
+      36,
+      409,
+      159,
+      764
+     ],
+     "circle_b_screen": [
+      36,
+      409,
+      159,
+      764
+     ],
+     "object_w_px": 221,
+     "object_picture_width_pct": 11.91,
+     "object_screen_width_pct": 5.95,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "入れ替え",
+     "label": "もみじがいちょうに",
+     "line": "ベンチのもみじが、いちょうの葉になりました。",
+     "box_px": [
+      1290,
+      1020,
+      1580,
+      1250
+     ],
+     "box_screen": [
+      667,
+      528,
+      817,
+      647
+     ],
+     "circle_a_screen": [
+      667,
+      528,
+      817,
+      647
+     ],
+     "circle_b_screen": [
+      667,
+      528,
+      817,
+      647
+     ],
+     "object_w_px": 215,
+     "object_picture_width_pct": 11.58,
+     "object_screen_width_pct": 5.79,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "3",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 3,
+   "scene": "運動会の校庭",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 1476,
+   "outside_box_max_distance_px": 10.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "おにぎりがひとつない",
+     "line": "おにぎりが、ひとつありません。",
+     "box_px": [
+      967,
+      411,
+      1370,
+      843
+     ],
+     "box_screen": [
+      500,
+      213,
+      709,
+      436
+     ],
+     "circle_a_screen": [
+      500,
+      213,
+      709,
+      436
+     ],
+     "circle_b_screen": [
+      500,
+      213,
+      709,
+      436
+     ],
+     "object_w_px": 205,
+     "object_picture_width_pct": 11.05,
+     "object_screen_width_pct": 5.52,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "水筒が黄色",
+     "line": "水筒が、黄色になりました。",
+     "box_px": [
+      6,
+      527,
+      406,
+      1066
+     ],
+     "box_screen": [
+      3,
+      273,
+      210,
+      551
+     ],
+     "circle_a_screen": [
+      3,
+      273,
+      210,
+      551
+     ],
+     "circle_b_screen": [
+      3,
+      273,
+      210,
+      551
+     ],
+     "object_w_px": 236,
+     "object_picture_width_pct": 12.72,
+     "object_screen_width_pct": 6.36,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "入れ替え",
+     "label": "大学いもがゆで卵に",
+     "line": "大学いもが、ゆで卵になりました。",
+     "box_px": [
+      947,
+      1317,
+      1388,
+      1624
+     ],
+     "box_screen": [
+      490,
+      681,
+      718,
+      840
+     ],
+     "circle_a_screen": [
+      490,
+      681,
+      718,
+      840
+     ],
+     "circle_b_screen": [
+      490,
+      681,
+      718,
+      840
+     ],
+     "object_w_px": 270,
+     "object_picture_width_pct": 14.55,
+     "object_screen_width_pct": 7.27,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 4,
+   "scene": "農家の納屋",
+   "level": "中級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 377,
+   "outside_box_max_distance_px": 9.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "帽子のリボンが赤い",
+     "line": "麦わら帽子のリボンが、赤くなりました。",
+     "box_px": [
+      265,
+      136,
+      533,
+      516
+     ],
+     "box_screen": [
+      137,
+      70,
+      276,
+      267
+     ],
+     "circle_a_screen": [
+      137,
+      70,
+      276,
+      267
+     ],
+     "circle_b_screen": [
+      137,
+      70,
+      276,
+      267
+     ],
+     "object_w_px": 164,
+     "object_picture_width_pct": 8.84,
+     "object_screen_width_pct": 4.42,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "数",
+     "label": "干し柿が少ない",
+     "line": "干し柿の数が、少なくなりました。",
+     "box_px": [
+      830,
+      330,
+      1110,
+      770
+     ],
+     "box_screen": [
+      429,
+      171,
+      574,
+      398
+     ],
+     "circle_a_screen": [
+      429,
+      171,
+      574,
+      398
+     ],
+     "circle_b_screen": [
+      429,
+      171,
+      574,
+      398
+     ],
+     "object_w_px": 219,
+     "object_picture_width_pct": 11.8,
+     "object_screen_width_pct": 5.9,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "3",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "さつまいもが増える",
+     "line": "木箱のさつまいもが、ひとつ増えました。",
+     "box_px": [
+      1315,
+      965,
+      1565,
+      1110
+     ],
+     "box_screen": [
+      680,
+      499,
+      809,
+      574
+     ],
+     "circle_a_screen": [
+      680,
+      499,
+      809,
+      574
+     ],
+     "circle_b_screen": [
+      680,
+      499,
+      809,
+      574
+     ],
+     "object_w_px": 225,
+     "object_picture_width_pct": 12.12,
+     "object_screen_width_pct": 6.06,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": "描き直し版4のいもを色と形で切り抜き、小さくして置いた（プログラム）"
+    }
+   ]
+  },
+  {
+   "q": 5,
+   "scene": "昔の教室",
+   "level": "上級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 87,
+   "outside_box_max_distance_px": 11.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "模様",
+     "label": "カレンダーに赤い丸",
+     "line": "カレンダーに、赤い丸が付きました。",
+     "box_px": [
+      817,
+      240,
+      945,
+      364
+     ],
+     "box_screen": [
+      423,
+      124,
+      489,
+      188
+     ],
+     "circle_a_screen": [
+      423,
+      124,
+      489,
+      188
+     ],
+     "circle_b_screen": [
+      423,
+      124,
+      489,
+      188
+     ],
+     "object_w_px": 118,
+     "object_picture_width_pct": 6.36,
+     "object_screen_width_pct": 3.18,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "色えんぴつが一本ない",
+     "line": "筆箱の色えんぴつが、一本ありません。",
+     "box_px": [
+      350,
+      735,
+      490,
+      805
+     ],
+     "box_screen": [
+      181,
+      380,
+      253,
+      416
+     ],
+     "circle_a_screen": [
+      181,
+      380,
+      253,
+      416
+     ],
+     "circle_b_screen": [
+      181,
+      380,
+      253,
+      416
+     ],
+     "object_w_px": 110,
+     "object_picture_width_pct": 5.93,
+     "object_screen_width_pct": 2.96,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "3",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "一部欠け",
+     "label": "バケツの取っ手がない",
+     "line": "バケツの取っ手が、ありません。",
+     "box_px": [
+      1449,
+      1092,
+      1679,
+      1255
+     ],
+     "box_screen": [
+      749,
+      565,
+      868,
+      649
+     ],
+     "circle_a_screen": [
+      749,
+      565,
+      868,
+      649
+     ],
+     "circle_b_screen": [
+      749,
+      565,
+      868,
+      649
+     ],
+     "object_w_px": 110,
+     "object_picture_width_pct": 5.93,
+     "object_screen_width_pct": 2.96,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "2",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  }
+ ]
+}

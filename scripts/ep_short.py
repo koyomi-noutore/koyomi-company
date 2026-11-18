@@ -386,7 +386,7 @@ def check(ep, work):
         for i, a in enumerate(setup_q["answers"]):
             for side in "ab":
                 x0, y0, x1, y1 = circle_box(a, side)
-                if y1 + 9 > HIDDEN_Y:
+                if y1 > HIDDEN_Y:     # 物そのもの（box）が隠れる帯に入らないか。赤丸の線の太さ分ははみ出してよい
                     problems.append(f"違い{i + 1}（{side}）が画面下の隠れる帯にかかる（y{y1:.0f}）")
                 if x1 + 9 > W - 120:
                     problems.append(f"違い{i + 1}（{side}）が右側のボタンの帯にかかる（x{x1:.0f}）")

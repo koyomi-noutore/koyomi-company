@@ -126,6 +126,24 @@ def apply(im, op, work=None):
             cx, cy, rr = op["circle"]
             import math
             op = dict(op, poly=[[cx + rr * math.cos(t / 36 * 2 * math.pi), cy + rr * math.sin(t / 36 * 2 * math.pi)] for t in range(36)])
+        if op.get("keep_hue"):     # [lo, hi]（PILのHSVの色相 0〜255）：まわりと色がはっきり違う物（紫のさつまいもなど）を色で切り抜く。輪郭線も少し含める
+            Hs = np.asarray(crop.convert("HSV")).astype(int)
+            lo, hi = op["keep_hue"]
+            m = (Hs[..., 0] >= lo) & (Hs[..., 0] <= hi) & (Hs[..., 1] > 50)
+            if op.get("poly"):     # 多角形も書いてあれば、その中だけにする（重なった別の物を外す）
+                from PIL import ImageDraw
+                pm = Image.new("L", crop.size, 0)
+                ImageDraw.Draw(pm).polygon([(x - op["src"][0], y - op["src"][1]) for x, y in op["poly"]], fill=255)
+                pin = np.asarray(pm) > 0
+                m &= pin
+            m = ndimage.binary_opening(m, iterations=2)
+            lab, n = ndimage.label(m)
+            if n > 1:
+                m = lab == (int(np.argmax(ndimage.sum(m, lab, range(1, n + 1)))) + 1)
+            m = ndimage.binary_dilation(ndimage.binary_fill_holes(m), iterations=op.get("grow", 5))
+            if op.get("poly"):
+                m &= ndimage.binary_dilation(pin, iterations=op.get("grow", 5))
+            op = dict(op, _mask=m)
         if op.get("_mask") is not None:
             pass
         elif op.get("poly"):      # 物のまわりを手で囲んだ多角形（元の絵の座標）。地に模様があって自動の切り抜きができないとき

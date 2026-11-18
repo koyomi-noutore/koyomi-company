@@ -186,7 +186,7 @@
     "あと30秒です。"
    ]
   ],
-  "go_delay": 1.3
+  "go_delay": 1.8
  },
  "lines": {
   "opening": [
@@ -292,6 +292,82 @@
   ]
  },
  "readings": [
+  [
+   "焼き芋の屋台",
+   "やきいものやたい"
+  ],
+  [
+   "まん中",
+   "まんなか"
+  ],
+  [
+   "赤く",
+   "あかく"
+  ],
+  [
+   "赤い",
+   "あかい"
+  ],
+  [
+   "赤いふた",
+   "あかいふた"
+  ],
+  [
+   "干し柿",
+   "ほしがき"
+  ],
+  [
+   "麦わら帽子",
+   "むぎわらぼうし"
+  ],
+  [
+   "色えんぴつ",
+   "いろえんぴつ"
+  ],
+  [
+   "筆箱",
+   "ふでばこ"
+  ],
+  [
+   "大学いも",
+   "だいがくいも"
+  ],
+  [
+   "ゆで卵",
+   "ゆでたまご"
+  ],
+  [
+   "木箱",
+   "きばこ"
+  ],
+  [
+   "湯気",
+   "ゆげ"
+  ],
+  [
+   "紙袋",
+   "かみぶくろ"
+  ],
+  [
+   "消え",
+   "きえ"
+  ],
+  [
+   "数",
+   "かず"
+  ],
+  [
+   "付き",
+   "つき"
+  ],
+  [
+   "水筒",
+   "すいとう"
+  ],
+  [
+   "帽子",
+   "ぼうし"
+  ],
   [
    "石焼き芋の屋台",
    "いしやきいものやたい"
@@ -705,16 +781,69 @@
  "questions": [
   {
    "q": 1,
-   "scene": "石焼き芋の屋台",
+   "scene": "焼き芋の屋台",
    "level": "やさしい",
    "go": "さあ、第1問。やさしい問題からどうぞ。",
    "prompt": "Scene: close-up of a stone-roasted sweet potato stall (ishi-yaki-imo) at a street corner on an autumn evening. CENTER, LARGE (main subject): an old wooden cart with a black iron stone oven, hot pebbles and several roasted sweet potatoes, steam rising. Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture (the bottom fifth is only plain ground or floor). Each listed side object is fully visible (never cut off by the picture edge) and stands alone on a plain area so it could be changed cleanly. Side objects are LARGE: about one seventh of the picture width each. Objects: (upper left) a red paper lantern without letters; (upper right) a round street lamp; (middle left) a plain wooden signboard without letters; (middle right) a brown paper bag with two sweet potatoes; (lower middle, above the bottom fifth) a small cat sitting.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "ちょうちんが白い",
+     "line": "ちょうちんが、白くなりました。",
+     "box": [
+      168,
+      160,
+      568,
+      631
+     ],
+     "object_w": 297,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "焼き芋がひとつない",
+     "line": "まん中の焼き芋が、ひとつありません。",
+     "box": [
+      880,
+      760,
+      1140,
+      925
+     ],
+     "object_w": 212,
+     "src": "2"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "紙袋が白い",
+     "line": "焼き芋の紙袋が、白くなりました。",
+     "box": [
+      1457,
+      1254,
+      1778,
+      1605
+     ],
+     "object_w": 302,
+     "src": "1"
+    }
+   ],
    "hint_diff": null,
-   "edit_prompt": "",
-   "edit_prompts": {}
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not add any new kinds of objects. Changes: (a) the wooden signboard at the left becomes round instead of rectangular (same size); (b) the brown paper bag at the right becomes white; (c) the red paper lantern at the upper left becomes white; (d) one more roasted sweet potato on the hot stones of the oven; (e) the big cart wheel becomes clearly smaller.",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not add any new kinds of objects. Changes: (a) the wooden signboard at the left becomes round instead of rectangular (same size); (b) the brown paper bag at the right becomes white; (c) the red paper lantern at the upper left becomes white; (d) one more roasted sweet potato on the hot stones of the oven; (e) the big cart wheel becomes clearly smaller.",
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) on the hot stones of the oven, the biggest roasted sweet potato in the middle is gone, showing the hot stones under it.",
+    "3": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move, add or remove anything else. Changes: (a) on the hot stones of the oven, the two biggest roasted sweet potatoes in the middle are gone, showing the hot stones under them."
+   },
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
   },
   {
    "q": 2,
@@ -724,10 +853,63 @@
    "prompt": "Scene: close-up of a park bench among fallen ginkgo and maple leaves in late autumn. CENTER, LARGE (main subject): a wooden bench with a newspaper-wrapped roasted sweet potato broken in half, steam rising. Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture (the bottom fifth is only plain ground or floor). Each listed side object is fully visible (never cut off by the picture edge) and stands alone on a plain area so it could be changed cleanly. Side objects are about one ninth of the picture width each. Objects: (upper left) a ginkgo branch with yellow leaves; (upper right) a round park clock without numbers on a pole; (middle left) a small thermos bottle on the bench; (middle right) a small sparrow on the bench back; (center below the bench, above the bottom fifth) a pair of knitted gloves.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "湯気がない",
+     "line": "焼き芋の湯気が、消えました。",
+     "box": [
+      740,
+      230,
+      1030,
+      920
+     ],
+     "object_w": 264,
+     "src": "2"
+    },
+    {
+     "id": 2,
+     "type": "大きさ",
+     "label": "水筒が大きい",
+     "line": "赤いふたの水筒が、大きくなりました。",
+     "box": [
+      69,
+      790,
+      308,
+      1478
+     ],
+     "object_w": 221,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "入れ替え",
+     "label": "もみじがいちょうに",
+     "line": "ベンチのもみじが、いちょうの葉になりました。",
+     "box": [
+      1290,
+      1020,
+      1580,
+      1250
+     ],
+     "object_w": 215,
+     "src": "3"
+    }
+   ],
    "hint_diff": null,
-   "edit_prompt": "",
-   "edit_prompts": {}
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not add any new kinds of objects. Changes: (a) the sparrow on the bench back faces the opposite direction; (b) the small red thermos bottle becomes twice as tall; (c) the broken roasted sweet potato on the newspaper becomes one whole sweet potato; (d) the knitted gloves become blue.",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not add any new kinds of objects. Changes: (a) the sparrow on the bench back faces the opposite direction; (b) the small red thermos bottle becomes twice as tall; (c) the broken roasted sweet potato on the newspaper becomes one whole sweet potato; (d) the knitted gloves become blue.",
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the sparrow on the bench back stays in exactly the same place but faces the opposite direction (mirror image); (b) the small red thermos bottle on the bench becomes about twice as wide and twice as tall; (c) the curls of steam rising from the sweet potato are gone.",
+    "3": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move, add or remove anything else. Changes: (a) the red maple leaf lying on the bench seat at the far RIGHT end becomes a yellow ginkgo leaf of the same size; (b) the LEFT half of the broken roasted sweet potato on the newspaper is gone (only the right half remains)."
+   },
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
   },
   {
    "q": 3,
@@ -737,10 +919,62 @@
    "prompt": "Scene: close-up of a picnic sheet at a school sports day (undokai) in autumn. CENTER, LARGE (main subject): a three-tier lunch box with rice balls, fried chicken and candied sweet potatoes (daigaku-imo). Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture (the bottom fifth is only plain ground or floor). Each listed side object is fully visible (never cut off by the picture edge) and stands alone on a plain area so it could be changed cleanly. Side objects are about one ninth of the picture width each. Objects: (upper left) a string of small triangle flags; (upper right) a red-and-white cap; (middle left) a water bottle; (middle right) a small basket of steamed sweet potatoes; (center above the box) a small towel.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "おにぎりがひとつない",
+     "line": "おにぎりが、ひとつありません。",
+     "box": [
+      967,
+      411,
+      1370,
+      843
+     ],
+     "object_w": 205,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "水筒が黄色",
+     "line": "水筒が、黄色になりました。",
+     "box": [
+      6,
+      527,
+      406,
+      1066
+     ],
+     "object_w": 236,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "入れ替え",
+     "label": "大学いもがゆで卵に",
+     "line": "大学いもが、ゆで卵になりました。",
+     "box": [
+      947,
+      1317,
+      1388,
+      1624
+     ],
+     "object_w": 270,
+     "src": "1"
+    }
+   ],
    "hint_diff": null,
-   "edit_prompt": "",
-   "edit_prompts": {}
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not add any new kinds of objects. Changes: (a) the water bottle at the left becomes plain yellow; (b) in the top tier of the lunch box, one rice ball is gone; (c) the round basket of sweet potatoes at the right becomes a square basket; (d) the red-and-white cap becomes blue-and-white; (e) in the bottom tier, a few candied sweet potato pieces become boiled eggs.",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not add any new kinds of objects. Changes: (a) the water bottle at the left becomes plain yellow; (b) in the top tier of the lunch box, one rice ball is gone; (c) the round basket of sweet potatoes at the right becomes a square basket; (d) the red-and-white cap becomes blue-and-white; (e) in the bottom tier, a few candied sweet potato pieces become boiled eggs.",
+    "3": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move, add or remove anything else. Changes: (a) the fried chicken piece at the LEFT end of the middle tier becomes a boiled egg cut in half; (b) in the round basket at the right, the front steamed sweet potato is gone; (c) the blue strap of the water bottle becomes red."
+   },
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
   },
   {
    "q": 4,
@@ -750,10 +984,133 @@
    "prompt": "Scene: close-up inside a farmer's wooden barn in late autumn. CENTER, LARGE (main subject): a wooden crate full of freshly dug purple sweet potatoes on straw. Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture (the bottom fifth is only plain ground or floor). Each listed side object is fully visible (never cut off by the picture edge) and stands alone on a plain area so it could be changed cleanly. Side objects are about one eleventh of the picture width each. Objects: (upper left) a straw hat hanging on a nail; (upper right) a small window with a paper sliding screen; (middle left) a bamboo basket; (middle right) a hand hoe leaning on the wall; (upper middle) a hanging bundle of dried persimmons.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "帽子のリボンが赤い",
+     "line": "麦わら帽子のリボンが、赤くなりました。",
+     "box": [
+      265,
+      136,
+      533,
+      516
+     ],
+     "object_w": 164,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "数",
+     "label": "干し柿が少ない",
+     "line": "干し柿の数が、少なくなりました。",
+     "box": [
+      830,
+      330,
+      1110,
+      770
+     ],
+     "object_w": 219,
+     "src": "3"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "さつまいもが増える",
+     "line": "木箱のさつまいもが、ひとつ増えました。",
+     "box": [
+      1315,
+      965,
+      1565,
+      1110
+     ],
+     "object_w": 225,
+     "src": "p",
+     "note": "描き直し版4のいもを色と形で切り抜き、小さくして置いた（プログラム）"
+    }
+   ],
    "hint_diff": null,
-   "edit_prompt": "",
-   "edit_prompts": {}
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not add any new kinds of objects. Changes: (a) the ribbon on the straw hat becomes bright red; (b) the metal blade of the hoe becomes round; (c) one more sweet potato lying on top of the straw in the crate; (d) the bamboo basket at the left gets a checked pattern; (e) the paper sliding screen of the window is open (no paper panel in the middle).",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not add any new kinds of objects. Changes: (a) the ribbon on the straw hat becomes bright red; (b) the metal blade of the hoe becomes round; (c) one more sweet potato lying on top of the straw in the crate; (d) the bamboo basket at the left gets a checked pattern; (e) the paper sliding screen of the window is open (no paper panel in the middle).",
+    "3": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move, add or remove anything else. Changes: (a) the paper sliding screen of the window has one paper square missing (a torn square hole); (b) the hanging bundle of dried persimmons has only half as many persimmons (the lower half is gone).",
+    "4": "Edit this illustration and make exactly this one change, and nothing else. Keep the same thick outlines, colors and style: add one more big purple sweet potato lying clearly on TOP of the straw at the upper RIGHT corner of the wooden crate, about one tenth of the picture width, fully visible."
+   },
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   },
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "from_file": "edit_4_4.png",
+      "src": [
+       1140,
+       870,
+       1550,
+       1135
+      ],
+      "keep_hue": [
+       205,
+       255
+      ],
+      "grow": 5,
+      "dst": [
+       1325,
+       975
+      ],
+      "width": 225,
+      "poly": [
+       [
+        1135,
+        890
+       ],
+       [
+        1190,
+        872
+       ],
+       [
+        1290,
+        880
+       ],
+       [
+        1400,
+        915
+       ],
+       [
+        1490,
+        960
+       ],
+       [
+        1552,
+        1035
+       ],
+       [
+        1520,
+        1085
+       ],
+       [
+        1400,
+        1095
+       ],
+       [
+        1270,
+        1050
+       ],
+       [
+        1180,
+        985
+       ]
+      ]
+     }
+    ]
+   }
   },
   {
    "q": 5,
@@ -763,10 +1120,63 @@
    "prompt": "Scene: close-up of an old wooden Showa-era classroom in winter-like late autumn. CENTER, LARGE (main subject): a round black cast-iron stove (daruma stove) with sweet potatoes wrapped in foil on top and a kettle. Many small details around (each about one fourteenth of the picture width): (upper left) a small wall clock without numbers; (upper right) a window with a view of a bare tree; (middle left) a wooden desk with a pencil case; (middle right) a coal bucket with a small shovel; (upper middle) a hanging calendar without letters.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "模様",
+     "label": "カレンダーに赤い丸",
+     "line": "カレンダーに、赤い丸が付きました。",
+     "box": [
+      817,
+      240,
+      945,
+      364
+     ],
+     "object_w": 118,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "色えんぴつが一本ない",
+     "line": "筆箱の色えんぴつが、一本ありません。",
+     "box": [
+      350,
+      735,
+      490,
+      805
+     ],
+     "object_w": 110,
+     "src": "3"
+    },
+    {
+     "id": 3,
+     "type": "一部欠け",
+     "label": "バケツの取っ手がない",
+     "line": "バケツの取っ手が、ありません。",
+     "box": [
+      1449,
+      1092,
+      1679,
+      1255
+     ],
+     "object_w": 110,
+     "src": "2"
+    }
+   ],
    "hint_diff": null,
-   "edit_prompt": "",
-   "edit_prompts": {}
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not add any new kinds of objects. Changes: (a) the spout of the kettle on the stove becomes short; (b) the pencil case on the desk becomes red; (c) the bare tree seen through the window has one big branch fewer; (d) the hanging calendar gets a red circle mark; (e) the small shovel in the coal bucket is gone.",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not add any new kinds of objects. Changes: (a) the spout of the kettle on the stove becomes short; (b) the pencil case on the desk becomes red; (c) the bare tree seen through the window has one big branch fewer; (d) the hanging calendar gets a red circle mark; (e) the small shovel in the coal bucket is gone.",
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the metal handle of the black coal bucket is gone.",
+    "3": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move, add or remove anything else. Changes: (a) in the open pencil case on the desk, one colored pencil is gone; (b) on top of the stove, the silver foil around the front sweet potato is gone, showing the purple sweet potato."
+   },
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
   }
  ],
  "thumbnail": {
@@ -805,16 +1215,16 @@
  },
  "shorts": [
   {
-   "question": 2,
-   "answer_gap": 3.3,
-   "note": "1本目：第2問 落ち葉の公園・初級",
-   "title": "シニアの間違い探し｜落ち葉の公園の1問 #脳トレ #頭の体操"
-  },
-  {
    "question": 4,
    "answer_gap": 3.3,
-   "note": "2本目：第4問 農家の納屋・中級",
-   "title": "シニアの間違い探し｜秋の納屋でさつまいも #脳トレ #頭の体操"
+   "note": "1本目：第4問 農家の納屋・中級",
+   "title": "シニアの間違い探し｜秋の納屋でさつまいもの1問 #脳トレ #頭の体操"
+  },
+  {
+   "question": 5,
+   "answer_gap": 3.3,
+   "note": "2本目：第5問 昔の教室・上級",
+   "title": "シニアの間違い探し｜昔の教室とだるまストーブ #脳トレ #頭の体操"
   }
  ]
 }
