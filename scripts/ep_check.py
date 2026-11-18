@@ -160,8 +160,9 @@ def zoom_sheet(out_dir, path, cols=3):
 
 
 def short_safe(ep, work, n=1):
-    """ショートのスマホの安全な範囲の判定（shorts.md「スマホの安全な範囲」2026-11-18）。
-    隠れる範囲を半透明で重ねた確認画像 <回>/short*/safe_check.png を作り、文字・こよみ先生・違いがはみ出していたら問題として返す。"""
+    """ショートの画面の作りの判定（shorts.md「ショートの画面の作り（2026-11-18 夜 改訂）」）。
+    文字・こよみ先生が左右36px・上120pxにかからないこと、絵が左右中央にあることを確かめ、
+    実機の画面を重ねた確認画像 <回>/short*/phone_question.png・phone_end.png と、お手本と並べた compare_competitor1.png を作る。"""
     import ep_short as S
     S.use(n)
     S.setup(ep, work, S.CTX.get("font") or str(next(Path(work).glob("fontpkg/package/*/*.ttf"))))

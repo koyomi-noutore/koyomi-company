@@ -22,19 +22,16 @@ W, H, FPS = 1080, 1920, 30
 BG = (246, 236, 216)
 INK = (59, 47, 37)
 RED = (220, 30, 30)
-# スマホの安全な範囲（shorts.md 2026-11-18：iPhone 実機のスクショから）。文字・こよみ先生・違い（＝絵）はこの中に入れる
-SAFE = (60, 260, 900, 1470)
-# 隠れる・切れる所（確認画像に半透明で重ねる）：上の約250px、下の y1480〜、右のボタン（x900〜・y1000〜1880）、左右の端40px
-HIDDEN = [(0, 0, W, 250), (0, 1480, W, H), (900, 1000, W, 1880), (0, 0, 40, H), (W - 40, 0, W, H)]
-SAFE_CX = (SAFE[0] + SAFE[2]) / 2
-# 上の帯（問題文・難易度）は安全な範囲の上に、絵は残りの高さいっぱいに上下2枚（8:9）
-BAND_TOP, BAND_H = 262, 112
-GAP = 8
-PH = (SAFE[3] - (BAND_TOP + BAND_H + 6) - GAP) // 2
-PW = PH * 8 // 9
-PX = int(SAFE_CX - PW / 2)
-YS = {"a": BAND_TOP + BAND_H + 6, "b": BAND_TOP + BAND_H + 6 + PH + GAP}
-HIDDEN_Y = 1480     # これより下はタイトル・チャンネル名・関連動画のリンクで隠れる
+# 画面の作り（shorts.md「ショートの画面の作り（2026-11-18 夜 改訂）」）：iPhone（19.5:9）で高さいっぱいに表示され、左右が約36px切れ、上の約120pxに時刻が重なる
+EDGE_X, TOP_UI = 36, 120
+TEXT_TOP, TEXT_BOTTOM = 120, 280          # 上の文字（問題文）は y 120〜280 に大きく中央
+PIC_TOP, PIC_BOTTOM = 290, 1490           # 絵は y 290 から。下のタイトル・右のボタンには重なってよい。こよみ先生（左下）の上で止める
+PIC_MAXW, GAP = 880, 12                   # 絵の幅は約860〜900px、左右中央
+# 絵の大きさと切り抜きは問ごとに setup で決める（違い3つが入る範囲で横長に切り抜く）
+PW, PH, PX = PIC_MAXW, 590, (W - PIC_MAXW) // 2
+YS = {"a": PIC_TOP, "b": PIC_TOP + 590 + GAP}
+CROP = None
+BAND_H = TEXT_BOTTOM
 LEVEL_COLOR = {"やさしい": (70, 140, 190), "初級": (96, 150, 90), "中級": (214, 128, 48), "上級": (176, 62, 52)}
 SR = 48000
 
@@ -43,11 +40,11 @@ DEFAULT = {"solve": 25.0, "intro_at": 0.3, "answer_gap": 3.2, "end_len": 8.0,
            # 2026-11-18 CEO指示（shorts.md）：どこを押すか具体的に言い、矢印で関連動画のリンクの位置を示す
            "end": "続きは長い動画で。左下をクリックして、挑戦してみてくださいね。",
            "end_title": "続きは 長い動画で", "end_sub": "左下を クリック！"}
-# こよみ先生は左下（絵の左の余白で、下の隠れる帯のすぐ上）に、最初から最後まで（shorts.md「スマホの安全な範囲」2026-11-18）
-OWL_SIZE = 150
-OWL_XY = (60, SAFE[3] - OWL_SIZE - 8)      # 上下にゆれる幅（±5px）を見ても安全な範囲に入る
-TEXT_CX = SAFE_CX
-LINK_XY = (150, 1630)      # 関連動画のリンクが出るあたり（画面の左下、タイトルの上）。矢印の先
+# こよみ先生は左下（x 約40〜220、y 約1500〜1680）に、最初から最後まで（shorts.md 2026-11-18 夜 改訂）
+OWL_SIZE = 160
+OWL_XY = (50, 1510)
+TEXT_CX = W / 2
+LINK_XY = (190, 1760)      # 関連動画のリンク（左下、y 約1700〜1800）。矢印の先
 
 
 # 1本の長尺から、ショートを複数作る（2026-11-14 CEO決定：1日2本・14:00と18:00）。
@@ -200,9 +197,32 @@ def setup(ep, work, fontp):
     CTX["Q"] = ans
     CTX["voice"] = json.loads((Path(work) / SUB / "voice.json").read_text(encoding="utf-8"))
     CTX["lines"], CTX["end_at"], CTX["total"] = lines(ep)
+    global PW, PH, PX, YS, CROP
+    # 違い3つが入る範囲（＋余白）を、表示の枠（幅 PIC_MAXW・高さは2枚で PIC_TOP〜PIC_BOTTOM）の縦横比で横長に切り抜く
+    cx0, cy0, cx1, cy1 = ans["content_px"]
+    bx = [a_["box_px"] for a_ in ans["answers"]]
+    m = 90
+    x0, y0 = max(cx0, min(b_[0] for b_ in bx) - m), max(cy0, min(b_[1] for b_ in bx) - m)
+    x1, y1 = min(cx1, max(b_[2] for b_ in bx) + m), min(cy1, max(b_[3] for b_ in bx) + m)
+    maxh = (PIC_BOTTOM - PIC_TOP - GAP) // 2
+    asp = PIC_MAXW / maxh
+    w, h = x1 - x0, y1 - y0
+    if w / h < asp:
+        w = min(cx1 - cx0, h * asp)
+    else:
+        h = min(cy1 - cy0, w / asp)
+    mx, my = (x0 + x1) / 2, (y0 + y1) / 2
+    X0 = min(max(cx0, mx - w / 2), cx1 - w); Y0 = min(max(cy0, my - h / 2), cy1 - h)
+    CROP = (int(X0), int(Y0), int(X0 + w), int(Y0 + h))
+    if w / h >= asp:
+        PW, PH = PIC_MAXW, int(round(PIC_MAXW * h / w))
+    else:
+        PH, PW = maxh, int(round(maxh * w / h))
+    PX = (W - PW) // 2
+    YS = {"a": PIC_TOP, "b": PIC_TOP + PH + GAP}
     pics = {}
     for side in "ab":
-        im = Image.open(Path(ep) / f"q{q}_{side}.png").convert("RGB").crop(tuple(ans["content_px"]))
+        im = Image.open(Path(ep) / f"q{q}_{side}.png").convert("RGB").crop(CROP)
         pics[side] = im.resize((PW, PH), Image.LANCZOS)
     base = Image.new("RGB", (W, H), BG)
     for side, y in YS.items():
@@ -215,10 +235,13 @@ def setup(ep, work, fontp):
 
 
 def circle_box(a, side):
-    """answers.json の画面座標（960×1080の絵の上）を、ショートの絵（720×810）の上の座標にする。"""
-    k = PW / 960
+    """answers.json の画面座標（960×1080の絵の上）を、ショートの絵（切り抜いて PW×PH にした物）の上の座標にする。"""
+    cx0, cy0, cx1, cy1 = CTX["Q"]["content_px"]
+    s_ = 960 / (cx1 - cx0)
+    k = PW / (CROP[2] - CROP[0])
     x0, y0, x1, y1 = a[f"circle_{side}_screen"]
-    return PX + x0 * k, YS[side] + y0 * k, PX + x1 * k, YS[side] + y1 * k
+    f = lambda v, o, c0: (v / s_ + c0 - o) * k
+    return (PX + f(x0, CROP[0], cx0), YS[side] + f(y0, CROP[1], cy0), PX + f(x1, CROP[0], cx0), YS[side] + f(y1, CROP[1], cy0))
 
 
 def wrap2(s, maxc):
@@ -254,35 +277,35 @@ def render(t):
     def text(xy, s, f, **kw):
         d.text(xy, s, font=f, **kw)
         drawn.append(("文字:" + s, d.textbbox(xy, s, font=f, anchor=kw.get("anchor"), stroke_width=kw.get("stroke_width", 0))))
-    # 上の帯（安全な範囲の上の端に置く。帯の地の色は画面の端まで塗ってよい）
-    d.rectangle((0, BAND_TOP, W, BAND_TOP + BAND_H), fill=(52, 40, 30))
-    cy = BAND_TOP + BAND_H / 2
+    # 上の文字（y 120〜280 に大きく中央。時刻の帯 y<120 と左右36pxには入れない）
+    d.rectangle((0, 0, W, TEXT_BOTTOM + 8), fill=(52, 40, 30))
     sub = current_sub(t) if t < CTX["end_at"] else None
     if sub:
-        ls = wrap2(sub, 16)
-        size = 46 if len(ls) == 1 else 42
+        ls = wrap2(sub, 15)
+        size = 64 if len(ls) == 1 else 58
+        cy = (TEXT_TOP + TEXT_BOTTOM) / 2
         for i, l in enumerate(ls):
-            y = cy + (i - (len(ls) - 1) / 2) * (size + 8)
+            y = cy + (i - (len(ls) - 1) / 2) * (size + 12)
             text((TEXT_CX, y), l, font(size), fill=(255, 255, 255), anchor="mm")
     else:
-        text((TEXT_CX, BAND_TOP + 38), "3つ見つけられる？", font(58), fill=(255, 214, 0), anchor="mm", stroke_width=3, stroke_fill=(30, 20, 10))
+        text((TEXT_CX, 182), "3つ見つけられる？", font(100), fill=(255, 214, 0), anchor="mm", stroke_width=4, stroke_fill=(30, 20, 10))
         col = LEVEL_COLOR[Q["level"]]
         cap = f"秋の間違いさがし・{Q['scene']}"
-        fcap = font(30)
+        fcap = font(32)
         wcap = d.textlength(cap, font=fcap)
         bx = TEXT_CX - (120 + 14 + wcap) / 2
-        by = BAND_TOP + 72
-        d.rounded_rectangle((bx, by, bx + 120, by + 34), 12, fill=col)
-        drawn.append(("難易度の札", (bx, by, bx + 120, by + 34)))
-        text((bx + 60, by + 17), Q["level"], font(28), fill=(255, 255, 255), anchor="mm")
-        text((bx + 134, by + 17), cap, fcap, fill=(255, 240, 200), anchor="lm")
+        by = 248
+        d.rounded_rectangle((bx, by, bx + 120, by + 30), 12, fill=col)
+        drawn.append(("難易度の札", (bx, by, bx + 120, by + 30)))
+        text((bx + 60, by + 15), Q["level"], font(26), fill=(255, 255, 255), anchor="mm")
+        text((bx + 134, by + 15), cap, fcap, fill=(255, 240, 200), anchor="lm")
     # 残り時間のバー（帯の下）
     if t < c["solve"]:
         frac = max(0.0, 1 - t / c["solve"])
         rem = c["solve"] - t
         col = (110, 180, 100) if rem > 10 else (236, 170, 50) if rem > 5 else (230, 70, 60)
-        d.rectangle((SAFE[0], BAND_TOP + BAND_H, SAFE[2], BAND_TOP + BAND_H + 5), fill=(225, 212, 188))
-        d.rectangle((SAFE[0], BAND_TOP + BAND_H, SAFE[0] + int((SAFE[2] - SAFE[0]) * frac), BAND_TOP + BAND_H + 5), fill=col)
+        d.rectangle((EDGE_X, TEXT_BOTTOM + 2, W - EDGE_X, TEXT_BOTTOM + 7), fill=(225, 212, 188))
+        d.rectangle((EDGE_X, TEXT_BOTTOM + 2, EDGE_X + int((W - 2 * EDGE_X) * frac), TEXT_BOTTOM + 7), fill=col)
         if rem <= 5:
             d.text((PX + PW - 20, YS["a"] + 20), str(math.ceil(rem - 1e-6)), font=font(96), fill=(230, 70, 60), anchor="ra",
                    stroke_width=5, stroke_fill=(255, 255, 255))
@@ -317,8 +340,8 @@ def render(t):
         if t >= e0 + 0.5:
             d2 = ImageDraw.Draw(im)
             wig = 14 * math.sin(2 * math.pi * (t - e0) / 1.0)
-            tx, ty = LINK_XY[0] + 60 + wig * 0.7, LINK_XY[1] - 40 + wig * 0.7     # 矢印の先
-            sx, sy = 560, 1080                                                  # 矢印の根元
+            tx, ty = LINK_XY[0] + 50 + wig * 0.7, LINK_XY[1] - 40 + wig * 0.7     # 矢印の先
+            sx, sy = 560, 1100                                                  # 矢印の根元
             ang = math.atan2(ty - sy, tx - sx)
             hx, hy = tx - 90 * math.cos(ang), ty - 90 * math.sin(ang)
             px, py = -math.sin(ang), math.cos(ang)
@@ -371,51 +394,71 @@ def contact_sheet(ep, work, fontp, path):
     return path
 
 
+PHONE_W, PHONE_H = 1125, 2436       # CEOの iPhone 実機スクショの大きさ（19.5:9）
+PHONE_K = PHONE_W / (W - 2 * EDGE_X)  # 動画は高さいっぱい（×約1.116）に拡大され、左右が約36pxずつ切れる
+UI_OVERLAY = Path(__file__).resolve().parent.parent / "departments/production/reference/iphone_ui_overlay.png"
+
+
+def phone_mock(frame):
+    """動画の1コマを iPhone の画面に置き、実機スクショの画面の部品（時刻・右のボタン・下のチャンネル名とタイトル）を重ねる。"""
+    ph = Image.new("RGB", (PHONE_W, PHONE_H), (0, 0, 0))
+    fr = frame.resize((round(W * PHONE_K), round(H * PHONE_K)), Image.LANCZOS)
+    ph.paste(fr, (-round(EDGE_X * PHONE_K), 0))
+    if UI_OVERLAY.exists():
+        ui = Image.open(UI_OVERLAY).convert("RGBA")
+        ph = Image.alpha_composite(ph.convert("RGBA"), ui).convert("RGB")
+    return ph
+
+
 def safe_check(ep, work, fontp=None):
-    """スマホの安全な範囲の判定（shorts.md 2026-11-18）：文字・こよみ先生・違い（赤丸の中の物）が SAFE の中にあるか。
-    隠れる範囲を半透明の赤で重ねた確認画像 <回>/<short>/safe_check.png も作る（出題中・答え合わせ・最後の案内の3枚を横に並べる）。"""
+    """画面の作りの判定（shorts.md「ショートの画面の作り（2026-11-18 夜 改訂）」）：
+    - 文字とこよみ先生が、左右の端（36px）と上の時刻の帯（120px）にかからないこと
+    - 絵が左右中央にあり、左右の端で切れないこと
+    確認画像：<回>/<short>/phone_question.png（出題中）・phone_end.png（最後の呼びかけ）に実機の画面を重ねたもの、
+    compare_competitor1.png（お手本と並べたもの）。"""
     if "base" not in CTX:
         setup(ep, work, fontp or CTX.get("font"))
     CTX["drawn"] = []
     c = cfg()
-    times = [max(0.5, CTX["voice"][0]["start"] + 0.5), c["solve"] - 6, CTX["end_at"] - 0.3, CTX["total"] - 0.5]
-    frames = [render(t) for t in times]
-    boxes = list(CTX["drawn"])
+    tq, te = c["solve"] - 6, CTX["total"] - 0.5
+    times = [max(0.5, CTX["voice"][0]["start"] + 0.5), tq] + [v["start"] + 0.3 for v in CTX["voice"]] + [te]
+    frames = {t: render(t) for t in times}
+    boxes = [b_ for b_ in CTX["drawn"]]
     boxes.append(("こよみ先生", (OWL_XY[0], OWL_XY[1] - 5, OWL_XY[0] + OWL_SIZE, OWL_XY[1] + OWL_SIZE + 5)))
-    for i, a in enumerate(CTX["Q"]["answers"]):
-        for side in "ab":
-            boxes.append((f"違い{i + 1}（{'上' if side == 'a' else '下'}の絵）", circle_box(a, side)))
-    problems = []
-    seen = set()
+    problems, seen = [], set()
     for name, (x0, y0, x1, y1) in boxes:
-        if not (SAFE[0] - 1 <= x0 and SAFE[1] - 1 <= y0 and x1 <= SAFE[2] + 1 and y1 <= SAFE[3] + 1):
-            key = (name, round(x0), round(y0))
-            if key not in seen:
-                seen.add(key)
-                problems.append(f"安全な範囲の外：{name}（{x0:.0f},{y0:.0f}〜{x1:.0f},{y1:.0f}）")
-    tiles = []
-    for fr in (frames[1], frames[2], frames[3]):
-        im = fr.convert("RGBA")
-        ov = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-        od = ImageDraw.Draw(ov)
-        for r in HIDDEN:
-            od.rectangle(r, fill=(230, 30, 30, 110))
-        od.rectangle(SAFE, outline=(0, 160, 60, 255), width=6)
-        for name, b in boxes:
-            ok = SAFE[0] - 1 <= b[0] and SAFE[1] - 1 <= b[1] and b[2] <= SAFE[2] + 1 and b[3] <= SAFE[3] + 1
-            od.rectangle(b, outline=(0, 120, 255, 255) if ok else (255, 0, 0, 255), width=3)
-        tiles.append(Image.alpha_composite(im, ov).convert("RGB").resize((360, 640), Image.LANCZOS))
-    sheet = Image.new("RGB", (360 * 3 + 20, 640), (255, 255, 255))
-    for i, t in enumerate(tiles):
-        sheet.paste(t, (i * 370, 0))
-    out = Path(ep) / SUB / "safe_check.png"
-    out.parent.mkdir(parents=True, exist_ok=True)
-    sheet.save(out)
-    return problems, out
+        bad = []
+        if x0 < EDGE_X or x1 > W - EDGE_X:
+            bad.append("左右の端（36px）")
+        if y0 < TOP_UI:
+            bad.append("上の時刻の帯（120px）")
+        if bad and (name, round(x0), round(y0)) not in seen:
+            seen.add((name, round(x0), round(y0)))
+            problems.append(f"{name} が{'・'.join(bad)}にかかる（{x0:.0f},{y0:.0f}〜{x1:.0f},{y1:.0f}）")
+    if abs(PX + PW / 2 - W / 2) > 2:
+        problems.append(f"絵が左右中央にない（中心 x{PX + PW / 2:.0f}）")
+    if PX < EDGE_X or PX + PW > W - EDGE_X:
+        problems.append(f"絵が左右の端で切れる（x{PX}〜{PX + PW}）")
+    if not 860 <= PW <= 900:
+        problems.append(f"絵の幅 {PW}px が目安（約860〜900px）の外")
+    out = Path(ep) / SUB
+    out.mkdir(parents=True, exist_ok=True)
+    pq, pe = phone_mock(frames[tq]), phone_mock(frames[te])
+    pq.save(out / "phone_question.png"); pe.save(out / "phone_end.png")
+    comp = Path(__file__).resolve().parent.parent / "departments/production/reference/shorts_ref_competitor1.png"
+    if comp.exists():
+        cimg = Image.open(comp).convert("RGB").resize((PHONE_W, PHONE_H))
+        sheet = Image.new("RGB", (PHONE_W * 2 + 40, PHONE_H + 120), (255, 255, 255))
+        sheet.paste(pq, (0, 120)); sheet.paste(cimg, (PHONE_W + 40, 120))
+        dd = ImageDraw.Draw(sheet)
+        dd.text((PHONE_W / 2, 60), "こよみ先生（今回）", font=font(64), fill=INK, anchor="mm")
+        dd.text((PHONE_W * 1.5 + 40, 60), "お手本（競合 1）", font=font(64), fill=INK, anchor="mm")
+        sheet.resize((sheet.width // 2, sheet.height // 2), Image.LANCZOS).save(out / "compare_competitor1.png")
+    return problems, out / "phone_question.png"
 
 
 def check(ep, work):
-    """数値チェック：大きさ・長さ（15〜45秒）・声が枠に収まるか・スマホの安全な範囲（safe_check）。"""
+    """数値チェック：大きさ・長さ（15〜45秒）・声が枠に収まるか・画面の作り（safe_check：文字とこよみ先生が端と時刻の帯にかからない、絵が中央）。"""
     out = Path(ep) / SUB
     problems = []
     r = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration:stream=codec_type,width,height", "-of", "json",
@@ -439,18 +482,6 @@ def check(ep, work):
     if max(lv) - min(lv) > 6:
         problems.append(f"セリフごとの声の大きさの差が6dBを超える（元の声のファイル）：{st}")
     tl = json.loads((out / "timeline.json").read_text(encoding="utf-8"))
-    # 違いの赤丸が、隠れる帯（画面下の約2割）や右側のボタンの帯にかからないか（2026-11-18 監査）
-    try:
-        setup_q = {Q["q"]: Q for Q in json.loads((Path(ep) / "answers.json").read_text(encoding="utf-8"))["questions"]}[cfg()["question"]]
-        for i, a in enumerate(setup_q["answers"]):
-            for side in "ab":
-                x0, y0, x1, y1 = circle_box(a, side)
-                if y1 > HIDDEN_Y:     # 物そのもの（box）が隠れる帯に入らないか。赤丸の線の太さ分ははみ出してよい
-                    problems.append(f"違い{i + 1}（{side}）が画面下の隠れる帯にかかる（y{y1:.0f}）")
-                if x1 + 9 > W - 120:
-                    problems.append(f"違い{i + 1}（{side}）が右側のボタンの帯にかかる（x{x1:.0f}）")
-    except Exception as e:
-        problems.append(f"違いの位置を確かめられない：{e}")
     sp, simg = safe_check(ep, work)
     problems += sp
     res = {"voice": st, "duration": round(dur, 2), "size": [v["width"], v["height"]], "question": tl["question"], "problems": problems,
