@@ -141,9 +141,14 @@ def apply(im, op, work=None):
             lab, n = ndimage.label(m)
             if n > 1:
                 m = lab == (int(np.argmax(ndimage.sum(m, lab, range(1, n + 1)))) + 1)
-            m = ndimage.binary_dilation(ndimage.binary_fill_holes(m), iterations=op.get("grow", 5))
+            g = op.get("grow", 5)
+            m = ndimage.binary_fill_holes(m)
+            if g > 0:     # iterations=0 は「変わらなくなるまで」の意味になるので、0 のときは広げない
+                m = ndimage.binary_dilation(m, iterations=g)
+            if op.get("erode"):     # ふちを内側へ縮める（白いふちを残さない）
+                m = ndimage.binary_erosion(m, iterations=op["erode"])
             if op.get("poly"):
-                m &= ndimage.binary_dilation(pin, iterations=op.get("grow", 5))
+                m &= ndimage.binary_dilation(pin, iterations=max(g, 1))
             op = dict(op, _mask=m)
         if op.get("_mask") is not None:
             pass

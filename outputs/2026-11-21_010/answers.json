@@ -454,7 +454,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 1505,
+   "outside_box_pixels_diff_gt15": 1435,
    "outside_box_max_distance_px": 12.0,
    "answers": [
     {
@@ -541,25 +541,25 @@
      "box_px": [
       1530,
       880,
-      1705,
+      1688,
       1115
      ],
      "box_screen": [
       791,
       455,
-      882,
+      873,
       577
      ],
      "circle_a_screen": [
       791,
       455,
-      882,
+      873,
       577
      ],
      "circle_b_screen": [
       791,
       455,
-      882,
+      873,
       577
      ],
      "object_w_px": 150,
@@ -589,7 +589,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 363,
+   "outside_box_pixels_diff_gt15": 321,
    "outside_box_max_distance_px": 10.0,
    "answers": [
     {
