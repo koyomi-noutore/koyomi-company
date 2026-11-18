@@ -22,10 +22,11 @@ W, H, FPS = 1080, 1920, 30
 BG = (246, 236, 216)
 INK = (59, 47, 37)
 RED = (220, 30, 30)
-# 絵は上下2枚。下の絵の下の端を y1535 までにする（スマホで画面下の約2割が隠れるため。2026-11-18 監査の差し戻し）
-PW, PH = 587, 660
+# 絵は上下2枚。大きさは第6回までと同じ（2026-11-18 CEO：第7・8回は小さくて見にくかった）。
+# 下の絵の下のほうはスマホで隠れるので、ショートに使う問は違いが隠れる帯（HIDDEN_Y より下）にかからないものを選ぶ（check で確かめる）
+PW, PH = 720, 810
 PX = (W - PW) // 2
-YS = {"a": 205, "b": 875}
+YS = {"a": 205, "b": 1025}
 HIDDEN_Y = 1536     # これより下はタイトル・チャンネル名・関連動画のリンクで隠れる
 BAND_H = 200
 LEVEL_COLOR = {"やさしい": (70, 140, 190), "初級": (96, 150, 90), "中級": (214, 128, 48), "上級": (176, 62, 52)}
@@ -36,10 +37,10 @@ DEFAULT = {"solve": 25.0, "intro_at": 0.3, "answer_gap": 3.2, "end_len": 8.0,
            # 2026-11-18 CEO指示（shorts.md）：どこを押すか具体的に言い、矢印で関連動画のリンクの位置を示す
            "end": "続きは長い動画で。左下をクリックして、挑戦してみてくださいね。",
            "end_title": "続きは 長い動画で", "end_sub": "左下を クリック！"}
-# こよみ先生は最初から最後まで左下に出す（2026-11-18）。絵（x 180〜900）に重ねず、
-# スマホで隠れる下の約2割（y 1536〜）と右側のボタンの帯を避けて、左のすき間の下のほうに置く
-OWL_SIZE = 168
-OWL_XY = (6, 1340)
+# こよみ先生は最初から最後まで、上の文字の帯の左側に出す（shorts.md 2026-11-18 第9回から）。絵に重ねず、スマホで隠れない所
+OWL_SIZE = 150
+OWL_XY = (14, 25)
+TEXT_CX = (OWL_XY[0] + OWL_SIZE + 10 + W - 16) / 2      # 帯の文字は、こよみ先生の右側のまん中にそろえる
 LINK_XY = (150, 1630)      # 関連動画のリンクが出るあたり（画面の左下、タイトルの上）。矢印の先
 
 
@@ -247,17 +248,18 @@ def render(t):
     d.rectangle((0, 0, W, BAND_H), fill=(52, 40, 30))
     sub = current_sub(t) if t < CTX["end_at"] else None
     if sub:
-        ls = wrap2(sub, 17)
-        size = 64 if len(ls) == 1 else 58
+        ls = wrap2(sub, 14)
+        size = 60 if len(ls) == 1 else 54
         for i, l in enumerate(ls):
             y = BAND_H / 2 + (i - (len(ls) - 1) / 2) * (size + 14)
-            d.text((W / 2, y), l, font=font(size), fill=(255, 255, 255), anchor="mm")
+            d.text((TEXT_CX, y), l, font=font(size), fill=(255, 255, 255), anchor="mm")
     else:
-        d.text((W / 2, 78), "3つ見つけられる？", font=font(84), fill=(255, 214, 0), anchor="mm", stroke_width=3, stroke_fill=(30, 20, 10))
+        d.text((TEXT_CX, 78), "3つ見つけられる？", font=font(80), fill=(255, 214, 0), anchor="mm", stroke_width=3, stroke_fill=(30, 20, 10))
         col = LEVEL_COLOR[Q["level"]]
-        d.rounded_rectangle((W / 2 - 250, 138, W / 2 - 90, 186), 16, fill=col)
-        d.text((W / 2 - 170, 162), Q["level"], font=font(36), fill=(255, 255, 255), anchor="mm")
-        d.text((W / 2 - 70, 162), f"秋の間違いさがし・{Q['scene']}", font=font(36), fill=(255, 240, 200), anchor="lm")
+        bx = TEXT_CX - 330
+        d.rounded_rectangle((bx, 138, bx + 160, 186), 16, fill=col)
+        d.text((bx + 80, 162), Q["level"], font=font(36), fill=(255, 255, 255), anchor="mm")
+        d.text((bx + 180, 162), f"秋の間違いさがし・{Q['scene']}", font=font(34), fill=(255, 240, 200), anchor="lm")
     # 残り時間のバー（帯の下）
     if t < c["solve"]:
         frac = max(0.0, 1 - t / c["solve"])
@@ -309,7 +311,7 @@ def render(t):
                 e = wdt / 28
                 d2.polygon([(tx + 8 * (e - 1) * math.cos(ang), ty + 8 * (e - 1) * math.sin(ang)),
                             (hx + 52 * e * px, hy + 52 * e * py), (hx - 52 * e * px, hy - 52 * e * py)], fill=col)
-    # こよみ先生（最初から最後まで左下。2026-11-18）
+    # こよみ先生（最初から最後まで、上の帯の左側。2026-11-18 第9回から）
     if CTX["owl_s"] is not None:
         o = CTX["owl_s"]
         bob = int(5 * math.sin(2 * math.pi * t / 1.6))

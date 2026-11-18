@@ -1,0 +1,820 @@
+{
+ "episode": "009",
+ "season": "秋",
+ "topics": [
+  "焼き芋"
+ ],
+ "note": "第9回（焼き芋）。難易度の引き下げ（2026-11-18）・ショートの絵を第6回の大きさに戻した最初の回。",
+ "youtube": {
+  "title": "【秋の間違い探し】シニアの脳トレクイズ｜焼き芋のイラスト全5問【60代・70代の頭の体操】",
+  "description_file": "description.md",
+  "title_note": "タイトルに季節の言葉（秋）。サムネは「サムネの文言の型」から主役の軸が違う3案（ab/）",
+  "publish_plan": "2026-11-20（金）8:30、ショート14:00・18:00"
+ },
+ "screens": {
+  "opening_title": "焼き芋の間違い探し　全5問",
+  "opening_sub": "最後は難問です",
+  "unchiku_header": "こよみ先生の 秋の小話",
+  "unchiku_slides": [
+   {
+    "until": 7,
+    "texts": [
+     [
+      "ひと休み",
+      960,
+      330,
+      130,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "こよみ先生の 季節のお話",
+      960,
+      520,
+      80,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 15,
+    "texts": [
+     [
+      "焼き芋の別名「十三里」って？",
+      960,
+      380,
+      100,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ]
+    ]
+   },
+   {
+    "until": 24,
+    "texts": [
+     [
+      "栗（九里）より うまい",
+      960,
+      330,
+      120,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "九里 ＋ 四里 ＝ 十三里",
+      960,
+      520,
+      100,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 30,
+    "texts": [
+     [
+      "江戸の焼き芋屋の 看板の言葉",
+      960,
+      360,
+      90,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ],
+     [
+      "話のタネに",
+      960,
+      560,
+      80,
+      [
+       200,
+       120,
+       40
+      ],
+      0
+     ]
+    ]
+   }
+  ],
+  "ending_titles": [
+   [
+    "15個",
+    "焼き芋名人"
+   ],
+   [
+    "11〜14個",
+    "ほくほく名探偵"
+   ],
+   [
+    "6〜10個",
+    "ほかほかさん"
+   ],
+   [
+    "0〜5個",
+    "おいもさん"
+   ]
+  ],
+  "ending_note": "おいもさんは、じっくり焼くほど甘くなります",
+  "ending_next": "次の動画も つづけて どうぞ",
+  "owl_layout": "bottom",
+  "endscreen_at": 9.0
+ },
+ "timeline": {
+  "total": 630.0,
+  "opening": [
+   0.0,
+   19.0
+  ],
+  "rule": [
+   19.0,
+   30.0
+  ],
+  "q_start": {
+   "1": 30.0,
+   "2": 138.0,
+   "3": 246.0,
+   "4": 384.0,
+   "5": 492.0
+  },
+  "unchiku": [
+   354.0,
+   384.0
+  ],
+  "ending": [
+   600.0,
+   630.0
+  ],
+  "card": 3.0,
+  "solve": 90.0,
+  "answer": 15.0,
+  "hint_at": null,
+  "ten_at": 80.0,
+  "ans_first": 1.6,
+  "ans_step": 4.3,
+  "solve_calls": [
+   [
+    30,
+    "あと60秒です。"
+   ],
+   [
+    60,
+    "あと30秒です。"
+   ]
+  ],
+  "go_delay": 1.3
+ },
+ "lines": {
+  "opening": [
+   {
+    "id": "op",
+    "at": 0.0,
+    "text": "こよみ先生です。今日は、焼き芋の間違い探し、全5問です。",
+    "face": "smile",
+    "until": 7.0
+   },
+   {
+    "id": "op2",
+    "at": 7.0,
+    "text": "最後は難問です。3問目のあとには、焼き芋の意外なお話も。",
+    "face": "surprise",
+    "until": 14.0
+   },
+   {
+    "id": "op3",
+    "at": 14.0,
+    "text": "ぜひ最後まで、一緒に解いてくださいね。",
+    "face": "wink",
+    "until": 19.0
+   }
+  ],
+  "rule": [
+   {
+    "id": "rule",
+    "at": 0.0,
+    "text": "ルールです。左と右の絵をくらべて、90秒で、右の絵の違いを3つ探してください。",
+    "face": "normal",
+    "until": 11.0
+   }
+  ],
+  "unchiku": [
+   {
+    "id": "u1",
+    "at": 0.0,
+    "text": "ここでひと休み。こよみ先生の季節のお話です。",
+    "face": "smile",
+    "until": 7.0
+   },
+   {
+    "id": "u2",
+    "at": 7.0,
+    "text": "焼き芋の別の名前「十三里」って、何のことでしょう？",
+    "face": "think",
+    "until": 15.0
+   },
+   {
+    "id": "u3",
+    "at": 15.0,
+    "text": "栗より、うまい。九里と四里を足して、十三里というしゃれです。",
+    "face": "surprise",
+    "until": 24.0
+   },
+   {
+    "id": "u4",
+    "at": 24.0,
+    "text": "江戸のころ、焼き芋屋の看板の言葉でした。",
+    "face": "wink",
+    "until": 30.0
+   }
+  ],
+  "ending": [
+   {
+    "id": "e1",
+    "at": 0.0,
+    "text": "これで5問、おしまいです。",
+    "face": "yay",
+    "until": 3.6
+   },
+   {
+    "id": "e2",
+    "at": 3.6,
+    "text": "15個の違い、いくつ見つかりましたか。今日の称号です。",
+    "face": "smile",
+    "until": 10.2
+   },
+   {
+    "id": "e3",
+    "at": 10.2,
+    "text": "チャンネル登録とベルで、毎朝8時半に問題が届きます。毎日の頭の体操にどうぞ。",
+    "face": "smile",
+    "until": 21.0
+   },
+   {
+    "id": "e4",
+    "at": 21.0,
+    "text": "左の丸を押すと登録、右の動画で、次の問題に挑戦できますよ。",
+    "face": "wink",
+    "until": 30.0
+   }
+  ],
+  "extra": [
+   {
+    "id": "c_comment",
+    "at": 261.0,
+    "text": "見つかった数を、あとでコメントで教えてくださいね。",
+    "face": "smile",
+    "until": 268.0
+   }
+  ]
+ },
+ "readings": [
+  [
+   "石焼き芋の屋台",
+   "いしやきいものやたい"
+  ],
+  [
+   "落ち葉の公園",
+   "おちばのこうえん"
+  ],
+  [
+   "運動会の校庭",
+   "うんどうかいのこうてい"
+  ],
+  [
+   "農家の納屋",
+   "のうかのなや"
+  ],
+  [
+   "昔の教室",
+   "むかしのきょうしつ"
+  ],
+  [
+   "焼き芋",
+   "やきいも"
+  ],
+  [
+   "上級",
+   "じょうきゅう"
+  ],
+  [
+   "中級",
+   "ちゅうきゅう"
+  ],
+  [
+   "初級",
+   "しょきゅう"
+  ],
+  [
+   "右はし",
+   "みぎはし"
+  ],
+  [
+   "形",
+   "かたち"
+  ],
+  [
+   "茶色い",
+   "ちゃいろい"
+  ],
+  [
+   "先",
+   "さき"
+  ],
+  [
+   "数",
+   "かず"
+  ],
+  [
+   "花びら",
+   "はなびら"
+  ],
+  [
+   "花",
+   "はな"
+  ],
+  [
+   "上",
+   "うえ"
+  ],
+  [
+   "土なべ",
+   "どなべ"
+  ],
+  [
+   "下",
+   "した"
+  ],
+  [
+   "玉ねぎ",
+   "たまねぎ"
+  ],
+  [
+   "白く",
+   "しろく"
+  ],
+  [
+   "黒い",
+   "くろい"
+  ],
+  [
+   "輪",
+   "わ"
+  ],
+  [
+   "針",
+   "はり"
+  ],
+  [
+   "変わり",
+   "かわり"
+  ],
+  [
+   "一本",
+   "いっぽん"
+  ],
+  [
+   "牛",
+   "うし"
+  ],
+  [
+   "左",
+   "ひだり"
+  ],
+  [
+   "右",
+   "みぎ"
+  ],
+  [
+   "落ち葉",
+   "おちば"
+  ],
+  [
+   "高く",
+   "たかく"
+  ],
+  [
+   "黄色い",
+   "きいろい"
+  ],
+  [
+   "短く",
+   "みじかく"
+  ],
+  [
+   "大きく",
+   "おおきく"
+  ],
+  [
+   "頭",
+   "あたま"
+  ],
+  [
+   "刃",
+   "は"
+  ],
+  [
+   "舞って",
+   "まって"
+  ],
+  [
+   "葉っぱ",
+   "はっぱ"
+  ],
+  [
+   "魔法瓶",
+   "まほうびん"
+  ],
+  [
+   "黄色",
+   "きいろ"
+  ],
+  [
+   "小さな",
+   "ちいさな"
+  ],
+  [
+   "少なく",
+   "すくなく"
+  ],
+  [
+   "向いて",
+   "むいて"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "青い",
+   "あおい"
+  ],
+  [
+   "白い",
+   "しろい"
+  ],
+  [
+   "第1問",
+   "だいいちもん"
+  ],
+  [
+   "第2問",
+   "だいにもん"
+  ],
+  [
+   "第3問",
+   "だいさんもん"
+  ],
+  [
+   "第4問",
+   "だいよんもん"
+  ],
+  [
+   "第5問",
+   "だいごもん"
+  ],
+  [
+   "60秒",
+   "ろくじゅうびょう"
+  ],
+  [
+   "30秒",
+   "さんじゅうびょう"
+  ],
+  [
+   "10秒",
+   "じゅうびょう"
+  ],
+  [
+   "後半",
+   "こうはん"
+  ],
+  [
+   "最後",
+   "さいご"
+  ],
+  [
+   "難問",
+   "なんもん"
+  ],
+  [
+   "問題",
+   "もんだい"
+  ],
+  [
+   "答え",
+   "こたえ"
+  ],
+  [
+   "少し",
+   "すこし"
+  ],
+  [
+   "大根",
+   "だいこん"
+  ],
+  [
+   "小皿",
+   "こざら"
+  ],
+  [
+   "量",
+   "りょう"
+  ],
+  [
+   "小鳥",
+   "ことり"
+  ],
+  [
+   "向き",
+   "むき"
+  ],
+  [
+   "反対",
+   "はんたい"
+  ],
+  [
+   "小さく",
+   "ちいさく"
+  ],
+  [
+   "苗",
+   "なえ"
+  ],
+  [
+   "一つ",
+   "ひとつ"
+  ],
+  [
+   "丸",
+   "まる"
+  ],
+  [
+   "模様",
+   "もよう"
+  ],
+  [
+   "下駄",
+   "げた"
+  ],
+  [
+   "桶",
+   "おけ"
+  ],
+  [
+   "金属",
+   "きんぞく"
+  ],
+  [
+   "無く",
+   "なく"
+  ],
+  [
+   "増え",
+   "ふえ"
+  ],
+  [
+   "火",
+   "ひ"
+  ],
+  [
+   "向い",
+   "むい"
+  ],
+  [
+   "取っ手",
+   "とって"
+  ],
+  [
+   "金具",
+   "かなぐ"
+  ],
+  [
+   "葉",
+   "は"
+  ],
+  [
+   "一枚",
+   "いちまい"
+  ],
+  [
+   "緑",
+   "みどり"
+  ],
+  [
+   "色",
+   "いろ"
+  ],
+  [
+   "鍋",
+   "なべ"
+  ],
+  [
+   "真上",
+   "まうえ"
+  ],
+  [
+   "屋台",
+   "やたい"
+  ],
+  [
+   "銭湯",
+   "せんとう"
+  ],
+  [
+   "畑",
+   "はたけ"
+  ],
+  [
+   "絵",
+   "え"
+  ],
+  [
+   "今日",
+   "きょう"
+  ],
+  [
+   "一緒",
+   "いっしょ"
+  ],
+  [
+   "山門",
+   "さんもん"
+  ],
+  [
+   "川辺",
+   "かわべ"
+  ]
+ ],
+ "voice_override": {
+  "op3": "ぜひさいごまで、いっしょにといてくださいね。",
+  "rule": "ルールです。ひだりとみぎのえをくらべて、きゅうじゅうびょうで、みぎのえのちがいを、みっつさがしてください。",
+  "u1": "ここでひとやすみ。こよみせんせいの、きせつのおはなしです。",
+  "e1": "これでごもん、おしまいです。",
+  "e2": "じゅうごこのちがい、いくつみつかりましたか。きょうのしょうごうです。",
+  "e3": "チャンネルとうろくとベルで、まいあさはちじはんに、もんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。",
+  "e4": "ひだりのまるをおすととうろく、みぎのどうがで、つぎのもんだいに、ちょうせんできますよ。",
+  "c_comment": "みつかったかずを、あとでコメントでおしえてくださいね。",
+  "s_intro": "うえとしたのえで、ちがいがみっつあります。みつけられますか。",
+  "s_end": "つづきは、ながいどうがで。ひだりしたをクリックして、ちょうせんしてみてくださいね。",
+  "op": "こよみせんせいです。きょうは、やきいものまちがいさがし、ぜんごもんです。",
+  "op2": "さいごは、なんもんです。さんもんめのあとには、やきいもの、いがいなおはなしも。",
+  "u2": "やきいもの、べつのなまえ、じゅうさんりって、なんのことでしょう？",
+  "u3": "くり、より、うまい。くりと、よりをたして、じゅうさんり、というしゃれです。",
+  "u4": "えどのころ、やきいもやの、かんばんのことばでした。"
+ },
+ "voice": {
+  "provider": "fish",
+  "reference_id": "63819275ce38440ea245ca988abf976e",
+  "model": "s1",
+  "speed": 0.88,
+  "credit": "音声：Fish Audio（AIで合成した音声です）"
+ },
+ "images": {
+  "model": "gemini-3-pro-image",
+  "size": "2K",
+  "aspect": "4:5",
+  "style": "A Japanese picture-book illustration in watercolor, but with BOLD, THICK, DARK ink outlines around every object (like a clear picture book for seniors), and CLEAR, SATURATED colors (not pale). Bright, clean background. Natural, hand-drawn, slightly rounded shapes; not geometric, not flat vector, not photorealistic. CLOSE-UP composition (not a wide landscape): the scene is seen from close, filling the picture. PORTRAIT-ISH composition, about 8:9. The painting fills the entire canvas edge to edge: no white border. No people. Absolutely no text, letters, numbers, logos or symbols anywhere. The MAIN SUBJECT named in the scene is drawn LARGE in the center of the picture. Around it, only a few other objects, each clearly separated with space around it, fully visible.\n",
+  "keep_alt": " Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text.",
+  "keep_remove": " Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object.",
+  "batch": true
+ },
+ "questions": [
+  {
+   "q": 1,
+   "scene": "石焼き芋の屋台",
+   "level": "やさしい",
+   "go": "さあ、第1問。やさしい問題からどうぞ。",
+   "prompt": "Scene: close-up of a stone-roasted sweet potato stall (ishi-yaki-imo) at a street corner on an autumn evening. CENTER, LARGE (main subject): an old wooden cart with a black iron stone oven, hot pebbles and several roasted sweet potatoes, steam rising. Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture (the bottom fifth is only plain ground or floor). Each listed side object is fully visible (never cut off by the picture edge) and stands alone on a plain area so it could be changed cleanly. Side objects are LARGE: about one seventh of the picture width each. Objects: (upper left) a red paper lantern without letters; (upper right) a round street lamp; (middle left) a plain wooden signboard without letters; (middle right) a brown paper bag with two sweet potatoes; (lower middle, above the bottom fifth) a small cat sitting.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [],
+   "hint_diff": null,
+   "edit_prompt": "",
+   "edit_prompts": {}
+  },
+  {
+   "q": 2,
+   "scene": "落ち葉の公園",
+   "level": "初級",
+   "go": "では、第2問。どうぞ。",
+   "prompt": "Scene: close-up of a park bench among fallen ginkgo and maple leaves in late autumn. CENTER, LARGE (main subject): a wooden bench with a newspaper-wrapped roasted sweet potato broken in half, steam rising. Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture (the bottom fifth is only plain ground or floor). Each listed side object is fully visible (never cut off by the picture edge) and stands alone on a plain area so it could be changed cleanly. Side objects are about one ninth of the picture width each. Objects: (upper left) a ginkgo branch with yellow leaves; (upper right) a round park clock without numbers on a pole; (middle left) a small thermos bottle on the bench; (middle right) a small sparrow on the bench back; (center below the bench, above the bottom fifth) a pair of knitted gloves.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [],
+   "hint_diff": null,
+   "edit_prompt": "",
+   "edit_prompts": {}
+  },
+  {
+   "q": 3,
+   "scene": "運動会の校庭",
+   "level": "初級",
+   "go": "もうひとつ初級です。どうぞ。",
+   "prompt": "Scene: close-up of a picnic sheet at a school sports day (undokai) in autumn. CENTER, LARGE (main subject): a three-tier lunch box with rice balls, fried chicken and candied sweet potatoes (daigaku-imo). Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture (the bottom fifth is only plain ground or floor). Each listed side object is fully visible (never cut off by the picture edge) and stands alone on a plain area so it could be changed cleanly. Side objects are about one ninth of the picture width each. Objects: (upper left) a string of small triangle flags; (upper right) a red-and-white cap; (middle left) a water bottle; (middle right) a small basket of steamed sweet potatoes; (center above the box) a small towel.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [],
+   "hint_diff": null,
+   "edit_prompt": "",
+   "edit_prompts": {}
+  },
+  {
+   "q": 4,
+   "scene": "農家の納屋",
+   "level": "中級",
+   "go": "後半です。第4問、どうぞ。",
+   "prompt": "Scene: close-up inside a farmer's wooden barn in late autumn. CENTER, LARGE (main subject): a wooden crate full of freshly dug purple sweet potatoes on straw. Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture (the bottom fifth is only plain ground or floor). Each listed side object is fully visible (never cut off by the picture edge) and stands alone on a plain area so it could be changed cleanly. Side objects are about one eleventh of the picture width each. Objects: (upper left) a straw hat hanging on a nail; (upper right) a small window with a paper sliding screen; (middle left) a bamboo basket; (middle right) a hand hoe leaning on the wall; (upper middle) a hanging bundle of dried persimmons.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [],
+   "hint_diff": null,
+   "edit_prompt": "",
+   "edit_prompts": {}
+  },
+  {
+   "q": 5,
+   "scene": "昔の教室",
+   "level": "上級",
+   "go": "いよいよ最後の難問です。じっくりどうぞ。",
+   "prompt": "Scene: close-up of an old wooden Showa-era classroom in winter-like late autumn. CENTER, LARGE (main subject): a round black cast-iron stove (daruma stove) with sweet potatoes wrapped in foil on top and a kettle. Many small details around (each about one fourteenth of the picture width): (upper left) a small wall clock without numbers; (upper right) a window with a view of a bare tree; (middle left) a wooden desk with a pencil case; (middle right) a coal bucket with a small shovel; (upper middle) a hanging calendar without letters.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [],
+   "hint_diff": null,
+   "edit_prompt": "",
+   "edit_prompts": {}
+  }
+ ],
+ "thumbnail": {
+  "question": 1,
+  "big_text": "秋の間違いさがし",
+  "highlight": "間違いさがし",
+  "highlight_color": [
+   255,
+   214,
+   0
+  ],
+  "big_color": [
+   255,
+   255,
+   255
+  ],
+  "band_color": [
+   25,
+   35,
+   70
+  ],
+  "big_size": 132,
+  "sub_text": "3つ見つけられる？全5問",
+  "badges": [
+   [
+    "初級〜上級",
+    [
+     176,
+     62,
+     52
+    ]
+   ]
+  ],
+  "circle_hint": false,
+  "note": "第1回と同じ型（変えた所なし）。左右に同じ絵・上に濃紺の帯で「秋の間違いさがし」・下に難易度と問いかけ。こよみ先生は入れない"
+ },
+ "shorts": [
+  {
+   "question": 2,
+   "answer_gap": 3.3,
+   "note": "1本目：第2問 落ち葉の公園・初級",
+   "title": "シニアの間違い探し｜落ち葉の公園の1問 #脳トレ #頭の体操"
+  },
+  {
+   "question": 4,
+   "answer_gap": 3.3,
+   "note": "2本目：第4問 農家の納屋・中級",
+   "title": "シニアの間違い探し｜秋の納屋でさつまいも #脳トレ #頭の体操"
+  }
+ ]
+}

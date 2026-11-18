@@ -48,7 +48,8 @@ PROGRAM_EDITS = {(q, v): sc for q, Q in _Q.items() for v, sc in Q.get("program_e
 QUESTIONS = {q: (Q["scene"], Q["level"], Q.get("hint_diff")) for q, Q in _Q.items()}
 # 画面に出す範囲（x0, y0, x1, y1）。8:9 のまま、Gemini が絵の左右に残した白いふちを切り落とす（縮めるだけ。引き伸ばしはしない）
 CONTENT = {q: tuple(Q["content_box"]) for q, Q in _Q.items()}
-LEVEL_RANGE = {"やさしい": (4.0, 6.0), "初級": (3.0, 4.0), "中級": (2.0, 3.0), "上級": (1.5, 2.0)}  # 画面幅に対する%（concept.md）
+# 違いの大きさ：画面幅に対する%（concept.md「難易度の引き下げ（2026-11-18）」第9回から。%は画面幅に対して＝2026-11-18 CEO確認）
+LEVEL_RANGE = {"やさしい": (6.0, 8.0), "初級": (5.0, 6.0), "中級": (4.0, 5.0), "上級": (3.0, 4.0)}
 
 
 def diffs():
@@ -285,7 +286,7 @@ def answers(work, out_dir):
                       "safe_y_on_screen": list(SAFE_Y), "level_range_pct_of_screen_width": LEVEL_RANGE},
            "note": "box_px・circle_px は 8:9 に切り抜いた高解像度の絵（qN_a.png、1856×2088）のピクセル。"
                    "content_px はそのうち画面に出す範囲（白いふちを除いた8:9）。*_screen は画面の上での座標（右の絵は x に960を足す）。"
-                   "object_screen_width_pct は、変わる物そのものの幅を画面幅で割った値。",
+                   "object_screen_width_pct は、変わる物そのものの幅を画面幅で割った値（難易度の基準）。object_picture_width_pct は片方の絵の幅で割った値（参考）。",
            "questions": []}
     for q, (scene, level, hint) in QUESTIONS.items():
         a = Image.open(Path(out_dir) / f"q{q}_a.png").convert("RGB")
@@ -298,14 +299,15 @@ def answers(work, out_dir):
         lo, hi = LEVEL_RANGE[level]
         qa = []
         for d in D[q]:
-            pct = round(d["object_w"] * s / SCREEN_W * 100, 2)
+            pct_scr = round(d["object_w"] * s / SCREEN_W * 100, 2)
+            pct = round(d["object_w"] / (cx1 - cx0) * 100, 2)
             sb = to_scr(d["box"])
             ca, cb = d.get("circle_a", d.get("circle", d["box"])), d.get("circle_b", d.get("circle", d["box"]))
             qa.append({"id": d["id"], "type": d["type"], "label": d["label"], "line": d["line"],
                        "box_px": d["box"], "box_screen": sb,
                        "circle_a_screen": to_scr(ca), "circle_b_screen": to_scr(cb),
-                       "object_w_px": d["object_w"], "object_screen_width_pct": pct,
-                       "in_level_range": lo <= pct <= hi,
+                       "object_w_px": d["object_w"], "object_picture_width_pct": pct, "object_screen_width_pct": pct_scr,
+                       "in_level_range": lo <= pct_scr <= hi,
                        "in_safe_y": SAFE_Y[0] <= sb[1] and sb[3] <= SAFE_Y[1] and 0 <= sb[0] and sb[2] <= PIC_W,
                        "edit_version": d.get("src", "1"), "made_by": "program" if d.get("src") == "flip" else "gemini",
                        "note": d.get("note", "")})

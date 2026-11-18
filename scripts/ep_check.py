@@ -9,8 +9,8 @@ from PIL import Image, ImageDraw, ImageFont
 import ep_timeline as T
 from episode_plan import plan
 
-LEVEL_RANGE = {"やさしい": (4.0, 6.0), "初級": (3.0, 4.0), "中級": (2.0, 3.0), "上級": (1.5, 2.0)}   # concept.md（画面幅に対する%）
-TOL = 0.2   # 難易度表の「約」の幅（ポイント）。第5問の宝珠 2.07%・第3問の石 1.83% を「約」として扱った（事業部長判断 2026-11-06、監査で確認）
+LEVEL_RANGE = {"やさしい": (6.0, 8.0), "初級": (5.0, 6.0), "中級": (4.0, 5.0), "上級": (3.0, 4.0)}   # concept.md「難易度の引き下げ（2026-11-18）」：画面幅に対する%（2026-11-18 CEO確認）
+TOL = 0.3   # 難易度表の「約」の幅（ポイント）。第5問の宝珠 2.07%・第3問の石 1.83% を「約」として扱った（事業部長判断 2026-11-06、監査で確認）
 
 
 def probe(path):
@@ -23,6 +23,9 @@ MIN_CENTER_DIST_PCT = 30  # 絵の幅に対する、違いの中心どうしの�
 MIN_GAP_PCT = 10          # 違いの範囲どうしの最小のすき間（%）
 
 
+_EASY = ("増える", "なくなる", "形", "色", "大きさ", "一部欠け")   # 色ははっきり違う色だけ（監査で確かめる）
+LEVEL_TYPES = {"やさしい": _EASY, "初級": _EASY + ("向き", "入れ替え"), "中級": _EASY + ("向き", "入れ替え", "模様", "数"),
+               "上級": _EASY + ("向き", "入れ替え", "模様", "数")}
 DIFF_TYPES = ("増える", "なくなる", "色", "形", "向き", "模様", "大きさ", "数", "一部欠け", "入れ替え")
 
 
@@ -57,8 +60,8 @@ def numeric(out_dir, work):
                 problems.append(f"第{Q['q']}問 違い{a['id']}：大きさ {p}% が{Q['level']}の目安 {lo}〜{hi}% の外")
             if not a["in_safe_y"]:
                 problems.append(f"第{Q['q']}問 違い{a['id']}：上の帯か字幕の場所にかかる")
-            if Q["level"] != "上級" and a["type"] == "色":   # やさしい・初級・中級は色だけの違いにしない
-                problems.append(f"第{Q['q']}問 違い{a['id']}：{Q['level']}で色だけの違い")
+            if a["type"] not in LEVEL_TYPES[Q["level"]]:   # 難易度ごとに使える違いの種類（concept.md 2026-11-18 の表）
+                problems.append(f"第{Q['q']}問 違い{a['id']}：{Q['level']}では使わない種類「{a['type']}」")
         # 違いの種類を混ぜる（2026-11-15 最低品質4）：「増える・なくなる」は1問に1つまで。type は決まった種類から
         types = [a["type"] for a in Q["answers"]]
         bad = [t for t in types if t not in DIFF_TYPES]

@@ -33,6 +33,7 @@
   short-voice [id ...]        ショートの声だけを作り直して、映像はそのままで音を入れ替える（id を書くとそのセリフだけ、省くと全部）
   retitle [サムネ]             アップ済みの動画のタイトル（description.md）とサムネ（既定 thumbnail_v3.jpg）だけを差し替える（説明欄・タグは変えない）
   short [n] / short-upload [n] n本目のショート（2本目は <回>/short2/。plan.json の shorts）
+  log-time <工程> <秒>        スクリプトの外の工程（監査など）の時間を outputs/<回>/timing.json に足す
   short-upload                ショートを非公開でアップロード（<回>/short/audit_passed と、長尺の <回>/upload.json が必要）
 
 費用の記録：画像APIは <回>/image_usage.jsonl、声は <作業>/voice/usage.jsonl に自動で残る。cost.md は制作部が書く。
@@ -184,6 +185,35 @@ def main():
     os.environ.setdefault("KOYOMI_IMAGE_USAGE_LOG", str(ep / "image_usage.jsonl"))
     work = work or Path.home() / ".cache" / "koyomi" / ep.name
     work.mkdir(parents=True, exist_ok=True)
+    if step == "log-time":     # 監査など、スクリプトの外の工程の時間を記録する：log-time <工程> <秒>
+        record_time(ep, args[0], float(args[1]), "手で記録")
+        return
+    import time as _time
+    t0 = _time.time()
+    try:
+        run_step(ep, work, step, args)
+    finally:
+        record_time(ep, STEP_GROUP.get(step, step), _time.time() - t0, " ".join([step] + args))
+
+
+# 工程ごとの時間（2026-11-18 CEO指示：outputs/<回>/timing.json）。絵・音声・書き出し・監査 にまとめる
+STEP_GROUP = {"pictures": "絵", "voice": "音声", "audio": "音声", "video": "書き出し", "thumbnail": "書き出し",
+              "check": "監査（数値チェック）", "short": "ショート", "short-voice": "ショート", "upload": "アップロード", "short-upload": "アップロード"}
+
+
+def record_time(ep, group, sec, detail):
+    import datetime
+    p = ep / "timing.json"
+    data = json.loads(p.read_text(encoding="utf-8")) if p.exists() else {"runs": [], "total_sec_by_step": {}}
+    data["runs"].append({"step": group, "detail": detail, "sec": round(sec, 1),
+                         "at": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")})
+    tot = data["total_sec_by_step"]
+    tot[group] = round(tot.get(group, 0) + sec, 1)
+    data["total_sec_all"] = round(sum(tot.values()), 1)
+    p.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+def run_step(ep, work, step, args):
     if step == "setup":
         log(f"フォント：{setup(work)}")
     elif step == "pictures":
