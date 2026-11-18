@@ -1,0 +1,1694 @@
+{
+ "episode": "011",
+ "season": "秋",
+ "topics": [
+  "熊手"
+ ],
+ "note": "第11回（酉の市・熊手）。",
+ "youtube": {
+  "title": "【秋の間違い探し】シニアの脳トレクイズ｜酉の市の熊手のイラスト全5問【60代・70代の頭の体操】",
+  "description_file": "description.md",
+  "title_note": "タイトルに季節の言葉（秋）。サムネは「サムネの文言の型」から主役の軸が違う3案（ab/）",
+  "publish_plan": "2026-11-22（日）8:30、ショート14:00・18:00"
+ },
+ "screens": {
+  "opening_title": "酉の市の間違い探し　全5問",
+  "opening_sub": "最後は難問です",
+  "unchiku_header": "こよみ先生の 秋の小話",
+  "unchiku_slides": [
+   {
+    "until": 7,
+    "texts": [
+     [
+      "ひと休み",
+      960,
+      330,
+      130,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "こよみ先生の 季節のお話",
+      960,
+      520,
+      80,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 15,
+    "texts": [
+     [
+      "熊手は なぜ縁起物？",
+      960,
+      380,
+      110,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ]
+    ]
+   },
+   {
+    "until": 24,
+    "texts": [
+     [
+      "福を かき集める",
+      960,
+      330,
+      120,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "幸せを かき込む",
+      960,
+      520,
+      100,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 30,
+    "texts": [
+     [
+      "毎年 少し大きな熊手に",
+      960,
+      360,
+      100,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ],
+     [
+      "話のタネに",
+      960,
+      560,
+      80,
+      [
+       200,
+       120,
+       40
+      ],
+      0
+     ]
+    ]
+   }
+  ],
+  "ending_titles": [
+   [
+    "15個",
+    "熊手名人"
+   ],
+   [
+    "11〜14個",
+    "福かき名探偵"
+   ],
+   [
+    "6〜10個",
+    "えびすさん"
+   ],
+   [
+    "0〜5個",
+    "こぐまでさん"
+   ]
+  ],
+  "ending_note": "こぐまでさんも、福をかき集めて大きくなります",
+  "ending_next": "次の動画も つづけて どうぞ",
+  "owl_layout": "bottom",
+  "endscreen_at": 9.0
+ },
+ "timeline": {
+  "total": 630.0,
+  "opening": [
+   0.0,
+   19.0
+  ],
+  "rule": [
+   19.0,
+   30.0
+  ],
+  "q_start": {
+   "1": 30.0,
+   "2": 138.0,
+   "3": 246.0,
+   "4": 384.0,
+   "5": 492.0
+  },
+  "unchiku": [
+   354.0,
+   384.0
+  ],
+  "ending": [
+   600.0,
+   630.0
+  ],
+  "card": 3.0,
+  "solve": 90.0,
+  "answer": 15.0,
+  "hint_at": null,
+  "ten_at": 80.0,
+  "ans_first": 1.6,
+  "ans_step": 4.3,
+  "solve_calls": [
+   [
+    30,
+    "あと60秒です。"
+   ],
+   [
+    60,
+    "あと30秒です。"
+   ]
+  ],
+  "go_delay": 1.8
+ },
+ "lines": {
+  "opening": [
+   {
+    "id": "op",
+    "at": 0.0,
+    "text": "こよみ先生です。今日は、酉の市の間違い探し、全5問です。",
+    "face": "smile",
+    "until": 7.0
+   },
+   {
+    "id": "op2",
+    "at": 7.0,
+    "text": "最後は難問です。3問目のあとには、熊手の意外なお話も。",
+    "face": "surprise",
+    "until": 14.0
+   },
+   {
+    "id": "op3",
+    "at": 14.0,
+    "text": "ぜひ最後まで、一緒に解いてくださいね。",
+    "face": "wink",
+    "until": 19.0
+   }
+  ],
+  "rule": [
+   {
+    "id": "rule",
+    "at": 0.0,
+    "text": "ルールです。左と右の絵をくらべて、90秒で、右の絵の違いを3つ探してください。",
+    "face": "normal",
+    "until": 11.0
+   }
+  ],
+  "unchiku": [
+   {
+    "id": "u1",
+    "at": 0.0,
+    "text": "ここでひと休み。こよみ先生の季節のお話です。",
+    "face": "smile",
+    "until": 7.0
+   },
+   {
+    "id": "u2",
+    "at": 7.0,
+    "text": "酉の市の熊手は、なぜ縁起物なのでしょう？",
+    "face": "think",
+    "until": 15.0
+   },
+   {
+    "id": "u3",
+    "at": 15.0,
+    "text": "答えは、福をかき集めるから。熊手で幸せをかき込むといわれます。",
+    "face": "surprise",
+    "until": 24.0
+   },
+   {
+    "id": "u4",
+    "at": 24.0,
+    "text": "毎年、少し大きな熊手に買い替える人もいます。",
+    "face": "wink",
+    "until": 30.0
+   }
+  ],
+  "ending": [
+   {
+    "id": "e1",
+    "at": 0.0,
+    "text": "これで5問、おしまいです。",
+    "face": "yay",
+    "until": 3.6
+   },
+   {
+    "id": "e2",
+    "at": 3.6,
+    "text": "15個の違い、いくつ見つかりましたか。今日の称号です。",
+    "face": "smile",
+    "until": 10.2
+   },
+   {
+    "id": "e3",
+    "at": 10.2,
+    "text": "チャンネル登録とベルで、毎朝8時半に問題が届きます。毎日の頭の体操にどうぞ。",
+    "face": "smile",
+    "until": 21.0
+   },
+   {
+    "id": "e4",
+    "at": 21.0,
+    "text": "左の丸を押すと登録、右の動画で、次の問題に挑戦できますよ。",
+    "face": "wink",
+    "until": 30.0
+   }
+  ],
+  "extra": [
+   {
+    "id": "c_comment",
+    "at": 261.0,
+    "text": "見つかった数を、あとでコメントで教えてくださいね。",
+    "face": "smile",
+    "until": 268.0
+   }
+  ]
+ },
+ "readings": [
+  [
+   "神棚のある茶の間",
+   "かみだなのあるちゃのま"
+  ],
+  [
+   "酉の市の夜の境内",
+   "とりのいちのよるのけいだい"
+  ],
+  [
+   "提灯の参道",
+   "ちょうちんのさんどう"
+  ],
+  [
+   "老舗の帳場",
+   "しにせのちょうば"
+  ],
+  [
+   "麦わら帽子",
+   "むぎわらぼうし"
+  ],
+  [
+   "色えんぴつ",
+   "いろえんぴつ"
+  ],
+  [
+   "熊手の店",
+   "くまでのみせ"
+  ],
+  [
+   "お月さま",
+   "おつきさま"
+  ],
+  [
+   "火ばさみ",
+   "ひばさみ"
+  ],
+  [
+   "赤いふた",
+   "あかいふた"
+  ],
+  [
+   "大学いも",
+   "だいがくいも"
+  ],
+  [
+   "酉の市",
+   "とりのいち"
+  ],
+  [
+   "飛び石",
+   "とびいし"
+  ],
+  [
+   "掛け軸",
+   "かけじく"
+  ],
+  [
+   "湯のみ",
+   "ゆのみ"
+  ],
+  [
+   "切り株",
+   "きりかぶ"
+  ],
+  [
+   "石灯籠",
+   "いしどうろう"
+  ],
+  [
+   "少なく",
+   "すくなく"
+  ],
+  [
+   "向いて",
+   "むいて"
+  ],
+  [
+   "まん中",
+   "まんなか"
+  ],
+  [
+   "干し柿",
+   "ほしがき"
+  ],
+  [
+   "ゆで卵",
+   "ゆでたまご"
+  ],
+  [
+   "右はし",
+   "みぎはし"
+  ],
+  [
+   "茶色い",
+   "ちゃいろい"
+  ],
+  [
+   "花びら",
+   "はなびら"
+  ],
+  [
+   "土なべ",
+   "どなべ"
+  ],
+  [
+   "玉ねぎ",
+   "たまねぎ"
+  ],
+  [
+   "変わり",
+   "かわり"
+  ],
+  [
+   "落ち葉",
+   "おちば"
+  ],
+  [
+   "黄色い",
+   "きいろい"
+  ],
+  [
+   "大きく",
+   "おおきく"
+  ],
+  [
+   "舞って",
+   "まって"
+  ],
+  [
+   "葉っぱ",
+   "はっぱ"
+  ],
+  [
+   "魔法瓶",
+   "まほうびん"
+  ],
+  [
+   "小さな",
+   "ちいさな"
+  ],
+  [
+   "少なく",
+   "すくなく"
+  ],
+  [
+   "向いて",
+   "むいて"
+  ],
+  [
+   "第1問",
+   "だいいちもん"
+  ],
+  [
+   "第2問",
+   "だいにもん"
+  ],
+  [
+   "第3問",
+   "だいさんもん"
+  ],
+  [
+   "第4問",
+   "だいよんもん"
+  ],
+  [
+   "第5問",
+   "だいごもん"
+  ],
+  [
+   "60秒",
+   "ろくじゅうびょう"
+  ],
+  [
+   "30秒",
+   "さんじゅうびょう"
+  ],
+  [
+   "10秒",
+   "じゅうびょう"
+  ],
+  [
+   "小さく",
+   "ちいさく"
+  ],
+  [
+   "取っ手",
+   "とって"
+  ],
+  [
+   "熊手",
+   "くまで"
+  ],
+  [
+   "飾り",
+   "かざり"
+  ],
+  [
+   "白く",
+   "しろく"
+  ],
+  [
+   "掛け",
+   "かけ"
+  ],
+  [
+   "漬物",
+   "つけもの"
+  ],
+  [
+   "軍手",
+   "ぐんて"
+  ],
+  [
+   "茶色",
+   "ちゃいろ"
+  ],
+  [
+   "風鈴",
+   "ふうりん"
+  ],
+  [
+   "黒板",
+   "こくばん"
+  ],
+  [
+   "屋根",
+   "やね"
+  ],
+  [
+   "反対",
+   "はんたい"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "黄色",
+   "きいろ"
+  ],
+  [
+   "赤く",
+   "あかく"
+  ],
+  [
+   "青く",
+   "あおく"
+  ],
+  [
+   "赤く",
+   "あかく"
+  ],
+  [
+   "赤い",
+   "あかい"
+  ],
+  [
+   "筆箱",
+   "ふでばこ"
+  ],
+  [
+   "木箱",
+   "きばこ"
+  ],
+  [
+   "湯気",
+   "ゆげ"
+  ],
+  [
+   "紙袋",
+   "かみぶくろ"
+  ],
+  [
+   "消え",
+   "きえ"
+  ],
+  [
+   "付き",
+   "つき"
+  ],
+  [
+   "水筒",
+   "すいとう"
+  ],
+  [
+   "帽子",
+   "ぼうし"
+  ],
+  [
+   "上級",
+   "じょうきゅう"
+  ],
+  [
+   "中級",
+   "ちゅうきゅう"
+  ],
+  [
+   "初級",
+   "しょきゅう"
+  ],
+  [
+   "白く",
+   "しろく"
+  ],
+  [
+   "黒い",
+   "くろい"
+  ],
+  [
+   "一本",
+   "いっぽん"
+  ],
+  [
+   "高く",
+   "たかく"
+  ],
+  [
+   "短く",
+   "みじかく"
+  ],
+  [
+   "黄色",
+   "きいろ"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "青い",
+   "あおい"
+  ],
+  [
+   "白い",
+   "しろい"
+  ],
+  [
+   "後半",
+   "こうはん"
+  ],
+  [
+   "最後",
+   "さいご"
+  ],
+  [
+   "難問",
+   "なんもん"
+  ],
+  [
+   "問題",
+   "もんだい"
+  ],
+  [
+   "答え",
+   "こたえ"
+  ],
+  [
+   "少し",
+   "すこし"
+  ],
+  [
+   "大根",
+   "だいこん"
+  ],
+  [
+   "小皿",
+   "こざら"
+  ],
+  [
+   "小鳥",
+   "ことり"
+  ],
+  [
+   "向き",
+   "むき"
+  ],
+  [
+   "反対",
+   "はんたい"
+  ],
+  [
+   "一つ",
+   "ひとつ"
+  ],
+  [
+   "模様",
+   "もよう"
+  ],
+  [
+   "下駄",
+   "げた"
+  ],
+  [
+   "金属",
+   "きんぞく"
+  ],
+  [
+   "無く",
+   "なく"
+  ],
+  [
+   "増え",
+   "ふえ"
+  ],
+  [
+   "向い",
+   "むい"
+  ],
+  [
+   "金具",
+   "かなぐ"
+  ],
+  [
+   "一枚",
+   "いちまい"
+  ],
+  [
+   "真上",
+   "まうえ"
+  ],
+  [
+   "屋台",
+   "やたい"
+  ],
+  [
+   "銭湯",
+   "せんとう"
+  ],
+  [
+   "今日",
+   "きょう"
+  ],
+  [
+   "一緒",
+   "いっしょ"
+  ],
+  [
+   "山門",
+   "さんもん"
+  ],
+  [
+   "川辺",
+   "かわべ"
+  ],
+  [
+   "竹",
+   "たけ"
+  ],
+  [
+   "枝",
+   "えだ"
+  ],
+  [
+   "絵",
+   "え"
+  ],
+  [
+   "上",
+   "うえ"
+  ],
+  [
+   "緑",
+   "みどり"
+  ],
+  [
+   "机",
+   "つくえ"
+  ],
+  [
+   "数",
+   "かず"
+  ],
+  [
+   "形",
+   "かたち"
+  ],
+  [
+   "先",
+   "さき"
+  ],
+  [
+   "数",
+   "かず"
+  ],
+  [
+   "花",
+   "はな"
+  ],
+  [
+   "上",
+   "うえ"
+  ],
+  [
+   "下",
+   "した"
+  ],
+  [
+   "輪",
+   "わ"
+  ],
+  [
+   "針",
+   "はり"
+  ],
+  [
+   "牛",
+   "うし"
+  ],
+  [
+   "左",
+   "ひだり"
+  ],
+  [
+   "右",
+   "みぎ"
+  ],
+  [
+   "頭",
+   "あたま"
+  ],
+  [
+   "刃",
+   "は"
+  ],
+  [
+   "量",
+   "りょう"
+  ],
+  [
+   "苗",
+   "なえ"
+  ],
+  [
+   "丸",
+   "まる"
+  ],
+  [
+   "桶",
+   "おけ"
+  ],
+  [
+   "火",
+   "ひ"
+  ],
+  [
+   "葉",
+   "は"
+  ],
+  [
+   "緑",
+   "みどり"
+  ],
+  [
+   "色",
+   "いろ"
+  ],
+  [
+   "鍋",
+   "なべ"
+  ],
+  [
+   "畑",
+   "はたけ"
+  ],
+  [
+   "絵",
+   "え"
+  ],
+  [
+   "木の札",
+   "きのふだ"
+  ],
+  [
+   "お面",
+   "おめん"
+  ],
+  [
+   "大きな",
+   "おおきな"
+  ],
+  [
+   "銀色",
+   "ぎんいろ"
+  ],
+  [
+   "前かけ",
+   "まえかけ"
+  ],
+  [
+   "丸い",
+   "まるい"
+  ],
+  [
+   "棚",
+   "たな"
+  ],
+  [
+   "壁",
+   "かべ"
+  ],
+  [
+   "鈴",
+   "すず"
+  ],
+  [
+   "紋",
+   "もん"
+  ],
+  [
+   "星",
+   "ほし"
+  ],
+  [
+   "銀",
+   "ぎん"
+  ]
+ ],
+ "voice_override": {
+  "op3": "ぜひさいごまで、いっしょにといてくださいね。",
+  "rule": "ルールです。ひだりとみぎのえをくらべて、きゅうじゅうびょうで、みぎのえのちがいを、みっつさがしてください。",
+  "u1": "ここでひとやすみ。こよみせんせいの、きせつのおはなしです。",
+  "e1": "これでごもん、おしまいです。",
+  "e2": "じゅうごこのちがい、いくつみつかりましたか。きょうのしょうごうです。",
+  "e3": "チャンネルとうろくとベルで、まいあさはちじはんに、もんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。",
+  "e4": "ひだりのまるをおすととうろく、みぎのどうがで、つぎのもんだいに、ちょうせんできますよ。",
+  "c_comment": "みつかったかずを、あとでコメントでおしえてくださいね。",
+  "s_intro": "うえとしたのえで、ちがいがみっつあります。みつけられますか。",
+  "s_end": "つづきは、ながいどうがで。ひだりしたをクリックして、ちょうせんしてみてくださいね。",
+  "op": "こよみせんせいです。きょうは、とりのいちのまちがいさがし、ぜんごもんです。",
+  "op2": "さいごは、なんもんです。さんもんめのあとには、くまでの、いがいなおはなしも。",
+  "u2": "とりのいちのくまでは、なぜ、えんぎものなのでしょう？",
+  "u3": "こたえは、ふくを、かきあつめるから。くまでで、しあわせをかきこむといわれます。",
+  "u4": "まいとし、すこしおおきなくまでに、かいかえるひともいます。",
+  "q1_ans1": "たてかんばんが、まるいかたちになりました。",
+  "q2_ans1": "くまでのおめんが、だるまになりました。",
+  "q2_ans2": "ひだりのたなの、きのふだが、あかくなりました。",
+  "q2_ans3": "みぎのかべに、くまでがひとつふえました。",
+  "q3_ans1": "よびりんが、ぎんいろになりました。",
+  "q3_ans2": "ひだりのたなのつぼが、あおくなりました。",
+  "q3_ans3": "おかめが、だるまになりました。",
+  "q4_ans1": "おおきなすずが、ぎんいろになりました。",
+  "q4_ans2": "まるいもんのもようが、ほしになりました。",
+  "q4_ans3": "きつねのまえかけが、あおくなりました。",
+  "q5_ans1": "かみだなのとっくりが、あかくなりました。",
+  "q5_ans2": "ラジオのまえのもようが、こうしになりました。",
+  "q5_ans3": "ちゃぶだいに、みかんが、ひとつふえました。",
+  "q1_ans2": "ひだりのちょうちんが、あかくなりました。"
+ },
+ "voice": {
+  "provider": "fish",
+  "reference_id": "63819275ce38440ea245ca988abf976e",
+  "model": "s1",
+  "speed": 0.88,
+  "credit": "音声：Fish Audio（AIで合成した音声です）"
+ },
+ "images": {
+  "model": "gemini-3-pro-image",
+  "size": "2K",
+  "aspect": "4:5",
+  "style": "A Japanese picture-book illustration in watercolor, but with BOLD, THICK, DARK ink outlines around every object (like a clear picture book for seniors), and CLEAR, SATURATED colors (not pale). Bright, clean background. Natural, hand-drawn, slightly rounded shapes; not geometric, not flat vector, not photorealistic. CLOSE-UP composition (not a wide landscape): the scene is seen from close, filling the picture. PORTRAIT-ISH composition, about 8:9. The painting fills the entire canvas edge to edge: no white border. No people. Absolutely no text, letters, numbers, logos or symbols anywhere. The MAIN SUBJECT named in the scene is drawn LARGE in the center of the picture. Around it, only a few other objects, each clearly separated with space around it, fully visible.\n",
+  "keep_alt": " Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text.",
+  "keep_remove": " Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object.",
+  "batch": true
+ },
+ "questions": [
+  {
+   "q": 1,
+   "scene": "提灯の参道",
+   "level": "やさしい",
+   "go": "さあ、第1問。やさしい問題からどうぞ。",
+   "prompt": "Scene: close-up of a shrine approach lined with paper lanterns at the November Tori-no-ichi night fair, stone pavement, autumn trees. CENTER, LARGE (main subject): a stone lantern (toro) with a kumade leaning against it. Late autumn (November) only: no summer items such as wind chimes, fans with flowers, goldfish or watermelon. Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests naturally on a shelf, counter, floor or ground, or hangs from a hook. Side objects are about one ninth of the picture width each. Objects: (upper left) a row of three white paper lanterns; (upper right) a small red torii gate in the distance; (middle left) a wooden signboard without letters; (middle right) a small bamboo broom leaning on a post; (center above the lantern) a crow sitting on a branch.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "形",
+     "label": "看板が丸い",
+     "line": "立て看板が、丸い形になりました。",
+     "box": [
+      179,
+      805,
+      535,
+      1261
+     ],
+     "object_w": 340,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "提灯が赤い",
+     "line": "左の提灯が、赤くなりました。",
+     "box": [
+      70,
+      225,
+      345,
+      480
+     ],
+     "object_w": 253,
+     "src": "p"
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "ほうきがない",
+     "line": "ほうきが、なくなりました。",
+     "box": [
+      1390,
+      875,
+      1700,
+      1645
+     ],
+     "object_w": 292,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the rightmost of the three white paper lanterns at the upper left becomes red; (b) the wooden signboard at the left becomes round; (c) the small bamboo broom leaning on the post at the right is gone; (d) the small red torii gate in the distance becomes grey stone.",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the rightmost of the three white paper lanterns at the upper left becomes red; (b) the wooden signboard at the left becomes round; (c) the small bamboo broom leaning on the post at the right is gone; (d) the small red torii gate in the distance becomes grey stone."
+   },
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   },
+   "program_ops": {
+    "p": [
+     {
+      "op": "recolor",
+      "box": [
+       70,
+       225,
+       345,
+       480
+      ],
+      "poly": [
+       [
+        334,
+        353
+       ],
+       [
+        331,
+        380
+       ],
+       [
+        321,
+        406
+       ],
+       [
+        306,
+        429
+       ],
+       [
+        286,
+        448
+       ],
+       [
+        262,
+        463
+       ],
+       [
+        234,
+        472
+       ],
+       [
+        206,
+        475
+       ],
+       [
+        178,
+        472
+       ],
+       [
+        150,
+        463
+       ],
+       [
+        126,
+        448
+       ],
+       [
+        106,
+        429
+       ],
+       [
+        91,
+        406
+       ],
+       [
+        81,
+        380
+       ],
+       [
+        78,
+        353
+       ],
+       [
+        81,
+        326
+       ],
+       [
+        91,
+        300
+       ],
+       [
+        106,
+        277
+       ],
+       [
+        126,
+        258
+       ],
+       [
+        150,
+        243
+       ],
+       [
+        178,
+        234
+       ],
+       [
+        206,
+        231
+       ],
+       [
+        234,
+        234
+       ],
+       [
+        262,
+        243
+       ],
+       [
+        286,
+        258
+       ],
+       [
+        306,
+        277
+       ],
+       [
+        321,
+        300
+       ],
+       [
+        331,
+        326
+       ]
+      ],
+      "hue": 2,
+      "sat_set": 170,
+      "val": 0.95
+     }
+    ]
+   }
+  },
+  {
+   "q": 2,
+   "scene": "熊手の店",
+   "level": "初級",
+   "go": "では、第2問。どうぞ。",
+   "prompt": "Scene: close-up of a stall selling lucky bamboo rakes (kumade) at the Tori-no-ichi fair in November, evening, red lanterns behind. CENTER, LARGE (main subject): a big decorated kumade rake with a smiling Okame mask, gold coins, a treasure ship and red-white decorations. Late autumn (November) only: no summer items such as wind chimes, fans with flowers, goldfish or watermelon. Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests naturally on a shelf, counter, floor or ground, or hangs from a hook. Side objects are LARGE: about one seventh of the picture width each. Objects: (upper left) a red paper lantern without letters; (upper right) a smaller kumade hanging on the wall; (middle left) a wooden box of lucky charms; (middle right) a pair of wooden clappers (hyoshigi) on the counter; (lower middle, above the bottom fifth) a small bamboo basket of tangerines.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "入れ替え",
+     "label": "お面がだるまに",
+     "line": "熊手のお面が、だるまになりました。",
+     "box": [
+      905,
+      680,
+      1215,
+      1010
+     ],
+     "object_w": 260,
+     "src": "1",
+     "context": "熊手の飾りに、だるまは定番の縁起物（おかめと同じ場所に飾られて普通）"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "札が赤い",
+     "line": "左の棚の、木の札が、赤くなりました。",
+     "box": [
+      140,
+      855,
+      360,
+      965
+     ],
+     "object_w": 208,
+     "src": "p",
+     "short_line": "木の札が、赤くなりました。"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "熊手がひとつ増えた",
+     "line": "右の壁に、熊手がひとつ増えました。",
+     "box": [
+      1545,
+      675,
+      1795,
+      1000
+     ],
+     "object_w": 220,
+     "src": "p",
+     "context": "熊手の店の壁には、売り物の熊手がいくつも掛けて並べてある（普通）"
+    }
+   ],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the smiling Okame mask in the center of the big kumade becomes a red Daruma face of the same size; (b) the small kumade hanging on the wall at the upper right becomes all gold; (c) one of the two wooden clappers on the counter is gone; (d) the wooden box of lucky charms at the left becomes red.",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the smiling Okame mask in the center of the big kumade becomes a red Daruma face of the same size; (b) the small kumade hanging on the wall at the upper right becomes all gold; (c) one of the two wooden clappers on the counter is gone; (d) the wooden box of lucky charms at the left becomes red."
+   },
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   },
+   "program_ops": {
+    "p": [
+     {
+      "op": "recolor",
+      "box": [
+       140,
+       860,
+       360,
+       965
+      ],
+      "hue": 3,
+      "sat": 1.5,
+      "val": 0.85,
+      "poly": [
+       [
+        147,
+        870
+       ],
+       [
+        302,
+        866
+       ],
+       [
+        355,
+        926
+       ],
+       [
+        353,
+        953
+       ],
+       [
+        198,
+        960
+       ],
+       [
+        147,
+        875
+       ]
+      ]
+     },
+     {
+      "op": "copy",
+      "from_q": 2,
+      "src": [
+       1391,
+       134,
+       1762,
+       631
+      ],
+      "mask": "outline",
+      "dst": [
+       1560,
+       690
+      ],
+      "width": 220,
+      "close": 4
+     }
+    ]
+   }
+  },
+  {
+   "q": 3,
+   "scene": "老舗の帳場",
+   "level": "初級",
+   "go": "もうひとつ初級です。どうぞ。",
+   "prompt": "Scene: close-up of the front counter (choba) of an old Japanese shop in November, wooden shelves and a sliding door behind. CENTER, LARGE (main subject): a medium decorated kumade rake displayed on the wall above a wooden counter. Late autumn (November) only: no summer items such as wind chimes, fans with flowers, goldfish or watermelon. Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests naturally on a shelf, counter, floor or ground, or hangs from a hook. Side objects are about one ninth of the picture width each. Objects: (upper left) a round wall clock without numbers; (upper right) a beckoning cat (maneki-neko) figurine on a shelf; (middle left) a wooden abacus on the counter; (middle right) a brass bell for customers; (center on the counter) an account book with a brush.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "呼び鈴が銀色",
+     "line": "呼び鈴が、銀色になりました。",
+     "box": [
+      1441,
+      1240,
+      1695,
+      1460
+     ],
+     "object_w": 219,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "つぼが青い",
+     "line": "左の棚のつぼが、青くなりました。",
+     "box": [
+      150,
+      1160,
+      360,
+      1345
+     ],
+     "object_w": 195,
+     "src": "p"
+    },
+    {
+     "id": 3,
+     "type": "入れ替え",
+     "label": "おかめがだるまに",
+     "line": "おかめが、だるまになりました。",
+     "box": [
+      855,
+      515,
+      1060,
+      720
+     ],
+     "object_w": 190,
+     "src": "p",
+     "context": "熊手の飾りに、だるまは定番の縁起物（おかめと並んで飾られて普通）"
+    }
+   ],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the brass bell on the counter becomes silver; (b) on the kumade on the wall, the left mask becomes a red Daruma face of the same size; (c) the beckoning cat on the shelf raises its other paw instead; (d) the brush next to the account book becomes red.",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the brass bell on the counter becomes silver; (b) on the kumade on the wall, the left mask becomes a red Daruma face of the same size; (c) the beckoning cat on the shelf raises its other paw instead; (d) the brush next to the account book becomes red.",
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the leftmost small vase on the middle shelf at the left becomes bright blue; (b) the paper of the sliding door at the back gets one small torn hole; (c) the round wall clock gets a small brass pendulum below it.",
+    "3": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the account book on the counter becomes a closed book with a red cover; (b) the abacus on the counter becomes half as long; (c) the round wall clock becomes a square wall clock of the same size; (d) on the big kumade, the gold coin at the top center becomes a red sea bream."
+   },
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   },
+   "program_ops": {
+    "p": [
+     {
+      "op": "recolor",
+      "box": [
+       150,
+       1160,
+       360,
+       1345
+      ],
+      "mask": "outline",
+      "hue": 155,
+      "sat": 1.6,
+      "val": 1.0
+     },
+     {
+      "op": "copy",
+      "from_file": "edit_2_1.png",
+      "src": [
+       915,
+       690,
+       1200,
+       980
+      ],
+      "circle": [
+       1057,
+       835,
+       142
+      ],
+      "dst": [
+       862,
+       520
+      ],
+      "width": 190
+     }
+    ]
+   }
+  },
+  {
+   "q": 4,
+   "scene": "酉の市の夜の境内",
+   "level": "中級",
+   "go": "後半です。第4問、どうぞ。",
+   "prompt": "Scene: close-up of a shrine precinct at night during the November Tori-no-ichi fair, many lanterns, a shrine building behind. CENTER, LARGE (main subject): a big wooden offering box (saisen-bako) with a large kumade above it. Many small details around (each about one fourteenth of the picture width): (upper left) a shrine bell rope with a bell; (upper right) a small red lantern; (middle left) a stone fox statue; (middle right) a stack of small kumade charms; (upper middle) a paper shimenawa decoration.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "鈴が銀色",
+     "line": "大きな鈴が、銀色になりました。",
+     "box": [
+      284,
+      160,
+      526,
+      434
+     ],
+     "object_w": 233,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "模様",
+     "label": "紋が星",
+     "line": "丸い紋の模様が、星になりました。",
+     "box": [
+      850,
+      1652,
+      1005,
+      1770
+     ],
+     "object_w": 145,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "前かけが青い",
+     "line": "きつねの前かけが、青くなりました。",
+     "box": [
+      205,
+      965,
+      365,
+      1125
+     ],
+     "object_w": 146,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the red bib of the stone fox statue becomes blue; (b) the bell on the bell rope at the upper left becomes silver; (c) the round crest on the front of the offering box becomes a star shape; (d) one of the small kumade charms in the stack at the right is gone.",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the red bib of the stone fox statue becomes blue; (b) the bell on the bell rope at the upper left becomes silver; (c) the round crest on the front of the offering box becomes a star shape; (d) one of the small kumade charms in the stack at the right is gone."
+   },
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
+  },
+  {
+   "q": 5,
+   "scene": "神棚のある茶の間",
+   "level": "上級",
+   "go": "いよいよ最後の難問です。じっくりどうぞ。",
+   "prompt": "Scene: close-up of a Showa-era tatami living room in November with a small household shrine (kamidana) high on the wall. CENTER, LARGE (main subject): a small kumade rake decorated next to the kamidana, with a low table below. Late autumn (November) only: no summer items such as wind chimes, fans with flowers, goldfish or watermelon. Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests naturally on a shelf, counter, floor or ground, or hangs from a hook. Side objects are about one eleventh of the picture width each. Objects: (upper left) a hanging calendar without letters; (upper right) a pair of small sake bottles on the kamidana shelf; (middle left) a teapot and cups on the low table; (middle right) a small radio on a cabinet; (upper middle) a sprig of sakaki leaves in a vase on the kamidana.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "とっくりが赤い",
+     "line": "神棚のとっくりが、赤くなりました。",
+     "box": [
+      1365,
+      341,
+      1599,
+      532
+     ],
+     "object_w": 172,
+     "src": "3"
+    },
+    {
+     "id": 2,
+     "type": "模様",
+     "label": "ラジオが格子",
+     "line": "ラジオの前の模様が、格子になりました。",
+     "box": [
+      1320,
+      1078,
+      1540,
+      1200
+     ],
+     "object_w": 201,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "みかんが増えた",
+     "line": "ちゃぶ台に、みかんが、ひとつ増えました。",
+     "box": [
+      262,
+      1622,
+      417,
+      1750
+     ],
+     "object_w": 135,
+     "src": "p",
+     "context": "晩秋の茶の間のちゃぶ台に、みかんがひとつ（普通）"
+    }
+   ],
+   "hint_diff": null,
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the picture on the hanging calendar shows a red rising sun over the sea instead of the mountain; (b) the teapot on the low table becomes blue; (c) the speaker cloth of the radio gets a checked pattern; (d) one of the two small sake bottles on the shrine shelf is gone.",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the picture on the hanging calendar shows a red rising sun over the sea instead of the mountain; (b) the teapot on the low table becomes blue; (c) the speaker cloth of the radio gets a checked pattern; (d) one of the two small sake bottles on the shrine shelf is gone.",
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the decorated kumade on the wall becomes all gold; (b) the wooden cabinet under the radio has one big drawer instead of two; (c) the left cup on the low table becomes red.",
+    "3": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) both small white sake bottles on the shrine shelf become red; (b) the mountain in the calendar picture becomes snowy white; (c) the radio on the cabinet has its two knobs on the other side; (d) the sprig of sakaki in the vase on the shrine becomes twice as big."
+   },
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   },
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "from_q": 2,
+      "src": [
+       1000,
+       1656,
+       1180,
+       1803
+      ],
+      "poly": [
+       [
+        1178,
+        1735
+       ],
+       [
+        1175,
+        1752
+       ],
+       [
+        1166,
+        1768
+       ],
+       [
+        1152,
+        1782
+       ],
+       [
+        1134,
+        1792
+       ],
+       [
+        1113,
+        1799
+       ],
+       [
+        1090,
+        1801
+       ],
+       [
+        1067,
+        1799
+       ],
+       [
+        1046,
+        1792
+       ],
+       [
+        1028,
+        1782
+       ],
+       [
+        1014,
+        1768
+       ],
+       [
+        1005,
+        1752
+       ],
+       [
+        1002,
+        1735
+       ],
+       [
+        1005,
+        1715
+       ],
+       [
+        1014,
+        1696
+       ],
+       [
+        1028,
+        1681
+       ],
+       [
+        1046,
+        1668
+       ],
+       [
+        1067,
+        1661
+       ],
+       [
+        1090,
+        1658
+       ],
+       [
+        1113,
+        1661
+       ],
+       [
+        1134,
+        1668
+       ],
+       [
+        1152,
+        1681
+       ],
+       [
+        1166,
+        1696
+       ],
+       [
+        1175,
+        1715
+       ]
+      ],
+      "ring": 3,
+      "dst": [
+       272,
+       1632
+      ],
+      "width": 135
+     }
+    ]
+   }
+  }
+ ],
+ "thumbnail": {
+  "question": 1,
+  "big_text": "秋の間違いさがし",
+  "highlight": "間違いさがし",
+  "highlight_color": [
+   255,
+   214,
+   0
+  ],
+  "big_color": [
+   255,
+   255,
+   255
+  ],
+  "band_color": [
+   25,
+   35,
+   70
+  ],
+  "big_size": 132,
+  "sub_text": "3つ見つけられる？全5問",
+  "badges": [
+   [
+    "初級〜上級",
+    [
+     176,
+     62,
+     52
+    ]
+   ]
+  ],
+  "circle_hint": false,
+  "note": "第1回と同じ型（変えた所なし）。左右に同じ絵・上に濃紺の帯で「秋の間違いさがし」・下に難易度と問いかけ。こよみ先生は入れない"
+ },
+ "shorts": [
+  {
+   "question": 2,
+   "answer_gap": 3.3,
+   "note": "1本目：第2問 熊手の店・初級",
+   "title": "シニアの間違い探し｜酉の市の熊手の1問 #脳トレ #頭の体操"
+  },
+  {
+   "question": 4,
+   "answer_gap": 3.3,
+   "note": "2本目：第4問 酉の市の夜の境内・中級",
+   "title": "シニアの間違い探し｜秋の夜の境内の1問 #脳トレ #頭の体操"
+  }
+ ]
+}

@@ -9,7 +9,7 @@ program_ops の書き方：{"<版>": [操作, ...]}。版の絵は元の絵（q<
       "from_file": "<作業フォルダの絵>" で、描き直しの版などから切り抜く／"circle": [cx,cy,r] で円で切り抜く
       "poly": [[x,y], ...] で、物を手で囲んだ多角形（元の絵の座標）で切り抜く（自動の切り抜きで地が付いてくるとき）
   {"op": "recolor", "box": [x0,y0,x1,y1], "hue": 色相（0〜255）, "sat": 彩度の倍率, "val": 明るさの倍率}
-      box の中の物（地と色が違う所）の色を変える ＝「色」（上級だけ）
+      box の中の物（地と色が違う所）の色を変える ＝「色」／"poly": [[x,y],...] で手で囲んだ範囲だけ
   {"op": "flip", "box": [x0,y0,x1,y1]}
       box の中の物を左右反対にし、もとの物の跡は地の色でうめる ＝「向き」（地が無地の所だけ）
 切り抜きは「box のふちの色（地）」との差で決めるので、地が無地に近い所の物に使う。
@@ -187,6 +187,13 @@ def apply(im, op, work=None):
             mk = mk.rotate(op["rot"], resample=Image.BICUBIC, expand=True)
         mk = mk.filter(ImageFilter.MinFilter(3)).filter(ImageFilter.GaussianBlur(0.8))
         im.paste(obj, tuple(op["dst"]), mk)
+        if op.get("ring"):      # 円で切り抜いた物のふちに、絵と同じ濃い輪郭線を描く（となりの物の線を切り捨てたとき）
+            mm = np.asarray(mk) > 128
+            edge = mm & ~ndimage.binary_erosion(mm, iterations=op["ring"])
+            A = np.asarray(im).copy(); x, y = op["dst"]
+            sub = A[y:y + mm.shape[0], x:x + mm.shape[1]]
+            sub[edge[:sub.shape[0], :sub.shape[1]]] = (45, 32, 25)
+            im = Image.fromarray(A)
     elif op["op"] == "recolor":
         box = tuple(op["box"])
         crop = im.crop(box)
@@ -200,11 +207,18 @@ def apply(im, op, work=None):
                 for cx, cy, r in op["circles"]:
                     inc |= (xx + box[0] - cx) ** 2 + (yy + box[1] - cy) ** 2 <= r ** 2
                 m &= inc
+        elif op.get("poly"):      # 物を手で囲んだ多角形（元の絵の座標）の中を塗り替える（地と物の色が近いとき）
+            from PIL import ImageDraw
+            pm = Image.new("L", crop.size, 0)
+            ImageDraw.Draw(pm).polygon([(x - box[0], y - box[1]) for x, y in op["poly"]], fill=255)
+            m = np.asarray(pm) > 0
         else:
             m, _ = obj_mask(crop, op.get("thr", THR), op.get("mask"))
         H = np.asarray(crop.convert("HSV")).astype(float)
         if "hue" in op:
             H[..., 0] = np.where(m, op["hue"], H[..., 0])
+        if "sat_set" in op:      # 白い物（紙の提灯など）は倍率では色が付かないので、彩度を直接決める
+            H[..., 1] = np.where(m, np.maximum(H[..., 1], op["sat_set"]), H[..., 1])
         H[..., 1] = np.where(m, np.clip(H[..., 1] * op.get("sat", 1.0), 0, 255), H[..., 1])
         H[..., 2] = np.where(m, np.clip(H[..., 2] * op.get("val", 1.0), 0, 255), H[..., 2])
         im.paste(Image.fromarray(H.astype(np.uint8), "HSV").convert("RGB"), box[:2])

@@ -78,7 +78,7 @@ def lines(ep):
     a0 = c["solve"]
     L.append(("s_ans0", a0, Q.get("answers_intro", "答えです。")))
     for i, d in enumerate(Q["diffs"]):
-        L.append((f"s_ans{i + 1}", a0 + 1.6 + c["answer_gap"] * i, d["line"]))
+        L.append((f"s_ans{i + 1}", a0 + 1.6 + c["answer_gap"] * i, d.get("short_line", d["line"])))   # ショートだけ短くしたいとき（長尺はそのまま）
     end_at = a0 + 1.6 + c["answer_gap"] * len(Q["diffs"]) + 0.4
     L.append(("s_end", end_at + 0.4, c["end"]))
     total = round(end_at + c["end_len"], 1)
