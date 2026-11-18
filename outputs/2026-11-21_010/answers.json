@@ -49,7 +49,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 278,
+   "outside_box_pixels_diff_gt15": 294,
    "outside_box_max_distance_px": 8.0,
    "answers": [
     {
@@ -59,72 +59,72 @@
      "line": "かぎに掛けた竹のひしゃくが、ありません。",
      "box_px": [
       780,
-      182,
+      165,
       1072,
-      1035
+      1038
      ],
      "box_screen": [
       403,
-      94,
+      85,
       554,
-      535
+      537
      ],
      "circle_a_screen": [
       403,
-      94,
+      85,
       554,
-      535
+      537
      ],
      "circle_b_screen": [
       403,
-      94,
+      85,
       554,
-      535
+      537
      ],
      "object_w_px": 282,
      "object_picture_width_pct": 15.19,
      "object_screen_width_pct": 7.6,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "M",
      "made_by": "gemini",
      "note": ""
     },
     {
      "id": 2,
      "type": "色",
-     "label": "風鈴が青い",
-     "line": "風鈴が、青くなりました。",
+     "label": "ちょうちんが黄色",
+     "line": "右のちょうちんが、黄色になりました。",
      "box_px": [
-      1425,
-      278,
-      1749,
-      649
+      1419,
+      302,
+      1736,
+      628
      ],
      "box_screen": [
-      737,
-      144,
-      905,
-      336
+      734,
+      156,
+      898,
+      325
      ],
      "circle_a_screen": [
-      737,
-      144,
-      905,
-      336
+      734,
+      156,
+      898,
+      325
      ],
      "circle_b_screen": [
-      737,
-      144,
-      905,
-      336
+      734,
+      156,
+      898,
+      325
      ],
-     "object_w_px": 296,
-     "object_picture_width_pct": 15.95,
-     "object_screen_width_pct": 7.97,
-     "in_level_range": true,
+     "object_w_px": 302,
+     "object_picture_width_pct": 16.27,
+     "object_screen_width_pct": 8.14,
+     "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "M",
      "made_by": "gemini",
      "note": ""
     },
@@ -134,35 +134,35 @@
      "label": "うちわが赤い",
      "line": "うちわが、赤くなりました。",
      "box_px": [
-      1510,
-      1266,
-      1826,
-      1460
+      1441,
+      1237,
+      1821,
+      1458
      ],
      "box_screen": [
-      781,
-      655,
-      944,
-      755
+      745,
+      640,
+      942,
+      754
      ],
      "circle_a_screen": [
-      781,
-      655,
-      944,
-      755
+      745,
+      640,
+      942,
+      754
      ],
      "circle_b_screen": [
-      781,
-      655,
-      944,
-      755
+      745,
+      640,
+      942,
+      754
      ],
-     "object_w_px": 301,
-     "object_picture_width_pct": 16.22,
-     "object_screen_width_pct": 8.11,
+     "object_w_px": 299,
+     "object_picture_width_pct": 16.11,
+     "object_screen_width_pct": 8.05,
      "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "M",
      "made_by": "gemini",
      "note": ""
     }

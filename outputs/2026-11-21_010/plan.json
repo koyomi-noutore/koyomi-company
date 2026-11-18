@@ -907,26 +907,26 @@
      "line": "かぎに掛けた竹のひしゃくが、ありません。",
      "box": [
       780,
-      182,
+      165,
       1072,
-      1035
+      1038
      ],
      "object_w": 282,
-     "src": "1"
+     "src": "M"
     },
     {
      "id": 2,
      "type": "色",
-     "label": "風鈴が青い",
-     "line": "風鈴が、青くなりました。",
+     "label": "ちょうちんが黄色",
+     "line": "右のちょうちんが、黄色になりました。",
      "box": [
-      1425,
-      278,
-      1749,
-      649
+      1419,
+      302,
+      1736,
+      628
      ],
-     "object_w": 296,
-     "src": "1"
+     "object_w": 302,
+     "src": "M"
     },
     {
      "id": 3,
@@ -934,26 +934,29 @@
      "label": "うちわが赤い",
      "line": "うちわが、赤くなりました。",
      "box": [
-      1510,
-      1266,
-      1826,
-      1460
+      1441,
+      1237,
+      1821,
+      1458
      ],
-     "object_w": 301,
-     "src": "1"
+     "object_w": 299,
+     "src": "M"
     }
    ],
    "hint_diff": null,
    "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small hand fan on the counter becomes red; (b) the bamboo scoop hanging on the hook is gone (only the hook remains); (c) the glass wind chime becomes plain blue; (d) the top paper bag of the stack is gone.",
    "edit_prompts": {
-    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small hand fan on the counter becomes red; (b) the bamboo scoop hanging on the hook is gone (only the hook remains); (c) the glass wind chime becomes plain blue; (d) the top paper bag of the stack is gone."
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small hand fan on the counter becomes red; (b) the bamboo scoop hanging on the hook is gone (only the hook remains); (c) the glass wind chime becomes plain blue; (d) the top paper bag of the stack is gone.",
+    "L": "Edit this illustration and make exactly this one change, and nothing else. Keep the same thick outlines, colors and style: the glass wind chime hanging at the upper right is replaced by a small round red paper lantern without letters, hanging from the same place, about the same size. Do not change anything else.",
+    "M": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the bamboo scoop hanging on the hook is gone (only the hook remains); (b) the small round red paper lantern at the upper right becomes yellow; (c) the small hand fan on the counter becomes red."
    },
    "content_box": [
     0,
     0,
     1856,
     2088
-   ]
+   ],
+   "note": "2026-11-18 CEO指摘：風鈴は夏の風物詩なので、元の絵の風鈴を小さな赤いちょうちんに描き直した（描き直し版L を新しい元の絵にした）。違いは版Mで作り直し"
   },
   {
    "q": 2,

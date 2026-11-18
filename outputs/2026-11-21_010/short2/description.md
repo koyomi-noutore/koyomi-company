@@ -1,6 +1,6 @@
 # 010 ショート2 投稿用メタデータ（第4問 洋菓子店）
 
-- 長尺：https://youtu.be/JyNwQxfOABU（関連動画はCEOがStudioで設定する。APIでは設定できない）
+- 長尺：https://youtu.be/Y1WY3p0E_WE（関連動画はCEOがStudioで設定する。APIでは設定できない）
 
 ## タイトル
 ```
@@ -13,7 +13,7 @@
 
 続きの問題は長い動画で（全5問）
 【秋の間違い探し】シニアの脳トレクイズ｜栗のイラスト全5問【60代・70代の頭の体操】
-https://youtu.be/JyNwQxfOABU
+https://youtu.be/Y1WY3p0E_WE
 
 こよみ先生のまいにち脳トレ：毎日朝8時半に新しい問題をお届けします。
 

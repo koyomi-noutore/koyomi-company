@@ -115,6 +115,25 @@ def upload(folder, thumbnail=None, short=False):
     print(json.dumps(rec, ensure_ascii=False))
 
 
+def update_metadata(folder):
+    """アップロード済みの動画（<folder>/upload.json）のタイトル・説明欄・タグを、<folder>/description.md の内容に書き換える。
+    例：長尺を上げ直したあと、ショートの説明欄の長尺のURLを新しくする（2026-11-18 第10回）。公開状態は変えない。"""
+    folder = Path(folder)
+    vid = json.loads((folder / "upload.json").read_text(encoding="utf-8"))["video_id"]
+    title, desc, tags = read_metadata(folder / "description.md")
+    tok = access_token()
+    with urllib.request.urlopen(urllib.request.Request(f"https://www.googleapis.com/youtube/v3/videos?part=snippet&id={vid}",
+                                                       headers={"Authorization": "Bearer " + tok}), timeout=60) as r:
+        sn = json.load(r)["items"][0]["snippet"]
+    body = {"id": vid, "snippet": {k: sn[k] for k in ("title", "description", "tags", "categoryId", "defaultLanguage", "defaultAudioLanguage") if k in sn}}
+    body["snippet"].update(title=title, description=desc, tags=tags)
+    req = urllib.request.Request("https://www.googleapis.com/youtube/v3/videos?part=snippet", data=json.dumps(body).encode(), method="PUT",
+                                 headers={"Authorization": "Bearer " + tok, "Content-Type": "application/json; charset=UTF-8"})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        res = json.load(r)["snippet"]
+    print(json.dumps({"video_id": vid, "title": res["title"], "updated": True}, ensure_ascii=False))
+
+
 def retitle_and_thumbnail(folder, thumbnail):
     """公開済み・アップロード済みの動画の、タイトルだけとサムネを差し替える（2026-11-12 立て直し・CEO承認）。
     videos.update の snippet は全体を置き換えるので、いまの snippet を読んでタイトルだけ変えて送る（説明欄・タグは変えない）。"""
