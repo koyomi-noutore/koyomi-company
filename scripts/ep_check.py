@@ -157,3 +157,12 @@ def zoom_sheet(out_dir, path, cols=3):
         sheet.paste(t, ((i % cols) * W, (i // cols) * H))
     sheet.save(path)
     return path
+
+
+def short_safe(ep, work, n=1):
+    """ショートのスマホの安全な範囲の判定（shorts.md「スマホの安全な範囲」2026-11-18）。
+    隠れる範囲を半透明で重ねた確認画像 <回>/short*/safe_check.png を作り、文字・こよみ先生・違いがはみ出していたら問題として返す。"""
+    import ep_short as S
+    S.use(n)
+    S.setup(ep, work, S.CTX.get("font") or str(next(Path(work).glob("fontpkg/package/*/*.ttf"))))
+    return S.safe_check(ep, work)

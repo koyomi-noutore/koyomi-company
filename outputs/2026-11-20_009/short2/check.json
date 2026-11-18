@@ -10,15 +10,15 @@
   },
   "s_ans1": {
    "clipped": 0,
-   "rms_db": -14.9
+   "rms_db": -15.1
   },
   "s_ans2": {
    "clipped": 0,
-   "rms_db": -14.1
+   "rms_db": -15.0
   },
   "s_ans3": {
    "clipped": 0,
-   "rms_db": -15.7
+   "rms_db": -14.5
   },
   "s_end": {
    "clipped": 0,
@@ -30,6 +30,7 @@
   1080,
   1920
  ],
- "question": 5,
- "problems": []
+ "question": 3,
+ "problems": [],
+ "safe_check_image": "/home/user/koyomi-company/outputs/2026-11-20_009/short2/safe_check.png"
 }

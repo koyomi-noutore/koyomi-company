@@ -22,13 +22,19 @@ W, H, FPS = 1080, 1920, 30
 BG = (246, 236, 216)
 INK = (59, 47, 37)
 RED = (220, 30, 30)
-# 絵は上下2枚。大きさは第6回までと同じ（2026-11-18 CEO：第7・8回は小さくて見にくかった）。
-# 下の絵の下のほうはスマホで隠れるので、ショートに使う問は違いが隠れる帯（HIDDEN_Y より下）にかからないものを選ぶ（check で確かめる）
-PW, PH = 720, 810
-PX = (W - PW) // 2
-YS = {"a": 205, "b": 1025}
-HIDDEN_Y = 1536     # これより下はタイトル・チャンネル名・関連動画のリンクで隠れる
-BAND_H = 200
+# スマホの安全な範囲（shorts.md 2026-11-18：iPhone 実機のスクショから）。文字・こよみ先生・違い（＝絵）はこの中に入れる
+SAFE = (60, 260, 900, 1470)
+# 隠れる・切れる所（確認画像に半透明で重ねる）：上の約250px、下の y1480〜、右のボタン（x900〜・y1000〜1880）、左右の端40px
+HIDDEN = [(0, 0, W, 250), (0, 1480, W, H), (900, 1000, W, 1880), (0, 0, 40, H), (W - 40, 0, W, H)]
+SAFE_CX = (SAFE[0] + SAFE[2]) / 2
+# 上の帯（問題文・難易度）は安全な範囲の上に、絵は残りの高さいっぱいに上下2枚（8:9）
+BAND_TOP, BAND_H = 262, 112
+GAP = 8
+PH = (SAFE[3] - (BAND_TOP + BAND_H + 6) - GAP) // 2
+PW = PH * 8 // 9
+PX = int(SAFE_CX - PW / 2)
+YS = {"a": BAND_TOP + BAND_H + 6, "b": BAND_TOP + BAND_H + 6 + PH + GAP}
+HIDDEN_Y = 1480     # これより下はタイトル・チャンネル名・関連動画のリンクで隠れる
 LEVEL_COLOR = {"やさしい": (70, 140, 190), "初級": (96, 150, 90), "中級": (214, 128, 48), "上級": (176, 62, 52)}
 SR = 48000
 
@@ -37,10 +43,10 @@ DEFAULT = {"solve": 25.0, "intro_at": 0.3, "answer_gap": 3.2, "end_len": 8.0,
            # 2026-11-18 CEO指示（shorts.md）：どこを押すか具体的に言い、矢印で関連動画のリンクの位置を示す
            "end": "続きは長い動画で。左下をクリックして、挑戦してみてくださいね。",
            "end_title": "続きは 長い動画で", "end_sub": "左下を クリック！"}
-# こよみ先生は最初から最後まで、上の文字の帯の左側に出す（shorts.md 2026-11-18 第9回から）。絵に重ねず、スマホで隠れない所
+# こよみ先生は左下（絵の左の余白で、下の隠れる帯のすぐ上）に、最初から最後まで（shorts.md「スマホの安全な範囲」2026-11-18）
 OWL_SIZE = 150
-OWL_XY = (14, 25)
-TEXT_CX = (OWL_XY[0] + OWL_SIZE + 10 + W - 16) / 2      # 帯の文字は、こよみ先生の右側のまん中にそろえる
+OWL_XY = (60, SAFE[3] - OWL_SIZE - 8)      # 上下にゆれる幅（±5px）を見ても安全な範囲に入る
+TEXT_CX = SAFE_CX
 LINK_XY = (150, 1630)      # 関連動画のリンクが出るあたり（画面の左下、タイトルの上）。矢印の先
 
 
@@ -187,7 +193,7 @@ def font(size):
 
 
 def setup(ep, work, fontp):
-    CTX.update(ep=Path(ep), work=Path(work), font=str(fontp))
+    CTX.update(ep=Path(ep), work=Path(work), font=str(fontp), drawn=[])
     c = cfg()
     q = c["question"]
     ans = {Q["q"]: Q for Q in json.loads((Path(ep) / "answers.json").read_text(encoding="utf-8"))["questions"]}[q]
@@ -244,29 +250,39 @@ def render(t):
     Q = CTX["Q"]
     im = CTX["base"].copy()
     d = ImageDraw.Draw(im)
-    # 上の帯
-    d.rectangle((0, 0, W, BAND_H), fill=(52, 40, 30))
+    drawn = CTX.setdefault("drawn", [])    # 文字を書いた範囲（安全な範囲の判定に使う）
+    def text(xy, s, f, **kw):
+        d.text(xy, s, font=f, **kw)
+        drawn.append(("文字:" + s, d.textbbox(xy, s, font=f, anchor=kw.get("anchor"), stroke_width=kw.get("stroke_width", 0))))
+    # 上の帯（安全な範囲の上の端に置く。帯の地の色は画面の端まで塗ってよい）
+    d.rectangle((0, BAND_TOP, W, BAND_TOP + BAND_H), fill=(52, 40, 30))
+    cy = BAND_TOP + BAND_H / 2
     sub = current_sub(t) if t < CTX["end_at"] else None
     if sub:
-        ls = wrap2(sub, 14)
-        size = 60 if len(ls) == 1 else 54
+        ls = wrap2(sub, 16)
+        size = 46 if len(ls) == 1 else 42
         for i, l in enumerate(ls):
-            y = BAND_H / 2 + (i - (len(ls) - 1) / 2) * (size + 14)
-            d.text((TEXT_CX, y), l, font=font(size), fill=(255, 255, 255), anchor="mm")
+            y = cy + (i - (len(ls) - 1) / 2) * (size + 8)
+            text((TEXT_CX, y), l, font(size), fill=(255, 255, 255), anchor="mm")
     else:
-        d.text((TEXT_CX, 78), "3つ見つけられる？", font=font(80), fill=(255, 214, 0), anchor="mm", stroke_width=3, stroke_fill=(30, 20, 10))
+        text((TEXT_CX, BAND_TOP + 38), "3つ見つけられる？", font(58), fill=(255, 214, 0), anchor="mm", stroke_width=3, stroke_fill=(30, 20, 10))
         col = LEVEL_COLOR[Q["level"]]
-        bx = TEXT_CX - 330
-        d.rounded_rectangle((bx, 138, bx + 160, 186), 16, fill=col)
-        d.text((bx + 80, 162), Q["level"], font=font(36), fill=(255, 255, 255), anchor="mm")
-        d.text((bx + 180, 162), f"秋の間違いさがし・{Q['scene']}", font=font(34), fill=(255, 240, 200), anchor="lm")
+        cap = f"秋の間違いさがし・{Q['scene']}"
+        fcap = font(30)
+        wcap = d.textlength(cap, font=fcap)
+        bx = TEXT_CX - (120 + 14 + wcap) / 2
+        by = BAND_TOP + 72
+        d.rounded_rectangle((bx, by, bx + 120, by + 34), 12, fill=col)
+        drawn.append(("難易度の札", (bx, by, bx + 120, by + 34)))
+        text((bx + 60, by + 17), Q["level"], font(28), fill=(255, 255, 255), anchor="mm")
+        text((bx + 134, by + 17), cap, fcap, fill=(255, 240, 200), anchor="lm")
     # 残り時間のバー（帯の下）
     if t < c["solve"]:
         frac = max(0.0, 1 - t / c["solve"])
         rem = c["solve"] - t
         col = (110, 180, 100) if rem > 10 else (236, 170, 50) if rem > 5 else (230, 70, 60)
-        d.rectangle((0, BAND_H, W, BAND_H + 5), fill=(225, 212, 188))
-        d.rectangle((0, BAND_H, int(W * frac), BAND_H + 5), fill=col)
+        d.rectangle((SAFE[0], BAND_TOP + BAND_H, SAFE[2], BAND_TOP + BAND_H + 5), fill=(225, 212, 188))
+        d.rectangle((SAFE[0], BAND_TOP + BAND_H, SAFE[0] + int((SAFE[2] - SAFE[0]) * frac), BAND_TOP + BAND_H + 5), fill=col)
         if rem <= 5:
             d.text((PX + PW - 20, YS["a"] + 20), str(math.ceil(rem - 1e-6)), font=font(96), fill=(230, 70, 60), anchor="ra",
                    stroke_width=5, stroke_fill=(255, 255, 255))
@@ -293,9 +309,9 @@ def render(t):
         layer = Image.new("RGBA", (W, H), (246, 236, 216, int(235 * k)))
         ld = ImageDraw.Draw(layer)
         a = int(255 * k)
-        ld.text((W / 2, 560), c["end_title"], font=font(96), fill=INK + (a,), anchor="mm")
-        ld.text((W / 2, 720), c["end_sub"], font=font(88), fill=(176, 62, 52, a), anchor="mm")
-        ld.text((W / 2, 840), "こよみ先生のまいにち脳トレ", font=font(48), fill=(110, 84, 60, a), anchor="mm")
+        for (y, s_, sz, colr) in ((560, c["end_title"], 80, INK), (700, c["end_sub"], 80, (176, 62, 52)), (820, "こよみ先生のまいにち脳トレ", 46, (110, 84, 60))):
+            ld.text((TEXT_CX, y), s_, font=font(sz), fill=colr + (a,), anchor="mm")
+            CTX.setdefault("drawn", []).append(("文字:" + s_, ld.textbbox((TEXT_CX, y), s_, font=font(sz), anchor="mm")))
         im.paste(layer, (0, 0), layer)
         # 左下の関連動画のリンクを指す矢印（ゆっくり動かして目を引く）
         if t >= e0 + 0.5:
@@ -355,8 +371,51 @@ def contact_sheet(ep, work, fontp, path):
     return path
 
 
+def safe_check(ep, work, fontp=None):
+    """スマホの安全な範囲の判定（shorts.md 2026-11-18）：文字・こよみ先生・違い（赤丸の中の物）が SAFE の中にあるか。
+    隠れる範囲を半透明の赤で重ねた確認画像 <回>/<short>/safe_check.png も作る（出題中・答え合わせ・最後の案内の3枚を横に並べる）。"""
+    if "base" not in CTX:
+        setup(ep, work, fontp or CTX.get("font"))
+    CTX["drawn"] = []
+    c = cfg()
+    times = [max(0.5, CTX["voice"][0]["start"] + 0.5), c["solve"] - 6, CTX["end_at"] - 0.3, CTX["total"] - 0.5]
+    frames = [render(t) for t in times]
+    boxes = list(CTX["drawn"])
+    boxes.append(("こよみ先生", (OWL_XY[0], OWL_XY[1] - 5, OWL_XY[0] + OWL_SIZE, OWL_XY[1] + OWL_SIZE + 5)))
+    for i, a in enumerate(CTX["Q"]["answers"]):
+        for side in "ab":
+            boxes.append((f"違い{i + 1}（{'上' if side == 'a' else '下'}の絵）", circle_box(a, side)))
+    problems = []
+    seen = set()
+    for name, (x0, y0, x1, y1) in boxes:
+        if not (SAFE[0] - 1 <= x0 and SAFE[1] - 1 <= y0 and x1 <= SAFE[2] + 1 and y1 <= SAFE[3] + 1):
+            key = (name, round(x0), round(y0))
+            if key not in seen:
+                seen.add(key)
+                problems.append(f"安全な範囲の外：{name}（{x0:.0f},{y0:.0f}〜{x1:.0f},{y1:.0f}）")
+    tiles = []
+    for fr in (frames[1], frames[2], frames[3]):
+        im = fr.convert("RGBA")
+        ov = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        od = ImageDraw.Draw(ov)
+        for r in HIDDEN:
+            od.rectangle(r, fill=(230, 30, 30, 110))
+        od.rectangle(SAFE, outline=(0, 160, 60, 255), width=6)
+        for name, b in boxes:
+            ok = SAFE[0] - 1 <= b[0] and SAFE[1] - 1 <= b[1] and b[2] <= SAFE[2] + 1 and b[3] <= SAFE[3] + 1
+            od.rectangle(b, outline=(0, 120, 255, 255) if ok else (255, 0, 0, 255), width=3)
+        tiles.append(Image.alpha_composite(im, ov).convert("RGB").resize((360, 640), Image.LANCZOS))
+    sheet = Image.new("RGB", (360 * 3 + 20, 640), (255, 255, 255))
+    for i, t in enumerate(tiles):
+        sheet.paste(t, (i * 370, 0))
+    out = Path(ep) / SUB / "safe_check.png"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    sheet.save(out)
+    return problems, out
+
+
 def check(ep, work):
-    """数値チェック：大きさ・長さ（15〜45秒）・声が枠に収まるか。"""
+    """数値チェック：大きさ・長さ（15〜45秒）・声が枠に収まるか・スマホの安全な範囲（safe_check）。"""
     out = Path(ep) / SUB
     problems = []
     r = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration:stream=codec_type,width,height", "-of", "json",
@@ -392,7 +451,10 @@ def check(ep, work):
                     problems.append(f"違い{i + 1}（{side}）が右側のボタンの帯にかかる（x{x1:.0f}）")
     except Exception as e:
         problems.append(f"違いの位置を確かめられない：{e}")
-    res = {"voice": st, "duration": round(dur, 2), "size": [v["width"], v["height"]], "question": tl["question"], "problems": problems}
+    sp, simg = safe_check(ep, work)
+    problems += sp
+    res = {"voice": st, "duration": round(dur, 2), "size": [v["width"], v["height"]], "question": tl["question"], "problems": problems,
+           "safe_check_image": str(simg)}
     (out / "check.json").write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
     return res
 
