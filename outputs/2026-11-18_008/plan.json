@@ -305,6 +305,58 @@
  },
  "readings": [
   [
+   "右はし",
+   "みぎはし"
+  ],
+  [
+   "形",
+   "かたち"
+  ],
+  [
+   "初級",
+   "しょきゅう"
+  ],
+  [
+   "中級",
+   "ちゅうきゅう"
+  ],
+  [
+   "上級",
+   "じょうきゅう"
+  ],
+  [
+   "茶色い",
+   "ちゃいろい"
+  ],
+  [
+   "先",
+   "さき"
+  ],
+  [
+   "数",
+   "かず"
+  ],
+  [
+   "花びら",
+   "はなびら"
+  ],
+  [
+   "花",
+   "はな"
+  ],
+  [
+   "上",
+   "うえ"
+  ],
+  [
+   "土なべ",
+   "どなべ"
+  ],
+  [
+   "下",
+   "した"
+  ],
+  [
    "山小屋",
    "やまごや"
   ],
@@ -323,6 +375,114 @@
   [
    "牧場",
    "ぼくじょう"
+  ],
+  [
+   "玉ねぎ",
+   "たまねぎ"
+  ],
+  [
+   "白く",
+   "しろく"
+  ],
+  [
+   "黒い",
+   "くろい"
+  ],
+  [
+   "輪",
+   "わ"
+  ],
+  [
+   "針",
+   "はり"
+  ],
+  [
+   "変わり",
+   "かわり"
+  ],
+  [
+   "一本",
+   "いっぽん"
+  ],
+  [
+   "牛",
+   "うし"
+  ],
+  [
+   "左",
+   "ひだり"
+  ],
+  [
+   "右",
+   "みぎ"
+  ],
+  [
+   "落ち葉",
+   "おちば"
+  ],
+  [
+   "高く",
+   "たかく"
+  ],
+  [
+   "黄色い",
+   "きいろい"
+  ],
+  [
+   "短く",
+   "みじかく"
+  ],
+  [
+   "大きく",
+   "おおきく"
+  ],
+  [
+   "頭",
+   "あたま"
+  ],
+  [
+   "刃",
+   "は"
+  ],
+  [
+   "舞って",
+   "まって"
+  ],
+  [
+   "葉っぱ",
+   "はっぱ"
+  ],
+  [
+   "魔法瓶",
+   "まほうびん"
+  ],
+  [
+   "黄色",
+   "きいろ"
+  ],
+  [
+   "小さな",
+   "ちいさな"
+  ],
+  [
+   "少なく",
+   "すくなく"
+  ],
+  [
+   "向いて",
+   "むいて"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "青い",
+   "あおい"
+  ],
+  [
+   "白い",
+   "しろい"
   ],
   [
    "第1問",
@@ -373,18 +533,6 @@
    "もんだい"
   ],
   [
-   "初級",
-   "しょきゅう"
-  ],
-  [
-   "中級",
-   "ちゅうきゅう"
-  ],
-  [
-   "上級",
-   "じょうきゅう"
-  ],
-  [
    "答え",
    "こたえ"
   ],
@@ -403,10 +551,6 @@
   [
    "量",
    "りょう"
-  ],
-  [
-   "少なく",
-   "すくなく"
   ],
   [
    "小鳥",
@@ -429,16 +573,8 @@
    "なえ"
   ],
   [
-   "一本",
-   "いっぽん"
-  ],
-  [
    "一つ",
    "ひとつ"
-  ],
-  [
-   "白い",
-   "しろい"
   ],
   [
    "丸",
@@ -453,20 +589,12 @@
    "げた"
   ],
   [
-   "片方",
-   "かたほう"
-  ],
-  [
    "桶",
    "おけ"
   ],
   [
    "金属",
    "きんぞく"
-  ],
-  [
-   "輪",
-   "わ"
   ],
   [
    "無く",
@@ -485,16 +613,8 @@
    "むい"
   ],
   [
-   "青い",
-   "あおい"
-  ],
-  [
    "取っ手",
    "とって"
-  ],
-  [
-   "上",
-   "うえ"
   ],
   [
    "金具",
@@ -539,14 +659,6 @@
   [
    "絵",
    "え"
-  ],
-  [
-   "左",
-   "ひだり"
-  ],
-  [
-   "右",
-   "みぎ"
   ],
   [
    "今日",
@@ -613,9 +725,78 @@
     2088
    ],
    "retries": {},
-   "program_edits": {},
-   "program_ops": {},
-   "diffs": [],
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   },
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "src": [
+       1530,
+       720,
+       1710,
+       900
+      ],
+      "circle": [
+       1620,
+       810,
+       88
+      ],
+      "dst": [
+       1635,
+       605
+      ],
+      "width": 160,
+      "rot": -15
+     }
+    ]
+   },
+   "diffs": [
+    {
+     "id": 1,
+     "type": "一部欠け",
+     "label": "土なべの左の取っ手がない",
+     "line": "土なべの左の取っ手が、ありません。",
+     "box": [
+      185,
+      950,
+      440,
+      1485
+     ],
+     "object_w": 150,
+     "src": "2"
+    },
+    {
+     "id": 2,
+     "type": "入れ替え",
+     "label": "しいたけがしめじに",
+     "line": "しいたけが、しめじになりました。",
+     "box": [
+      897,
+      875,
+      1322,
+      1192
+     ],
+     "object_w": 200,
+     "src": "2"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "かごのしいたけが増える",
+     "line": "かごのしいたけが、ひとつ増えました。",
+     "box": [
+      1610,
+      590,
+      1810,
+      800
+     ],
+     "object_w": 150,
+     "src": "p",
+     "note": "プログラムで足した（同じかごのしいたけ）"
+    }
+   ],
    "hint_diff": null,
    "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new kinds of objects. Changes: (a) the hands of the round wall clock point to a clearly different time; (b) the teacup gets a blue stripe pattern around it; (c) in the small basket of shiitake mushrooms, one more shiitake; (d) the wooden spoon lies the opposite way (handle on the other side); (e) the kerosene lamp's glass chimney becomes taller.",
    "edit_prompts": {
@@ -638,7 +819,50 @@
    "retries": {},
    "program_edits": {},
    "program_ops": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "一部欠け",
+     "label": "ちょうちんの下の輪がない",
+     "line": "ちょうちんの下の黒い輪が、ありません。",
+     "box": [
+      117,
+      250,
+      461,
+      484
+     ],
+     "object_w": 145,
+     "src": "2"
+    },
+    {
+     "id": 2,
+     "type": "向き",
+     "label": "はかりの針",
+     "line": "はかりの針の向きが、変わりました。",
+     "box": [
+      170,
+      860,
+      285,
+      1045
+     ],
+     "object_w": 120,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "エリンギが増える",
+     "line": "エリンギが、一本増えました。",
+     "box": [
+      1185,
+      512,
+      1410,
+      755
+     ],
+     "object_w": 110,
+     "src": "2"
+    }
+   ],
    "hint_diff": null,
    "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new kinds of objects. Changes: (a) the hanging paper lantern becomes round instead of long; (b) the red shopping basket's handle is gone; (c) one bundle of white enoki mushrooms becomes a bunch of brown shiitake; (d) the needle of the small scale points to the other side; (e) the potted green plant becomes about half its size.",
    "edit_prompts": {
@@ -648,8 +872,8 @@
   {
    "q": 3,
    "scene": "渓流",
-   "level": "中級",
-   "go": "少しむずかしくなります。どうぞ。",
+   "level": "初級",
+   "go": "では、第3問。どうぞ。",
    "prompt": "Scene: close-up at a mountain stream (keiryu) in late autumn. CENTER, LARGE (main subject): a mossy fallen log on the bank with a cluster of orange and brown wild mushrooms growing on it. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Each listed side object is SMALL (about one twelfth of the picture width), fully visible (never cut off by the picture edge), standing alone on a plain area (plain table, floor, ground, wall or sky) so it could be removed or added cleanly. Objects: (upper left) a red maple branch; (upper right) a small bird on a rock; (lower left) a bamboo basket with a few mushrooms; (lower right) a small round stone in the water; (middle) a small white flower on the bank.",
    "answers_intro": "答えです。",
    "content_box": [
@@ -659,13 +883,85 @@
     2088
    ],
    "retries": {},
-   "program_edits": {},
-   "program_ops": {},
-   "diffs": [],
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   },
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "src": [
+       565,
+       815,
+       712,
+       975
+      ],
+      "circle": [
+       638,
+       895,
+       76
+      ],
+      "thr_in_circle": 70,
+      "dst": [
+       1575,
+       700
+      ],
+      "width": 115,
+      "rot": 8
+     }
+    ]
+   },
+   "diffs": [
+    {
+     "id": 1,
+     "type": "形",
+     "label": "もみじの葉の形",
+     "line": "もみじの葉の形が、変わりました。",
+     "box": [
+      681,
+      226,
+      940,
+      459
+     ],
+     "object_w": 150,
+     "src": "4"
+    },
+    {
+     "id": 2,
+     "type": "大きさ",
+     "label": "左のきのこが大きい",
+     "line": "左の小さなきのこが、大きくなりました。",
+     "box": [
+      555,
+      803,
+      763,
+      1013
+     ],
+     "object_w": 125,
+     "src": "2"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "右にきのこが増える",
+     "line": "右のこけに、きのこが増えました。",
+     "box": [
+      1565,
+      690,
+      1705,
+      860
+     ],
+     "object_w": 115,
+     "src": "p",
+     "note": "プログラムで同じ絵の左の小さなきのこを写した"
+    }
+   ],
    "hint_diff": null,
    "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new kinds of objects. Changes: (a) the small bird on the rock faces the opposite direction; (b) the small white flower on the bank has only three petals; (c) one orange mushroom on the log becomes about twice as big; (d) one red maple leaf on the branch is gone; (e) the small round stone in the water becomes long and flat.",
    "edit_prompts": {
-    "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Changes: (a) on the mossy log, the smallest orange mushroom at the far right end is gone (moss only there); (b) one small orange mushroom near the left end of the log becomes about twice as big."
+    "2": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Changes: (a) on the mossy log, the smallest orange mushroom at the far right end is gone (moss only there); (b) one small orange mushroom near the left end of the log becomes about twice as big.",
+    "3": "Edit this illustration and make exactly this one small change, and nothing else. Keep the same thick outlines, colors and style: the orange mushroom at the far RIGHT end of the big mushroom cluster on the mossy log gets several small round white spots on its cap (same mushroom, same size and shape).",
+    "4": "Edit this illustration and make exactly this one small change, and nothing else. Keep the same thick outlines, colors and style: on the red maple branch at the upper left, the single red maple leaf at the far RIGHT tip of the branch (the leaf closest to the middle of the picture) has only THREE points instead of five (same size, same color, same place). Do not add anything."
    }
   },
   {
@@ -682,9 +978,79 @@
     2088
    ],
    "retries": {},
-   "program_edits": {},
-   "program_ops": {},
-   "diffs": [],
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   },
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "src": [
+       1650,
+       1275,
+       1805,
+       1415
+      ],
+      "circle": [
+       1727,
+       1345,
+       74
+      ],
+      "thr_in_circle": 110,
+      "dst": [
+       1395,
+       1135
+      ],
+      "width": 95,
+      "rot": 35
+     }
+    ]
+   },
+   "diffs": [
+    {
+     "id": 1,
+     "type": "一部欠け",
+     "label": "ランタンの輪がない",
+     "line": "ランタンの上の輪が、ありません。",
+     "box": [
+      164,
+      700,
+      298,
+      864
+     ],
+     "object_w": 85,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "入れ替え",
+     "label": "きのこが玉ねぎに",
+     "line": "きのこが、玉ねぎになりました。",
+     "box": [
+      607,
+      979,
+      874,
+      1167
+     ],
+     "object_w": 90,
+     "src": "2"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "落ち葉が増える",
+     "line": "落ち葉が、一枚増えました。",
+     "box": [
+      1380,
+      1120,
+      1500,
+      1240
+     ],
+     "object_w": 90,
+     "src": "p",
+     "note": "プログラムで足した（同じ絵のもみじの落ち葉）"
+    }
+   ],
    "hint_diff": null,
    "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new kinds of objects. Changes: (a) the duck on the water faces the opposite direction; (b) the handle of the cup is gone; (c) the folded picnic blanket's check pattern becomes stripes; (d) one more mushroom skewer on the grill; (e) the small lantern's top ring is gone.",
    "edit_prompts": {
@@ -707,7 +1073,50 @@
    "retries": {},
    "program_edits": {},
    "program_ops": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "一部欠け",
+     "label": "なべのつまみがない",
+     "line": "なべのふたのつまみが、ありません。",
+     "box": [
+      1150,
+      689,
+      1310,
+      789
+     ],
+     "object_w": 50,
+     "src": "2"
+    },
+    {
+     "id": 2,
+     "type": "形",
+     "label": "牛のしっぽが短い",
+     "line": "牛のしっぽが、短くなりました。",
+     "box": [
+      1619,
+      213,
+      1720,
+      524
+     ],
+     "object_w": 60,
+     "src": "2"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "きのこが白い",
+     "line": "かごのきのこが、ひとつ白くなりました。",
+     "box": [
+      477,
+      616,
+      700,
+      792
+     ],
+     "object_w": 65,
+     "src": "2"
+    }
+   ],
    "hint_diff": null,
    "edit_prompt": "Edit this illustration and make exactly these small changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Do not add any new kinds of objects. Changes: (a) the small bell on the fence is gone; (b) the black spots on the far cow are in a different pattern; (c) the lid of the milk can becomes red; (d) one of the pair of boots faces the other way; (e) one small mushroom in the grass becomes twice as big; (f) the handle of the trowel becomes blue.",
    "edit_prompts": {

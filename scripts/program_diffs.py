@@ -136,6 +136,19 @@ def apply(im, op, work=None):
         else:
             m, _ = (outline_mask(crop, close=op["close"]) if op.get("mask") == "outline" and op.get("close")
                     else obj_mask(crop, op.get("thr", THR), op.get("mask")))
+        if op.get("drop_white"):   # 白い地（空・紙）を切り抜きから外す（物の後ろの白がふちに付いてこないように）
+            C0 = np.asarray(crop).astype(float)
+            white = (C0.min(2) > 225) & (C0.max(2) - C0.min(2) < 25)
+            m = np.asarray(m, bool) & ~ndimage.binary_dilation(white, iterations=1)
+            if op.get("drop_sat"):   # 彩度がこれより高い所（となりの鮮やかな物）も外す
+                Hs = np.asarray(crop.convert("HSV")).astype(int)
+                m &= ~((Hs[..., 1] > op["drop_sat"]) & (Hs[..., 2] > 120))
+            m = ndimage.binary_opening(m, iterations=1)
+            lab, n = ndimage.label(m)
+            if n > 1:   # いちばん大きなかたまりだけ残す
+                sizes = ndimage.sum(m, lab, range(1, n + 1))
+                m = lab == (int(np.argmax(sizes)) + 1)
+            m = ndimage.binary_fill_holes(m)
         ys, xs = np.nonzero(m)
         crop = crop.crop((xs.min(), ys.min(), xs.max() + 1, ys.max() + 1))
         m = m[ys.min():ys.max() + 1, xs.min():xs.max() + 1]

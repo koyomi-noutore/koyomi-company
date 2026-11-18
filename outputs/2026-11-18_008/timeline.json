@@ -1,0 +1,624 @@
+{
+ "total_sec": 630.0,
+ "fps": 30,
+ "opening": [
+  0.0,
+  19.0
+ ],
+ "rule": [
+  19.0,
+  30.0
+ ],
+ "unchiku": [
+  354.0,
+  384.0
+ ],
+ "ending": [
+  600.0,
+  630.0
+ ],
+ "cta": null,
+ "questions": {
+  "1": {
+   "start": 30.0,
+   "card": [
+    30.0,
+    33.0
+   ],
+   "solve": [
+    33.0,
+    123.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 113.0,
+   "answer": [
+    123.0,
+    138.0
+   ],
+   "scene": "山小屋",
+   "level": "やさしい",
+   "go": "さあ、第1問。やさしい問題からどうぞ。",
+   "hint": null,
+   "answers": [
+    "土なべの左の取っ手が、ありません。",
+    "しいたけが、しめじになりました。",
+    "かごのしいたけが、ひとつ増えました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "2": {
+   "start": 138.0,
+   "card": [
+    138.0,
+    141.0
+   ],
+   "solve": [
+    141.0,
+    231.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 221.0,
+   "answer": [
+    231.0,
+    246.0
+   ],
+   "scene": "道の駅",
+   "level": "初級",
+   "go": "では、第2問。どうぞ。",
+   "hint": null,
+   "answers": [
+    "ちょうちんの下の黒い輪が、ありません。",
+    "はかりの針の向きが、変わりました。",
+    "エリンギが、一本増えました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "3": {
+   "start": 246.0,
+   "card": [
+    246.0,
+    249.0
+   ],
+   "solve": [
+    249.0,
+    339.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 329.0,
+   "answer": [
+    339.0,
+    354.0
+   ],
+   "scene": "渓流",
+   "level": "初級",
+   "go": "では、第3問。どうぞ。",
+   "hint": null,
+   "answers": [
+    "もみじの葉の形が、変わりました。",
+    "左の小さなきのこが、大きくなりました。",
+    "右のこけに、きのこが増えました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "4": {
+   "start": 384.0,
+   "card": [
+    384.0,
+    387.0
+   ],
+   "solve": [
+    387.0,
+    477.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 467.0,
+   "answer": [
+    477.0,
+    492.0
+   ],
+   "scene": "湖のほとり",
+   "level": "中級",
+   "go": "後半です。第4問、どうぞ。",
+   "hint": null,
+   "answers": [
+    "ランタンの上の輪が、ありません。",
+    "きのこが、玉ねぎになりました。",
+    "落ち葉が、一枚増えました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "5": {
+   "start": 492.0,
+   "card": [
+    492.0,
+    495.0
+   ],
+   "solve": [
+    495.0,
+    585.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 575.0,
+   "answer": [
+    585.0,
+    600.0
+   ],
+   "scene": "牧場",
+   "level": "上級",
+   "go": "いよいよ最後の難問です。じっくりどうぞ。",
+   "hint": null,
+   "answers": [
+    "なべのふたのつまみが、ありません。",
+    "牛のしっぽが、短くなりました。",
+    "かごのきのこが、ひとつ白くなりました。"
+   ],
+   "answers_intro": "答えです。"
+  }
+ },
+ "lines": [
+  {
+   "id": "op",
+   "start": 0.0,
+   "slot_end": 7.0,
+   "subtitle": "こよみ先生です。今日は、きのこの間違い探し、全5問です。",
+   "voice_text": "こよみせんせいです。きょうは、きのこのまちがいさがし、ぜんごもんです。",
+   "face": "smile"
+  },
+  {
+   "id": "op2",
+   "start": 7.0,
+   "slot_end": 14.0,
+   "subtitle": "最後は難問です。3問目のあとには、きのこの意外なお話も。",
+   "voice_text": "さいごは、なんもんです。さんもんめのあとには、きのこの、いがいなおはなしも。",
+   "face": "surprise"
+  },
+  {
+   "id": "op3",
+   "start": 14.0,
+   "slot_end": 19.0,
+   "subtitle": "ぜひ最後まで、一緒に解いてくださいね。",
+   "voice_text": "ぜひさいごまで、いっしょにといてくださいね。",
+   "face": "wink"
+  },
+  {
+   "id": "rule",
+   "start": 19.0,
+   "slot_end": 30.0,
+   "subtitle": "ルールです。左と右の絵をくらべて、90秒で、右の絵の違いを3つ探してください。",
+   "voice_text": "ルールです。ひだりとみぎのえをくらべて、きゅうじゅうびょうで、みぎのえのちがいを、みっつさがしてください。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_card",
+   "start": 30.0,
+   "slot_end": 34.3,
+   "subtitle": "第1問、やさしい問題。山小屋です。",
+   "voice_text": "だいいちもん、やさしいもんだい。やまごやです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_go",
+   "start": 34.3,
+   "slot_end": 41.0,
+   "subtitle": "さあ、第1問。やさしい問題からどうぞ。",
+   "voice_text": "さあ、だいいちもん。やさしいもんだいからどうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_call0",
+   "start": 63.0,
+   "slot_end": 67.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_call1",
+   "start": 93.0,
+   "slot_end": 97.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_ten",
+   "start": 113.0,
+   "slot_end": 116.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_ans0",
+   "start": 123.0,
+   "slot_end": 124.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q1_ans1",
+   "start": 124.6,
+   "slot_end": 128.9,
+   "subtitle": "土なべの左の取っ手が、ありません。",
+   "voice_text": "どなべのひだりのとってが、ありません。",
+   "face": "smile"
+  },
+  {
+   "id": "q1_ans2",
+   "start": 128.9,
+   "slot_end": 133.2,
+   "subtitle": "しいたけが、しめじになりました。",
+   "voice_text": "しいたけが、しめじになりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q1_ans3",
+   "start": 133.2,
+   "slot_end": 137.5,
+   "subtitle": "かごのしいたけが、ひとつ増えました。",
+   "voice_text": "かごのしいたけが、ひとつふえました。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_card",
+   "start": 138.0,
+   "slot_end": 142.3,
+   "subtitle": "第2問、初級。道の駅です。",
+   "voice_text": "だいにもん、しょきゅう。みちのえきです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_go",
+   "start": 142.3,
+   "slot_end": 149.0,
+   "subtitle": "では、第2問。どうぞ。",
+   "voice_text": "では、だいにもん。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_call0",
+   "start": 171.0,
+   "slot_end": 175.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_call1",
+   "start": 201.0,
+   "slot_end": 205.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_ten",
+   "start": 221.0,
+   "slot_end": 224.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_ans0",
+   "start": 231.0,
+   "slot_end": 232.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_ans1",
+   "start": 232.6,
+   "slot_end": 236.9,
+   "subtitle": "ちょうちんの下の黒い輪が、ありません。",
+   "voice_text": "ちょうちんのしたのくろいわが、ありません。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_ans2",
+   "start": 236.9,
+   "slot_end": 241.2,
+   "subtitle": "はかりの針の向きが、変わりました。",
+   "voice_text": "はかりのはりのむきが、かわりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_ans3",
+   "start": 241.2,
+   "slot_end": 245.5,
+   "subtitle": "エリンギが、一本増えました。",
+   "voice_text": "エリンギが、いっぽんふえました。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_card",
+   "start": 246.0,
+   "slot_end": 250.3,
+   "subtitle": "第3問、初級。渓流です。",
+   "voice_text": "だいさんもん、しょきゅう。けいりゅうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_go",
+   "start": 250.3,
+   "slot_end": 257.0,
+   "subtitle": "では、第3問。どうぞ。",
+   "voice_text": "では、だいさんもん。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "c_comment",
+   "start": 261.0,
+   "slot_end": 268.0,
+   "subtitle": "見つかった数を、あとでコメントで教えてくださいね。",
+   "voice_text": "みつかったかずを、あとでコメントでおしえてくださいね。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_call0",
+   "start": 279.0,
+   "slot_end": 283.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_call1",
+   "start": 309.0,
+   "slot_end": 313.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_ten",
+   "start": 329.0,
+   "slot_end": 332.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_ans0",
+   "start": 339.0,
+   "slot_end": 340.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_ans1",
+   "start": 340.6,
+   "slot_end": 344.90000000000003,
+   "subtitle": "もみじの葉の形が、変わりました。",
+   "voice_text": "もみじのはのかたちが、かわりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_ans2",
+   "start": 344.90000000000003,
+   "slot_end": 349.20000000000005,
+   "subtitle": "左の小さなきのこが、大きくなりました。",
+   "voice_text": "ひだりのちいさなきのこが、おおきくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_ans3",
+   "start": 349.20000000000005,
+   "slot_end": 353.5,
+   "subtitle": "右のこけに、きのこが増えました。",
+   "voice_text": "みぎのこけに、きのこがふえました。",
+   "face": "smile"
+  },
+  {
+   "id": "u1",
+   "start": 354.0,
+   "slot_end": 361.0,
+   "subtitle": "ここでひと休み。こよみ先生の季節のお話です。",
+   "voice_text": "ここでひとやすみ。こよみせんせいの、きせつのおはなしです。",
+   "face": "smile"
+  },
+  {
+   "id": "u2",
+   "start": 361.0,
+   "slot_end": 369.0,
+   "subtitle": "「きのこ」という名前、どこから来たのでしょう？",
+   "voice_text": "きのこ、というなまえ、どこからきたのでしょう？",
+   "face": "think"
+  },
+  {
+   "id": "u3",
+   "start": 369.0,
+   "slot_end": 378.0,
+   "subtitle": "答えは、木の子。木に生える、子どものような形からだそうです。",
+   "voice_text": "こたえは、きのこ。きにはえる、こどものようなかたちからだそうです。",
+   "face": "surprise"
+  },
+  {
+   "id": "u4",
+   "start": 378.0,
+   "slot_end": 384.0,
+   "subtitle": "むかしは「たけ」とも呼びました。しいたけの「たけ」です。",
+   "voice_text": "むかしは、たけ、ともよびました。しいたけの、たけです。",
+   "face": "wink"
+  },
+  {
+   "id": "q4_card",
+   "start": 384.0,
+   "slot_end": 388.3,
+   "subtitle": "第4問、中級。湖のほとりです。",
+   "voice_text": "だいよんもん、ちゅうきゅう。みずうみのほとりです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_go",
+   "start": 388.3,
+   "slot_end": 395.0,
+   "subtitle": "後半です。第4問、どうぞ。",
+   "voice_text": "こうはんです。だいよんもん、どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_call0",
+   "start": 417.0,
+   "slot_end": 421.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_call1",
+   "start": 447.0,
+   "slot_end": 451.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_ten",
+   "start": 467.0,
+   "slot_end": 470.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_ans0",
+   "start": 477.0,
+   "slot_end": 478.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q4_ans1",
+   "start": 478.6,
+   "slot_end": 482.90000000000003,
+   "subtitle": "ランタンの上の輪が、ありません。",
+   "voice_text": "ランタンのうえのわが、ありません。",
+   "face": "smile"
+  },
+  {
+   "id": "q4_ans2",
+   "start": 482.90000000000003,
+   "slot_end": 487.20000000000005,
+   "subtitle": "きのこが、玉ねぎになりました。",
+   "voice_text": "きのこが、たまねぎになりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q4_ans3",
+   "start": 487.20000000000005,
+   "slot_end": 491.5,
+   "subtitle": "落ち葉が、一枚増えました。",
+   "voice_text": "おちばが、いちまいふえました。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_card",
+   "start": 492.0,
+   "slot_end": 496.3,
+   "subtitle": "第5問、上級。牧場です。",
+   "voice_text": "だいごもん、じょうきゅう。ぼくじょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_go",
+   "start": 496.3,
+   "slot_end": 503.0,
+   "subtitle": "いよいよ最後の難問です。じっくりどうぞ。",
+   "voice_text": "いよいよさいごのなんもんです。じっくりどうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_call0",
+   "start": 525.0,
+   "slot_end": 529.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_call1",
+   "start": 555.0,
+   "slot_end": 559.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_ten",
+   "start": 575.0,
+   "slot_end": 578.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_ans0",
+   "start": 585.0,
+   "slot_end": 586.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_ans1",
+   "start": 586.6,
+   "slot_end": 590.9,
+   "subtitle": "なべのふたのつまみが、ありません。",
+   "voice_text": "なべのふたのつまみが、ありません。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_ans2",
+   "start": 590.9,
+   "slot_end": 595.2,
+   "subtitle": "牛のしっぽが、短くなりました。",
+   "voice_text": "うしのしっぽが、みじかくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_ans3",
+   "start": 595.2,
+   "slot_end": 599.5,
+   "subtitle": "かごのきのこが、ひとつ白くなりました。",
+   "voice_text": "かごのきのこが、ひとつしろくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "e1",
+   "start": 600.0,
+   "slot_end": 603.6,
+   "subtitle": "これで5問、おしまいです。",
+   "voice_text": "これでごもん、おしまいです。",
+   "face": "yay"
+  },
+  {
+   "id": "e2",
+   "start": 603.6,
+   "slot_end": 610.2,
+   "subtitle": "15個の違い、いくつ見つかりましたか。今日の称号です。",
+   "voice_text": "じゅうごこのちがい、いくつみつかりましたか。きょうのしょうごうです。",
+   "face": "smile"
+  },
+  {
+   "id": "e3",
+   "start": 610.2,
+   "slot_end": 621.0,
+   "subtitle": "チャンネル登録とベルで、毎朝8時半に問題が届きます。毎日の頭の体操にどうぞ。",
+   "voice_text": "チャンネルとうろくとベルで、まいあさはちじはんに、もんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。",
+   "face": "smile"
+  },
+  {
+   "id": "e4",
+   "start": 621.0,
+   "slot_end": 630.0,
+   "subtitle": "左の丸を押すと登録、右の動画で、次の問題に挑戦できますよ。",
+   "voice_text": "ひだりのまるをおすととうろく、みぎのどうがで、つぎのもんだいに、ちょうせんできますよ。",
+   "face": "wink"
+  }
+ ]
+}
