@@ -1,0 +1,82 @@
+{
+ "title": "昭和なつかしクイズ 試作001",
+ "voice": {
+  "provider": "fish",
+  "reference_id": "63819275ce38440ea245ca988abf976e",
+  "model": "s1",
+  "speed": 0.88,
+  "credit": "音声：Fish Audio（AIで合成した音声です）"
+ },
+ "images": {
+  "model": "gemini-3-pro-image",
+  "size": "2K",
+  "aspect": "4:3",
+  "style": "A Japanese picture-book illustration in watercolor, but with BOLD, THICK, DARK ink outlines around every object (like a clear picture book for seniors), and CLEAR, SATURATED colors (not pale). Bright, clean background. Natural, hand-drawn, slightly rounded shapes; not geometric, not flat vector, not photorealistic. CLOSE-UP composition (not a wide landscape): the scene is seen from close, filling the picture. PORTRAIT-ISH composition, about 8:9. The painting fills the entire canvas edge to edge: no white border. No people. Absolutely no text, letters, numbers, logos or symbols anywhere. The MAIN SUBJECT named in the scene is drawn LARGE in the center of the picture. Around it, only a few other objects, each clearly separated with space around it, fully visible. Paint the background of the scene to fill the whole picture (walls, floor, windows, furniture): do not leave large blank white areas; every object rests on a floor or table. "
+ },
+ "items": [
+  {
+   "id": 1,
+   "name": "ちゃぶ台",
+   "hint": "ち",
+   "prompt": "A low round folding wooden dining table (chabudai) of a 1960s Japanese home, with short legs, in the CENTER and LARGE, standing on tatami mats in a Showa-era living room; on it a small teapot and two rice bowls; behind it a sliding paper door (shoji) and a small cupboard. The chabudai must be clearly recognizable: round top, very low, four short folding legs.",
+   "reading": "ちゃぶだい",
+   "name_voice": "ちゃぶだい",
+   "hint_voice": "ち",
+   "era": "昭和30年代ごろが最盛期",
+   "trivia": "ちゃぶ台は、脚を折りたためる物が多くありました。",
+   "trivia_voice": "ちゃぶだいは、あしをおりたためるものが、おおくありました。"
+  },
+  {
+   "id": 2,
+   "name": "黒電話",
+   "hint": "く",
+   "prompt": "An old black Japanese rotary dial telephone (kuro denwa) of the 1960s, in the CENTER and LARGE, standing on a small wooden shelf with a lace doily in a Showa-era hallway; behind it a wall with a calendar without letters. The phone must be clearly recognizable: shiny black body, round finger dial with ten holes on the front, handset resting on top, curly cord.",
+   "reading": "くろでんわ",
+   "name_voice": "くろでんわ",
+   "hint_voice": "く",
+   "era": "昭和38年から家庭に広まる",
+   "trivia": "数字の穴に指を入れて、ダイヤルを回してかけました。",
+   "trivia_voice": "すうじのあなに、ゆびをいれて、ダイヤルをまわして、かけました。"
+  },
+  {
+   "id": 3,
+   "name": "足踏みミシン",
+   "hint": "あ",
+   "prompt": "An old treadle sewing machine (ashibumi mishin) of the 1950s-60s Japanese home, in the CENTER and LARGE: a black sewing machine head with gold decorations on a wooden table, an iron cast stand with a large foot treadle plate and a big side wheel connected by a leather belt; in a Showa-era room with tatami, a window and some cloth. The foot treadle and the side wheel must be clearly visible.",
+   "reading": "あしぶみミシン",
+   "name_voice": "あしぶみミシン",
+   "hint_voice": "あ",
+   "era": "1960年代まで主流",
+   "trivia": "踏み板を踏むと、ベルトではずみ車が回る仕組みです。",
+   "trivia_voice": "ふみいたをふむと、ベルトで、はずみぐるまがまわる、しくみです。"
+  },
+  {
+   "id": 4,
+   "name": "湯たんぽ",
+   "hint": "ゆ",
+   "prompt": "An old Japanese tin hot water bottle (yutanpo) of the Showa era, in the CENTER and LARGE: an oval silver metal container with wavy ridges on top and a small screw cap, half wrapped in a knitted cover, lying on a futon on tatami in a winter bedroom with a sliding paper door behind. The wavy ridged metal body and the cap must be clearly visible.",
+   "reading": "ゆたんぽ",
+   "name_voice": "ゆたんぽ",
+   "hint_voice": "ゆ",
+   "era": "大正〜昭和",
+   "trivia": "「たんぽ」は、中国の言葉「湯婆」が語源といわれます。",
+   "trivia_voice": "たんぽは、ちゅうごくのことば、たんぽが、ごげんといわれます。"
+  },
+  {
+   "id": 5,
+   "name": "蚊帳",
+   "hint": "か",
+   "prompt": "A Japanese mosquito net (kaya) of the Showa era hung over futons in a tatami bedroom at night: a large box-shaped light green mesh net with red cloth edges, hung from the four corners of the room, the futons visible through the net; a window with a moon outside. The see-through green mesh box with red edges must be clearly recognizable. (Summer item in a summer scene.)",
+   "reading": "かや",
+   "name_voice": "かや",
+   "hint_voice": "か",
+   "era": "昭和30年代ごろまで夏の必需品",
+   "trivia": "萌黄色の網に、赤い縁取りが定番でした。",
+   "trivia_voice": "もえぎいろのあみに、あかいふちどりが、ていばんでした。"
+  }
+ ],
+ "think_sec": 8,
+ "note": "2026-11-18 CEO指示の試作。公開・アップロードしない。名前・年代・豆知識は調査部が sources.md で確かめる（豆知識は調べた結果で埋める）。",
+ "short_item": 2,
+ "thumb_item": 2
+}
