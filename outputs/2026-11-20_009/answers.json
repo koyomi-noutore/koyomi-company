@@ -184,46 +184,46 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 2709,
-   "outside_box_max_distance_px": 12.0,
+   "outside_box_pixels_diff_gt15": 83,
+   "outside_box_max_distance_px": 8.0,
    "answers": [
     {
      "id": 1,
-     "type": "なくなる",
-     "label": "湯気がない",
-     "line": "焼き芋の湯気が、消えました。",
+     "type": "色",
+     "label": "いちょうの葉が緑",
+     "line": "いちょうの葉が、一枚、緑になりました。",
      "box_px": [
-      740,
-      230,
-      1030,
-      920
+      395,
+      270,
+      615,
+      425
      ],
      "box_screen": [
-      383,
-      119,
-      533,
-      476
+      204,
+      140,
+      318,
+      220
      ],
      "circle_a_screen": [
-      383,
-      119,
-      533,
-      476
+      204,
+      140,
+      318,
+      220
      ],
      "circle_b_screen": [
-      383,
-      119,
-      533,
-      476
+      204,
+      140,
+      318,
+      220
      ],
-     "object_w_px": 264,
-     "object_picture_width_pct": 14.22,
-     "object_screen_width_pct": 7.11,
-     "in_level_range": false,
+     "object_w_px": 189,
+     "object_picture_width_pct": 10.18,
+     "object_screen_width_pct": 5.09,
+     "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "2",
+     "edit_version": "p",
      "made_by": "gemini",
-     "note": ""
+     "note": "プログラムで色を変えた（黄→黄緑）"
     },
     {
      "id": 2,
@@ -589,8 +589,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 87,
-   "outside_box_max_distance_px": 11.0,
+   "outside_box_pixels_diff_gt15": 28,
+   "outside_box_max_distance_px": 9.0,
    "answers": [
     {
      "id": 1,
@@ -632,41 +632,41 @@
     },
     {
      "id": 2,
-     "type": "なくなる",
-     "label": "色えんぴつが一本ない",
-     "line": "筆箱の色えんぴつが、一本ありません。",
+     "type": "増える",
+     "label": "机に焼き芋",
+     "line": "机の上に、焼き芋がひとつ増えました。",
      "box_px": [
-      350,
-      735,
-      490,
-      805
+      285,
+      875,
+      455,
+      985
      ],
      "box_screen": [
-      181,
-      380,
-      253,
-      416
+      147,
+      453,
+      235,
+      509
      ],
      "circle_a_screen": [
-      181,
-      380,
-      253,
-      416
+      147,
+      453,
+      235,
+      509
      ],
      "circle_b_screen": [
-      181,
-      380,
-      253,
-      416
+      147,
+      453,
+      235,
+      509
      ],
-     "object_w_px": 110,
-     "object_picture_width_pct": 5.93,
-     "object_screen_width_pct": 2.96,
-     "in_level_range": false,
+     "object_w_px": 140,
+     "object_picture_width_pct": 7.54,
+     "object_screen_width_pct": 3.77,
+     "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "3",
+     "edit_version": "p",
      "made_by": "gemini",
-     "note": ""
+     "note": "同じ回の第4問のさつまいもを色と形で切り抜き、小さくして机に置いた（プログラム）"
     },
     {
      "id": 3,
