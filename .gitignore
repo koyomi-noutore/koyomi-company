@@ -227,3 +227,4 @@ token*.json
 outputs/*/video.mp4
 outputs/*/short/video.mp4
 outputs/*/short*/video.mp4
+outputs/prototypes/*/*.mp4

@@ -1,0 +1,7 @@
+{"time": "2026-11-18T22:50:43+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 303, "output_tokens": 1357, "total_tokens": 1916, "batch": true, "key": "item1"}
+{"time": "2026-11-18T22:50:43+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 295, "output_tokens": 1339, "total_tokens": 1970, "batch": true, "key": "item2"}
+{"time": "2026-11-18T22:50:43+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 308, "output_tokens": 1302, "total_tokens": 1915, "batch": true, "key": "item3"}
+{"time": "2026-11-18T22:50:43+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 289, "output_tokens": 1368, "total_tokens": 1907, "batch": true, "key": "item4"}
+{"time": "2026-11-18T22:50:43+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 294, "output_tokens": 1288, "total_tokens": 1823, "batch": true, "key": "item5"}
+{"time": "2026-11-18T22:58:57+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 333, "output_tokens": 1265, "total_tokens": 1762}
+{"time": "2026-11-18T23:00:31+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 375, "output_tokens": 1273, "total_tokens": 1833}
