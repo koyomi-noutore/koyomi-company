@@ -22,16 +22,19 @@ W, H, FPS = 1080, 1920, 30
 BG = (246, 236, 216)
 INK = (59, 47, 37)
 RED = (220, 30, 30)
-# 画面の作り（shorts.md「ショートの画面の作り（2026-11-18 夜 改訂）」）：iPhone（19.5:9）で高さいっぱいに表示され、左右が約36px切れ、上の約120pxに時刻が重なる
+# 画面の作り（shorts.md「ショートの画面の作り（2026-11-18 夜 CEO決定・最新）」）：初期の形（第1回の台所）に戻す。
+# 画面は絵だけ（上の文字の帯・こよみ先生・アイコンなし）。絵は2枚を上下に、画面に収まる範囲でいっぱい、左右中央。
+# 最初と最後だけ、画面全体に半透明の暗い幕をかけ、ど真ん中に大きな文字。文字は左右36px・上120pxにかからない。
 EDGE_X, TOP_UI = 36, 120
-TEXT_TOP, TEXT_BOTTOM = 120, 280          # 上の文字（問題文）は y 120〜280 に大きく中央
-PIC_TOP, PIC_BOTTOM = 290, 1490           # 絵は y 290 から。下のタイトル・右のボタンには重なってよい。こよみ先生（左下）の上で止める
-PIC_MAXW, GAP = 880, 12                   # 絵の幅は約860〜900px、左右中央
-# 絵の大きさと切り抜きは問ごとに setup で決める（違い3つが入る範囲で横長に切り抜く）
-PW, PH, PX = PIC_MAXW, 590, (W - PIC_MAXW) // 2
-YS = {"a": PIC_TOP, "b": PIC_TOP + 590 + GAP}
+PH = H // 2                  # 8:9 の絵を上下2枚で高さいっぱい（960）
+PW = PH * 8 // 9             # 853
+PX = (W - PW) // 2
+YS = {"a": 0, "b": PH}
 CROP = None
-BAND_H = TEXT_BOTTOM
+VEIL_ALPHA = int(255 * 0.55)  # 暗い幕の不透明度（50〜60%）
+INTRO_VEIL = 3.6              # 最初の幕を出す秒（数秒で消す）
+HOOK = "1分で脳トレ"          # 最初の幕の訴求の一言（読み上げない）
+TEXT_MAXW = 800               # 幕の上の文字の幅の上限（中央 x140〜940。右のいいね等のボタンにかからない）
 LEVEL_COLOR = {"やさしい": (70, 140, 190), "初級": (96, 150, 90), "中級": (214, 128, 48), "上級": (176, 62, 52)}
 SR = 48000
 
@@ -40,9 +43,6 @@ DEFAULT = {"solve": 25.0, "intro_at": 0.3, "answer_gap": 3.2, "end_len": 8.0,
            # 2026-11-18 CEO指示（shorts.md）：どこを押すか具体的に言い、矢印で関連動画のリンクの位置を示す
            "end": "続きは長い動画で。左下をクリックして、挑戦してみてくださいね。",
            "end_title": "続きは 長い動画で", "end_sub": "左下を クリック！"}
-# こよみ先生は左下（x 約40〜220、y 約1500〜1680）に、最初から最後まで（shorts.md 2026-11-18 夜 改訂）
-OWL_SIZE = 160
-OWL_XY = (50, 1510)
 TEXT_CX = W / 2
 LINK_XY = (190, 1760)      # 関連動画のリンク（左下、y 約1700〜1800）。矢印の先
 
@@ -197,29 +197,8 @@ def setup(ep, work, fontp):
     CTX["Q"] = ans
     CTX["voice"] = json.loads((Path(work) / SUB / "voice.json").read_text(encoding="utf-8"))
     CTX["lines"], CTX["end_at"], CTX["total"] = lines(ep)
-    global PW, PH, PX, YS, CROP
-    # 違い3つが入る範囲（＋余白）を、表示の枠（幅 PIC_MAXW・高さは2枚で PIC_TOP〜PIC_BOTTOM）の縦横比で横長に切り抜く
-    cx0, cy0, cx1, cy1 = ans["content_px"]
-    bx = [a_["box_px"] for a_ in ans["answers"]]
-    m = 90
-    x0, y0 = max(cx0, min(b_[0] for b_ in bx) - m), max(cy0, min(b_[1] for b_ in bx) - m)
-    x1, y1 = min(cx1, max(b_[2] for b_ in bx) + m), min(cy1, max(b_[3] for b_ in bx) + m)
-    maxh = (PIC_BOTTOM - PIC_TOP - GAP) // 2
-    asp = PIC_MAXW / maxh
-    w, h = x1 - x0, y1 - y0
-    if w / h < asp:
-        w = min(cx1 - cx0, h * asp)
-    else:
-        h = min(cy1 - cy0, w / asp)
-    mx, my = (x0 + x1) / 2, (y0 + y1) / 2
-    X0 = min(max(cx0, mx - w / 2), cx1 - w); Y0 = min(max(cy0, my - h / 2), cy1 - h)
-    CROP = (int(X0), int(Y0), int(X0 + w), int(Y0 + h))
-    if w / h >= asp:
-        PW, PH = PIC_MAXW, int(round(PIC_MAXW * h / w))
-    else:
-        PH, PW = maxh, int(round(maxh * w / h))
-    PX = (W - PW) // 2
-    YS = {"a": PIC_TOP, "b": PIC_TOP + PH + GAP}
+    global CROP
+    CROP = tuple(ans["content_px"])      # 絵は切り抜かずに全体を出す
     pics = {}
     for side in "ab":
         im = Image.open(Path(ep) / f"q{q}_{side}.png").convert("RGB").crop(CROP)
@@ -229,9 +208,9 @@ def setup(ep, work, fontp):
         base.paste(pics[side], (PX, y))
         ImageDraw.Draw(base).rectangle((PX - 4, y - 4, PX + PW + 3, y + PH + 3), outline=(255, 250, 238), width=4)
     CTX["base"] = base
-    owl = Path(work) / "owl" / "koyomi_smile.png"
-    CTX["owl"] = Image.open(owl).convert("RGBA").resize((300, 300), Image.LANCZOS) if owl.exists() else None
-    CTX["owl_s"] = CTX["owl"].resize((OWL_SIZE, OWL_SIZE), Image.LANCZOS) if CTX["owl"] else None
+    # 幕の上の大きな文字は、サムネと同じ太い角ゴシック（Noto Sans CJK JP Black）
+    import thumb_v3
+    CTX["bold"] = thumb_v3.F
 
 
 def circle_box(a, side):
@@ -268,47 +247,48 @@ def current_sub(t):
     return None
 
 
+def bold(size):
+    return ImageFont.truetype(CTX["bold"], size)
+
+
+def veil(im, lines, alpha, arrow_t=None):
+    """画面全体に半透明の暗い幕をかけ、ど真ん中に大きな文字を出す。lines = [(文字, 大きさ, 色), ...]。"""
+    layer = Image.new("RGBA", (W, H), (0, 0, 0, int(VEIL_ALPHA * alpha)))
+    ld = ImageDraw.Draw(layer)
+    a = int(255 * alpha)
+    hs = [sz for _, sz, _ in lines]
+    total = sum(hs) + 40 * (len(lines) - 1)
+    y = H / 2 - total / 2
+    for s_, sz, colr in lines:
+        f = bold(sz)
+        while ld.textlength(s_, font=f) > TEXT_MAXW:      # 左右36pxと、右のボタン（x900〜）にかからないように
+            sz -= 4; f = bold(sz)
+        cy = y + sz / 2
+        ld.text((W / 2, cy), s_, font=f, fill=colr + (a,), anchor="mm", stroke_width=6, stroke_fill=(0, 0, 0, a))
+        CTX.setdefault("drawn", []).append(("文字:" + s_, ld.textbbox((W / 2, cy), s_, font=f, anchor="mm", stroke_width=6)))
+        y += sz + 40
+    im = Image.alpha_composite(im.convert("RGBA"), layer)
+    if arrow_t is not None and alpha > 0.9:   # 左下の関連動画のリンクを指す矢印（ゆっくり動かして目を引く）
+        d2 = ImageDraw.Draw(im)
+        wig = 14 * math.sin(2 * math.pi * arrow_t / 1.0)
+        tx, ty = LINK_XY[0] + 50 + wig * 0.7, LINK_XY[1] - 40 + wig * 0.7
+        sx, sy = 560, 1280
+        ang = math.atan2(ty - sy, tx - sx)
+        hx, hy = tx - 90 * math.cos(ang), ty - 90 * math.sin(ang)
+        px, py = -math.sin(ang), math.cos(ang)
+        for wdt, col in ((46, (255, 255, 255)), (30, (230, 60, 30))):
+            d2.line((sx, sy, hx, hy), fill=col, width=wdt)
+            e = wdt / 30
+            d2.polygon([(tx + 8 * (e - 1) * math.cos(ang), ty + 8 * (e - 1) * math.sin(ang)),
+                        (hx + 54 * e * px, hy + 54 * e * py), (hx - 54 * e * px, hy - 54 * e * py)], fill=col)
+    return im.convert("RGB")
+
+
 def render(t):
     c = cfg()
     Q = CTX["Q"]
     im = CTX["base"].copy()
     d = ImageDraw.Draw(im)
-    drawn = CTX.setdefault("drawn", [])    # 文字を書いた範囲（安全な範囲の判定に使う）
-    def text(xy, s, f, **kw):
-        d.text(xy, s, font=f, **kw)
-        drawn.append(("文字:" + s, d.textbbox(xy, s, font=f, anchor=kw.get("anchor"), stroke_width=kw.get("stroke_width", 0))))
-    # 上の文字（y 120〜280 に大きく中央。時刻の帯 y<120 と左右36pxには入れない）
-    d.rectangle((0, 0, W, TEXT_BOTTOM + 8), fill=(52, 40, 30))
-    sub = current_sub(t) if t < CTX["end_at"] else None
-    if sub:
-        ls = wrap2(sub, 15)
-        size = 64 if len(ls) == 1 else 58
-        cy = (TEXT_TOP + TEXT_BOTTOM) / 2
-        for i, l in enumerate(ls):
-            y = cy + (i - (len(ls) - 1) / 2) * (size + 12)
-            text((TEXT_CX, y), l, font(size), fill=(255, 255, 255), anchor="mm")
-    else:
-        text((TEXT_CX, 182), "3つ見つけられる？", font(100), fill=(255, 214, 0), anchor="mm", stroke_width=4, stroke_fill=(30, 20, 10))
-        col = LEVEL_COLOR[Q["level"]]
-        cap = f"秋の間違いさがし・{Q['scene']}"
-        fcap = font(32)
-        wcap = d.textlength(cap, font=fcap)
-        bx = TEXT_CX - (120 + 14 + wcap) / 2
-        by = 248
-        d.rounded_rectangle((bx, by, bx + 120, by + 30), 12, fill=col)
-        drawn.append(("難易度の札", (bx, by, bx + 120, by + 30)))
-        text((bx + 60, by + 15), Q["level"], font(26), fill=(255, 255, 255), anchor="mm")
-        text((bx + 134, by + 15), cap, fcap, fill=(255, 240, 200), anchor="lm")
-    # 残り時間のバー（帯の下）
-    if t < c["solve"]:
-        frac = max(0.0, 1 - t / c["solve"])
-        rem = c["solve"] - t
-        col = (110, 180, 100) if rem > 10 else (236, 170, 50) if rem > 5 else (230, 70, 60)
-        d.rectangle((EDGE_X, TEXT_BOTTOM + 2, W - EDGE_X, TEXT_BOTTOM + 7), fill=(225, 212, 188))
-        d.rectangle((EDGE_X, TEXT_BOTTOM + 2, EDGE_X + int((W - 2 * EDGE_X) * frac), TEXT_BOTTOM + 7), fill=col)
-        if rem <= 5:
-            d.text((PX + PW - 20, YS["a"] + 20), str(math.ceil(rem - 1e-6)), font=font(96), fill=(230, 70, 60), anchor="ra",
-                   stroke_width=5, stroke_fill=(255, 255, 255))
     # 答え合わせ（上下の絵の両方に赤丸、番号札）
     shown = [i for i, v in enumerate(v for v in CTX["voice"] if v["id"].startswith("s_ans") and v["id"] != "s_ans0")
              if t >= [v for v in CTX["voice"] if v["id"] == f"s_ans{i + 1}"][0]["start"]]
@@ -316,45 +296,25 @@ def render(t):
         a = Q["answers"][i]
         for side in "ab":
             x0, y0, x1, y1 = circle_box(a, side)
-            d.ellipse((x0 - 9, y0 - 9, x1 + 9, y1 + 9), outline=(255, 255, 255), width=10)
-            d.ellipse((x0 - 6, y0 - 6, x1 + 6, y1 + 6), outline=RED, width=6)
+            d.ellipse((x0 - 10, y0 - 10, x1 + 10, y1 + 10), outline=(255, 255, 255), width=12)
+            d.ellipse((x0 - 7, y0 - 7, x1 + 7, y1 + 7), outline=RED, width=8)
     for i in shown:
         a = Q["answers"][i]
         for side in "ab":
             x0, y0, x1, y1 = circle_box(a, side)
-            bx, by = min(max(x1 + 4, PX + 22), PX + PW - 22), min(max(y0 - 4, YS[side] + 22), YS[side] + PH - 22)
-            d.ellipse((bx - 22, by - 22, bx + 22, by + 22), fill=RED, outline=(255, 255, 255), width=3)
-            d.text((bx, by + 1), str(i + 1), font=font(30), fill=(255, 255, 255), anchor="mm")
-    # 長尺への案内
+            bx, by = min(max(x1 + 4, PX + 26), PX + PW - 26), min(max(y0 - 4, YS[side] + 26), YS[side] + PH - 26)
+            d.ellipse((bx - 26, by - 26, bx + 26, by + 26), fill=RED, outline=(255, 255, 255), width=3)
+            d.text((bx, by + 1), str(i + 1), font=font(34), fill=(255, 255, 255), anchor="mm")
+    # 最初：暗い幕と、ど真ん中の大きな文字（数秒で消す）
+    if t < INTRO_VEIL:
+        k = 1.0 if t < INTRO_VEIL - 0.5 else max(0.0, (INTRO_VEIL - t) / 0.5)
+        im = veil(im, [("違いは3つ", 170, (255, 214, 0)), ("見つけられますか？", 104, (255, 255, 255)),
+                       (c.get("hook", HOOK), 84, (255, 160, 120))], k)
+    # 最後：暗い幕の上に「続きは長い動画で」「左下をクリック」と、左下を指す矢印
     e0 = CTX["end_at"]
     if t >= e0:
         k = min(1.0, (t - e0) / 0.5)
-        layer = Image.new("RGBA", (W, H), (246, 236, 216, int(235 * k)))
-        ld = ImageDraw.Draw(layer)
-        a = int(255 * k)
-        for (y, s_, sz, colr) in ((560, c["end_title"], 80, INK), (700, c["end_sub"], 80, (176, 62, 52)), (820, "こよみ先生のまいにち脳トレ", 46, (110, 84, 60))):
-            ld.text((TEXT_CX, y), s_, font=font(sz), fill=colr + (a,), anchor="mm")
-            CTX.setdefault("drawn", []).append(("文字:" + s_, ld.textbbox((TEXT_CX, y), s_, font=font(sz), anchor="mm")))
-        im.paste(layer, (0, 0), layer)
-        # 左下の関連動画のリンクを指す矢印（ゆっくり動かして目を引く）
-        if t >= e0 + 0.5:
-            d2 = ImageDraw.Draw(im)
-            wig = 14 * math.sin(2 * math.pi * (t - e0) / 1.0)
-            tx, ty = LINK_XY[0] + 50 + wig * 0.7, LINK_XY[1] - 40 + wig * 0.7     # 矢印の先
-            sx, sy = 560, 1100                                                  # 矢印の根元
-            ang = math.atan2(ty - sy, tx - sx)
-            hx, hy = tx - 90 * math.cos(ang), ty - 90 * math.sin(ang)
-            px, py = -math.sin(ang), math.cos(ang)
-            for wdt, col in ((44, (255, 255, 255)), (28, (214, 80, 40))):
-                d2.line((sx, sy, hx, hy), fill=col, width=wdt)
-                e = wdt / 28
-                d2.polygon([(tx + 8 * (e - 1) * math.cos(ang), ty + 8 * (e - 1) * math.sin(ang)),
-                            (hx + 52 * e * px, hy + 52 * e * py), (hx - 52 * e * px, hy - 52 * e * py)], fill=col)
-    # こよみ先生（最初から最後まで、上の帯の左側。2026-11-18 第9回から）
-    if CTX["owl_s"] is not None:
-        o = CTX["owl_s"]
-        bob = int(5 * math.sin(2 * math.pi * t / 1.6))
-        im.paste(o, (OWL_XY[0], OWL_XY[1] + bob), o)
+        im = veil(im, [("続きは長い動画で", 116, (255, 255, 255)), ("左下をクリック", 128, (255, 214, 0))], k, arrow_t=t - e0)
     return im
 
 
@@ -411,49 +371,28 @@ def phone_mock(frame):
 
 
 def safe_check(ep, work, fontp=None):
-    """画面の作りの判定（shorts.md「ショートの画面の作り（2026-11-18 夜 改訂）」）：
-    - 文字とこよみ先生が、左右の端（36px）と上の時刻の帯（120px）にかからないこと
-    - 絵が左右中央にあり、左右の端で切れないこと
-    確認画像：<回>/<short>/phone_question.png（出題中）・phone_end.png（最後の呼びかけ）に実機の画面を重ねたもの、
-    compare_competitor1.png（お手本と並べたもの）。"""
+    """画面の作りの判定（shorts.md「2026-11-18 夜 CEO決定・最新」）：幕の上の文字が左右36px・上120pxにかからないこと。
+    確認画像（実機の画面の部品を重ねたもの）：<回>/<short>/phone_intro.png（最初の幕）・phone_question.png（出題中）・phone_end.png（最後）。"""
     if "base" not in CTX:
         setup(ep, work, fontp or CTX.get("font"))
     CTX["drawn"] = []
     c = cfg()
-    tq, te = c["solve"] - 6, CTX["total"] - 0.5
-    times = [max(0.5, CTX["voice"][0]["start"] + 0.5), tq] + [v["start"] + 0.3 for v in CTX["voice"]] + [te]
-    frames = {t: render(t) for t in times}
-    boxes = [b_ for b_ in CTX["drawn"]]
-    boxes.append(("こよみ先生", (OWL_XY[0], OWL_XY[1] - 5, OWL_XY[0] + OWL_SIZE, OWL_XY[1] + OWL_SIZE + 5)))
+    ti, tq, te = 1.5, c["solve"] - 6, CTX["total"] - 0.5
+    frames = {t: render(t) for t in (ti, tq, te)}
     problems, seen = [], set()
-    for name, (x0, y0, x1, y1) in boxes:
+    for name, (x0, y0, x1, y1) in CTX["drawn"]:
         bad = []
         if x0 < EDGE_X or x1 > W - EDGE_X:
             bad.append("左右の端（36px）")
         if y0 < TOP_UI:
             bad.append("上の時刻の帯（120px）")
-        if bad and (name, round(x0), round(y0)) not in seen:
-            seen.add((name, round(x0), round(y0)))
+        if bad and name not in seen:
+            seen.add(name)
             problems.append(f"{name} が{'・'.join(bad)}にかかる（{x0:.0f},{y0:.0f}〜{x1:.0f},{y1:.0f}）")
-    if abs(PX + PW / 2 - W / 2) > 2:
-        problems.append(f"絵が左右中央にない（中心 x{PX + PW / 2:.0f}）")
-    if PX < EDGE_X or PX + PW > W - EDGE_X:
-        problems.append(f"絵が左右の端で切れる（x{PX}〜{PX + PW}）")
-    if not 860 <= PW <= 900:
-        problems.append(f"絵の幅 {PW}px が目安（約860〜900px）の外")
     out = Path(ep) / SUB
     out.mkdir(parents=True, exist_ok=True)
-    pq, pe = phone_mock(frames[tq]), phone_mock(frames[te])
-    pq.save(out / "phone_question.png"); pe.save(out / "phone_end.png")
-    comp = Path(__file__).resolve().parent.parent / "departments/production/reference/shorts_ref_competitor1.png"
-    if comp.exists():
-        cimg = Image.open(comp).convert("RGB").resize((PHONE_W, PHONE_H))
-        sheet = Image.new("RGB", (PHONE_W * 2 + 40, PHONE_H + 120), (255, 255, 255))
-        sheet.paste(pq, (0, 120)); sheet.paste(cimg, (PHONE_W + 40, 120))
-        dd = ImageDraw.Draw(sheet)
-        dd.text((PHONE_W / 2, 60), "こよみ先生（今回）", font=font(64), fill=INK, anchor="mm")
-        dd.text((PHONE_W * 1.5 + 40, 60), "お手本（競合 1）", font=font(64), fill=INK, anchor="mm")
-        sheet.resize((sheet.width // 2, sheet.height // 2), Image.LANCZOS).save(out / "compare_competitor1.png")
+    for t, nm in ((ti, "phone_intro.png"), (tq, "phone_question.png"), (te, "phone_end.png")):
+        phone_mock(frames[t]).save(out / nm)
     return problems, out / "phone_question.png"
 
 
