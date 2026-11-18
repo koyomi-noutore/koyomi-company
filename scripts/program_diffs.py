@@ -129,7 +129,8 @@ def apply(im, op, work=None):
         if op.get("keep_hue"):     # [lo, hi]（PILのHSVの色相 0〜255）：まわりと色がはっきり違う物（紫のさつまいもなど）を色で切り抜く。輪郭線も少し含める
             Hs = np.asarray(crop.convert("HSV")).astype(int)
             lo, hi = op["keep_hue"]
-            m = (Hs[..., 0] >= lo) & (Hs[..., 0] <= hi) & (Hs[..., 1] > 50)
+            hue_in = ((Hs[..., 0] >= lo) & (Hs[..., 0] <= hi)) if lo <= hi else ((Hs[..., 0] >= lo) | (Hs[..., 0] <= hi))   # 赤は 0 をまたぐ
+            m = hue_in & (Hs[..., 1] > 50)
             if op.get("poly"):     # 多角形も書いてあれば、その中だけにする（重なった別の物を外す）
                 from PIL import ImageDraw
                 pm = Image.new("L", crop.size, 0)
@@ -184,7 +185,18 @@ def apply(im, op, work=None):
     elif op["op"] == "recolor":
         box = tuple(op["box"])
         crop = im.crop(box)
-        m, _ = obj_mask(crop, op.get("thr", THR), op.get("mask"))
+        if op.get("keep_hue"):     # 色相の範囲（＋ circles [[cx,cy,r],...] の中）だけを塗り替える（地に模様があるとき）
+            Hs = np.asarray(crop.convert("HSV")).astype(int)
+            lo, hi = op["keep_hue"]
+            m = (Hs[..., 0] >= lo) & (Hs[..., 0] <= hi) & (Hs[..., 1] > 40)
+            if op.get("circles"):
+                yy, xx = np.mgrid[0:crop.height, 0:crop.width]
+                inc = np.zeros_like(m)
+                for cx, cy, r in op["circles"]:
+                    inc |= (xx + box[0] - cx) ** 2 + (yy + box[1] - cy) ** 2 <= r ** 2
+                m &= inc
+        else:
+            m, _ = obj_mask(crop, op.get("thr", THR), op.get("mask"))
         H = np.asarray(crop.convert("HSV")).astype(float)
         if "hue" in op:
             H[..., 0] = np.where(m, op["hue"], H[..., 0])

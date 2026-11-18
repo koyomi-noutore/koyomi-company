@@ -1,0 +1,624 @@
+{
+ "total_sec": 630.0,
+ "fps": 30,
+ "opening": [
+  0.0,
+  19.0
+ ],
+ "rule": [
+  19.0,
+  30.0
+ ],
+ "unchiku": [
+  354.0,
+  384.0
+ ],
+ "ending": [
+  600.0,
+  630.0
+ ],
+ "cta": null,
+ "questions": {
+  "1": {
+   "start": 30.0,
+   "card": [
+    30.0,
+    33.0
+   ],
+   "solve": [
+    33.0,
+    123.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 113.0,
+   "answer": [
+    123.0,
+    138.0
+   ],
+   "scene": "甘栗の屋台",
+   "level": "やさしい",
+   "go": "さあ、第1問。やさしい問題からどうぞ。",
+   "hint": null,
+   "answers": [
+    "かぎに掛けた竹のひしゃくが、ありません。",
+    "風鈴が、青くなりました。",
+    "うちわが、赤くなりました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "2": {
+   "start": 138.0,
+   "card": [
+    138.0,
+    141.0
+   ],
+   "solve": [
+    141.0,
+    231.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 221.0,
+   "answer": [
+    231.0,
+    246.0
+   ],
+   "scene": "栗林",
+   "level": "初級",
+   "go": "では、第2問。どうぞ。",
+   "hint": null,
+   "answers": [
+    "枝のいがが、茶色になりました。",
+    "切り株の軍手が、黄色になりました。",
+    "火ばさみが、赤くなりました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "3": {
+   "start": 246.0,
+   "card": [
+    246.0,
+    249.0
+   ],
+   "solve": [
+    249.0,
+    339.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 329.0,
+   "answer": [
+    339.0,
+    354.0
+   ],
+   "scene": "旅館の朝ごはん",
+   "level": "初級",
+   "go": "もうひとつ初級です。どうぞ。",
+   "hint": null,
+   "answers": [
+    "掛け軸の絵が、お月さまになりました。",
+    "小皿の漬物が、栗になりました。",
+    "湯のみが、赤くなりました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "4": {
+   "start": 384.0,
+   "card": [
+    384.0,
+    387.0
+   ],
+   "solve": [
+    387.0,
+    477.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 467.0,
+   "answer": [
+    477.0,
+    492.0
+   ],
+   "scene": "洋菓子店",
+   "level": "中級",
+   "go": "後半です。第4問、どうぞ。",
+   "hint": null,
+   "answers": [
+    "黒板に、栗の絵がかかれました。",
+    "モンブランの上の栗が、ありません。",
+    "まん中のカップケーキが、ピンクになりました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "5": {
+   "start": 492.0,
+   "card": [
+    492.0,
+    495.0
+   ],
+   "solve": [
+    495.0,
+    585.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 575.0,
+   "answer": [
+    585.0,
+    600.0
+   ],
+   "scene": "山里の茶屋",
+   "level": "上級",
+   "go": "いよいよ最後の難問です。じっくりどうぞ。",
+   "hint": null,
+   "answers": [
+    "飛び石に、もみじが一枚増えました。",
+    "石灯籠のてっぺんの飾りが、ありません。",
+    "だんごが、ひとつ白くなりました。"
+   ],
+   "answers_intro": "答えです。"
+  }
+ },
+ "lines": [
+  {
+   "id": "op",
+   "start": 0.0,
+   "slot_end": 7.0,
+   "subtitle": "こよみ先生です。今日は、栗の間違い探し、全5問です。",
+   "voice_text": "こよみせんせいです。きょうは、くりのまちがいさがし、ぜんごもんです。",
+   "face": "smile"
+  },
+  {
+   "id": "op2",
+   "start": 7.0,
+   "slot_end": 14.0,
+   "subtitle": "最後は難問です。3問目のあとには、栗の意外なお話も。",
+   "voice_text": "さいごは、なんもんです。さんもんめのあとには、くりの、いがいなおはなしも。",
+   "face": "surprise"
+  },
+  {
+   "id": "op3",
+   "start": 14.0,
+   "slot_end": 19.0,
+   "subtitle": "ぜひ最後まで、一緒に解いてくださいね。",
+   "voice_text": "ぜひさいごまで、いっしょにといてくださいね。",
+   "face": "wink"
+  },
+  {
+   "id": "rule",
+   "start": 19.0,
+   "slot_end": 30.0,
+   "subtitle": "ルールです。左と右の絵をくらべて、90秒で、右の絵の違いを3つ探してください。",
+   "voice_text": "ルールです。ひだりとみぎのえをくらべて、きゅうじゅうびょうで、みぎのえのちがいを、みっつさがしてください。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_card",
+   "start": 30.0,
+   "slot_end": 34.8,
+   "subtitle": "第1問、やさしい問題。甘栗の屋台です。",
+   "voice_text": "だいいちもん、やさしいもんだい。あまぐりのやたいです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_go",
+   "start": 34.8,
+   "slot_end": 41.0,
+   "subtitle": "さあ、第1問。やさしい問題からどうぞ。",
+   "voice_text": "さあ、だいいちもん。やさしいもんだいからどうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_call0",
+   "start": 63.0,
+   "slot_end": 67.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_call1",
+   "start": 93.0,
+   "slot_end": 97.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_ten",
+   "start": 113.0,
+   "slot_end": 116.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_ans0",
+   "start": 123.0,
+   "slot_end": 124.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q1_ans1",
+   "start": 124.6,
+   "slot_end": 128.9,
+   "subtitle": "かぎに掛けた竹のひしゃくが、ありません。",
+   "voice_text": "かぎにかけたたけのひしゃくが、ありません。",
+   "face": "smile"
+  },
+  {
+   "id": "q1_ans2",
+   "start": 128.9,
+   "slot_end": 133.2,
+   "subtitle": "風鈴が、青くなりました。",
+   "voice_text": "ふうりんが、あおくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q1_ans3",
+   "start": 133.2,
+   "slot_end": 137.5,
+   "subtitle": "うちわが、赤くなりました。",
+   "voice_text": "うちわが、あかくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_card",
+   "start": 138.0,
+   "slot_end": 142.8,
+   "subtitle": "第2問、初級。栗林です。",
+   "voice_text": "だいにもん、しょきゅう。くりばやしです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_go",
+   "start": 142.8,
+   "slot_end": 149.0,
+   "subtitle": "では、第2問。どうぞ。",
+   "voice_text": "では、だいにもん。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_call0",
+   "start": 171.0,
+   "slot_end": 175.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_call1",
+   "start": 201.0,
+   "slot_end": 205.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_ten",
+   "start": 221.0,
+   "slot_end": 224.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_ans0",
+   "start": 231.0,
+   "slot_end": 232.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_ans1",
+   "start": 232.6,
+   "slot_end": 236.9,
+   "subtitle": "枝のいがが、茶色になりました。",
+   "voice_text": "えだのいがが、ちゃいろになりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_ans2",
+   "start": 236.9,
+   "slot_end": 241.2,
+   "subtitle": "切り株の軍手が、黄色になりました。",
+   "voice_text": "きりかぶのぐんてが、きいろになりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_ans3",
+   "start": 241.2,
+   "slot_end": 245.5,
+   "subtitle": "火ばさみが、赤くなりました。",
+   "voice_text": "ひばさみが、あかくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_card",
+   "start": 246.0,
+   "slot_end": 250.8,
+   "subtitle": "第3問、初級。旅館の朝ごはんです。",
+   "voice_text": "だいさんもん、しょきゅう。りょかんのあさごはんです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_go",
+   "start": 250.8,
+   "slot_end": 257.0,
+   "subtitle": "もうひとつ初級です。どうぞ。",
+   "voice_text": "もうひとつしょきゅうです。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "c_comment",
+   "start": 261.0,
+   "slot_end": 268.0,
+   "subtitle": "見つかった数を、あとでコメントで教えてくださいね。",
+   "voice_text": "みつかったかずを、あとでコメントでおしえてくださいね。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_call0",
+   "start": 279.0,
+   "slot_end": 283.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_call1",
+   "start": 309.0,
+   "slot_end": 313.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_ten",
+   "start": 329.0,
+   "slot_end": 332.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_ans0",
+   "start": 339.0,
+   "slot_end": 340.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_ans1",
+   "start": 340.6,
+   "slot_end": 344.90000000000003,
+   "subtitle": "掛け軸の絵が、お月さまになりました。",
+   "voice_text": "かけじくのえが、おつきさまになりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_ans2",
+   "start": 344.90000000000003,
+   "slot_end": 349.20000000000005,
+   "subtitle": "小皿の漬物が、栗になりました。",
+   "voice_text": "こざらのつけものが、くりになりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_ans3",
+   "start": 349.20000000000005,
+   "slot_end": 353.5,
+   "subtitle": "湯のみが、赤くなりました。",
+   "voice_text": "ゆのみが、あかくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "u1",
+   "start": 354.0,
+   "slot_end": 361.0,
+   "subtitle": "ここでひと休み。こよみ先生の季節のお話です。",
+   "voice_text": "ここでひとやすみ。こよみせんせいの、きせつのおはなしです。",
+   "face": "smile"
+  },
+  {
+   "id": "u2",
+   "start": 361.0,
+   "slot_end": 369.0,
+   "subtitle": "「栗の節句」って、いつのことでしょう？",
+   "voice_text": "くりのせっく、って、いつのことでしょう？",
+   "face": "think"
+  },
+  {
+   "id": "u3",
+   "start": 369.0,
+   "slot_end": 378.0,
+   "subtitle": "答えは、九月九日の重陽の節句。栗ご飯で長生きを願いました。",
+   "voice_text": "こたえは、くがつここのかの、ちょうようのせっく。くりごはんで、ながいきをねがいました。",
+   "face": "surprise"
+  },
+  {
+   "id": "u4",
+   "start": 378.0,
+   "slot_end": 384.0,
+   "subtitle": "今年の秋は、栗ご飯で話のタネにどうぞ。",
+   "voice_text": "ことしのあきは、くりごはんで、はなしのタネにどうぞ。",
+   "face": "wink"
+  },
+  {
+   "id": "q4_card",
+   "start": 384.0,
+   "slot_end": 388.8,
+   "subtitle": "第4問、中級。洋菓子店です。",
+   "voice_text": "だいよんもん、ちゅうきゅう。ようがしてんです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_go",
+   "start": 388.8,
+   "slot_end": 395.0,
+   "subtitle": "後半です。第4問、どうぞ。",
+   "voice_text": "こうはんです。だいよんもん、どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_call0",
+   "start": 417.0,
+   "slot_end": 421.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_call1",
+   "start": 447.0,
+   "slot_end": 451.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_ten",
+   "start": 467.0,
+   "slot_end": 470.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_ans0",
+   "start": 477.0,
+   "slot_end": 478.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q4_ans1",
+   "start": 478.6,
+   "slot_end": 482.90000000000003,
+   "subtitle": "黒板に、栗の絵がかかれました。",
+   "voice_text": "こくばんに、くりのえがかかれました。",
+   "face": "smile"
+  },
+  {
+   "id": "q4_ans2",
+   "start": 482.90000000000003,
+   "slot_end": 487.20000000000005,
+   "subtitle": "モンブランの上の栗が、ありません。",
+   "voice_text": "モンブランのうえのくりが、ありません。",
+   "face": "smile"
+  },
+  {
+   "id": "q4_ans3",
+   "start": 487.20000000000005,
+   "slot_end": 491.5,
+   "subtitle": "まん中のカップケーキが、ピンクになりました。",
+   "voice_text": "まんなかのカップケーキが、ピンクになりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_card",
+   "start": 492.0,
+   "slot_end": 496.8,
+   "subtitle": "第5問、上級。山里の茶屋です。",
+   "voice_text": "だいごもん、じょうきゅう。やまざとのちゃやです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_go",
+   "start": 496.8,
+   "slot_end": 503.0,
+   "subtitle": "いよいよ最後の難問です。じっくりどうぞ。",
+   "voice_text": "いよいよさいごのなんもんです。じっくりどうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_call0",
+   "start": 525.0,
+   "slot_end": 529.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_call1",
+   "start": 555.0,
+   "slot_end": 559.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_ten",
+   "start": 575.0,
+   "slot_end": 578.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_ans0",
+   "start": 585.0,
+   "slot_end": 586.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_ans1",
+   "start": 586.6,
+   "slot_end": 590.9,
+   "subtitle": "飛び石に、もみじが一枚増えました。",
+   "voice_text": "とびいしに、もみじがいちまいふえました。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_ans2",
+   "start": 590.9,
+   "slot_end": 595.2,
+   "subtitle": "石灯籠のてっぺんの飾りが、ありません。",
+   "voice_text": "いしどうろうのてっぺんのかざりが、ありません。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_ans3",
+   "start": 595.2,
+   "slot_end": 599.5,
+   "subtitle": "だんごが、ひとつ白くなりました。",
+   "voice_text": "だんごが、ひとつしろくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "e1",
+   "start": 600.0,
+   "slot_end": 603.6,
+   "subtitle": "これで5問、おしまいです。",
+   "voice_text": "これでごもん、おしまいです。",
+   "face": "yay"
+  },
+  {
+   "id": "e2",
+   "start": 603.6,
+   "slot_end": 610.2,
+   "subtitle": "15個の違い、いくつ見つかりましたか。今日の称号です。",
+   "voice_text": "じゅうごこのちがい、いくつみつかりましたか。きょうのしょうごうです。",
+   "face": "smile"
+  },
+  {
+   "id": "e3",
+   "start": 610.2,
+   "slot_end": 621.0,
+   "subtitle": "チャンネル登録とベルで、毎朝8時半に問題が届きます。毎日の頭の体操にどうぞ。",
+   "voice_text": "チャンネルとうろくとベルで、まいあさはちじはんに、もんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。",
+   "face": "smile"
+  },
+  {
+   "id": "e4",
+   "start": 621.0,
+   "slot_end": 630.0,
+   "subtitle": "左の丸を押すと登録、右の動画で、次の問題に挑戦できますよ。",
+   "voice_text": "ひだりのまるをおすととうろく、みぎのどうがで、つぎのもんだいに、ちょうせんできますよ。",
+   "face": "wink"
+  }
+ ]
+}

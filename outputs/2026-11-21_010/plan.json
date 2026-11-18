@@ -293,56 +293,16 @@
  },
  "readings": [
   [
-   "甘栗の屋台",
-   "あまぐりのやたい"
-  ],
-  [
    "旅館の朝ごはん",
    "りょかんのあさごはん"
   ],
   [
-   "洋菓子店",
-   "ようがしてん"
+   "甘栗の屋台",
+   "あまぐりのやたい"
   ],
   [
    "山里の茶屋",
    "やまざとのちゃや"
-  ],
-  [
-   "栗林",
-   "くりばやし"
-  ],
-  [
-   "栗",
-   "くり"
-  ],
-  [
-   "緑",
-   "みどり"
-  ],
-  [
-   "机",
-   "つくえ"
-  ],
-  [
-   "まん中",
-   "まんなか"
-  ],
-  [
-   "赤く",
-   "あかく"
-  ],
-  [
-   "赤い",
-   "あかい"
-  ],
-  [
-   "赤いふた",
-   "あかいふた"
-  ],
-  [
-   "干し柿",
-   "ほしがき"
   ],
   [
    "麦わら帽子",
@@ -353,168 +313,100 @@
    "いろえんぴつ"
   ],
   [
-   "筆箱",
-   "ふでばこ"
+   "お月さま",
+   "おつきさま"
+  ],
+  [
+   "火ばさみ",
+   "ひばさみ"
+  ],
+  [
+   "洋菓子店",
+   "ようがしてん"
+  ],
+  [
+   "赤いふた",
+   "あかいふた"
   ],
   [
    "大学いも",
    "だいがくいも"
   ],
   [
+   "飛び石",
+   "とびいし"
+  ],
+  [
+   "掛け軸",
+   "かけじく"
+  ],
+  [
+   "湯のみ",
+   "ゆのみ"
+  ],
+  [
+   "切り株",
+   "きりかぶ"
+  ],
+  [
+   "石灯籠",
+   "いしどうろう"
+  ],
+  [
+   "少なく",
+   "すくなく"
+  ],
+  [
+   "向いて",
+   "むいて"
+  ],
+  [
+   "まん中",
+   "まんなか"
+  ],
+  [
+   "干し柿",
+   "ほしがき"
+  ],
+  [
    "ゆで卵",
    "ゆでたまご"
-  ],
-  [
-   "木箱",
-   "きばこ"
-  ],
-  [
-   "湯気",
-   "ゆげ"
-  ],
-  [
-   "紙袋",
-   "かみぶくろ"
-  ],
-  [
-   "消え",
-   "きえ"
-  ],
-  [
-   "数",
-   "かず"
-  ],
-  [
-   "付き",
-   "つき"
-  ],
-  [
-   "水筒",
-   "すいとう"
-  ],
-  [
-   "帽子",
-   "ぼうし"
-  ],
-  [
-   "上級",
-   "じょうきゅう"
-  ],
-  [
-   "中級",
-   "ちゅうきゅう"
-  ],
-  [
-   "初級",
-   "しょきゅう"
   ],
   [
    "右はし",
    "みぎはし"
   ],
   [
-   "形",
-   "かたち"
-  ],
-  [
    "茶色い",
    "ちゃいろい"
-  ],
-  [
-   "先",
-   "さき"
-  ],
-  [
-   "数",
-   "かず"
   ],
   [
    "花びら",
    "はなびら"
   ],
   [
-   "花",
-   "はな"
-  ],
-  [
-   "上",
-   "うえ"
-  ],
-  [
    "土なべ",
    "どなべ"
-  ],
-  [
-   "下",
-   "した"
   ],
   [
    "玉ねぎ",
    "たまねぎ"
   ],
   [
-   "白く",
-   "しろく"
-  ],
-  [
-   "黒い",
-   "くろい"
-  ],
-  [
-   "輪",
-   "わ"
-  ],
-  [
-   "針",
-   "はり"
-  ],
-  [
    "変わり",
    "かわり"
-  ],
-  [
-   "一本",
-   "いっぽん"
-  ],
-  [
-   "牛",
-   "うし"
-  ],
-  [
-   "左",
-   "ひだり"
-  ],
-  [
-   "右",
-   "みぎ"
   ],
   [
    "落ち葉",
    "おちば"
   ],
   [
-   "高く",
-   "たかく"
-  ],
-  [
    "黄色い",
    "きいろい"
   ],
   [
-   "短く",
-   "みじかく"
-  ],
-  [
    "大きく",
    "おおきく"
-  ],
-  [
-   "頭",
-   "あたま"
-  ],
-  [
-   "刃",
-   "は"
   ],
   [
    "舞って",
@@ -529,10 +421,6 @@
    "まほうびん"
   ],
   [
-   "黄色",
-   "きいろ"
-  ],
-  [
    "小さな",
    "ちいさな"
   ],
@@ -543,18 +431,6 @@
   [
    "向いて",
    "むいて"
-  ],
-  [
-   "片方",
-   "かたほう"
-  ],
-  [
-   "青い",
-   "あおい"
-  ],
-  [
-   "白い",
-   "しろい"
   ],
   [
    "第1問",
@@ -589,6 +465,162 @@
    "じゅうびょう"
   ],
   [
+   "小さく",
+   "ちいさく"
+  ],
+  [
+   "取っ手",
+   "とって"
+  ],
+  [
+   "飾り",
+   "かざり"
+  ],
+  [
+   "白く",
+   "しろく"
+  ],
+  [
+   "掛け",
+   "かけ"
+  ],
+  [
+   "漬物",
+   "つけもの"
+  ],
+  [
+   "軍手",
+   "ぐんて"
+  ],
+  [
+   "茶色",
+   "ちゃいろ"
+  ],
+  [
+   "風鈴",
+   "ふうりん"
+  ],
+  [
+   "黒板",
+   "こくばん"
+  ],
+  [
+   "屋根",
+   "やね"
+  ],
+  [
+   "反対",
+   "はんたい"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "黄色",
+   "きいろ"
+  ],
+  [
+   "赤く",
+   "あかく"
+  ],
+  [
+   "青く",
+   "あおく"
+  ],
+  [
+   "栗林",
+   "くりばやし"
+  ],
+  [
+   "赤く",
+   "あかく"
+  ],
+  [
+   "赤い",
+   "あかい"
+  ],
+  [
+   "筆箱",
+   "ふでばこ"
+  ],
+  [
+   "木箱",
+   "きばこ"
+  ],
+  [
+   "湯気",
+   "ゆげ"
+  ],
+  [
+   "紙袋",
+   "かみぶくろ"
+  ],
+  [
+   "消え",
+   "きえ"
+  ],
+  [
+   "付き",
+   "つき"
+  ],
+  [
+   "水筒",
+   "すいとう"
+  ],
+  [
+   "帽子",
+   "ぼうし"
+  ],
+  [
+   "上級",
+   "じょうきゅう"
+  ],
+  [
+   "中級",
+   "ちゅうきゅう"
+  ],
+  [
+   "初級",
+   "しょきゅう"
+  ],
+  [
+   "白く",
+   "しろく"
+  ],
+  [
+   "黒い",
+   "くろい"
+  ],
+  [
+   "一本",
+   "いっぽん"
+  ],
+  [
+   "高く",
+   "たかく"
+  ],
+  [
+   "短く",
+   "みじかく"
+  ],
+  [
+   "黄色",
+   "きいろ"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "青い",
+   "あおい"
+  ],
+  [
+   "白い",
+   "しろい"
+  ],
+  [
    "後半",
    "こうはん"
   ],
@@ -621,10 +653,6 @@
    "こざら"
   ],
   [
-   "量",
-   "りょう"
-  ],
-  [
    "小鳥",
    "ことり"
   ],
@@ -637,20 +665,8 @@
    "はんたい"
   ],
   [
-   "小さく",
-   "ちいさく"
-  ],
-  [
-   "苗",
-   "なえ"
-  ],
-  [
    "一つ",
    "ひとつ"
-  ],
-  [
-   "丸",
-   "まる"
   ],
   [
    "模様",
@@ -659,10 +675,6 @@
   [
    "下駄",
    "げた"
-  ],
-  [
-   "桶",
-   "おけ"
   ],
   [
    "金属",
@@ -677,40 +689,16 @@
    "ふえ"
   ],
   [
-   "火",
-   "ひ"
-  ],
-  [
    "向い",
    "むい"
-  ],
-  [
-   "取っ手",
-   "とって"
   ],
   [
    "金具",
    "かなぐ"
   ],
   [
-   "葉",
-   "は"
-  ],
-  [
    "一枚",
    "いちまい"
-  ],
-  [
-   "緑",
-   "みどり"
-  ],
-  [
-   "色",
-   "いろ"
-  ],
-  [
-   "鍋",
-   "なべ"
   ],
   [
    "真上",
@@ -723,14 +711,6 @@
   [
    "銭湯",
    "せんとう"
-  ],
-  [
-   "畑",
-   "はたけ"
-  ],
-  [
-   "絵",
-   "え"
   ],
   [
    "今日",
@@ -747,6 +727,134 @@
   [
    "川辺",
    "かわべ"
+  ],
+  [
+   "竹",
+   "たけ"
+  ],
+  [
+   "枝",
+   "えだ"
+  ],
+  [
+   "絵",
+   "え"
+  ],
+  [
+   "上",
+   "うえ"
+  ],
+  [
+   "栗",
+   "くり"
+  ],
+  [
+   "緑",
+   "みどり"
+  ],
+  [
+   "机",
+   "つくえ"
+  ],
+  [
+   "数",
+   "かず"
+  ],
+  [
+   "形",
+   "かたち"
+  ],
+  [
+   "先",
+   "さき"
+  ],
+  [
+   "数",
+   "かず"
+  ],
+  [
+   "花",
+   "はな"
+  ],
+  [
+   "上",
+   "うえ"
+  ],
+  [
+   "下",
+   "した"
+  ],
+  [
+   "輪",
+   "わ"
+  ],
+  [
+   "針",
+   "はり"
+  ],
+  [
+   "牛",
+   "うし"
+  ],
+  [
+   "左",
+   "ひだり"
+  ],
+  [
+   "右",
+   "みぎ"
+  ],
+  [
+   "頭",
+   "あたま"
+  ],
+  [
+   "刃",
+   "は"
+  ],
+  [
+   "量",
+   "りょう"
+  ],
+  [
+   "苗",
+   "なえ"
+  ],
+  [
+   "丸",
+   "まる"
+  ],
+  [
+   "桶",
+   "おけ"
+  ],
+  [
+   "火",
+   "ひ"
+  ],
+  [
+   "葉",
+   "は"
+  ],
+  [
+   "緑",
+   "みどり"
+  ],
+  [
+   "色",
+   "いろ"
+  ],
+  [
+   "鍋",
+   "なべ"
+  ],
+  [
+   "畑",
+   "はたけ"
+  ],
+  [
+   "絵",
+   "え"
   ]
  ],
  "voice_override": {
@@ -785,16 +893,61 @@
  "questions": [
   {
    "q": 1,
-   "scene": "栗林",
+   "scene": "甘栗の屋台",
    "level": "やさしい",
    "go": "さあ、第1問。やさしい問題からどうぞ。",
-   "prompt": "Scene: close-up of the ground in a chestnut grove (kuri-bayashi) in autumn, sunlight through the trees, fallen leaves and spiky chestnut burs everywhere on the ground. CENTER, LARGE (main subject): a bamboo basket full of shiny brown chestnuts on the leafy ground. Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests naturally on a table, shelf, floor or ground, or hangs from something. Side objects are LARGE: about one seventh of the picture width each. Objects: (upper left) a chestnut tree branch with green burs; (upper right) a straw hat hanging on a branch stub; (middle left) a pair of work gloves on a tree stump; (middle right) a pair of long metal tongs leaning on a tree trunk; (lower middle, above the bottom fifth) a cloth bag of chestnuts on the ground.",
+   "prompt": "Scene: close-up of a roasted chestnut stall (amaguri no yatai) at an autumn festival in the evening, red lanterns and a wooden stall roof behind. CENTER, LARGE (main subject): a big black iron pan with roasted chestnuts in hot black pebbles, steam rising. Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests naturally on a table, shelf, floor or ground, or hangs from something. Side objects are about one ninth of the picture width each. Objects: (upper left) a red paper lantern without letters; (upper right) a wind chime of colored glass; (middle left) a stack of paper bags; (middle right) a small hand fan on the counter; (center above the pan) a bamboo scoop hanging on a hook.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "ひしゃくがない",
+     "line": "かぎに掛けた竹のひしゃくが、ありません。",
+     "box": [
+      780,
+      182,
+      1072,
+      1035
+     ],
+     "object_w": 282,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "風鈴が青い",
+     "line": "風鈴が、青くなりました。",
+     "box": [
+      1425,
+      278,
+      1749,
+      649
+     ],
+     "object_w": 296,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "うちわが赤い",
+     "line": "うちわが、赤くなりました。",
+     "box": [
+      1510,
+      1266,
+      1826,
+      1460
+     ],
+     "object_w": 301,
+     "src": "1"
+    }
+   ],
    "hint_diff": null,
-   "edit_prompt": "",
-   "edit_prompts": {},
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small hand fan on the counter becomes red; (b) the bamboo scoop hanging on the hook is gone (only the hook remains); (c) the glass wind chime becomes plain blue; (d) the top paper bag of the stack is gone.",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small hand fan on the counter becomes red; (b) the bamboo scoop hanging on the hook is gone (only the hook remains); (c) the glass wind chime becomes plain blue; (d) the top paper bag of the stack is gone."
+   },
    "content_box": [
     0,
     0,
@@ -804,22 +957,109 @@
   },
   {
    "q": 2,
-   "scene": "甘栗の屋台",
+   "scene": "栗林",
    "level": "初級",
    "go": "では、第2問。どうぞ。",
-   "prompt": "Scene: close-up of a roasted chestnut stall (amaguri no yatai) at an autumn festival in the evening, red lanterns and a wooden stall roof behind. CENTER, LARGE (main subject): a big black iron pan with roasted chestnuts in hot black pebbles, steam rising. Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests naturally on a table, shelf, floor or ground, or hangs from something. Side objects are about one ninth of the picture width each. Objects: (upper left) a red paper lantern without letters; (upper right) a wind chime of colored glass; (middle left) a stack of paper bags; (middle right) a small hand fan on the counter; (center above the pan) a bamboo scoop hanging on a hook.",
+   "prompt": "Scene: close-up of the ground in a chestnut grove (kuri-bayashi) in autumn, sunlight through the trees, fallen leaves and spiky chestnut burs everywhere on the ground. CENTER, LARGE (main subject): a bamboo basket full of shiny brown chestnuts on the leafy ground. Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests naturally on a table, shelf, floor or ground, or hangs from something. Side objects are LARGE: about one seventh of the picture width each. Objects: (upper left) a chestnut tree branch with green burs; (upper right) a straw hat hanging on a branch stub; (middle left) a pair of work gloves on a tree stump; (middle right) a pair of long metal tongs leaning on a tree trunk; (lower middle, above the bottom fifth) a cloth bag of chestnuts on the ground.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "いがが茶色",
+     "line": "枝のいがが、茶色になりました。",
+     "box": [
+      300,
+      330,
+      620,
+      620
+     ],
+     "object_w": 260,
+     "src": "p",
+     "note": "プログラムで緑→茶（熟した色）"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "軍手が黄色",
+     "line": "切り株の軍手が、黄色になりました。",
+     "box": [
+      101,
+      1058,
+      472,
+      1391
+     ],
+     "object_w": 250,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "火ばさみが赤い",
+     "line": "火ばさみが、赤くなりました。",
+     "box": [
+      1284,
+      713,
+      1820,
+      1668
+     ],
+     "object_w": 233,
+     "src": "1"
+    }
+   ],
    "hint_diff": null,
-   "edit_prompt": "",
-   "edit_prompts": {},
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the straw hat hanging on the branch becomes bright red; (b) the work gloves on the stump become yellow; (c) the long metal tongs become bright red; (d) one more spiky green chestnut bur on the branch at the upper left.",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the straw hat hanging on the branch becomes bright red; (b) the work gloves on the stump become yellow; (c) the long metal tongs become bright red; (d) one more spiky green chestnut bur on the branch at the upper left.",
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tree stump under the work gloves becomes about twice as tall; (b) one more shiny brown chestnut lying on the leafy ground just to the right of the stump, about one tenth of the picture width; (c) the string tying the cloth bag becomes red."
+   },
    "content_box": [
     0,
     0,
     1856,
     2088
-   ]
+   ],
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   },
+   "program_ops": {
+    "p": [
+     {
+      "op": "recolor",
+      "box": [
+       300,
+       330,
+       620,
+       620
+      ],
+      "keep_hue": [
+       35,
+       85
+      ],
+      "circles": [
+       [
+        445,
+        412,
+        76
+       ],
+       [
+        405,
+        505,
+        80
+       ],
+       [
+        525,
+        505,
+        88
+       ]
+      ],
+      "hue": 20,
+      "sat": 0.9,
+      "val": 0.75
+     }
+    ]
+   }
   },
   {
    "q": 3,
@@ -829,10 +1069,57 @@
    "prompt": "Scene: close-up of a Japanese inn breakfast table (ryokan) in autumn, tatami room with a sliding paper window showing autumn leaves outside. CENTER, LARGE (main subject): a bowl of chestnut rice (kuri gohan) on a lacquered tray. Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests naturally on a table, shelf, floor or ground, or hangs from something. Side objects are about one ninth of the picture width each. Objects: (upper left) a hanging scroll on the wall; (upper right) a small vase with one red maple branch; (middle left) a teapot and a teacup; (middle right) a grilled fish on a long plate; (center above the tray) a small dish of pickles.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "入れ替え",
+     "label": "掛け軸が月",
+     "line": "掛け軸の絵が、お月さまになりました。",
+     "box": [
+      164,
+      216,
+      407,
+      494
+     ],
+     "object_w": 233,
+     "src": "1",
+     "context": "床の間の掛け軸の絵が、山から月に替わる（掛け軸の絵として普通）"
+    },
+    {
+     "id": 2,
+     "type": "入れ替え",
+     "label": "漬物が栗",
+     "line": "小皿の漬物が、栗になりました。",
+     "box": [
+      818,
+      905,
+      1062,
+      1069
+     ],
+     "object_w": 219,
+     "src": "1",
+     "context": "朝ごはんの小皿に、栗が二つのっている（栗ご飯の膳の小鉢として普通）"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "湯のみが赤い",
+     "line": "湯のみが、赤くなりました。",
+     "box": [
+      67,
+      1174,
+      265,
+      1445
+     ],
+     "object_w": 180,
+     "src": "1"
+    }
+   ],
    "hint_diff": null,
-   "edit_prompt": "",
-   "edit_prompts": {},
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the hanging scroll shows a big round moon instead of mountains; (b) the white vase with the maple branch becomes blue; (c) the small teacup becomes red; (d) the small dish of pickles becomes a small dish of two chestnuts.",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the hanging scroll shows a big round moon instead of mountains; (b) the white vase with the maple branch becomes blue; (c) the small teacup becomes red; (d) the small dish of pickles becomes a small dish of two chestnuts."
+   },
    "content_box": [
     0,
     0,
@@ -848,10 +1135,58 @@
    "prompt": "Scene: close-up of a glass showcase in a small Western-style cake shop in autumn, warm wooden shelves and a window behind. CENTER, LARGE (main subject): a big chestnut Mont Blanc cake on a white plate with a chestnut on top. Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests naturally on a table, shelf, floor or ground, or hangs from something. Side objects are about one eleventh of the picture width each. Objects: (upper left) a small chalkboard sign without letters; (upper right) a hanging bell over the door; (middle left) a jar of candies; (middle right) a row of three small cupcakes; (upper middle) a shelf with a teapot.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "模様",
+     "label": "黒板に栗の絵",
+     "line": "黒板に、栗の絵がかかれました。",
+     "box": [
+      251,
+      196,
+      504,
+      429
+     ],
+     "object_w": 200,
+     "src": "3"
+    },
+    {
+     "id": 2,
+     "type": "一部欠け",
+     "label": "モンブランの栗がない",
+     "line": "モンブランの上の栗が、ありません。",
+     "box": [
+      760,
+      790,
+      1085,
+      1045
+     ],
+     "object_w": 169,
+     "src": "1",
+     "note": "ケーキの上の栗を消した（描き直し版1。かさの上の形も少し描き直されているので、範囲を広げて貼る）"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "カップケーキがピンク",
+     "line": "まん中のカップケーキが、ピンクになりました。",
+     "box": [
+      1530,
+      880,
+      1705,
+      1115
+     ],
+     "object_w": 150,
+     "src": "2"
+    }
+   ],
    "hint_diff": null,
-   "edit_prompt": "",
-   "edit_prompts": {},
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the lid of the candy jar becomes red; (b) the chestnut on top of the Mont Blanc cake is gone; (c) the window frame becomes blue; (d) the bell over the door becomes silver.",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the lid of the candy jar becomes red; (b) the chestnut on top of the Mont Blanc cake is gone; (c) the window frame becomes blue; (d) the bell over the door becomes silver.",
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the rightmost of the three small cupcakes is gone; (b) the candy jar becomes clearly shorter (about two thirds of its height, same width); (c) the cream color of the middle cupcake becomes pink.",
+    "3": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small black chalkboard sign at the upper left gets a simple white chalk drawing of one chestnut in its center; (b) the candy jar is only half full (the candies in the upper half of the jar are gone, the jar itself stays the same)."
+   },
    "content_box": [
     0,
     0,
@@ -867,16 +1202,91 @@
    "prompt": "Scene: close-up of an old mountain tea house (chaya) in autumn, a red bench with a red parasol, wooden building and autumn mountains behind. CENTER, LARGE (main subject): a plate of chestnut dumplings (kuri dango) on skewers and a cup of green tea on the red bench. Many small details around (each about one fourteenth of the picture width): (upper left) a hanging cloth curtain (noren) without letters; (upper right) a small bird on the roof edge; (middle left) a straw sandal pair on a stepping stone; (middle right) a small stone lantern; (upper middle) a hanging paper lantern.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "増える",
+     "label": "飛び石にもみじ",
+     "line": "飛び石に、もみじが一枚増えました。",
+     "box": [
+      325,
+      1255,
+      490,
+      1420
+     ],
+     "object_w": 125,
+     "src": "p",
+     "context": "茶屋の庭の飛び石の上に、もみじの落ち葉が一枚（まわりにも落ち葉が散っていて普通）",
+     "note": "同じ回の第3問の花びんのもみじの葉を、色で切り抜いて置いた（プログラム）"
+    },
+    {
+     "id": 2,
+     "type": "一部欠け",
+     "label": "灯籠のてっぺんの飾りがない",
+     "line": "石灯籠のてっぺんの飾りが、ありません。",
+     "box": [
+      1514,
+      803,
+      1840,
+      1011
+     ],
+     "object_w": 115,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "だんごがひとつ白い",
+     "line": "だんごが、ひとつ白くなりました。",
+     "box": [
+      933,
+      1352,
+      1099,
+      1529
+     ],
+     "object_w": 108,
+     "src": "1"
+    }
+   ],
    "hint_diff": null,
-   "edit_prompt": "",
-   "edit_prompts": {},
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) one of the pair of straw sandals on the stepping stone faces the other way; (b) the small roof on top of the stone lantern is gone; (c) the green tea cup becomes blue; (d) on the dango skewers, one dango ball is gone.",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) one of the pair of straw sandals on the stepping stone faces the other way; (b) the small roof on top of the stone lantern is gone; (c) the green tea cup becomes blue; (d) on the dango skewers, one dango ball is gone."
+   },
    "content_box": [
     0,
     0,
     1856,
     2088
-   ]
+   ],
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   },
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "from_file": "q3_a.png",
+      "src": [
+       1666,
+       402,
+       1787,
+       520
+      ],
+      "keep_hue": [
+       240,
+       14
+      ],
+      "grow": 1,
+      "dst": [
+       340,
+       1270
+      ],
+      "width": 125,
+      "rot": 25
+     }
+    ]
+   }
   }
  ],
  "thumbnail": {
@@ -913,5 +1323,18 @@
   "circle_hint": false,
   "note": "第1回と同じ型（変えた所なし）。左右に同じ絵・上に濃紺の帯で「秋の間違いさがし」・下に難易度と問いかけ。こよみ先生は入れない"
  },
- "shorts": []
+ "shorts": [
+  {
+   "question": 3,
+   "answer_gap": 3.3,
+   "note": "1本目：第3問 旅館の朝ごはん・初級",
+   "title": "シニアの間違い探し｜旅館の栗ご飯の1問 #脳トレ #頭の体操"
+  },
+  {
+   "question": 4,
+   "answer_gap": 3.3,
+   "note": "2本目：第4問 洋菓子店・中級",
+   "title": "シニアの間違い探し｜秋のモンブランの1問 #脳トレ #頭の体操"
+  }
+ ]
 }
