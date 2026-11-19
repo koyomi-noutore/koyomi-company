@@ -49,7 +49,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 695,
+   "outside_box_pixels_diff_gt15": 241,
    "outside_box_max_distance_px": 11.0,
    "answers": [
     {
@@ -96,25 +96,25 @@
      "label": "右の干し柿が緑",
      "line": "右の干し柿が、緑色になりました。",
      "box_px": [
-      1500,
+      1510,
       170,
       1785,
       692
      ],
      "box_screen": [
-      776,
+      781,
       88,
       923,
       358
      ],
      "circle_a_screen": [
-      776,
+      781,
       88,
       923,
       358
      ],
      "circle_b_screen": [
-      776,
+      781,
       88,
       923,
       358
@@ -124,7 +124,7 @@
      "object_screen_width_pct": 6.95,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "2",
+     "edit_version": "p",
      "made_by": "gemini",
      "note": ""
     },
@@ -319,7 +319,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 601,
+   "outside_box_pixels_diff_gt15": 249,
    "outside_box_max_distance_px": 9.0,
    "answers": [
     {
