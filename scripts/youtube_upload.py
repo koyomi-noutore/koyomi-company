@@ -73,7 +73,7 @@ def upload(folder, thumbnail=None, short=False):
     video = folder / "video.mp4"
     title, desc, tags = read_metadata(folder / "description.md")
     body = {
-        "snippet": {"title": title, "description": desc, "tags": tags, "categoryId": "27",
+        "snippet": {"title": title, "description": desc, "tags": tags, "categoryId": "27",   # カテゴリは「教育」で統一（2026-11-20 CEO決定）
                     "defaultLanguage": "ja", "defaultAudioLanguage": "ja"},
         "status": {"privacyStatus": "private", "selfDeclaredMadeForKids": False, "embeddable": True},
     }
@@ -110,7 +110,12 @@ def upload(folder, thumbnail=None, short=False):
     th = set_thumbnail(vid, thumbnail, access_token()) if not short else {}
     rec = {"video_id": vid, "url": f"https://youtu.be/{vid}", "studio": f"https://studio.youtube.com/video/{vid}/edit",
            "privacy": result["status"]["privacyStatus"], "title": result["snippet"]["title"],
-           "thumbnail": bool(th.get("items")), "short": short}
+           "thumbnail": bool(th.get("items")), "short": short, "category": result["snippet"].get("categoryId")}
+    try:   # 再生リスト（2026-11-20 CEO決定）：長尺→「間違い探し｜毎日の脳トレ」と季節のリスト、ショート→「1分間違い探し」。一番上に入れる
+        import youtube_playlists as P
+        rec["playlists"] = P.add_for_upload(folder, vid, short, access_token())
+    except Exception as e:   # 再生リストの失敗でアップロードの記録を失わない。あとで youtube_playlists.py backfill で入れ直せる
+        rec["playlists_error"] = str(e)[:200]
     (folder / "upload.json").write_text(json.dumps(rec, ensure_ascii=False, indent=1), encoding="utf-8")
     print(json.dumps(rec, ensure_ascii=False))
 
