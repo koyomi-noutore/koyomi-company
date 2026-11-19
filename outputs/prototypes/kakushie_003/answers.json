@@ -1,0 +1,75 @@
+{
+ "source": "cand_0.png",
+ "image_size": [
+  1856,
+  2088
+ ],
+ "located_by": "gemini-3.5-flash",
+ "items": [
+  {
+   "name": "柿",
+   "shape": "kaki",
+   "box_px": [
+    1080,
+    109,
+    1496,
+    499
+   ],
+   "visibility": 4,
+   "natural_color": false,
+   "width_pct_of_picture": 22.4
+  },
+  {
+   "name": "どんぐり",
+   "shape": "donguri",
+   "box_px": [
+    234,
+    411,
+    533,
+    839
+   ],
+   "visibility": 4,
+   "natural_color": false,
+   "width_pct_of_picture": 16.1
+  },
+  {
+   "name": "もみじ",
+   "shape": "momiji",
+   "box_px": [
+    1184,
+    1401,
+    1698,
+    1902
+   ],
+   "visibility": 4,
+   "natural_color": false,
+   "width_pct_of_picture": 27.7
+  },
+  {
+   "name": "きのこ",
+   "shape": "kinoko",
+   "box_px": [
+    1171,
+    844,
+    1550,
+    1242
+   ],
+   "visibility": 4,
+   "natural_color": false,
+   "width_pct_of_picture": 20.4
+  },
+  {
+   "name": "栗",
+   "shape": "kuri",
+   "box_px": [
+    239,
+    1823,
+    533,
+    2088
+   ],
+   "visibility": 4,
+   "natural_color": false,
+   "width_pct_of_picture": 15.8
+  }
+ ]
+}
