@@ -1,0 +1,1422 @@
+{
+ "episode": "012",
+ "season": "秋",
+ "topics": [
+  "はざかけ"
+ ],
+ "note": "第12回（はざかけ・勤労感謝の日）。CEO決定 11/20：冒頭を短く（5秒で全5問・最後は難問、10秒以内に第1問の絵、ルールは第1問の絵の上に文字）・エンディングで次の動画を声で案内・タイトル32文字以内。",
+ "youtube": {
+  "title": "【間違い探し】シニアの脳トレ・頭の体操｜秋のはざかけ全5問",
+  "description_file": "description.md",
+  "title_note": "32文字以内・【間違い探し】から・【】に季節を入れない（CEO決定 11/20）",
+  "publish_plan": "2026-11-23（月・勤労感謝の日）8:30、ショート14:00・18:00"
+ },
+ "screens": {
+  "opening_title": "はざかけの間違い探し　全5問",
+  "opening_sub": "最後は難問です",
+  "unchiku_header": "こよみ先生の 秋の小話",
+  "unchiku_slides": [
+   {
+    "until": 7,
+    "texts": [
+     [
+      "ひと休み",
+      960,
+      330,
+      130,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "こよみ先生の 季節のお話",
+      960,
+      520,
+      80,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 15,
+    "texts": [
+     [
+      "はざかけのお米は なぜおいしい？",
+      960,
+      380,
+      100,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ]
+    ]
+   },
+   {
+    "until": 24,
+    "texts": [
+     [
+      "お日さまと風で ゆっくり乾かす",
+      960,
+      330,
+      100,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "お米が 割れにくい",
+      960,
+      520,
+      100,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 30,
+    "texts": [
+     [
+      "勤労感謝の日",
+      960,
+      330,
+      110,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "もとは 収穫を祝う日",
+      960,
+      520,
+      90,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   }
+  ],
+  "ending_titles": [
+   [
+    "15個",
+    "はざかけ名人"
+   ],
+   [
+    "11〜14個",
+    "稲刈り名探偵"
+   ],
+   [
+    "6〜10個",
+    "かかしさん"
+   ],
+   [
+    "0〜5個",
+    "すずめさん"
+   ]
+  ],
+  "ending_note": "すずめさんも、毎日ついばめば お米名人",
+  "ending_next": "次は きのうの「酉の市」の回も どうぞ",
+  "owl_layout": "bottom",
+  "endscreen_at": 9.0,
+  "rule_overlay": {
+   "text": "右の絵で 違いを3つ さがそう",
+   "sub": "1問 90秒",
+   "sec": 8.0
+  }
+ },
+ "timeline": {
+  "total": 606.5,
+  "opening": [
+   0.0,
+   6.5
+  ],
+  "rule": [
+   6.5,
+   6.5
+  ],
+  "q_start": {
+   "1": 6.5,
+   "2": 114.5,
+   "3": 222.5,
+   "4": 360.5,
+   "5": 468.5
+  },
+  "unchiku": [
+   330.5,
+   360.5
+  ],
+  "ending": [
+   576.5,
+   606.5
+  ],
+  "card": 3.0,
+  "solve": 90.0,
+  "answer": 15.0,
+  "hint_at": null,
+  "ten_at": 80.0,
+  "ans_first": 1.6,
+  "ans_step": 4.3,
+  "solve_calls": [
+   [
+    30,
+    "あと60秒です。"
+   ],
+   [
+    60,
+    "あと30秒です。"
+   ]
+  ],
+  "go_delay": 1.8
+ },
+ "lines": {
+  "opening": [
+   {
+    "id": "op",
+    "at": 0.0,
+    "text": "はざかけの間違い探し、全5問。",
+    "face": "smile",
+    "until": 3.6
+   },
+   {
+    "id": "op2",
+    "at": 3.6,
+    "text": "最後は難問です。",
+    "face": "wink",
+    "until": 6.5
+   }
+  ],
+  "rule": [],
+  "unchiku": [
+   {
+    "id": "u1",
+    "at": 0.0,
+    "text": "ここでひと休み。こよみ先生の季節のお話です。",
+    "face": "smile",
+    "until": 7.0
+   },
+   {
+    "id": "u2",
+    "at": 7.0,
+    "text": "はざかけのお米は、なぜおいしいといわれるのでしょう？",
+    "face": "think",
+    "until": 15.0
+   },
+   {
+    "id": "u3",
+    "at": 15.0,
+    "text": "答えは、お日さまと風で、ゆっくり乾かすから。お米が割れにくいのです。",
+    "face": "surprise",
+    "until": 24.0
+   },
+   {
+    "id": "u4",
+    "at": 24.0,
+    "text": "勤労感謝の日は、もとは収穫を祝う日です。",
+    "face": "wink",
+    "until": 30.0
+   }
+  ],
+  "ending": [
+   {
+    "id": "e1",
+    "at": 0.0,
+    "text": "これで5問、おしまいです。",
+    "face": "yay",
+    "until": 3.6
+   },
+   {
+    "id": "e2",
+    "at": 3.6,
+    "text": "15個の違い、いくつ見つかりましたか。今日の称号です。",
+    "face": "smile",
+    "until": 10.2
+   },
+   {
+    "id": "e3",
+    "at": 10.2,
+    "text": "チャンネル登録とベルで、毎朝8時半に問題が届きます。毎日の頭の体操にどうぞ。",
+    "face": "smile",
+    "until": 21.0
+   },
+   {
+    "id": "e4",
+    "at": 21.0,
+    "text": "次は、右の動画、きのうの酉の市の回もどうぞ。熊手の絵で、もう5問楽しめますよ。",
+    "face": "wink",
+    "until": 30.0
+   }
+  ],
+  "extra": [
+   {
+    "id": "c_comment",
+    "at": 237.5,
+    "text": "見つかった数を、あとでコメントで教えてくださいね。",
+    "face": "smile",
+    "until": 244.5
+   }
+  ]
+ },
+ "readings": [
+  [
+   "赤とんぼ",
+   "あかとんぼ"
+  ],
+  [
+   "1匹",
+   "いっぴき"
+  ],
+  [
+   "お茶",
+   "おちゃ"
+  ],
+  [
+   "金色",
+   "きんいろ"
+  ],
+  [
+   "鐘",
+   "かね"
+  ],
+  [
+   "麦わら帽子",
+   "むぎわらぼうし"
+  ],
+  [
+   "色えんぴつ",
+   "いろえんぴつ"
+  ],
+  [
+   "お月さま",
+   "おつきさま"
+  ],
+  [
+   "火ばさみ",
+   "ひばさみ"
+  ],
+  [
+   "赤いふた",
+   "あかいふた"
+  ],
+  [
+   "大学いも",
+   "だいがくいも"
+  ],
+  [
+   "酉の市",
+   "とりのいち"
+  ],
+  [
+   "飛び石",
+   "とびいし"
+  ],
+  [
+   "掛け軸",
+   "かけじく"
+  ],
+  [
+   "湯のみ",
+   "ゆのみ"
+  ],
+  [
+   "切り株",
+   "きりかぶ"
+  ],
+  [
+   "石灯籠",
+   "いしどうろう"
+  ],
+  [
+   "少なく",
+   "すくなく"
+  ],
+  [
+   "向いて",
+   "むいて"
+  ],
+  [
+   "まん中",
+   "まんなか"
+  ],
+  [
+   "干し柿",
+   "ほしがき"
+  ],
+  [
+   "ゆで卵",
+   "ゆでたまご"
+  ],
+  [
+   "右はし",
+   "みぎはし"
+  ],
+  [
+   "茶色い",
+   "ちゃいろい"
+  ],
+  [
+   "花びら",
+   "はなびら"
+  ],
+  [
+   "土なべ",
+   "どなべ"
+  ],
+  [
+   "玉ねぎ",
+   "たまねぎ"
+  ],
+  [
+   "変わり",
+   "かわり"
+  ],
+  [
+   "落ち葉",
+   "おちば"
+  ],
+  [
+   "黄色い",
+   "きいろい"
+  ],
+  [
+   "大きく",
+   "おおきく"
+  ],
+  [
+   "舞って",
+   "まって"
+  ],
+  [
+   "葉っぱ",
+   "はっぱ"
+  ],
+  [
+   "魔法瓶",
+   "まほうびん"
+  ],
+  [
+   "小さな",
+   "ちいさな"
+  ],
+  [
+   "少なく",
+   "すくなく"
+  ],
+  [
+   "向いて",
+   "むいて"
+  ],
+  [
+   "第1問",
+   "だいいちもん"
+  ],
+  [
+   "第2問",
+   "だいにもん"
+  ],
+  [
+   "第3問",
+   "だいさんもん"
+  ],
+  [
+   "第4問",
+   "だいよんもん"
+  ],
+  [
+   "第5問",
+   "だいごもん"
+  ],
+  [
+   "60秒",
+   "ろくじゅうびょう"
+  ],
+  [
+   "30秒",
+   "さんじゅうびょう"
+  ],
+  [
+   "10秒",
+   "じゅうびょう"
+  ],
+  [
+   "小さく",
+   "ちいさく"
+  ],
+  [
+   "取っ手",
+   "とって"
+  ],
+  [
+   "熊手",
+   "くまで"
+  ],
+  [
+   "飾り",
+   "かざり"
+  ],
+  [
+   "白く",
+   "しろく"
+  ],
+  [
+   "掛け",
+   "かけ"
+  ],
+  [
+   "漬物",
+   "つけもの"
+  ],
+  [
+   "軍手",
+   "ぐんて"
+  ],
+  [
+   "茶色",
+   "ちゃいろ"
+  ],
+  [
+   "風鈴",
+   "ふうりん"
+  ],
+  [
+   "黒板",
+   "こくばん"
+  ],
+  [
+   "屋根",
+   "やね"
+  ],
+  [
+   "反対",
+   "はんたい"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "黄色",
+   "きいろ"
+  ],
+  [
+   "赤く",
+   "あかく"
+  ],
+  [
+   "青く",
+   "あおく"
+  ],
+  [
+   "赤く",
+   "あかく"
+  ],
+  [
+   "赤い",
+   "あかい"
+  ],
+  [
+   "筆箱",
+   "ふでばこ"
+  ],
+  [
+   "木箱",
+   "きばこ"
+  ],
+  [
+   "湯気",
+   "ゆげ"
+  ],
+  [
+   "紙袋",
+   "かみぶくろ"
+  ],
+  [
+   "消え",
+   "きえ"
+  ],
+  [
+   "付き",
+   "つき"
+  ],
+  [
+   "水筒",
+   "すいとう"
+  ],
+  [
+   "帽子",
+   "ぼうし"
+  ],
+  [
+   "上級",
+   "じょうきゅう"
+  ],
+  [
+   "中級",
+   "ちゅうきゅう"
+  ],
+  [
+   "初級",
+   "しょきゅう"
+  ],
+  [
+   "白く",
+   "しろく"
+  ],
+  [
+   "黒い",
+   "くろい"
+  ],
+  [
+   "一本",
+   "いっぽん"
+  ],
+  [
+   "高く",
+   "たかく"
+  ],
+  [
+   "短く",
+   "みじかく"
+  ],
+  [
+   "黄色",
+   "きいろ"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "青い",
+   "あおい"
+  ],
+  [
+   "白い",
+   "しろい"
+  ],
+  [
+   "後半",
+   "こうはん"
+  ],
+  [
+   "最後",
+   "さいご"
+  ],
+  [
+   "難問",
+   "なんもん"
+  ],
+  [
+   "問題",
+   "もんだい"
+  ],
+  [
+   "答え",
+   "こたえ"
+  ],
+  [
+   "少し",
+   "すこし"
+  ],
+  [
+   "大根",
+   "だいこん"
+  ],
+  [
+   "小皿",
+   "こざら"
+  ],
+  [
+   "小鳥",
+   "ことり"
+  ],
+  [
+   "向き",
+   "むき"
+  ],
+  [
+   "反対",
+   "はんたい"
+  ],
+  [
+   "一つ",
+   "ひとつ"
+  ],
+  [
+   "模様",
+   "もよう"
+  ],
+  [
+   "下駄",
+   "げた"
+  ],
+  [
+   "金属",
+   "きんぞく"
+  ],
+  [
+   "無く",
+   "なく"
+  ],
+  [
+   "増え",
+   "ふえ"
+  ],
+  [
+   "向い",
+   "むい"
+  ],
+  [
+   "金具",
+   "かなぐ"
+  ],
+  [
+   "一枚",
+   "いちまい"
+  ],
+  [
+   "真上",
+   "まうえ"
+  ],
+  [
+   "屋台",
+   "やたい"
+  ],
+  [
+   "銭湯",
+   "せんとう"
+  ],
+  [
+   "今日",
+   "きょう"
+  ],
+  [
+   "一緒",
+   "いっしょ"
+  ],
+  [
+   "山門",
+   "さんもん"
+  ],
+  [
+   "川辺",
+   "かわべ"
+  ],
+  [
+   "竹",
+   "たけ"
+  ],
+  [
+   "枝",
+   "えだ"
+  ],
+  [
+   "絵",
+   "え"
+  ],
+  [
+   "上",
+   "うえ"
+  ],
+  [
+   "緑",
+   "みどり"
+  ],
+  [
+   "机",
+   "つくえ"
+  ],
+  [
+   "数",
+   "かず"
+  ],
+  [
+   "形",
+   "かたち"
+  ],
+  [
+   "先",
+   "さき"
+  ],
+  [
+   "数",
+   "かず"
+  ],
+  [
+   "花",
+   "はな"
+  ],
+  [
+   "上",
+   "うえ"
+  ],
+  [
+   "下",
+   "した"
+  ],
+  [
+   "輪",
+   "わ"
+  ],
+  [
+   "針",
+   "はり"
+  ],
+  [
+   "牛",
+   "うし"
+  ],
+  [
+   "左",
+   "ひだり"
+  ],
+  [
+   "右",
+   "みぎ"
+  ],
+  [
+   "頭",
+   "あたま"
+  ],
+  [
+   "刃",
+   "は"
+  ],
+  [
+   "量",
+   "りょう"
+  ],
+  [
+   "苗",
+   "なえ"
+  ],
+  [
+   "丸",
+   "まる"
+  ],
+  [
+   "桶",
+   "おけ"
+  ],
+  [
+   "火",
+   "ひ"
+  ],
+  [
+   "葉",
+   "は"
+  ],
+  [
+   "緑",
+   "みどり"
+  ],
+  [
+   "色",
+   "いろ"
+  ],
+  [
+   "鍋",
+   "なべ"
+  ],
+  [
+   "畑",
+   "はたけ"
+  ],
+  [
+   "絵",
+   "え"
+  ],
+  [
+   "木の札",
+   "きのふだ"
+  ],
+  [
+   "お面",
+   "おめん"
+  ],
+  [
+   "大きな",
+   "おおきな"
+  ],
+  [
+   "銀色",
+   "ぎんいろ"
+  ],
+  [
+   "前かけ",
+   "まえかけ"
+  ],
+  [
+   "丸い",
+   "まるい"
+  ],
+  [
+   "棚",
+   "たな"
+  ],
+  [
+   "壁",
+   "かべ"
+  ],
+  [
+   "鈴",
+   "すず"
+  ],
+  [
+   "紋",
+   "もん"
+  ],
+  [
+   "星",
+   "ほし"
+  ],
+  [
+   "銀",
+   "ぎん"
+  ],
+  [
+   "はざかけの田んぼ",
+   "はざかけのたんぼ"
+  ],
+  [
+   "農家の土間",
+   "のうかのどま"
+  ],
+  [
+   "町のお米屋さん",
+   "まちのおこめやさん"
+  ],
+  [
+   "あぜ道のお昼",
+   "あぜみちのおひる"
+  ],
+  [
+   "秋祭りの神社",
+   "あきまつりのじんじゃ"
+  ]
+ ],
+ "voice_override": {
+  "u1": "ここでひとやすみ。こよみせんせいの、きせつのおはなしです。",
+  "e1": "これでごもん、おしまいです。",
+  "e2": "じゅうごこのちがい、いくつみつかりましたか。きょうのしょうごうです。",
+  "e3": "チャンネルとうろくとベルで、まいあさはちじはんに、もんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。",
+  "c_comment": "みつかったかずを、あとでコメントでおしえてくださいね。",
+  "s_intro": "うえとしたのえで、ちがいがみっつあります。みつけられますか。",
+  "s_end": "つづきは、ながいどうがで。ひだりしたをクリックして、ちょうせんしてみてくださいね。",
+  "op": "はざかけのまちがいさがし、ぜんごもん。",
+  "op2": "さいごは、なんもんです。",
+  "u2": "はざかけのおこめは、なぜおいしいといわれるのでしょう？",
+  "u3": "こたえは、おひさまとかぜで、ゆっくりかわかすから。おこめがわれにくいのです。",
+  "u4": "きんろうかんしゃのひは、もとはしゅうかくをいわうひです。",
+  "e4": "つぎは、みぎのどうが、きのうのとりのいちのかいもどうぞ。くまでのえで、もうごもんたのしめますよ。",
+  "q1_go": "みぎのえのちがいを、みっつさがしてください。どうぞ。",
+  "q3_go": "つづいて、だいさんもん。どうぞ。",
+  "q5_go": "さいごのだいごもん、なんもんです。どうぞ。",
+  "q1_ans1": "わらじが、なくなりました。",
+  "q1_ans2": "みぎのほしがきが、みどりいろになりました。",
+  "q1_ans3": "てつびんが、あかくなりました。",
+  "q2_ans1": "おおきなコスモスが、きいろになりました。",
+  "q2_ans2": "おちゃが、ちゃいろになりました。",
+  "q2_ans3": "あかとんぼが、いっぴきふえました。",
+  "q3_ans1": "かきがひとつ、みどりいろになりました。",
+  "q3_ans2": "くまでのえが、あかくなりました。",
+  "q3_ans3": "かごのうえに、かきがひとつのりました。",
+  "q4_ans1": "ちょうちんのもんが、あかいまるになりました。",
+  "q4_ans2": "かねが、きんいろになりました。",
+  "q4_ans3": "おけのたがが、あかくなりました。",
+  "q5_ans1": "たなのうえのはこが、あかいふくろになりました。",
+  "q5_ans2": "はかりのまえのふんどうが、なくなりました。",
+  "q5_ans3": "まどのそとのきが、みどりいろになりました。"
+ },
+ "voice": {
+  "provider": "fish",
+  "reference_id": "63819275ce38440ea245ca988abf976e",
+  "model": "s1",
+  "speed": 0.88,
+  "credit": "音声：Fish Audio（AIで合成した音声です）"
+ },
+ "images": {
+  "model": "gemini-3-pro-image",
+  "size": "2K",
+  "aspect": "4:5",
+  "style": "A Japanese picture-book illustration in watercolor, but with BOLD, THICK, DARK ink outlines around every object (like a clear picture book for seniors), and CLEAR, SATURATED colors (not pale). Bright, clean background. Natural, hand-drawn, slightly rounded shapes; not geometric, not flat vector, not photorealistic. CLOSE-UP composition (not a wide landscape): the scene is seen from close, filling the picture. PORTRAIT-ISH composition, about 8:9. The painting fills the entire canvas edge to edge: no white border. No people. Absolutely no text, letters, numbers, logos or symbols anywhere. The MAIN SUBJECT named in the scene is drawn LARGE in the center of the picture. Around it, only a few other objects, each clearly separated with space around it, fully visible.\n",
+  "keep_alt": " Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text.",
+  "keep_remove": " Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object.",
+  "batch": true
+ },
+ "questions": [
+  {
+   "q": 1,
+   "scene": "農家の土間",
+   "level": "やさしい",
+   "go": "右の絵の違いを、3つ探してください。どうぞ。",
+   "prompt": "Scene: close-up of the earthen-floor entrance (doma) of an old farmhouse, wooden pillars, plastered walls, a hearth. CENTER, LARGE (main subject): a stack of three straw rice bales (komedawara). Late autumn (October-November) harvest season only: no summer items such as wind chimes, fans with flowers, goldfish or watermelon. Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests naturally on a shelf, counter, floor or ground, or hangs from a hook. Side objects are about one ninth of the picture width each. Objects: (upper left) a pair of straw sandals hanging on a nail; (upper right) a string of dried persimmons hanging from the eaves; (middle left) a round bamboo winnowing basket leaning on the wall; (middle right) an iron kettle on a small charcoal brazier; (center above the bales) a straw hat hanging on a hook.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "わらじがない",
+     "line": "わらじが、なくなりました。",
+     "box": [
+      315,
+      104,
+      660,
+      716
+     ],
+     "object_w": 330,
+     "src": "2"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "右の干し柿が緑",
+     "line": "右の干し柿が、緑色になりました。",
+     "box": [
+      1500,
+      170,
+      1785,
+      692
+     ],
+     "object_w": 258,
+     "src": "2"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "鉄びんが赤",
+     "line": "鉄びんが、赤くなりました。",
+     "box": [
+      1450,
+      880,
+      1770,
+      1295
+     ],
+     "object_w": 280,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the straw hat hanging on the hook at the top center becomes red; (b) the rightmost string of dried persimmons at the upper right is gone; (c) the black iron kettle on the brazier at the right becomes red; (d) the round bamboo winnowing basket leaning on the wall at the left becomes square.",
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the pair of straw sandals hanging on the nail at the upper left is gone (show the plain wall behind); (b) all the dried persimmons on the strings at the upper right become green."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the straw hat hanging on the hook at the top center becomes red; (b) the rightmost string of dried persimmons at the upper right is gone; (c) the black iron kettle on the brazier at the right becomes red; (d) the round bamboo winnowing basket leaning on the wall at the left becomes square."
+  },
+  {
+   "q": 2,
+   "scene": "あぜ道のお昼",
+   "level": "初級",
+   "go": "では、第2問。どうぞ。",
+   "prompt": "Scene: close-up of a picnic lunch on a narrow path between harvested rice fields in late autumn, cosmos flowers, distant hills, blue sky. CENTER, LARGE (main subject): a bamboo-leaf wrapper with three rice balls (onigiri) on a cloth. Late autumn (October-November) harvest season only: no summer items such as wind chimes, fans with flowers, goldfish or watermelon. Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests naturally on a shelf, counter, floor or ground, or hangs from a hook. Side objects are about one ninth of the picture width each. Objects: (upper left) a red dragonfly flying; (upper right) a few cosmos flowers; (middle left) a straw hat on the grass; (middle right) an aluminum kettle; (center above the rice balls) a cup of green tea.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "コスモスが黄色",
+     "line": "大きなコスモスが、黄色になりました。",
+     "box": [
+      1381,
+      305,
+      1686,
+      559
+     ],
+     "object_w": 240,
+     "src": "2"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "お茶が茶色",
+     "line": "お茶が、茶色になりました。",
+     "box": [
+      800,
+      730,
+      1035,
+      835
+     ],
+     "object_w": 237,
+     "src": "2"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "赤とんぼが増える",
+     "line": "赤とんぼが、1匹ふえました。",
+     "box": [
+      60,
+      1360,
+      292,
+      1578
+     ],
+     "object_w": 230,
+     "src": "p",
+     "context": "秋の田んぼのあぜ道では、赤とんぼが低く飛んでいるのは普通",
+     "short_line": "赤とんぼが、いっぴきふえました。"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the red dragonfly at the upper left becomes blue; (b) the black band of the straw hat at the left becomes red; (c) the silver kettle at the right becomes red; (d) the rightmost rice ball has no seaweed (all white); (e) the pink cosmos flower at the very top right becomes yellow.",
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the large pink cosmos flower at the middle right (the biggest flower, about one third down from the top) becomes yellow; (b) the green tea in the cup becomes brown roasted tea (hojicha)."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the red dragonfly at the upper left becomes blue; (b) the black band of the straw hat at the left becomes red; (c) the silver kettle at the right becomes red; (d) the rightmost rice ball has no seaweed (all white); (e) the pink cosmos flower at the very top right becomes yellow.",
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "src": [
+       345,
+       6,
+       697,
+       300
+      ],
+      "dst": [
+       60,
+       1360
+      ],
+      "width": 230,
+      "mask": "outline",
+      "close": 4
+     }
+    ]
+   },
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   }
+  },
+  {
+   "q": 3,
+   "scene": "はざかけの田んぼ",
+   "level": "初級",
+   "go": "続いて、第3問。どうぞ。",
+   "prompt": "Scene: close-up of a harvested rice paddy in late autumn with stubble, distant hills with autumn leaves, blue sky. CENTER, LARGE (main subject): a wooden drying rack (hazakake) with bundles of golden rice sheaves hanging over the bar. Late autumn (October-November) harvest season only: no summer items such as wind chimes, fans with flowers, goldfish or watermelon. Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests naturally on a shelf, counter, floor or ground, or hangs from a hook. Side objects are about one ninth of the picture width each. Objects: (upper left) a scarecrow with a straw hat; (upper right) a persimmon tree branch with three orange persimmons; (middle left) a woven bamboo basket on the ground; (middle right) a wooden rake leaning on the rack post; (center above the rack) a sparrow sitting on the top bar.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "柿が緑",
+     "line": "柿がひとつ、緑色になりました。",
+     "box": [
+      1514,
+      212,
+      1717,
+      387
+     ],
+     "object_w": 190,
+     "src": "2"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "くまでの柄が赤",
+     "line": "くまでの柄が、赤くなりました。",
+     "box": [
+      1396,
+      814,
+      1586,
+      1513
+     ],
+     "object_w": 190,
+     "src": "2"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "かごに柿",
+     "line": "かごの上に、柿がひとつのりました。",
+     "box": [
+      190,
+      950,
+      382,
+      1125
+     ],
+     "object_w": 190,
+     "src": "p",
+     "context": "収穫した柿を、田んぼのかごに入れて置くのは普通"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the scarecrow's blue shirt at the upper left becomes red; (b) the sparrow sitting on the top bar of the drying rack is gone; (c) the woven bamboo basket at the middle left becomes red; (d) the wooden rake leaning on the rack at the lower right becomes a bamboo broom.",
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the long wooden handle of the rake leaning on the rack at the lower right becomes red (the metal teeth stay the same); (b) the persimmon on the left (the lower of the two at the upper right, next to the branch with leaves) becomes green and unripe."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the scarecrow's blue shirt at the upper left becomes red; (b) the sparrow sitting on the top bar of the drying rack is gone; (c) the woven bamboo basket at the middle left becomes red; (d) the wooden rake leaning on the rack at the lower right becomes a bamboo broom.",
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "src": [
+       1514,
+       212,
+       1717,
+       387
+      ],
+      "circle": [
+       1615,
+       300,
+       90
+      ],
+      "dst": [
+       190,
+       950
+      ],
+      "width": 190
+     }
+    ]
+   },
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   }
+  },
+  {
+   "q": 4,
+   "scene": "秋祭りの神社",
+   "level": "中級",
+   "go": "第4問です。じっくりどうぞ。",
+   "prompt": "Scene: close-up of a village shrine at the autumn harvest festival, wooden shrine hall, ginkgo trees with yellow leaves, stone pavement. CENTER, LARGE (main subject): an offering stand with rice bales, radishes and pumpkins. Late autumn (October-November) harvest season only: no summer items such as wind chimes, fans with flowers, goldfish or watermelon. Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests naturally on a shelf, counter, floor or ground, or hangs from a hook. Side objects are about one ninth of the picture width each. Objects: (upper left) a white paper lantern hanging from the eaves; (upper right) a big festival drum (taiko) on a stand; (middle left) a wooden water bucket with a bamboo ladle; (middle right) a shrine bell with a thick rope; (center above the offerings) a small sacred straw rope with white paper streamers (shimenawa).",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "模様",
+     "label": "紋が赤い丸",
+     "line": "ちょうちんの紋が、赤い丸になりました。",
+     "box": [
+      301,
+      257,
+      457,
+      457
+     ],
+     "object_w": 150,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "鐘が金色",
+     "line": "鐘が、金色になりました。",
+     "box": [
+      1485,
+      1005,
+      1700,
+      1340
+     ],
+     "object_w": 160,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "おけのたがが赤",
+     "line": "おけのたがが、赤くなりました。",
+     "box": [
+      140,
+      1090,
+      390,
+      1420
+     ],
+     "object_w": 240,
+     "src": "p"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the gold crest pattern on the white paper lantern at the upper left becomes a plain red circle; (b) the bronze bell hanging at the right becomes shiny gold; (c) the rightmost small orange pumpkin on the offering stand becomes green; (d) the bamboo ladle on the wooden bucket at the left is gone.",
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the green hoops around the wooden bucket at the left become red."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the gold crest pattern on the white paper lantern at the upper left becomes a plain red circle; (b) the bronze bell hanging at the right becomes shiny gold; (c) the rightmost small orange pumpkin on the offering stand becomes green; (d) the bamboo ladle on the wooden bucket at the left is gone.",
+   "program_ops": {
+    "p": [
+     {
+      "op": "recolor",
+      "box": [
+       140,
+       1090,
+       390,
+       1420
+      ],
+      "keep_hue": [
+       38,
+       110
+      ],
+      "hue": 2,
+      "sat": 1.6,
+      "val": 0.95
+     }
+    ]
+   },
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   }
+  },
+  {
+   "q": 5,
+   "scene": "町のお米屋さん",
+   "level": "上級",
+   "go": "最後の第5問、難問です。どうぞ。",
+   "prompt": "Scene: close-up of the inside of an old Japanese rice shop, wooden shelves, wooden counter, sliding glass door. CENTER, LARGE (main subject): a big wooden barrel full of new white rice with a square wooden measuring box (masu) on top. Late autumn (October-November) harvest season only: no summer items such as wind chimes, fans with flowers, goldfish or watermelon. Spread the listed objects over the whole picture at the given positions, far apart, never clustered, and keep every listed object ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests naturally on a shelf, counter, floor or ground, or hangs from a hook. Side objects are about one ninth of the picture width each. Objects: (upper left) a round wall clock without numbers; (upper right) a small red daruma on the shelf; (middle left) an old balance scale on the counter; (middle right) a wooden abacus on the counter; (center above the barrel) a plain paper bag of rice with no letters.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "入れ替え",
+     "label": "箱が赤い袋",
+     "line": "棚の上の箱が、赤い袋になりました。",
+     "box": [
+      111,
+      377,
+      284,
+      532
+     ],
+     "object_w": 173,
+     "src": "2",
+     "context": "米屋の棚に、米を入れた布の袋が置いてあるのは普通"
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "分銅がない",
+     "line": "はかりの前の分銅が、なくなりました。",
+     "box": [
+      123,
+      1157,
+      351,
+      1297
+     ],
+     "object_w": 200,
+     "src": "2"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "窓の外の木が緑",
+     "line": "窓の外の木が、緑色になりました。",
+     "box": [
+      1650,
+      385,
+      1825,
+      695
+     ],
+     "object_w": 166,
+     "src": "2"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the round wall clock at the upper left becomes square; (b) the small red daruma on the shelf at the upper right becomes blue; (c) the wooden abacus on the counter at the right is gone; (d) the square wooden measuring box on top of the rice becomes red lacquered.",
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the two small metal weights on the counter in front of the balance scale at the left are gone; (b) the small cloth rice sack on the upper shelf at the left (next to the clock) becomes red; (c) the red-and-orange maple tree seen through the window at the right becomes green."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the round wall clock at the upper left becomes square; (b) the small red daruma on the shelf at the upper right becomes blue; (c) the wooden abacus on the counter at the right is gone; (d) the square wooden measuring box on top of the rice becomes red lacquered."
+  }
+ ],
+ "thumbnail": {
+  "question": 1,
+  "big_text": "秋の間違いさがし",
+  "highlight": "間違いさがし",
+  "highlight_color": [
+   255,
+   214,
+   0
+  ],
+  "big_color": [
+   255,
+   255,
+   255
+  ],
+  "band_color": [
+   25,
+   35,
+   70
+  ],
+  "big_size": 132,
+  "sub_text": "3つ見つけられる？全5問",
+  "badges": [
+   [
+    "初級〜上級",
+    [
+     176,
+     62,
+     52
+    ]
+   ]
+  ],
+  "circle_hint": false,
+  "note": "第1回と同じ型（変えた所なし）。左右に同じ絵・上に濃紺の帯で「秋の間違いさがし」・下に難易度と問いかけ。こよみ先生は入れない"
+ },
+ "shorts": [
+  {
+   "question": 2,
+   "answer_gap": 3.3,
+   "note": "1本目：第2問 あぜ道のお昼・初級",
+   "title": "シニアの間違い探し｜あぜ道のおにぎりの1問 #脳トレ #頭の体操"
+  },
+  {
+   "question": 4,
+   "answer_gap": 3.3,
+   "note": "2本目：第4問 秋祭りの神社・中級",
+   "title": "シニアの間違い探し｜秋祭りの神社の1問 #脳トレ #頭の体操"
+  }
+ ]
+}

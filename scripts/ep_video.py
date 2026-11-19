@@ -267,6 +267,17 @@ def draw_band(im, q, t, mode):
     im.paste(layer, (0, 0), layer)
 
 
+def draw_rule_overlay(im, ro, alpha=1.0):
+    """第1問の出題のはじめに、絵の上の中央に「右の絵で 違いを3つ さがそう／1問 90秒」を半透明の札で出す。最後の0.5秒で消える。"""
+    w, h, y0 = 1180, 190, 86
+    layer = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    d = ImageDraw.Draw(layer)
+    d.rounded_rectangle((0, 0, w - 1, h - 1), 36, fill=(255, 250, 238, int(235 * alpha)), outline=(180, 70, 40, int(255 * alpha)), width=6)
+    d.text((w // 2, 72), ro["text"], font=font(76), fill=(59, 47, 37, int(255 * alpha)), anchor="mm")
+    d.text((w // 2, 148), ro.get("sub", ""), font=font(48), fill=(180, 70, 40, int(255 * alpha)), anchor="mm")
+    im.paste(layer, ((W - w) // 2, y0), layer)
+
+
 def answer_boxes(q, side="b"):
     """絵の上での、赤丸の範囲（絵の左上からの画面の座標）。answers.json の circle_a_screen / circle_b_screen。"""
     return [tuple(a[f"circle_{side}_screen"]) for a in CTX["answers"][q]["answers"]]
@@ -338,6 +349,9 @@ def render_question(q, t):
         if h0 is not None and h0 <= t < h0 + 7.0:
             draw_hint(im, q, t - h0)
         draw_band(im, q, t, "solve")
+        ro = plan()["screens"].get("rule_overlay")      # ルールは独立した場面にせず、第1問の絵の上に短い文字で出す（2026-11-20 CEO決定）
+        if ro and q == min(T.Q_START) and t < st + ro["sec"]:
+            draw_rule_overlay(im, ro, min(1.0, (st + ro["sec"] - t) / 0.5))
     else:
         d = ImageDraw.Draw(im)
         shown = []
