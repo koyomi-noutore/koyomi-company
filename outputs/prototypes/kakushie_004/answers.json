@@ -1,0 +1,146 @@
+{
+ "source": "outputs/prototypes/kakushie_003/puzzle.jpg",
+ "image_size": [
+  1856,
+  2088
+ ],
+ "items": [
+  {
+   "name": "柿",
+   "shape": "kaki",
+   "box_px": [
+    1080,
+    109,
+    1496,
+    499
+   ],
+   "visibility": 4,
+   "natural_color": false,
+   "width_pct_of_picture": 22.4
+  },
+  {
+   "name": "どんぐり",
+   "shape": "donguri",
+   "box_px": [
+    234,
+    411,
+    533,
+    839
+   ],
+   "visibility": 4,
+   "natural_color": false,
+   "width_pct_of_picture": 16.1
+  },
+  {
+   "name": "もみじ",
+   "shape": "momiji",
+   "box_px": [
+    1184,
+    1401,
+    1698,
+    1902
+   ],
+   "visibility": 4,
+   "natural_color": false,
+   "width_pct_of_picture": 27.7
+  },
+  {
+   "name": "きのこ",
+   "shape": "kinoko",
+   "box_px": [
+    1171,
+    844,
+    1550,
+    1242
+   ],
+   "visibility": 4,
+   "natural_color": false,
+   "width_pct_of_picture": 20.4
+  },
+  {
+   "name": "栗",
+   "shape": "kuri",
+   "box_px": [
+    239,
+    1823,
+    533,
+    2088
+   ],
+   "visibility": 4,
+   "natural_color": false,
+   "width_pct_of_picture": 15.8
+  }
+ ],
+ "levels": {
+  "初級": {
+   "texture": 0.4,
+   "color": 0.6,
+   "sat": 0.6,
+   "line_keep": 0.85,
+   "line_thr": 35,
+   "shrink": 0.9,
+   "feather": 18,
+   "ring": 40,
+   "band": 60,
+   "texture_mode": "mirror"
+  },
+  "上級": {
+   "texture": 0.6,
+   "color": 0.9,
+   "sat": 0.9,
+   "line_keep": 0.55,
+   "line_thr": 45,
+   "shrink": 0.95,
+   "feather": 22,
+   "ring": 40,
+   "band": 60,
+   "texture_mode": "mirror"
+  }
+ },
+ "texture_from": {
+  "初級": [
+   {
+    "name": "柿",
+    "texture_from": "mirror"
+   },
+   {
+    "name": "どんぐり",
+    "texture_from": "mirror"
+   },
+   {
+    "name": "もみじ",
+    "texture_from": "mirror"
+   },
+   {
+    "name": "きのこ",
+    "texture_from": "mirror"
+   },
+   {
+    "name": "栗",
+    "texture_from": "mirror"
+   }
+  ],
+  "上級": [
+   {
+    "name": "柿",
+    "texture_from": "mirror"
+   },
+   {
+    "name": "どんぐり",
+    "texture_from": "mirror"
+   },
+   {
+    "name": "もみじ",
+    "texture_from": "mirror"
+   },
+   {
+    "name": "きのこ",
+    "texture_from": "mirror"
+   },
+   {
+    "name": "栗",
+    "texture_from": "mirror"
+   }
+  ]
+ }
+}
