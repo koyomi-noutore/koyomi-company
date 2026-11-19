@@ -319,8 +319,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 58,
-   "outside_box_max_distance_px": 7.0,
+   "outside_box_pixels_diff_gt15": 805,
+   "outside_box_max_distance_px": 11.0,
    "answers": [
     {
      "id": 1,
@@ -404,32 +404,32 @@
      "label": "おかめがだるまに",
      "line": "おかめが、だるまになりました。",
      "box_px": [
-      855,
-      515,
-      1060,
-      720
+      850,
+      448,
+      1065,
+      622
      ],
      "box_screen": [
-      442,
-      266,
-      548,
-      372
+      440,
+      232,
+      551,
+      322
      ],
      "circle_a_screen": [
-      442,
-      266,
-      548,
-      372
+      440,
+      232,
+      551,
+      322
      ],
      "circle_b_screen": [
-      442,
-      266,
-      548,
-      372
+      440,
+      232,
+      551,
+      322
      ],
-     "object_w_px": 190,
-     "object_picture_width_pct": 10.24,
-     "object_screen_width_pct": 5.12,
+     "object_w_px": 200,
+     "object_picture_width_pct": 10.78,
+     "object_screen_width_pct": 5.39,
      "in_level_range": true,
      "in_safe_y": true,
      "edit_version": "p",
