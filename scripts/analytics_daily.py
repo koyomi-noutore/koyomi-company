@@ -9,10 +9,13 @@
   departments/analytics/daily/csv/YYYY-MM-DD_videos.csv       動画別の累計
   departments/analytics/daily/csv/YYYY-MM-DD_video_daily.csv  動画別・日別
   departments/analytics/daily/csv/YYYY-MM-DD_traffic.csv      動画別・日別・流入元
+  departments/analytics/daily/csv/YYYY-MM-DD_long_sources.csv 長尺の動画別・流入元別（累計）
 
 - Analytics API の「日」は米国太平洋時間。48時間・7日・28日の区切りも太平洋時間の公開日から数える（表の「公開」は日本時間）。
 - 長尺とショートは長さで分ける（180秒以下＝ショート）。
 - 収益化の4,000時間に数えるのは長尺だけ（直近365日の長尺の総再生時間）。
+- 要約の先頭は「前日公開分の24時間」と「異常（再生0・表示が極端に少ない・Studio書き出しに無い など）」。
+- 長尺は動画ごとに流入元を表にする（long_sources.csv にも保存）。
 - 表示回数・クリック率はAPIに無いので、departments/analytics/studio/ の最新のCEO書き出しCSVから読む。
 - Analytics API が使えないときは、Data API の累計再生数とStudioのCSVだけで要約を作り、冒頭に止まっている理由を書く（終了コード2）。
 - トークンの値は画面にもファイルにも出さない。
@@ -77,7 +80,9 @@ def short_name(title):
         return m.group(1)
     parts = [p for p in title.split("｜") if p]
     name = parts[1] if len(parts) > 1 else title
-    return re.sub(r"のイラスト.*", "", name).strip()[:20]
+    name = re.sub(r"#\S+", "", name)                       # ハッシュタグ
+    name = re.sub(r"(のイラスト|の1問|【).*", "", name)        # 「〜のイラスト全5問【…】」「〜の1問」
+    return name.strip()[:20]
 
 
 def list_videos(token):
@@ -140,8 +145,12 @@ def studio_latest():
                         if vid and vid != "合計":
                             out[vid] = {"imp": row.get("サムネイルのインプレッション", ""),
                                         "ctr": row.get("サムネイルのクリック率 (%)", "")}
-                return f.relative_to(ROOT), out
-    return None, {}
+                try:
+                    when = date.fromisoformat(d.name[:10])
+                except ValueError:
+                    when = None
+                return f.relative_to(ROOT), when, out
+    return None, None, {}
 
 
 # ---------- 集計 ----------
@@ -186,7 +195,7 @@ def main():
     ch_stats, all_videos = list_videos(token)
     videos = [v for v in all_videos if v["privacy"] == "public"]
     hidden = len(all_videos) - len(videos)
-    studio_file, studio = studio_latest()
+    studio_file, studio_date, studio = studio_latest()
 
     blocked = None
     daily, traffic = [], []
@@ -214,80 +223,148 @@ def main():
                      "views_28d": checkpoint(rs, v["published_pt"], 28),
                      "impressions": st.get("imp", ""), "ctr_pct": st.get("ctr", ""), "title": v["title"]})
 
+    by_traffic = defaultdict(lambda: defaultdict(int))
+    for r in traffic:
+        by_traffic[r["video"]][r["insightTrafficSourceType"]] += r["views"]
+    long_src = [{"video": v["id"], "name": v["name"], "published": v["published"].isoformat(),
+                 "data_views": v["data_views"], "source": src, "views": n}
+                for v in videos if v["type"] == "長尺" for src, n in sorted(by_traffic[v["id"]].items(), key=lambda x: -x[1])]
+
     csvdir = OUT / "csv"
     write_csv(csvdir / f"{today}_videos.csv", rows, list(rows[0].keys()) if rows else ["video"])
     write_csv(csvdir / f"{today}_video_daily.csv", daily, ["day", "video", "type"] + METRICS)
     write_csv(csvdir / f"{today}_traffic.csv", traffic,
               ["day", "video", "type", "insightTrafficSourceType", "views", "estimatedMinutesWatched"])
+    write_csv(csvdir / f"{today}_long_sources.csv", long_src,
+              ["video", "name", "published", "data_views", "source", "views"])
+
+    yday = today - timedelta(days=1)
+    row_of = {r["video"]: r for r in rows}
+    imp = lambda r: int(float(r["impressions"])) if r["impressions"] not in ("", None) else None
 
     # ---- 要約 ----
     L = [f"# 毎日の数字 {today}（scripts/analytics_daily.py が自動作成）", ""]
-    L.append(f"- 出典：YouTube Analytics API（{'取得できず' if blocked else f'直近365日・データのある最終日 {last_day}'}）"
-             f"／YouTube Data API（チャンネル全体・累計）／表示回数・クリック率は `{studio_file}`（CEOの書き出し）")
-    L.append(f"- チャンネル全体（Data API）：登録者 {ch_stats.get('subscriberCount')}人、総再生 {int(ch_stats.get('viewCount', 0)):,}。"
-             f"公開中の動画 {len(videos)}本" + (f"（ほかに非公開・限定公開 {hidden}本）" if hidden else ""))
-    L.append("- Analytics API の数字は1〜2日遅れて確定する。今日・昨日の分は少なめに出る。")
+    L.append(f"出典：Analytics API（{'取得できず' if blocked else f'確定している最終日 {last_day}・米国時間'}）／Data API（今の累計）"
+             f"／表示回数・クリック率は `{studio_file}`（{studio_date or '—'} CEO書き出し）。"
+             f"登録者 {ch_stats.get('subscriberCount')}人・公開中 {len(videos)}本" + (f"・非公開等 {hidden}本" if hidden else ""))
     if blocked:
-        L += ["", "> **⚠ Analytics API が使えないため、再生時間・平均視聴・登録・流入元は空欄です。**",
-              f"> 理由：{blocked.code} {blocked.reason}。"
-              + ("Google Cloud のプロジェクトで「YouTube Analytics API」が有効になっていません（CEOの作業：Cloud Console →「APIとサービス」→「ライブラリ」→ YouTube Analytics API →「有効にする」。無料）。"
-                 if blocked.reason == "accessNotConfigured" or "has not been used" in blocked.message else blocked.message),
-              "> 再生数は Data API の累計で代わりに出しています。"]
+        L += ["", f"> **⚠ Analytics API が使えません（{blocked.code} {blocked.reason}）。再生時間・平均視聴・登録・流入元は空欄。**"
+              + ("Cloud Console で YouTube Analytics API を有効にしてください（CEOの作業・無料）。"
+                 if blocked.reason == "accessNotConfigured" or "has not been used" in blocked.message else blocked.message)]
 
-    L += ["", "## 長尺とショート（直近365日）", "| 区分 | 本数 | 再生 | 総再生時間 | 平均視聴時間 | 平均視聴率 | 登録の増減 | 最終日の再生 |",
-          "|---|---|---|---|---|---|---|---|"]
+    # 1. 前日公開分
+    L += ["", f"## 1. 前日（{yday.month}/{yday.day}）公開分の24時間"]
+    ys = [v for v in videos if v["published"] == yday]
+    if ys:
+        L += ["| 区分 | 動画 | 再生（今・Data API） | 初日の再生※ | 平均視聴率※ | 登録※ | 表示回数 | クリック率 |", "|---|---|---|---|---|---|---|---|"]
+        for v in ys:
+            first = [r for r in by_video[v["id"]] if r["day"] == v["published_pt"].isoformat()]
+            r0 = row_of[v["id"]]
+            if first:
+                f0 = summarize(first)
+                a, b, c = f"{f0['views']:,}", f"{f0['avp']:.1f}%", f"{f0['subs']:+d}"
+            else:
+                a = b = c = "未確定"
+            L.append(f"| {v['type']} | {v['name']} | {v['data_views']:,} | {a} | {b} | {c} | {r0['impressions'] or '—'} | {(r0['ctr_pct'] + '%') if r0['ctr_pct'] else '—'} |")
+        L.append("\n※Analytics API の公開日1日分（米国時間）。1〜2日遅れて確定するので、未確定の回は明日以降の要約で埋まる。表示回数・クリック率は次のStudio書き出しまで空欄。")
+    else:
+        L.append("- 前日の公開なし。")
+
+    # 2. 異常
+    alerts = []
+    for v in videos:
+        r = row_of[v["id"]]
+        age = r["age_days"]
+        if age >= 2 and v["data_views"] == 0:
+            alerts.append(f"**再生0**：{v['type']}「{v['name']}」（{v['id']}・公開{age}日目）")
+        elif v["type"] == "長尺" and age >= 4 and by_video[v["id"]]:
+            recent = [x for x in by_video[v["id"]] if x["day"] > (date.fromisoformat(last_day) - timedelta(days=3)).isoformat()] if last_day else []
+            if recent and sum(x["views"] for x in recent) == 0:
+                alerts.append(f"**直近3日の再生0**：長尺「{v['name']}」（{v['id']}）")
+        if v["type"] != "長尺" or not studio_date:
+            continue
+        age_at = (studio_date - v["published"]).days + 1
+        n = imp(r)
+        if n is None and age_at >= 2:
+            alerts.append(f"**Studioの書き出しに無い**：長尺「{v['name']}」（表示回数・クリック率が未確認）")
+        elif n is not None and age_at >= 2 and n < 100:
+            alerts.append(f"**表示が極端に少ない**：長尺「{v['name']}」 表示{n}回（書き出し時点で公開{age_at}日目）")
+        elif n is not None and n >= 100 and r["ctr_pct"] and float(r["ctr_pct"]) < 3:
+            alerts.append(f"クリック率3%未満：長尺「{v['name']}」 {r['ctr_pct']}%（表示{n:,}回。48時間ルールの対象）")
+    if studio_date and (today - studio_date).days >= 7:
+        alerts.append(f"Studioの書き出しが{(today - studio_date).days}日前（{studio_date}）のまま。表示回数・クリック率が古い（CEOの週1回の書き出し待ち）")
+    alerts.sort(key=lambda a: (not a.startswith("**再生0"), not a.startswith("**"), ))  # 再生0 → 太字 → その他
+    L += ["", "## 2. 異常"] + ([f"- {a}" for a in alerts] or ["- なし"])
+
+    # 3. 長尺はどこから来たか
+    week = [v for v in videos if v["type"] == "長尺" and (today - v["published"]).days < 7]
+    cols = [("関連動画", ["RELATED_VIDEO"]), ("ホーム", ["BROWSE"]), ("検索", ["YT_SEARCH"]), ("登録者", ["SUBSCRIBER", "NOTIFICATION"]),
+            ("ショートから", ["SHORTS_CONTENT_LINKS", "SHORTS"]), ("再生リスト", ["PLAYLIST"]), ("チャンネル", ["YT_CHANNEL"]),
+            ("外部・直接", ["EXT_URL", "NO_LINK_OTHER"])]
+    known = {k for _, ks in cols for k in ks}
+    L += ["", "## 3. 長尺はどこから来たか（直近7日に公開した長尺・公開からの累計再生）",
+          "| 動画 | 公開 | 再生（今） | " + " | ".join(c for c, _ in cols) + " | その他 |",
+          "|---|---|---|" + "---|" * (len(cols) + 1)]
+    for v in week:
+        t = by_traffic[v["id"]]
+        if t:
+            cells = [str(sum(t.get(k, 0) for k in ks)) for _, ks in cols] + [str(sum(n for k, n in t.items() if k not in known))]
+        else:
+            cells = ["未集計"] + [""] * len(cols)
+        L.append(f"| {v['name']} | {v['published'].month}/{v['published'].day} | {v['data_views']:,} | " + " | ".join(cells) + " |")
+    if not week:
+        L.append("| （直近7日の長尺なし） |" + " |" * (len(cols) + 3))
+    L.append("\n流入元は Analytics API（確定分のみ）。「再生（今）」は Data API の今の累計なので、流入元の合計より多いことがある。")
+
+    # 4. 長尺とショート・4,000時間
+    L += ["", "## 4. 長尺とショート（直近365日・確定分）", "| 区分 | 本数 | 再生 | 総再生時間 | 平均視聴時間 | 平均視聴率 | 登録 |", "|---|---|---|---|---|---|---|"]
     long_hours = 0.0
     for t in ("長尺", "ショート"):
         vs = [v for v in videos if v["type"] == t]
         rs = [r for r in daily if r["type"] == t]
         if rs:
-            s = summarize(rs)
-            day_views = sum(r["views"] for r in rs if r["day"] == last_day)
-            L.append(f"| {t} | {len(vs)} | {s['views']:,} | {s['hours']:.1f}時間 | {mmss(s['avd'])} | {s['avp']:.1f}% | {s['subs']:+d} | {day_views:,} |")
+            s2 = summarize(rs)
+            L.append(f"| {t} | {len(vs)} | {s2['views']:,} | {s2['hours']:.1f}時間 | {mmss(s2['avd'])} | {s2['avp']:.1f}% | {s2['subs']:+d} |")
             if t == "長尺":
-                long_hours = s["hours"]
+                long_hours = s2["hours"]
         else:
-            L.append(f"| {t} | {len(vs)} | {sum(v['data_views'] for v in vs):,}（Data API） | — | — | — | — | — |")
-
-    pending = [v["name"] for v in videos if not by_video[v["id"]]]
-    if daily and pending:
-        L.append(f"\n上の表は Analytics API にデータが出ている分だけ。まだ出ていない動画（{'、'.join(pending)}）は入っていない（動画別の表に Data API の累計あり）。")
+            L.append(f"| {t} | {len(vs)} | {sum(v['data_views'] for v in vs):,}（Data API） | — | — | — | — |")
     if not blocked:
         weeks = max((GOAL_DATE - today).days / 7, 1)
-        L += ["", "## 収益化の4,000時間（長尺だけ・直近12か月）",
-              f"- 累計 **{long_hours:.1f}時間 / 4,000時間（{long_hours / GOAL_HOURS * 100:.2f}%）**",
-              f"- {GOAL_DATE}までに届くには、残り {GOAL_HOURS - long_hours:,.0f}時間 ÷ {weeks:.1f}週 ＝ **週 {(GOAL_HOURS - long_hours) / weeks:,.0f}時間**",
-              "- ショートの再生時間は4,000時間に入らない（上の表のショート分は別扱い）。"]
+        L.append(f"\n**4,000時間（長尺だけ）：{long_hours:.1f}時間（{long_hours / GOAL_HOURS * 100:.2f}%）**。"
+                 f"{GOAL_DATE.month}/{GOAL_DATE.day}までに届くには週 {(GOAL_HOURS - long_hours) / weeks:,.0f}時間が必要。ショートの再生時間は入らない。")
 
-    L += ["", "## 動画別", "| 区分 | 動画 | 公開 | 経過日 | 再生 | 48時間 | 7日 | 28日 | 再生時間 | 平均視聴 | 平均視聴率 | 登録 | 表示回数※ | クリック率※ |",
-          "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
+    # 5. 動画別（直近28日）
+    L += ["", "## 5. 動画別（直近28日に公開）", "| 区分 | 動画 | 公開 | 再生 | 48時間 | 7日 | 28日 | 再生時間 | 平均視聴 | 平均視聴率 | 登録 | 表示 | CTR |",
+          "|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
     for r in rows:
+        if r["age_days"] > 28:
+            continue
         an = r["views_source"] == "analytics"
-        views = f"{r['views']:,}" + ("" if an else "（Data API）")
-        hours = f"{r['hours']:.2f}時間" if an else "—"
+        views = f"{r['views']:,}" + ("" if an else "（Data）")
+        hours = f"{r['hours']:.2f}h" if an else "—"
         avd = mmss(r["avg_view_sec"]) if an else "—"
         avp = f"{r['avg_view_pct']}%" if an else "—"
         subs = f"{r['subs_net']:+d}" if an else "—"
         ctr = r["ctr_pct"] + "%" if r["ctr_pct"] else "—"
-        L.append(f"| {r['type']} | {r['name']} | {r['published'][5:].replace('-', '/')} | {r['age_days']} | {views} "
+        L.append(f"| {r['type']} | {r['name']} | {r['published'][5:].replace('-', '/')} | {views} "
                  f"| {fmt(r['views_48h'])} | {fmt(r['views_7d'])} | {fmt(r['views_28d'])} "
                  f"| {hours} | {avd} | {avp} | {subs} | {r['impressions'] or '—'} | {ctr} |")
-    L.append(f"\n※表示回数・クリック率はAPIに無いため `{studio_file}` の値（CEO書き出し時点・期間はその書き出しの設定どおり）。空欄はその書き出しに無い動画。"
-             "「48時間」は公開日と翌日の2日分、まだその日数に届いていない動画は「—」。")
+    L.append("\n「再生」は Analytics API の確定分（無い回は Data API の今の累計）。48時間＝公開日と翌日。届いていない時点は「—」。")
 
+    # 6. 流入元（全体）
     if traffic:
-        agg = defaultdict(lambda: [0, 0.0])
+        agg = defaultdict(int)
         for r in traffic:
-            a = agg[(r["type"], r["insightTrafficSourceType"])]
-            a[0] += r["views"]; a[1] += r["estimatedMinutesWatched"]
-        L += ["", "## 流入元（直近365日）", "| 区分 | 流入元 | 再生 | 割合 | 再生時間 |", "|---|---|---|---|---|"]
+            agg[(r["type"], r["insightTrafficSourceType"])] += r["views"]
+        L += ["", "## 6. 流入元（全体・直近365日）"]
         for t in ("長尺", "ショート"):
-            total = sum(v[0] for (tt, _), v in agg.items() if tt == t) or 1
-            for (tt, src), (vw, mins) in sorted(agg.items(), key=lambda x: -x[1][0]):
-                if tt == t and vw:
-                    L.append(f"| {t} | {SOURCE_JA.get(src, src)} | {vw:,} | {vw / total * 100:.0f}% | {mins / 60:.1f}時間 |")
+            total = sum(n for (tt, _), n in agg.items() if tt == t) or 1
+            parts = [f"{SOURCE_JA.get(src, src)} {n:,}（{n / total * 100:.0f}%）"
+                     for (tt, src), n in sorted(agg.items(), key=lambda x: -x[1]) if tt == t and n]
+            L.append(f"- {t}：" + "、".join(parts))
 
-    L += ["", f"数字のCSV：`departments/analytics/daily/csv/{today}_*.csv`（videos・video_daily・traffic）"]
+    L += ["", f"CSV：`departments/analytics/daily/csv/{today}_*.csv`（videos・video_daily・traffic・long_sources）"]
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / f"{today}.md").write_text("\n".join(L) + "\n", encoding="utf-8")
     print(f"書きました: departments/analytics/daily/{today}.md")
