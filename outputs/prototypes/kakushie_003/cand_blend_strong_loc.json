@@ -1,0 +1,116 @@
+{
+ "model": "gemini-3.5-flash",
+ "usage": {
+  "promptTokenCount": 1339,
+  "candidatesTokenCount": 352,
+  "totalTokenCount": 3438,
+  "promptTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1085
+   },
+   {
+    "modality": "TEXT",
+    "tokenCount": 254
+   }
+  ],
+  "thoughtsTokenCount": 1747,
+  "serviceTier": "standard"
+ },
+ "items": [
+  {
+   "label": "柿",
+   "box_2d": [
+    0,
+    617,
+    203,
+    856
+   ],
+   "found": true,
+   "visibility": 4,
+   "natural_color": false,
+   "box_px": [
+    1145,
+    0,
+    1589,
+    424
+   ]
+  },
+  {
+   "label": "どんぐり",
+   "box_2d": [
+    171,
+    134,
+    396,
+    301
+   ],
+   "found": true,
+   "visibility": 4,
+   "natural_color": false,
+   "box_px": [
+    249,
+    357,
+    559,
+    827
+   ]
+  },
+  {
+   "label": "きのこ",
+   "box_2d": [
+    388,
+    668,
+    606,
+    887
+   ],
+   "found": true,
+   "visibility": 4,
+   "natural_color": false,
+   "box_px": [
+    1240,
+    810,
+    1646,
+    1265
+   ]
+  },
+  {
+   "label": "もみじ",
+   "box_2d": [
+    708,
+    654,
+    946,
+    992
+   ],
+   "found": true,
+   "visibility": 4,
+   "natural_color": false,
+   "box_px": [
+    1214,
+    1478,
+    1841,
+    1975
+   ]
+  },
+  {
+   "label": "栗",
+   "box_2d": [
+    908,
+    136,
+    1000,
+    308
+   ],
+   "found": true,
+   "visibility": 4,
+   "natural_color": false,
+   "box_px": [
+    252,
+    1896,
+    572,
+    2088
+   ]
+  },
+  {
+   "label": "text",
+   "found": false
+  }
+ ]
+}

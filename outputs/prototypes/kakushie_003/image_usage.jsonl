@@ -1,0 +1,8 @@
+{"time": "2026-11-19T22:10:35+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 573, "output_tokens": 1543, "total_tokens": 2419, "batch": true, "key": "cand_0"}
+{"time": "2026-11-19T22:10:36+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 573, "output_tokens": 1760, "total_tokens": 2586, "batch": true, "key": "cand_1"}
+{"time": "2026-11-19T22:10:36+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 573, "output_tokens": 1583, "total_tokens": 2517, "batch": true, "key": "cand_2"}
+{"model": "gemini-3.5-flash", "kind": "locate", "key": "cand_0", "promptTokenCount": 1339, "candidatesTokenCount": 353, "totalTokenCount": 2810}
+{"time": "2026-11-19T22:14:16+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 494, "output_tokens": 1322, "total_tokens": 2052, "batch": true, "key": "blend_mid"}
+{"time": "2026-11-19T22:14:16+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 493, "output_tokens": 1313, "total_tokens": 2023, "batch": true, "key": "blend_strong"}
+{"model": "gemini-3.5-flash", "kind": "locate", "key": "cand_blend_mid", "promptTokenCount": 1339, "candidatesTokenCount": 352, "totalTokenCount": 2651}
+{"model": "gemini-3.5-flash", "kind": "locate", "key": "cand_blend_strong", "promptTokenCount": 1339, "candidatesTokenCount": 352, "totalTokenCount": 3438}

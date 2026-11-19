@@ -1,0 +1,15 @@
+Create a HIDDEN-PICTURE PUZZLE (like the classic 'hidden pictures' puzzles in children's magazines): an autumn countryside scene in Japan. Scene: a large tree trunk on the left with rough bark, a big puffy cloud in the sky, a wooden board fence in the middle right, a mossy grey rock at the lower right, a small stream with ripples at the bottom left, fallen leaves on the ground, distant hills. A Japanese picture-book illustration in watercolor with bold dark ink outlines and clear colors, for seniors. PORTRAIT composition, the painting fills the entire canvas edge to edge, no border. No people.
+
+Exactly FIVE objects are hidden inside the scenery. Each one is part of the texture of the surface it sits on:
+1. a persimmon (round fruit with a four-leaf calyx on top) hidden in the big white-and-grey cloud in the upper sky, formed by the cloud's own curling outlines and shading.
+2. a acorn (pointed nut with a scaly cap) hidden in the bark of the large tree trunk on the left, formed by the bark's cracks and knots in the same brown bark colors.
+3. a maple leaf (five-pointed leaf) hidden in the mossy grey rock at the lower right, formed by the rock's cracks and moss edges in the same grey and green colors.
+4. a mushroom (round cap on a short thick stem) hidden in the wooden fence boards in the middle right, formed by the wood grain lines and knots in the same pale wood colors.
+5. a chestnut (shiny nut, round bottom, pointed top) hidden in the ripples of the small stream at the bottom left, formed by the water's wave lines in the same blue and white colors.
+
+RULES for the hidden objects (very important):
+- Every one of the five MUST be present. Its outline must be clear and complete enough that a person who searches carefully can recognize the shape.
+- Draw each hidden object ONLY with the colors and line style of the surface around it, as if the surface naturally forms that shape. NEVER paint it in the object's natural color (no orange persimmon, no brown chestnut on water, no red maple leaf). It must not stand out at first glance.
+- Each hidden object is about 8% to 10% of the picture width. Keep them away from the picture edges (at least 8% inside).
+- Do NOT draw any other persimmons, acorns, maple leaves, mushrooms or chestnuts anywhere in the picture (the fallen leaves on the ground are plain oval leaves).
+- Absolutely NO numbers, letters, labels, arrows, circles, frames or markers anywhere. Do not mark the hidden objects in any way.

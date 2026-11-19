@@ -1,0 +1,13 @@
+[blend_mid]
+Edit this hidden-picture puzzle. Keep the whole scene, composition, colors and every other detail exactly the same. Change ONLY the five hidden objects (the persimmon in the cloud, the acorn in the tree bark, the mushroom on the fence boards, the maple leaf on the rock, the chestnut in the stream) so that they are much better camouflaged and NOT visible at first glance:
+- Remove their solid fill and shading. Let the surrounding texture run straight through each shape: cloud swirls through the persimmon, bark cracks and bark color through the acorn, wood grain lines and plank gaps through the mushroom, moss patches and rock cracks over the maple leaf, water ripple lines through the chestnut.
+- Keep only the OUTLINE of each shape, drawn as a thin line, about as dark as the surrounding texture lines, with a few small gaps, in the same color as the nearby texture lines, so the shape can still be found by a person who searches.
+- Make each shape a little smaller (about 8% of the picture width).
+- Do not add anything else. No numbers, letters, labels, arrows, circles or markers.
+
+[blend_strong]
+Edit this hidden-picture puzzle. Keep the whole scene, composition, colors and every other detail exactly the same. Change ONLY the five hidden objects (the persimmon in the cloud, the acorn in the tree bark, the mushroom on the fence boards, the maple leaf on the rock, the chestnut in the stream) so that they are much better camouflaged and NOT visible at first glance:
+- Remove their solid fill and shading. Let the surrounding texture run straight through each shape: cloud swirls through the persimmon, bark cracks and bark color through the acorn, wood grain lines and plank gaps through the mushroom, moss patches and rock cracks over the maple leaf, water ripple lines through the chestnut.
+- Keep only the OUTLINE of each shape, drawn as a thin, broken line, slightly lighter than the surrounding texture lines, with several gaps, in the same color as the nearby texture lines, so the shape can still be found by a person who searches.
+- Make each shape a little smaller (about 8% of the picture width).
+- Do not add anything else. No numbers, letters, labels, arrows, circles or markers.
