@@ -55,24 +55,24 @@ def veil(im, lines):
 
 
 def header(d, title, sub=None):
-    sz = fit(d, title, 76)
+    sz = fit(d, title, 84)
     text_c(d, (W // 2, 300), title, sz, (255, 255, 255))
     if sub:
-        text_c(d, (W // 2, 390), sub, fit(d, sub, 48), ACCENT)
+        text_c(d, (W // 2, 395), sub, fit(d, sub, 54), ACCENT)
 
 
 def footer(d, remain=None, tap=True):
     if remain is not None:
-        d.rounded_rectangle((W // 2 - 150, 1290, W // 2 + 150, 1390), 40, fill=CARD)
-        text_c(d, (W // 2, 1340), f"のこり {remain}", 56, RED if remain <= 3 else INK)
+        d.rounded_rectangle((W // 2 - 160, 1360, W // 2 + 160, 1450), 40, fill=CARD)
+        text_c(d, (W // 2, 1405), f"のこり {remain}", 56, RED if remain <= 3 else INK)
     if tap:
-        text_c(d, (W // 2, 1450), "わかったら 画面を2回タップしてね", fit(d, "わかったら 画面を2回タップしてね", 50), (255, 255, 255))
+        text_c(d, (W // 2, 1500), "わかったら 画面を2回タップしてね", fit(d, "わかったら 画面を2回タップしてね", 50), (255, 255, 255))
 
 
 # ---------- ① 都道府県の穴埋め ----------
 PREF = {"title": "「は行」で始まる 都道府県", "sub": "□に入る漢字は？",
         "items": [("□□道", "北海道"), ("□庫県", "兵庫県"), ("□井県", "福井県")],
-        "think": 10, "veil": ["「は行」で始まる", "都道府県を 3つ", "□に入る漢字は？"]}
+        "think": 12, "veil": ["「は行」で始まる", "都道府県を 3つ", "□に入る漢字は？"]}
 
 
 def pref_frame(state, remain=None):
@@ -80,30 +80,30 @@ def pref_frame(state, remain=None):
     d = ImageDraw.Draw(im)
     header(d, PREF["title"], PREF["sub"])
     for i, (q, a) in enumerate(PREF["items"]):
-        y = 560 + i * 230
-        d.rounded_rectangle((X0 + 60, y - 95, X1 - 60, y + 95), 36, fill=CARD)
+        y = 640 + i * 270
+        d.rounded_rectangle((X0 + 30, y - 120, X1 - 30, y + 120), 40, fill=CARD)
         shown = a if i < state else q
-        x = W // 2 - (len(shown) * 150) // 2 + 75
+        x = W // 2 - (len(shown) * 200) // 2 + 100
         for k, ch in enumerate(shown):
-            cx = x + k * 150
+            cx = x + k * 200
             if ch == "□":
-                d.rounded_rectangle((cx - 62, y - 62, cx + 62, y + 62), 14, outline=RED, width=8)
+                d.rounded_rectangle((cx - 80, y - 80, cx + 80, y + 80), 16, outline=RED, width=10)
             else:
                 hit = i < state and q[k] == "□"
-                text_c(d, (cx, y), ch, 130, RED if hit else INK)
+                text_c(d, (cx, y), ch, 170, RED if hit else INK)
     return im
 
 
 # ---------- ② ひらがな十字（真ん中に入る1文字） ----------
-CROSS = {"across": "さ□な", "down": "あ□り", "answer": "か", "think": 15,
-         "veil": ["真ん中の □ に", "入る ひらがなは？", "たて・よこ どちらも 言葉に"]}
+CROSS = {"across": "さ□な", "down": "あ□り", "answer": "か", "think": 17,
+         "veil": ["真ん中の □ に", "入る ひらがなは？", "たて・よこ とも 言葉になる"]}
 
 
 def cross_frame(state, remain=None):
     im = Image.new("RGB", (W, H), BG)
     d = ImageDraw.Draw(im)
     header(d, "□に入る ひらがなは？", "たて・よこ どちらも 言葉になります")
-    cs, cx, cy = 230, W // 2, 860
+    cs, cx, cy = 290, W // 2, 860
     cells = [(-1, 0, CROSS["across"][0]), (1, 0, CROSS["across"][2]), (0, -1, CROSS["down"][0]), (0, 1, CROSS["down"][2]), (0, 0, "□")]
     for dx, dy, ch in cells:
         x, y = cx + dx * cs, cy + dy * cs
@@ -111,19 +111,19 @@ def cross_frame(state, remain=None):
                             fill=ACCENT if (ch == "□" and state) else CARD)
         if ch == "□":
             if state:
-                text_c(d, (x, y), CROSS["answer"], 170, RED)
+                text_c(d, (x, y), CROSS["answer"], 210, RED)
             else:
-                d.rounded_rectangle((x - 70, y - 70, x + 70, y + 70), 14, outline=RED, width=8)
+                d.rounded_rectangle((x - 90, y - 90, x + 90, y + 90), 16, outline=RED, width=10)
         else:
-            text_c(d, (x, y), ch, 170, INK)
+            text_c(d, (x, y), ch, 210, INK)
     if state:
         w1, w2 = CROSS["across"].replace("□", CROSS["answer"]), CROSS["down"].replace("□", CROSS["answer"])
-        text_c(d, (W // 2, 1190), f"よこ：{w1}　たて：{w2}", fit(d, f"よこ：{w1}　たて：{w2}", 64), ACCENT)
+        text_c(d, (W // 2, 1300), f"よこ：{w1}　たて：{w2}", fit(d, f"よこ：{w1}　たて：{w2}", 64), ACCENT)
     return im
 
 
 # ---------- ③ 漢字の間違い探し（左右、違いは2つ） ----------
-KANJI = {"word": "姫路城", "rows": 7, "diffs": {(2, 2): "域", (5, 1): "略"}, "think": 20,
+KANJI = {"word": "姫路城", "rows": 6, "diffs": {(2, 2): "域", (5, 1): "略"}, "think": 20,
          "veil": ["左と右で", "ちがう漢字が 2つ", "見つけられますか？"]}
 
 
@@ -131,21 +131,21 @@ def kanji_frame(state, remain=None):
     im = Image.new("RGB", (W, H), BG)
     d = ImageDraw.Draw(im)
     header(d, "左と右で ちがう漢字は？", "ちがいは 2つ")
-    cw, ch = 128, 118
-    panels = [(X0 + 10, False), (W // 2 + 15, True)]
+    cw, ch = 140, 138
+    panels = [(W // 2 - 455, False), (W // 2 + 15, True)]
     for px, right in panels:
         pw = cw * 3 + 20
-        d.rounded_rectangle((px, 470, px + pw, 470 + KANJI["rows"] * ch + 30), 24, fill=CARD)
+        d.rounded_rectangle((px, 450, px + pw, 450 + KANJI["rows"] * ch + 30), 24, fill=CARD)
         for r in range(KANJI["rows"]):
             for c in range(3):
                 s = KANJI["diffs"].get((r, c), KANJI["word"][c]) if right else KANJI["word"][c]
-                x, y = px + 10 + cw * c + cw // 2, 485 + ch * r + ch // 2
-                text_c(d, (x, y), s, 104, INK)
+                x, y = px + 10 + cw * c + cw // 2, 465 + ch * r + ch // 2
+                text_c(d, (x, y), s, 124, INK)
                 if right and (r, c) in KANJI["diffs"] and state > list(KANJI["diffs"]).index((r, c)):
-                    d.ellipse((x - 66, y - 66, x + 66, y + 66), outline=RED, width=10)
+                    d.ellipse((x - 76, y - 76, x + 76, y + 76), outline=RED, width=10)
     if state >= 2:
         ans = "　".join(f"{KANJI['word'][c]}→{v}" for (r, c), v in KANJI["diffs"].items())
-        text_c(d, (W // 2, 1395), ans, 60, ACCENT)
+        text_c(d, (W // 2, 1420), ans, 64, ACCENT)
     return im
 
 
@@ -159,7 +159,7 @@ def build(kind, out):
     seq.append((veil(q0, [(s, 96 if i < 2 else 72, (255, 255, 255) if i < 2 else ACCENT) for i, s in enumerate(cfg["veil"])]), 4.0))
     for s in range(cfg["think"], 0, -1):
         im = frame(0); footer(ImageDraw.Draw(im), s); seq.append((im, 1.0))
-    im = frame(0); d = ImageDraw.Draw(im); text_c(d, (W // 2, 1340), "答えです", 72, ACCENT); seq.append((im, 1.5))
+    im = frame(0); d = ImageDraw.Draw(im); text_c(d, (W // 2, 1405), "答えです", 72, ACCENT); seq.append((im, 1.5))
     for k in range(1, n_ans + 1):
         im = frame(k); footer(ImageDraw.Draw(im), None, tap=False)
         seq.append((im, 2.5 if k < n_ans else 4.0))
