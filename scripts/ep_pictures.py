@@ -33,7 +33,8 @@ STYLE = _I["style"]
 # 背景も画面いっぱいに描く（concept.md「第10回からの改善」2026-11-18 夜）。白い余白の多い絵・物が宙に浮く配置にしない
 BACKGROUND_RULE = (" Paint the background of the scene to fill the whole picture (walls, floor, ground, windows, shelves, sky): "
                    "do not leave large blank white areas, and no object should float in empty space; every object rests on a "
-                   "table, floor, shelf, ground or hangs from something. ")
+                   "table, floor, shelf, ground or hangs from something. Large objects on stands or legs (drums, barrels, tables, stands) "
+                   "stand on the ground or floor with their legs touching it; nothing floats in the air except flying birds or insects. ")   # 2026-11-20 第12回 宙に浮いた太鼓
 STYLE = STYLE.rstrip() + BACKGROUND_RULE
 KEEP_ALT, KEEP_REMOVE = _I["keep_alt"], _I["keep_remove"]
 _Q = questions()
