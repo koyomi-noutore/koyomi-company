@@ -1,7 +1,7 @@
 {
- "video_id": "u76bCok9aEY",
- "url": "https://youtu.be/u76bCok9aEY",
- "studio": "https://studio.youtube.com/video/u76bCok9aEY/edit",
+ "video_id": "E1VsWEx6a_8",
+ "url": "https://youtu.be/E1VsWEx6a_8",
+ "studio": "https://studio.youtube.com/video/E1VsWEx6a_8/edit",
  "privacy": "private",
  "title": "【間違い探し】シニアの脳トレ・頭の体操｜秋のはざかけ全5問",
  "thumbnail": true,
@@ -10,5 +10,6 @@
  "playlists": [
   "間違い探し｜毎日の脳トレ",
   "秋の間違い探し"
- ]
+ ],
+ "replaces": "u76bCok9aEY（第4問の太鼓が宙に浮いた版。使わない）"
 }

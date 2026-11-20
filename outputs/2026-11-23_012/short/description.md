@@ -1,6 +1,6 @@
 # 012 ショート1 投稿用メタデータ（第2問 あぜ道のお昼）
 
-- 長尺：https://youtu.be/u76bCok9aEY（関連動画はCEOがStudioで設定する。APIでは設定できない）
+- 長尺：https://youtu.be/E1VsWEx6a_8（関連動画はCEOがStudioで設定する。APIでは設定できない）
 
 ## タイトル
 ```
@@ -13,7 +13,7 @@
 
 続きの問題は長い動画で（全5問）
 【間違い探し】シニアの脳トレ・頭の体操｜秋のはざかけ全5問
-https://youtu.be/u76bCok9aEY
+https://youtu.be/E1VsWEx6a_8
 
 こよみ先生のまいにち脳トレ：毎日朝8時半に新しい問題をお届けします。
 
