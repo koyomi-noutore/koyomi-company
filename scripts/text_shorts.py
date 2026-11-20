@@ -118,7 +118,7 @@ def cross_frame(state, remain=None):
             text_c(d, (x, y), ch, 210, INK)
     if state:
         w1, w2 = CROSS["across"].replace("□", CROSS["answer"]), CROSS["down"].replace("□", CROSS["answer"])
-        text_c(d, (W // 2, 1300), f"よこ：{w1}　たて：{w2}", fit(d, f"よこ：{w1}　たて：{w2}", 64), ACCENT)
+        text_c(d, (W // 2, 1345), f"よこ：{w1}　たて：{w2}", fit(d, f"よこ：{w1}　たて：{w2}", 64), ACCENT)
     return im
 
 
@@ -131,8 +131,8 @@ def kanji_frame(state, remain=None):
     im = Image.new("RGB", (W, H), BG)
     d = ImageDraw.Draw(im)
     header(d, "左と右で ちがう漢字は？", "ちがいは 2つ")
-    cw, ch = 140, 138
-    panels = [(W // 2 - 455, False), (W // 2 + 15, True)]
+    cw, ch = 132, 138
+    panels = [(W // 2 - 430, False), (W // 2 + 10, True)]
     for px, right in panels:
         pw = cw * 3 + 20
         d.rounded_rectangle((px, 450, px + pw, 450 + KANJI["rows"] * ch + 30), 24, fill=CARD)
@@ -140,7 +140,7 @@ def kanji_frame(state, remain=None):
             for c in range(3):
                 s = KANJI["diffs"].get((r, c), KANJI["word"][c]) if right else KANJI["word"][c]
                 x, y = px + 10 + cw * c + cw // 2, 465 + ch * r + ch // 2
-                text_c(d, (x, y), s, 124, INK)
+                text_c(d, (x, y), s, 116, INK)
                 if right and (r, c) in KANJI["diffs"] and state > list(KANJI["diffs"]).index((r, c)):
                     d.ellipse((x - 76, y - 76, x + 76, y + 76), outline=RED, width=10)
     if state >= 2:
@@ -165,7 +165,7 @@ def build(kind, out):
         seq.append((im, 2.5 if k < n_ans else 4.0))
     last = frame(n_ans)
     seq.append((veil(last, [("答えは コメントでも", 88, (255, 255, 255)), ("教えてね", 88, (255, 255, 255)),
-                            ("わかったら 画面を2回タップ", 64, ACCENT)]), 5.0))
+                            ("わかったら 画面を2回タップしてね", 60, ACCENT)]), 5.0))
     tmp = out / f"_{kind}"; tmp.mkdir(parents=True, exist_ok=True)
     lst = []
     for i, (im, t) in enumerate(seq):
