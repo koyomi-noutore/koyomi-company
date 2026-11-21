@@ -17,6 +17,8 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 sys.path.insert(0, str(Path(__file__).parent))
+import os
+os.environ.setdefault("KOYOMI_EPISODE_DIR", str(Path(__file__).resolve().parent.parent / "outputs/2026-11-23_012"))   # 声の設定（こよみ先生の声・速さ）と音の部品を第12回の台本から借りる
 
 W, H, FPS = 1080, 1920, 30
 FONT = Path.home() / ".cache/koyomi/fonts/package/900Black/NotoSansJP_900Black.ttf"
@@ -124,7 +126,7 @@ def cross_frame(state, remain=None):
 
 
 # ---------- ③ 漢字の間違い探し（左右、違いは2つ） ----------
-KANJI = {"word": "姫路城", "rows": 6, "diffs": {(2, 2): "域", (5, 1): "略"}, "think": 20,
+KANJI = {"word": "姫路城", "rows": 6, "diffs": {(2, 2): "域", (5, 1): "略"}, "think": 19,
          "veil": ["左と右で", "ちがう漢字が 2つ", "見つけられますか？"]}
 
 
@@ -157,7 +159,7 @@ LINES = {
               "ans": [("答えは「か」です。さかなと、あかりです。", "こたえは、かです。さかなと、あかりです。")]},
     "kanji": {"intro": ("左と右で、違う漢字が2つあります。見つけられますか。",
                         "ひだりとみぎで、ちがうかんじが、ふたつあります。みつけられますか。"),
-              "ans": [("3行目の「城」が「域」に。", "さんぎょうめの、しろが、いきに。"), ("6行目の「路」が「略」になっていました。", "ろくぎょうめの、ろが、りゃくに、なっていました。")]},
+              "ans": [("3行目、お城の「城」が、区域の「域」に。", "さんぎょうめ、おしろの、しろが、くいきの、いきに。"), ("6行目、路地の「路」が、省略の「略」になっていました。", "ろくぎょうめ、ろじの、ろが、しょうりゃくの、りゃくに、なっていました。")]},
 }
 TAP = ("わかったら、画面を2回タップしてくださいね。", "わかったら、がめんを、にかいタップしてくださいね。")
 ANS0 = ("答えです。", "こたえです。")
@@ -247,13 +249,69 @@ def voice(kind, key, vt):
 KINDS = {"pref": (PREF, pref_frame, len(PREF["items"])), "cross": (CROSS, cross_frame, 1), "kanji": (KANJI, kanji_frame, 2)}
 
 
+def mix_audio(voices, ev, total, path):
+    """音は間違い探しのショート（scripts/ep_short.py の audio）と同じ部品・同じ鳴らし方（2026-11-21 CEO：新しい音は足さない）。
+    0秒のピンポン、BGM（考える時間は0.7倍）、残り5〜1秒のカウント音、答えの前のチャイム、答えごとのポン、最後のチャイム。
+    声はセリフごとに大きさをそろえ、話している間はBGMを下げる。"""
+    import wave
+    import numpy as np
+    import ep_audio as A
+    from ep_short import VOICE_RMS_DB
+    SR = A.SR
+    n = int(total * SR); tt = np.arange(n) / SR
+
+    def put(track, x, at):
+        s0 = int(at * SR); e = min(n, s0 + len(x)); track[s0:e] += x[:e - s0]
+    vo = np.zeros(n)
+    for w, at, _, _ in voices:
+        x = A.read_wav(w)
+        x = x * (10 ** (VOICE_RMS_DB / 20) / (np.sqrt(np.mean(x[np.abs(x) > 0.01] ** 2)) + 1e-9))
+        put(vo, np.clip(x, -0.9, 0.9), at)
+    vo *= 0.6 / max(np.abs(vo).max(), 1e-9)
+    sfx = np.zeros(n)
+    put(sfx, A.chime((79, 84, 88), 0.18), 0.0)
+    for k in range(5):
+        put(sfx, A.tick(), ev["solve_end"] - 5 + k)
+    put(sfx, A.chime((84, 79), 0.25), ev["solve_end"])
+    for at in ev.get("pon", []):
+        put(sfx, A.pon(), at)
+    put(sfx, A.chime((84, 88), 0.25, 0.16), ev["end_at"])
+    music = A.bgm()
+    music = np.tile(music, int(np.ceil(n / len(music))))[:n]
+    act = np.convolve((np.abs(vo) > 0.01).astype(float), np.ones(int(0.3 * SR)) / int(0.3 * SR), mode="same") > 0.02
+    duck = np.convolve(np.where(act, 0.45, 1.0), np.ones(int(0.15 * SR)) / int(0.15 * SR), mode="same")
+    gain = np.where(tt < ev["solve_end"], 0.7, 1.0)
+    fade = np.clip(np.minimum(tt / 0.3, (total - tt) / 1.5), 0, 1)
+    mix = vo + sfx + music * gain * duck * fade
+    mix *= min(1.0, 0.95 / np.abs(mix).max())
+    st = np.repeat((mix * 32767).astype(np.int16)[:, None], 2, axis=1)
+    with wave.open(str(path), "wb") as wv:
+        wv.setnchannels(2); wv.setsampwidth(2); wv.setframerate(SR); wv.writeframes(st.tobytes())
+
+
+def readings_check(kind, voices, out):
+    """字幕の文と、声に渡した文の対照表（漢字が残っていないかも書く）。"""
+    import re
+    p = out / "readings_check.md"
+    head = "# 読みの対照表（字幕の文 → 声に渡した文）\n\n漢字が声の文に残っていたら「漢字あり」。声の文はひらがなとカタカナだけにする。\n"
+    txt = p.read_text(encoding="utf-8") if p.exists() else head
+    txt = re.sub(rf"\n## {kind}\n.*?(?=\n## |\Z)", "", txt, flags=re.S)
+    rows = [f"\n## {kind}\n| セリフ | 字幕 | 声に渡した文 | 確認 |\n|---|---|---|---|"]
+    for _, at, key, (sub, vt) in voices:
+        bad = re.findall(r"[\u4e00-\u9fff]", vt)
+        rows.append(f"| {key}（{at:.1f}秒） | {sub} | {vt} | {'漢字あり：' + ''.join(bad) if bad else 'OK'} |")
+    p.write_text(txt.rstrip() + "\n" + "\n".join(rows) + "\n", encoding="utf-8")
+
+
 def build(kind, out):
     cfg, frame, n_ans = KINDS[kind]
     L = LINES[kind]
     seq, voices, t = [], [], 0.0     # seq：(画像, 秒)、voices：(声のファイル, 開始秒)
 
+    ev = {}                          # 効果音の時刻（間違い探しのショートと同じ鳴らし方）
+
     def say(key, line):
-        w, dur = voice(kind, key, line[1]); voices.append((w, t + 0.3)); return dur + 0.3
+        w, dur = voice(kind, key, line[1]); voices.append((w, t + 0.3, key, line)); return dur + 0.3
 
     # 1. 暗い幕＋問題文（0:00 から出ている＝サムネ）
     d_intro = say("intro", L["intro"])
@@ -264,15 +322,18 @@ def build(kind, out):
     for s_ in range(cfg["think"], 0, -1):
         seq.append((timer(speaker(frame(0), "think" if s_ < cfg["think"] - 3 else "smile", TAP[0]), s_), 1.0)); t += 1.0
     # 3. 答え
+    ev["solve_end"] = t
     d0 = say("ans0", ANS0)
     seq.append((speaker(frame(0), "surprise", ANS0[0]), max(1.5, d0 + 0.2))); t += seq[-1][1]
     per = max(1, len(L["ans"]) // n_ans) if n_ans >= len(L["ans"]) else 1
     for k in range(1, n_ans + 1):
         line = L["ans"][min(k - 1, len(L["ans"]) - 1)] if n_ans == len(L["ans"]) else (L["ans"][0] if k == 1 else None)
+        ev.setdefault("pon", []).append(t + 0.3)
         dk = say(f"ans{k}", line) if line else 0
         last = k == n_ans
         seq.append((speaker(frame(k), "yay" if last else "smile", line[0] if line else L["ans"][0][0]), max(2.5, dk + 0.4) + (1.0 if last else 0))); t += seq[-1][1]
     # 4. 最後：暗い幕＋「左下をクリック」と矢印（10コマ/秒で矢印を動かす）
+    ev["end_at"] = t
     dc = say("cta", CTA)
     end = max(5.0, dc + 1.0)
     base = veil(frame(n_ans), [("ほかの脳トレにも", 100, (255, 255, 255)), ("挑戦！", 110, (255, 255, 255)), ("左下をクリック", 120, ACCENT)])
@@ -286,13 +347,11 @@ def build(kind, out):
     for i, (im, dt) in enumerate(seq):
         p = tmp / f"{i:03d}.png"; im.save(p); lst.append(f"file '{p}'\nduration {dt}\n")
     (tmp / "list.txt").write_text("".join(lst) + f"file '{tmp / f'{len(seq) - 1:03d}.png'}'\n", encoding="utf-8")
-    # 音：声を時刻に置いて重ね、大きさをそろえる
-    ins, flt = [], []
-    for i, (w, at) in enumerate(voices):
-        ins += ["-i", str(w)]; flt.append(f"[{i + 1}]adelay={int(at * 1000)}|{int(at * 1000)},aformat=channel_layouts=stereo[v{i}]")
-    mix = ";".join(flt) + ";" + "".join(f"[v{i}]" for i in range(len(voices))) + f"amix=inputs={len(voices)}:normalize=0,apad,atrim=0:{total:.2f},loudnorm=I=-16:TP=-1.5[a]"
-    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(tmp / "list.txt"), *ins,
-                    "-filter_complex", mix, "-map", "0:v", "-map", "[a]", "-vf", f"fps={FPS},format=yuv420p",
+    mix_wav = tmp / "mix.wav"
+    mix_audio(voices, ev, total, mix_wav)
+    readings_check(kind, voices, out)
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(tmp / "list.txt"), "-i", str(mix_wav),
+                    "-map", "0:v", "-map", "1:a", "-vf", f"fps={FPS},format=yuv420p",
                     "-c:v", "libx264", "-crf", "20", "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-t", f"{total:.2f}",
                     "-movflags", "+faststart", str(out / f"{kind}.mp4")], check=True)
     idx = [0, 1, len(seq) - int(end * 10) - 1, len(seq) - 3]
