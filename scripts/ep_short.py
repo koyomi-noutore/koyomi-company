@@ -169,8 +169,9 @@ def audio(ep, work):
             put(sfx, A.pon(), v["start"])
     put(sfx, A.chime((84, 88), 0.25, 0.16), end_at)
     music = A.bgm()[:n]
-    act = np.convolve((np.abs(vo) > 0.01).astype(float), np.ones(int(0.3 * SR)) / int(0.3 * SR), mode="same") > 0.02
-    duck = np.convolve(np.where(act, 0.45, 1.0), np.ones(int(0.15 * SR)) / int(0.15 * SR), mode="same")
+    from scipy.ndimage import uniform_filter1d   # np.convolve の移動平均は遅い（2026-11-22）。同じ移動平均を速く計算する
+    act = uniform_filter1d((np.abs(vo) > 0.01).astype(float), int(0.3 * SR), mode="constant") > 0.02
+    duck = uniform_filter1d(np.where(act, 0.45, 1.0), int(0.15 * SR), mode="nearest")
     gain = np.where(tt < c["solve"], 0.7, 1.0)
     fade = np.clip(np.minimum(tt / 0.3, (total - tt) / 1.5), 0, 1)
     mix = vo + sfx + music * gain * duck * fade
