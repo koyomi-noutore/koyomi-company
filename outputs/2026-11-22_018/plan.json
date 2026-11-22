@@ -283,8 +283,12 @@
  },
  "readings": [
   [
-   "鍋の食卓",
-   "なべのしょくたく"
+   "冬の台所の小物棚",
+   "ふゆのだいどころのこものだな"
+  ],
+  [
+   "冬の食卓の小鉢",
+   "ふゆのしょくたくのこばち"
   ],
   [
    "鍋の材料",
@@ -293,10 +297,6 @@
   [
    "こたつで鍋",
    "こたつでなべ"
-  ],
-  [
-   "鍋の小皿",
-   "なべのこざら"
   ],
   [
    "台所の棚",
@@ -1044,10 +1044,10 @@
  "questions": [
   {
    "q": 1,
-   "scene": "鍋の食卓",
+   "scene": "冬の台所の小物棚",
    "level": "やさしい",
    "go": "右の絵の違いを、3つ探してください。どうぞ。",
-   "prompt": "Scene: close-up of a family dinner table in winter with a big clay pot (donabe) of hot pot steaming on a portable burner, a window with snow. CENTER, LARGE (main subject): the steaming clay pot of hot pot. Winter only, with snow or cold: no Christmas, New Year's Eve or other dated holiday items, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one tenth of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. Objects: (upper left, on the table) a bowl of rice; (upper right, on the table) a small teapot; (middle left, on the table) a plate of sliced meat; (middle right, on the table) a plate of vegetables; (lower center, on the table) a ladle on a small plate.",
+   "prompt": "Scene: close-up of plain wooden shelves in a Japanese kitchen in winter, a small window with snow, a plain wall. CENTER, LARGE (main subject): a big clay pot (donabe) on the middle shelf. Winter only, with snow or cold: no Christmas, New Year's Eve or other dated holiday items, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on a shelf or table; nothing floats. Each listed object is about one twentieth, TINY of the picture width, with plenty of empty space around it. Each listed object has one clear solid color. Absolutely NO letters, labels, tags or writing anywhere. Objects: (upper left, on the top shelf) a tiny white sake cup; (upper right, on the top shelf) a tiny red daruma; (middle left, on the middle shelf) a tiny blue chopstick rest; (middle right, on the middle shelf) a tiny yellow citron (yuzu); (lower left, on the bottom shelf) a tiny green teacup; (lower right, on the bottom shelf) a tiny brown wooden spoon.",
    "answers_intro": "答えです。",
    "retries": {},
    "diffs": [],
@@ -1058,10 +1058,8 @@
     1856,
     2088
    ],
-   "edit_prompts": {
-    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the bowl of rice at the upper left becomes red; (b) the small teapot at the upper right becomes red; (c) the plate of sliced meat becomes blue; (d) the plate of vegetables at the right becomes yellow; (e) the ladle becomes black."
-   },
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the bowl of rice at the upper left becomes red; (b) the small teapot at the upper right becomes red; (c) the plate of sliced meat becomes blue; (d) the plate of vegetables at the right becomes yellow; (e) the ladle becomes black."
+   "edit_prompts": {},
+   "edit_prompt": ""
   },
   {
    "q": 2,
@@ -1107,10 +1105,10 @@
   },
   {
    "q": 4,
-   "scene": "鍋の小皿",
+   "scene": "冬の食卓の小鉢",
    "level": "中級",
    "go": "第4問です。じっくりどうぞ。",
-   "prompt": "Scene: close-up of the side of a hot pot table in winter, many small dishes, a window with falling snow. CENTER, LARGE (main subject): a plate of thinly sliced fish for hot pot. Winter only, with snow or cold: no Christmas, New Year's Eve or other dated holiday items, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one fourteenth, VERY SMALL of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. Objects: (upper left) a small dish of grated radish; (upper right) a small cup of hot sake; (middle left) a small dish of ponzu sauce; (middle right) a small dish of chopped green onions; (lower left) a pair of chopsticks on a chopstick rest; (lower right) a small bowl of rice.",
+   "prompt": "Scene: close-up of a wooden dining table in winter, plain wooden wall, a window with falling snow. CENTER, LARGE (main subject): a clay pot of hot pot with steam on a trivet. Winter only, with snow or cold: no Christmas, New Year's Eve or other dated holiday items, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on a shelf or table; nothing floats. Each listed object is about one twelfth, SMALL of the picture width, with plenty of empty space around it. Each listed object has one clear solid color. Absolutely NO letters, labels, tags or writing anywhere. Objects: (upper left) a small red lacquered bowl; (upper right) a small white sake bottle; (middle left) a small plain blue plate; (middle right) a small yellow citron (yuzu) on a white dish; (lower left) a small green teacup; (lower right) a small wooden ladle on a small white plate.",
    "answers_intro": "答えです。",
    "retries": {},
    "diffs": [],
@@ -1121,10 +1119,8 @@
     1856,
     2088
    ],
-   "edit_prompts": {
-    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small dish of grated radish becomes red; (b) the small cup of hot sake becomes blue; (c) the small dish of ponzu sauce becomes green; (d) the small dish of chopped green onions becomes red; (e) the chopstick rest becomes red."
-   },
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small dish of grated radish becomes red; (b) the small cup of hot sake becomes blue; (c) the small dish of ponzu sauce becomes green; (d) the small dish of chopped green onions becomes red; (e) the chopstick rest becomes red."
+   "edit_prompts": {},
+   "edit_prompt": ""
   },
   {
    "q": 5,
