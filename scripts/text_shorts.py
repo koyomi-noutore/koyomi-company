@@ -76,9 +76,9 @@ def footer(d, remain=None, tap=True):
 
 
 # ---------- ① 都道府県の穴埋め ----------
-PREF = {"title": "「は行」で始まる 都道府県", "sub": "□に入る漢字は？",
+PREF = {"title": "「は行」で始まる 都道府県", "sub": "□にあてはまる漢字は？",
         "items": [("□□道", "北海道"), ("□庫県", "兵庫県"), ("□井県", "福井県")],
-        "think": 12, "veil": ["「は行」で始まる", "都道府県の □ に", "入る漢字は？"]}
+        "think": 12, "veil": ["「は行」で始まる", "都道府県の □ に", "あてはまる漢字は？"]}
 
 
 def pref_frame(state, remain=None):
@@ -102,13 +102,13 @@ def pref_frame(state, remain=None):
 
 # ---------- ② ひらがな十字（真ん中に入る1文字） ----------
 CROSS = {"across": "さ□な", "down": "あ□り", "answer": "か", "think": 17,
-         "veil": ["真ん中の □ に", "入る ひらがなは？", "たて・よこ とも 言葉になる"]}
+         "veil": ["真ん中の □ に", "あてはまる ひらがなは？", "たて・よこ とも 言葉になる"]}
 
 
 def cross_frame(state, remain=None):
     im = Image.new("RGB", (W, H), BG)
     d = ImageDraw.Draw(im)
-    header(d, "□に入る ひらがなは？", "たて・よこ どちらも 言葉になります")
+    header(d, "□にあてはまる ひらがなは？", "たて・よこ どちらも 言葉になります")
     cs, cx, cy = 290, W // 2, 860
     cells = [(-1, 0, CROSS["across"][0]), (1, 0, CROSS["across"][2]), (0, -1, CROSS["down"][0]), (0, 1, CROSS["down"][2]), (0, 0, "□")]
     for dx, dy, ch in cells:
@@ -151,11 +151,11 @@ def kanji_frame(state, remain=None):
 
 # ---------- 声（こよみ先生・ですます調）。字幕＝吹き出しの文、声＝ひらがなにした文 ----------
 LINES = {
-    "pref": {"intro": ("「は行」の都道府県です。□に入る漢字は？",
-                       "はぎょうの、とどうふけんです。しかくにはいるかんじは？"),
+    "pref": {"intro": ("「は行」の都道府県です。□にあてはまる漢字は？",
+                       "はぎょうの、とどうふけんです。しかくにあてはまるかんじは？"),
              "ans": [("北海道です。", "ほっかいどうです。"), ("兵庫県です。", "ひょうごけんです。"), ("福井県です。", "ふくいけんです。")]},
-    "cross": {"intro": ("真ん中に入る、ひらがなは？",
-                        "まんなかにはいる、ひらがなは？"),
+    "cross": {"intro": ("真ん中にあてはまる、ひらがなは？",
+                        "まんなかにあてはまる、ひらがなは？"),
               "ans": [("答えは「か」です。さかなと、あかりです。", "こたえは、かです。さかなと、あかりです。")]},
     "kanji": {"intro": ("違う漢字が、2つあります。",
                         "ちがうかんじが、ふたつあります。"),
@@ -237,6 +237,10 @@ def voice(kind, key, vt):
     import json, os, wave
     vd = WORK / "voice"; vd.mkdir(parents=True, exist_ok=True)
     wav, meta = vd / f"{kind}_{key}.wav", vd / f"{kind}_{key}.json"
+    from ep_timeline import BAD_SPLITS
+    bad = [b for b in BAD_SPLITS if b in vt]
+    if bad:   # 2026-11-22：「にはいる」が「には・いる」と読まれた。声を作る前に止める
+        raise SystemExit(f"声に渡す文に {bad} がある（{kind}/{key}：{vt}）。「あてはまる」に言い換える")
     if not (wav.exists() and meta.exists() and json.loads(meta.read_text(encoding="utf-8"))["voice_text"] == vt):
         os.environ.setdefault("KOYOMI_EPISODE_DIR", str(Path(__file__).resolve().parent.parent / "outputs/2026-11-23_012"))
         import ep_voice as V

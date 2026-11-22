@@ -116,6 +116,9 @@ def sentences(t):
     return [x.strip() for x in SENT.findall(t) if x.strip(" 、。！？")]
 
 
+BAD_SPLITS = ("にはいる", "にいる")
+
+
 def voice_problems():
     """読み（漢字の残り）と間（文の数・詰まり）の問題を一覧にする。"""
     P = []
@@ -124,6 +127,9 @@ def voice_problems():
         k = KANJI.findall(vt)
         if k:
             P.append(f"{lid}：声に渡す文に漢字が残っている {''.join(k)}（readings か voice_override に読みを足す）")
+        for bad in BAD_SPLITS:   # 2026-11-22：「にはいる」が「には・いる」と読まれた。声に渡す文に残さない（「あてはまる」に言い換える）
+            if bad in vt:
+                P.append(f"{lid}：声に渡す文に「{bad}」がある（「には・いる」と区切って読まれる。「あてはまる」に言い換えるか「に、はいる」と読点を入れる）")
         n = len(sentences(vt))
         if n > 2:
             P.append(f"{lid}：1つのセリフに{n}文（1〜2文まで）")
