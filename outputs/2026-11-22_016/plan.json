@@ -283,12 +283,12 @@
  },
  "readings": [
   [
-   "こたつの上",
-   "こたつのうえ"
+   "茶だんすの棚",
+   "ちゃだんすのたな"
   ],
   [
-   "裁縫箱",
-   "さいほうばこ"
+   "文机の裁縫箱",
+   "ふづくえのさいほうばこ"
   ],
   [
    "縁側の干し布団",
@@ -1044,10 +1044,10 @@
  "questions": [
   {
    "q": 1,
-   "scene": "こたつの上",
+   "scene": "茶だんすの棚",
    "level": "やさしい",
    "go": "右の絵の違いを、3つ探してください。どうぞ。",
-   "prompt": "Scene: close-up of the top of a kotatsu table covered with a quilt in a Japanese living room in late autumn, tatami floor, a window with bare trees. CENTER, LARGE (main subject): a basket of mandarin oranges on the kotatsu. Late autumn (November) only: no summer items, no Christmas or New Year items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the table, shelf or floor; nothing floats. Each listed object is about one twelfth, SMALL of the picture width, a simple solid-colored object with a thick outline, with plenty of empty space around it. No clocks, no letters, numbers, labels or writing anywhere. Objects: (upper left, on the kotatsu) a red teapot; (upper right, on the kotatsu) a green tea canister; (middle left, on the kotatsu) a blue teacup; (middle right, on the kotatsu) a yellow plate with rice crackers; (lower left, on the kotatsu) a white towel folded; (lower right, on the kotatsu) a brown wooden tray.",
+   "prompt": "Scene: close-up of an old wooden tea cupboard (chadansu) with open shelves in a Japanese living room in late autumn, a kotatsu and tatami seen at the bottom. CENTER, LARGE (main subject): a basket of mandarin oranges on the middle shelf. Late autumn (November) only: no summer items, no Christmas or New Year items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Every listed object STANDS or LIES on a shelf board or on the wooden top, with its bottom touching the surface and a small shadow under it; nothing floats, nothing is stuck on a wall. Each listed object is about one twelfth of the picture width, with empty space around it. No clocks. No letters, numbers, labels or writing anywhere. Objects: (upper left, on the top shelf) a red teapot; (upper right, on the top shelf) a green tea canister; (middle left, on the middle shelf) a blue teacup; (middle right, on the middle shelf) a yellow plate with rice crackers; (lower left, on the lower shelf) a white folded towel; (lower right, on the lower shelf) a small brown wooden box.",
    "answers_intro": "答えです。",
    "retries": {},
    "diffs": [],
@@ -1059,16 +1059,16 @@
     2088
    ],
    "edit_prompts": {
-    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small clock on the shelf becomes blue; (b) the small vase on the shelf at the upper right becomes red; (c) the floor cushion becomes green; (d) the sleeping cat becomes black; (e) the basket of mandarin oranges on the kotatsu becomes red."
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the blue teacup on the middle shelf at the left becomes red; (b) one mandarin orange at the right edge of the basket becomes green; (c) one mandarin orange is added, resting on the lower shelf in the empty space between the white towel and the brown box (same size as the other mandarins)."
    },
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small clock on the shelf becomes blue; (b) the small vase on the shelf at the upper right becomes red; (c) the floor cushion becomes green; (d) the sleeping cat becomes black; (e) the basket of mandarin oranges on the kotatsu becomes red."
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the blue teacup on the middle shelf at the left becomes red; (b) one mandarin orange at the right edge of the basket becomes green; (c) one mandarin orange is added, resting on the lower shelf in the empty space between the white towel and the brown box (same size as the other mandarins)."
   },
   {
    "q": 2,
-   "scene": "裁縫箱",
+   "scene": "文机の裁縫箱",
    "level": "初級",
    "go": "では、第2問。どうぞ。",
-   "prompt": "Scene: close-up of an open wooden sewing box on a low table in a Japanese room in late autumn, mending clothes for winter. CENTER, LARGE (main subject): a folded knitted sweater with a needle and yarn on it. Late autumn (November) only: no summer items, no Christmas or New Year items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the table, shelf or floor; nothing floats. Each listed object is about one sixteenth, VERY SMALL of the picture width, a simple solid-colored object with a thick outline, with plenty of empty space around it. No clocks, no letters, numbers, labels or writing anywhere. Objects: (upper left, on the table) a tiny red pincushion; (upper right, on the table) a tiny blue spool of thread; (middle left, on the table) a tiny yellow thimble; (middle right, on the table) a tiny green button; (lower left, on the table) a tiny pair of scissors; (lower right, on the table) a tiny white ball of yarn.",
+   "prompt": "Scene: close-up of the wooden top of a low writing desk (fuzukue) in a Japanese room in late autumn, seen from slightly above, mending clothes for winter, a sliding paper door behind. CENTER, LARGE (main subject): a folded knitted sweater with a needle and yarn, lying on the desk top next to an open wooden sewing box. Late autumn (November) only: no summer items, no Christmas or New Year items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Every listed object STANDS or LIES on a shelf board or on the wooden top, with its bottom touching the surface and a small shadow under it; nothing floats, nothing is stuck on a wall. Each listed object is about one sixteenth, VERY SMALL of the picture width, with empty space around it. No clocks. No letters, numbers, labels or writing anywhere. Objects: (upper left, on the desk top) a tiny red pincushion; (upper right, on the desk top) a tiny blue spool of thread; (middle left, on the desk top) a tiny yellow thimble; (middle right, on the desk top) a tiny green button; (lower left, on the desk top) a tiny pair of scissors lying flat; (lower right, on the desk top) a tiny white ball of yarn.",
    "answers_intro": "答えです。",
    "retries": {},
    "diffs": [],
@@ -1080,9 +1080,9 @@
     2088
    ],
    "edit_prompts": {
-    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small wooden box on the upper shelf becomes red; (b) the small round tin on the upper shelf becomes blue; (c) the folded knitted blanket becomes blue; (d) the small brown bottle is gone; (e) the paper bag becomes white."
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny red pincushion becomes blue; (b) the tiny blue spool of thread at the upper right becomes red; (c) the tiny white ball of yarn at the lower right (on the desk top, not on the sweater) is gone; (d) the tiny yellow thimble becomes blue."
    },
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small wooden box on the upper shelf becomes red; (b) the small round tin on the upper shelf becomes blue; (c) the folded knitted blanket becomes blue; (d) the small brown bottle is gone; (e) the paper bag becomes white."
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny red pincushion becomes blue; (b) the tiny blue spool of thread at the upper right becomes red; (c) the tiny white ball of yarn at the lower right (on the desk top, not on the sweater) is gone; (d) the tiny yellow thimble becomes blue."
   },
   {
    "q": 3,

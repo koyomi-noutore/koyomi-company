@@ -198,7 +198,7 @@
    {
     "id": "op",
     "at": 0.0,
-    "text": "冬の鍋の間違い探し、全5問。",
+    "text": "冬の鍋、間違い探し全5問。",
     "face": "smile",
     "until": 3.9
    },
@@ -283,24 +283,80 @@
  },
  "readings": [
   [
-   "冬の台所の小物棚",
-   "ふゆのだいどころのこものだな"
-  ],
-  [
-   "冬の食卓の小鉢",
-   "ふゆのしょくたくのこばち"
+   "窓辺に",
+   "まどべに"
   ],
   [
    "鍋の材料",
    "なべのざいりょう"
   ],
   [
-   "こたつで鍋",
-   "こたつでなべ"
+   "冬の食卓の小鉢",
+   "ふゆのしょくたくのこばち"
   ],
   [
    "台所の棚",
    "だいどころのたな"
+  ],
+  [
+   "冬の台所の小物棚",
+   "ふゆのだいどころのこものだな"
+  ],
+  [
+   "こたつで鍋",
+   "こたつでなべ"
+  ],
+  [
+   "水差し",
+   "みずさし"
+  ],
+  [
+   "木の箱",
+   "きのはこ"
+  ],
+  [
+   "豆腐",
+   "とうふ"
+  ],
+  [
+   "黄色",
+   "きいろ"
+  ],
+  [
+   "赤いおわん",
+   "あかいおわん"
+  ],
+  [
+   "右のびん",
+   "みぎのびん"
+  ],
+  [
+   "左の湯のみ",
+   "ひだりのゆのみ"
+  ],
+  [
+   "右の湯のみ",
+   "みぎのゆのみ"
+  ],
+  [
+   "塩のつぼ",
+   "しおのつぼ"
+  ],
+  [
+   "はし置き",
+   "はしおき"
+  ],
+  [
+   "鉢植え",
+   "はちうえ"
+  ],
+  [
+   "赤い実",
+   "あかいみ"
+  ],
+  [
+   "左に",
+   "ひだりに"
   ],
   [
    "冬の鍋料理",
@@ -325,10 +381,6 @@
   [
    "花びん",
    "かびん"
-  ],
-  [
-   "はし置き",
-   "はしおき"
   ],
   [
    "湯のみ",
@@ -639,10 +691,6 @@
    "かたほう"
   ],
   [
-   "黄色",
-   "きいろ"
-  ],
-  [
    "赤く",
    "あかく"
   ],
@@ -721,10 +769,6 @@
   [
    "短く",
    "みじかく"
-  ],
-  [
-   "黄色",
-   "きいろ"
   ],
   [
    "片方",
@@ -1018,7 +1062,7 @@
   "q1_go": "みぎのえのちがいを、みっつさがしてください。どうぞ。",
   "q3_go": "つづいて、だいさんもん。どうぞ。",
   "q5_go": "さいごのだいごもん、なんもんです。どうぞ。",
-  "op": "ふゆのなべの、まちがいさがし、ぜんごもん。",
+  "op": "ふゆのなべ、まちがいさがしぜんごもん。",
   "op2": "さいごは、なんもんです。",
   "u2": "どなべは、なぜふゆのなべりょうりに、むいているのでしょう？",
   "u3": "こたえは、ゆっくりあたたまって、さめにくいから。",
@@ -1044,32 +1088,56 @@
  "questions": [
   {
    "q": 1,
-   "scene": "冬の台所の小物棚",
+   "scene": "鍋の材料",
    "level": "やさしい",
    "go": "右の絵の違いを、3つ探してください。どうぞ。",
-   "prompt": "Scene: close-up of plain wooden shelves in a Japanese kitchen in winter, a small window with snow, a plain wall. CENTER, LARGE (main subject): a big clay pot (donabe) on the middle shelf. Winter only, with snow or cold: no Christmas, New Year's Eve or other dated holiday items, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on a shelf or table; nothing floats. Each listed object is about one twentieth, TINY of the picture width, with plenty of empty space around it. Each listed object has one clear solid color. Absolutely NO letters, labels, tags or writing anywhere. Objects: (upper left, on the top shelf) a tiny white sake cup; (upper right, on the top shelf) a tiny red daruma; (middle left, on the middle shelf) a tiny blue chopstick rest; (middle right, on the middle shelf) a tiny yellow citron (yuzu); (lower left, on the bottom shelf) a tiny green teacup; (lower right, on the bottom shelf) a tiny brown wooden spoon.",
-   "answers_intro": "答えです。",
-   "retries": {},
-   "diffs": [],
-   "hint_diff": null,
-   "content_box": [
-    0,
-    0,
-    1856,
-    2088
-   ],
-   "edit_prompts": {},
-   "edit_prompt": ""
-  },
-  {
-   "q": 2,
-   "scene": "鍋の材料",
-   "level": "初級",
-   "go": "では、第2問。どうぞ。",
    "prompt": "Scene: close-up of a wooden kitchen counter in winter with fresh ingredients for hot pot, a window with snow. CENTER, LARGE (main subject): a big Chinese cabbage (hakusai) on a cutting board. Winter only, with snow or cold: no Christmas, New Year's Eve or other dated holiday items, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one twelfth, SMALL of the picture width, with plenty of empty space around it. Absolutely NO letters, labels, tags, price cards, signs or writing anywhere, in any language; plain objects only. Objects: (upper left, on a shelf) a small plain white ceramic pitcher; (upper right, on a shelf) a small plain wooden box; (middle left, on the counter) a block of tofu on a plate; (middle right, on the counter) a bunch of green onions; (lower left, on the counter) a small basket of shiitake mushrooms; (lower right, on the counter) a small bowl of eggs.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "水差しが青",
+     "line": "白い水差しが、青くなりました。",
+     "box": [
+      97,
+      247,
+      439,
+      584
+     ],
+     "object_w": 232,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "木の箱がない",
+     "line": "棚の木の箱が、なくなりました。",
+     "box": [
+      1499,
+      387,
+      1850,
+      790
+     ],
+     "object_w": 342,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "豆腐が黄色",
+     "line": "豆腐が、黄色になりました。",
+     "box": [
+      19,
+      900,
+      387,
+      1173
+     ],
+     "object_w": 345,
+     "src": "1"
+    }
+   ],
    "hint_diff": null,
    "content_box": [
     0,
@@ -1083,35 +1151,57 @@
    "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small white pitcher on the shelf becomes blue; (b) the small wooden box on the shelf is gone; (c) the block of tofu on the plate becomes yellow; (d) the small basket of shiitake mushrooms becomes red; (e) the small bowl of eggs becomes blue."
   },
   {
-   "q": 3,
-   "scene": "こたつで鍋",
-   "level": "初級",
-   "go": "続いて、第3問。どうぞ。",
-   "prompt": "Scene: close-up of a kotatsu table in winter with a small clay pot of hot pot for two, a tatami room, a window with snow. CENTER, LARGE (main subject): the small clay pot on a portable burner on the kotatsu. Winter only, with snow or cold: no Christmas, New Year's Eve or other dated holiday items, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one twelfth, SMALL of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. Objects: (upper left, on a shelf) a small clock; (upper right, on the window sill) a small potted plant; (middle left, on the kotatsu) a small bowl; (middle right, on the kotatsu) a small cup of tea; (lower left, on the tatami) a floor cushion; (lower right, on the tatami) a basket of mandarin oranges.",
-   "answers_intro": "答えです。",
-   "retries": {},
-   "diffs": [],
-   "hint_diff": null,
-   "content_box": [
-    0,
-    0,
-    1856,
-    2088
-   ],
-   "edit_prompts": {
-    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small clock on the shelf becomes red; (b) the small potted plant on the window sill becomes red-flowered; (c) the small bowl on the kotatsu becomes red; (d) the small cup of tea becomes blue; (e) the floor cushion becomes blue."
-   },
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small clock on the shelf becomes red; (b) the small potted plant on the window sill becomes red-flowered; (c) the small bowl on the kotatsu becomes red; (d) the small cup of tea becomes blue; (e) the floor cushion becomes blue."
-  },
-  {
-   "q": 4,
+   "q": 2,
    "scene": "冬の食卓の小鉢",
-   "level": "中級",
-   "go": "第4問です。じっくりどうぞ。",
+   "level": "初級",
+   "go": "では、第2問。どうぞ。",
    "prompt": "Scene: close-up of a wooden dining table in winter, plain wooden wall, a window with falling snow. CENTER, LARGE (main subject): a clay pot of hot pot with steam on a trivet. Winter only, with snow or cold: no Christmas, New Year's Eve or other dated holiday items, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on a shelf or table; nothing floats. Each listed object is about one twelfth, SMALL of the picture width, with plenty of empty space around it. Each listed object has one clear solid color. Absolutely NO letters, labels, tags or writing anywhere. Objects: (upper left) a small red lacquered bowl; (upper right) a small white sake bottle; (middle left) a small plain blue plate; (middle right) a small yellow citron (yuzu) on a white dish; (lower left) a small green teacup; (lower right) a small wooden ladle on a small white plate.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "おわんが青",
+     "line": "赤いおわんが、青くなりました。",
+     "box": [
+      240,
+      725,
+      531,
+      979
+     ],
+     "object_w": 271,
+     "src": "p"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "ゆずが緑",
+     "line": "ゆずが、緑色になりました。",
+     "box": [
+      1490,
+      1154,
+      1692,
+      1335
+     ],
+     "object_w": 182,
+     "src": "p"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "湯のみが赤",
+     "line": "湯のみが、赤くなりました。",
+     "box": [
+      316,
+      1478,
+      532,
+      1775
+     ],
+     "object_w": 196,
+     "src": "p"
+    }
+   ],
    "hint_diff": null,
    "content_box": [
     0,
@@ -1120,17 +1210,163 @@
     2088
    ],
    "edit_prompts": {},
-   "edit_prompt": ""
+   "edit_prompt": "",
+   "program_ops": {
+    "p": [
+     {
+      "op": "recolor",
+      "box": [
+       240,
+       725,
+       531,
+       979
+      ],
+      "keep_hue": [
+       0,
+       12
+      ],
+      "sat_min": 120,
+      "circles": [
+       [
+        386,
+        852,
+        150
+       ]
+      ],
+      "hue": 165,
+      "sat": 1.0,
+      "val": 0.95
+     },
+     {
+      "op": "recolor",
+      "box": [
+       240,
+       725,
+       531,
+       979
+      ],
+      "keep_hue": [
+       236,
+       255
+      ],
+      "sat_min": 120,
+      "circles": [
+       [
+        386,
+        852,
+        150
+       ]
+      ],
+      "hue": 165,
+      "sat": 1.0,
+      "val": 0.95
+     },
+     {
+      "op": "recolor",
+      "box": [
+       1490,
+       1154,
+       1692,
+       1335
+      ],
+      "keep_hue": [
+       25,
+       48
+      ],
+      "sat_min": 120,
+      "circles": [
+       [
+        1591,
+        1245,
+        105
+       ]
+      ],
+      "hue": 72,
+      "sat": 1.0,
+      "val": 0.85
+     },
+     {
+      "op": "recolor",
+      "box": [
+       316,
+       1478,
+       532,
+       1775
+      ],
+      "keep_hue": [
+       45,
+       110
+      ],
+      "sat_min": 60,
+      "circles": [
+       [
+        424,
+        1628,
+        150
+       ]
+      ],
+      "hue": 2,
+      "sat": 0.7,
+      "val": 0.8
+     }
+    ]
+   },
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   }
   },
   {
-   "q": 5,
+   "q": 3,
    "scene": "台所の棚",
-   "level": "上級",
-   "go": "最後の第5問、難問です。どうぞ。",
+   "level": "初級",
+   "go": "続いて、第3問。どうぞ。",
    "prompt": "Scene: close-up of wooden kitchen shelves in a Japanese home in winter, a window with snow. CENTER, LARGE (main subject): a stack of clay pots (donabe) on the middle shelf. Winter only, with snow or cold: no Christmas, New Year's Eve or other dated holiday items, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one sixteenth, VERY SMALL of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. Objects: (upper left, on the shelf) a tiny ceramic salt jar; (upper right, on the shelf) a tiny wooden spoon; (middle left, on the shelf) a tiny teacup; (middle right, on the shelf) a tiny tea canister; (lower left, on the shelf) a tiny dish; (lower right, on the shelf) a tiny pair of chopsticks.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "びんが赤",
+     "line": "右のびんが、赤くなりました。",
+     "box": [
+      1541,
+      1172,
+      1770,
+      1538
+     ],
+     "object_w": 217,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "湯のみが青",
+     "line": "左の湯のみが、青くなりました。",
+     "box": [
+      122,
+      1305,
+      379,
+      1537
+     ],
+     "object_w": 241,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "塩のつぼが青",
+     "line": "塩のつぼが、青くなりました。",
+     "box": [
+      484,
+      104,
+      673,
+      286
+     ],
+     "object_w": 177,
+     "src": "1"
+    }
+   ],
    "hint_diff": null,
    "content_box": [
     0,
@@ -1142,6 +1378,248 @@
     "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny salt jar on the upper shelf becomes blue; (b) the tiny wooden spoon on the shelf becomes red; (c) the tiny teacup becomes blue; (d) the tiny tea canister becomes red; (e) the tiny dish becomes yellow."
    },
    "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny salt jar on the upper shelf becomes blue; (b) the tiny wooden spoon on the shelf becomes red; (c) the tiny teacup becomes blue; (d) the tiny tea canister becomes red; (e) the tiny dish becomes yellow."
+  },
+  {
+   "q": 4,
+   "scene": "冬の台所の小物棚",
+   "level": "中級",
+   "go": "第4問です。じっくりどうぞ。",
+   "prompt": "Scene: close-up of a plain wooden wall in a Japanese kitchen in winter with three plain wooden shelves in the middle part of the picture, a small window with snow at the upper right. CENTER, LARGE (main subject): a small clay pot (donabe) on the middle shelf. Winter only: no Christmas, New Year's Eve or other dated holiday items. Put ALL listed objects on the three shelves, which are in the MIDDLE of the picture (between 25% and 75% of the height); nothing in the top quarter or the bottom quarter. Spread them far apart, never clustered, each resting on a shelf; nothing floats. Each listed object is TINY: about one twentieth of the picture width, with plenty of empty space around it. Each has one clear solid color. Absolutely NO letters, labels or writing anywhere. Objects: (upper shelf, left) a tiny white sake cup; (upper shelf, right) a tiny red daruma; (middle shelf, left) a tiny blue chopstick rest; (middle shelf, right) a tiny yellow citron (yuzu); (lower shelf, left) a tiny green teacup; (lower shelf, right) a tiny brown wooden spoon.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "おちょこが赤",
+     "line": "白いおちょこが、赤くなりました。",
+     "box": [
+      405,
+      138,
+      564,
+      266
+     ],
+     "object_w": 143,
+     "src": "p"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "はし置きが赤",
+     "line": "青いはし置きが、赤くなりました。",
+     "box": [
+      270,
+      1258,
+      479,
+      1358
+     ],
+     "object_w": 193,
+     "src": "p"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "ゆずが緑",
+     "line": "ゆずが、緑色になりました。",
+     "box": [
+      1376,
+      1152,
+      1603,
+      1355
+     ],
+     "object_w": 211,
+     "src": "p"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompts": {},
+   "edit_prompt": "",
+   "program_ops": {
+    "p": [
+     {
+      "op": "recolor",
+      "box": [
+       405,
+       138,
+       564,
+       266
+      ],
+      "poly": [
+       [
+        416,
+        147
+       ],
+       [
+        554,
+        147
+       ],
+       [
+        552,
+        230
+       ],
+       [
+        540,
+        256
+       ],
+       [
+        430,
+        256
+       ],
+       [
+        418,
+        230
+       ]
+      ],
+      "hue": 2,
+      "sat_set": 170,
+      "val": 0.95
+     },
+     {
+      "op": "recolor",
+      "box": [
+       270,
+       1258,
+       479,
+       1358
+      ],
+      "keep_hue": [
+       130,
+       185
+      ],
+      "sat_min": 80,
+      "circles": [
+       [
+        374,
+        1308,
+        110
+       ]
+      ],
+      "hue": 2,
+      "sat": 1.3,
+      "val": 1.0
+     },
+     {
+      "op": "recolor",
+      "box": [
+       1376,
+       1152,
+       1603,
+       1355
+      ],
+      "keep_hue": [
+       25,
+       48
+      ],
+      "sat_min": 120,
+      "circles": [
+       [
+        1489,
+        1253,
+        112
+       ]
+      ],
+      "hue": 72,
+      "sat": 0.7,
+      "val": 0.8
+     }
+    ]
+   },
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   }
+  },
+  {
+   "q": 5,
+   "scene": "こたつで鍋",
+   "level": "上級",
+   "go": "最後の第5問、難問です。どうぞ。",
+   "prompt": "Scene: close-up of a kotatsu table in winter with a small clay pot of hot pot for two, a tatami room, a window with snow. CENTER, LARGE (main subject): the small clay pot on a portable burner on the kotatsu. Winter only, with snow or cold: no Christmas, New Year's Eve or other dated holiday items, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one twelfth, SMALL of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. Objects: (upper left, on a shelf) a small clock; (upper right, on the window sill) a small potted plant; (middle left, on the kotatsu) a small bowl; (middle right, on the kotatsu) a small cup of tea; (lower left, on the tatami) a floor cushion; (lower right, on the tatami) a basket of mandarin oranges.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "湯のみが青",
+     "line": "右の湯のみが、青くなりました。",
+     "box": [
+      1375,
+      935,
+      1503,
+      1100
+     ],
+     "object_w": 123,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "形",
+     "label": "実が赤い花",
+     "line": "鉢植えの赤い実が、花になりました。",
+     "box": [
+      1630,
+      160,
+      1820,
+      335
+     ],
+     "object_w": 176,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "窓辺に湯のみ",
+     "line": "窓辺に、湯のみがひとつ増えました。",
+     "box": [
+      894,
+      366,
+      1046,
+      558
+     ],
+     "object_w": 140,
+     "src": "p",
+     "context": "こたつで鍋をかこむ部屋の窓辺に、湯のみを置くのは普通"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small clock on the shelf becomes red; (b) the small potted plant on the window sill becomes red-flowered; (c) the small bowl on the kotatsu becomes red; (d) the small cup of tea becomes blue; (e) the floor cushion becomes blue."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small clock on the shelf becomes red; (b) the small potted plant on the window sill becomes red-flowered; (c) the small bowl on the kotatsu becomes red; (d) the small cup of tea becomes blue; (e) the floor cushion becomes blue.",
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "src": [
+       1370,
+       930,
+       1508,
+       1105
+      ],
+      "mask": "outline",
+      "dst": [
+       900,
+       372
+      ],
+      "width": 140
+     }
+    ]
+   },
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   }
   }
  ],
  "thumbnail": {
@@ -1178,5 +1656,120 @@
   "circle_hint": false,
   "note": "第1回と同じ型（変えた所なし）。左右に同じ絵・上に濃紺の帯で「秋の間違いさがし」・下に難易度と問いかけ。こよみ先生は入れない"
  },
- "shorts": []
+ "shorts": [
+  {
+   "question": 3,
+   "answer_gap": 3.3,
+   "note": "1本目：第3問 台所の棚・初級",
+   "title": "シニアの間違い探し｜冬の台所の棚の1問 #脳トレ #頭の体操",
+   "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
+   "end_veil": [
+    {
+     "at": 0,
+     "lines": [
+      [
+       "いくつ見つかった？",
+       120,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "コメントで教えてね",
+       104,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": false
+    },
+    {
+     "at": 3.8,
+     "lines": [
+      [
+       "続きは長い動画で",
+       116,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "左下をクリック",
+       128,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "question": 4,
+   "answer_gap": 3.3,
+   "note": "2本目：第4問 冬の台所の小物棚・中級",
+   "title": "シニアの間違い探し｜冬の小物棚の1問 #脳トレ #頭の体操",
+   "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
+   "end_veil": [
+    {
+     "at": 0,
+     "lines": [
+      [
+       "いくつ見つかった？",
+       120,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "コメントで教えてね",
+       104,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": false
+    },
+    {
+     "at": 3.8,
+     "lines": [
+      [
+       "続きは長い動画で",
+       116,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "左下をクリック",
+       128,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": true
+    }
+   ]
+  }
+ ]
 }

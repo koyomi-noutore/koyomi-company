@@ -17,10 +17,22 @@
    "detail": "pictures batch base 1 2",
    "sec": 167.5,
    "at": "2026-11-22T09:12:02+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base 1 2",
+   "sec": 167.1,
+   "at": "2026-11-22T09:15:42+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit 1 2",
+   "sec": 169.0,
+   "at": "2026-11-22T09:19:01+00:00"
   }
  ],
  "total_sec_by_step": {
-  "絵": 550.9
+  "絵": 887.0
  },
- "total_sec_all": 550.9
+ "total_sec_all": 887.0
 }
