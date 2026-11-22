@@ -1047,7 +1047,7 @@
    "scene": "雪だるまの庭",
    "level": "やさしい",
    "go": "右の絵の違いを、3つ探してください。どうぞ。",
-   "prompt": "Scene: close-up of a snowy Japanese house garden on a winter morning, a big snowman, snow on the pine tree and the fence. CENTER, LARGE (main subject): a big snowman with a bucket hat and charcoal eyes. Winter only, with snow or cold: no Christmas, New Year's Eve or other dated holiday items, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one tenth of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. Objects: (upper left, on the fence) a small bird; (upper right, on the roof edge) a small icicle; (middle left, on the snow) a snow shovel leaning on the fence; (middle right, on the snow) a small sled; (lower center, on the snow) a pair of red mittens.",
+   "prompt": "Scene: close-up of a snowy Japanese house garden on a winter morning, a bamboo fence, snow on the pine tree. CENTER (main subject, medium size, about one third of the picture width): a snowman with charcoal eyes and a carrot nose. Winter only, with snow: no Christmas, New Year's Eve or other dated holiday items. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the ground, snow, shelf, sill, step or fence, or hangs from a hook; nothing floats. Each listed object is SMALL: about one twelfth of the picture width. No letters, labels or writing anywhere. Objects: (left, at 30% height) a small bird on a fence post; (right, at 30% height) a small stone lantern with a snow cap; (left, at 50% height) a pair of red mittens hanging on the fence rail; (right, at 50% height) a small wooden bucket on the snow; (left, at 70% height) a small snow rabbit with leaf ears; (right, at 70% height) a small round snowball.",
    "answers_intro": "答えです。",
    "retries": {},
    "diffs": [],
@@ -1058,17 +1058,15 @@
     1856,
     2088
    ],
-   "edit_prompts": {
-    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small bird on the fence becomes blue; (b) the bucket hat on the snowman becomes red; (c) the snow shovel becomes red; (d) the sled is gone; (e) the pair of red mittens becomes blue."
-   },
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small bird on the fence becomes blue; (b) the bucket hat on the snowman becomes red; (c) the snow shovel becomes red; (d) the sled is gone; (e) the pair of red mittens becomes blue."
+   "edit_prompts": {},
+   "edit_prompt": ""
   },
   {
    "q": 2,
    "scene": "雪の玄関先",
    "level": "初級",
    "go": "では、第2問。どうぞ。",
-   "prompt": "Scene: close-up of the snowy entrance of a Japanese house on a winter morning, a sliding wooden door, a stone path with snow. CENTER, LARGE (main subject): a pair of rubber snow boots on the stone step. Winter only, with snow or cold: no Christmas, New Year's Eve or other dated holiday items, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one twelfth, SMALL of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. Objects: (upper left, hanging from a hook) a small straw hat with snow; (upper right, on the window sill) a small potted plant; (middle left, leaning on the wall) a closed umbrella; (middle right, on the step) a small broom; (lower left, on the snow) a small snow rabbit (yuki usagi) with leaf ears; (lower right, on the snow) a small bucket.",
+   "prompt": "Scene: close-up of the snowy entrance of a Japanese house on a winter morning, a sliding wooden door, a stone step with snow. CENTER (main subject, medium size, about one third of the picture width): a pair of rubber snow boots on the stone step. Winter only, with snow: no Christmas, New Year's Eve or other dated holiday items. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the ground, snow, shelf, sill, step or fence, or hangs from a hook; nothing floats. Each listed object is SMALL: about one twelfth of the picture width. No letters, labels or writing anywhere. Objects: (left, at 30% height) a small straw hat hanging on a hook; (right, at 30% height) a small potted plant on the window sill; (left, at 50% height) a small closed umbrella leaning on the wall; (right, at 50% height) a small broom leaning on the wall; (left, at 70% height) a small snow rabbit on the step; (right, at 70% height) a small wooden bucket on the step.",
    "answers_intro": "答えです。",
    "retries": {},
    "diffs": [],
@@ -1079,17 +1077,15 @@
     1856,
     2088
    ],
-   "edit_prompts": {
-    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the straw hat on the hook becomes blue; (b) the small potted plant becomes red; (c) the closed umbrella becomes red; (d) the small broom is gone; (e) the small wooden bucket becomes blue."
-   },
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the straw hat on the hook becomes blue; (b) the small potted plant becomes red; (c) the closed umbrella becomes red; (d) the small broom is gone; (e) the small wooden bucket becomes blue."
+   "edit_prompts": {},
+   "edit_prompt": ""
   },
   {
    "q": 3,
    "scene": "冬の朝の窓辺",
    "level": "初級",
    "go": "続いて、第3問。どうぞ。",
-   "prompt": "Scene: close-up of a window sill inside a Japanese house on a cold winter morning, frost on the glass, snow outside. CENTER, LARGE (main subject): a steaming cup of hot tea on the window sill. Winter only, with snow or cold: no Christmas, New Year's Eve or other dated holiday items, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one twelfth, SMALL of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. Objects: (upper left, on a shelf) a small clock; (upper right, on a shelf) a small vase with a camellia; (middle left, on the sill) a small pair of glasses; (middle right, on the sill) a small dish of mandarin oranges; (lower left, on the table) a small knitted cap; (lower right, on the table) a small spoon.",
+   "prompt": "Scene: close-up of a window sill and shelves inside a Japanese house on a cold winter morning, frost on the glass, snow outside. CENTER (main subject, medium size, about one quarter of the picture width): a steaming cup of hot tea on the sill. Winter only, with snow: no Christmas, New Year's Eve or other dated holiday items. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the ground, snow, shelf, sill, step or fence, or hangs from a hook; nothing floats. Each listed object is SMALL: about one fourteenth, VERY SMALL of the picture width. No letters, labels or writing anywhere. Objects: (left, at 30% height) a small clock on a shelf; (right, at 30% height) a small vase with one camellia on a shelf; (left, at 50% height) a small pair of glasses on the sill; (right, at 50% height) a small dish with three mandarin oranges on the sill; (left, at 70% height) a small knitted cap on the table; (right, at 70% height) a small spoon on the table.",
    "answers_intro": "答えです。",
    "retries": {},
    "diffs": [],
@@ -1100,10 +1096,8 @@
     1856,
     2088
    ],
-   "edit_prompts": {
-    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small clock on the shelf becomes blue; (b) the small vase with the camellia becomes blue; (c) the small pair of glasses becomes red; (d) the dish of mandarin oranges becomes blue; (e) the knitted cap becomes red."
-   },
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small clock on the shelf becomes blue; (b) the small vase with the camellia becomes blue; (c) the small pair of glasses becomes red; (d) the dish of mandarin oranges becomes blue; (e) the knitted cap becomes red."
+   "edit_prompts": {},
+   "edit_prompt": ""
   },
   {
    "q": 4,
