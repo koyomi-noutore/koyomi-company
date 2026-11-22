@@ -220,6 +220,13 @@ def draw_subtitle(im, t, area, align="center"):
 def leaves(d, t, n=18, seed=3, colors=((214, 80, 50), (232, 176, 48), (200, 110, 40))):
     import random
     r = random.Random(seed)
+    if plan().get("season") == "冬":     # 2026-11-22 第17回：冬の回に秋の落ち葉が舞っていた。冬は雪のつぶにする
+        for i in range(n):
+            x0, sp, ph, sz = r.uniform(0, W), r.uniform(30, 60), r.uniform(0, 100), r.uniform(8, 16)
+            y = ((t + ph) * sp) % (H + 100) - 50
+            x = x0 + 30 * math.sin((t + ph) * 0.7)
+            d.ellipse((x - sz, y - sz, x + sz, y + sz), fill=(255, 255, 255), outline=(190, 205, 225), width=2)
+        return
     for i in range(n):
         x0, sp, ph, sz = r.uniform(0, W), r.uniform(40, 80), r.uniform(0, 100), r.uniform(18, 34)
         c = colors[i % len(colors)]

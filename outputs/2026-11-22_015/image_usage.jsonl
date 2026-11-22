@@ -1,0 +1,5 @@
+{"time": "2026-11-22T04:34:33+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 493, "output_tokens": 1406, "total_tokens": 2144, "batch": true, "key": "base1"}
+{"time": "2026-11-22T04:34:33+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 514, "output_tokens": 1453, "total_tokens": 2260, "batch": true, "key": "base2"}
+{"time": "2026-11-22T04:34:33+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 516, "output_tokens": 1340, "total_tokens": 2108, "batch": true, "key": "base3"}
+{"time": "2026-11-22T04:34:33+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 511, "output_tokens": 1491, "total_tokens": 2273, "batch": true, "key": "base4"}
+{"time": "2026-11-22T04:34:33+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 492, "output_tokens": 1547, "total_tokens": 2339, "batch": true, "key": "base5"}
