@@ -454,8 +454,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 924,
-   "outside_box_max_distance_px": 9.0,
+   "outside_box_pixels_diff_gt15": 157,
+   "outside_box_max_distance_px": 7.0,
    "answers": [
     {
      "id": 1,
@@ -539,33 +539,33 @@
      "label": "みかんが緑",
      "line": "みかんがひとつ、緑色になりました。",
      "box_px": [
-      1500,
-      1350,
-      1660,
+      1490,
+      1335,
+      1700,
       1505
      ],
      "box_screen": [
-      776,
-      698,
-      859,
+      771,
+      691,
+      879,
       778
      ],
      "circle_a_screen": [
-      776,
-      698,
-      859,
+      771,
+      691,
+      879,
       778
      ],
      "circle_b_screen": [
-      776,
-      698,
-      859,
+      771,
+      691,
+      879,
       778
      ],
-     "object_w_px": 150,
-     "object_picture_width_pct": 8.08,
-     "object_screen_width_pct": 4.04,
-     "in_level_range": true,
+     "object_w_px": 190,
+     "object_picture_width_pct": 10.24,
+     "object_screen_width_pct": 5.12,
+     "in_level_range": false,
      "in_safe_y": true,
      "edit_version": "p",
      "made_by": "gemini",
@@ -674,28 +674,28 @@
      "label": "耳の葉が赤",
      "line": "雪うさぎの耳の葉が、赤くなりました。",
      "box_px": [
-      925,
+      935,
       940,
-      1160,
-      1130
+      1170,
+      1125
      ],
      "box_screen": [
-      478,
+      484,
       486,
-      600,
-      584
+      605,
+      582
      ],
      "circle_a_screen": [
-      478,
+      484,
       486,
-      600,
-      584
+      605,
+      582
      ],
      "circle_b_screen": [
-      478,
+      484,
       486,
-      600,
-      584
+      605,
+      582
      ],
      "object_w_px": 190,
      "object_picture_width_pct": 10.24,

@@ -1,0 +1,712 @@
+{
+ "screen": {
+  "size": [
+   1920,
+   1080
+  ],
+  "picture_size_on_screen": [
+   960,
+   1080
+  ],
+  "safe_y_on_screen": [
+   54,
+   918
+  ],
+  "level_range_pct_of_screen_width": {
+   "やさしい": [
+    6.0,
+    8.0
+   ],
+   "初級": [
+    5.0,
+    6.0
+   ],
+   "中級": [
+    4.0,
+    5.0
+   ],
+   "上級": [
+    3.0,
+    4.0
+   ]
+  }
+ },
+ "note": "box_px・circle_px は 8:9 に切り抜いた高解像度の絵（qN_a.png、1856×2088）のピクセル。content_px はそのうち画面に出す範囲（白いふちを除いた8:9）。*_screen は画面の上での座標（右の絵は x に960を足す）。object_screen_width_pct は、変わる物そのものの幅を画面幅で割った値（難易度の基準）。object_picture_width_pct は片方の絵の幅で割った値（参考）。",
+ "questions": [
+  {
+   "q": 1,
+   "scene": "縁側の干し布団",
+   "level": "やさしい",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 0,
+   "outside_box_max_distance_px": 0.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "急須が青",
+     "line": "長いすの急須が、青くなりました。",
+     "box_px": [
+      330,
+      420,
+      700,
+      840
+     ],
+     "box_screen": [
+      171,
+      217,
+      362,
+      434
+     ],
+     "circle_a_screen": [
+      171,
+      217,
+      362,
+      434
+     ],
+     "circle_b_screen": [
+      171,
+      217,
+      362,
+      434
+     ],
+     "object_w_px": 340,
+     "object_picture_width_pct": 18.32,
+     "object_screen_width_pct": 9.16,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "柿が緑",
+     "line": "鉢の柿が、緑色になりました。",
+     "box_px": [
+      1470,
+      660,
+      1810,
+      840
+     ],
+     "box_screen": [
+      760,
+      341,
+      936,
+      434
+     ],
+     "circle_a_screen": [
+      760,
+      341,
+      936,
+      434
+     ],
+     "circle_b_screen": [
+      760,
+      341,
+      936,
+      434
+     ],
+     "object_w_px": 340,
+     "object_picture_width_pct": 18.32,
+     "object_screen_width_pct": 9.16,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "大きさ",
+     "label": "湯のみが大きい",
+     "line": "湯のみが、大きくなりました。",
+     "box_px": [
+      1076,
+      1330,
+      1324,
+      1610
+     ],
+     "box_screen": [
+      557,
+      688,
+      685,
+      833
+     ],
+     "circle_a_screen": [
+      557,
+      688,
+      685,
+      833
+     ],
+     "circle_b_screen": [
+      557,
+      688,
+      685,
+      833
+     ],
+     "object_w_px": 232,
+     "object_picture_width_pct": 12.5,
+     "object_screen_width_pct": 6.25,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 2,
+   "scene": "茶だんすの棚",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 202,
+   "outside_box_max_distance_px": 9.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "湯のみが赤",
+     "line": "棚の湯のみが、赤くなりました。",
+     "box_px": [
+      447,
+      534,
+      631,
+      766
+     ],
+     "box_screen": [
+      231,
+      276,
+      326,
+      396
+     ],
+     "circle_a_screen": [
+      231,
+      276,
+      326,
+      396
+     ],
+     "circle_b_screen": [
+      231,
+      276,
+      326,
+      396
+     ],
+     "object_w_px": 184,
+     "object_picture_width_pct": 9.91,
+     "object_screen_width_pct": 4.96,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "みかんが緑",
+     "line": "かごのみかんがひとつ、緑色になりました。",
+     "box_px": [
+      1255,
+      820,
+      1445,
+      1070
+     ],
+     "box_screen": [
+      649,
+      424,
+      747,
+      553
+     ],
+     "circle_a_screen": [
+      649,
+      424,
+      747,
+      553
+     ],
+     "circle_b_screen": [
+      649,
+      424,
+      747,
+      553
+     ],
+     "object_w_px": 184,
+     "object_picture_width_pct": 9.91,
+     "object_screen_width_pct": 4.96,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "みかんが増える",
+     "line": "下の棚に、みかんがひとつ増えました。",
+     "box_px": [
+      858,
+      1425,
+      1096,
+      1615
+     ],
+     "box_screen": [
+      444,
+      737,
+      567,
+      835
+     ],
+     "circle_a_screen": [
+      444,
+      737,
+      567,
+      835
+     ],
+     "circle_b_screen": [
+      444,
+      737,
+      567,
+      835
+     ],
+     "object_w_px": 200,
+     "object_picture_width_pct": 10.78,
+     "object_screen_width_pct": 5.39,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 3,
+   "scene": "台所の冬の保存食",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 424,
+   "outside_box_max_distance_px": 9.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "梅が緑",
+     "line": "びんの梅が、緑色になりました。",
+     "box_px": [
+      150,
+      234,
+      411,
+      497
+     ],
+     "box_screen": [
+      78,
+      121,
+      213,
+      257
+     ],
+     "circle_a_screen": [
+      78,
+      121,
+      213,
+      257
+     ],
+     "circle_b_screen": [
+      78,
+      121,
+      213,
+      257
+     ],
+     "object_w_px": 244,
+     "object_picture_width_pct": 13.15,
+     "object_screen_width_pct": 6.57,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "はちみつのびんが赤",
+     "line": "はちみつのびんが、赤くなりました。",
+     "box_px": [
+      1509,
+      568,
+      1747,
+      945
+     ],
+     "box_screen": [
+      781,
+      294,
+      904,
+      489
+     ],
+     "circle_a_screen": [
+      781,
+      294,
+      904,
+      489
+     ],
+     "circle_b_screen": [
+      781,
+      294,
+      904,
+      489
+     ],
+     "object_w_px": 233,
+     "object_picture_width_pct": 12.55,
+     "object_screen_width_pct": 6.28,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "重し石がない",
+     "line": "漬物の重しの石が、なくなりました。",
+     "box_px": [
+      663,
+      508,
+      1105,
+      836
+     ],
+     "box_screen": [
+      343,
+      263,
+      572,
+      432
+     ],
+     "circle_a_screen": [
+      343,
+      263,
+      572,
+      432
+     ],
+     "circle_b_screen": [
+      343,
+      263,
+      572,
+      432
+     ],
+     "object_w_px": 230,
+     "object_picture_width_pct": 12.39,
+     "object_screen_width_pct": 6.2,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "2",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 4,
+   "scene": "茶の間の小物",
+   "level": "中級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 59,
+   "outside_box_max_distance_px": 10.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "だるまが白",
+     "line": "だるまが、白くなりました。",
+     "box_px": [
+      1316,
+      600,
+      1545,
+      847
+     ],
+     "box_screen": [
+      681,
+      310,
+      799,
+      438
+     ],
+     "circle_a_screen": [
+      681,
+      310,
+      799,
+      438
+     ],
+     "circle_b_screen": [
+      681,
+      310,
+      799,
+      438
+     ],
+     "object_w_px": 221,
+     "object_picture_width_pct": 11.91,
+     "object_screen_width_pct": 5.95,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "こけしが青",
+     "line": "こけしが、青くなりました。",
+     "box_px": [
+      352,
+      638,
+      532,
+      845
+     ],
+     "box_screen": [
+      182,
+      330,
+      275,
+      437
+     ],
+     "circle_a_screen": [
+      182,
+      330,
+      275,
+      437
+     ],
+     "circle_b_screen": [
+      182,
+      330,
+      275,
+      437
+     ],
+     "object_w_px": 178,
+     "object_picture_width_pct": 9.59,
+     "object_screen_width_pct": 4.8,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "鉛筆立てが青",
+     "line": "鉛筆立てが、青くなりました。",
+     "box_px": [
+      1225,
+      1190,
+      1475,
+      1505
+     ],
+     "box_screen": [
+      634,
+      616,
+      763,
+      778
+     ],
+     "circle_a_screen": [
+      634,
+      616,
+      763,
+      778
+     ],
+     "circle_b_screen": [
+      634,
+      616,
+      763,
+      778
+     ],
+     "object_w_px": 240,
+     "object_picture_width_pct": 12.93,
+     "object_screen_width_pct": 6.47,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 5,
+   "scene": "文机の裁縫箱",
+   "level": "上級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 138,
+   "outside_box_max_distance_px": 9.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "針山が青",
+     "line": "針山が、青くなりました。",
+     "box_px": [
+      487,
+      766,
+      637,
+      916
+     ],
+     "box_screen": [
+      252,
+      396,
+      329,
+      474
+     ],
+     "circle_a_screen": [
+      252,
+      396,
+      329,
+      474
+     ],
+     "circle_b_screen": [
+      252,
+      396,
+      329,
+      474
+     ],
+     "object_w_px": 150,
+     "object_picture_width_pct": 8.08,
+     "object_screen_width_pct": 4.04,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "糸巻きが赤",
+     "line": "糸巻きの糸が、赤くなりました。",
+     "box_px": [
+      1559,
+      680,
+      1693,
+      815
+     ],
+     "box_screen": [
+      806,
+      352,
+      876,
+      422
+     ],
+     "circle_a_screen": [
+      806,
+      352,
+      876,
+      422
+     ],
+     "circle_b_screen": [
+      806,
+      352,
+      876,
+      422
+     ],
+     "object_w_px": 134,
+     "object_picture_width_pct": 7.22,
+     "object_screen_width_pct": 3.61,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "毛糸玉がない",
+     "line": "右下の毛糸玉が、なくなりました。",
+     "box_px": [
+      1444,
+      1404,
+      1695,
+      1603
+     ],
+     "box_screen": [
+      747,
+      726,
+      877,
+      829
+     ],
+     "circle_a_screen": [
+      747,
+      726,
+      877,
+      829
+     ],
+     "circle_b_screen": [
+      747,
+      726,
+      877,
+      829
+     ],
+     "object_w_px": 170,
+     "object_picture_width_pct": 9.16,
+     "object_screen_width_pct": 4.58,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  }
+ ]
+}
