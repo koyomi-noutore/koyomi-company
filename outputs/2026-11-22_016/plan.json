@@ -1058,7 +1058,10 @@
     1856,
     2088
    ],
-   "edit_prompts": {}
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small clock on the shelf becomes blue; (b) the small vase on the shelf at the upper right becomes red; (c) the floor cushion becomes green; (d) the sleeping cat becomes black; (e) the basket of mandarin oranges on the kotatsu becomes red."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small clock on the shelf becomes blue; (b) the small vase on the shelf at the upper right becomes red; (c) the floor cushion becomes green; (d) the sleeping cat becomes black; (e) the basket of mandarin oranges on the kotatsu becomes red."
   },
   {
    "q": 2,
@@ -1076,7 +1079,10 @@
     1856,
     2088
    ],
-   "edit_prompts": {}
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small wooden box on the upper shelf becomes red; (b) the small round tin on the upper shelf becomes blue; (c) the folded knitted blanket becomes blue; (d) the small brown bottle is gone; (e) the paper bag becomes white."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small wooden box on the upper shelf becomes red; (b) the small round tin on the upper shelf becomes blue; (c) the folded knitted blanket becomes blue; (d) the small brown bottle is gone; (e) the paper bag becomes white."
   },
   {
    "q": 3,
@@ -1094,7 +1100,10 @@
     1856,
     2088
    ],
-   "edit_prompts": {}
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the rolled bamboo blind at the upper left becomes green; (b) the small bird on the branch becomes blue; (c) the small teacup on the veranda becomes red; (d) the pair of geta on the stone becomes black; (e) the small bucket is gone."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the rolled bamboo blind at the upper left becomes green; (b) the small bird on the branch becomes blue; (c) the small teacup on the veranda becomes red; (d) the pair of geta on the stone becomes black; (e) the small bucket is gone."
   },
   {
    "q": 4,
@@ -1112,7 +1121,10 @@
     1856,
     2088
    ],
-   "edit_prompts": {}
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small glass jar of plums on the upper left shelf becomes a jar of green plums; (b) the small jar of honey becomes a jar of red jam; (c) the small bundle of dried chili peppers is gone; (d) the small bowl of dried mushrooms becomes blue; (e) the small dish of salt becomes red."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small glass jar of plums on the upper left shelf becomes a jar of green plums; (b) the small jar of honey becomes a jar of red jam; (c) the small bundle of dried chili peppers is gone; (d) the small bowl of dried mushrooms becomes blue; (e) the small dish of salt becomes red."
   },
   {
    "q": 5,
@@ -1130,7 +1142,10 @@
     1856,
     2088
    ],
-   "edit_prompts": {}
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny kokeshi doll becomes blue; (b) the tiny daruma becomes white; (c) the small pair of glasses becomes red; (d) the small spool of thread becomes blue; (e) the small hand mirror becomes red."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny kokeshi doll becomes blue; (b) the tiny daruma becomes white; (c) the small pair of glasses becomes red; (d) the small spool of thread becomes blue; (e) the small hand mirror becomes red."
   }
  ],
  "thumbnail": {

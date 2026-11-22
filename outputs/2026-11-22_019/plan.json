@@ -1058,7 +1058,10 @@
     1856,
     2088
    ],
-   "edit_prompts": {}
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small bird on the fence becomes blue; (b) the bucket hat on the snowman becomes red; (c) the snow shovel becomes red; (d) the sled is gone; (e) the pair of red mittens becomes blue."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small bird on the fence becomes blue; (b) the bucket hat on the snowman becomes red; (c) the snow shovel becomes red; (d) the sled is gone; (e) the pair of red mittens becomes blue."
   },
   {
    "q": 2,
@@ -1076,7 +1079,10 @@
     1856,
     2088
    ],
-   "edit_prompts": {}
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the straw hat on the hook becomes blue; (b) the small potted plant becomes red; (c) the closed umbrella becomes red; (d) the small broom is gone; (e) the small wooden bucket becomes blue."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the straw hat on the hook becomes blue; (b) the small potted plant becomes red; (c) the closed umbrella becomes red; (d) the small broom is gone; (e) the small wooden bucket becomes blue."
   },
   {
    "q": 3,
@@ -1094,7 +1100,10 @@
     1856,
     2088
    ],
-   "edit_prompts": {}
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small clock on the shelf becomes blue; (b) the small vase with the camellia becomes blue; (c) the small pair of glasses becomes red; (d) the dish of mandarin oranges becomes blue; (e) the knitted cap becomes red."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small clock on the shelf becomes blue; (b) the small vase with the camellia becomes blue; (c) the small pair of glasses becomes red; (d) the dish of mandarin oranges becomes blue; (e) the knitted cap becomes red."
   },
   {
    "q": 4,
@@ -1112,7 +1121,10 @@
     1856,
     2088
    ],
-   "edit_prompts": {}
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the crow on the roof becomes white; (b) the round traffic mirror becomes red; (c) the small bucket becomes red; (d) the small pair of gloves becomes blue; (e) the red ribbon becomes blue."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the crow on the roof becomes white; (b) the round traffic mirror becomes red; (c) the small bucket becomes red; (d) the small pair of gloves becomes blue; (e) the red ribbon becomes blue."
   },
   {
    "q": 5,
@@ -1130,7 +1142,10 @@
     1856,
     2088
    ],
-   "edit_prompts": {}
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny bird on the branch becomes blue; (b) the tiny teacup becomes red; (c) the tiny red berry is gone; (d) the tiny green leaf becomes red; (e) the tiny pinecone becomes green."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny bird on the branch becomes blue; (b) the tiny teacup becomes red; (c) the tiny red berry is gone; (d) the tiny green leaf becomes red; (e) the tiny pinecone becomes green."
   }
  ],
  "thumbnail": {

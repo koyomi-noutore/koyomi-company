@@ -1058,7 +1058,10 @@
     1856,
     2088
    ],
-   "edit_prompts": {}
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small bird on the fence becomes blue; (b) the teapot on the veranda becomes red; (c) the bamboo basket at the left is gone; (d) the watering can becomes green; (e) the pair of garden gloves becomes yellow."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small bird on the fence becomes blue; (b) the teapot on the veranda becomes red; (c) the bamboo basket at the left is gone; (d) the watering can becomes green; (e) the pair of garden gloves becomes yellow."
   },
   {
    "q": 2,
@@ -1076,7 +1079,10 @@
     1856,
     2088
    ],
-   "edit_prompts": {}
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the basket of sweet potatoes on the stool at the upper left becomes red; (b) the kettle on the stone becomes blue; (c) the metal bucket becomes red; (d) the long tongs are gone; (e) the pair of work gloves becomes blue."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the basket of sweet potatoes on the stool at the upper left becomes red; (b) the kettle on the stone becomes blue; (c) the metal bucket becomes red; (d) the long tongs are gone; (e) the pair of work gloves becomes blue."
   },
   {
    "q": 3,
@@ -1094,7 +1100,10 @@
     1856,
     2088
    ],
-   "edit_prompts": {}
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small bird on the branch becomes blue; (b) the knitted cap on the bench becomes green; (c) the thermos becomes red; (d) the small paper bag of chestnuts becomes white; (e) the pinecone on the path is gone."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small bird on the branch becomes blue; (b) the knitted cap on the bench becomes green; (c) the thermos becomes red; (d) the small paper bag of chestnuts becomes white; (e) the pinecone on the path is gone."
   },
   {
    "q": 4,
@@ -1112,7 +1121,10 @@
     1856,
     2088
    ],
-   "edit_prompts": {}
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small pot of chrysanthemum on the shelf at the upper left becomes blue (the flowers stay); (b) the red paper lantern becomes white; (c) the small teacup at the left becomes red; (d) the small dish of chestnuts becomes blue; (e) the folded cloth becomes red."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small pot of chrysanthemum on the shelf at the upper left becomes blue (the flowers stay); (b) the red paper lantern becomes white; (c) the small teacup at the left becomes red; (d) the small dish of chestnuts becomes blue; (e) the folded cloth becomes red."
   },
   {
    "q": 5,
@@ -1130,7 +1142,10 @@
     1856,
     2088
    ],
-   "edit_prompts": {}
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny squirrel on the branch becomes gray; (b) the tiny bird on the branch becomes blue; (c) the small acorn on the stump is gone; (d) the small pinecone on the stump becomes green; (e) the small red mushroom becomes yellow."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny squirrel on the branch becomes gray; (b) the tiny bird on the branch becomes blue; (c) the small acorn on the stump is gone; (d) the small pinecone on the stump becomes green; (e) the small red mushroom becomes yellow."
   }
  ],
  "thumbnail": {

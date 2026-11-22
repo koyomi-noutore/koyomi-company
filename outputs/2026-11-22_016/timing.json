@@ -5,10 +5,16 @@
    "detail": "pictures batch base",
    "sec": 154.6,
    "at": "2026-11-22T04:34:18+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit",
+   "sec": 228.8,
+   "at": "2026-11-22T09:05:32+00:00"
   }
  ],
  "total_sec_by_step": {
-  "絵": 154.6
+  "絵": 383.4
  },
- "total_sec_all": 154.6
+ "total_sec_all": 383.4
 }
