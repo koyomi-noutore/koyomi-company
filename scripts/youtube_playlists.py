@@ -28,7 +28,7 @@ PLAYLISTS = {
                "冬のイラスト（雪・こたつ・お正月など）で遊ぶ、シニアの方のための間違い探しです。\n"
                "季節を感じながら、毎日の脳トレ・頭の体操にどうぞ。"),
 }
-SEASON = {9: "autumn", 10: "autumn", 11: "autumn", 12: "winter", 1: "winter", 2: "winter"}   # 回の日付（フォルダ名）の月で決める
+SEASON = {9: "autumn", 10: "autumn", 11: "autumn", 12: "winter", 1: "winter", 2: "winter"}   # plan.json に season が無いときだけ、フォルダ名の月で決める
 
 
 def _req(method, path, tok, body=None):
@@ -86,6 +86,10 @@ def targets(folder, short):
         return []
     keys = ["short"] if short else ["long"]
     season = SEASON.get(int(m.group(2)))
+    pj = ep / "plan.json"      # 季節は題材で決める（2026-11-22 CEO：作った月ではなく題材の季節）。plan.json の season があればそれを使う
+    if pj.exists():
+        s_ = json.loads(pj.read_text(encoding="utf-8")).get("season")
+        season = {"秋": "autumn", "冬": "winter"}.get(s_, season)
     if season and not short:
         keys.append(season)
     return keys

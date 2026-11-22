@@ -1,0 +1,12 @@
+{"time": "2026-11-22T03:47:58+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 498, "output_tokens": 1430, "total_tokens": 2175, "batch": true, "key": "base1"}
+{"time": "2026-11-22T03:47:58+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 517, "output_tokens": 1473, "total_tokens": 2268, "batch": true, "key": "base2"}
+{"time": "2026-11-22T03:47:58+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 516, "output_tokens": 1472, "total_tokens": 2239, "batch": true, "key": "base3"}
+{"time": "2026-11-22T03:47:58+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 499, "output_tokens": 1449, "total_tokens": 2186, "batch": true, "key": "base4"}
+{"time": "2026-11-22T03:47:58+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 516, "output_tokens": 1357, "total_tokens": 2140, "batch": true, "key": "base5"}
+{"time": "2026-11-22T03:52:55+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 522, "output_tokens": 1427, "total_tokens": 2282, "batch": true, "key": "base1"}
+{"time": "2026-11-22T03:52:55+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 539, "output_tokens": 1581, "total_tokens": 2417, "batch": true, "key": "base2"}
+{"time": "2026-11-22T03:56:48+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 434, "output_tokens": 1276, "total_tokens": 1882, "batch": true, "key": "edit1"}
+{"time": "2026-11-22T03:56:48+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 445, "output_tokens": 1312, "total_tokens": 1983, "batch": true, "key": "edit2"}
+{"time": "2026-11-22T03:56:48+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 431, "output_tokens": 1257, "total_tokens": 1850, "batch": true, "key": "edit3"}
+{"time": "2026-11-22T03:56:48+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 449, "output_tokens": 1340, "total_tokens": 1981, "batch": true, "key": "edit4"}
+{"time": "2026-11-22T03:56:48+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 450, "output_tokens": 1303, "total_tokens": 1913, "batch": true, "key": "edit5"}
