@@ -53,20 +53,20 @@
   {
    "id": "s_ans2",
    "start": 29.900000000000002,
-   "dur": 2.91,
+   "dur": 1.72,
    "slot": 3.3,
    "fits": true,
-   "subtitle": "菊の植木鉢が、青くなりました。",
-   "voice_text": "きくのうえきばちが、あおくなりました。"
+   "subtitle": "植木鉢が、青く。",
+   "voice_text": "うえきばちが、あおく。"
   },
   {
    "id": "s_ans3",
    "start": 33.2,
-   "dur": 2.76,
+   "dur": 1.11,
    "slot": 4.1,
    "fits": true,
-   "subtitle": "お盆のお茶の色が、赤くなりました。",
-   "voice_text": "おぼんのおちゃのいろが、あかくなりました。"
+   "subtitle": "お茶が、赤く。",
+   "voice_text": "おちゃが、あかく。"
   },
   {
    "id": "s_end",
