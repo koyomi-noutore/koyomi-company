@@ -200,7 +200,7 @@ def apply(im, op, work=None):
         if op.get("keep_hue"):     # 色相の範囲（＋ circles [[cx,cy,r],...] の中）だけを塗り替える（地に模様があるとき）
             Hs = np.asarray(crop.convert("HSV")).astype(int)
             lo, hi = op["keep_hue"]
-            m = (Hs[..., 0] >= lo) & (Hs[..., 0] <= hi) & (Hs[..., 1] > 40)
+            m = (Hs[..., 0] >= lo) & (Hs[..., 0] <= hi) & (Hs[..., 1] > op.get("sat_min", 40))   # sat_min：地の色（木の机など）を外すとき高くする
             if op.get("circles"):
                 yy, xx = np.mgrid[0:crop.height, 0:crop.width]
                 inc = np.zeros_like(m)

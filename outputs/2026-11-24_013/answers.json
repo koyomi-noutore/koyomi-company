@@ -1,0 +1,712 @@
+{
+ "screen": {
+  "size": [
+   1920,
+   1080
+  ],
+  "picture_size_on_screen": [
+   960,
+   1080
+  ],
+  "safe_y_on_screen": [
+   54,
+   918
+  ],
+  "level_range_pct_of_screen_width": {
+   "やさしい": [
+    6.0,
+    8.0
+   ],
+   "初級": [
+    5.0,
+    6.0
+   ],
+   "中級": [
+    4.0,
+    5.0
+   ],
+   "上級": [
+    3.0,
+    4.0
+   ]
+  }
+ },
+ "note": "box_px・circle_px は 8:9 に切り抜いた高解像度の絵（qN_a.png、1856×2088）のピクセル。content_px はそのうち画面に出す範囲（白いふちを除いた8:9）。*_screen は画面の上での座標（右の絵は x に960を足す）。object_screen_width_pct は、変わる物そのものの幅を画面幅で割った値（難易度の基準）。object_picture_width_pct は片方の絵の幅で割った値（参考）。",
+ "questions": [
+  {
+   "q": 1,
+   "scene": "干し柿の縁側",
+   "level": "やさしい",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 2353,
+   "outside_box_max_distance_px": 11.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "笠がない",
+     "line": "柱の笠が、なくなりました。",
+     "box_px": [
+      50,
+      200,
+      360,
+      690
+     ],
+     "box_screen": [
+      26,
+      103,
+      186,
+      357
+     ],
+     "circle_a_screen": [
+      26,
+      103,
+      186,
+      357
+     ],
+     "circle_b_screen": [
+      26,
+      103,
+      186,
+      357
+     ],
+     "object_w_px": 270,
+     "object_picture_width_pct": 14.55,
+     "object_screen_width_pct": 7.27,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "ちょうちんが赤",
+     "line": "ちょうちんが、赤くなりました。",
+     "box_px": [
+      1444,
+      104,
+      1753,
+      361
+     ],
+     "box_screen": [
+      747,
+      54,
+      907,
+      187
+     ],
+     "circle_a_screen": [
+      747,
+      54,
+      907,
+      187
+     ],
+     "circle_b_screen": [
+      747,
+      54,
+      907,
+      187
+     ],
+     "object_w_px": 300,
+     "object_picture_width_pct": 16.16,
+     "object_screen_width_pct": 8.08,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "お茶のセットが青",
+     "line": "急須と湯のみが、青くなりました。",
+     "box_px": [
+      550,
+      1183,
+      865,
+      1456
+     ],
+     "box_screen": [
+      284,
+      612,
+      447,
+      753
+     ],
+     "circle_a_screen": [
+      284,
+      612,
+      447,
+      753
+     ],
+     "circle_b_screen": [
+      284,
+      612,
+      447,
+      753
+     ],
+     "object_w_px": 315,
+     "object_picture_width_pct": 16.97,
+     "object_screen_width_pct": 8.49,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 2,
+   "scene": "柿の皮むき",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 106,
+   "outside_box_max_distance_px": 7.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "湯のみが赤",
+     "line": "湯のみが、赤くなりました。",
+     "box_px": [
+      1532,
+      1077,
+      1783,
+      1428
+     ],
+     "box_screen": [
+      792,
+      557,
+      922,
+      739
+     ],
+     "circle_a_screen": [
+      792,
+      557,
+      922,
+      739
+     ],
+     "circle_b_screen": [
+      792,
+      557,
+      922,
+      739
+     ],
+     "object_w_px": 240,
+     "object_picture_width_pct": 12.93,
+     "object_screen_width_pct": 6.47,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "鉢の左の柿が緑",
+     "line": "鉢の左の柿が、緑色になりました。",
+     "box_px": [
+      532,
+      894,
+      768,
+      1136
+     ],
+     "box_screen": [
+      275,
+      462,
+      397,
+      588
+     ],
+     "circle_a_screen": [
+      275,
+      462,
+      397,
+      588
+     ],
+     "circle_b_screen": [
+      275,
+      462,
+      397,
+      588
+     ],
+     "object_w_px": 220,
+     "object_picture_width_pct": 11.85,
+     "object_screen_width_pct": 5.93,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "棚に柿",
+     "line": "棚の上に、柿がひとつ増えました。",
+     "box_px": [
+      467,
+      246,
+      650,
+      425
+     ],
+     "box_screen": [
+      242,
+      127,
+      336,
+      220
+     ],
+     "circle_a_screen": [
+      242,
+      127,
+      336,
+      220
+     ],
+     "circle_b_screen": [
+      242,
+      127,
+      336,
+      220
+     ],
+     "object_w_px": 175,
+     "object_picture_width_pct": 9.43,
+     "object_screen_width_pct": 4.71,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 3,
+   "scene": "朝市の干し柿",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 1288,
+   "outside_box_max_distance_px": 11.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "とうがらしが緑",
+     "line": "とうがらしが、緑色になりました。",
+     "box_px": [
+      1524,
+      219,
+      1777,
+      966
+     ],
+     "box_screen": [
+      788,
+      113,
+      919,
+      500
+     ],
+     "circle_a_screen": [
+      788,
+      113,
+      919,
+      500
+     ],
+     "circle_b_screen": [
+      788,
+      113,
+      919,
+      500
+     ],
+     "object_w_px": 253,
+     "object_picture_width_pct": 13.63,
+     "object_screen_width_pct": 6.82,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "干し柿が2つ緑",
+     "line": "台の干し柿が2つ、緑色になりました。",
+     "box_px": [
+      437,
+      1137,
+      708,
+      1352
+     ],
+     "box_screen": [
+      226,
+      588,
+      366,
+      699
+     ],
+     "circle_a_screen": [
+      226,
+      588,
+      366,
+      699
+     ],
+     "circle_b_screen": [
+      226,
+      588,
+      366,
+      699
+     ],
+     "object_w_px": 271,
+     "object_picture_width_pct": 14.6,
+     "object_screen_width_pct": 7.3,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "鈴が増える",
+     "line": "軒の鈴が、ひとつ増えました。",
+     "box_px": [
+      860,
+      280,
+      1062,
+      560
+     ],
+     "box_screen": [
+      445,
+      145,
+      549,
+      290
+     ],
+     "circle_a_screen": [
+      445,
+      145,
+      549,
+      290
+     ],
+     "circle_b_screen": [
+      445,
+      145,
+      549,
+      290
+     ],
+     "object_w_px": 200,
+     "object_picture_width_pct": 10.78,
+     "object_screen_width_pct": 5.39,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 4,
+   "scene": "囲炉裏端",
+   "level": "中級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 160,
+   "outside_box_max_distance_px": 9.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "ふたが赤",
+     "line": "鉄びんのふたが、赤くなりました。",
+     "box_px": [
+      798,
+      1090,
+      1073,
+      1215
+     ],
+     "box_screen": [
+      413,
+      564,
+      555,
+      628
+     ],
+     "circle_a_screen": [
+      413,
+      564,
+      555,
+      628
+     ],
+     "circle_b_screen": [
+      413,
+      564,
+      555,
+      628
+     ],
+     "object_w_px": 219,
+     "object_picture_width_pct": 11.8,
+     "object_screen_width_pct": 5.9,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "2",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "皿の干し柿が緑",
+     "line": "お皿の干し柿が、緑色になりました。",
+     "box_px": [
+      209,
+      1188,
+      488,
+      1336
+     ],
+     "box_screen": [
+      108,
+      614,
+      252,
+      691
+     ],
+     "circle_a_screen": [
+      108,
+      614,
+      252,
+      691
+     ],
+     "circle_b_screen": [
+      108,
+      614,
+      252,
+      691
+     ],
+     "object_w_px": 222,
+     "object_picture_width_pct": 11.96,
+     "object_screen_width_pct": 5.98,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "右の干し柿が緑",
+     "line": "右の干し柿が、緑色になりました。",
+     "box_px": [
+      1430,
+      165,
+      1590,
+      712
+     ],
+     "box_screen": [
+      740,
+      85,
+      822,
+      368
+     ],
+     "circle_a_screen": [
+      740,
+      85,
+      822,
+      368
+     ],
+     "circle_b_screen": [
+      740,
+      85,
+      822,
+      368
+     ],
+     "object_w_px": 160,
+     "object_picture_width_pct": 8.62,
+     "object_screen_width_pct": 4.31,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 5,
+   "scene": "柿の木の庭",
+   "level": "上級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 397,
+   "outside_box_max_distance_px": 9.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "右の柿が緑",
+     "line": "右の柿がひとつ、緑色になりました。",
+     "box_px": [
+      1536,
+      256,
+      1717,
+      434
+     ],
+     "box_screen": [
+      794,
+      132,
+      888,
+      224
+     ],
+     "circle_a_screen": [
+      794,
+      132,
+      888,
+      224
+     ],
+     "circle_b_screen": [
+      794,
+      132,
+      888,
+      224
+     ],
+     "object_w_px": 181,
+     "object_picture_width_pct": 9.75,
+     "object_screen_width_pct": 4.88,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "左の柿がない",
+     "line": "左の枝の柿が、なくなりました。",
+     "box_px": [
+      377,
+      482,
+      673,
+      737
+     ],
+     "box_screen": [
+      195,
+      249,
+      348,
+      381
+     ],
+     "circle_a_screen": [
+      195,
+      249,
+      348,
+      381
+     ],
+     "circle_b_screen": [
+      195,
+      249,
+      348,
+      381
+     ],
+     "object_w_px": 150,
+     "object_picture_width_pct": 8.08,
+     "object_screen_width_pct": 4.04,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "じょうろの取っ手が赤",
+     "line": "じょうろの取っ手が、赤くなりました。",
+     "box_px": [
+      1457,
+      1291,
+      1626,
+      1572
+     ],
+     "box_screen": [
+      754,
+      668,
+      841,
+      813
+     ],
+     "circle_a_screen": [
+      754,
+      668,
+      841,
+      813
+     ],
+     "circle_b_screen": [
+      754,
+      668,
+      841,
+      813
+     ],
+     "object_w_px": 169,
+     "object_picture_width_pct": 9.11,
+     "object_screen_width_pct": 4.55,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2263 @@
+{
+ "episode": "013",
+ "season": "秋",
+ "topics": [
+  "干し柿"
+ ],
+ "note": "第13回（干し柿）。暫定タイトルは schedule.md 2026-11-24〜11-30（CEO承認 11/21）。",
+ "youtube": {
+  "title": "【間違い探し】干し柿の縁側｜60代70代の脳トレ全5問",
+  "description_file": "description.md",
+  "title_note": "schedule.md の暫定タイトルのまま（27文字）",
+  "publish_plan": "2026-11-24（月）8:30、ショート14:00・18:00"
+ },
+ "screens": {
+  "opening_title": "干し柿の間違い探し　全5問",
+  "opening_sub": "最後は難問です",
+  "unchiku_header": "こよみ先生の 秋の小話",
+  "unchiku_slides": [
+   {
+    "until": 7,
+    "texts": [
+     [
+      "ひと休み",
+      960,
+      330,
+      130,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "こよみ先生の 季節のお話",
+      960,
+      520,
+      80,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 15,
+    "texts": [
+     [
+      "渋い柿を干すと なぜ甘い？",
+      960,
+      380,
+      104,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ]
+    ]
+   },
+   {
+    "until": 24,
+    "texts": [
+     [
+      "渋みのもとが",
+      960,
+      330,
+      110,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "溶けない形に 変わる",
+      960,
+      520,
+      100,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 30,
+    "texts": [
+     [
+      "表面の白い粉は",
+      960,
+      330,
+      110,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "柿の甘みの粉",
+      960,
+      520,
+      100,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   }
+  ],
+  "ending_titles": [
+   [
+    "15個",
+    "干し柿名人"
+   ],
+   [
+    "11〜14個",
+    "柿の木名探偵"
+   ],
+   [
+    "6〜10個",
+    "縁側のお茶飲み友だち"
+   ],
+   [
+    "0〜5個",
+    "渋柿さん"
+   ]
+  ],
+  "ending_note": "渋柿さんも、干せば甘くなります",
+  "ending_next": "次は きのうの「はざかけ」の回も どうぞ",
+  "owl_layout": "bottom",
+  "endscreen_at": 9.0,
+  "rule_overlay": {
+   "text": "右の絵で 違いを3つ さがそう",
+   "sub": "1問 90秒",
+   "sec": 8.0
+  }
+ },
+ "timeline": {
+  "total": 606.5,
+  "opening": [
+   0.0,
+   6.5
+  ],
+  "rule": [
+   6.5,
+   6.5
+  ],
+  "q_start": {
+   "1": 6.5,
+   "2": 114.5,
+   "3": 222.5,
+   "4": 360.5,
+   "5": 468.5
+  },
+  "unchiku": [
+   330.5,
+   360.5
+  ],
+  "ending": [
+   576.5,
+   606.5
+  ],
+  "card": 3.0,
+  "solve": 90.0,
+  "answer": 15.0,
+  "hint_at": null,
+  "ten_at": 80.0,
+  "ans_first": 1.6,
+  "ans_step": 4.3,
+  "solve_calls": [
+   [
+    30,
+    "あと60秒です。"
+   ],
+   [
+    60,
+    "あと30秒です。"
+   ]
+  ],
+  "go_delay": 1.8
+ },
+ "lines": {
+  "opening": [
+   {
+    "id": "op",
+    "at": 0.0,
+    "text": "干し柿の間違い探し、全5問。",
+    "face": "smile",
+    "until": 3.6
+   },
+   {
+    "id": "op2",
+    "at": 3.6,
+    "text": "最後は難問です。",
+    "face": "wink",
+    "until": 6.5
+   }
+  ],
+  "rule": [],
+  "unchiku": [
+   {
+    "id": "u1",
+    "at": 0.0,
+    "text": "ここでひと休み。こよみ先生の季節のお話です。",
+    "face": "smile",
+    "until": 7.0
+   },
+   {
+    "id": "u2",
+    "at": 7.0,
+    "text": "渋い柿を干すと、なぜ甘くなるのでしょう？",
+    "face": "think",
+    "until": 15.0
+   },
+   {
+    "id": "u3",
+    "at": 15.0,
+    "text": "答えは、渋みのもとが、干すうちに溶けない形に変わるから。",
+    "face": "surprise",
+    "until": 24.0
+   },
+   {
+    "id": "u4",
+    "at": 24.0,
+    "text": "表面の白い粉は、柿の甘みの粉です。",
+    "face": "wink",
+    "until": 30.0
+   }
+  ],
+  "ending": [
+   {
+    "id": "e1",
+    "at": 0.0,
+    "text": "これで5問、おしまいです。",
+    "face": "yay",
+    "until": 3.6
+   },
+   {
+    "id": "e2",
+    "at": 3.6,
+    "text": "15個の違い、いくつ見つかりましたか。今日の称号です。",
+    "face": "smile",
+    "until": 10.2
+   },
+   {
+    "id": "e3",
+    "at": 10.2,
+    "text": "チャンネル登録とベルで、毎朝8時半に問題が届きます。毎日の頭の体操にどうぞ。",
+    "face": "smile",
+    "until": 21.0
+   },
+   {
+    "id": "e4",
+    "at": 21.0,
+    "text": "次は、右の動画、きのうのはざかけの回もどうぞ。田んぼの絵で、もう5問楽しめますよ。",
+    "face": "wink",
+    "until": 30.0
+   }
+  ],
+  "extra": [
+   {
+    "id": "c_comment",
+    "at": 237.5,
+    "text": "見つかった数を、あとでコメントで教えてくださいね。",
+    "face": "smile",
+    "until": 244.5
+   }
+  ]
+ },
+ "readings": [
+  [
+   "干し柿の縁側",
+   "ほしがきのえんがわ"
+  ],
+  [
+   "柿の木の庭",
+   "かきのきのにわ"
+  ],
+  [
+   "柿の皮むき",
+   "かきのかわむき"
+  ],
+  [
+   "朝市の干し柿",
+   "あさいちのほしがき"
+  ],
+  [
+   "囲炉裏端",
+   "いろりばた"
+  ],
+  [
+   "干し柿",
+   "ほしがき"
+  ],
+  [
+   "鉄びん",
+   "てつびん"
+  ],
+  [
+   "急須",
+   "きゅうす"
+  ],
+  [
+   "縁側",
+   "えんがわ"
+  ],
+  [
+   "朝市",
+   "あさいち"
+  ],
+  [
+   "お皿",
+   "おさら"
+  ],
+  [
+   "柱",
+   "はしら"
+  ],
+  [
+   "笠",
+   "かさ"
+  ],
+  [
+   "鉢",
+   "はち"
+  ],
+  [
+   "柿",
+   "かき"
+  ],
+  [
+   "台",
+   "だい"
+  ],
+  [
+   "軒",
+   "のき"
+  ],
+  [
+   "赤とんぼ",
+   "あかとんぼ"
+  ],
+  [
+   "1匹",
+   "いっぴき"
+  ],
+  [
+   "お茶",
+   "おちゃ"
+  ],
+  [
+   "金色",
+   "きんいろ"
+  ],
+  [
+   "鐘",
+   "かね"
+  ],
+  [
+   "麦わら帽子",
+   "むぎわらぼうし"
+  ],
+  [
+   "色えんぴつ",
+   "いろえんぴつ"
+  ],
+  [
+   "お月さま",
+   "おつきさま"
+  ],
+  [
+   "火ばさみ",
+   "ひばさみ"
+  ],
+  [
+   "赤いふた",
+   "あかいふた"
+  ],
+  [
+   "大学いも",
+   "だいがくいも"
+  ],
+  [
+   "酉の市",
+   "とりのいち"
+  ],
+  [
+   "飛び石",
+   "とびいし"
+  ],
+  [
+   "掛け軸",
+   "かけじく"
+  ],
+  [
+   "湯のみ",
+   "ゆのみ"
+  ],
+  [
+   "切り株",
+   "きりかぶ"
+  ],
+  [
+   "石灯籠",
+   "いしどうろう"
+  ],
+  [
+   "少なく",
+   "すくなく"
+  ],
+  [
+   "向いて",
+   "むいて"
+  ],
+  [
+   "まん中",
+   "まんなか"
+  ],
+  [
+   "ゆで卵",
+   "ゆでたまご"
+  ],
+  [
+   "右はし",
+   "みぎはし"
+  ],
+  [
+   "茶色い",
+   "ちゃいろい"
+  ],
+  [
+   "花びら",
+   "はなびら"
+  ],
+  [
+   "土なべ",
+   "どなべ"
+  ],
+  [
+   "玉ねぎ",
+   "たまねぎ"
+  ],
+  [
+   "変わり",
+   "かわり"
+  ],
+  [
+   "落ち葉",
+   "おちば"
+  ],
+  [
+   "黄色い",
+   "きいろい"
+  ],
+  [
+   "大きく",
+   "おおきく"
+  ],
+  [
+   "舞って",
+   "まって"
+  ],
+  [
+   "葉っぱ",
+   "はっぱ"
+  ],
+  [
+   "魔法瓶",
+   "まほうびん"
+  ],
+  [
+   "小さな",
+   "ちいさな"
+  ],
+  [
+   "少なく",
+   "すくなく"
+  ],
+  [
+   "向いて",
+   "むいて"
+  ],
+  [
+   "第1問",
+   "だいいちもん"
+  ],
+  [
+   "第2問",
+   "だいにもん"
+  ],
+  [
+   "第3問",
+   "だいさんもん"
+  ],
+  [
+   "第4問",
+   "だいよんもん"
+  ],
+  [
+   "第5問",
+   "だいごもん"
+  ],
+  [
+   "60秒",
+   "ろくじゅうびょう"
+  ],
+  [
+   "30秒",
+   "さんじゅうびょう"
+  ],
+  [
+   "10秒",
+   "じゅうびょう"
+  ],
+  [
+   "小さく",
+   "ちいさく"
+  ],
+  [
+   "取っ手",
+   "とって"
+  ],
+  [
+   "熊手",
+   "くまで"
+  ],
+  [
+   "飾り",
+   "かざり"
+  ],
+  [
+   "白く",
+   "しろく"
+  ],
+  [
+   "掛け",
+   "かけ"
+  ],
+  [
+   "漬物",
+   "つけもの"
+  ],
+  [
+   "軍手",
+   "ぐんて"
+  ],
+  [
+   "茶色",
+   "ちゃいろ"
+  ],
+  [
+   "風鈴",
+   "ふうりん"
+  ],
+  [
+   "黒板",
+   "こくばん"
+  ],
+  [
+   "屋根",
+   "やね"
+  ],
+  [
+   "反対",
+   "はんたい"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "黄色",
+   "きいろ"
+  ],
+  [
+   "赤く",
+   "あかく"
+  ],
+  [
+   "青く",
+   "あおく"
+  ],
+  [
+   "赤く",
+   "あかく"
+  ],
+  [
+   "赤い",
+   "あかい"
+  ],
+  [
+   "筆箱",
+   "ふでばこ"
+  ],
+  [
+   "木箱",
+   "きばこ"
+  ],
+  [
+   "湯気",
+   "ゆげ"
+  ],
+  [
+   "紙袋",
+   "かみぶくろ"
+  ],
+  [
+   "消え",
+   "きえ"
+  ],
+  [
+   "付き",
+   "つき"
+  ],
+  [
+   "水筒",
+   "すいとう"
+  ],
+  [
+   "帽子",
+   "ぼうし"
+  ],
+  [
+   "上級",
+   "じょうきゅう"
+  ],
+  [
+   "中級",
+   "ちゅうきゅう"
+  ],
+  [
+   "初級",
+   "しょきゅう"
+  ],
+  [
+   "白く",
+   "しろく"
+  ],
+  [
+   "黒い",
+   "くろい"
+  ],
+  [
+   "一本",
+   "いっぽん"
+  ],
+  [
+   "高く",
+   "たかく"
+  ],
+  [
+   "短く",
+   "みじかく"
+  ],
+  [
+   "黄色",
+   "きいろ"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "青い",
+   "あおい"
+  ],
+  [
+   "白い",
+   "しろい"
+  ],
+  [
+   "後半",
+   "こうはん"
+  ],
+  [
+   "最後",
+   "さいご"
+  ],
+  [
+   "難問",
+   "なんもん"
+  ],
+  [
+   "問題",
+   "もんだい"
+  ],
+  [
+   "答え",
+   "こたえ"
+  ],
+  [
+   "少し",
+   "すこし"
+  ],
+  [
+   "大根",
+   "だいこん"
+  ],
+  [
+   "小皿",
+   "こざら"
+  ],
+  [
+   "小鳥",
+   "ことり"
+  ],
+  [
+   "向き",
+   "むき"
+  ],
+  [
+   "反対",
+   "はんたい"
+  ],
+  [
+   "一つ",
+   "ひとつ"
+  ],
+  [
+   "模様",
+   "もよう"
+  ],
+  [
+   "下駄",
+   "げた"
+  ],
+  [
+   "金属",
+   "きんぞく"
+  ],
+  [
+   "無く",
+   "なく"
+  ],
+  [
+   "増え",
+   "ふえ"
+  ],
+  [
+   "向い",
+   "むい"
+  ],
+  [
+   "金具",
+   "かなぐ"
+  ],
+  [
+   "一枚",
+   "いちまい"
+  ],
+  [
+   "真上",
+   "まうえ"
+  ],
+  [
+   "屋台",
+   "やたい"
+  ],
+  [
+   "銭湯",
+   "せんとう"
+  ],
+  [
+   "今日",
+   "きょう"
+  ],
+  [
+   "一緒",
+   "いっしょ"
+  ],
+  [
+   "山門",
+   "さんもん"
+  ],
+  [
+   "川辺",
+   "かわべ"
+  ],
+  [
+   "竹",
+   "たけ"
+  ],
+  [
+   "枝",
+   "えだ"
+  ],
+  [
+   "絵",
+   "え"
+  ],
+  [
+   "上",
+   "うえ"
+  ],
+  [
+   "緑",
+   "みどり"
+  ],
+  [
+   "机",
+   "つくえ"
+  ],
+  [
+   "数",
+   "かず"
+  ],
+  [
+   "形",
+   "かたち"
+  ],
+  [
+   "先",
+   "さき"
+  ],
+  [
+   "数",
+   "かず"
+  ],
+  [
+   "花",
+   "はな"
+  ],
+  [
+   "上",
+   "うえ"
+  ],
+  [
+   "下",
+   "した"
+  ],
+  [
+   "輪",
+   "わ"
+  ],
+  [
+   "針",
+   "はり"
+  ],
+  [
+   "牛",
+   "うし"
+  ],
+  [
+   "左",
+   "ひだり"
+  ],
+  [
+   "右",
+   "みぎ"
+  ],
+  [
+   "頭",
+   "あたま"
+  ],
+  [
+   "刃",
+   "は"
+  ],
+  [
+   "量",
+   "りょう"
+  ],
+  [
+   "苗",
+   "なえ"
+  ],
+  [
+   "丸",
+   "まる"
+  ],
+  [
+   "桶",
+   "おけ"
+  ],
+  [
+   "火",
+   "ひ"
+  ],
+  [
+   "葉",
+   "は"
+  ],
+  [
+   "緑",
+   "みどり"
+  ],
+  [
+   "色",
+   "いろ"
+  ],
+  [
+   "鍋",
+   "なべ"
+  ],
+  [
+   "畑",
+   "はたけ"
+  ],
+  [
+   "絵",
+   "え"
+  ],
+  [
+   "木の札",
+   "きのふだ"
+  ],
+  [
+   "お面",
+   "おめん"
+  ],
+  [
+   "大きな",
+   "おおきな"
+  ],
+  [
+   "銀色",
+   "ぎんいろ"
+  ],
+  [
+   "前かけ",
+   "まえかけ"
+  ],
+  [
+   "丸い",
+   "まるい"
+  ],
+  [
+   "棚",
+   "たな"
+  ],
+  [
+   "壁",
+   "かべ"
+  ],
+  [
+   "鈴",
+   "すず"
+  ],
+  [
+   "紋",
+   "もん"
+  ],
+  [
+   "星",
+   "ほし"
+  ],
+  [
+   "銀",
+   "ぎん"
+  ]
+ ],
+ "voice_override": {
+  "u1": "ここでひとやすみ。こよみせんせいの、きせつのおはなしです。",
+  "e1": "これでごもん、おしまいです。",
+  "e2": "じゅうごこのちがい、いくつみつかりましたか。きょうのしょうごうです。",
+  "e3": "チャンネルとうろくとベルで、まいあさはちじはんに、もんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。",
+  "c_comment": "みつかったかずを、あとでコメントでおしえてくださいね。",
+  "s_intro": "うえとしたのえで、ちがいがみっつあります。みつけられますか。",
+  "s_end": "いくつみつかったか、コメントでおしえてくださいね。ひだりしたから、つづきもどうぞ。",
+  "q1_go": "みぎのえのちがいを、みっつさがしてください。どうぞ。",
+  "q3_go": "つづいて、だいさんもん。どうぞ。",
+  "q5_go": "さいごのだいごもん、なんもんです。どうぞ。",
+  "op": "ほしがきのまちがいさがし、ぜんごもん。",
+  "op2": "さいごは、なんもんです。",
+  "u2": "しぶいかきをほすと、なぜあまくなるのでしょう？",
+  "u3": "こたえは、しぶみのもとが、ほすうちに、とけないかたちにかわるから。",
+  "u4": "ひょうめんのしろいこなは、かきのあまみのこなです。",
+  "e4": "つぎは、みぎのどうが、きのうのはざかけのかいもどうぞ。たんぼのえで、もうごもんたのしめますよ。"
+ },
+ "voice": {
+  "provider": "fish",
+  "reference_id": "63819275ce38440ea245ca988abf976e",
+  "model": "s1",
+  "speed": 0.88,
+  "credit": "音声：Fish Audio（AIで合成した音声です）"
+ },
+ "images": {
+  "model": "gemini-3-pro-image",
+  "size": "2K",
+  "aspect": "4:5",
+  "style": "A Japanese picture-book illustration in watercolor, but with BOLD, THICK, DARK ink outlines around every object (like a clear picture book for seniors), and CLEAR, SATURATED colors (not pale). Bright, clean background. Natural, hand-drawn, slightly rounded shapes; not geometric, not flat vector, not photorealistic. CLOSE-UP composition (not a wide landscape): the scene is seen from close, filling the picture. PORTRAIT-ISH composition, about 8:9. The painting fills the entire canvas edge to edge: no white border. No people. Absolutely no text, letters, numbers, logos or symbols anywhere. The MAIN SUBJECT named in the scene is drawn LARGE in the center of the picture. Around it, only a few other objects, each clearly separated with space around it, fully visible.\n",
+  "keep_alt": " Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text.",
+  "keep_remove": " Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object.",
+  "batch": true
+ },
+ "questions": [
+  {
+   "q": 1,
+   "scene": "干し柿の縁側",
+   "level": "やさしい",
+   "go": "右の絵の違いを、3つ探してください。どうぞ。",
+   "prompt": "Scene: close-up of the wooden veranda (engawa) of an old Japanese house in late autumn, sliding paper doors, a garden with autumn leaves. CENTER, LARGE (main subject): strings of orange dried persimmons hanging from the eaves above the veranda. Late autumn (November) only: no summer items such as wind chimes, fans with flowers, goldfish or watermelon. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top tenth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests naturally on a shelf, table, floor or ground, or hangs from a hook or nail; nothing floats in the air. Each side object is about one seventh of the picture width. Objects: (upper left, hanging from a nail on the pillar) a straw hat; (upper right) a round paper lantern hanging from the eaves; (middle left, on the veranda floor) a tray with a teapot; (middle right, on the veranda floor) a round flat bamboo basket with persimmons; (lower center, on the veranda) a pair of wooden sandals (geta) on a stone step.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "笠がない",
+     "line": "柱の笠が、なくなりました。",
+     "box": [
+      50,
+      200,
+      360,
+      690
+     ],
+     "object_w": 270,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "ちょうちんが赤",
+     "line": "ちょうちんが、赤くなりました。",
+     "box": [
+      1444,
+      104,
+      1753,
+      361
+     ],
+     "object_w": 300,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "お茶のセットが青",
+     "line": "急須と湯のみが、青くなりました。",
+     "box": [
+      550,
+      1183,
+      865,
+      1456
+     ],
+     "object_w": 315,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the round white paper lantern at the upper right becomes red; (b) the straw hat hanging on the pillar at the left is gone; (c) the small teapot on the tray at the left becomes blue; (d) the round flat bamboo basket with persimmons at the right becomes square; (e) the leftmost string of dried persimmons becomes green."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the round white paper lantern at the upper right becomes red; (b) the straw hat hanging on the pillar at the left is gone; (c) the small teapot on the tray at the left becomes blue; (d) the round flat bamboo basket with persimmons at the right becomes square; (e) the leftmost string of dried persimmons becomes green."
+  },
+  {
+   "q": 2,
+   "scene": "柿の皮むき",
+   "level": "初級",
+   "go": "では、第2問。どうぞ。",
+   "prompt": "Scene: close-up of a wooden table in an old Japanese kitchen in late autumn, preparing persimmons for drying, a window with autumn light. CENTER, LARGE (main subject): a big bowl of orange persimmons with long curled peels beside it. Late autumn (November) only: no summer items such as wind chimes, fans with flowers, goldfish or watermelon. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top tenth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests naturally on a shelf, table, floor or ground, or hangs from a hook or nail; nothing floats in the air. Each side object is about one eighth of the picture width. Objects: (upper left, on a shelf) a ceramic jar; (upper right, hanging from a hook) a bunch of string for hanging persimmons; (middle left, on the table) a cutting board; (middle right, on the table) a teacup; (lower center, on the table) a folded kitchen towel.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "湯のみが赤",
+     "line": "湯のみが、赤くなりました。",
+     "box": [
+      1532,
+      1077,
+      1783,
+      1428
+     ],
+     "object_w": 240,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "鉢の左の柿が緑",
+     "line": "鉢の左の柿が、緑色になりました。",
+     "box": [
+      532,
+      894,
+      768,
+      1136
+     ],
+     "object_w": 220,
+     "src": "p"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "棚に柿",
+     "line": "棚の上に、柿がひとつ増えました。",
+     "box": [
+      467,
+      246,
+      650,
+      425
+     ],
+     "object_w": 175,
+     "src": "p",
+     "context": "台所の棚に、干し柿にする前の柿をひとつ置いておくのは普通"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the blue-and-white teacup at the right becomes red; (b) the single persimmon on the table at the left (in front of the bowl) becomes green; (c) the coil of string hanging on the hook at the upper right becomes red; (d) the curled persimmon peel on the table is gone."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the blue-and-white teacup at the right becomes red; (b) the single persimmon on the table at the left (in front of the bowl) becomes green; (c) the coil of string hanging on the hook at the upper right becomes red; (d) the curled persimmon peel on the table is gone.",
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "src": [
+       340,
+       1370,
+       590,
+       1625
+      ],
+      "poly": [
+       [
+        576,
+        1497
+       ],
+       [
+        576,
+        1507
+       ],
+       [
+        574,
+        1517
+       ],
+       [
+        572,
+        1527
+       ],
+       [
+        569,
+        1537
+       ],
+       [
+        565,
+        1546
+       ],
+       [
+        561,
+        1555
+       ],
+       [
+        555,
+        1564
+       ],
+       [
+        549,
+        1572
+       ],
+       [
+        543,
+        1579
+       ],
+       [
+        535,
+        1586
+       ],
+       [
+        527,
+        1592
+       ],
+       [
+        519,
+        1597
+       ],
+       [
+        510,
+        1602
+       ],
+       [
+        501,
+        1606
+       ],
+       [
+        492,
+        1609
+       ],
+       [
+        482,
+        1611
+       ],
+       [
+        472,
+        1613
+       ],
+       [
+        462,
+        1613
+       ],
+       [
+        452,
+        1613
+       ],
+       [
+        442,
+        1611
+       ],
+       [
+        432,
+        1609
+       ],
+       [
+        423,
+        1606
+       ],
+       [
+        414,
+        1602
+       ],
+       [
+        405,
+        1597
+       ],
+       [
+        397,
+        1592
+       ],
+       [
+        389,
+        1586
+       ],
+       [
+        381,
+        1579
+       ],
+       [
+        375,
+        1572
+       ],
+       [
+        369,
+        1564
+       ],
+       [
+        363,
+        1555
+       ],
+       [
+        359,
+        1546
+       ],
+       [
+        355,
+        1537
+       ],
+       [
+        352,
+        1527
+       ],
+       [
+        350,
+        1517
+       ],
+       [
+        348,
+        1507
+       ],
+       [
+        348,
+        1497
+       ],
+       [
+        348,
+        1487
+       ],
+       [
+        350,
+        1477
+       ],
+       [
+        352,
+        1467
+       ],
+       [
+        355,
+        1457
+       ],
+       [
+        359,
+        1448
+       ],
+       [
+        363,
+        1439
+       ],
+       [
+        369,
+        1430
+       ],
+       [
+        375,
+        1422
+       ],
+       [
+        381,
+        1415
+       ],
+       [
+        389,
+        1408
+       ],
+       [
+        397,
+        1402
+       ],
+       [
+        405,
+        1397
+       ],
+       [
+        414,
+        1392
+       ],
+       [
+        423,
+        1388
+       ],
+       [
+        432,
+        1385
+       ],
+       [
+        442,
+        1383
+       ],
+       [
+        452,
+        1381
+       ],
+       [
+        462,
+        1381
+       ],
+       [
+        472,
+        1381
+       ],
+       [
+        482,
+        1383
+       ],
+       [
+        492,
+        1385
+       ],
+       [
+        501,
+        1388
+       ],
+       [
+        510,
+        1392
+       ],
+       [
+        519,
+        1397
+       ],
+       [
+        527,
+        1402
+       ],
+       [
+        535,
+        1408
+       ],
+       [
+        543,
+        1415
+       ],
+       [
+        549,
+        1422
+       ],
+       [
+        555,
+        1430
+       ],
+       [
+        561,
+        1439
+       ],
+       [
+        565,
+        1448
+       ],
+       [
+        569,
+        1457
+       ],
+       [
+        572,
+        1467
+       ],
+       [
+        574,
+        1477
+       ],
+       [
+        576,
+        1487
+       ]
+      ],
+      "ring": 3,
+      "dst": [
+       470,
+       250
+      ],
+      "width": 175
+     },
+     {
+      "op": "recolor",
+      "box": [
+       538,
+       900,
+       762,
+       1130
+      ],
+      "poly": [
+       [
+        750,
+        1004
+       ],
+       [
+        726,
+        1010
+       ],
+       [
+        715,
+        1014
+       ],
+       [
+        707,
+        1018
+       ],
+       [
+        701,
+        1021
+       ],
+       [
+        697,
+        1024
+       ],
+       [
+        693,
+        1026
+       ],
+       [
+        690,
+        1029
+       ],
+       [
+        687,
+        1031
+       ],
+       [
+        684,
+        1034
+       ],
+       [
+        682,
+        1037
+       ],
+       [
+        680,
+        1039
+       ],
+       [
+        678,
+        1042
+       ],
+       [
+        675,
+        1045
+       ],
+       [
+        673,
+        1047
+       ],
+       [
+        671,
+        1051
+       ],
+       [
+        668,
+        1054
+       ],
+       [
+        666,
+        1059
+       ],
+       [
+        663,
+        1064
+       ],
+       [
+        660,
+        1070
+       ],
+       [
+        657,
+        1078
+       ],
+       [
+        653,
+        1087
+       ],
+       [
+        648,
+        1120
+       ],
+       [
+        640,
+        1128
+       ],
+       [
+        631,
+        1127
+       ],
+       [
+        624,
+        1120
+       ],
+       [
+        620,
+        1101
+       ],
+       [
+        607,
+        1119
+       ],
+       [
+        599,
+        1116
+       ],
+       [
+        591,
+        1113
+       ],
+       [
+        583,
+        1110
+       ],
+       [
+        575,
+        1106
+       ],
+       [
+        568,
+        1102
+       ],
+       [
+        562,
+        1096
+       ],
+       [
+        557,
+        1088
+       ],
+       [
+        551,
+        1082
+       ],
+       [
+        547,
+        1075
+       ],
+       [
+        544,
+        1067
+       ],
+       [
+        541,
+        1059
+       ],
+       [
+        540,
+        1051
+       ],
+       [
+        540,
+        1042
+       ],
+       [
+        542,
+        1034
+       ],
+       [
+        546,
+        1025
+       ],
+       [
+        547,
+        1018
+       ],
+       [
+        549,
+        1011
+       ],
+       [
+        552,
+        1004
+       ],
+       [
+        554,
+        998
+       ],
+       [
+        557,
+        992
+       ],
+       [
+        561,
+        987
+       ],
+       [
+        564,
+        981
+       ],
+       [
+        568,
+        977
+       ],
+       [
+        572,
+        972
+       ],
+       [
+        576,
+        968
+       ],
+       [
+        580,
+        964
+       ],
+       [
+        584,
+        961
+       ],
+       [
+        587,
+        957
+       ],
+       [
+        591,
+        953
+       ],
+       [
+        594,
+        949
+       ],
+       [
+        598,
+        945
+       ],
+       [
+        602,
+        942
+       ],
+       [
+        605,
+        938
+       ],
+       [
+        610,
+        934
+       ],
+       [
+        614,
+        930
+       ],
+       [
+        619,
+        927
+       ],
+       [
+        624,
+        924
+       ],
+       [
+        630,
+        924
+       ],
+       [
+        636,
+        932
+       ],
+       [
+        641,
+        917
+       ],
+       [
+        647,
+        911
+       ],
+       [
+        654,
+        908
+       ],
+       [
+        661,
+        905
+       ],
+       [
+        669,
+        904
+       ],
+       [
+        675,
+        910
+       ],
+       [
+        672,
+        934
+       ],
+       [
+        694,
+        902
+       ],
+       [
+        701,
+        905
+       ],
+       [
+        711,
+        906
+       ],
+       [
+        721,
+        906
+       ],
+       [
+        730,
+        909
+       ],
+       [
+        740,
+        912
+       ],
+       [
+        748,
+        917
+       ],
+       [
+        749,
+        928
+       ],
+       [
+        753,
+        936
+       ],
+       [
+        756,
+        945
+       ],
+       [
+        757,
+        954
+       ],
+       [
+        757,
+        963
+       ],
+       [
+        758,
+        972
+       ],
+       [
+        760,
+        980
+       ],
+       [
+        754,
+        989
+       ],
+       [
+        755,
+        997
+       ]
+      ],
+      "hue": 58,
+      "sat": 0.8,
+      "val": 0.9
+     }
+    ]
+   },
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   }
+  },
+  {
+   "q": 3,
+   "scene": "朝市の干し柿",
+   "level": "初級",
+   "go": "続いて、第3問。どうぞ。",
+   "prompt": "Scene: close-up of a morning market stall in a mountain village in late autumn, a wooden stall with a cloth awning without letters. CENTER, LARGE (main subject): rows of dried persimmons on a wooden tray on the stall counter. Late autumn (November) only: no summer items such as wind chimes, fans with flowers, goldfish or watermelon. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top tenth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests naturally on a shelf, table, floor or ground, or hangs from a hook or nail; nothing floats in the air. Each side object is about one twelfth of the picture width. Objects: (upper left, hanging from the awning) a small bell; (upper right, hanging from the awning) a string of red chili peppers; (middle left, on the counter) a basket of mandarin oranges; (middle right, on the counter) an old balance scale; (lower center, on the counter) a stack of plain paper bags with no letters.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "とうがらしが緑",
+     "line": "とうがらしが、緑色になりました。",
+     "box": [
+      1524,
+      219,
+      1777,
+      966
+     ],
+     "object_w": 253,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "干し柿が2つ緑",
+     "line": "干し柿が2つ、緑色になりました。",
+     "box": [
+      437,
+      1137,
+      708,
+      1352
+     ],
+     "object_w": 271,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "鈴が増える",
+     "line": "軒の鈴が、ひとつ増えました。",
+     "box": [
+      860,
+      280,
+      1062,
+      560
+     ],
+     "object_w": 200,
+     "src": "p",
+     "context": "朝市の屋台の軒に、鈴がいくつか下がっているのは普通"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small bell hanging from the awning at the left becomes gold; (b) the string of red chili peppers at the right becomes green; (c) the basket of mandarin oranges at the left becomes red; (d) one white bowl on the shelf at the upper right becomes blue; (e) two dried persimmons on the tray become green."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small bell hanging from the awning at the left becomes gold; (b) the string of red chili peppers at the right becomes green; (c) the basket of mandarin oranges at the left becomes red; (d) one white bowl on the shelf at the upper right becomes blue; (e) two dried persimmons on the tray become green.",
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "src": [
+       161,
+       400,
+       327,
+       737
+      ],
+      "mask": "outline",
+      "dst": [
+       860,
+       285
+      ],
+      "width": 200
+     }
+    ]
+   },
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   }
+  },
+  {
+   "q": 4,
+   "scene": "囲炉裏端",
+   "level": "中級",
+   "go": "第4問です。じっくりどうぞ。",
+   "prompt": "Scene: close-up of a sunken hearth (irori) in an old farmhouse in late autumn, wooden floor, a kettle hanging over the fire from a hook. CENTER, LARGE (main subject): the iron kettle hanging over the glowing charcoal. Late autumn (November) only: no summer items such as wind chimes, fans with flowers, goldfish or watermelon. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top tenth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests naturally on a shelf, table, floor or ground, or hangs from a hook or nail; nothing floats in the air. Each side object is about one tenth of the picture width. Objects: (upper left, on the wall) a straw raincoat hanging from a nail; (upper right, hanging from the beam) a string of dried persimmons; (middle left, on the floor) a small plate with dried persimmons; (middle right, on the floor) a teapot and two cups; (lower center, on the hearth edge) a pair of metal fire tongs.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "ふたが赤",
+     "line": "鉄びんのふたが、赤くなりました。",
+     "box": [
+      798,
+      1090,
+      1073,
+      1215
+     ],
+     "object_w": 219,
+     "src": "2"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "皿の干し柿が緑",
+     "line": "お皿の干し柿が、緑色になりました。",
+     "box": [
+      209,
+      1188,
+      488,
+      1336
+     ],
+     "object_w": 222,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "右の干し柿が緑",
+     "line": "右の干し柿が、緑色になりました。",
+     "box": [
+      1430,
+      165,
+      1590,
+      712
+     ],
+     "object_w": 160,
+     "src": "p"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the right string of dried persimmons hanging from the beam is gone; (b) the small teapot at the right becomes red; (c) the dried persimmons on the small plate at the left become green; (d) one of the two small teacups at the right is gone; (e) the iron hook above the kettle becomes gold.",
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the two small teacups next to the teapot at the right both become red; (b) only the lid of the iron kettle hanging over the fire becomes red (the kettle body stays the same)."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the right string of dried persimmons hanging from the beam is gone; (b) the small teapot at the right becomes red; (c) the dried persimmons on the small plate at the left become green; (d) one of the two small teacups at the right is gone; (e) the iron hook above the kettle becomes gold.",
+   "program_ops": {
+    "p": [
+     {
+      "op": "recolor",
+      "box": [
+       1430,
+       104,
+       1605,
+       720
+      ],
+      "keep_hue": [
+       4,
+       36
+      ],
+      "hue": 58,
+      "sat": 0.75,
+      "val": 0.85,
+      "circles": [
+       [
+        1540,
+        206,
+        36
+       ],
+       [
+        1478,
+        209,
+        36
+       ],
+       [
+        1542,
+        270,
+        36
+       ],
+       [
+        1476,
+        316,
+        38
+       ],
+       [
+        1542,
+        360,
+        36
+       ],
+       [
+        1488,
+        400,
+        36
+       ],
+       [
+        1538,
+        466,
+        36
+       ],
+       [
+        1478,
+        479,
+        37
+       ],
+       [
+        1479,
+        552,
+        37
+       ],
+       [
+        1539,
+        586,
+        36
+       ],
+       [
+        1500,
+        670,
+        38
+       ]
+      ]
+     }
+    ]
+   },
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   }
+  },
+  {
+   "q": 5,
+   "scene": "柿の木の庭",
+   "level": "上級",
+   "go": "最後の第5問、難問です。どうぞ。",
+   "prompt": "Scene: close-up of a farmhouse garden in late autumn with a persimmon tree full of orange fruit, blue sky, a wooden fence. CENTER, LARGE (main subject): a wooden ladder leaning against the persimmon tree trunk. Late autumn (November) only: no summer items such as wind chimes, fans with flowers, goldfish or watermelon. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top tenth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests naturally on a shelf, table, floor or ground, or hangs from a hook or nail; nothing floats in the air. Each side object is about one eighth of the picture width. Objects: (upper left, on a branch) a small bird; (upper right) a cluster of orange persimmons on a branch; (middle left, on the ground) a bamboo basket full of picked persimmons; (middle right, on the ground) a watering can; (lower center, on the ground) a pair of cotton work gloves.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "右の柿が緑",
+     "line": "右の柿がひとつ、緑色になりました。",
+     "box": [
+      1536,
+      256,
+      1717,
+      434
+     ],
+     "object_w": 181,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "左の柿がない",
+     "line": "左の枝の柿が、なくなりました。",
+     "box": [
+      377,
+      482,
+      673,
+      737
+     ],
+     "object_w": 150,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "じょうろの取っ手が赤",
+     "line": "じょうろの取っ手が、赤くなりました。",
+     "box": [
+      1457,
+      1291,
+      1626,
+      1572
+     ],
+     "object_w": 169,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) one orange persimmon in the cluster at the upper right becomes green; (b) one persimmon on the branch at the left (below the bird) is gone; (c) one persimmon on top of the basket at the lower left becomes green; (d) the small bird on the branch becomes blue; (e) the handle of the watering can becomes red."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) one orange persimmon in the cluster at the upper right becomes green; (b) one persimmon on the branch at the left (below the bird) is gone; (c) one persimmon on top of the basket at the lower left becomes green; (d) the small bird on the branch becomes blue; (e) the handle of the watering can becomes red."
+  }
+ ],
+ "thumbnail": {
+  "question": 1,
+  "big_text": "秋の間違いさがし",
+  "highlight": "間違いさがし",
+  "highlight_color": [
+   255,
+   214,
+   0
+  ],
+  "big_color": [
+   255,
+   255,
+   255
+  ],
+  "band_color": [
+   25,
+   35,
+   70
+  ],
+  "big_size": 132,
+  "sub_text": "3つ見つけられる？全5問",
+  "badges": [
+   [
+    "初級〜上級",
+    [
+     176,
+     62,
+     52
+    ]
+   ]
+  ],
+  "circle_hint": false,
+  "note": "第1回と同じ型（変えた所なし）。左右に同じ絵・上に濃紺の帯で「秋の間違いさがし」・下に難易度と問いかけ。こよみ先生は入れない"
+ },
+ "shorts": [
+  {
+   "question": 3,
+   "answer_gap": 3.3,
+   "note": "1本目：第3問 朝市の干し柿・初級",
+   "title": "シニアの間違い探し｜朝市の干し柿の1問 #脳トレ #頭の体操",
+   "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
+   "end_veil": [
+    {
+     "at": 0,
+     "lines": [
+      [
+       "いくつ見つかった？",
+       120,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "コメントで教えてね",
+       104,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": false
+    },
+    {
+     "at": 3.8,
+     "lines": [
+      [
+       "続きは長い動画で",
+       116,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "左下をクリック",
+       128,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "question": 4,
+   "answer_gap": 3.3,
+   "note": "2本目：第4問 囲炉裏端・中級",
+   "title": "シニアの間違い探し｜囲炉裏端の1問 #脳トレ #頭の体操",
+   "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
+   "end_veil": [
+    {
+     "at": 0,
+     "lines": [
+      [
+       "いくつ見つかった？",
+       120,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "コメントで教えてね",
+       104,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": false
+    },
+    {
+     "at": 3.8,
+     "lines": [
+      [
+       "続きは長い動画で",
+       116,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "左下をクリック",
+       128,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": true
+    }
+   ]
+  }
+ ]
+}

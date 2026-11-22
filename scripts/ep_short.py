@@ -319,7 +319,14 @@ def render(t):
     e0 = CTX["end_at"]
     if t >= e0:
         k = min(1.0, (t - e0) / 0.5)
-        im = veil(im, [("続きは長い動画で", 116, (255, 255, 255)), ("左下をクリック", 128, (255, 214, 0))], k, arrow_t=t - e0)
+        stages = c.get("end_veil")   # 段階で文字を替える（2026-11-22 第13回：コメントの呼びかけ→左下をクリック）。[{"at": 秒, "lines": [[文字, 大きさ, [r,g,b]], ...], "arrow": bool}]
+        if stages:
+            st = [x for x in stages if t - e0 >= x["at"]][-1]
+            k2 = k if st is stages[0] else min(1.0, (t - e0 - st["at"]) / 0.3)
+            im = veil(im, [(a, b, tuple(col)) for a, b, col in st["lines"]], max(k2, 0.95 if st is not stages[0] else k2),
+                      arrow_t=(t - e0) if st.get("arrow") else None)
+        else:
+            im = veil(im, [("続きは長い動画で", 116, (255, 255, 255)), ("左下をクリック", 128, (255, 214, 0))], k, arrow_t=t - e0)
     return im
 
 
