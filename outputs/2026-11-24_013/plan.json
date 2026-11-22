@@ -1853,18 +1853,17 @@
     },
     {
      "id": 3,
-     "type": "増える",
-     "label": "鈴が増える",
-     "line": "軒の鈴が、ひとつ増えました。",
+     "type": "形",
+     "label": "鈴が丸い",
+     "line": "軒の鈴が、丸い形になりました。",
      "box": [
-      860,
-      280,
-      1062,
-      560
+      150,
+      385,
+      415,
+      712
      ],
-     "object_w": 200,
-     "src": "p",
-     "context": "朝市の屋台の軒に、鈴がいくつか下がっているのは普通"
+     "object_w": 250,
+     "src": "2"
     }
    ],
    "hint_diff": null,
@@ -1875,31 +1874,10 @@
     2088
    ],
    "edit_prompts": {
-    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small bell hanging from the awning at the left becomes gold; (b) the string of red chili peppers at the right becomes green; (c) the basket of mandarin oranges at the left becomes red; (d) one white bowl on the shelf at the upper right becomes blue; (e) two dried persimmons on the tray become green."
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small bell hanging from the awning at the left becomes gold; (b) the string of red chili peppers at the right becomes green; (c) the basket of mandarin oranges at the left becomes red; (d) one white bowl on the shelf at the upper right becomes blue; (e) two dried persimmons on the tray become green.",
+    "2": "Edit this illustration and make exactly this change and nothing else. Keep the same thick outlines, colors and style. Do not move any object. Change: the bronze bell hanging from the cord at the upper left becomes a round ball-shaped bell (a Japanese suzu) of about the same size, hanging from the same cord at the same place, in the same bronze color."
    },
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small bell hanging from the awning at the left becomes gold; (b) the string of red chili peppers at the right becomes green; (c) the basket of mandarin oranges at the left becomes red; (d) one white bowl on the shelf at the upper right becomes blue; (e) two dried persimmons on the tray become green.",
-   "program_ops": {
-    "p": [
-     {
-      "op": "copy",
-      "src": [
-       161,
-       400,
-       327,
-       737
-      ],
-      "mask": "outline",
-      "dst": [
-       860,
-       285
-      ],
-      "width": 200
-     }
-    ]
-   },
-   "program_edits": {
-    "p": "scripts/program_diffs.py"
-   }
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small bell hanging from the awning at the left becomes gold; (b) the string of red chili peppers at the right becomes green; (c) the basket of mandarin oranges at the left becomes red; (d) one white bowl on the shelf at the upper right becomes blue; (e) two dried persimmons on the tray become green."
   },
   {
    "q": 4,

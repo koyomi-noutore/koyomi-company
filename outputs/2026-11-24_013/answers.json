@@ -319,8 +319,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 1288,
-   "outside_box_max_distance_px": 11.0,
+   "outside_box_pixels_diff_gt15": 439,
+   "outside_box_max_distance_px": 10.0,
    "answers": [
     {
      "id": 1,
@@ -364,7 +364,7 @@
      "id": 2,
      "type": "色",
      "label": "干し柿が2つ緑",
-     "line": "台の干し柿が2つ、緑色になりました。",
+     "line": "干し柿が2つ、緑色になりました。",
      "box_px": [
       437,
       1137,
@@ -400,39 +400,39 @@
     },
     {
      "id": 3,
-     "type": "増える",
-     "label": "鈴が増える",
-     "line": "軒の鈴が、ひとつ増えました。",
+     "type": "形",
+     "label": "鈴が丸い",
+     "line": "軒の鈴が、丸い形になりました。",
      "box_px": [
-      860,
-      280,
-      1062,
-      560
+      150,
+      385,
+      415,
+      712
      ],
      "box_screen": [
-      445,
-      145,
-      549,
-      290
+      78,
+      199,
+      215,
+      368
      ],
      "circle_a_screen": [
-      445,
-      145,
-      549,
-      290
+      78,
+      199,
+      215,
+      368
      ],
      "circle_b_screen": [
-      445,
-      145,
-      549,
-      290
+      78,
+      199,
+      215,
+      368
      ],
-     "object_w_px": 200,
-     "object_picture_width_pct": 10.78,
-     "object_screen_width_pct": 5.39,
-     "in_level_range": true,
+     "object_w_px": 250,
+     "object_picture_width_pct": 13.47,
+     "object_screen_width_pct": 6.73,
+     "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "p",
+     "edit_version": "2",
      "made_by": "gemini",
      "note": ""
     }
