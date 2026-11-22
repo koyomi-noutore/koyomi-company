@@ -1,0 +1,16 @@
+{"time": "2026-11-22T03:12:23+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 523, "output_tokens": 1476, "total_tokens": 2322, "batch": true, "key": "base1"}
+{"time": "2026-11-22T03:12:24+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 498, "output_tokens": 1445, "total_tokens": 2177, "batch": true, "key": "base2"}
+{"time": "2026-11-22T03:12:24+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 504, "output_tokens": 1466, "total_tokens": 2234, "batch": true, "key": "base3"}
+{"time": "2026-11-22T03:12:24+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 520, "output_tokens": 1386, "total_tokens": 2200, "batch": true, "key": "base4"}
+{"time": "2026-11-22T03:12:24+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 510, "output_tokens": 1406, "total_tokens": 2185, "batch": true, "key": "base5"}
+{"time": "2026-11-22T03:16:00+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 453, "output_tokens": 1284, "total_tokens": 1886, "batch": true, "key": "edit1"}
+{"time": "2026-11-22T03:16:01+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 448, "output_tokens": 1299, "total_tokens": 1976, "batch": true, "key": "edit2"}
+{"time": "2026-11-22T03:16:01+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 444, "output_tokens": 1288, "total_tokens": 1846, "batch": true, "key": "edit3"}
+{"time": "2026-11-22T03:16:01+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 444, "output_tokens": 1261, "total_tokens": 1856, "batch": true, "key": "edit4"}
+{"time": "2026-11-22T03:16:01+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 457, "output_tokens": 1302, "total_tokens": 1908, "batch": true, "key": "edit5"}
+{"time": "2026-11-22T03:20:51+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 506, "output_tokens": 1412, "total_tokens": 2154, "batch": true, "key": "base2"}
+{"time": "2026-11-22T03:20:51+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 515, "output_tokens": 1569, "total_tokens": 2285, "batch": true, "key": "base5"}
+{"time": "2026-11-22T03:24:11+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 510, "output_tokens": 1456, "total_tokens": 2275, "batch": true, "key": "base2"}
+{"time": "2026-11-22T03:27:28+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 513, "output_tokens": 1503, "total_tokens": 2313, "batch": true, "key": "base2"}
+{"time": "2026-11-22T03:30:43+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 442, "output_tokens": 1271, "total_tokens": 1858, "batch": true, "key": "edit2"}
+{"time": "2026-11-22T03:30:43+00:00", "model": "gemini-3-pro-image", "size": "2K", "prompt_tokens": 442, "output_tokens": 1282, "total_tokens": 1852, "batch": true, "key": "edit5"}

@@ -1,0 +1,712 @@
+{
+ "screen": {
+  "size": [
+   1920,
+   1080
+  ],
+  "picture_size_on_screen": [
+   960,
+   1080
+  ],
+  "safe_y_on_screen": [
+   54,
+   918
+  ],
+  "level_range_pct_of_screen_width": {
+   "やさしい": [
+    6.0,
+    8.0
+   ],
+   "初級": [
+    5.0,
+    6.0
+   ],
+   "中級": [
+    4.0,
+    5.0
+   ],
+   "上級": [
+    3.0,
+    4.0
+   ]
+  }
+ },
+ "note": "box_px・circle_px は 8:9 に切り抜いた高解像度の絵（qN_a.png、1856×2088）のピクセル。content_px はそのうち画面に出す範囲（白いふちを除いた8:9）。*_screen は画面の上での座標（右の絵は x に960を足す）。object_screen_width_pct は、変わる物そのものの幅を画面幅で割った値（難易度の基準）。object_picture_width_pct は片方の絵の幅で割った値（参考）。",
+ "questions": [
+  {
+   "q": 1,
+   "scene": "そば屋の店先",
+   "level": "やさしい",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 558,
+   "outside_box_max_distance_px": 9.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "ちょうちんが赤",
+     "line": "ちょうちんが、赤くなりました。",
+     "box_px": [
+      316,
+      131,
+      590,
+      451
+     ],
+     "box_screen": [
+      163,
+      68,
+      305,
+      233
+     ],
+     "circle_a_screen": [
+      163,
+      68,
+      305,
+      233
+     ],
+     "circle_b_screen": [
+      163,
+      68,
+      305,
+      233
+     ],
+     "object_w_px": 264,
+     "object_picture_width_pct": 14.22,
+     "object_screen_width_pct": 7.11,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "菊が白",
+     "line": "菊の花が、白くなりました。",
+     "box_px": [
+      1495,
+      370,
+      1820,
+      640
+     ],
+     "box_screen": [
+      773,
+      191,
+      941,
+      331
+     ],
+     "circle_a_screen": [
+      773,
+      191,
+      941,
+      331
+     ],
+     "circle_b_screen": [
+      773,
+      191,
+      941,
+      331
+     ],
+     "object_w_px": 280,
+     "object_picture_width_pct": 15.09,
+     "object_screen_width_pct": 7.54,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "急須がない",
+     "line": "長いすの急須が、なくなりました。",
+     "box_px": [
+      1453,
+      1208,
+      1850,
+      1634
+     ],
+     "box_screen": [
+      752,
+      625,
+      957,
+      845
+     ],
+     "circle_a_screen": [
+      752,
+      625,
+      957,
+      845
+     ],
+     "circle_b_screen": [
+      752,
+      625,
+      957,
+      845
+     ],
+     "object_w_px": 300,
+     "object_picture_width_pct": 16.16,
+     "object_screen_width_pct": 8.08,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 2,
+   "scene": "水車小屋",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 806,
+   "outside_box_max_distance_px": 11.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "カラスが白",
+     "line": "屋根のカラスが、白くなりました。",
+     "box_px": [
+      174,
+      306,
+      530,
+      645
+     ],
+     "box_screen": [
+      90,
+      158,
+      274,
+      334
+     ],
+     "circle_a_screen": [
+      90,
+      158,
+      274,
+      334
+     ],
+     "circle_b_screen": [
+      90,
+      158,
+      274,
+      334
+     ],
+     "object_w_px": 270,
+     "object_picture_width_pct": 14.55,
+     "object_screen_width_pct": 7.27,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "おけが青",
+     "line": "右のおけが、青くなりました。",
+     "box_px": [
+      1446,
+      1280,
+      1847,
+      1689
+     ],
+     "box_screen": [
+      748,
+      662,
+      955,
+      874
+     ],
+     "circle_a_screen": [
+      748,
+      662,
+      955,
+      874
+     ],
+     "circle_b_screen": [
+      748,
+      662,
+      955,
+      874
+     ],
+     "object_w_px": 260,
+     "object_picture_width_pct": 14.01,
+     "object_screen_width_pct": 7.0,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "おけが増える",
+     "line": "小屋の前に、おけがひとつ増えました。",
+     "box_px": [
+      415,
+      1388,
+      628,
+      1648
+     ],
+     "box_screen": [
+      215,
+      718,
+      325,
+      852
+     ],
+     "circle_a_screen": [
+      215,
+      718,
+      325,
+      852
+     ],
+     "circle_b_screen": [
+      215,
+      718,
+      325,
+      852
+     ],
+     "object_w_px": 200,
+     "object_picture_width_pct": 10.78,
+     "object_screen_width_pct": 5.39,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 3,
+   "scene": "そば屋の帳場",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 183,
+   "outside_box_max_distance_px": 9.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "湯のみが赤",
+     "line": "湯のみが、赤くなりました。",
+     "box_px": [
+      191,
+      1044,
+      420,
+      1353
+     ],
+     "box_screen": [
+      99,
+      540,
+      217,
+      700
+     ],
+     "circle_a_screen": [
+      99,
+      540,
+      217,
+      700
+     ],
+     "circle_b_screen": [
+      99,
+      540,
+      217,
+      700
+     ],
+     "object_w_px": 229,
+     "object_picture_width_pct": 12.34,
+     "object_screen_width_pct": 6.17,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "植木鉢が青",
+     "line": "菊の植木鉢が、青くなりました。",
+     "box_px": [
+      1495,
+      804,
+      1822,
+      1398
+     ],
+     "box_screen": [
+      773,
+      416,
+      942,
+      723
+     ],
+     "circle_a_screen": [
+      773,
+      416,
+      942,
+      723
+     ],
+     "circle_b_screen": [
+      773,
+      416,
+      942,
+      723
+     ],
+     "object_w_px": 260,
+     "object_picture_width_pct": 14.01,
+     "object_screen_width_pct": 7.0,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "鈴が赤",
+     "line": "鈴が、赤くなりました。",
+     "box_px": [
+      1095,
+      218,
+      1325,
+      447
+     ],
+     "box_screen": [
+      566,
+      113,
+      685,
+      231
+     ],
+     "circle_a_screen": [
+      566,
+      113,
+      685,
+      231
+     ],
+     "circle_b_screen": [
+      566,
+      113,
+      685,
+      231
+     ],
+     "object_w_px": 220,
+     "object_picture_width_pct": 11.85,
+     "object_screen_width_pct": 5.93,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 4,
+   "scene": "そば屋のカウンター",
+   "level": "中級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 252,
+   "outside_box_max_distance_px": 7.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "湯のみが青",
+     "line": "赤い湯のみが、青くなりました。",
+     "box_px": [
+      252,
+      828,
+      491,
+      1165
+     ],
+     "box_screen": [
+      130,
+      428,
+      254,
+      603
+     ],
+     "circle_a_screen": [
+      130,
+      428,
+      254,
+      603
+     ],
+     "circle_b_screen": [
+      130,
+      428,
+      254,
+      603
+     ],
+     "object_w_px": 224,
+     "object_picture_width_pct": 12.07,
+     "object_screen_width_pct": 6.03,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "だるまがない",
+     "line": "棚のだるまが、なくなりました。",
+     "box_px": [
+      137,
+      110,
+      382,
+      336
+     ],
+     "box_screen": [
+      71,
+      57,
+      198,
+      174
+     ],
+     "circle_a_screen": [
+      71,
+      57,
+      198,
+      174
+     ],
+     "circle_b_screen": [
+      71,
+      57,
+      198,
+      174
+     ],
+     "object_w_px": 210,
+     "object_picture_width_pct": 11.31,
+     "object_screen_width_pct": 5.66,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "七味入れが緑",
+     "line": "七味入れが、緑色になりました。",
+     "box_px": [
+      1395,
+      867,
+      1577,
+      1211
+     ],
+     "box_screen": [
+      722,
+      448,
+      816,
+      626
+     ],
+     "circle_a_screen": [
+      722,
+      448,
+      816,
+      626
+     ],
+     "circle_b_screen": [
+      722,
+      448,
+      816,
+      626
+     ],
+     "object_w_px": 182,
+     "object_picture_width_pct": 9.81,
+     "object_screen_width_pct": 4.9,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 5,
+   "scene": "そば屋の座敷",
+   "level": "上級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 195,
+   "outside_box_max_distance_px": 8.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "つゆが赤",
+     "line": "つゆの色が、赤くなりました。",
+     "box_px": [
+      1402,
+      819,
+      1584,
+      903
+     ],
+     "box_screen": [
+      725,
+      424,
+      819,
+      467
+     ],
+     "circle_a_screen": [
+      725,
+      424,
+      819,
+      467
+     ],
+     "circle_b_screen": [
+      725,
+      424,
+      819,
+      467
+     ],
+     "object_w_px": 182,
+     "object_picture_width_pct": 9.81,
+     "object_screen_width_pct": 4.9,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "花びんが赤",
+     "line": "花びんが、赤くなりました。",
+     "box_px": [
+      310,
+      414,
+      473,
+      706
+     ],
+     "box_screen": [
+      160,
+      214,
+      245,
+      365
+     ],
+     "circle_a_screen": [
+      160,
+      214,
+      245,
+      365
+     ],
+     "circle_b_screen": [
+      160,
+      214,
+      245,
+      365
+     ],
+     "object_w_px": 163,
+     "object_picture_width_pct": 8.78,
+     "object_screen_width_pct": 4.39,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "はし置きが赤",
+     "line": "はし置きが、赤くなりました。",
+     "box_px": [
+      615,
+      1564,
+      750,
+      1678
+     ],
+     "box_screen": [
+      318,
+      809,
+      388,
+      868
+     ],
+     "circle_a_screen": [
+      318,
+      809,
+      388,
+      868
+     ],
+     "circle_b_screen": [
+      318,
+      809,
+      388,
+      868
+     ],
+     "object_w_px": 135,
+     "object_picture_width_pct": 7.27,
+     "object_screen_width_pct": 3.64,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  }
+ ]
+}
