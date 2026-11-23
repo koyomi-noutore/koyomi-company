@@ -251,14 +251,92 @@
    "detail": "audio",
    "sec": 4.0,
    "at": "2026-11-23T11:49:50+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "voice q1_card q2_card q3_card q4_card q5_card q2_go q3_go q4_go q5_go",
+   "sec": 0.0,
+   "at": "2026-11-23T11:58:01+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "voice q4_card q5_card",
+   "sec": 0.0,
+   "at": "2026-11-23T11:59:23+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "voice q4_card q5_card",
+   "sec": 0.0,
+   "at": "2026-11-23T11:59:23+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "voice q4_card q5_card",
+   "sec": 0.0,
+   "at": "2026-11-23T11:59:23+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "voice q4_card q5_card",
+   "sec": 0.0,
+   "at": "2026-11-23T11:59:23+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "voice q1_card q2_card q3_card q4_card q5_card q2_go q3_go q4_go q5_go",
+   "sec": 17.5,
+   "at": "2026-11-23T11:59:44+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "voice q4_card",
+   "sec": 1.9,
+   "at": "2026-11-23T12:00:44+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "voice",
+   "sec": 0.0,
+   "at": "2026-11-23T12:00:54+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "audio",
+   "sec": 3.5,
+   "at": "2026-11-23T12:00:57+00:00"
+  },
+  {
+   "step": "監査（数値チェック）",
+   "detail": "check",
+   "sec": 4.5,
+   "at": "2026-11-23T12:01:02+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "voice q4_card",
+   "sec": 2.1,
+   "at": "2026-11-23T12:01:09+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "voice",
+   "sec": 0.0,
+   "at": "2026-11-23T12:01:14+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "audio",
+   "sec": 3.3,
+   "at": "2026-11-23T12:01:20+00:00"
   }
  ],
  "total_sec_by_step": {
   "絵": 602.3,
-  "音声": 123.9,
+  "音声": 152.2,
   "書き出し": 280.3,
   "ショート": 101.5,
-  "監査（数値チェック）": 4.9
+  "監査（数値チェック）": 9.4
  },
- "total_sec_all": 1112.9
+ "total_sec_all": 1145.7
 }

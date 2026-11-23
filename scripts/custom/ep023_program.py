@@ -54,3 +54,52 @@ out = Image.composite(flipped, crop, alpha)
 E2 = A2.copy()
 E2.paste(out, fb[:2])
 E2.save(work / "edit_2_flip.png")
+
+# --- 差し戻し後（D-1・D-2）。元の絵（neutralize 前の作業フォルダの q{N}_a.png）から作る
+# 第2問③ 手前のおわん（木）を青くする：木の色（橙〜茶）の画素だけ色相を青へ。汁の具（白・緑・橙の小さな物）は彩度・色相で外す
+A2 = Image.open(work / "q2_a.png").convert("RGB")
+bb = (780, 1185, 1000, 1350)
+c = A2.crop(bb)
+hsv = np.asarray(c.convert("HSV")).astype(float)
+H, S, V = hsv[..., 0] * 360 / 255, hsv[..., 1] / 255, hsv[..., 2] / 255
+m = (H > 15) & (H < 45) & (S > 0.42) & (V > 0.3)
+lab, n = ndi.label(ndi.binary_opening(m, iterations=1))
+big = lab == (1 + int(np.argmax(ndi.sum(m, lab, range(1, n + 1)))))
+al = Image.fromarray((ndi.binary_dilation(big, iterations=1) * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(1.0))
+ch, cs, cv = c.convert("HSV").split()
+rec = Image.merge("HSV", (Image.new("L", c.size, int(215 / 360 * 255)), cs.point(lambda x: int(x * 0.85)), cv)).convert("RGB")
+E3 = A2.copy()
+E3.paste(Image.composite(rec, c, al), bb[:2])
+E3.save(work / "edit_2_bowl.png")
+
+# 第4問③ 青い風呂敷の結び目を左右反転する（結び目の青い布と輪郭線だけを反転。背景は周りの色で埋める）
+import cv2
+A4 = Image.open(work / "q4_a.png").convert("RGB")
+kb = (480, 1650, 700, 1736)
+cr = np.asarray(A4.crop(kb)).astype(int)
+M = ((cr[..., 2] - cr[..., 0] > 18) | (cr.sum(-1) < 270))
+M = ndi.binary_closing(M, iterations=2)
+lab_k, n_k = ndi.label(M)
+M = lab_k == (1 + int(np.argmax(ndi.sum(M, lab_k, range(1, n_k + 1)))))   # 結び目につながる一番大きなかたまりだけ
+cx = (kb[2] - kb[0]) / 2
+ys, xs = np.nonzero(M)
+mid = (xs.min() + xs.max()) / 2          # 結び目の左右の真ん中
+Mf = np.zeros_like(M)
+shift = int(round(2 * mid - (M.shape[1] - 1)))
+fl = M[:, ::-1]
+Mf = np.roll(fl, shift, axis=1)
+src = np.roll(np.asarray(A4.crop(kb))[:, ::-1], shift, axis=1)
+big = np.asarray(A4).copy()
+sub = big[kb[1]:kb[3], kb[0]:kb[2]]
+hole = (ndi.binary_dilation(M, iterations=3)).astype(np.uint8) * 255
+filled = cv2.inpaint(np.ascontiguousarray(sub), hole, 7, cv2.INPAINT_TELEA)
+alpha = ndi.binary_dilation(Mf, iterations=1).astype(float)
+alpha = np.asarray(Image.fromarray((alpha * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(0.8))) / 255.0
+keep_orig_bottom = np.ones(M.shape, bool); keep_orig_bottom[-6:, :] = False   # 下端は元の絵のまま（布の面につなぐ）
+use_fill = ndi.binary_dilation(M, iterations=3) & keep_orig_bottom
+out = sub.copy()
+out[use_fill] = filled[use_fill]
+out = (out * (1 - alpha[..., None]) + src * alpha[..., None]).astype(np.uint8)
+out[~keep_orig_bottom] = sub[~keep_orig_bottom]
+big[kb[1]:kb[3], kb[0]:kb[2]] = out
+Image.fromarray(big).save(work / "edit_4_knot.png")

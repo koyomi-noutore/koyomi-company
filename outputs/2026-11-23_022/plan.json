@@ -283,6 +283,10 @@
  },
  "readings": [
   [
+   "続いて",
+   "つづいて"
+  ],
+  [
    "地面",
    "じめん"
   ],
@@ -1196,21 +1200,17 @@
   "s_intro": "うえとしたのえで、ちがいがみっつあります。みつけられますか。",
   "s_end": "いくつみつかったか、コメントでおしえてくださいね。ひだりしたから、つづきもどうぞ。",
   "q1_go": "みぎのえのちがいを、みっつさがしてください。どうぞ。",
-  "q3_go": "つづいて、だい、さん、もん。どうぞ。",
-  "q5_go": "さいごの、だい、ご、もん、なんもんです。どうぞ。",
   "op": "さとやまの、まちがいさがし、ごもん。",
   "op2": "さいごは、なんもんです。",
   "u2": "きのこは、しょくぶつの、なかまでしょうか？",
   "u3": "こたえは、ちがいます。カビにちかい、きんるいの、なかまなんです。",
   "u4": "かさのうらの、ひだから、ほうしをとばして、ふえるんですよ。",
   "e4": "ほかにも、いろいろな、まちがいさがしがあります。もっとむずかしいもんだいに、ちょうせんしたいかたは、がめんのどうがを、クリックしてくださいね。",
-  "q4_card": "だい、よん、もん、ちゅうきゅう。くりのきの、やまみちです。",
-  "q4_go": "だい、よん、もんです。じっくり、どうぞ。",
-  "q1_card": "だい、いち、もん、やさしい。さとやまです。",
-  "q2_card": "だい、に、もん、しょきゅう。きりかぶの、きのこです。",
-  "q3_card": "だい、さん、もん、しょきゅう。さとやまの、やすみばです。",
-  "q5_card": "だい、ご、もん、じょうきゅう。きのこの、きばこです。",
-  "q2_go": "では、だい、に、もん。どうぞ。"
+  "q4_card": "4問目、ちゅうきゅう。くりの、やまみちです。",
+  "q1_card": "1問目、やさしい。さとやまです。",
+  "q2_card": "2問目、しょきゅう。きりかぶの、きのこです。",
+  "q3_card": "3問目、しょきゅう。さとやまの、やすみばです。",
+  "q5_card": "5問目、じょうきゅう。きのこの、きばこです。"
  },
  "voice": {
   "provider": "fish",
@@ -1297,7 +1297,7 @@
    "q": 2,
    "scene": "切り株のきのこ",
    "level": "初級",
-   "go": "では、第2問。どうぞ。",
+   "go": "では、2問目。どうぞ。",
    "prompt": "Scene: close-up of a quiet autumn forest in a satoyama. CENTER (main subject, medium size, about one third of the picture width): a big mossy tree stump with a cluster of brown shiitake mushrooms growing on it and a fallen log beside it. Autumn only, clear sunny day: no Halloween, harvest-festival or other dated holiday items, no winter or summer items. Do not use much red: no bright red maple leaves, no red mushrooms; use golden yellow, orange, brown and green foliage, keep the light natural daylight and the whites ordinary white. Every listed object is fully visible and rests on the ground, floor, rock, stump, log, bench or shelf, or hangs from a branch or hook; nothing floats. No letters, labels or writing anywhere. Every listed object stands on the ground, a rock, a stump or a post with its base touching it and a natural cast shadow under it: no object hovers in the air. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object is SMALL: about one twelfth of the picture width, painted in the same style as the rest of the scene, with a natural shadow, no white outline and no sticker effect. Objects: (left, at 30% height) a small squirrel sitting on a mossy rock; (right, at 30% height) a small wicker basket of chestnuts on a flat rock; (left, at 50% height) a small stone lantern standing on the ground; (right, at 50% height) a small straw hat on top of a wooden post; (left, at 70% height) a small thermos bottle standing on a small tree stump; (right, at 70% height) a small wooden bucket on the ground.",
    "answers_intro": "答えです。",
    "retries": {},
@@ -1361,7 +1361,7 @@
    "q": 3,
    "scene": "里山の休み場",
    "level": "初級",
-   "go": "続いて、第3問。どうぞ。",
+   "go": "続いて、3問目。どうぞ。",
    "prompt": "Scene: close-up of a rest spot in an autumn satoyama, golden trees behind. CENTER (main subject, medium size, about one third of the picture width): a wooden bench with a bamboo basket of mushrooms and a teapot with two cups on it, and an orange tabby cat sitting beside the basket on the bench. Autumn only, clear sunny day: no Halloween, harvest-festival or other dated holiday items, no winter or summer items. Do not use much red: no bright red maple leaves, no red mushrooms; use golden yellow, orange, brown and green foliage, keep the light natural daylight and the whites ordinary white. Every listed object is fully visible and rests on the ground, floor, rock, stump, log, bench or shelf, or hangs from a branch or hook; nothing floats. No letters, labels or writing anywhere. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object is SMALL: about one twelfth of the picture width, painted in the same style as the rest of the scene, with a natural shadow, no white outline and no sticker effect. Objects: (left, at 30% height) a small lantern hanging from a tree branch; (right, at 30% height) a small potted plant on a wooden post; (left, at 50% height) a small tin cup on a tree stump; (right, at 50% height) a small knitted cap on a flat rock; (left, at 70% height) a small folded cloth bag on the ground; (right, at 70% height) a small wooden stool on the ground.",
    "answers_intro": "答えです。",
    "retries": {},
@@ -1423,9 +1423,9 @@
   },
   {
    "q": 4,
-   "scene": "栗の木の山道",
+   "scene": "栗の山道",
    "level": "中級",
-   "go": "第4問です。じっくりどうぞ。",
+   "go": "4問目です。じっくりどうぞ。",
    "prompt": "Scene: close-up of a sunny autumn mountain path covered with fallen leaves in a satoyama, a bamboo fence on the side. CENTER (main subject, medium size, about one quarter of the picture width): a big old chestnut tree with a few chestnut burrs on the ground and a ginger cat sitting on a stone under the tree. Autumn only, clear sunny day: no Halloween, harvest-festival or other dated holiday items, no winter or summer items. Do not use much red: no bright red maple leaves, no red mushrooms; use golden yellow, orange, brown and green foliage, keep the light natural daylight and the whites ordinary white. Every listed object is fully visible and rests on the ground, floor, rock, stump, log, bench or shelf, or hangs from a branch or hook; nothing floats. No letters, labels or writing anywhere. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 25% and 65% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object is SMALL: about one fifteenth of the picture width, painted in the same style as the rest of the scene, with a natural shadow, no white outline and no sticker effect. Objects: (left, at 30% height) a small stone fox statue on a mossy rock; (right, at 30% height) a small bell hanging from a branch of the tree; (left, at 45% height) a small teacup on a tree stump; (right, at 45% height) a small clay pot on the ground; (left, at 60% height) a small acorn with a leaf on the ground; (right, at 60% height) a small pair of garden gloves lying on a flat rock.",
    "answers_intro": "答えです。",
    "retries": {
@@ -1501,7 +1501,7 @@
    "q": 5,
    "scene": "きのこの木箱",
    "level": "上級",
-   "go": "最後の第5問、難問です。どうぞ。",
+   "go": "最後の5問目、難問です。どうぞ。",
    "prompt": "Scene: close-up of the forest floor of an autumn satoyama at the foot of a big tree with golden leaves, with a bamboo fence beyond. CENTER, LARGE (main subject): a wooden crate full of brown mushrooms with no label or writing, and a gray cat sitting on a cushion right beside the crate. Autumn only, clear sunny day: no Halloween, harvest-festival or other dated holiday items, no winter or summer items. Do not use much red: no bright red maple leaves, no red mushrooms; use golden yellow, orange, brown and green foliage, keep the light natural daylight and the whites ordinary white. Every listed object is fully visible and rests on the ground, floor, rock, stump, log, bench or shelf, or hangs from a branch or hook; nothing floats. No letters, labels or writing anywhere. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is painted in the same watercolor style as the rest of the scene with a natural cast shadow, with no white outline, no white halo and no sticker effect. Each listed object is about one sixteenth, VERY SMALL of the picture width, with plenty of empty space around it. Objects: (upper left, on a bamboo fence) a tiny sparrow; (upper right, hanging from a tree branch) a tiny bell; (middle left, on a tree stump) a tiny teacup; (middle right, on the ground) a tiny single acorn with a cap; (lower left, on a flat rock) a tiny pair of reading glasses; (lower right, on the ground) a tiny knitted sock.",
    "answers_intro": "答えです。",
    "retries": {},
@@ -1662,8 +1662,8 @@
   {
    "question": 4,
    "answer_gap": 3.3,
-   "note": "2本目：第4問 栗の木の山道・中級",
-   "title": "シニアの間違い探し｜栗の木の山道の1問 #脳トレ #頭の体操",
+   "note": "2本目：第4問 栗の山道・中級",
+   "title": "シニアの間違い探し｜栗の山道の1問 #脳トレ #頭の体操",
    "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
    "end_veil": [
     {

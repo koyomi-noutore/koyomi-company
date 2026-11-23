@@ -49,7 +49,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 222,
+   "outside_box_pixels_diff_gt15": 223,
    "outside_box_max_distance_px": 10.0,
    "answers": [
     {
@@ -184,7 +184,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 394,
+   "outside_box_pixels_diff_gt15": 414,
    "outside_box_max_distance_px": 11.0,
    "answers": [
     {
@@ -266,38 +266,38 @@
     {
      "id": 3,
      "type": "色",
-     "label": "やかんが青",
-     "line": "左のやかんが、青くなりました。",
+     "label": "おわんが青",
+     "line": "手前のおわんが、青くなりました。",
      "box_px": [
-      281,
-      714,
-      474,
-      906
+      770,
+      1175,
+      1010,
+      1360
      ],
      "box_screen": [
-      145,
-      369,
-      245,
-      469
+      398,
+      608,
+      522,
+      703
      ],
      "circle_a_screen": [
-      145,
-      369,
-      245,
-      469
+      398,
+      608,
+      522,
+      703
      ],
      "circle_b_screen": [
-      145,
-      369,
-      245,
-      469
+      398,
+      608,
+      522,
+      703
      ],
-     "object_w_px": 144,
-     "object_picture_width_pct": 7.76,
-     "object_screen_width_pct": 3.88,
+     "object_w_px": 185,
+     "object_picture_width_pct": 9.97,
+     "object_screen_width_pct": 4.98,
      "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "bowl",
      "made_by": "gemini",
      "note": ""
     }
@@ -319,7 +319,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 484,
+   "outside_box_pixels_diff_gt15": 531,
    "outside_box_max_distance_px": 10.0,
    "answers": [
     {
@@ -454,8 +454,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 1028,
-   "outside_box_max_distance_px": 12.0,
+   "outside_box_pixels_diff_gt15": 849,
+   "outside_box_max_distance_px": 13.0,
    "answers": [
     {
      "id": 1,
@@ -535,39 +535,39 @@
     },
     {
      "id": 3,
-     "type": "数",
-     "label": "わんが3つから2つ",
-     "line": "重ねたわんが、3つから2つに、減りました。",
+     "type": "向き",
+     "label": "ふろしきの結び目",
+     "line": "ふろしきの結び目が、反対になりました。",
      "box_px": [
-      1367,
-      1241,
-      1610,
-      1440
+      470,
+      1645,
+      705,
+      1752
      ],
      "box_screen": [
-      707,
-      642,
-      833,
-      745
+      243,
+      851,
+      365,
+      906
      ],
      "circle_a_screen": [
-      707,
-      642,
-      833,
-      745
+      243,
+      851,
+      365,
+      906
      ],
      "circle_b_screen": [
-      707,
-      642,
-      833,
-      745
+      243,
+      851,
+      365,
+      906
      ],
-     "object_w_px": 171,
-     "object_picture_width_pct": 9.21,
-     "object_screen_width_pct": 4.61,
-     "in_level_range": true,
+     "object_w_px": 200,
+     "object_picture_width_pct": 10.78,
+     "object_screen_width_pct": 5.39,
+     "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "knot",
      "made_by": "gemini",
      "note": ""
     }
@@ -589,14 +589,14 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 269,
+   "outside_box_pixels_diff_gt15": 276,
    "outside_box_max_distance_px": 12.0,
    "answers": [
     {
      "id": 1,
      "type": "向き",
      "label": "ひしゃくの向き",
-     "line": "つるしたひしゃくの向きが、反対になりました。",
+     "line": "ひしゃくの向きが、反対になりました。",
      "box_px": [
       1490,
       590,
