@@ -88,7 +88,7 @@ def main(E, q, emph, rest, c_arg, sub="ab"):
     rows = [("A", "黒帯", emph + rest, "間違いさがし", "帯の色（AとB）"), ("B", "黄帯", emph + rest, "間違いさがし", "帯の色（AとB）"),
             ("C", "黄帯") + cdesc]
     md = [f"# 第{n}回 サムネ テストと比較の3案（サムネの標準 2026-11-23）", "",
-          f"scripts/thumb_band.py で作成。絵は第{q}問（違いのある辺りを切り出し）、赤みを抑え、色の強め1.15倍、書体 Noto Sans JP Black。"
+          f"scripts/thumb_band.py で作成。絵は第{q}問（左右とも元の絵＝違いゼロ）、赤みを抑え、色の強め1.15倍、書体 Noto Sans JP Black。"
           f"強調語は赤＋白の縁取り。第{n}回は{'奇数' if n % 2 else '偶数'}の回なので、Cは{'上の文字' if n % 2 else '下の段'}を変える。", "",
           "| 案 | 帯 | 上の文字 | 下の段 | 比べるもの |", "|---|---|---|---|---|"] + [f"| {a} | {b} | {c_} | {d} | {e} |" for a, b, c_, d, e in rows]
     (out / "README.md").write_text("\n".join(md) + "\n", encoding="utf-8")

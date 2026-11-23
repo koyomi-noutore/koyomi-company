@@ -21,7 +21,7 @@ CTA = tuple(_T["cta"]) if _T.get("cta") else None     # 登録のお願いの区
 QUESTIONS = {q: {"scene": Q["scene"], "level": Q["level"], "go": Q["go"], "hint": Q.get("hint"),
                  "answers": [d["line"] for d in Q["diffs"]], "answers_intro": Q.get("answers_intro", "答えです。")}
              for q, Q in questions().items()}
-LEVEL_NUM = {"やさしい": "第{}問、やさしい問題。", "初級": "第{}問、初級。", "中級": "第{}問、中級。", "上級": "第{}問、上級。"}
+LEVEL_NUM = {"やさしい": "{}問目、やさしい問題。", "初級": "{}問目、初級。", "中級": "{}問目、中級。", "上級": "{}問目、上級。"}
 _S = plan()["screens"]
 TITLES = [tuple(x) for x in _S["ending_titles"]]
 TITLE_NOTE = _S["ending_note"]
