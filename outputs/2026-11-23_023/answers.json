@@ -1,0 +1,712 @@
+{
+ "screen": {
+  "size": [
+   1920,
+   1080
+  ],
+  "picture_size_on_screen": [
+   960,
+   1080
+  ],
+  "safe_y_on_screen": [
+   54,
+   918
+  ],
+  "level_range_pct_of_screen_width": {
+   "やさしい": [
+    6.0,
+    8.0
+   ],
+   "初級": [
+    5.0,
+    6.0
+   ],
+   "中級": [
+    4.0,
+    5.0
+   ],
+   "上級": [
+    3.0,
+    4.0
+   ]
+  }
+ },
+ "note": "box_px・circle_px は 8:9 に切り抜いた高解像度の絵（qN_a.png、1856×2088）のピクセル。content_px はそのうち画面に出す範囲（白いふちを除いた8:9）。*_screen は画面の上での座標（右の絵は x に960を足す）。object_screen_width_pct は、変わる物そのものの幅を画面幅で割った値（難易度の基準）。object_picture_width_pct は片方の絵の幅で割った値（参考）。",
+ "questions": [
+  {
+   "q": 1,
+   "scene": "川原の芋煮鍋",
+   "level": "やさしい",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 222,
+   "outside_box_max_distance_px": 10.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "長ぐつが青",
+     "line": "左の長ぐつが、青くなりました。",
+     "box_px": [
+      117,
+      915,
+      399,
+      1209
+     ],
+     "box_screen": [
+      61,
+      473,
+      206,
+      625
+     ],
+     "circle_a_screen": [
+      61,
+      473,
+      206,
+      625
+     ],
+     "circle_b_screen": [
+      61,
+      473,
+      206,
+      625
+     ],
+     "object_w_px": 239,
+     "object_picture_width_pct": 12.88,
+     "object_screen_width_pct": 6.44,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "やかんがない",
+     "line": "右上のやかんが、なくなりました。",
+     "box_px": [
+      1414,
+      370,
+      1714,
+      695
+     ],
+     "box_screen": [
+      731,
+      191,
+      887,
+      359
+     ],
+     "circle_a_screen": [
+      731,
+      191,
+      887,
+      359
+     ],
+     "circle_b_screen": [
+      731,
+      191,
+      887,
+      359
+     ],
+     "object_w_px": 264,
+     "object_picture_width_pct": 14.22,
+     "object_screen_width_pct": 7.11,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "腰かけが青",
+     "line": "右の腰かけが、青くなりました。",
+     "box_px": [
+      1440,
+      945,
+      1800,
+      1270
+     ],
+     "box_screen": [
+      745,
+      489,
+      931,
+      657
+     ],
+     "circle_a_screen": [
+      745,
+      489,
+      931,
+      657
+     ],
+     "circle_b_screen": [
+      745,
+      489,
+      931,
+      657
+     ],
+     "object_w_px": 305,
+     "object_picture_width_pct": 16.43,
+     "object_screen_width_pct": 8.22,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "stool",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 2,
+   "scene": "川原の昼ごはん",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 394,
+   "outside_box_max_distance_px": 11.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "向き",
+     "label": "クーラーボックスの向き",
+     "line": "クーラーボックスが、反対向きになりました。",
+     "box_px": [
+      1430,
+      1030,
+      1800,
+      1375
+     ],
+     "box_screen": [
+      740,
+      533,
+      931,
+      711
+     ],
+     "circle_a_screen": [
+      740,
+      533,
+      931,
+      711
+     ],
+     "circle_b_screen": [
+      740,
+      533,
+      931,
+      711
+     ],
+     "object_w_px": 283,
+     "object_picture_width_pct": 15.25,
+     "object_screen_width_pct": 7.62,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "flip",
+     "made_by": "program",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "いすが青",
+     "line": "いすの座るところが、青くなりました。",
+     "box_px": [
+      93,
+      1080,
+      435,
+      1416
+     ],
+     "box_screen": [
+      48,
+      559,
+      225,
+      732
+     ],
+     "circle_a_screen": [
+      48,
+      559,
+      225,
+      732
+     ],
+     "circle_b_screen": [
+      48,
+      559,
+      225,
+      732
+     ],
+     "object_w_px": 290,
+     "object_picture_width_pct": 15.62,
+     "object_screen_width_pct": 7.81,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "やかんが青",
+     "line": "左のやかんが、青くなりました。",
+     "box_px": [
+      281,
+      714,
+      474,
+      906
+     ],
+     "box_screen": [
+      145,
+      369,
+      245,
+      469
+     ],
+     "circle_a_screen": [
+      145,
+      369,
+      245,
+      469
+     ],
+     "circle_b_screen": [
+      145,
+      369,
+      245,
+      469
+     ],
+     "object_w_px": 144,
+     "object_picture_width_pct": 7.76,
+     "object_screen_width_pct": 3.88,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 3,
+   "scene": "里芋とお野菜",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 484,
+   "outside_box_max_distance_px": 10.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "水筒がない",
+     "line": "切り株の水筒が、なくなりました。",
+     "box_px": [
+      95,
+      1019,
+      317,
+      1419
+     ],
+     "box_screen": [
+      49,
+      527,
+      164,
+      734
+     ],
+     "circle_a_screen": [
+      49,
+      527,
+      164,
+      734
+     ],
+     "circle_b_screen": [
+      49,
+      527,
+      164,
+      734
+     ],
+     "object_w_px": 247,
+     "object_picture_width_pct": 13.31,
+     "object_screen_width_pct": 6.65,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "入れ替え",
+     "label": "かごの中が柿に",
+     "line": "かごの中が、栗から、柿に、変わりました。",
+     "box_px": [
+      1452,
+      1299,
+      1766,
+      1521
+     ],
+     "box_screen": [
+      751,
+      672,
+      913,
+      787
+     ],
+     "circle_a_screen": [
+      751,
+      672,
+      913,
+      787
+     ],
+     "circle_b_screen": [
+      751,
+      672,
+      913,
+      787
+     ],
+     "object_w_px": 215,
+     "object_picture_width_pct": 11.58,
+     "object_screen_width_pct": 5.79,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "コップが黄色",
+     "line": "つるしたコップが、黄色くなりました。",
+     "box_px": [
+      1447,
+      617,
+      1633,
+      836
+     ],
+     "box_screen": [
+      748,
+      319,
+      845,
+      432
+     ],
+     "circle_a_screen": [
+      748,
+      319,
+      845,
+      432
+     ],
+     "circle_b_screen": [
+      748,
+      319,
+      845,
+      432
+     ],
+     "object_w_px": 153,
+     "object_picture_width_pct": 8.24,
+     "object_screen_width_pct": 4.12,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 4,
+   "scene": "川原の秋景色",
+   "level": "中級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 1028,
+   "outside_box_max_distance_px": 12.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "向き",
+     "label": "ひしゃくの向き",
+     "line": "ひしゃくの向きが、反対になりました。",
+     "box_px": [
+      128,
+      924,
+      708,
+      1244
+     ],
+     "box_screen": [
+      66,
+      478,
+      366,
+      643
+     ],
+     "circle_a_screen": [
+      66,
+      478,
+      366,
+      643
+     ],
+     "circle_b_screen": [
+      66,
+      478,
+      366,
+      643
+     ],
+     "object_w_px": 380,
+     "object_picture_width_pct": 20.47,
+     "object_screen_width_pct": 10.24,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "大きさ",
+     "label": "ひょうたんが小さい",
+     "line": "つるしたひょうたんが、小さくなりました。",
+     "box_px": [
+      1230,
+      880,
+      1420,
+      1170
+     ],
+     "box_screen": [
+      636,
+      455,
+      734,
+      605
+     ],
+     "circle_a_screen": [
+      636,
+      455,
+      734,
+      605
+     ],
+     "circle_b_screen": [
+      636,
+      455,
+      734,
+      605
+     ],
+     "object_w_px": 148,
+     "object_picture_width_pct": 7.97,
+     "object_screen_width_pct": 3.99,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "数",
+     "label": "わんが3つから2つ",
+     "line": "重ねたわんが、3つから2つに、減りました。",
+     "box_px": [
+      1367,
+      1241,
+      1610,
+      1440
+     ],
+     "box_screen": [
+      707,
+      642,
+      833,
+      745
+     ],
+     "circle_a_screen": [
+      707,
+      642,
+      833,
+      745
+     ],
+     "circle_b_screen": [
+      707,
+      642,
+      833,
+      745
+     ],
+     "object_w_px": 171,
+     "object_picture_width_pct": 9.21,
+     "object_screen_width_pct": 4.61,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 5,
+   "scene": "夕方の川原",
+   "level": "上級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 269,
+   "outside_box_max_distance_px": 12.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "向き",
+     "label": "ひしゃくの向き",
+     "line": "つるしたひしゃくの向きが、反対になりました。",
+     "box_px": [
+      1490,
+      590,
+      1710,
+      845
+     ],
+     "box_screen": [
+      771,
+      305,
+      884,
+      437
+     ],
+     "circle_a_screen": [
+      771,
+      305,
+      884,
+      437
+     ],
+     "circle_b_screen": [
+      771,
+      305,
+      884,
+      437
+     ],
+     "object_w_px": 165,
+     "object_picture_width_pct": 8.89,
+     "object_screen_width_pct": 4.45,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "わんが青",
+     "line": "石の上のわんが、青くなりました。",
+     "box_px": [
+      151,
+      1037,
+      379,
+      1209
+     ],
+     "box_screen": [
+      78,
+      536,
+      196,
+      625
+     ],
+     "circle_a_screen": [
+      78,
+      536,
+      196,
+      625
+     ],
+     "circle_b_screen": [
+      78,
+      536,
+      196,
+      625
+     ],
+     "object_w_px": 149,
+     "object_picture_width_pct": 8.03,
+     "object_screen_width_pct": 4.01,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "栗が2つ",
+     "line": "栗が、ひとつから、ふたつに、ふえました。",
+     "box_px": [
+      1443,
+      1245,
+      1772,
+      1448
+     ],
+     "box_screen": [
+      746,
+      644,
+      917,
+      749
+     ],
+     "circle_a_screen": [
+      746,
+      644,
+      917,
+      749
+     ],
+     "circle_b_screen": [
+      746,
+      644,
+      917,
+      749
+     ],
+     "object_w_px": 164,
+     "object_picture_width_pct": 8.84,
+     "object_screen_width_pct": 4.42,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  }
+ ]
+}

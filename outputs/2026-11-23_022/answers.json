@@ -35,7 +35,7 @@
  "questions": [
   {
    "q": 1,
-   "scene": "里山の入り口",
+   "scene": "里山",
    "level": "やさしい",
    "hint_diff": null,
    "image_size": [
@@ -184,8 +184,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 529,
-   "outside_box_max_distance_px": 9.0,
+   "outside_box_pixels_diff_gt15": 833,
+   "outside_box_max_distance_px": 10.0,
    "answers": [
     {
      "id": 1,
@@ -196,25 +196,25 @@
       350,
       300,
       670,
-      900
+      880
      ],
      "box_screen": [
       181,
       155,
       347,
-      466
+      455
      ],
      "circle_a_screen": [
       181,
       155,
       347,
-      466
+      455
      ],
      "circle_b_screen": [
       181,
       155,
       347,
-      466
+      455
      ],
      "object_w_px": 260,
      "object_picture_width_pct": 14.01,
@@ -270,25 +270,25 @@
      "line": "岩の上のりすが、いなくなりました。",
      "box_px": [
       170,
-      1070,
+      1090,
       420,
       1310
      ],
      "box_screen": [
       88,
-      553,
+      564,
       217,
       678
      ],
      "circle_a_screen": [
       88,
-      553,
+      564,
       217,
       678
      ],
      "circle_b_screen": [
       88,
-      553,
+      564,
       217,
       678
      ],
@@ -305,7 +305,7 @@
   },
   {
    "q": 3,
-   "scene": "里山の休けい所",
+   "scene": "里山の休み場",
    "level": "初級",
    "hint_diff": null,
    "image_size": [
@@ -454,7 +454,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 354,
+   "outside_box_pixels_diff_gt15": 355,
    "outside_box_max_distance_px": 12.0,
    "answers": [
     {
@@ -535,39 +535,39 @@
     },
     {
      "id": 3,
-     "type": "増える",
-     "label": "どんぐりが3つ",
-     "line": "どんぐりが、ふたつから、みっつに、ふえました。",
+     "type": "なくなる",
+     "label": "植木鉢がない",
+     "line": "地面の植木鉢が、なくなりました。",
      "box_px": [
-      370,
-      1640,
-      760,
-      1920
+      1000,
+      1170,
+      1410,
+      1510
      ],
      "box_screen": [
-      191,
-      848,
-      393,
-      993
+      517,
+      605,
+      729,
+      781
      ],
      "circle_a_screen": [
-      191,
-      848,
-      393,
-      993
+      517,
+      605,
+      729,
+      781
      ],
      "circle_b_screen": [
-      191,
-      848,
-      393,
-      993
+      517,
+      605,
+      729,
+      781
      ],
-     "object_w_px": 190,
-     "object_picture_width_pct": 10.24,
-     "object_screen_width_pct": 5.12,
+     "object_w_px": 250,
+     "object_picture_width_pct": 13.47,
+     "object_screen_width_pct": 6.73,
      "in_level_range": false,
-     "in_safe_y": false,
-     "edit_version": "2",
+     "in_safe_y": true,
+     "edit_version": "3",
      "made_by": "gemini",
      "note": ""
     }
@@ -575,7 +575,7 @@
   },
   {
    "q": 5,
-   "scene": "きのこの木箱と猫",
+   "scene": "きのこの木箱",
    "level": "上級",
    "hint_diff": null,
    "image_size": [
@@ -595,37 +595,37 @@
     {
      "id": 1,
      "type": "向き",
-     "label": "小鳥の向き",
-     "line": "小鳥の向きが、反対になりました。",
+     "label": "カップの持ち手",
+     "line": "切り株のカップの持ち手が、反対になりました。",
      "box_px": [
-      120,
-      40,
-      430,
-      230
+      110,
+      820,
+      460,
+      1030
      ],
      "box_screen": [
-      62,
-      21,
-      222,
-      119
+      57,
+      424,
+      238,
+      533
      ],
      "circle_a_screen": [
-      62,
-      21,
-      222,
-      119
+      57,
+      424,
+      238,
+      533
      ],
      "circle_b_screen": [
-      62,
-      21,
-      222,
-      119
+      57,
+      424,
+      238,
+      533
      ],
-     "object_w_px": 210,
-     "object_picture_width_pct": 11.31,
-     "object_screen_width_pct": 5.66,
+     "object_w_px": 250,
+     "object_picture_width_pct": 13.47,
+     "object_screen_width_pct": 6.73,
      "in_level_range": false,
-     "in_safe_y": false,
+     "in_safe_y": true,
      "edit_version": "flip",
      "made_by": "program",
      "note": "AIではなくプログラムで左右反転（同じ場所で向きだけ変える）"

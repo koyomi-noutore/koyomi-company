@@ -191,7 +191,7 @@
     "あと30秒です。"
    ]
   ],
-  "go_delay": 1.8
+  "go_delay": 2.4
  },
  "lines": {
   "opening": [
@@ -200,11 +200,11 @@
     "at": 0.0,
     "text": "芋煮会の間違い探し、全5問。",
     "face": "smile",
-    "until": 3.9
+    "until": 4.4
    },
    {
     "id": "op2",
-    "at": 3.9,
+    "at": 4.4,
     "text": "最後は難問です。",
     "face": "wink",
     "until": 6.5
@@ -222,7 +222,7 @@
    {
     "id": "u2",
     "at": 7.0,
-    "text": "芋煮の味は、土地によって、ちがうのをご存じですか？",
+    "text": "芋煮は、土地によって、味がちがうのをご存じですか？",
     "face": "think",
     "until": 15.0
    },
@@ -282,6 +282,26 @@
   ]
  },
  "readings": [
+  [
+   "反対向き",
+   "はんたいむき"
+  ],
+  [
+   "座る",
+   "すわる"
+  ],
+  [
+   "重ね",
+   "かさね"
+  ],
+  [
+   "減り",
+   "へり"
+  ],
+  [
+   "ひょうたん",
+   "ひょうたん"
+  ],
   [
    "芋煮会",
    "いもにかい"
@@ -1184,7 +1204,7 @@
   "q5_go": "さいごの、だい、ご、もん、なんもんです。どうぞ。",
   "op": "いもにかいの、まちがいさがし、ぜん、ごもん。",
   "op2": "さいごは、なんもんです。",
-  "u2": "いものにのあじは、とちによって、ちがうのを、ごぞんじですか？",
+  "u2": "いもには、とちによって、あじが、ちがうのを、ごぞんじですか？",
   "u3": "やまがたは、しょうゆあじでぎゅうにく、みやぎは、みそあじでぶたにくが、よくしられています。",
   "u4": "ごかていごとのあじも、それぞれで、たのしいですね。",
   "e4": "ほかにも、いろいろな、まちがいさがしがあります。もっとむずかしいもんだいに、ちょうせんしたいかたは、がめんのどうがを、クリックしてくださいね。",
@@ -1194,7 +1214,22 @@
   "q2_card": "だい、に、もん、しょきゅう。かわらのひるごはんです。",
   "q3_card": "だい、さん、もん、しょきゅう。さといもとおやさいです。",
   "q4_card": "だい、よん、もん、ちゅうきゅう。かわらのあきげしきです。",
-  "q5_card": "だい、ご、もん、じょうきゅう。ゆうがたのかわらです。"
+  "q5_card": "だい、ご、もん、じょうきゅう。ゆうがたのかわらです。",
+  "q1_ans1": "ひだりの、ながぐつが、あおくなりました。",
+  "q1_ans2": "みぎうえの、やかんが、なくなりました。",
+  "q1_ans3": "みぎの、こしかけが、あおくなりました。",
+  "q2_ans1": "クーラーボックスが、はんたいむきに、なりました。",
+  "q2_ans2": "いすの、すわるところが、あおくなりました。",
+  "q2_ans3": "ひだりの、やかんが、あおくなりました。",
+  "q3_ans1": "きりかぶの、すいとうが、なくなりました。",
+  "q3_ans2": "かごのなかが、くりから、かきに、かわりました。",
+  "q3_ans3": "つるした、コップが、きいろく、なりました。",
+  "q4_ans1": "ひしゃくの、むきが、はんたいに、なりました。",
+  "q4_ans2": "つるした、ひょうたんが、ちいさくなりました。",
+  "q4_ans3": "わんが、みっつから、ふたつに、へりました。",
+  "q5_ans1": "ひしゃくの、むきが、はんたいに、なりました。",
+  "q5_ans2": "いしのうえの、わんが、あおくなりました。",
+  "q5_ans3": "くりが、ひとつから、ふたつに、ふえました。"
  },
  "voice": {
   "provider": "fish",
@@ -1221,7 +1256,50 @@
    "prompt": "Scene: close-up of a sunny autumn gravel riverbank in Japan for an imoni (taro stew) picnic, a calm river and golden ginkgo and maple trees in the background, blue sky. CENTER, LARGE (main subject): a huge black iron pot full of steaming taro stew sitting firmly on a ring of river stones with a small fire under it, a big wooden ladle in the pot, and a neat stack of firewood beside it. Autumn only, sunny day: no Christmas, New Year's Eve or other dated holiday items, no summer items. Mostly yellow and orange autumn leaves, only a little red. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, rock, shelf, table or counter, or hangs from a branch; nothing floats. Each listed object is about one fourteenth, VERY SMALL of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. No people. Do not use much red: keep the light natural daylight and the whites ordinary white. Objects: (upper left, hanging from a low branch of a ginkgo tree) a small woven bamboo basket; (upper right, on a big flat rock) a small iron kettle with a lid; (middle left, on the gravel) a small pair of yellow rubber boots; (middle right, on the gravel) a small wooden stool; (lower left, on the gravel) a small folded picnic blanket with green checks; (lower right, on the gravel) a small wooden bucket.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "長ぐつが青",
+     "line": "左の長ぐつが、青くなりました。",
+     "box": [
+      117,
+      915,
+      399,
+      1209
+     ],
+     "object_w": 239,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "やかんがない",
+     "line": "右上のやかんが、なくなりました。",
+     "box": [
+      1414,
+      370,
+      1714,
+      695
+     ],
+     "object_w": 264,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "腰かけが青",
+     "line": "右の腰かけが、青くなりました。",
+     "box": [
+      1440,
+      945,
+      1800,
+      1270
+     ],
+     "object_w": 305,
+     "src": "stool"
+    }
+   ],
    "hint_diff": null,
    "content_box": [
     0,
@@ -1244,19 +1322,51 @@
    "go": "では、第2問。どうぞ。",
    "prompt": "Scene: close-up of a sunny autumn riverside picnic spot in Japan, golden trees and a calm river behind, the whole ground fully painted with gravel, grass tufts and fallen yellow leaves (no blank white paper areas anywhere). CENTER (main subject, medium size, about one third of the picture width): a long wooden picnic table with a plain cloth, several wooden bowls of steaming taro stew on it and a stack of empty wooden bowls. Autumn only, sunny day: no Christmas, New Year's Eve or other dated holiday items, no summer items. Mostly yellow and orange autumn leaves, only a little red. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the ground, floor, table, rock, stump or hangs from a branch or hook; nothing floats. Each listed object is SMALL: about one sixteenth of the picture width. No letters, labels or writing anywhere. No people. Do not use much red: keep the light natural daylight and the whites ordinary white. Objects: (left, at 30% height, on a flat rock) a small iron kettle with a spout pointing to the left; (right, at 30% height, hanging from a branch) a small string of dried persimmons; (left, at 50% height, on the gravel) a small folding chair with a green seat; (right, at 50% height, on the gravel) a small white cooler box; (left, at 70% height, on the grass) a small wicker basket of chestnuts; (right, at 70% height, on the grass) a small pair of work gloves.",
    "answers_intro": "答えです。",
-   "retries": {
-    "2": {
-     "crop": [
-      1320,
-      1713,
-      1820,
-      2088
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "向き",
+     "label": "クーラーボックスの向き",
+     "line": "クーラーボックスが、反対向きになりました。",
+     "box": [
+      1430,
+      1030,
+      1800,
+      1375
      ],
-     "aspect": "4:3",
-     "prompt": "Edit this picture: it shows a pair of cream-colored work gloves lying on grass and fallen leaves. Remove only the glove on the left side completely and fill that spot with grass and fallen leaves exactly like the surroundings, leaving no ghost, outline or smudge. Keep the other glove and everything else exactly the same, same outlines and colors. No text."
+     "object_w": 283,
+     "src": "flip"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "いすが青",
+     "line": "いすの座るところが、青くなりました。",
+     "box": [
+      93,
+      1080,
+      435,
+      1416
+     ],
+     "object_w": 290,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "やかんが青",
+     "line": "左のやかんが、青くなりました。",
+     "box": [
+      281,
+      714,
+      474,
+      906
+     ],
+     "object_w": 144,
+     "src": "1"
     }
-   },
-   "diffs": [],
+   ],
    "hint_diff": null,
    "content_box": [
     0,
@@ -1280,7 +1390,51 @@
    "prompt": "Scene: close-up of a vegetable preparation corner at a sunny autumn riverside picnic in Japan, golden trees and a calm river behind. CENTER (main subject, medium size, about one third of the picture width): a wooden table with a big wooden crate of brown taro roots (satoimo), a bundle of green onions and a cutting board with a knife. Autumn only, sunny day: no Christmas, New Year's Eve or other dated holiday items, no summer items. Mostly yellow and orange autumn leaves, only a little red. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the ground, floor, table, rock, stump or hangs from a branch or hook; nothing floats. Each listed object is SMALL: about one sixteenth of the picture width. No letters, labels or writing anywhere. No people. Do not use much red: keep the light natural daylight and the whites ordinary white. Objects: (left, at 30% height, on a tree stump) a small green thermos flask; (right, at 30% height, hanging from a hook on a wooden post) a small tin cup; (left, at 50% height, on a wooden bench) a small bowl of chopped green onions; (right, at 50% height, on the grass) a small basket of chestnuts; (left, at 70% height, on the grass) a small stack of firewood; (right, at 70% height, on a flat rock) a small teacup.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "水筒がない",
+     "line": "切り株の水筒が、なくなりました。",
+     "box": [
+      95,
+      1019,
+      317,
+      1419
+     ],
+     "object_w": 247,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "入れ替え",
+     "label": "かごの中が柿に",
+     "line": "かごの中が、栗から、柿に、変わりました。",
+     "box": [
+      1452,
+      1299,
+      1766,
+      1521
+     ],
+     "object_w": 215,
+     "src": "1",
+     "context": "秋の川原のごちそう。栗も柿も秋の味で、同じかごに盛っておくのは自然（かごも置かれ方も同じ）"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "コップが黄色",
+     "line": "つるしたコップが、黄色くなりました。",
+     "box": [
+      1447,
+      617,
+      1633,
+      836
+     ],
+     "object_w": 153,
+     "src": "1"
+    }
+   ],
    "hint_diff": null,
    "content_box": [
     0,
@@ -1301,7 +1455,50 @@
    "prompt": "Scene: close-up of an autumn riverbank view in Japan, pampas grass plumes, a shallow river with stones, golden ginkgo and orange maple trees, gravel ground. CENTER (main subject, medium size, about one quarter of the picture width): a big golden ginkgo tree with a flat river-stone bench under it and a striped plain cushion on the bench. Autumn only, sunny day: no Christmas, New Year's Eve or other dated holiday items, no summer items. Mostly yellow and orange autumn leaves, only a little red. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 25% and 65% of the picture height (never at the very top or near the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests naturally on the ground, a rock or a stump, or hangs from a branch, with a natural shadow, painted in the same style as the rest of the scene, with no white outline and no sticker effect; nothing floats. Each listed object is SMALL: only about one fifteenth of the picture width. No letters, labels or writing anywhere. No people. Do not use much red: keep the light natural daylight and the whites ordinary white. Objects: (left, at 30% height, on a mossy rock) a small wooden ladle lying on the rock with its scoop pointing to the left; (right, at 30% height, hanging from a branch) a small dried gourd; (left, at 45% height, on a tree stump) a small teacup; (right, at 45% height, on the gravel) a small stack of three wooden bowls; (left, at 60% height, on a flat rock) a small bundle wrapped in a blue cloth with stripes; (right, at 60% height, on a flat rock) a small lunch box.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "向き",
+     "label": "ひしゃくの向き",
+     "line": "ひしゃくの向きが、反対になりました。",
+     "box": [
+      128,
+      924,
+      708,
+      1244
+     ],
+     "object_w": 380,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "大きさ",
+     "label": "ひょうたんが小さい",
+     "line": "つるしたひょうたんが、小さくなりました。",
+     "box": [
+      1230,
+      880,
+      1420,
+      1170
+     ],
+     "object_w": 148,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "数",
+     "label": "わんが3つから2つ",
+     "line": "わんが、3つから2つに、減りました。",
+     "box": [
+      1367,
+      1241,
+      1610,
+      1440
+     ],
+     "object_w": 171,
+     "src": "1"
+    }
+   ],
    "hint_diff": null,
    "content_box": [
     0,
@@ -1322,7 +1519,51 @@
    "prompt": "Scene: close-up of a golden-hour autumn riverside picnic spot in Japan, gravel ground, a wide picnic mat, yellow trees and a low tree branch, calm river beyond. CENTER, LARGE (main subject): a big iron pot with a lid on a stone stove next to a stack of wooden bowls on the picnic mat. Autumn only, sunny day: no Christmas, New Year's Eve or other dated holiday items, no summer items. Mostly yellow and orange autumn leaves, only a little red. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, mat, rock or table, or hangs from a branch; nothing floats. Each listed object is about one twenty-second, TINY, of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. No people. Do not use much red: keep the light natural daylight and the whites ordinary white. Objects: (upper left, on a tree branch) a tiny sparrow; (upper right, hanging from a branch) a tiny bamboo ladle; (middle left, on a flat rock) a tiny wooden bowl; (middle right, on the gravel) a tiny single chestnut in its shell; (lower left, on the picnic mat) a tiny spoon; (lower right, on the gravel) a tiny pair of straw sandals.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "向き",
+     "label": "ひしゃくの向き",
+     "line": "ひしゃくの向きが、反対になりました。",
+     "box": [
+      1490,
+      590,
+      1710,
+      845
+     ],
+     "object_w": 165,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "わんが青",
+     "line": "石の上のわんが、青くなりました。",
+     "box": [
+      151,
+      1037,
+      379,
+      1209
+     ],
+     "object_w": 149,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "栗が2つ",
+     "line": "栗が、ひとつから、ふたつに、ふえました。",
+     "box": [
+      1443,
+      1245,
+      1772,
+      1448
+     ],
+     "object_w": 164,
+     "src": "1",
+     "context": "秋の川原の石ころの上に、栗のいがが2つ並んで落ちているのは自然（落ちている栗がもう1つあるだけ）"
+    }
+   ],
    "hint_diff": null,
    "content_box": [
     0,

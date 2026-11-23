@@ -283,6 +283,14 @@
  },
  "readings": [
   [
+   "地面",
+   "じめん"
+  ],
+  [
+   "持ち手",
+   "もちて"
+  ],
+  [
    "里山",
    "さとやま"
   ],
@@ -1198,7 +1206,7 @@
   "e4": "ほかにも、いろいろな、まちがいさがしがあります。もっとむずかしいもんだいに、ちょうせんしたいかたは、がめんのどうがを、クリックしてくださいね。",
   "q4_card": "だい、よん、もん、ちゅうきゅう。くりのきの、やまみちです。",
   "q4_go": "だい、よん、もんです。じっくり、どうぞ。",
-  "q1_card": "だい、いち、もん、やさしいもんだい。さとやまです。",
+  "q1_card": "だい、いち、もん、やさしい。さとやまです。",
   "q2_card": "だい、に、もん、しょきゅう。きりかぶの、きのこです。",
   "q3_card": "だい、さん、もん、しょきゅう。さとやまの、やすみばです。",
   "q5_card": "だい、ご、もん、じょうきゅう。きのこの、きばこです。",
@@ -1303,7 +1311,7 @@
       350,
       300,
       670,
-      900
+      880
      ],
      "object_w": 260,
      "src": "1"
@@ -1329,7 +1337,7 @@
      "line": "岩の上のりすが、いなくなりました。",
      "box": [
       170,
-      1070,
+      1090,
       420,
       1310
      ],
@@ -1421,15 +1429,15 @@
    "prompt": "Scene: close-up of a sunny autumn mountain path covered with fallen leaves in a satoyama, a bamboo fence on the side. CENTER (main subject, medium size, about one quarter of the picture width): a big old chestnut tree with a few chestnut burrs on the ground and a ginger cat sitting on a stone under the tree. Autumn only, clear sunny day: no Halloween, harvest-festival or other dated holiday items, no winter or summer items. Do not use much red: no bright red maple leaves, no red mushrooms; use golden yellow, orange, brown and green foliage, keep the light natural daylight and the whites ordinary white. Every listed object is fully visible and rests on the ground, floor, rock, stump, log, bench or shelf, or hangs from a branch or hook; nothing floats. No letters, labels or writing anywhere. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 25% and 65% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object is SMALL: about one fifteenth of the picture width, painted in the same style as the rest of the scene, with a natural shadow, no white outline and no sticker effect. Objects: (left, at 30% height) a small stone fox statue on a mossy rock; (right, at 30% height) a small bell hanging from a branch of the tree; (left, at 45% height) a small teacup on a tree stump; (right, at 45% height) a small clay pot on the ground; (left, at 60% height) a small acorn with a leaf on the ground; (right, at 60% height) a small pair of garden gloves lying on a flat rock.",
    "answers_intro": "答えです。",
    "retries": {
-    "2": {
+    "3": {
      "crop": [
-      330,
-      1560,
-      830,
-      2060
+      1000,
+      1100,
+      1500,
+      1600
      ],
      "aspect": "1:1",
-     "prompt": "Edit this picture: it shows two acorns with an oak leaf lying on the ground. Add exactly one more acorn of the same size and style lying on the ground next to them, so that there are three acorns in total. Keep the two original acorns, the oak leaf, the ground and everything else exactly the same, same outlines and colors. No text."
+     "prompt": "Edit this picture: it shows a terracotta clay flowerpot standing on the ground among fallen leaves. Remove the flowerpot completely and show the bare ground with a few fallen leaves where it was, in the same watercolor style. Keep everything else exactly the same, same outlines and colors. Leave no faint outline, ghost or smudge. No text."
     }
    },
    "diffs": [
@@ -1464,18 +1472,17 @@
     },
     {
      "id": 3,
-     "type": "増える",
-     "label": "どんぐりが3つ",
-     "line": "どんぐりが、ふたつから、みっつに、ふえました。",
+     "type": "なくなる",
+     "label": "植木鉢がない",
+     "line": "地面の植木鉢が、なくなりました。",
      "box": [
-      370,
-      1640,
-      760,
-      1920
+      1000,
+      1170,
+      1410,
+      1510
      ],
-     "object_w": 190,
-     "src": "2",
-     "context": "木の下にどんぐりが落ちているのは自然（もう1つ近くに落ちているだけ）"
+     "object_w": 250,
+     "src": "3"
     }
    ],
    "hint_diff": null,
@@ -1485,9 +1492,9 @@
     1856,
     2088
    ],
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the bronze bell hanging from the branch at the upper right becomes green; (b) the stone fox statue on the mossy rock at the left is replaced by a stone rabbit statue of the same size on the same rock (no red scarf); (c) on the ground at the lower left, a third acorn is added next to the two acorns.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the bronze bell hanging from the branch at the upper right becomes green; (b) the stone fox statue on the mossy rock at the left is replaced by a stone rabbit statue of the same size on the same rock (no red scarf).",
    "edit_prompts": {
-    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the bronze bell hanging from the branch at the upper right becomes green; (b) the stone fox statue on the mossy rock at the left is replaced by a stone rabbit statue of the same size on the same rock (no red scarf); (c) on the ground at the lower left, a third acorn is added next to the two acorns."
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the bronze bell hanging from the branch at the upper right becomes green; (b) the stone fox statue on the mossy rock at the left is replaced by a stone rabbit statue of the same size on the same rock (no red scarf)."
    }
   },
   {
@@ -1502,15 +1509,15 @@
     {
      "id": 1,
      "type": "向き",
-     "label": "小鳥の向き",
-     "line": "小鳥の向きが、反対になりました。",
+     "label": "カップの持ち手",
+     "line": "カップの持ち手が、反対になりました。",
      "box": [
-      120,
-      40,
-      430,
-      230
+      110,
+      820,
+      460,
+      1030
      ],
-     "object_w": 210,
+     "object_w": 250,
      "src": "flip",
      "note": "AIではなくプログラムで左右反転（同じ場所で向きだけ変える）"
     },
