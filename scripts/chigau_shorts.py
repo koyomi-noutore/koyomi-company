@@ -180,14 +180,15 @@ _ODD = []
 def _is_red(a):
     """手袋の赤（影・光の部分も含む）。灰色・桃色・白は赤でない。"""
     r, g, b = a[..., 0].astype(int), a[..., 1].astype(int), a[..., 2].astype(int)
-    return (r > 150) & (r - g > 90) & (r - b > 90)
+    return (r > 185) & (g < 72) & (b < 68) & (r - g > 120)   # 手袋の赤は約 (230, 59, 53)。ほんの少し明るいにじみも「赤でない」にする
 
 
 @functools.lru_cache(maxsize=None)
 def mitten_pics():
     """冬の絵：赤い毛糸の手袋（画像API 1枚）。違う1つは、雪の結晶の模様を消したもの（プログラム）。"""
     import numpy as np
-    from scipy.ndimage import binary_dilation, distance_transform_edt
+    import numpy as np
+    from scipy.ndimage import binary_dilation, gaussian_filter
     src = WORK / "mitten_src.png"
     if not src.exists():
         import gemini_image as G
@@ -198,9 +199,13 @@ def mitten_pics():
     x0, y0, x1, y1 = SNOW_BOX
     sub = o[y0:y1, x0:x1]
     off = ~_is_red(sub)                                    # 赤から外れる画素（白・灰色・桃色の線・ふちのにじみ）すべて
-    off = binary_dilation(off, iterations=3)               # 3px広げて、にじみの残りも含める
-    idx = distance_transform_edt(off, return_distances=False, return_indices=True)   # いちばん近い赤で塗る
-    sub[:] = sub[idx[0], idx[1]]
+    off = binary_dilation(off, iterations=4)               # 4px広げて、にじみの残りも含める
+    ok = (~off).astype(float)                              # 周りの赤をなめらかに平均して塗る（いちばん近い色だと、まだらの跡が残る）
+    for _ in range(2):
+        num = np.stack([gaussian_filter(sub[..., c] * ok, 25) for c in range(3)], axis=-1)
+        den = gaussian_filter(ok, 25)[..., None] + 1e-6
+        sub[off] = (num / den)[off].astype(np.uint8)
+        ok = np.ones_like(ok)
     bb = Image.fromarray(255 - a.min(axis=2)).point(lambda v: 255 if v > 40 else 0).getbbox()
     _ODD.append(Image.fromarray(o))
     out = []
