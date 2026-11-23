@@ -39,7 +39,7 @@
 - 合格したら非公開でアップロード（タイトル・説明欄はAPI、再生リストは自動）。CEOには動画ID・サムネ3案の画像・工程ごとの時間を送る。
 
 ## 画像の費用（2026-11-23）
-- 画像は標準で Vertex AI 経由（Google Cloud の無料クレジット、1/30まで）。VERTEX_SA_KEY_B64 が無い環境では AI Studio。image_usage.jsonl に vertex: と記録される。
+- **Gemini はすべて Vertex AI 経由**（画像・文字起こし・位置の読み取りなど。2026-11-24 CEO決定：無料クレジット約4.6万円を1/30までに使い切る。AI Studio は無料クレジットの対象外なので使わない。プログラムが AI Studio を呼ぶと止まる）。
 
 ## タイトルのABテスト（2026-11-23 CEO決定・knowledge/title-strategy.md が正）
 - 毎回、title-strategy.md の「型」でタイトルを3案作り、outputs/<回>/ab/titles.md に書く（今は第1段階：A検索型・Bつかみ型・C効能数字型）。

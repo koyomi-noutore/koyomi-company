@@ -9,7 +9,6 @@ import base64, json, os, re, sys, urllib.request
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from credentials import gemini_key
 
 MODEL = os.environ.get("KOYOMI_STT_MODEL", "gemini-3.5-flash")
 PROMPT = ("この音声は日本語の短いセリフです。聞こえたとおりに、全部ひらがなで書き起こしてください。"
@@ -20,10 +19,8 @@ def transcribe(wav):
     data = base64.b64encode(Path(wav).read_bytes()).decode()
     body = {"contents": [{"parts": [{"text": PROMPT}, {"inline_data": {"mime_type": "audio/wav", "data": data}}]}],
             "generationConfig": {"temperature": 0}}
-    req = urllib.request.Request(f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent",
-                                 data=json.dumps(body).encode(), headers={"Content-Type": "application/json", "x-goog-api-key": gemini_key()})
-    with urllib.request.urlopen(req, timeout=120) as r:
-        res = json.load(r)
+    from gemini_image import generate_content  # 2026-11-24：Vertex 経由（無料クレジット）に統一
+    res = generate_content(MODEL, body, timeout=120)
     return "".join(p.get("text", "") for p in res["candidates"][0]["content"]["parts"]).strip()
 
 

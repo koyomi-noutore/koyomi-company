@@ -62,6 +62,10 @@ def youtube_refresh_token(token_file=None):
 
 
 def gemini_key():
+    # 2026-11-24 CEO決定：Vertex の無料クレジットを使い切るまで、AI Studio（Gemini API・前払い）は使わない。
+    # Vertex の鍵がある環境で AI Studio を呼ぼうとしたら止める（IMAGE_BACKEND=aistudio のときだけ許す）。
+    if os.environ.get("VERTEX_SA_KEY_B64") and os.environ.get("IMAGE_BACKEND", "").lower() != "aistudio":
+        raise SystemExit("AI Studio（Gemini API）は使わない決まり（2026-11-24）。Vertex 経由（gemini_image.generate / generate_content）を使うこと")
     k = os.environ.get("GEMINI_API_KEY")
     if not k:
         raise SystemExit("GEMINI_API_KEY が設定されていません")

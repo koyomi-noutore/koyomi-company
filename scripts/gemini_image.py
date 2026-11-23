@@ -184,3 +184,28 @@ def generate(prompt, images=(), model=DEFAULT_MODEL, aspect="16:9", size="2K"):
         res = json.load(r)
     _log_usage(model, size, res.get("usageMetadata", {}))
     return _image_of(res)
+
+
+def generate_content(model, body, timeout=300):
+    """文字・音声・画像の理解など、画像生成以外の Gemini 呼び出しの共通窓口（2026-11-24 CEO決定）。
+    Vertex が使えるとき（標準）は必ず Vertex 経由にし、AI Studio（前払い・無料クレジット対象外）を使わない。
+    IMAGE_BACKEND=aistudio のときだけ AI Studio。戻り値は API の JSON そのまま。"""
+    if use_vertex():
+        info = vertex_service_account()
+        b = json.loads(json.dumps(body))
+        for c in b.get("contents", []):
+            c.setdefault("role", "user")
+            for p_ in c.get("parts", []):
+                if "inline_data" in p_:
+                    d = p_.pop("inline_data")
+                    p_["inlineData"] = {"mimeType": d["mime_type"], "data": d["data"]}
+        url = VERTEX_API.format(project=info["project_id"], loc=VERTEX_LOCATION, model=model)
+        req = urllib.request.Request(url, data=json.dumps(b).encode(),
+                                     headers={"Content-Type": "application/json", "Authorization": "Bearer " + _vertex_token(info)})
+    else:
+        req = urllib.request.Request(API.format(model=model), data=json.dumps(body).encode(),
+                                     headers={"Content-Type": "application/json", "x-goog-api-key": gemini_key()})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        res = json.load(r)
+    _log_usage(("vertex:" if use_vertex() else "") + model, "-", res.get("usageMetadata", {}))
+    return res

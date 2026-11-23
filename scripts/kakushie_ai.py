@@ -108,16 +108,13 @@ def blend(out, i):
 def locate(out, i):
     """位置は、文字で答えるモデル（gemini-2.5-flash）に聞く。画像の生成ではない。"""
     import base64, io, urllib.request
-    from credentials import gemini_key
     im = Image.open(out / f"cand_{i}.png").convert("RGB")
     buf = io.BytesIO(); im.save(buf, "JPEG", quality=92)
     body = {"contents": [{"parts": [{"text": LOCATE}, {"inline_data": {"mime_type": "image/jpeg", "data": base64.b64encode(buf.getvalue()).decode()}}]}],
             "generationConfig": {"responseMimeType": "application/json", "temperature": 0.2}}
     model = os.environ.get("KAKUSHIE_LOCATE_MODEL", "gemini-3.5-flash")
-    req = urllib.request.Request(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
-                                 data=json.dumps(body).encode(), headers={"Content-Type": "application/json", "x-goog-api-key": gemini_key()})
-    with urllib.request.urlopen(req, timeout=300) as r:
-        res = json.load(r)
+    from gemini_image import generate_content  # 2026-11-24：Vertex 経由に統一
+    res = generate_content(model, body)
     txt = "".join(p.get("text", "") for p in res["candidates"][0]["content"]["parts"])
     data = json.loads(txt)
     W, H = im.size
