@@ -137,10 +137,16 @@
    "detail": "pictures edit 5 1",
    "sec": 8.7,
    "at": "2026-11-23T11:18:21+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures edit 5 1",
+   "sec": 34.4,
+   "at": "2026-11-23T11:19:40+00:00"
   }
  ],
  "total_sec_by_step": {
-  "絵": 453.4
+  "絵": 487.8
  },
- "total_sec_all": 453.4
+ "total_sec_all": 487.8
 }

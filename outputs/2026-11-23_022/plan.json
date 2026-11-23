@@ -1190,7 +1190,7 @@
   "q1_go": "みぎのえのちがいを、みっつさがしてください。どうぞ。",
   "q3_go": "つづいて、だい、さん、もん。どうぞ。",
   "q5_go": "さいごの、だい、ご、もん、なんもんです。どうぞ。",
-  "op": "さとやまの、まちがいさがし、ぜん、ごもん。",
+  "op": "さとやまの、まちがいさがし、ごもん。",
   "op2": "さいごは、なんもんです。",
   "u2": "きのこは、しょくぶつの、なかまでしょうか？",
   "u3": "こたえは、ちがいます。カビにちかい、きんるいの、なかまなんです。",
@@ -1198,10 +1198,10 @@
   "e4": "ほかにも、いろいろな、まちがいさがしがあります。もっとむずかしいもんだいに、ちょうせんしたいかたは、がめんのどうがを、クリックしてくださいね。",
   "q4_card": "だい、よん、もん、ちゅうきゅう。くりのきの、やまみちです。",
   "q4_go": "だい、よん、もんです。じっくり、どうぞ。",
-  "q1_card": "だい、いち、もん、やさしいもんだい。さとやまの、いりぐちです。",
+  "q1_card": "だい、いち、もん、やさしいもんだい。さとやまです。",
   "q2_card": "だい、に、もん、しょきゅう。きりかぶの、きのこです。",
   "q3_card": "だい、さん、もん、しょきゅう。さとやまの、やすみばです。",
-  "q5_card": "だい、ご、もん、じょうきゅう。きのこのきばこと、ねこです。",
+  "q5_card": "だい、ご、もん、じょうきゅう。きのこの、きばこです。",
   "q2_go": "では、だい、に、もん。どうぞ。"
  },
  "voice": {
@@ -1223,7 +1223,7 @@
  "questions": [
   {
    "q": 1,
-   "scene": "里山の入り口",
+   "scene": "里山",
    "level": "やさしい",
    "go": "右の絵の違いを、3つ探してください。どうぞ。",
    "prompt": "Scene: close-up of the entrance of a sunny autumn satoyama (Japanese village woodland), a dirt path with fallen golden leaves, trees with yellow and orange leaves behind. CENTER, LARGE (main subject): a big round bamboo basket full of brown mushrooms (shiitake and shimeji, no red ones) standing on the path. Autumn only, clear sunny day: no Halloween, harvest-festival or other dated holiday items, no winter or summer items. Do not use much red: no bright red maple leaves, no red mushrooms; use golden yellow, orange, brown and green foliage, keep the light natural daylight and the whites ordinary white. Every listed object is fully visible and rests on the ground, floor, rock, stump, log, bench or shelf, or hangs from a branch or hook; nothing floats. No letters, labels or writing anywhere. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is about one fourteenth, VERY SMALL of the picture width, with plenty of empty space around it. Objects: (upper left, hanging from a tree branch by a string) a small wooden birdhouse; (upper right, on a tree stump) a small straw hat; (middle left, on the ground) a small pair of rubber boots; (middle right, on a flat rock) a small metal thermos bottle; (lower left, on the ground) a small wooden bucket; (lower right, on the ground) a small walking stick leaning against a rock.",
@@ -1492,7 +1492,7 @@
   },
   {
    "q": 5,
-   "scene": "きのこの木箱と猫",
+   "scene": "きのこの木箱",
    "level": "上級",
    "go": "最後の第5問、難問です。どうぞ。",
    "prompt": "Scene: close-up of the forest floor of an autumn satoyama at the foot of a big tree with golden leaves, with a bamboo fence beyond. CENTER, LARGE (main subject): a wooden crate full of brown mushrooms with no label or writing, and a gray cat sitting on a cushion right beside the crate. Autumn only, clear sunny day: no Halloween, harvest-festival or other dated holiday items, no winter or summer items. Do not use much red: no bright red maple leaves, no red mushrooms; use golden yellow, orange, brown and green foliage, keep the light natural daylight and the whites ordinary white. Every listed object is fully visible and rests on the ground, floor, rock, stump, log, bench or shelf, or hangs from a branch or hook; nothing floats. No letters, labels or writing anywhere. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is painted in the same watercolor style as the rest of the scene with a natural cast shadow, with no white outline, no white halo and no sticker effect. Each listed object is about one sixteenth, VERY SMALL of the picture width, with plenty of empty space around it. Objects: (upper left, on a bamboo fence) a tiny sparrow; (upper right, hanging from a tree branch) a tiny bell; (middle left, on a tree stump) a tiny teacup; (middle right, on the ground) a tiny single acorn with a cap; (lower left, on a flat rock) a tiny pair of reading glasses; (lower right, on the ground) a tiny knitted sock.",

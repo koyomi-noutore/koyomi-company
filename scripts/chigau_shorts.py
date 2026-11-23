@@ -174,11 +174,20 @@ MITTEN_PROMPT = ("A single red knitted winter mitten, front view, with a white s
 SNOW_BOX = (425, 280, 705, 560)                 # 元の絵（1024px）の中の雪の結晶の場所。違い＝この模様があるか、ないか
 
 
+_ODD = []
+
+
+def _is_red(a):
+    """手袋の赤（影・光の部分も含む）。灰色・桃色・白は赤でない。"""
+    r, g, b = a[..., 0].astype(int), a[..., 1].astype(int), a[..., 2].astype(int)
+    return (r > 150) & (r - g > 90) & (r - b > 90)
+
+
 @functools.lru_cache(maxsize=None)
 def mitten_pics():
     """冬の絵：赤い毛糸の手袋（画像API 1枚）。違う1つは、雪の結晶の模様を消したもの（プログラム）。"""
     import numpy as np
-    from scipy.ndimage import distance_transform_edt
+    from scipy.ndimage import binary_dilation, distance_transform_edt
     src = WORK / "mitten_src.png"
     if not src.exists():
         import gemini_image as G
@@ -188,15 +197,24 @@ def mitten_pics():
     o = a.copy()
     x0, y0, x1, y1 = SNOW_BOX
     sub = o[y0:y1, x0:x1]
-    white = (sub > 200).all(axis=2)
-    idx = distance_transform_edt(white, return_distances=False, return_indices=True)   # 結晶の白い所を、いちばん近い赤で塗る
+    off = ~_is_red(sub)                                    # 赤から外れる画素（白・灰色・桃色の線・ふちのにじみ）すべて
+    off = binary_dilation(off, iterations=3)               # 3px広げて、にじみの残りも含める
+    idx = distance_transform_edt(off, return_distances=False, return_indices=True)   # いちばん近い赤で塗る
     sub[:] = sub[idx[0], idx[1]]
     bb = Image.fromarray(255 - a.min(axis=2)).point(lambda v: 255 if v > 40 else 0).getbbox()
+    _ODD.append(Image.fromarray(o))
     out = []
     for arr in (a, o):
         im = Image.fromarray(arr).crop(bb)
         out.append(im.resize((round(im.width * 150 / im.height), 150), Image.LANCZOS))
     return out
+
+
+def odd_full():
+    """結晶を消した絵（切り取り・縮小の前の大きさ）。確認用。"""
+    import numpy as np
+    mitten_pics()
+    return _ODD[0]
 
 
 def mitten_frame(state, remain=None):
@@ -244,7 +262,7 @@ T.KINDS["mitten"] = ({"think": 15, "veil": [TITLE, "一つだけ違う手袋が�
 T.LINES["futsu"] = {"intro": ("違う漢字が、1つだけあります。どれでしょう？", "ちがうかんじが、ひとつだけあります。どれでしょう？"),
                     "ans": [("「大小」の『大』の中に、「犬」の『犬』が、混ざっていました。", "だいしょうの、だい、のなかに、いぬの、いぬ、が、まざっていました。")]}
 T.LINES["mitten"] = {"intro": ("違う手袋が、1つだけあります。どれでしょう？", "ちがうてぶくろが、ひとつだけあります。どれでしょう？"),
-                     "ans": [("雪の結晶の模様が、ない手袋でした。", "ゆきの、けっしょうの、もようが、ないてぶくろでした。")]}
+                     "ans": [("模様のない、手袋でした。", "もようのない、てぶくろでした。")]}
 ORDER = ["easy", "hard", "mikan"]
 
 
@@ -273,6 +291,8 @@ def check():
     pic, odd = mitten_pics()
     import numpy as np
     diff = (np.array(pic).astype(int) != np.array(odd).astype(int)).any(axis=2)
+    box = np.array(odd_full())[SNOW_BOX[1]:SNOW_BOX[3], SNOW_BOX[0]:SNOW_BOX[2]]
+    res.append(f"mitten：結晶の範囲で赤から外れる画素（違う1枚）{int((~_is_red(box)).sum())}個／{box.shape[0] * box.shape[1]}（0に近いのが合格）")
     res.append(f"mitten：元と違う画素 {diff.mean() * 100:.1f}%（雪の結晶の有無）。台紙に貼る絵は元14枚・違う1枚の2種類だけ")
     return res
 
