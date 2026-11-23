@@ -1,0 +1,712 @@
+{
+ "screen": {
+  "size": [
+   1920,
+   1080
+  ],
+  "picture_size_on_screen": [
+   960,
+   1080
+  ],
+  "safe_y_on_screen": [
+   54,
+   918
+  ],
+  "level_range_pct_of_screen_width": {
+   "やさしい": [
+    6.0,
+    8.0
+   ],
+   "初級": [
+    5.0,
+    6.0
+   ],
+   "中級": [
+    4.0,
+    5.0
+   ],
+   "上級": [
+    3.0,
+    4.0
+   ]
+  }
+ },
+ "note": "box_px・circle_px は 8:9 に切り抜いた高解像度の絵（qN_a.png、1856×2088）のピクセル。content_px はそのうち画面に出す範囲（白いふちを除いた8:9）。*_screen は画面の上での座標（右の絵は x に960を足す）。object_screen_width_pct は、変わる物そのものの幅を画面幅で割った値（難易度の基準）。object_picture_width_pct は片方の絵の幅で割った値（参考）。",
+ "questions": [
+  {
+   "q": 1,
+   "scene": "里山",
+   "level": "やさしい",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 691,
+   "outside_box_max_distance_px": 12.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "大きさ",
+     "label": "巣箱が小さい",
+     "line": "木にさげた巣箱が、小さくなりました。",
+     "box_px": [
+      250,
+      230,
+      600,
+      590
+     ],
+     "box_screen": [
+      129,
+      119,
+      310,
+      305
+     ],
+     "circle_a_screen": [
+      129,
+      119,
+      310,
+      305
+     ],
+     "circle_b_screen": [
+      129,
+      119,
+      310,
+      305
+     ],
+     "object_w_px": 310,
+     "object_picture_width_pct": 16.7,
+     "object_screen_width_pct": 8.35,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "帽子がない",
+     "line": "切り株の帽子が、なくなりました。",
+     "box_px": [
+      1400,
+      400,
+      1740,
+      640
+     ],
+     "box_screen": [
+      724,
+      207,
+      900,
+      331
+     ],
+     "circle_a_screen": [
+      724,
+      207,
+      900,
+      331
+     ],
+     "circle_b_screen": [
+      724,
+      207,
+      900,
+      331
+     ],
+     "object_w_px": 300,
+     "object_picture_width_pct": 16.16,
+     "object_screen_width_pct": 8.08,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "長靴が青",
+     "line": "左の長靴が、青くなりました。",
+     "box_px": [
+      80,
+      940,
+      410,
+      1290
+     ],
+     "box_screen": [
+      41,
+      486,
+      212,
+      667
+     ],
+     "circle_a_screen": [
+      41,
+      486,
+      212,
+      667
+     ],
+     "circle_b_screen": [
+      41,
+      486,
+      212,
+      667
+     ],
+     "object_w_px": 290,
+     "object_picture_width_pct": 15.62,
+     "object_screen_width_pct": 7.81,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 2,
+   "scene": "切り株のきのこ",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 833,
+   "outside_box_max_distance_px": 10.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "大きさ",
+     "label": "灯籠が小さい",
+     "line": "石灯籠が、小さくなりました。",
+     "box_px": [
+      350,
+      300,
+      670,
+      880
+     ],
+     "box_screen": [
+      181,
+      155,
+      347,
+      455
+     ],
+     "circle_a_screen": [
+      181,
+      155,
+      347,
+      455
+     ],
+     "circle_b_screen": [
+      181,
+      155,
+      347,
+      455
+     ],
+     "object_w_px": 260,
+     "object_picture_width_pct": 14.01,
+     "object_screen_width_pct": 7.0,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "おけが緑",
+     "line": "右のおけが、緑色になりました。",
+     "box_px": [
+      1480,
+      730,
+      1750,
+      1020
+     ],
+     "box_screen": [
+      766,
+      378,
+      905,
+      528
+     ],
+     "circle_a_screen": [
+      766,
+      378,
+      905,
+      528
+     ],
+     "circle_b_screen": [
+      766,
+      378,
+      905,
+      528
+     ],
+     "object_w_px": 230,
+     "object_picture_width_pct": 12.39,
+     "object_screen_width_pct": 6.2,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "りすがいない",
+     "line": "岩の上のりすが、いなくなりました。",
+     "box_px": [
+      170,
+      1090,
+      420,
+      1310
+     ],
+     "box_screen": [
+      88,
+      564,
+      217,
+      678
+     ],
+     "circle_a_screen": [
+      88,
+      564,
+      217,
+      678
+     ],
+     "circle_b_screen": [
+      88,
+      564,
+      217,
+      678
+     ],
+     "object_w_px": 210,
+     "object_picture_width_pct": 11.31,
+     "object_screen_width_pct": 5.66,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 3,
+   "scene": "里山の休み場",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 570,
+   "outside_box_max_distance_px": 12.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "帽子がない",
+     "line": "岩の上の毛糸の帽子が、なくなりました。",
+     "box_px": [
+      1400,
+      250,
+      1660,
+      460
+     ],
+     "box_screen": [
+      724,
+      129,
+      859,
+      238
+     ],
+     "circle_a_screen": [
+      724,
+      129,
+      859,
+      238
+     ],
+     "circle_b_screen": [
+      724,
+      129,
+      859,
+      238
+     ],
+     "object_w_px": 220,
+     "object_picture_width_pct": 11.85,
+     "object_screen_width_pct": 5.93,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "植木鉢が青",
+     "line": "植木鉢が、青くなりました。",
+     "box_px": [
+      1510,
+      960,
+      1760,
+      1340
+     ],
+     "box_screen": [
+      781,
+      497,
+      910,
+      693
+     ],
+     "circle_a_screen": [
+      781,
+      497,
+      910,
+      693
+     ],
+     "circle_b_screen": [
+      781,
+      497,
+      910,
+      693
+     ],
+     "object_w_px": 210,
+     "object_picture_width_pct": 11.31,
+     "object_screen_width_pct": 5.66,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "向き",
+     "label": "急須の向き",
+     "line": "急須の向きが、反対になりました。",
+     "box_px": [
+      420,
+      1350,
+      700,
+      1590
+     ],
+     "box_screen": [
+      217,
+      698,
+      362,
+      822
+     ],
+     "circle_a_screen": [
+      217,
+      698,
+      362,
+      822
+     ],
+     "circle_b_screen": [
+      217,
+      698,
+      362,
+      822
+     ],
+     "object_w_px": 240,
+     "object_picture_width_pct": 12.93,
+     "object_screen_width_pct": 6.47,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 4,
+   "scene": "栗の山道",
+   "level": "中級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 355,
+   "outside_box_max_distance_px": 12.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "鐘が緑",
+     "line": "枝の鐘が、緑色になりました。",
+     "box_px": [
+      1380,
+      220,
+      1590,
+      540
+     ],
+     "box_screen": [
+      714,
+      114,
+      822,
+      279
+     ],
+     "circle_a_screen": [
+      714,
+      114,
+      822,
+      279
+     ],
+     "circle_b_screen": [
+      714,
+      114,
+      822,
+      279
+     ],
+     "object_w_px": 160,
+     "object_picture_width_pct": 8.62,
+     "object_screen_width_pct": 4.31,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "入れ替え",
+     "label": "きつねがうさぎ",
+     "line": "石のきつねが、うさぎに、変わりました。",
+     "box_px": [
+      190,
+      560,
+      470,
+      960
+     ],
+     "box_screen": [
+      98,
+      290,
+      243,
+      497
+     ],
+     "circle_a_screen": [
+      98,
+      290,
+      243,
+      497
+     ],
+     "circle_b_screen": [
+      98,
+      290,
+      243,
+      497
+     ],
+     "object_w_px": 200,
+     "object_picture_width_pct": 10.78,
+     "object_screen_width_pct": 5.39,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "植木鉢がない",
+     "line": "地面の植木鉢が、なくなりました。",
+     "box_px": [
+      1000,
+      1170,
+      1410,
+      1510
+     ],
+     "box_screen": [
+      517,
+      605,
+      729,
+      781
+     ],
+     "circle_a_screen": [
+      517,
+      605,
+      729,
+      781
+     ],
+     "circle_b_screen": [
+      517,
+      605,
+      729,
+      781
+     ],
+     "object_w_px": 250,
+     "object_picture_width_pct": 13.47,
+     "object_screen_width_pct": 6.73,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "3",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 5,
+   "scene": "きのこの木箱",
+   "level": "上級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 362,
+   "outside_box_max_distance_px": 10.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "カップの花の色",
+     "line": "カップの花が、オレンジ色になりました。",
+     "box_px": [
+      238,
+      905,
+      314,
+      990
+     ],
+     "box_screen": [
+      123,
+      468,
+      162,
+      512
+     ],
+     "circle_a_screen": [
+      123,
+      468,
+      162,
+      512
+     ],
+     "circle_b_screen": [
+      123,
+      468,
+      162,
+      512
+     ],
+     "object_w_px": 120,
+     "object_picture_width_pct": 6.47,
+     "object_screen_width_pct": 3.23,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "flip",
+     "made_by": "program",
+     "note": "AIではなくプログラムで花の色相を変える（物を動かさない）"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "鐘が青",
+     "line": "枝の鐘が、青くなりました。",
+     "box_px": [
+      1460,
+      220,
+      1680,
+      500
+     ],
+     "box_screen": [
+      755,
+      114,
+      869,
+      259
+     ],
+     "circle_a_screen": [
+      755,
+      114,
+      869,
+      259
+     ],
+     "circle_b_screen": [
+      755,
+      114,
+      869,
+      259
+     ],
+     "object_w_px": 170,
+     "object_picture_width_pct": 9.16,
+     "object_screen_width_pct": 4.58,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "どんぐりが2つ",
+     "line": "どんぐりが、ひとつから、ふたつに、ふえました。",
+     "box_px": [
+      1560,
+      1180,
+      1856,
+      1350
+     ],
+     "box_screen": [
+      807,
+      610,
+      960,
+      698
+     ],
+     "circle_a_screen": [
+      807,
+      610,
+      960,
+      698
+     ],
+     "circle_b_screen": [
+      807,
+      610,
+      960,
+      698
+     ],
+     "object_w_px": 130,
+     "object_picture_width_pct": 7.0,
+     "object_screen_width_pct": 3.5,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  }
+ ]
+}
