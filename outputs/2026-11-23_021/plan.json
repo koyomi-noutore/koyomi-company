@@ -1,0 +1,1552 @@
+{
+ "episode": "021",
+ "season": "冬",
+ "topics": [
+  "縁側でみかんと猫"
+ ],
+ "note": "第21回（縁側のみかんと猫・冬）。公開日は未定（schedule.md 2026-11-22）。奇数の回：タイトルのみABテスト（サムネはB）。",
+ "youtube": {
+  "title": "【間違い探し】縁側のみかんと猫｜シニア・高齢者の脳トレ",
+  "description_file": "description.md",
+  "title_note": "32文字以内・【間違い探し】から。タイトルA（検索型）。3案は ab/titles.md",
+  "publish_plan": "未定（CEOが決める）"
+ },
+ "screens": {
+  "opening_title": "縁側のみかんと猫の間違い探し　全5問",
+  "opening_sub": "最後は難問です",
+  "unchiku_header": "こよみ先生の 冬の小話",
+  "unchiku_slides": [
+   {
+    "until": 7,
+    "texts": [
+     [
+      "ひと休み",
+      960,
+      330,
+      130,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "こよみ先生の 季節のお話",
+      960,
+      520,
+      80,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 15,
+    "texts": [
+     [
+      "みかんの白いすじは なに？",
+      960,
+      380,
+      100,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ]
+    ]
+   },
+   {
+    "until": 24,
+    "texts": [
+     [
+      "実に栄養を送る",
+      960,
+      330,
+      110,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "通り道の あとです",
+      960,
+      520,
+      100,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 30,
+    "texts": [
+     [
+      "白いすじは",
+      960,
+      330,
+      110,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "とらなくても だいじょうぶ",
+      960,
+      520,
+      90,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   }
+  ],
+  "ending_titles": [
+   [
+    "15個",
+    "みかん名人"
+   ],
+   [
+    "11〜14個",
+    "縁側の名探偵"
+   ],
+   [
+    "6〜10個",
+    "こたつの番人"
+   ],
+   [
+    "0〜5個",
+    "ひなたの猫さん"
+   ]
+  ],
+  "ending_note": "ひなたの猫さんも、毎日ためせば 名人です",
+  "ending_next": "ほかの間違い探しも どうぞ",
+  "owl_layout": "bottom",
+  "endscreen_at": 9.0,
+  "rule_overlay": {
+   "text": "右の絵で 違いを3つ さがそう",
+   "sub": "1問 90秒",
+   "sec": 8.0
+  }
+ },
+ "timeline": {
+  "total": 613.5,
+  "opening": [
+   0.0,
+   6.5
+  ],
+  "rule": [
+   6.5,
+   6.5
+  ],
+  "q_start": {
+   "1": 6.5,
+   "2": 114.5,
+   "3": 222.5,
+   "4": 360.5,
+   "5": 468.5
+  },
+  "unchiku": [
+   330.5,
+   360.5
+  ],
+  "ending": [
+   576.5,
+   613.5
+  ],
+  "card": 3.0,
+  "solve": 90.0,
+  "answer": 15.0,
+  "hint_at": null,
+  "ten_at": 80.0,
+  "ans_first": 1.6,
+  "ans_step": 4.3,
+  "solve_calls": [
+   [
+    30,
+    "あと60秒です。"
+   ],
+   [
+    60,
+    "あと30秒です。"
+   ]
+  ],
+  "go_delay": 1.8
+ },
+ "lines": {
+  "opening": [
+   {
+    "id": "op",
+    "at": 0.0,
+    "text": "縁側のみかんと猫の間違い探し、全5問。",
+    "face": "smile",
+    "until": 3.9
+   },
+   {
+    "id": "op2",
+    "at": 3.9,
+    "text": "最後は難問です。",
+    "face": "wink",
+    "until": 6.5
+   }
+  ],
+  "rule": [],
+  "unchiku": [
+   {
+    "id": "u1",
+    "at": 0.0,
+    "text": "ここでひと休み。こよみ先生の季節のお話です。",
+    "face": "smile",
+    "until": 7.0
+   },
+   {
+    "id": "u2",
+    "at": 7.0,
+    "text": "みかんの白いすじは、なんのためにあるのでしょう？",
+    "face": "think",
+    "until": 15.0
+   },
+   {
+    "id": "u3",
+    "at": 15.0,
+    "text": "答えは、実に栄養を送る、通り道のあとなんです。",
+    "face": "surprise",
+    "until": 24.0
+   },
+   {
+    "id": "u4",
+    "at": 24.0,
+    "text": "白いすじは、とらなくても大丈夫ですよ。",
+    "face": "wink",
+    "until": 30.0
+   }
+  ],
+  "ending": [
+   {
+    "id": "e1",
+    "at": 0.0,
+    "text": "これで5問、おしまいです。",
+    "face": "yay",
+    "until": 3.6
+   },
+   {
+    "id": "e2",
+    "at": 3.6,
+    "text": "15個の違い、いくつ見つかりましたか。今日の称号です。",
+    "face": "smile",
+    "until": 10.2
+   },
+   {
+    "id": "e3",
+    "at": 10.2,
+    "text": "チャンネル登録とベルで、毎朝8時半に問題が届きます。毎日の頭の体操にどうぞ。",
+    "face": "smile",
+    "until": 21.0
+   },
+   {
+    "id": "e4",
+    "at": 21.0,
+    "text": "ほかにも、いろいろな間違い探しがあります。もっと難しい問題に挑戦したい方は、画面の動画をクリックしてくださいね。",
+    "face": "wink",
+    "until": 36.0
+   }
+  ],
+  "extra": [
+   {
+    "id": "c_comment",
+    "at": 237.5,
+    "text": "見つかった数を、あとでコメントで教えてくださいね。",
+    "face": "smile",
+    "until": 244.5
+   }
+  ]
+ },
+ "readings": [
+  [
+   "1羽",
+   "いちわ"
+  ],
+  [
+   "雪かきの道",
+   "ゆきかきのみち"
+  ],
+  [
+   "雪だるまの庭",
+   "ゆきだるまのにわ"
+  ],
+  [
+   "雪の玄関先",
+   "ゆきのげんかんさき"
+  ],
+  [
+   "冬の朝の窓辺",
+   "ふゆのあさのまどべ"
+  ],
+  [
+   "雪うさぎの縁側",
+   "ゆきうさぎのえんがわ"
+  ],
+  [
+   "雪うさぎの耳の葉",
+   "ゆきうさぎのみみのは"
+  ],
+  [
+   "時計の文字盤",
+   "とけいのもじばん"
+  ],
+  [
+   "雪だるまの鼻",
+   "ゆきだるまのはな"
+  ],
+  [
+   "段の上",
+   "だんのうえ"
+  ],
+  [
+   "雪の上",
+   "ゆきのうえ"
+  ],
+  [
+   "手ぶくろ",
+   "てぶくろ"
+  ],
+  [
+   "植木鉢",
+   "うえきばち"
+  ],
+  [
+   "花びん",
+   "かびん"
+  ],
+  [
+   "湯のみ",
+   "ゆのみ"
+  ],
+  [
+   "赤い実",
+   "あかいみ"
+  ],
+  [
+   "小鳥",
+   "ことり"
+  ],
+  [
+   "左の",
+   "ひだりの"
+  ],
+  [
+   "柱",
+   "はしら"
+  ],
+  [
+   "雪だるまと冬の朝",
+   "ゆきだるまとふゆのあさ"
+  ],
+  [
+   "七味入れ",
+   "しちみいれ"
+  ],
+  [
+   "長いす",
+   "ながいす"
+  ],
+  [
+   "急須",
+   "きゅうす"
+  ],
+  [
+   "はし置き",
+   "はしおき"
+  ],
+  [
+   "屋根",
+   "やね"
+  ],
+  [
+   "小屋",
+   "こや"
+  ],
+  [
+   "棚",
+   "たな"
+  ],
+  [
+   "鈴",
+   "すず"
+  ],
+  [
+   "菊",
+   "きく"
+  ],
+  [
+   "器",
+   "うつわ"
+  ],
+  [
+   "花",
+   "はな"
+  ],
+  [
+   "前",
+   "まえ"
+  ],
+  [
+   "新そば",
+   "しんそば"
+  ],
+  [
+   "干し柿",
+   "ほしがき"
+  ],
+  [
+   "鉄びん",
+   "てつびん"
+  ],
+  [
+   "縁側",
+   "えんがわ"
+  ],
+  [
+   "朝市",
+   "あさいち"
+  ],
+  [
+   "お皿",
+   "おさら"
+  ],
+  [
+   "笠",
+   "かさ"
+  ],
+  [
+   "鉢",
+   "はち"
+  ],
+  [
+   "柿",
+   "かき"
+  ],
+  [
+   "台",
+   "だい"
+  ],
+  [
+   "軒",
+   "のき"
+  ],
+  [
+   "赤とんぼ",
+   "あかとんぼ"
+  ],
+  [
+   "1匹",
+   "いっぴき"
+  ],
+  [
+   "お茶",
+   "おちゃ"
+  ],
+  [
+   "金色",
+   "きんいろ"
+  ],
+  [
+   "鐘",
+   "かね"
+  ],
+  [
+   "麦わら帽子",
+   "むぎわらぼうし"
+  ],
+  [
+   "色えんぴつ",
+   "いろえんぴつ"
+  ],
+  [
+   "お月さま",
+   "おつきさま"
+  ],
+  [
+   "火ばさみ",
+   "ひばさみ"
+  ],
+  [
+   "赤いふた",
+   "あかいふた"
+  ],
+  [
+   "大学いも",
+   "だいがくいも"
+  ],
+  [
+   "酉の市",
+   "とりのいち"
+  ],
+  [
+   "飛び石",
+   "とびいし"
+  ],
+  [
+   "掛け軸",
+   "かけじく"
+  ],
+  [
+   "切り株",
+   "きりかぶ"
+  ],
+  [
+   "石灯籠",
+   "いしどうろう"
+  ],
+  [
+   "少なく",
+   "すくなく"
+  ],
+  [
+   "向いて",
+   "むいて"
+  ],
+  [
+   "まん中",
+   "まんなか"
+  ],
+  [
+   "ゆで卵",
+   "ゆでたまご"
+  ],
+  [
+   "右はし",
+   "みぎはし"
+  ],
+  [
+   "茶色い",
+   "ちゃいろい"
+  ],
+  [
+   "花びら",
+   "はなびら"
+  ],
+  [
+   "土なべ",
+   "どなべ"
+  ],
+  [
+   "玉ねぎ",
+   "たまねぎ"
+  ],
+  [
+   "変わり",
+   "かわり"
+  ],
+  [
+   "落ち葉",
+   "おちば"
+  ],
+  [
+   "黄色い",
+   "きいろい"
+  ],
+  [
+   "大きく",
+   "おおきく"
+  ],
+  [
+   "舞って",
+   "まって"
+  ],
+  [
+   "葉っぱ",
+   "はっぱ"
+  ],
+  [
+   "魔法瓶",
+   "まほうびん"
+  ],
+  [
+   "小さな",
+   "ちいさな"
+  ],
+  [
+   "少なく",
+   "すくなく"
+  ],
+  [
+   "向いて",
+   "むいて"
+  ],
+  [
+   "第1問",
+   "だいいちもん"
+  ],
+  [
+   "第2問",
+   "だいにもん"
+  ],
+  [
+   "第3問",
+   "だいさんもん"
+  ],
+  [
+   "第4問",
+   "だいよんもん"
+  ],
+  [
+   "第5問",
+   "だいごもん"
+  ],
+  [
+   "60秒",
+   "ろくじゅうびょう"
+  ],
+  [
+   "30秒",
+   "さんじゅうびょう"
+  ],
+  [
+   "10秒",
+   "じゅうびょう"
+  ],
+  [
+   "小さく",
+   "ちいさく"
+  ],
+  [
+   "取っ手",
+   "とって"
+  ],
+  [
+   "熊手",
+   "くまで"
+  ],
+  [
+   "飾り",
+   "かざり"
+  ],
+  [
+   "白く",
+   "しろく"
+  ],
+  [
+   "掛け",
+   "かけ"
+  ],
+  [
+   "漬物",
+   "つけもの"
+  ],
+  [
+   "軍手",
+   "ぐんて"
+  ],
+  [
+   "茶色",
+   "ちゃいろ"
+  ],
+  [
+   "風鈴",
+   "ふうりん"
+  ],
+  [
+   "黒板",
+   "こくばん"
+  ],
+  [
+   "反対",
+   "はんたい"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "黄色",
+   "きいろ"
+  ],
+  [
+   "赤く",
+   "あかく"
+  ],
+  [
+   "青く",
+   "あおく"
+  ],
+  [
+   "赤く",
+   "あかく"
+  ],
+  [
+   "赤い",
+   "あかい"
+  ],
+  [
+   "筆箱",
+   "ふでばこ"
+  ],
+  [
+   "木箱",
+   "きばこ"
+  ],
+  [
+   "湯気",
+   "ゆげ"
+  ],
+  [
+   "紙袋",
+   "かみぶくろ"
+  ],
+  [
+   "消え",
+   "きえ"
+  ],
+  [
+   "付き",
+   "つき"
+  ],
+  [
+   "水筒",
+   "すいとう"
+  ],
+  [
+   "帽子",
+   "ぼうし"
+  ],
+  [
+   "上級",
+   "じょうきゅう"
+  ],
+  [
+   "中級",
+   "ちゅうきゅう"
+  ],
+  [
+   "初級",
+   "しょきゅう"
+  ],
+  [
+   "白く",
+   "しろく"
+  ],
+  [
+   "黒い",
+   "くろい"
+  ],
+  [
+   "一本",
+   "いっぽん"
+  ],
+  [
+   "高く",
+   "たかく"
+  ],
+  [
+   "短く",
+   "みじかく"
+  ],
+  [
+   "黄色",
+   "きいろ"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "青い",
+   "あおい"
+  ],
+  [
+   "白い",
+   "しろい"
+  ],
+  [
+   "後半",
+   "こうはん"
+  ],
+  [
+   "最後",
+   "さいご"
+  ],
+  [
+   "難問",
+   "なんもん"
+  ],
+  [
+   "問題",
+   "もんだい"
+  ],
+  [
+   "答え",
+   "こたえ"
+  ],
+  [
+   "少し",
+   "すこし"
+  ],
+  [
+   "大根",
+   "だいこん"
+  ],
+  [
+   "小皿",
+   "こざら"
+  ],
+  [
+   "向き",
+   "むき"
+  ],
+  [
+   "反対",
+   "はんたい"
+  ],
+  [
+   "一つ",
+   "ひとつ"
+  ],
+  [
+   "模様",
+   "もよう"
+  ],
+  [
+   "下駄",
+   "げた"
+  ],
+  [
+   "金属",
+   "きんぞく"
+  ],
+  [
+   "無く",
+   "なく"
+  ],
+  [
+   "増え",
+   "ふえ"
+  ],
+  [
+   "向い",
+   "むい"
+  ],
+  [
+   "金具",
+   "かなぐ"
+  ],
+  [
+   "一枚",
+   "いちまい"
+  ],
+  [
+   "真上",
+   "まうえ"
+  ],
+  [
+   "屋台",
+   "やたい"
+  ],
+  [
+   "銭湯",
+   "せんとう"
+  ],
+  [
+   "今日",
+   "きょう"
+  ],
+  [
+   "一緒",
+   "いっしょ"
+  ],
+  [
+   "山門",
+   "さんもん"
+  ],
+  [
+   "川辺",
+   "かわべ"
+  ],
+  [
+   "竹",
+   "たけ"
+  ],
+  [
+   "枝",
+   "えだ"
+  ],
+  [
+   "絵",
+   "え"
+  ],
+  [
+   "上",
+   "うえ"
+  ],
+  [
+   "緑",
+   "みどり"
+  ],
+  [
+   "机",
+   "つくえ"
+  ],
+  [
+   "数",
+   "かず"
+  ],
+  [
+   "形",
+   "かたち"
+  ],
+  [
+   "先",
+   "さき"
+  ],
+  [
+   "数",
+   "かず"
+  ],
+  [
+   "上",
+   "うえ"
+  ],
+  [
+   "下",
+   "した"
+  ],
+  [
+   "輪",
+   "わ"
+  ],
+  [
+   "針",
+   "はり"
+  ],
+  [
+   "牛",
+   "うし"
+  ],
+  [
+   "左",
+   "ひだり"
+  ],
+  [
+   "右",
+   "みぎ"
+  ],
+  [
+   "頭",
+   "あたま"
+  ],
+  [
+   "刃",
+   "は"
+  ],
+  [
+   "量",
+   "りょう"
+  ],
+  [
+   "苗",
+   "なえ"
+  ],
+  [
+   "丸",
+   "まる"
+  ],
+  [
+   "桶",
+   "おけ"
+  ],
+  [
+   "火",
+   "ひ"
+  ],
+  [
+   "葉",
+   "は"
+  ],
+  [
+   "緑",
+   "みどり"
+  ],
+  [
+   "色",
+   "いろ"
+  ],
+  [
+   "鍋",
+   "なべ"
+  ],
+  [
+   "畑",
+   "はたけ"
+  ],
+  [
+   "絵",
+   "え"
+  ],
+  [
+   "木の札",
+   "きのふだ"
+  ],
+  [
+   "お面",
+   "おめん"
+  ],
+  [
+   "大きな",
+   "おおきな"
+  ],
+  [
+   "銀色",
+   "ぎんいろ"
+  ],
+  [
+   "前かけ",
+   "まえかけ"
+  ],
+  [
+   "丸い",
+   "まるい"
+  ],
+  [
+   "壁",
+   "かべ"
+  ],
+  [
+   "紋",
+   "もん"
+  ],
+  [
+   "星",
+   "ほし"
+  ],
+  [
+   "銀",
+   "ぎん"
+  ]
+ ],
+ "voice_override": {
+  "u1": "ここでひとやすみ。こよみせんせいの、きせつのおはなしです。",
+  "e1": "これでごもん、おしまいです。",
+  "e2": "じゅうごこのちがい、いくつみつかりましたか。きょうのしょうごうです。",
+  "e3": "チャンネルとうろくとベルで、まいあさはちじはんに、もんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。",
+  "c_comment": "みつかったかずを、あとでコメントでおしえてくださいね。",
+  "s_intro": "うえとしたのえで、ちがいがみっつあります。みつけられますか。",
+  "s_end": "いくつみつかったか、コメントでおしえてくださいね。ひだりしたから、つづきもどうぞ。",
+  "q1_go": "みぎのえのちがいを、みっつさがしてください。どうぞ。",
+  "q3_go": "つづいて、だいさんもん。どうぞ。",
+  "q5_go": "さいごのだいごもん、なんもんです。どうぞ。",
+  "op": "えんがわのみかんとねこの、まちがいさがし、ぜんごもん。",
+  "op2": "さいごは、なんもんです。",
+  "u2": "みかんの、しろいすじは、なんのために、あるのでしょう？",
+  "u3": "こたえは、みに、えいようをおくる、とおりみちの、あとなんです。",
+  "u4": "しろいすじは、とらなくても、だいじょうぶですよ。",
+  "e4": "ほかにも、いろいろな、まちがいさがしがあります。もっとむずかしいもんだいに、ちょうせんしたいかたは、がめんのどうがを、クリックしてくださいね。"
+ },
+ "voice": {
+  "provider": "fish",
+  "reference_id": "63819275ce38440ea245ca988abf976e",
+  "model": "s1",
+  "speed": 0.88,
+  "credit": "音声：Fish Audio（AIで合成した音声です）"
+ },
+ "images": {
+  "model": "gemini-3-pro-image",
+  "size": "2K",
+  "aspect": "4:5",
+  "style": "A Japanese picture-book illustration in watercolor, but with BOLD, THICK, DARK ink outlines around every object (like a clear picture book for seniors), and CLEAR, SATURATED colors (not pale). Bright, clean background. Natural, hand-drawn, slightly rounded shapes; not geometric, not flat vector, not photorealistic. CLOSE-UP composition (not a wide landscape): the scene is seen from close, filling the picture. PORTRAIT-ISH composition, about 8:9. The painting fills the entire canvas edge to edge: no white border. No people. Absolutely no text, letters, numbers, logos or symbols anywhere. The MAIN SUBJECT named in the scene is drawn LARGE in the center of the picture. Around it, only a few other objects, each clearly separated with space around it, fully visible.\n",
+  "keep_alt": " Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text.",
+  "keep_remove": " Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object.",
+  "batch": true
+ },
+ "questions": [
+  {
+   "q": 1,
+   "scene": "縁側のひなた",
+   "level": "やさしい",
+   "go": "右の絵の違いを、3つ探してください。どうぞ。",
+   "prompt": "Scene: close-up of a sunny Japanese veranda (engawa) on a cold winter afternoon, wooden floor boards, paper sliding doors behind, a small garden with a pine tree. CENTER, LARGE (main subject): an orange tabby cat curled up asleep on a flat square cushion on the veranda floor, with a wicker basket of mandarin oranges right beside it. Winter only, cold sunny day: no Christmas, New Year's Eve or other dated holiday items, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one fourteenth, VERY SMALL of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. The cat has a natural relaxed posture: its whole body rests on the cushion or floor, four legs and one tail, normal cat anatomy. Do not use much red: keep the light natural daylight and the whites ordinary white. Objects: (upper left, hanging from the eaves) a small string of dried persimmons; (upper right, on a wall shelf by the door) a small potted green plant; (middle left, on the veranda floor) a small pair of slippers; (middle right, on the veranda floor) a small iron kettle with a lid; (lower left, on the veranda floor) a small ball of yellow yarn; (lower right, on the veranda floor) a small wooden bucket.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "x",
+     "line": "x",
+     "box": [
+      0,
+      0,
+      10,
+      10
+     ],
+     "object_w": 200,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "x",
+     "line": "x",
+     "box": [
+      0,
+      0,
+      10,
+      10
+     ],
+     "object_w": 200,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "x",
+     "line": "x",
+     "box": [
+      0,
+      0,
+      10,
+      10
+     ],
+     "object_w": 200,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the pair of slippers on the floor at the left becomes blue; (b) the small iron kettle on the veranda floor at the right is gone (show the plain wooden floor); (c) the potted green plant on the wall shelf at the upper right becomes much bigger and bushier, about 1.6 times larger, on the same shelf; (d) the small ball of yellow yarn at the lower left becomes blue; (e) the small wooden bucket at the lower right is gone (show the plain floor).",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the pair of slippers on the floor at the left becomes blue; (b) the small iron kettle on the veranda floor at the right is gone (show the plain wooden floor); (c) the potted green plant on the wall shelf at the upper right becomes much bigger and bushier, about 1.6 times larger, on the same shelf; (d) the small ball of yellow yarn at the lower left becomes blue; (e) the small wooden bucket at the lower right is gone (show the plain floor)."
+   }
+  },
+  {
+   "q": 2,
+   "scene": "こたつのみかん",
+   "level": "初級",
+   "go": "では、第2問。どうぞ。",
+   "prompt": "Scene: close-up of a cozy Japanese living room on a winter day, tatami floor, a paper sliding door to the veranda. CENTER (main subject, medium size, about one third of the picture width): a low kotatsu table with a quilted blanket, a calico cat sitting on the blanket, and a large wicker bowl of mandarin oranges on the table top. Winter only, cold sunny day: no Christmas, New Year's Eve or other dated holiday items, no summer items. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the ground, floor, shelf, sill, step or fence, or hangs from a hook; nothing floats. Each listed object is SMALL: about one twelfth of the picture width. No letters, labels or writing anywhere. The cat has a natural relaxed posture: its whole body rests on the cushion or floor, four legs and one tail, normal cat anatomy. Do not use much red: keep the light natural daylight and the whites ordinary white. Objects: (left, at 30% height) a small round clock on a wall shelf; (right, at 30% height) a small framed mountain picture without letters hanging on a hook; (left, at 50% height) a small round cushion on the tatami; (right, at 50% height) a small teapot on a low shelf; (left, at 70% height) a small basket of knitting wool on the tatami; (right, at 70% height) a small pair of slippers on the tatami.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "x",
+     "line": "x",
+     "box": [
+      0,
+      0,
+      10,
+      10
+     ],
+     "object_w": 200,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "x",
+     "line": "x",
+     "box": [
+      0,
+      0,
+      10,
+      10
+     ],
+     "object_w": 200,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "x",
+     "line": "x",
+     "box": [
+      0,
+      0,
+      10,
+      10
+     ],
+     "object_w": 200,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    57,
+    64,
+    1799,
+    2024
+   ],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small round clock on the wall shelf at the upper left is gone (show the empty shelf and the wall); (b) the brown teapot on the low shelf at the right is mirrored left to right so its spout points to the right instead of the left; (c) the round blue cushion on the tatami at the left becomes yellow; (d) the pair of slippers on the tatami at the right becomes green.",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small round clock on the wall shelf at the upper left is gone (show the empty shelf and the wall); (b) the brown teapot on the low shelf at the right is mirrored left to right so its spout points to the right instead of the left; (c) the round blue cushion on the tatami at the left becomes yellow; (d) the pair of slippers on the tatami at the right becomes green."
+   }
+  },
+  {
+   "q": 3,
+   "scene": "縁側のお茶の時間",
+   "level": "初級",
+   "go": "続いて、第3問。どうぞ。",
+   "prompt": "Scene: close-up of a sunny Japanese veranda in winter, a sliding window, a small garden outside. CENTER (main subject, medium size, about one third of the picture width): a wooden tray on the veranda floor with a teapot, two cups and a plate with a peeled mandarin orange, and a gray cat sitting on a cushion beside the tray. Winter only, cold sunny day: no Christmas, New Year's Eve or other dated holiday items, no summer items. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the ground, floor, shelf, sill, step or fence, or hangs from a hook; nothing floats. Each listed object is SMALL: about one twelfth of the picture width. No letters, labels or writing anywhere. The cat has a natural relaxed posture: its whole body rests on the cushion or floor, four legs and one tail, normal cat anatomy. Do not use much red: keep the light natural daylight and the whites ordinary white. Objects: (left, at 30% height) a small potted plant on a shelf; (right, at 30% height) a small round tea canister without a label on the window sill; (left, at 50% height) a small pair of reading glasses lying on a small wooden tray on the veranda floor; (right, at 50% height) a small bowl of mandarin peels on the veranda floor; (left, at 70% height) a small knitted cap on the veranda floor; (right, at 70% height) a small wooden stool on the veranda floor.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "x",
+     "line": "x",
+     "box": [
+      0,
+      0,
+      10,
+      10
+     ],
+     "object_w": 200,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "x",
+     "line": "x",
+     "box": [
+      0,
+      0,
+      10,
+      10
+     ],
+     "object_w": 200,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "x",
+     "line": "x",
+     "box": [
+      0,
+      0,
+      10,
+      10
+     ],
+     "object_w": 200,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    47,
+    51,
+    1812,
+    2037
+   ],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the clay pot of the small potted plant on the shelf at the upper left becomes blue (the plant stays); (b) the pair of reading glasses on the small wooden tray at the left is gone (show the empty tray); (c) the small bowl of mandarin peels at the right edge becomes a small bowl holding three whole mandarin oranges; (d) the green knitted cap at the lower left becomes yellow.",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the clay pot of the small potted plant on the shelf at the upper left becomes blue (the plant stays); (b) the pair of reading glasses on the small wooden tray at the left is gone (show the empty tray); (c) the small bowl of mandarin peels at the right edge becomes a small bowl holding three whole mandarin oranges; (d) the green knitted cap at the lower left becomes yellow."
+   }
+  },
+  {
+   "q": 4,
+   "scene": "みかんの木の庭",
+   "level": "中級",
+   "go": "第4問です。じっくりどうぞ。",
+   "prompt": "Scene: close-up of a sunny winter Japanese garden seen from the veranda, a bamboo fence, bare ground with a few stepping stones. CENTER (main subject, medium size, about one quarter of the picture width): a small mandarin tree full of ripe orange mandarins, and a ginger cat sitting on a stepping stone under the tree. Winter only, cold sunny day: no Christmas, New Year's Eve or other dated holiday items, no summer items. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the ground, floor, shelf, sill, step or fence, or hangs from a hook; nothing floats. Each listed object is SMALL: about one fourteenth, VERY SMALL of the picture width. No letters, labels or writing anywhere. The cat has a natural relaxed posture: its whole body rests on the cushion or floor, four legs and one tail, normal cat anatomy. Do not use much red: keep the light natural daylight and the whites ordinary white. Objects: (left, at 30% height) a small sparrow on a bamboo fence post; (right, at 30% height) a small bird feeder hanging from a branch of the tree; (left, at 50% height) a small stone rabbit statue on a rock; (right, at 50% height) a small watering can on the ground; (left, at 70% height) a small stone water basin with a bamboo ladle on the ground; (right, at 70% height) a pair of small wooden garden clogs on the ground.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "x",
+     "line": "x",
+     "box": [
+      0,
+      0,
+      10,
+      10
+     ],
+     "object_w": 200,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "x",
+     "line": "x",
+     "box": [
+      0,
+      0,
+      10,
+      10
+     ],
+     "object_w": 200,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "x",
+     "line": "x",
+     "box": [
+      0,
+      0,
+      10,
+      10
+     ],
+     "object_w": 200,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the roof of the small wooden bird feeder hanging from the branch becomes green; (b) the small stone rabbit statue on the rock at the left is replaced by a small stone owl statue of the same size on the same rock; (c) the small watering can on the ground at the right is mirrored left to right so its spout points the other way; (d) the small sparrow on the fence post at the left is gone (show the bare post); (e) the pair of small wooden clogs at the lower right is gone.",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the roof of the small wooden bird feeder hanging from the branch becomes green; (b) the small stone rabbit statue on the rock at the left is replaced by a small stone owl statue of the same size on the same rock; (c) the small watering can on the ground at the right is mirrored left to right so its spout points the other way; (d) the small sparrow on the fence post at the left is gone (show the bare post); (e) the pair of small wooden clogs at the lower right is gone."
+   }
+  },
+  {
+   "q": 5,
+   "scene": "みかん箱と猫",
+   "level": "上級",
+   "go": "最後の第5問、難問です。どうぞ。",
+   "prompt": "Scene: close-up of a Japanese veranda on a sunny winter day, wooden floor, a garden with a fence beyond. CENTER, LARGE (main subject): a wooden crate full of mandarin oranges, with no label or writing, and a tabby cat sitting on a cushion right beside the crate. Winter only, cold sunny day: no Christmas, New Year's Eve or other dated holiday items, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one sixteenth, VERY SMALL of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. The cat has a natural relaxed posture: its whole body rests on the cushion or floor, four legs and one tail, normal cat anatomy. Do not use much red: keep the light natural daylight and the whites ordinary white. Objects: (upper left, on a garden fence) a tiny sparrow; (upper right, hanging from the eaves) a tiny bell; (middle left, on the veranda) a tiny teacup; (middle right, on the veranda) a tiny single mandarin with a green leaf; (lower left, on the veranda) a tiny pair of reading glasses; (lower right, on the veranda) a tiny knitted sock.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "x",
+     "line": "x",
+     "box": [
+      0,
+      0,
+      10,
+      10
+     ],
+     "object_w": 200,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "x",
+     "line": "x",
+     "box": [
+      0,
+      0,
+      10,
+      10
+     ],
+     "object_w": 200,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "x",
+     "line": "x",
+     "box": [
+      0,
+      0,
+      10,
+      10
+     ],
+     "object_w": 200,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny sparrow on the garden fence at the upper left is mirrored left to right so it faces the other way; (b) the tiny teacup on the veranda at the left becomes green; (c) the tiny single mandarin with a green leaf on the veranda at the right becomes two tiny mandarins side by side; (d) the tiny knitted sock at the lower right becomes blue; (e) the tiny pair of reading glasses at the lower left is gone.",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny sparrow on the garden fence at the upper left is mirrored left to right so it faces the other way; (b) the tiny teacup on the veranda at the left becomes green; (c) the tiny single mandarin with a green leaf on the veranda at the right becomes two tiny mandarins side by side; (d) the tiny knitted sock at the lower right becomes blue; (e) the tiny pair of reading glasses at the lower left is gone."
+   }
+  }
+ ],
+ "thumbnail": {
+  "question": 1,
+  "big_text": "冬の間違いさがし",
+  "highlight": "間違いさがし",
+  "highlight_color": [
+   255,
+   214,
+   0
+  ],
+  "big_color": [
+   255,
+   255,
+   255
+  ],
+  "band_color": [
+   25,
+   35,
+   70
+  ],
+  "big_size": 132,
+  "sub_text": "3つ見つけられる？全5問",
+  "badges": [
+   [
+    "初級〜上級",
+    [
+     176,
+     62,
+     52
+    ]
+   ]
+  ],
+  "circle_hint": false,
+  "note": "ab/ の3案を使う（thumb_band.py）"
+ },
+ "shorts": [
+  {
+   "question": 2,
+   "answer_gap": 3.3,
+   "note": "1本目：第2問 こたつのみかん・初級",
+   "title": "シニアの間違い探し｜こたつのみかんの1問 #脳トレ #頭の体操",
+   "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
+   "end_veil": [
+    {
+     "at": 0,
+     "lines": [
+      [
+       "いくつ見つかった？",
+       120,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "コメントで教えてね",
+       104,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": false
+    },
+    {
+     "at": 3.8,
+     "lines": [
+      [
+       "続きは長い動画で",
+       116,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "左下をクリック",
+       128,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "question": 4,
+   "answer_gap": 3.3,
+   "note": "2本目：第4問 みかんの木の庭・中級",
+   "title": "シニアの間違い探し｜みかんの木の庭の1問 #脳トレ #頭の体操",
+   "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
+   "end_veil": [
+    {
+     "at": 0,
+     "lines": [
+      [
+       "いくつ見つかった？",
+       120,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "コメントで教えてね",
+       104,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": false
+    },
+    {
+     "at": 3.8,
+     "lines": [
+      [
+       "続きは長い動画で",
+       116,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "左下をクリック",
+       128,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": true
+    }
+   ]
+  }
+ ]
+}

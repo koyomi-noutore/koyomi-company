@@ -6,13 +6,13 @@
  ],
  "note": "第20回（雪の日の商店街・冬）。公開日は未定（schedule.md 2026-11-22）。",
  "youtube": {
-  "title": "【間違い探し】雪だるまと冬の朝｜シニアの脳トレ全5問",
+  "title": "【間違い探し】雪の商店街｜シニアの脳トレ・頭の体操",
   "description_file": "description.md",
   "title_note": "32文字以内・【間違い探し】から",
   "publish_plan": "未定（CEOが決める）"
  },
  "screens": {
-  "opening_title": "雪だるまと冬の朝の間違い探し　全5問",
+  "opening_title": "雪の商店街の間違い探し　全5問",
   "opening_sub": "最後は難問です",
   "unchiku_header": "こよみ先生の 冬の小話",
   "unchiku_slides": [
@@ -49,7 +49,7 @@
     "until": 15,
     "texts": [
      [
-      "雪の朝は なぜ静か？",
+      "雪の結晶は なぜ六角形？",
       960,
       380,
       110,
@@ -66,7 +66,7 @@
     "until": 24,
     "texts": [
      [
-      "ふわふわの雪が",
+      "水のつぶが",
       960,
       330,
       110,
@@ -78,7 +78,7 @@
       6
      ],
      [
-      "音を 吸いこむ",
+      "六角形に 固まる",
       960,
       520,
       100,
@@ -95,7 +95,7 @@
     "until": 30,
     "texts": [
      [
-      "雪の朝は",
+      "雪の日は",
       960,
       330,
       110,
@@ -107,7 +107,7 @@
       6
      ],
      [
-      "耳を すまして",
+      "雪を じっくり",
       960,
       520,
       100,
@@ -124,23 +124,23 @@
   "ending_titles": [
    [
     "15個",
-    "雪だるま名人"
+    "雪の商店街の名人"
    ],
    [
     "11〜14個",
-    "冬の朝の名探偵"
+    "雪の日の名探偵"
    ],
    [
     "6〜10個",
-    "雪かきの番人"
+    "商店街の常連さん"
    ],
    [
     "0〜5個",
-    "雪うさぎさん"
+    "雪だるまさん"
    ]
   ],
-  "ending_note": "雪うさぎさんも、毎朝はねれば 名人です",
-  "ending_next": "次の動画も つづけて どうぞ",
+  "ending_note": "雪だるまさんも、毎日見れば 名人です",
+  "ending_next": "ほかの間違い探しもどうぞ",
   "owl_layout": "bottom",
   "endscreen_at": 9.0,
   "rule_overlay": {
@@ -150,7 +150,7 @@
   }
  },
  "timeline": {
-  "total": 606.5,
+  "total": 609.5,
   "opening": [
    0.0,
    6.5
@@ -172,7 +172,7 @@
   ],
   "ending": [
    576.5,
-   606.5
+   609.5
   ],
   "card": 3.0,
   "solve": 90.0,
@@ -198,7 +198,7 @@
    {
     "id": "op",
     "at": 0.0,
-    "text": "雪だるまの間違い探し、全5問。",
+    "text": "雪の商店街、全5問。",
     "face": "smile",
     "until": 3.9
    },
@@ -222,21 +222,21 @@
    {
     "id": "u2",
     "at": 7.0,
-    "text": "雪の朝は、なぜ外がしんと静かなのでしょう？",
+    "text": "雪の結晶は、なぜ六角形なのでしょう？",
     "face": "think",
     "until": 15.0
    },
    {
     "id": "u3",
     "at": 15.0,
-    "text": "答えは、ふわふわの雪が、まわりの音を吸いこむから。",
+    "text": "答えは、水のつぶが、六角形にならんで固まるから。",
     "face": "surprise",
     "until": 24.0
    },
    {
     "id": "u4",
     "at": 24.0,
-    "text": "雪の朝は、耳をすましてみてくださいね。",
+    "text": "雪の日は、手ぶくろの上の雪を、見てくださいね。",
     "face": "wink",
     "until": 30.0
    }
@@ -259,16 +259,16 @@
    {
     "id": "e3",
     "at": 10.2,
-    "text": "チャンネル登録とベルで、毎朝8時半に問題が届きます。毎日の頭の体操にどうぞ。",
+    "text": "チャンネル登録とベルで、毎朝8時半に問題が届きます。",
     "face": "smile",
-    "until": 21.0
+    "until": 18.0
    },
    {
     "id": "e4",
-    "at": 21.0,
-    "text": "次は、右の動画、冬の鍋料理の回もどうぞ。湯気の絵で、もう5問。",
-    "face": "wink",
-    "until": 30.0
+    "at": 18.0,
+    "text": "ほかにも、いろいろな間違い探しがあります。もっと難しい問題に挑戦したい方は、画面の動画をクリックしてくださいね。",
+    "face": "smile",
+    "until": 33.0
    }
   ],
   "extra": [
@@ -282,6 +282,58 @@
   ]
  },
  "readings": [
+  [
+   "八百屋の店先",
+   "やおやのみせさき"
+  ],
+  [
+   "焼き芋の屋台",
+   "やきいものやたい"
+  ],
+  [
+   "お茶屋の軒先",
+   "おちゃやののきさき"
+  ],
+  [
+   "毛糸屋の店先",
+   "けいとやのみせさき"
+  ],
+  [
+   "雪の商店街の通り",
+   "ゆきのしょうてんがいのとおり"
+  ],
+  [
+   "左上",
+   "ひだりうえ"
+  ],
+  [
+   "右上",
+   "みぎうえ"
+  ],
+  [
+   "細長く",
+   "ほそながく"
+  ],
+  [
+   "通気口",
+   "つうきぐち"
+  ],
+  [
+   "穴",
+   "あな"
+  ],
+  [
+   "窓辺",
+   "まどべ"
+  ],
+  [
+   "水玉",
+   "みずたま"
+  ],
+  [
+   "毛糸玉",
+   "けいとだま"
+  ],
   [
    "1羽",
    "いちわ"
@@ -1041,25 +1093,29 @@
   [
    "銀",
    "ぎん"
+  ],
+  [
+   "雪",
+   "ゆき"
   ]
  ],
  "voice_override": {
   "u1": "ここでひとやすみ。こよみせんせいの、きせつのおはなしです。",
   "e1": "これでごもん、おしまいです。",
   "e2": "じゅうごこのちがい、いくつみつかりましたか。きょうのしょうごうです。",
-  "e3": "チャンネルとうろくとベルで、まいあさはちじはんに、もんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。",
+  "e3": "チャンネルとうろくとベルで、まいあさはちじはんに、もんだいがとどきます。",
   "c_comment": "みつかったかずを、あとでコメントでおしえてくださいね。",
   "s_intro": "うえとしたのえで、ちがいがみっつあります。みつけられますか。",
   "s_end": "いくつみつかったか、コメントでおしえてくださいね。ひだりしたから、つづきもどうぞ。",
   "q1_go": "みぎのえのちがいを、みっつさがしてください。どうぞ。",
   "q3_go": "つづいて、だいさんもん。どうぞ。",
   "q5_go": "さいごのだいごもん、なんもんです。どうぞ。",
-  "op": "ゆきだるまのまちがいさがし、ぜんごもん。",
+  "op": "ゆきのしょうてんがい、ぜんごもん。",
   "op2": "さいごは、なんもんです。",
-  "u2": "ゆきのあさは、なぜ、そとがしんとしずかなのでしょう？",
-  "u3": "こたえは、ふわふわのゆきが、まわりのおとを、すいこむから。",
-  "u4": "ゆきのあさは、みみをすましてみてくださいね。",
-  "e4": "つぎは、みぎのどうが、ふゆのなべりょうりのかいもどうぞ。ゆげのえで、もうごもん。"
+  "u2": "ゆきのけっしょうは、なぜ、ろっかくけいなのでしょう？",
+  "u3": "こたえは、みずのつぶが、ろっかくけいにならんで、かたまるから。",
+  "u4": "ゆきのひは、てぶくろのうえのゆきを、みてくださいね。",
+  "e4": "ほかにも、いろいろなまちがいさがしがあります。もっとむずかしいもんだいに、ちょうせんしたいかたは、がめんのどうがをクリックしてくださいね。"
  },
  "voice": {
   "provider": "fish",
@@ -1093,7 +1149,50 @@
     1856,
     2088
    ],
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "形",
+     "label": "ちょうちんが細長い",
+     "line": "ちょうちんが、細長くなりました。",
+     "box": [
+      200,
+      380,
+      485,
+      855
+     ],
+     "object_w": 243,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "かごがない",
+     "line": "右上のかごが、なくなりました。",
+     "box": [
+      1415,
+      505,
+      1705,
+      935
+     ],
+     "object_w": 247,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "キャベツが紫",
+     "line": "キャベツが、むらさき色になりました。",
+     "box": [
+      195,
+      1080,
+      525,
+      1335
+     ],
+     "object_w": 286,
+     "src": "1"
+    }
+   ],
    "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the green cabbage in the crate becomes a purple cabbage; (b) the bamboo basket hanging on the wall hook at the upper right is gone (show the wall and the empty hook); (c) the round paper lantern at the upper left becomes a tall long cylindrical lantern; (d) the orange cat becomes a gray cat; (e) the stack of three radishes becomes two radishes."
   },
   {
@@ -1111,7 +1210,50 @@
     1856,
     2088
    ],
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "おけが青",
+     "line": "右のおけが、青くなりました。",
+     "box": [
+      1510,
+      860,
+      1815,
+      1215
+     ],
+     "object_w": 259,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "やかんが赤",
+     "line": "やかんが、赤くなりました。",
+     "box": [
+      235,
+      1040,
+      530,
+      1340
+     ],
+     "object_w": 253,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "形",
+     "label": "通気口が丸い穴",
+     "line": "通気口が、丸い穴になりました。",
+     "box": [
+      1015,
+      1410,
+      1225,
+      1625
+     ],
+     "object_w": 177,
+     "src": "3"
+    }
+   ],
    "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the broom leaning on the lamp post at the left now leans the opposite way, with its bristles pointing to the right instead of the left; (b) the round wooden stool becomes a square wooden stool; (c) the black kettle becomes a red kettle; (d) the paper bag of sweet potatoes on the crate is gone; (e) the wooden bucket on the snow becomes blue.",
    "edit_prompts": {
     "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the short bent metal chimney on the roof of the cart becomes a tall straight chimney pipe, about twice as tall, with a flat round cap on top; (b) the small snowman on the left gets a small blue bucket on its head as a hat.",
@@ -1128,12 +1270,55 @@
    "retries": {},
    "hint_diff": null,
    "content_box": [
-    0,
-    0,
-    1856,
-    2088
+    80,
+    76,
+    1800,
+    2011
    ],
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "形",
+     "label": "ちょうちんが細長い",
+     "line": "ちょうちんが、細長くなりました。",
+     "box": [
+      100,
+      470,
+      400,
+      1050
+     ],
+     "object_w": 245,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "植木鉢が青",
+     "line": "窓辺の植木鉢が、青くなりました。",
+     "box": [
+      1450,
+      845,
+      1675,
+      1040
+     ],
+     "object_w": 187,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "急須が緑",
+     "line": "急須が、緑色になりました。",
+     "box": [
+      335,
+      1145,
+      570,
+      1340
+     ],
+     "object_w": 215,
+     "src": "2"
+    }
+   ],
    "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the cat sleeping on the cushion is gone (show only the empty cushion); (b) the round paper lantern hanging from the eave becomes a tall long cylindrical lantern; (c) the closed paper umbrella in the stand becomes blue; (d) the plate of three dumplings becomes two dumplings; (e) the clay pot of the green potted plant becomes blue.",
    "edit_prompts": {
     "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the brown teapot on the bench becomes a green teapot; (b) the small teacup next to the teapot becomes blue."
@@ -1154,7 +1339,50 @@
     1856,
     2088
    ],
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "模様",
+     "label": "マフラーが水玉",
+     "line": "マフラーのしま模様が、水玉になりました。",
+     "box": [
+      170,
+      715,
+      420,
+      1200
+     ],
+     "object_w": 197,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "数",
+     "label": "毛糸玉が1つ少ない",
+     "line": "棚の毛糸玉が、1つ少なくなりました。",
+     "box": [
+      1505,
+      740,
+      1760,
+      945
+     ],
+     "object_w": 203,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "帽子が黄色",
+     "line": "帽子が、黄色くなりました。",
+     "box": [
+      225,
+      1450,
+      505,
+      1750
+     ],
+     "object_w": 230,
+     "src": "1"
+    }
+   ],
    "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the stripes of the knitted scarf on the wall hook become polka dots; (b) the shelf with three yarn balls now has only two yarn balls; (c) the knitted cap on the stool becomes yellow; (d) the knitted mittens become red; (e) the scissors on the table are gone."
   },
   {
@@ -1172,7 +1400,50 @@
     1856,
     2088
    ],
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "つららがない",
+     "line": "つららが、なくなりました。",
+     "box": [
+      1380,
+      212,
+      1570,
+      556
+     ],
+     "object_w": 149,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "形",
+     "label": "鼻が丸い",
+     "line": "雪だるまの鼻が、丸くなりました。",
+     "box": [
+      715,
+      752,
+      970,
+      852
+     ],
+     "object_w": 228,
+     "src": "2"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "植木鉢が青",
+     "line": "植木鉢が、青くなりました。",
+     "box": [
+      350,
+      1225,
+      545,
+      1395
+     ],
+     "object_w": 156,
+     "src": "1"
+    }
+   ],
    "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny crow on the roof is gone (show the snowy roof); (b) the round lamp of the street lamp becomes a square lamp; (c) the pair of rubber boots becomes yellow; (d) the clay pot of the green potted plant becomes blue; (e) the icicle hanging from the awning is gone.",
    "edit_prompts": {
     "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the long carrot nose of the big snowman becomes a short round orange nose; (b) the round lamp of the street lamp becomes a square lamp."
@@ -1180,45 +1451,14 @@
   }
  ],
  "thumbnail": {
-  "question": 1,
-  "big_text": "秋の間違いさがし",
-  "highlight": "間違いさがし",
-  "highlight_color": [
-   255,
-   214,
-   0
-  ],
-  "big_color": [
-   255,
-   255,
-   255
-  ],
-  "band_color": [
-   25,
-   35,
-   70
-  ],
-  "big_size": 132,
-  "sub_text": "3つ見つけられる？全5問",
-  "badges": [
-   [
-    "初級〜上級",
-    [
-     176,
-     62,
-     52
-    ]
-   ]
-  ],
-  "circle_hint": false,
-  "note": "第1回と同じ型（変えた所なし）。左右に同じ絵・上に濃紺の帯で「秋の間違いさがし」・下に難易度と問いかけ。こよみ先生は入れない"
+  "note": "thumb_band.py で作る（違いゼロの左右同じ絵）"
  },
  "shorts": [
   {
    "question": 2,
    "answer_gap": 3.3,
-   "note": "1本目：第2問 雪だるまの庭・初級",
-   "title": "シニアの間違い探し｜雪だるまの庭の1問 #脳トレ #頭の体操",
+   "note": "1本目：第2問 焼き芋の屋台・初級",
+   "title": "シニアの間違い探し｜焼き芋の屋台の1問 #脳トレ #頭の体操",
    "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
    "end_veil": [
     {
@@ -1274,8 +1514,8 @@
   {
    "question": 4,
    "answer_gap": 3.3,
-   "note": "2本目：第4問 冬の朝の窓辺・中級",
-   "title": "シニアの間違い探し｜冬の朝の窓辺の1問 #脳トレ #頭の体操",
+   "note": "2本目：第4問 毛糸屋の店先・中級",
+   "title": "シニアの間違い探し｜毛糸屋の店先の1問 #脳トレ #頭の体操",
    "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
    "end_veil": [
     {
