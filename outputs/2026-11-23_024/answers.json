@@ -49,7 +49,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 109,
+   "outside_box_pixels_diff_gt15": 148,
    "outside_box_max_distance_px": 8.0,
    "answers": [
     {
@@ -130,9 +130,9 @@
     },
     {
      "id": 3,
-     "type": "向き",
-     "label": "アヒルの向き",
-     "line": "アヒルの向きが、反対になりました。",
+     "type": "色",
+     "label": "アヒルがピンク",
+     "line": "アヒルが、ピンクになりました。",
      "box_px": [
       1490,
       985,
@@ -162,7 +162,7 @@
      "object_screen_width_pct": 6.06,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "duck",
+     "edit_version": "2",
      "made_by": "gemini",
      "note": ""
     }
@@ -184,8 +184,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 25,
-   "outside_box_max_distance_px": 5.0,
+   "outside_box_pixels_diff_gt15": 19,
+   "outside_box_max_distance_px": 4.0,
    "answers": [
     {
      "id": 1,
@@ -535,9 +535,9 @@
     },
     {
      "id": 3,
-     "type": "本数",
+     "type": "模様",
      "label": "タオルの線が2本に",
-     "line": "タオルの青い線が、3本から2本になりました。",
+     "line": "タオルの青い線が、2本になりました。",
      "box_px": [
       1455,
       630,
@@ -589,7 +589,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 208,
+   "outside_box_pixels_diff_gt15": 209,
    "outside_box_max_distance_px": 10.0,
    "answers": [
     {
