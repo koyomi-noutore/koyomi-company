@@ -71,14 +71,14 @@ def easy_frame(state, remain=None):
 
 
 # ---------- ② 漢字・むずかしい（大きさ・向きばらばら・字どうしは重ならない・末の中に未） ----------
-HARD = {"main": "末", "odd": "未", "n": 30}
+HARD = {"main": "末", "odd": "未", "n": 26, "weight": "700Bold"}   # 2026-11-23 監査1回目：太さを下げ、回転は±30度、最小90px
 
 
 def layout_hard():
     """大きい字から順に、重ならない場所をさがして置く。重なりは、字を描いた実際の形（インク）で最後に検査する。"""
     rnd = random.Random(5)
     x0, y0, x1, y1 = INNER
-    sizes = sorted([rnd.randint(70, 118) for _ in range(HARD["n"])], reverse=True)
+    sizes = sorted([rnd.randint(90, 124) for _ in range(HARD["n"])], reverse=True)
     odd_i = 6                                          # 大きさの順で7番目＝中くらいの大きさ（小さすぎて見えない・大きすぎて目立つ、を避ける）
     placed = []
     for i, sz in enumerate(sizes):
@@ -86,7 +86,7 @@ def layout_hard():
         for _ in range(4000):
             cx = rnd.uniform(x0 + rad, x1 - rad); cy = rnd.uniform(y0 + rad, y1 - rad)
             if all(math.hypot(cx - px, cy - py) > rad + pr + 4 for _, px, py, _, _, pr in placed):
-                placed.append((HARD["odd"] if i == odd_i else HARD["main"], cx, cy, sz, rnd.randint(0, 359), rad)); break
+                placed.append((HARD["odd"] if i == odd_i else HARD["main"], cx, cy, sz, rnd.randint(-30, 30), rad)); break
         else:
             raise SystemExit("置ききれない。個数か大きさを減らす")
     return [p[:5] for p in placed]
@@ -95,7 +95,7 @@ def layout_hard():
 def hard_frame(state, remain=None):
     im, d = base("ちがう漢字は どれ？", "大きさも 向きも ばらばら")
     for ch, cx, cy, sz, ang in layout_hard():
-        g = glyph(ch, sz, ang)
+        g = glyph(ch, sz, ang, HARD["weight"])
         im.paste(g, (int(cx - g.width / 2), int(cy - g.height / 2)), g)
         if ch == HARD["odd"] and state:
             circle(d, cx, cy, int(sz * 0.62))
@@ -163,7 +163,7 @@ def check():
         # 重なり：字を1枚ずつ別の面に描いたインクどうしが触れていないか
         masks = []
         for ch, cx, cy, sz, ang in lay:
-            g = glyph(ch, sz, ang).split()[3].point(lambda v: 255 if v > 30 else 0)
+            g = glyph(ch, sz, ang, HARD["weight"] if name == "hard" else "900Black").split()[3].point(lambda v: 255 if v > 30 else 0)
             m = Image.new("L", (W, H), 0); m.paste(g, (int(cx - g.width / 2), int(cy - g.height / 2))); masks.append(np.array(m) > 0)
         ov = sum(int((masks[i] & masks[j]).any()) for i in range(len(masks)) for j in range(i + 1, len(masks)))
         res.append(f"{name}：インクが重なる字の組 {ov}（0 が合格）")
