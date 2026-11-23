@@ -23,10 +23,16 @@ def font_w(size, weight="900Black"):
     return ImageFont.truetype(str(Path.home() / f".cache/koyomi/fonts/package/{weight}/NotoSansJP_{weight}.ttf"), size)
 
 
-def base(title, sub, bg=T.CARD):
+TITLE = "ちがうのどーれだ？"
+
+
+def base(what, bg=T.CARD):
+    """見出し（1行に収まる範囲で大きく）＋説明文2行（2026-11-23 CEO）。what＝字・みかん など。"""
     im = Image.new("RGB", (W, H), T.BG)
     d = ImageDraw.Draw(im)
-    T.header(d, title, sub)
+    T.text_c(d, (W // 2, 258), TITLE, T.fit(d, TITLE, 120, 900), (255, 255, 255))
+    for y, s_ in ((352, f"一つだけ違う{what}があるよ。"), (412, "見つけてみてね！")):
+        T.text_c(d, (W // 2, y), s_, T.fit(d, s_, 54, 860), T.ACCENT)
     d.rounded_rectangle(PANEL, 40, fill=bg)
     return im, d
 
@@ -61,7 +67,7 @@ def layout_easy():
 
 
 def easy_frame(state, remain=None):
-    im, d = base("ちがう漢字は どれ？", "1つだけ まざっています")
+    im, d = base("字")
     for ch, cx, cy, sz, ang in layout_easy():
         g = glyph(ch, sz, ang)
         im.paste(g, (int(cx - g.width / 2), int(cy - g.height / 2)), g)
@@ -71,29 +77,40 @@ def easy_frame(state, remain=None):
 
 
 # ---------- ② 漢字・むずかしい（大きさ・向きばらばら・字どうしは重ならない・末の中に未） ----------
+TILT = 120                                     # 向きの回転は±120度まで（2026-11-23 CEO。hard だけ）
 HARD = {"main": "末", "odd": "未", "n": 16, "weight": "700Bold"}   # 2026-11-23 監査1回目：太さを下げ、回転は±30度、最小90px
 
 
 def layout_hard():
-    """大きい字から順に、重ならない場所をさがして置く。重なりは、字を描いた実際の形（インク）で最後に検査する。"""
+    """大きい字から順に、重ならない場所をさがして置く。重なりは、字を描いた実際の形（インク）で、置くたびに検査する（回転しても重ならない）。"""
+    import numpy as np
+    from PIL import ImageFilter
     rnd = random.Random(5)
     x0, y0, x1, y1 = INNER
     sizes = sorted([rnd.randint(140, 170) for _ in range(HARD["n"])], reverse=True)
-    odd_i = 5                                          # 大きさの順で7番目＝中くらいの大きさ（小さすぎて見えない・大きすぎて目立つ、を避ける）
+    odd_i = 5                                          # 大きさの順で6番目＝大きい方の字（小さすぎて見えない、を避ける）
+    occ = np.zeros((H, W), bool)
     placed = []
     for i, sz in enumerate(sizes):
-        rad = sz * 0.52
-        for _ in range(4000):
-            cx = rnd.uniform(x0 + rad, x1 - rad); cy = rnd.uniform(y0 + rad, y1 - rad)
-            if all(math.hypot(cx - px, cy - py) > rad + pr + 4 for _, px, py, _, _, pr in placed):
-                placed.append((HARD["odd"] if i == odd_i else HARD["main"], cx, cy, sz, rnd.randint(-30, 30), rad)); break
+        ch = HARD["odd"] if i == odd_i else HARD["main"]
+        for _ in range(8000):
+            ang = rnd.randint(-TILT, TILT)
+            g = glyph(ch, sz, ang, HARD["weight"]).split()[3].point(lambda v: 255 if v > 30 else 0).filter(ImageFilter.MaxFilter(9))   # ふち4pxぶん太らせて、字どうしの間をあける
+            bb = g.getbbox(); full = g.size[0]                  # 字の形の外枠だけにして、端まで使う
+            g = g.crop(bb); gw, gh = g.size
+            px = rnd.randint(x0, x1 - gw); py = rnd.randint(y0, y1 - gh)
+            cx = px + gw / 2 - (bb[0] + gw / 2 - full / 2); cy = py + gh / 2 - (bb[1] + gh / 2 - full / 2)   # 字の中心（回転前の中心）
+            m = np.array(g) > 0
+            if not (occ[py:py + gh, px:px + gw] & m).any():
+                occ[py:py + gh, px:px + gw] |= m
+                placed.append((ch, cx, cy, sz, ang)); break
         else:
-            raise SystemExit("置ききれない。個数か大きさを減らす")
-    return [p[:5] for p in placed]
+            raise SystemExit(f"置ききれない（{i}個目）。個数か大きさを減らす")
+    return placed
 
 
 def hard_frame(state, remain=None):
-    im, d = base("ちがう漢字は どれ？", "大きさも 向きも ばらばら")
+    im, d = base("字")
     for ch, cx, cy, sz, ang in layout_hard():
         g = glyph(ch, sz, ang, HARD["weight"])
         im.paste(g, (int(cx - g.width / 2), int(cy - g.height / 2)), g)
@@ -126,7 +143,7 @@ def mikan_pic():
 
 
 def mikan_frame(state, remain=None):
-    im, d = base("ちがうのは どれ？", "1つだけ ちがいます", bg=(255, 255, 255))
+    im, d = base("みかん", bg=(255, 255, 255))
     pic = mikan_pic(); odd = pic.transpose(Image.FLIP_LEFT_RIGHT)
     x0, y0, x1, y1 = INNER
     cw, ch = (x1 - x0) / MIKAN["cols"], (y1 - y0) / MIKAN["rows"]
@@ -141,9 +158,9 @@ def mikan_frame(state, remain=None):
 
 
 # ---------- T.build に登録（流れ・声・音・こよみ先生・矢印は共通） ----------
-T.KINDS["easy"] = ({"think": 15, "veil": ["ちがうのは、どれ？", "1つだけ まざっている", "ちがう漢字を さがそう"]}, easy_frame, 1)
-T.KINDS["hard"] = ({"think": 20, "veil": ["ちがうのは、どれ？", "大きさも 向きも ばらばら", "まざった 1字を さがそう"]}, hard_frame, 1)
-T.KINDS["mikan"] = ({"think": 15, "veil": ["ちがうのは、どれ？", "同じみかんの中に", "1つだけ ちがいます"]}, mikan_frame, 1)
+T.KINDS["easy"] = ({"think": 15, "veil": [TITLE, "一つだけ違う字があるよ。", "見つけてみてね！"]}, easy_frame, 1)
+T.KINDS["hard"] = ({"think": 20, "veil": [TITLE, "一つだけ違う字があるよ。", "見つけてみてね！"]}, hard_frame, 1)
+T.KINDS["mikan"] = ({"think": 15, "veil": [TITLE, "一つだけ違うみかんがあるよ。", "見つけてみてね！"]}, mikan_frame, 1)
 T.LINES["easy"] = {"intro": ("違う漢字が、1つだけあります。どれでしょう？", "ちがうかんじが、ひとつだけあります。どれでしょう？"),
                    "ans": [("「季節」の『季』の中に、「李（すもも）」の『李』が、混ざっていました。", "きせつの、き、のなかに、すももの、り、が、まざっていました。")]}
 T.LINES["hard"] = {"intro": ("違う漢字が、1つだけあります。どれでしょう？", "ちがうかんじが、ひとつだけあります。どれでしょう？"),
@@ -178,6 +195,48 @@ def check():
     return res
 
 
+def build(kind, out):
+    """text_shorts.build と同じ流れ。最後だけ共通の部品 short_outro（コメント→左下をクリック）を使う。"""
+    from short_outro import build_outro
+    cfg, frame, n_ans = T.KINDS[kind]; L = T.LINES[kind]
+    seq, voices, ev, t = [], [], {}, 0.0
+
+    def say(key, line, at=None):
+        w, dur = T.voice(kind, key, line[1]); voices.append((w, (t if at is None else at) + 0.3, key, line)); return dur + 0.3
+    d_intro = say("intro", L["intro"])
+    vl = [(s_, 96 if i < 2 else 72, (255, 255, 255) if i < 2 else T.ACCENT) for i, s_ in enumerate(cfg["veil"])]
+    seq.append((T.speaker(T.veil(frame(0), vl), "normal", L["intro"][0]), max(4.0, d_intro + 0.4))); t += seq[-1][1]
+    say("tap", T.TAP)
+    for s_ in range(cfg["think"], 0, -1):
+        seq.append((T.timer(T.speaker(frame(0), "think" if s_ < cfg["think"] - 3 else "smile", T.TAP[0]), s_), 1.0)); t += 1.0
+    ev["solve_end"] = t
+    d0 = say("ans0", T.ANS0)
+    seq.append((T.speaker(frame(0), "surprise", T.ANS0[0]), max(1.5, d0 + 0.2))); t += seq[-1][1]
+    line = L["ans"][0]
+    ev["pon"] = [t + 0.3]
+    dk = say("ans1", line)
+    seq.append((T.speaker(frame(1), "yay", line[0]), max(2.5, dk + 0.4) + 1.0)); t += seq[-1][1]
+    ev["end_at"] = t
+    n_ans_end = len(seq)
+    frames, length = build_outro(frame(1), lambda key, ln, off: say(key, ln, t + off), T.veil, T.speaker, T.arrow, comment="text")
+    seq += frames; total = t + length
+    tmp = WORK / f"_{kind}"; tmp.mkdir(parents=True, exist_ok=True)
+    lst = []
+    for i, (im, dt) in enumerate(seq):
+        p = tmp / f"{i:03d}.png"; im.save(p); lst.append(f"file '{p}'\nduration {dt}\n")
+    (tmp / "list.txt").write_text("".join(lst) + f"file '{tmp / f'{len(seq) - 1:03d}.png'}'\n", encoding="utf-8")
+    T.mix_audio(voices, ev, total, tmp / "mix.wav")
+    T.readings_check(kind, voices, out)
+    import subprocess
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(tmp / "list.txt"), "-i", str(tmp / "mix.wav"),
+                    "-map", "0:v", "-map", "1:a", "-vf", f"fps={T.FPS},format=yuv420p", "-c:v", "libx264", "-crf", "20", "-c:a", "aac", "-b:a", "192k",
+                    "-ar", "48000", "-t", f"{total:.2f}", "-movflags", "+faststart", str(out / f"{kind}.mp4")], check=True)
+    for p in tmp.iterdir():
+        p.unlink()
+    tmp.rmdir()
+    return round(total, 1)
+
+
 if __name__ == "__main__":
     out = Path(sys.argv[1]).resolve(); out.mkdir(parents=True, exist_ok=True)
     WORK.mkdir(parents=True, exist_ok=True)
@@ -186,5 +245,5 @@ if __name__ == "__main__":
         print("\n".join(check())); sys.exit()
     for k in kinds:
         t = time.time()
-        sec = T.build(k, WORK / "out")
+        sec = build(k, out)
         print(k, sec, "秒（作業", round(time.time() - t), "秒）", flush=True)
