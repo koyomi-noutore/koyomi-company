@@ -440,7 +440,7 @@
   },
   {
    "q": 4,
-   "scene": "栗の木の山道",
+   "scene": "栗の山道",
    "level": "中級",
    "hint_diff": null,
    "image_size": [
@@ -594,41 +594,41 @@
    "answers": [
     {
      "id": 1,
-     "type": "向き",
-     "label": "カップの持ち手",
-     "line": "切り株のカップの持ち手が、反対になりました。",
+     "type": "色",
+     "label": "カップの花の色",
+     "line": "カップの花が、オレンジ色になりました。",
      "box_px": [
-      110,
-      820,
-      460,
-      1030
+      238,
+      905,
+      314,
+      990
      ],
      "box_screen": [
-      57,
-      424,
-      238,
-      533
+      123,
+      468,
+      162,
+      512
      ],
      "circle_a_screen": [
-      57,
-      424,
-      238,
-      533
+      123,
+      468,
+      162,
+      512
      ],
      "circle_b_screen": [
-      57,
-      424,
-      238,
-      533
+      123,
+      468,
+      162,
+      512
      ],
-     "object_w_px": 250,
-     "object_picture_width_pct": 13.47,
-     "object_screen_width_pct": 6.73,
-     "in_level_range": false,
+     "object_w_px": 120,
+     "object_picture_width_pct": 6.47,
+     "object_screen_width_pct": 3.23,
+     "in_level_range": true,
      "in_safe_y": true,
      "edit_version": "flip",
      "made_by": "program",
-     "note": "AIではなくプログラムで左右反転（同じ場所で向きだけ変える）"
+     "note": "AIではなくプログラムで花の色相を変える（物を動かさない）"
     },
     {
      "id": 2,
