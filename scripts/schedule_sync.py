@@ -35,7 +35,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).parent))
-from credentials import vertex_service_account  # noqa: E402
+from credentials import vertex_service_account, rs256_sign  # noqa: E402
 
 CONF = Path(__file__).parent / "schedule_sheet.json"
 LIST, CAL, STOCK = "動画一覧", "カレンダー", "在庫"
@@ -64,16 +64,13 @@ def cal_cell(row, col):
 
 # ---------- 認証 ----------
 def sheets_token():
-    from cryptography.hazmat.primitives import hashes, serialization
-    from cryptography.hazmat.primitives.asymmetric import padding
     sa = vertex_service_account()
     b64 = lambda d: base64.urlsafe_b64encode(d).rstrip(b"=")
     now = int(time.time())
     head = b64(json.dumps({"alg": "RS256", "typ": "JWT"}).encode())
     claim = b64(json.dumps({"iss": sa["client_email"], "scope": "https://www.googleapis.com/auth/spreadsheets",
                             "aud": sa["token_uri"], "iat": now, "exp": now + 3600}).encode())
-    key = serialization.load_pem_private_key(sa["private_key"].encode(), None)
-    sig = b64(key.sign(head + b"." + claim, padding.PKCS1v15(), hashes.SHA256()))
+    sig = b64(rs256_sign(sa["private_key"], head + b"." + claim))
     data = urllib.parse.urlencode({"grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer",
                                    "assertion": (head + b"." + claim + b"." + sig).decode()}).encode()
     with urllib.request.urlopen(urllib.request.Request(sa["token_uri"], data=data), timeout=60) as r:

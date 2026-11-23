@@ -83,3 +83,33 @@ def vertex_service_account(env="VERTEX_SA_KEY_B64"):
     if missing:
         raise SystemExit(f"{env} に必要な項目がありません: {', '.join(missing)}")
     return info
+
+
+def rs256_sign(private_key_pem, message):
+    """サービスアカウントのJWT署名（RS256）。2026-11-24：一部の作業環境で cryptography の読み込みが
+    pyo3 の PanicException で落ちたため、純Pythonの rsa ライブラリを先に使う（無ければ自動で入れる）。
+    rsa が使えないときだけ cryptography を使う。鍵はメモリ上だけで扱う。"""
+    try:
+        import rsa
+    except ImportError:
+        import subprocess
+        subprocess.run([sys.executable, "-m", "pip", "install", "-q", "--break-system-packages", "rsa"],
+                       check=False, capture_output=True)
+        try:
+            import rsa
+        except ImportError:
+            rsa = None
+    if rsa is not None:
+        try:
+            key = rsa.PrivateKey.load_pkcs1(private_key_pem.encode(), "PEM")
+        except Exception:
+            from rsa import pem as _pem  # PKCS#8（-----BEGIN PRIVATE KEY-----）を PKCS#1 に
+            from pyasn1.codec.der import decoder
+            der = _pem.load_pem(private_key_pem.encode(), "PRIVATE KEY")
+            inner, _ = decoder.decode(der)
+            key = rsa.PrivateKey.load_pkcs1(bytes(inner[2]), "DER")
+        return rsa.sign(message, key, "SHA-256")
+    from cryptography.hazmat.primitives import hashes, serialization
+    from cryptography.hazmat.primitives.asymmetric import padding
+    k = serialization.load_pem_private_key(private_key_pem.encode(), password=None)
+    return k.sign(message, padding.PKCS1v15(), hashes.SHA256())

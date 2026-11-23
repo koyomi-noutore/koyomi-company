@@ -98,6 +98,7 @@ def list_videos(token):
         page = r.get("nextPageToken")
         if not page:
             break
+    ids = list(dict.fromkeys(ids))  # 2026-11-24：同じ動画が2回出ていたので重複を除く
     videos = []
     for i in range(0, len(ids), 50):
         r = get(token, DATA + "videos", part="snippet,contentDetails,statistics,status", id=",".join(ids[i:i + 50]))
