@@ -92,23 +92,33 @@ def call(url, token, body=None, method=None):
 
 
 # ---------- YouTube ----------
-def youtube_videos():
+def youtube_videos(extra_ids=()):
+    """チャンネルの全動画。uploads 再生リストはページが重なって数本抜けることがある（2026-11-23 zcAY1FhNMm0 が抜けた）ので、
+    search(forMine) と、シートに既にある動画ID も合わせて、videos.list で直接読む。"""
     from youtube_upload import access_token
     tok = access_token()
     g = lambda p: call("https://www.googleapis.com/youtube/v3/" + p, tok)
+
+    def pages(path, pick):
+        got, page, total = [], "", 0
+        while True:
+            r = g(path + (f"&pageToken={page}" if page else ""))
+            got += [pick(i) for i in r["items"]]
+            total = r.get("pageInfo", {}).get("totalResults", total)
+            page = r.get("nextPageToken")
+            if not page:
+                return got, total
+
     up = g("channels?part=contentDetails&mine=true")["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
-    ids, page = [], ""
-    while True:
-        r = g(f"playlistItems?part=contentDetails&maxResults=50&playlistId={up}" + (f"&pageToken={page}" if page else ""))
-        ids += [i["contentDetails"]["videoId"] for i in r["items"]]
-        page = r.get("nextPageToken")
-        if not page:
-            break
-    ids = list(dict.fromkeys(ids))
+    a, total = pages(f"playlistItems?part=contentDetails&maxResults=50&playlistId={up}", lambda i: i["contentDetails"]["videoId"])
+    b, _ = pages("search?part=id&forMine=true&type=video&maxResults=50", lambda i: i["id"]["videoId"])
+    ids = list(dict.fromkeys(a + b + [x for x in extra_ids if x]))
     out = {}
     for i in range(0, len(ids), 50):
         for v in g("videos?part=snippet,status,contentDetails&id=" + ",".join(ids[i:i + 50]))["items"]:
             out[v["id"]] = v
+    if len(out) < total:
+        print(f"注意：YouTubeの動画数 {total} 本のうち {len(out)} 本しか読めませんでした")
     return out
 
 
@@ -368,9 +378,11 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--sheet")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--fill-new", action="store_true",
+                    help="今回足す新しい行だけ、予約・公開済みなら予定日・枠をYouTubeの時刻で埋める（既存の行には触らない）")
     a = ap.parse_args()
-    videos = youtube_videos()
     if a.dry_run:
+        videos = youtube_videos()
         for v in sorted(videos.values(), key=lambda v: state(v)[1] or parse_time(v["snippet"]["publishedAt"])):
             st, t = state(v)
             print(v["id"], kind(v), episode_map().get(v["id"], "-"), st, t.strftime("%m/%d %H:%M") if t else "-",
@@ -379,7 +391,9 @@ def main():
     sid = sheet_id(a.sheet)
     tok = sheets_token()
     first = setup(sid, tok)
-    added = sync(sid, tok, videos, first)
+    have = call(f"https://sheets.googleapis.com/v4/spreadsheets/{sid}/values/{urllib.parse.quote(LIST)}!A2:A", tok).get("values", [])
+    videos = youtube_videos([r[0] for r in have if r])
+    added = sync(sid, tok, videos, first or a.fill_new)
     print(f"{'初回の作成・' if first else ''}同期しました。新しい行 {added} 本。")
     report(sid, tok)
 
