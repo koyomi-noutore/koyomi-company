@@ -46,7 +46,7 @@ def make(ep, q, out, top_text=("3つ", "見つけたら", "天才！"), bottom=(
         im = ImageEnhance.Color(im).enhance(1.5); im = ImageEnhance.Contrast(im).enhance(1.3)
         return im.filter(ImageFilter.UnsharpMask(2, 130, 2))
     T = Image.new('RGB', (1280, 720), (255, 255, 255))
-    T.paste(prep(a), (0, top)); T.paste(prep(b), (644, top))
+    T.paste(prep(a), (0, top)); T.paste(prep(a), (644, top))  # 2026-11-23：左右とも元の絵（違いゼロ）
     d = ImageDraw.Draw(T)
     d.rectangle([636, top, 644, 720], fill=(25, 25, 25)); d.rectangle([0, 0, 1280, top], fill=(0, 0, 0))
     f = ImageFont.truetype(F, 150)   # 上の文字は大きく、帯いっぱいに（2026-11-18）

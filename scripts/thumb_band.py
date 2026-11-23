@@ -43,7 +43,7 @@ def pics(ep, q, sat=1.15):
         im = neutral(im).crop(box).resize((pw, ph), Image.LANCZOS)
         im = ImageEnhance.Color(im).enhance(sat); im = ImageEnhance.Contrast(im).enhance(1.15)
         return im.filter(ImageFilter.UnsharpMask(2, 130, 2))
-    return prep(a), prep(b), top
+    return prep(a), prep(a), top   # 2026-11-23 CEO決定：サムネは左右とも元の絵（違いゼロ）。サムネで答えが見つからないように
 
 
 def make(out, ep, q, band, top_txt, bottom=("間違いさがし",)):
