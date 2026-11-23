@@ -535,37 +535,37 @@
     },
     {
      "id": 3,
-     "type": "増える",
-     "label": "湯のみが増える",
-     "line": "縁側に、湯のみがひとつ増えました。",
+     "type": "数",
+     "label": "栗が2つ増える",
+     "line": "お皿のそばに、栗が2つ増えました。",
      "box_px": [
-      1315,
-      1400,
-      1540,
-      1645
+      1405,
+      1355,
+      1630,
+      1470
      ],
      "box_screen": [
-      680,
-      724,
-      797,
-      851
+      727,
+      701,
+      843,
+      760
      ],
      "circle_a_screen": [
-      680,
-      724,
-      797,
-      851
+      727,
+      701,
+      843,
+      760
      ],
      "circle_b_screen": [
-      680,
-      724,
-      797,
-      851
+      727,
+      701,
+      843,
+      760
      ],
-     "object_w_px": 173,
-     "object_picture_width_pct": 9.32,
-     "object_screen_width_pct": 4.66,
-     "in_level_range": true,
+     "object_w_px": 186,
+     "object_picture_width_pct": 10.02,
+     "object_screen_width_pct": 5.01,
+     "in_level_range": false,
      "in_safe_y": true,
      "edit_version": "p",
      "made_by": "gemini",
