@@ -173,6 +173,12 @@
    "detail": "check",
    "sec": 4.4,
    "at": "2026-11-23T08:56:49+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "voice q2_card q4_card q2_go op",
+   "sec": 0.0,
+   "at": "2026-11-23T09:06:51+00:00"
   }
  ],
  "total_sec_by_step": {
