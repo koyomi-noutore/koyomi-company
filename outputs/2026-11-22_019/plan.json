@@ -283,6 +283,14 @@
  },
  "readings": [
   [
+   "1羽",
+   "いちわ"
+  ],
+  [
+   "雪かきの道",
+   "ゆきかきのみち"
+  ],
+  [
    "雪だるまの庭",
    "ゆきだるまのにわ"
   ],
@@ -295,12 +303,60 @@
    "ふゆのあさのまどべ"
   ],
   [
-   "雪かきの道",
-   "ゆきかきのみち"
-  ],
-  [
    "雪うさぎの縁側",
    "ゆきうさぎのえんがわ"
+  ],
+  [
+   "雪うさぎの耳の葉",
+   "ゆきうさぎのみみのは"
+  ],
+  [
+   "時計の文字盤",
+   "とけいのもじばん"
+  ],
+  [
+   "雪だるまの鼻",
+   "ゆきだるまのはな"
+  ],
+  [
+   "段の上",
+   "だんのうえ"
+  ],
+  [
+   "雪の上",
+   "ゆきのうえ"
+  ],
+  [
+   "手ぶくろ",
+   "てぶくろ"
+  ],
+  [
+   "植木鉢",
+   "うえきばち"
+  ],
+  [
+   "花びん",
+   "かびん"
+  ],
+  [
+   "湯のみ",
+   "ゆのみ"
+  ],
+  [
+   "赤い実",
+   "あかいみ"
+  ],
+  [
+   "小鳥",
+   "ことり"
+  ],
+  [
+   "左の",
+   "ひだりの"
+  ],
+  [
+   "柱",
+   "はしら"
   ],
   [
    "雪だるまと冬の朝",
@@ -311,10 +367,6 @@
    "しちみいれ"
   ],
   [
-   "植木鉢",
-   "うえきばち"
-  ],
-  [
    "長いす",
    "ながいす"
   ],
@@ -323,16 +375,8 @@
    "きゅうす"
   ],
   [
-   "花びん",
-   "かびん"
-  ],
-  [
    "はし置き",
    "はしおき"
-  ],
-  [
-   "湯のみ",
-   "ゆのみ"
   ],
   [
    "屋根",
@@ -389,10 +433,6 @@
   [
    "お皿",
    "おさら"
-  ],
-  [
-   "柱",
-   "はしら"
   ],
   [
    "笠",
@@ -771,10 +811,6 @@
    "こざら"
   ],
   [
-   "小鳥",
-   "ことり"
-  ],
-  [
    "向き",
    "むき"
   ],
@@ -1044,67 +1080,57 @@
  "questions": [
   {
    "q": 1,
-   "scene": "雪だるまの庭",
+   "scene": "雪かきの道",
    "level": "やさしい",
    "go": "右の絵の違いを、3つ探してください。どうぞ。",
-   "prompt": "Scene: close-up of a snowy Japanese house garden on a winter morning, a big snowman, snow on the pine tree and the fence. CENTER, LARGE (main subject): a big snowman with a bucket hat and charcoal eyes. Winter only, with snow or cold: no Christmas, New Year's Eve or other dated holiday items, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one tenth of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. Objects: (upper left, on the fence) a small bird; (upper right, on the roof edge) a small icicle; (middle left, on the snow) a snow shovel leaning on the fence; (middle right, on the snow) a small sled; (lower center, on the snow) a pair of red mittens.",
-   "answers_intro": "答えです。",
-   "retries": {},
-   "diffs": [],
-   "hint_diff": null,
-   "content_box": [
-    0,
-    0,
-    1856,
-    2088
-   ],
-   "edit_prompts": {}
-  },
-  {
-   "q": 2,
-   "scene": "雪の玄関先",
-   "level": "初級",
-   "go": "では、第2問。どうぞ。",
-   "prompt": "Scene: close-up of the snowy entrance of a Japanese house on a winter morning, a sliding wooden door, a stone path with snow. CENTER, LARGE (main subject): a pair of rubber snow boots on the stone step. Winter only, with snow or cold: no Christmas, New Year's Eve or other dated holiday items, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one twelfth, SMALL of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. Objects: (upper left, hanging from a hook) a small straw hat with snow; (upper right, on the window sill) a small potted plant; (middle left, leaning on the wall) a closed umbrella; (middle right, on the step) a small broom; (lower left, on the snow) a small snow rabbit (yuki usagi) with leaf ears; (lower right, on the snow) a small bucket.",
-   "answers_intro": "答えです。",
-   "retries": {},
-   "diffs": [],
-   "hint_diff": null,
-   "content_box": [
-    0,
-    0,
-    1856,
-    2088
-   ],
-   "edit_prompts": {}
-  },
-  {
-   "q": 3,
-   "scene": "冬の朝の窓辺",
-   "level": "初級",
-   "go": "続いて、第3問。どうぞ。",
-   "prompt": "Scene: close-up of a window sill inside a Japanese house on a cold winter morning, frost on the glass, snow outside. CENTER, LARGE (main subject): a steaming cup of hot tea on the window sill. Winter only, with snow or cold: no Christmas, New Year's Eve or other dated holiday items, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one twelfth, SMALL of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. Objects: (upper left, on a shelf) a small clock; (upper right, on a shelf) a small vase with a camellia; (middle left, on the sill) a small pair of glasses; (middle right, on the sill) a small dish of mandarin oranges; (lower left, on the table) a small knitted cap; (lower right, on the table) a small spoon.",
-   "answers_intro": "答えです。",
-   "retries": {},
-   "diffs": [],
-   "hint_diff": null,
-   "content_box": [
-    0,
-    0,
-    1856,
-    2088
-   ],
-   "edit_prompts": {}
-  },
-  {
-   "q": 4,
-   "scene": "雪かきの道",
-   "level": "中級",
-   "go": "第4問です。じっくりどうぞ。",
    "prompt": "Scene: close-up of a snowy village road on a winter morning after snow shoveling, snow piled on both sides, houses with snow on roofs. CENTER, LARGE (main subject): a snow shovel stuck in a pile of snow. Winter only, with snow or cold: no Christmas, New Year's Eve or other dated holiday items, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one fourteenth, VERY SMALL of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. Objects: (upper left, on a roof) a small crow; (upper right, on a wall) a small round mirror for traffic without letters; (middle left, on the snow) a small bucket; (middle right, on the snow) a small pair of gloves; (lower left, on the snow) a small snowball; (lower right, on the snow) a small red ribbon.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "おけが赤",
+     "line": "左のおけが、赤くなりました。",
+     "box": [
+      130,
+      972,
+      373,
+      1223
+     ],
+     "object_w": 243,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "手ぶくろが青",
+     "line": "手ぶくろが、青くなりました。",
+     "box": [
+      1430,
+      980,
+      1746,
+      1213
+     ],
+     "object_w": 300,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "カラスが増える",
+     "line": "雪の上に、カラスがふえました。",
+     "box": [
+      515,
+      555,
+      770,
+      720
+     ],
+     "object_w": 240,
+     "src": "p",
+     "context": "雪かきのあとの道ばたに、カラスが降りてくるのは普通"
+    }
+   ],
    "hint_diff": null,
    "content_box": [
     0,
@@ -1112,7 +1138,270 @@
     1856,
     2088
    ],
-   "edit_prompts": {}
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the crow on the roof becomes white; (b) the round traffic mirror becomes red; (c) the small bucket becomes red; (d) the small pair of gloves becomes blue; (e) the red ribbon becomes blue."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the crow on the roof becomes white; (b) the round traffic mirror becomes red; (c) the small bucket becomes red; (d) the small pair of gloves becomes blue; (e) the red ribbon becomes blue.",
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "src": [
+       173,
+       35,
+       525,
+       247
+      ],
+      "mask": "outline",
+      "dst": [
+       520,
+       565
+      ],
+      "width": 240
+     }
+    ]
+   },
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   }
+  },
+  {
+   "q": 2,
+   "scene": "雪だるまの庭",
+   "level": "初級",
+   "go": "では、第2問。どうぞ。",
+   "prompt": "Scene: close-up of a snowy Japanese house garden on a winter morning, a bamboo fence, snow on the pine tree. CENTER (main subject, medium size, about one third of the picture width): a snowman with charcoal eyes and a carrot nose. Winter only, with snow: no Christmas, New Year's Eve or other dated holiday items. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the ground, snow, shelf, sill, step or fence, or hangs from a hook; nothing floats. Each listed object is SMALL: about one twelfth of the picture width. No letters, labels or writing anywhere. Objects: (left, at 30% height) a small bird on a fence post; (right, at 30% height) a small stone lantern with a snow cap; (left, at 50% height) a pair of red mittens hanging on the fence rail; (right, at 50% height) a small wooden bucket on the snow; (left, at 70% height) a small snow rabbit with leaf ears; (right, at 70% height) a small round snowball.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "小鳥がいない",
+     "line": "柱の小鳥が、いなくなりました。",
+     "box": [
+      61,
+      534,
+      351,
+      773
+     ],
+     "object_w": 230,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "手ぶくろが青",
+     "line": "手ぶくろが、青くなりました。",
+     "box": [
+      293,
+      1015,
+      579,
+      1337
+     ],
+     "object_w": 220,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "形",
+     "label": "鼻が丸い",
+     "line": "雪だるまの鼻が、丸くなりました。",
+     "box": [
+      942,
+      769,
+      1149,
+      888
+     ],
+     "object_w": 207,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the pair of red mittens hanging on the fence becomes blue; (b) the small bird on the fence post at the upper left is gone (show the snowy post); (c) the long carrot nose of the snowman becomes a short round orange nose."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the pair of red mittens hanging on the fence becomes blue; (b) the small bird on the fence post at the upper left is gone (show the snowy post); (c) the long carrot nose of the snowman becomes a short round orange nose."
+  },
+  {
+   "q": 3,
+   "scene": "雪の玄関先",
+   "level": "初級",
+   "go": "続いて、第3問。どうぞ。",
+   "prompt": "Scene: close-up of the snowy entrance of a Japanese house on a winter morning, a sliding wooden door, a stone step with snow. CENTER (main subject, medium size, about one third of the picture width): a pair of rubber snow boots on the stone step. Winter only, with snow: no Christmas, New Year's Eve or other dated holiday items. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the ground, snow, shelf, sill, step or fence, or hangs from a hook; nothing floats. Each listed object is SMALL: about one twelfth of the picture width. No letters, labels or writing anywhere. Objects: (left, at 30% height) a small straw hat hanging on a hook; (right, at 30% height) a small potted plant on the window sill; (left, at 50% height) a small closed umbrella leaning on the wall; (right, at 50% height) a small broom leaning on the wall; (left, at 70% height) a small snow rabbit on the step; (right, at 70% height) a small wooden bucket on the step.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "植木鉢が青",
+     "line": "植木鉢が、青くなりました。",
+     "box": [
+      1605,
+      389,
+      1823,
+      693
+     ],
+     "object_w": 218,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "かさが赤",
+     "line": "かさが、赤くなりました。",
+     "box": [
+      480,
+      761,
+      666,
+      1250
+     ],
+     "object_w": 186,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "おけがない",
+     "line": "段の上のおけが、なくなりました。",
+     "box": [
+      1164,
+      1157,
+      1622,
+      1525
+     ],
+     "object_w": 260,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the clay pot of the small potted plant on the window sill becomes blue (the plant stays); (b) the closed umbrella leaning on the wall becomes red; (c) the small wooden bucket with the ladle on the step at the right is gone (show the snowy stone step)."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the clay pot of the small potted plant on the window sill becomes blue (the plant stays); (b) the closed umbrella leaning on the wall becomes red; (c) the small wooden bucket with the ladle on the step at the right is gone (show the snowy stone step)."
+  },
+  {
+   "q": 4,
+   "scene": "冬の朝の窓辺",
+   "level": "中級",
+   "go": "第4問です。じっくりどうぞ。",
+   "prompt": "Scene: close-up of a window sill and shelves inside a Japanese house on a cold winter morning, frost on the glass, snow outside. CENTER (main subject, medium size, about one quarter of the picture width): a steaming cup of hot tea on the sill. Winter only, with snow: no Christmas, New Year's Eve or other dated holiday items. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the ground, snow, shelf, sill, step or fence, or hangs from a hook; nothing floats. Each listed object is SMALL: about one fourteenth, VERY SMALL of the picture width. No letters, labels or writing anywhere. Objects: (left, at 30% height) a small clock on a shelf; (right, at 30% height) a small vase with one camellia on a shelf; (left, at 50% height) a small pair of glasses on the sill; (right, at 50% height) a small dish with three mandarin oranges on the sill; (left, at 70% height) a small knitted cap on the table; (right, at 70% height) a small spoon on the table.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "時計の文字盤が青",
+     "line": "時計の文字盤が、青くなりました。",
+     "box": [
+      102,
+      495,
+      290,
+      721
+     ],
+     "object_w": 188,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "花びんが赤",
+     "line": "花びんが、赤くなりました。",
+     "box": [
+      1578,
+      490,
+      1776,
+      775
+     ],
+     "object_w": 198,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "みかんが緑",
+     "line": "みかんがひとつ、緑色になりました。",
+     "box": [
+      1490,
+      1335,
+      1700,
+      1505
+     ],
+     "object_w": 190,
+     "src": "p"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) only the round face of the small clock on the left shelf becomes light blue (the frame and hands stay); (b) the small blue vase on the right shelf becomes red (the camellia stays); (c) the front mandarin orange in the dish is gone, leaving two oranges."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) only the round face of the small clock on the left shelf becomes light blue (the frame and hands stay); (b) the small blue vase on the right shelf becomes red (the camellia stays); (c) the front mandarin orange in the dish is gone, leaving two oranges.",
+   "program_ops": {
+    "p": [
+     {
+      "op": "recolor",
+      "box": [
+       1490,
+       1330,
+       1700,
+       1505
+      ],
+      "keep_hue": [
+       3,
+       40
+      ],
+      "sat_min": 60,
+      "hue": 58,
+      "sat": 0.8,
+      "val": 0.9,
+      "circles": [
+       [
+        1590,
+        1415,
+        82
+       ],
+       [
+        1645,
+        1410,
+        48
+       ],
+       [
+        1655,
+        1440,
+        40
+       ],
+       [
+        1660,
+        1395,
+        35
+       ]
+      ]
+     }
+    ]
+   },
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   }
   },
   {
    "q": 5,
@@ -1122,7 +1411,50 @@
    "prompt": "Scene: close-up of a snowy veranda (engawa) on a winter morning, a wooden floor dusted with snow, a garden with snowy pine. CENTER, LARGE (main subject): a tray with three small snow rabbits with red berry eyes and leaf ears. Winter only, with snow or cold: no Christmas, New Year's Eve or other dated holiday items, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one sixteenth, VERY SMALL of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. Objects: (upper left, on a branch) a tiny bird; (upper right, hanging from the eaves) a tiny icicle; (middle left, on the veranda) a tiny teacup; (middle right, on the veranda) a tiny red berry; (lower left, on the veranda) a tiny green leaf; (lower right, on the veranda) a tiny pinecone.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "湯のみが赤",
+     "line": "湯のみが、赤くなりました。",
+     "box": [
+      200,
+      1006,
+      399,
+      1256
+     ],
+     "object_w": 189,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "赤い実がない",
+     "line": "赤い実が、なくなりました。",
+     "box": [
+      1533,
+      1046,
+      1680,
+      1178
+     ],
+     "object_w": 145,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "耳の葉が赤",
+     "line": "雪うさぎの耳の葉が、赤くなりました。",
+     "box": [
+      935,
+      940,
+      1170,
+      1125
+     ],
+     "object_w": 190,
+     "src": "p"
+    }
+   ],
    "hint_diff": null,
    "content_box": [
     0,
@@ -1130,7 +1462,71 @@
     1856,
     2088
    ],
-   "edit_prompts": {}
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny bird on the branch becomes blue; (b) the tiny teacup becomes red; (c) the tiny red berry is gone; (d) the tiny green leaf becomes red; (e) the tiny pinecone becomes green."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny bird on the branch becomes blue; (b) the tiny teacup becomes red; (c) the tiny red berry is gone; (d) the tiny green leaf becomes red; (e) the tiny pinecone becomes green.",
+   "program_ops": {
+    "p": [
+     {
+      "op": "recolor",
+      "box": [
+       945,
+       940,
+       1145,
+       1110
+      ],
+      "keep_hue": [
+       35,
+       110
+      ],
+      "sat_min": 40,
+      "circles": [
+       [
+        983,
+        1000,
+        40
+       ],
+       [
+        983,
+        1050,
+        40
+       ],
+       [
+        983,
+        1085,
+        22
+       ],
+       [
+        1095,
+        1030,
+        42
+       ],
+       [
+        1120,
+        995,
+        30
+       ],
+       [
+        1070,
+        1070,
+        34
+       ],
+       [
+        1060,
+        1095,
+        20
+       ]
+      ],
+      "hue": 2,
+      "sat": 1.5,
+      "val": 0.95
+     }
+    ]
+   },
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   }
   }
  ],
  "thumbnail": {
@@ -1167,5 +1563,120 @@
   "circle_hint": false,
   "note": "第1回と同じ型（変えた所なし）。左右に同じ絵・上に濃紺の帯で「秋の間違いさがし」・下に難易度と問いかけ。こよみ先生は入れない"
  },
- "shorts": []
+ "shorts": [
+  {
+   "question": 2,
+   "answer_gap": 3.3,
+   "note": "1本目：第2問 雪だるまの庭・初級",
+   "title": "シニアの間違い探し｜雪だるまの庭の1問 #脳トレ #頭の体操",
+   "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
+   "end_veil": [
+    {
+     "at": 0,
+     "lines": [
+      [
+       "いくつ見つかった？",
+       120,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "コメントで教えてね",
+       104,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": false
+    },
+    {
+     "at": 3.8,
+     "lines": [
+      [
+       "続きは長い動画で",
+       116,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "左下をクリック",
+       128,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "question": 4,
+   "answer_gap": 3.3,
+   "note": "2本目：第4問 冬の朝の窓辺・中級",
+   "title": "シニアの間違い探し｜冬の朝の窓辺の1問 #脳トレ #頭の体操",
+   "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
+   "end_veil": [
+    {
+     "at": 0,
+     "lines": [
+      [
+       "いくつ見つかった？",
+       120,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "コメントで教えてね",
+       104,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": false
+    },
+    {
+     "at": 3.8,
+     "lines": [
+      [
+       "続きは長い動画で",
+       116,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "左下をクリック",
+       128,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": true
+    }
+   ]
+  }
+ ]
 }

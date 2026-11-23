@@ -198,7 +198,7 @@
    {
     "id": "op",
     "at": 0.0,
-    "text": "落ち葉と焚き火の間違い探し、全5問。",
+    "text": "落ち葉の間違い探し、全5問。",
     "face": "smile",
     "until": 3.9
    },
@@ -283,20 +283,16 @@
  },
  "readings": [
   [
-   "落ち葉の庭",
-   "おちばのにわ"
-  ],
-  [
-   "焚き火の焼き芋",
-   "たきびのやきいも"
-  ],
-  [
    "秋の公園のベンチ",
    "あきのこうえんのベンチ"
   ],
   [
-   "縁側の秋",
-   "えんがわのあき"
+   "さつまいものかご",
+   "さつまいものかご"
+  ],
+  [
+   "焚き火の焼き芋",
+   "たきびのやきいも"
   ],
   [
    "木の切り株の秋",
@@ -307,64 +303,84 @@
    "おちばとたきび"
   ],
   [
+   "落ち葉の庭",
+   "おちばのにわ"
+  ],
+  [
+   "お盆のお茶",
+   "おぼんのおちゃ"
+  ],
+  [
+   "麦わら帽子",
+   "むぎわらぼうし"
+  ],
+  [
+   "色えんぴつ",
+   "いろえんぴつ"
+  ],
+  [
+   "火ばさみ",
+   "ひばさみ"
+  ],
+  [
+   "縁側の秋",
+   "えんがわのあき"
+  ],
+  [
+   "栗の紙袋",
+   "くりのかみぶくろ"
+  ],
+  [
    "七味入れ",
    "しちみいれ"
-  ],
-  [
-   "植木鉢",
-   "うえきばち"
-  ],
-  [
-   "長いす",
-   "ながいす"
-  ],
-  [
-   "急須",
-   "きゅうす"
-  ],
-  [
-   "花びん",
-   "かびん"
   ],
   [
    "はし置き",
    "はしおき"
   ],
   [
+   "赤とんぼ",
+   "あかとんぼ"
+  ],
+  [
+   "お月さま",
+   "おつきさま"
+  ],
+  [
+   "赤いふた",
+   "あかいふた"
+  ],
+  [
+   "大学いも",
+   "だいがくいも"
+  ],
+  [
    "湯のみ",
    "ゆのみ"
   ],
   [
-   "屋根",
-   "やね"
+   "葉っぱ",
+   "はっぱ"
   ],
   [
-   "小屋",
-   "こや"
+   "切り株",
+   "きりかぶ"
   ],
   [
-   "棚",
-   "たな"
+   "植木鉢",
+   "うえきばち"
   ],
   [
-   "鈴",
-   "すず"
+   "焚き火",
+   "たきび"
   ],
   [
-   "菊",
-   "きく"
+   "長いす",
+   "ながいす"
   ],
   [
-   "器",
-   "うつわ"
-  ],
-  [
-   "花",
-   "はな"
-  ],
-  [
-   "前",
-   "まえ"
+   "花びん",
+   "かびん"
   ],
   [
    "新そば",
@@ -379,86 +395,6 @@
    "てつびん"
   ],
   [
-   "縁側",
-   "えんがわ"
-  ],
-  [
-   "朝市",
-   "あさいち"
-  ],
-  [
-   "お皿",
-   "おさら"
-  ],
-  [
-   "柱",
-   "はしら"
-  ],
-  [
-   "笠",
-   "かさ"
-  ],
-  [
-   "鉢",
-   "はち"
-  ],
-  [
-   "柿",
-   "かき"
-  ],
-  [
-   "台",
-   "だい"
-  ],
-  [
-   "軒",
-   "のき"
-  ],
-  [
-   "赤とんぼ",
-   "あかとんぼ"
-  ],
-  [
-   "1匹",
-   "いっぴき"
-  ],
-  [
-   "お茶",
-   "おちゃ"
-  ],
-  [
-   "金色",
-   "きんいろ"
-  ],
-  [
-   "鐘",
-   "かね"
-  ],
-  [
-   "麦わら帽子",
-   "むぎわらぼうし"
-  ],
-  [
-   "色えんぴつ",
-   "いろえんぴつ"
-  ],
-  [
-   "お月さま",
-   "おつきさま"
-  ],
-  [
-   "火ばさみ",
-   "ひばさみ"
-  ],
-  [
-   "赤いふた",
-   "あかいふた"
-  ],
-  [
-   "大学いも",
-   "だいがくいも"
-  ],
-  [
    "酉の市",
    "とりのいち"
   ],
@@ -469,10 +405,6 @@
   [
    "掛け軸",
    "かけじく"
-  ],
-  [
-   "切り株",
-   "きりかぶ"
   ],
   [
    "石灯籠",
@@ -535,10 +467,6 @@
    "まって"
   ],
   [
-   "葉っぱ",
-   "はっぱ"
-  ],
-  [
    "魔法瓶",
    "まほうびん"
   ],
@@ -595,16 +523,100 @@
    "とって"
   ],
   [
+   "木の札",
+   "きのふだ"
+  ],
+  [
+   "大きな",
+   "おおきな"
+  ],
+  [
+   "前かけ",
+   "まえかけ"
+  ],
+  [
+   "増え",
+   "ふえ"
+  ],
+  [
+   "紙袋",
+   "かみぶくろ"
+  ],
+  [
+   "緑色",
+   "みどりいろ"
+  ],
+  [
+   "白く",
+   "しろく"
+  ],
+  [
+   "青く",
+   "あおく"
+  ],
+  [
+   "赤く",
+   "あかく"
+  ],
+  [
+   "お茶",
+   "おちゃ"
+  ],
+  [
+   "急須",
+   "きゅうす"
+  ],
+  [
+   "縁側",
+   "えんがわ"
+  ],
+  [
+   "帽子",
+   "ぼうし"
+  ],
+  [
+   "小鳥",
+   "ことり"
+  ],
+  [
+   "左の",
+   "ひだりの"
+  ],
+  [
+   "右の",
+   "みぎの"
+  ],
+  [
+   "下の",
+   "したの"
+  ],
+  [
+   "屋根",
+   "やね"
+  ],
+  [
+   "小屋",
+   "こや"
+  ],
+  [
+   "朝市",
+   "あさいち"
+  ],
+  [
+   "1匹",
+   "いっぴき"
+  ],
+  [
+   "金色",
+   "きんいろ"
+  ],
+  [
    "熊手",
    "くまで"
   ],
   [
    "飾り",
    "かざり"
-  ],
-  [
-   "白く",
-   "しろく"
   ],
   [
    "掛け",
@@ -643,18 +655,6 @@
    "きいろ"
   ],
   [
-   "赤く",
-   "あかく"
-  ],
-  [
-   "青く",
-   "あおく"
-  ],
-  [
-   "赤く",
-   "あかく"
-  ],
-  [
    "赤い",
    "あかい"
   ],
@@ -671,10 +671,6 @@
    "ゆげ"
   ],
   [
-   "紙袋",
-   "かみぶくろ"
-  ],
-  [
    "消え",
    "きえ"
   ],
@@ -687,10 +683,6 @@
    "すいとう"
   ],
   [
-   "帽子",
-   "ぼうし"
-  ],
-  [
    "上級",
    "じょうきゅう"
   ],
@@ -701,10 +693,6 @@
   [
    "初級",
    "しょきゅう"
-  ],
-  [
-   "白く",
-   "しろく"
   ],
   [
    "黒い",
@@ -771,10 +759,6 @@
    "こざら"
   ],
   [
-   "小鳥",
-   "ことり"
-  ],
-  [
    "向き",
    "むき"
   ],
@@ -801,10 +785,6 @@
   [
    "無く",
    "なく"
-  ],
-  [
-   "増え",
-   "ふえ"
   ],
   [
    "向い",
@@ -845,6 +825,90 @@
   [
    "川辺",
    "かわべ"
+  ],
+  [
+   "お面",
+   "おめん"
+  ],
+  [
+   "銀色",
+   "ぎんいろ"
+  ],
+  [
+   "丸い",
+   "まるい"
+  ],
+  [
+   "岩",
+   "いわ"
+  ],
+  [
+   "実",
+   "み"
+  ],
+  [
+   "葉",
+   "は"
+  ],
+  [
+   "背",
+   "せ"
+  ],
+  [
+   "菊",
+   "きく"
+  ],
+  [
+   "柿",
+   "かき"
+  ],
+  [
+   "色",
+   "いろ"
+  ],
+  [
+   "棚",
+   "たな"
+  ],
+  [
+   "鈴",
+   "すず"
+  ],
+  [
+   "器",
+   "うつわ"
+  ],
+  [
+   "花",
+   "はな"
+  ],
+  [
+   "前",
+   "まえ"
+  ],
+  [
+   "柱",
+   "はしら"
+  ],
+  [
+   "笠",
+   "かさ"
+  ],
+  [
+   "鉢",
+   "はち"
+  ],
+  [
+   "台",
+   "だい"
+  ],
+  [
+   "軒",
+   "のき"
+  ],
+  [
+   "鐘",
+   "かね"
   ],
   [
    "竹",
@@ -943,16 +1007,8 @@
    "ひ"
   ],
   [
-   "葉",
-   "は"
-  ],
-  [
    "緑",
    "みどり"
-  ],
-  [
-   "色",
-   "いろ"
   ],
   [
    "鍋",
@@ -965,30 +1021,6 @@
   [
    "絵",
    "え"
-  ],
-  [
-   "木の札",
-   "きのふだ"
-  ],
-  [
-   "お面",
-   "おめん"
-  ],
-  [
-   "大きな",
-   "おおきな"
-  ],
-  [
-   "銀色",
-   "ぎんいろ"
-  ],
-  [
-   "前かけ",
-   "まえかけ"
-  ],
-  [
-   "丸い",
-   "まるい"
   ],
   [
    "壁",
@@ -1018,12 +1050,13 @@
   "q1_go": "みぎのえのちがいを、みっつさがしてください。どうぞ。",
   "q3_go": "つづいて、だいさんもん。どうぞ。",
   "q5_go": "さいごのだいごもん、なんもんです。どうぞ。",
-  "op": "おちばとたきびのまちがいさがし、ぜんごもん。",
+  "op": "おちばのまちがいさがし、ぜんごもん。",
   "op2": "さいごは、なんもんです。",
   "u2": "おちばは、なぜあきに、あかやきいろになるのでしょう？",
   "u3": "こたえは、はのみどりのいろがきえて、かくれていたいろが、みえてくるから。",
   "u4": "あかいいろは、あきにあたらしくできるいろです。",
-  "e4": "つぎは、みぎのどうが、しんそばのかいもどうぞ。そばやのえで、もうごもん。"
+  "e4": "つぎは、みぎのどうが、しんそばのかいもどうぞ。そばやのえで、もうごもん。",
+  "q1_ans3": "かきのみと、はっぱが、みどりいろになりました。"
  },
  "voice": {
   "provider": "fish",
@@ -1050,7 +1083,50 @@
    "prompt": "Scene: close-up of a Japanese house garden in late autumn, a big pile of fallen red and yellow leaves, a wooden fence, a persimmon tree. CENTER, LARGE (main subject): a big pile of fallen leaves with a bamboo rake. Late autumn (November) only: no summer items, no Christmas or New Year items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one tenth of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. Objects: (upper left, on the fence) a small bird; (upper right, on the veranda edge) a teapot; (middle left, on the ground) a bamboo basket; (middle right, on the ground) a watering can; (lower center, on the ground) a pair of garden gloves.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "かごがない",
+     "line": "左のかごが、なくなりました。",
+     "box": [
+      60,
+      965,
+      540,
+      1325
+     ],
+     "object_w": 340,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "急須が赤",
+     "line": "縁側の急須が、赤くなりました。",
+     "box": [
+      1401,
+      642,
+      1722,
+      845
+     ],
+     "object_w": 233,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "柿の枝が緑",
+     "line": "柿の実と、葉っぱが、緑色になりました。",
+     "box": [
+      600,
+      150,
+      1060,
+      495
+     ],
+     "object_w": 300,
+     "src": "p"
+    }
+   ],
    "hint_diff": null,
    "content_box": [
     0,
@@ -1058,35 +1134,123 @@
     1856,
     2088
    ],
-   "edit_prompts": {}
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small bird on the fence becomes blue; (b) the teapot on the veranda becomes red; (c) the bamboo basket at the left is gone; (d) the watering can becomes green; (e) the pair of garden gloves becomes yellow.",
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the orange persimmons on the branch at the top (near the fence) become green."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small bird on the fence becomes blue; (b) the teapot on the veranda becomes red; (c) the bamboo basket at the left is gone; (d) the watering can becomes green; (e) the pair of garden gloves becomes yellow.",
+   "program_ops": {
+    "p": [
+     {
+      "op": "recolor",
+      "box": [
+       600,
+       150,
+       1060,
+       495
+      ],
+      "keep_hue": [
+       0,
+       40
+      ],
+      "sat_min": 110,
+      "circles": [
+       [
+        830,
+        290,
+        300
+       ]
+      ],
+      "hue": 62,
+      "sat": 0.85,
+      "val": 0.9
+     },
+     {
+      "op": "recolor",
+      "box": [
+       600,
+       150,
+       1060,
+       495
+      ],
+      "keep_hue": [
+       232,
+       255
+      ],
+      "sat_min": 110,
+      "circles": [
+       [
+        830,
+        290,
+        300
+       ]
+      ],
+      "hue": 62,
+      "sat": 0.85,
+      "val": 0.9
+     }
+    ]
+   },
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   }
   },
   {
    "q": 2,
-   "scene": "焚き火の焼き芋",
-   "level": "初級",
-   "go": "では、第2問。どうぞ。",
-   "prompt": "Scene: close-up of a small bonfire of fallen leaves in a garden in late autumn, sweet potatoes wrapped in plain foil roasting in the embers, wisps of smoke. CENTER, LARGE (main subject): the small bonfire with roasting sweet potatoes. Late autumn (November) only: no summer items, no Christmas or New Year items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one twelfth, SMALL of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. Objects: (upper left, on a stool) a small basket of sweet potatoes; (upper right, on a stone) a small kettle; (middle left, on the ground) a metal bucket of water; (middle right, leaning on a stone) a pair of long tongs; (lower left, on the ground) a small stool; (lower right, on the ground) a pair of work gloves.",
-   "answers_intro": "答えです。",
-   "retries": {},
-   "diffs": [],
-   "hint_diff": null,
-   "content_box": [
-    0,
-    0,
-    1856,
-    2088
-   ],
-   "edit_prompts": {}
-  },
-  {
-   "q": 3,
    "scene": "秋の公園のベンチ",
    "level": "初級",
-   "go": "続いて、第3問。どうぞ。",
+   "go": "では、第2問。どうぞ。",
    "prompt": "Scene: close-up of a wooden bench in a park in late autumn, ginkgo trees with yellow leaves, fallen leaves on the path. CENTER, LARGE (main subject): the wooden bench with a thermos and a cup on it. Late autumn (November) only: no summer items, no Christmas or New Year items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one twelfth, SMALL of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. Objects: (upper left, on a branch) a small bird; (upper right, on a lamp post) a small round lamp; (middle left, on the bench) a knitted cap; (middle right, on the bench) a small paper bag of roasted chestnuts with no letters; (lower left, on the path) a small pinecone; (lower right, on the path) a small walking stick lying down.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "帽子が緑",
+     "line": "ベンチの帽子が、緑色になりました。",
+     "box": [
+      402,
+      1051,
+      690,
+      1304
+     ],
+     "object_w": 270,
+     "src": "1",
+     "short_line": "帽子が、緑色に。"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "紙袋が白",
+     "line": "栗の紙袋が、白くなりました。",
+     "box": [
+      1145,
+      1143,
+      1414,
+      1442
+     ],
+     "object_w": 247,
+     "src": "1",
+     "short_line": "紙袋が、白く。"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "小鳥が増える",
+     "line": "ベンチの背に、小鳥がとまりました。",
+     "box": [
+      675,
+      488,
+      885,
+      640
+     ],
+     "object_w": 200,
+     "src": "p",
+     "context": "公園のベンチの背に、小鳥がとまるのは普通",
+     "short_line": "小鳥が、とまりました。"
+    }
+   ],
    "hint_diff": null,
    "content_box": [
     0,
@@ -1094,7 +1258,97 @@
     1856,
     2088
    ],
-   "edit_prompts": {}
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small bird on the branch becomes blue; (b) the knitted cap on the bench becomes green; (c) the thermos becomes red; (d) the small paper bag of chestnuts becomes white; (e) the pinecone on the path is gone."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small bird on the branch becomes blue; (b) the knitted cap on the bench becomes green; (c) the thermos becomes red; (d) the small paper bag of chestnuts becomes white; (e) the pinecone on the path is gone.",
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "src": [
+       215,
+       40,
+       535,
+       262
+      ],
+      "mask": "outline",
+      "dst": [
+       680,
+       495
+      ],
+      "width": 200
+     }
+    ]
+   },
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   }
+  },
+  {
+   "q": 3,
+   "scene": "焚き火の焼き芋",
+   "level": "初級",
+   "go": "続いて、第3問。どうぞ。",
+   "prompt": "Scene: close-up of a small bonfire of fallen leaves in a garden in late autumn, sweet potatoes wrapped in plain foil roasting in the embers, wisps of smoke. CENTER, LARGE (main subject): the small bonfire with roasting sweet potatoes. Late autumn (November) only: no summer items, no Christmas or New Year items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one twelfth, SMALL of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. Objects: (upper left, on a stool) a small basket of sweet potatoes; (upper right, on a stone) a small kettle; (middle left, on the ground) a metal bucket of water; (middle right, leaning on a stone) a pair of long tongs; (lower left, on the ground) a small stool; (lower right, on the ground) a pair of work gloves.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "いものかごが赤",
+     "line": "さつまいものかごが、赤くなりました。",
+     "box": [
+      340,
+      235,
+      620,
+      345
+     ],
+     "object_w": 260,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "やかんのふたが赤",
+     "line": "やかんのふたが、赤くなりました。",
+     "box": [
+      1370,
+      104,
+      1575,
+      205
+     ],
+     "object_w": 193,
+     "src": "2"
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "火ばさみがない",
+     "line": "岩の火ばさみが、なくなりました。",
+     "box": [
+      1352,
+      525,
+      1840,
+      1135
+     ],
+     "object_w": 210,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the basket of sweet potatoes on the stool at the upper left becomes red; (b) the kettle on the stone becomes blue; (c) the metal bucket becomes red; (d) the long tongs are gone; (e) the pair of work gloves becomes blue.",
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) only the lid of the iron kettle on the stone becomes red (the kettle body stays the same); (b) one sweet potato on top of the basket on the stool at the upper left becomes yellow."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the basket of sweet potatoes on the stool at the upper left becomes red; (b) the kettle on the stone becomes blue; (c) the metal bucket becomes red; (d) the long tongs are gone; (e) the pair of work gloves becomes blue."
   },
   {
    "q": 4,
@@ -1104,7 +1358,53 @@
    "prompt": "Scene: close-up of a wooden veranda (engawa) in late autumn, sliding paper doors, a garden with red maple leaves. CENTER, LARGE (main subject): a round tray with tea and roasted sweet potato. Late autumn (November) only: no summer items, no Christmas or New Year items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one fourteenth, VERY SMALL of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. Objects: (upper left, on a shelf) a small pot of chrysanthemum; (upper right, hanging from the eaves) a small paper lantern; (middle left, on the veranda) a small teacup; (middle right, on the veranda) a small dish of chestnuts; (lower left, on the veranda) a small folded cloth; (lower right, on the stone step) a pair of small sandals.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "ちょうちんが白",
+     "line": "赤いちょうちんが、白くなりました。",
+     "box": [
+      1473,
+      137,
+      1687,
+      357
+     ],
+     "object_w": 205,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "植木鉢が青",
+     "line": "菊の植木鉢が、青くなりました。",
+     "box": [
+      132,
+      614,
+      344,
+      824
+     ],
+     "object_w": 201,
+     "src": "1",
+     "short_line": "植木鉢が、青く。"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "湯のみが増える",
+     "line": "縁側に、湯のみがひとつ増えました。",
+     "short_line": "湯のみが、増えました。",
+     "box": [
+      1315,
+      1400,
+      1540,
+      1645
+     ],
+     "object_w": 173,
+     "src": "p",
+     "context": "縁側でお茶を飲むとき、湯のみがもう1つ床に置いてあるのは普通"
+    }
+   ],
    "hint_diff": null,
    "content_box": [
     0,
@@ -1112,7 +1412,33 @@
     1856,
     2088
    ],
-   "edit_prompts": {}
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small pot of chrysanthemum on the shelf at the upper left becomes blue (the flowers stay); (b) the red paper lantern becomes white; (c) the small teacup at the left becomes red; (d) the small dish of chestnuts becomes blue; (e) the folded cloth becomes red.",
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small teacup of green tea on the round tray becomes red."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small pot of chrysanthemum on the shelf at the upper left becomes blue (the flowers stay); (b) the red paper lantern becomes white; (c) the small teacup at the left becomes red; (d) the small dish of chestnuts becomes blue; (e) the folded cloth becomes red.",
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "src": [
+       195,
+       1058,
+       382,
+       1255
+      ],
+      "mask": "outline",
+      "dst": [
+       1340,
+       1420
+      ],
+      "width": 173
+     }
+    ]
+   },
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   }
   },
   {
    "q": 5,
@@ -1122,7 +1448,50 @@
    "prompt": "Scene: close-up of a big tree stump in an autumn forest, fallen leaves, moss, mushrooms. CENTER, LARGE (main subject): the big tree stump with a wide flat top seen from slightly above, so things can rest on the top. Late autumn (November) only: no summer items, no Christmas or New Year items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one sixteenth, VERY SMALL of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. Objects: (upper left, on a branch) a tiny squirrel; (upper right, on a branch) a tiny bird; (middle left, lying on the flat top of the stump) a small acorn; (middle right, lying on the flat top of the stump) a small pinecone; (lower left, on the ground) a small red mushroom; (lower right, on the ground) a small maple leaf.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "どんぐりがない",
+     "line": "切り株のどんぐりが、なくなりました。",
+     "box": [
+      549,
+      861,
+      814,
+      1044
+     ],
+     "object_w": 160,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "右のきのこが白",
+     "line": "右のきのこが、白くなりました。",
+     "box": [
+      1511,
+      1089,
+      1663,
+      1287
+     ],
+     "object_w": 152,
+     "src": "2"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "下のきのこが白",
+     "line": "下のきのこが、白くなりました。",
+     "box": [
+      585,
+      1500,
+      790,
+      1625
+     ],
+     "object_w": 180,
+     "src": "2"
+    }
+   ],
    "hint_diff": null,
    "content_box": [
     0,
@@ -1130,7 +1499,11 @@
     1856,
     2088
    ],
-   "edit_prompts": {}
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny squirrel on the branch becomes gray; (b) the tiny bird on the branch becomes blue; (c) the small acorn on the stump is gone; (d) the small pinecone on the stump becomes green; (e) the small red mushroom becomes yellow.",
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the orange bracket mushrooms on the lower left side of the tree stump become white; (b) the orange bracket mushroom on the right side of the tree stump becomes white."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny squirrel on the branch becomes gray; (b) the tiny bird on the branch becomes blue; (c) the small acorn on the stump is gone; (d) the small pinecone on the stump becomes green; (e) the small red mushroom becomes yellow."
   }
  ],
  "thumbnail": {
@@ -1167,5 +1540,120 @@
   "circle_hint": false,
   "note": "第1回と同じ型（変えた所なし）。左右に同じ絵・上に濃紺の帯で「秋の間違いさがし」・下に難易度と問いかけ。こよみ先生は入れない"
  },
- "shorts": []
+ "shorts": [
+  {
+   "question": 2,
+   "answer_gap": 3.3,
+   "note": "1本目：第2問 秋の公園のベンチ・初級",
+   "title": "シニアの間違い探し｜秋の公園のベンチの1問 #脳トレ #頭の体操",
+   "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
+   "end_veil": [
+    {
+     "at": 0,
+     "lines": [
+      [
+       "いくつ見つかった？",
+       120,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "コメントで教えてね",
+       104,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": false
+    },
+    {
+     "at": 3.8,
+     "lines": [
+      [
+       "続きは長い動画で",
+       116,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "左下をクリック",
+       128,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "question": 4,
+   "answer_gap": 3.3,
+   "note": "2本目：第4問 縁側の秋・中級",
+   "title": "シニアの間違い探し｜秋の縁側の1問 #脳トレ #頭の体操",
+   "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
+   "end_veil": [
+    {
+     "at": 0,
+     "lines": [
+      [
+       "いくつ見つかった？",
+       120,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "コメントで教えてね",
+       104,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": false
+    },
+    {
+     "at": 3.8,
+     "lines": [
+      [
+       "続きは長い動画で",
+       116,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "左下をクリック",
+       128,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": true
+    }
+   ]
+  }
+ ]
 }

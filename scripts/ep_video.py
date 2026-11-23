@@ -416,7 +416,10 @@ def opening_base():
     d = ImageDraw.Draw(im)
     SC = plan()["screens"]
     cx = 960 if owl_bottom() else 650
-    text_center(d, (cx, 200), SC["opening_title"], 120, stroke=6, stroke_fill=(255, 250, 238))
+    sz, maxw = 120, 2 * min(cx, W - cx) - 80     # 長い題名は画面からはみ出さないよう縮める（2026-11-22 第19回：18字で左右が切れた）
+    while sz > 60 and d.textlength(SC["opening_title"], font=font(sz)) > maxw:
+        sz -= 4
+    text_center(d, (cx, 200), SC["opening_title"], sz, stroke=6, stroke_fill=(255, 250, 238))
     text_center(d, (cx, 340), SC["opening_sub"], 58, fill=(150, 90, 50))
     return im
 

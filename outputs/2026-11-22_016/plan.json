@@ -283,24 +283,104 @@
  },
  "readings": [
   [
-   "こたつの部屋",
-   "こたつのへや"
+   "こけしの着物",
+   "こけしのきもの"
   ],
   [
-   "押し入れの冬支度",
-   "おしいれのふゆじたく"
+   "青に",
+   "あおに"
+  ],
+  [
+   "台所の保存食",
+   "だいどころのほぞんしょく"
   ],
   [
    "縁側の干し布団",
    "えんがわのほしぶとん"
   ],
   [
-   "台所の冬の保存食",
-   "だいどころのふゆのほぞんしょく"
+   "茶だんすの棚",
+   "ちゃだんすのたな"
   ],
   [
    "茶の間の小物",
    "ちゃのまのこもの"
+  ],
+  [
+   "文机の裁縫箱",
+   "ふづくえのさいほうばこ"
+  ],
+  [
+   "はちみつのびん",
+   "はちみつのびん"
+  ],
+  [
+   "鉛筆立て",
+   "えんぴつたて"
+  ],
+  [
+   "毛糸玉",
+   "けいとだま"
+  ],
+  [
+   "糸巻き",
+   "いとまき"
+  ],
+  [
+   "長いす",
+   "ながいす"
+  ],
+  [
+   "急須",
+   "きゅうす"
+  ],
+  [
+   "湯のみ",
+   "ゆのみ"
+  ],
+  [
+   "重し",
+   "おもし"
+  ],
+  [
+   "漬物",
+   "つけもの"
+  ],
+  [
+   "針山",
+   "はりやま"
+  ],
+  [
+   "右下",
+   "みぎした"
+  ],
+  [
+   "下の棚",
+   "したのたな"
+  ],
+  [
+   "鉢",
+   "はち"
+  ],
+  [
+   "柿",
+   "かき"
+  ],
+  [
+   "梅",
+   "うめ"
+  ],
+  [
+   "石",
+   "いし"
+  ],
+  [
+   "糸",
+   "いと"
+  ],
+  [
+   "棚",
+   "たな"
   ],
   [
    "こたつと冬支度",
@@ -315,14 +395,6 @@
    "うえきばち"
   ],
   [
-   "長いす",
-   "ながいす"
-  ],
-  [
-   "急須",
-   "きゅうす"
-  ],
-  [
    "花びん",
    "かびん"
   ],
@@ -331,20 +403,12 @@
    "はしおき"
   ],
   [
-   "湯のみ",
-   "ゆのみ"
-  ],
-  [
    "屋根",
    "やね"
   ],
   [
    "小屋",
    "こや"
-  ],
-  [
-   "棚",
-   "たな"
   ],
   [
    "鈴",
@@ -397,14 +461,6 @@
   [
    "笠",
    "かさ"
-  ],
-  [
-   "鉢",
-   "はち"
-  ],
-  [
-   "柿",
-   "かき"
   ],
   [
    "台",
@@ -609,10 +665,6 @@
   [
    "掛け",
    "かけ"
-  ],
-  [
-   "漬物",
-   "つけもの"
   ],
   [
    "軍手",
@@ -1044,13 +1096,56 @@
  "questions": [
   {
    "q": 1,
-   "scene": "こたつの部屋",
+   "scene": "縁側の干し布団",
    "level": "やさしい",
    "go": "右の絵の違いを、3つ探してください。どうぞ。",
-   "prompt": "Scene: close-up of a Japanese living room in late autumn with a kotatsu table covered with a quilt, tatami floor, a window with bare trees. CENTER, LARGE (main subject): the kotatsu with a basket of mandarin oranges on top. Late autumn (November) only: no summer items, no Christmas or New Year items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one tenth of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. Objects: (upper left, on a shelf) a small clock; (upper right, on a shelf) a small vase; (middle left, on the tatami) a floor cushion; (middle right, on the tatami) a sleeping cat; (lower center, on the tatami) a pair of house slippers.",
+   "prompt": "Scene: close-up of a sunny wooden veranda (engawa) in late autumn, a futon hanging over the wooden railing to air in the sun, a low wooden bench on the veranda, a garden with fallen leaves behind. CENTER, LARGE (main subject): the futon hanging over the railing. Late autumn (November) only: no summer items, no Christmas or New Year items. Spread the listed objects far apart, never clustered. Place every listed object in the MIDDLE band of the picture (between 20% and 75% of the height from the top). Every listed object STANDS or LIES on the low wooden bench or on the veranda boards, with its bottom touching the surface and a small shadow under it; nothing floats, nothing hangs in the air. Each listed object is about one twelfth of the picture width, with empty space around it. No clocks. No letters, numbers, labels or writing anywhere. Objects: (upper left, on the low bench) a red teapot; (upper right, on the low bench) a small bowl of persimmons; (middle left, on the veranda boards) a green floor cushion; (middle right, on the veranda boards) a white teacup; (lower left, on the veranda boards) a small bamboo basket; (lower right, on the veranda boards) a folded blue cloth.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "急須が青",
+     "line": "長いすの急須が、青くなりました。",
+     "box": [
+      330,
+      420,
+      700,
+      840
+     ],
+     "object_w": 340,
+     "src": "p"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "柿が緑",
+     "line": "鉢の柿が、緑色になりました。",
+     "box": [
+      1470,
+      660,
+      1810,
+      840
+     ],
+     "object_w": 340,
+     "src": "p"
+    },
+    {
+     "id": 3,
+     "type": "大きさ",
+     "label": "湯のみが大きい",
+     "line": "湯のみが、大きくなりました。",
+     "box": [
+      1076,
+      1330,
+      1324,
+      1610
+     ],
+     "object_w": 232,
+     "src": "p"
+    }
+   ],
    "hint_diff": null,
    "content_box": [
     0,
@@ -1058,17 +1153,205 @@
     1856,
     2088
    ],
-   "edit_prompts": {}
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the rolled bamboo blind at the upper left becomes green; (b) the small bird on the branch becomes blue; (c) the small teacup on the veranda becomes red; (d) the pair of geta on the stone becomes black; (e) the small bucket is gone."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the rolled bamboo blind at the upper left becomes green; (b) the small bird on the branch becomes blue; (c) the small teacup on the veranda becomes red; (d) the pair of geta on the stone becomes black; (e) the small bucket is gone.",
+   "program_ops": {
+    "p": [
+     {
+      "op": "recolor",
+      "box": [
+       315,
+       400,
+       700,
+       840
+      ],
+      "keep_hue": [
+       0,
+       12
+      ],
+      "sat_min": 110,
+      "circles": [
+       [
+        515,
+        690,
+        185
+       ]
+      ],
+      "hue": 150,
+      "sat": 1.0,
+      "val": 0.95
+     },
+     {
+      "op": "recolor",
+      "box": [
+       1470,
+       660,
+       1810,
+       840
+      ],
+      "keep_hue": [
+       5,
+       30
+      ],
+      "sat_min": 170,
+      "circles": [
+       [
+        1530,
+        775,
+        55
+       ],
+       [
+        1625,
+        725,
+        62
+       ],
+       [
+        1695,
+        790,
+        58
+       ],
+       [
+        1748,
+        770,
+        52
+       ],
+       [
+        1590,
+        805,
+        42
+       ],
+       [
+        1636,
+        812,
+        28
+       ]
+      ],
+      "hue": 58,
+      "sat": 0.8,
+      "val": 0.9
+     },
+     {
+      "op": "copy",
+      "src": [
+       1108,
+       1395,
+       1292,
+       1603
+      ],
+      "poly": [
+       [
+        1112,
+        1430
+       ],
+       [
+        1135,
+        1405
+       ],
+       [
+        1200,
+        1398
+       ],
+       [
+        1265,
+        1405
+       ],
+       [
+        1290,
+        1430
+       ],
+       [
+        1280,
+        1540
+       ],
+       [
+        1262,
+        1580
+       ],
+       [
+        1240,
+        1600
+       ],
+       [
+        1160,
+        1600
+       ],
+       [
+        1138,
+        1580
+       ],
+       [
+        1120,
+        1540
+       ]
+      ],
+      "dst": [
+       1084,
+       1337
+      ],
+      "width": 232
+     }
+    ]
+   },
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   }
   },
   {
    "q": 2,
-   "scene": "押し入れの冬支度",
+   "scene": "茶だんすの棚",
    "level": "初級",
    "go": "では、第2問。どうぞ。",
-   "prompt": "Scene: close-up of an open Japanese closet (oshiire) in late autumn, folded futons, taking out winter things, tatami floor. CENTER, LARGE (main subject): a stack of thick winter futons in the closet. Late autumn (November) only: no summer items, no Christmas or New Year items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one twelfth, SMALL of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. Objects: (upper left, on the upper shelf) a small wooden box; (upper right, on the upper shelf) a small round tin; (middle left, on the tatami) a folded knitted blanket; (middle right, on the tatami) a small ceramic hot water bottle (yutanpo); (lower left, on the tatami) a pair of wool socks; (lower right, on the tatami) a small paper bag with no letters.",
+   "prompt": "Scene: close-up of an old wooden tea cupboard (chadansu) with open shelves in a Japanese living room in late autumn, a kotatsu and tatami seen at the bottom. CENTER, LARGE (main subject): a basket of mandarin oranges on the middle shelf. Late autumn (November) only: no summer items, no Christmas or New Year items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Every listed object STANDS or LIES on a shelf board or on the wooden top, with its bottom touching the surface and a small shadow under it; nothing floats, nothing is stuck on a wall. Each listed object is about one twelfth of the picture width, with empty space around it. No clocks. No letters, numbers, labels or writing anywhere. Objects: (upper left, on the top shelf) a red teapot; (upper right, on the top shelf) a green tea canister; (middle left, on the middle shelf) a blue teacup; (middle right, on the middle shelf) a yellow plate with rice crackers; (lower left, on the lower shelf) a white folded towel; (lower right, on the lower shelf) a small brown wooden box.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "湯のみが赤",
+     "line": "棚の湯のみが、赤くなりました。",
+     "box": [
+      447,
+      534,
+      631,
+      766
+     ],
+     "object_w": 184,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "みかんが緑",
+     "line": "かごのみかんがひとつ、緑色になりました。",
+     "box": [
+      1255,
+      820,
+      1445,
+      1070
+     ],
+     "object_w": 184,
+     "src": "1",
+     "short_line": "みかんがひとつ、緑色に。"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "みかんが増える",
+     "line": "下の棚に、みかんがひとつ増えました。",
+     "box": [
+      858,
+      1425,
+      1096,
+      1615
+     ],
+     "object_w": 200,
+     "src": "1",
+     "context": "茶だんすの棚に、みかんをひとつ置いておくのは普通"
+    }
+   ],
    "hint_diff": null,
    "content_box": [
     0,
@@ -1076,35 +1359,63 @@
     1856,
     2088
    ],
-   "edit_prompts": {}
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the blue teacup on the middle shelf at the left becomes red; (b) one mandarin orange at the right edge of the basket becomes green; (c) one mandarin orange is added, resting on the lower shelf in the empty space between the white towel and the brown box (same size as the other mandarins)."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the blue teacup on the middle shelf at the left becomes red; (b) one mandarin orange at the right edge of the basket becomes green; (c) one mandarin orange is added, resting on the lower shelf in the empty space between the white towel and the brown box (same size as the other mandarins)."
   },
   {
    "q": 3,
-   "scene": "縁側の干し布団",
+   "scene": "台所の保存食",
    "level": "初級",
    "go": "続いて、第3問。どうぞ。",
-   "prompt": "Scene: close-up of a sunny veranda in late autumn, futons hanging over the railing to air in the sun, a garden with fallen leaves. CENTER, LARGE (main subject): a futon hanging over the wooden railing. Late autumn (November) only: no summer items, no Christmas or New Year items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one twelfth, SMALL of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. Objects: (upper left, hanging from the eaves) a small rolled-up bamboo blind; (upper right, on a branch) a small bird; (middle left, on the veranda) a futon beater (bamboo); (middle right, on the veranda) a small teacup; (lower left, on the stone step) a pair of geta; (lower right, on the ground) a small bucket.",
-   "answers_intro": "答えです。",
-   "retries": {},
-   "diffs": [],
-   "hint_diff": null,
-   "content_box": [
-    0,
-    0,
-    1856,
-    2088
-   ],
-   "edit_prompts": {}
-  },
-  {
-   "q": 4,
-   "scene": "台所の冬の保存食",
-   "level": "中級",
-   "go": "第4問です。じっくりどうぞ。",
    "prompt": "Scene: close-up of wooden shelves in an old Japanese kitchen in late autumn, preserved foods for winter, a window. CENTER, LARGE (main subject): a big ceramic crock of pickled radish with a wooden lid and a stone weight. Late autumn (November) only: no summer items, no Christmas or New Year items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one fourteenth, VERY SMALL of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. Objects: (upper left, on a shelf) a small glass jar of plum; (upper right, on a shelf) a small jar of honey; (middle left, on the counter) a small bundle of dried chili peppers; (middle right, on the counter) a small bowl of dried mushrooms; (lower left, on the counter) a small ladle; (lower right, on the counter) a small dish of salt.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "梅が緑",
+     "line": "びんの梅が、緑色になりました。",
+     "box": [
+      150,
+      234,
+      411,
+      497
+     ],
+     "object_w": 244,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "はちみつのびんが赤",
+     "line": "はちみつのびんが、赤くなりました。",
+     "box": [
+      1509,
+      568,
+      1747,
+      945
+     ],
+     "object_w": 233,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "重し石がない",
+     "line": "漬物の重しの石が、なくなりました。",
+     "box": [
+      663,
+      508,
+      1105,
+      836
+     ],
+     "object_w": 230,
+     "src": "2"
+    }
+   ],
    "hint_diff": null,
    "content_box": [
     0,
@@ -1112,17 +1423,65 @@
     1856,
     2088
    ],
-   "edit_prompts": {}
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small glass jar of plums on the upper left shelf becomes a jar of green plums; (b) the small jar of honey becomes a jar of red jam; (c) the small bundle of dried chili peppers is gone; (d) the small bowl of dried mushrooms becomes blue; (e) the small dish of salt becomes red.",
+    "2": "Edit this illustration and make exactly this change and nothing else. Keep the same thick outlines, colors and style. Do not move any object. Change: the round gray stone weight on top of the wooden lid of the big crock is gone (show the plain wooden lid where it was)."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small glass jar of plums on the upper left shelf becomes a jar of green plums; (b) the small jar of honey becomes a jar of red jam; (c) the small bundle of dried chili peppers is gone; (d) the small bowl of dried mushrooms becomes blue; (e) the small dish of salt becomes red."
   },
   {
-   "q": 5,
+   "q": 4,
    "scene": "茶の間の小物",
-   "level": "上級",
-   "go": "最後の第5問、難問です。どうぞ。",
+   "level": "中級",
+   "go": "第4問です。じっくりどうぞ。",
    "prompt": "Scene: close-up of a wooden chest of drawers in a Japanese living room in late autumn, a wall behind. CENTER, LARGE (main subject): the top of the wooden chest with a small radio without letters. Late autumn (November) only: no summer items, no Christmas or New Year items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, floor, shelf, table, bench or counter, or hangs from a hook; nothing floats. Each listed object is about one sixteenth, VERY SMALL of the picture width, with plenty of empty space around it. No letters, labels or writing anywhere. Objects: (upper left, on the chest) a tiny kokeshi doll; (upper right, on the chest) a tiny daruma; (middle left, on the chest) a small pair of glasses; (middle right, on the chest) a small cup of pencils without letters; (lower left, on the chest) a small spool of thread; (lower right, on the chest) a small hand mirror.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "だるまが白",
+     "line": "だるまが、白くなりました。",
+     "box": [
+      1316,
+      600,
+      1545,
+      847
+     ],
+     "object_w": 221,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "こけしが青",
+     "line": "こけしが、青くなりました。",
+     "box": [
+      352,
+      638,
+      532,
+      845
+     ],
+     "object_w": 178,
+     "src": "1",
+     "short_line": "こけしの着物が、青に。"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "鉛筆立てが青",
+     "line": "鉛筆立てが、青くなりました。",
+     "box": [
+      1225,
+      1190,
+      1475,
+      1505
+     ],
+     "object_w": 240,
+     "src": "p"
+    }
+   ],
    "hint_diff": null,
    "content_box": [
     0,
@@ -1130,7 +1489,180 @@
     1856,
     2088
    ],
-   "edit_prompts": {}
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny kokeshi doll becomes blue; (b) the tiny daruma becomes white; (c) the small pair of glasses becomes red; (d) the small spool of thread becomes blue; (e) the small hand mirror becomes red."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny kokeshi doll becomes blue; (b) the tiny daruma becomes white; (c) the small pair of glasses becomes red; (d) the small spool of thread becomes blue; (e) the small hand mirror becomes red.",
+   "program_ops": {
+    "p": [
+     {
+      "op": "recolor",
+      "box": [
+       1225,
+       1190,
+       1475,
+       1505
+      ],
+      "poly": [
+       [
+        1232,
+        1218
+       ],
+       [
+        1236,
+        1211
+       ],
+       [
+        1248,
+        1205
+       ],
+       [
+        1267,
+        1200
+       ],
+       [
+        1291,
+        1195
+       ],
+       [
+        1319,
+        1193
+       ],
+       [
+        1350,
+        1192
+       ],
+       [
+        1381,
+        1193
+       ],
+       [
+        1409,
+        1195
+       ],
+       [
+        1433,
+        1200
+       ],
+       [
+        1452,
+        1205
+       ],
+       [
+        1464,
+        1211
+       ],
+       [
+        1468,
+        1218
+       ],
+       [
+        1462,
+        1300
+       ],
+       [
+        1448,
+        1420
+       ],
+       [
+        1430,
+        1478
+       ],
+       [
+        1405,
+        1500
+       ],
+       [
+        1295,
+        1500
+       ],
+       [
+        1270,
+        1478
+       ],
+       [
+        1252,
+        1420
+       ],
+       [
+        1238,
+        1300
+       ]
+      ],
+      "hue": 150,
+      "sat_set": 110,
+      "sat": 1.0,
+      "val": 0.95
+     }
+    ]
+   },
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   }
+  },
+  {
+   "q": 5,
+   "scene": "文机の裁縫箱",
+   "level": "上級",
+   "go": "最後の第5問、難問です。どうぞ。",
+   "prompt": "Scene: close-up of the wooden top of a low writing desk (fuzukue) in a Japanese room in late autumn, seen from slightly above, mending clothes for winter, a sliding paper door behind. CENTER, LARGE (main subject): a folded knitted sweater with a needle and yarn, lying on the desk top next to an open wooden sewing box. Late autumn (November) only: no summer items, no Christmas or New Year items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Every listed object STANDS or LIES on a shelf board or on the wooden top, with its bottom touching the surface and a small shadow under it; nothing floats, nothing is stuck on a wall. Each listed object is about one sixteenth, VERY SMALL of the picture width, with empty space around it. No clocks. No letters, numbers, labels or writing anywhere. Objects: (upper left, on the desk top) a tiny red pincushion; (upper right, on the desk top) a tiny blue spool of thread; (middle left, on the desk top) a tiny yellow thimble; (middle right, on the desk top) a tiny green button; (lower left, on the desk top) a tiny pair of scissors lying flat; (lower right, on the desk top) a tiny white ball of yarn.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "針山が青",
+     "line": "針山が、青くなりました。",
+     "box": [
+      487,
+      766,
+      637,
+      916
+     ],
+     "object_w": 150,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "糸巻きが赤",
+     "line": "糸巻きの糸が、赤くなりました。",
+     "box": [
+      1559,
+      680,
+      1693,
+      815
+     ],
+     "object_w": 134,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "毛糸玉がない",
+     "line": "右下の毛糸玉が、なくなりました。",
+     "box": [
+      1444,
+      1404,
+      1695,
+      1603
+     ],
+     "object_w": 170,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny red pincushion becomes blue; (b) the tiny blue spool of thread at the upper right becomes red; (c) the tiny white ball of yarn at the lower right (on the desk top, not on the sweater) is gone; (d) the tiny yellow thimble becomes blue."
+   },
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny red pincushion becomes blue; (b) the tiny blue spool of thread at the upper right becomes red; (c) the tiny white ball of yarn at the lower right (on the desk top, not on the sweater) is gone; (d) the tiny yellow thimble becomes blue."
   }
  ],
  "thumbnail": {
@@ -1167,5 +1699,120 @@
   "circle_hint": false,
   "note": "第1回と同じ型（変えた所なし）。左右に同じ絵・上に濃紺の帯で「秋の間違いさがし」・下に難易度と問いかけ。こよみ先生は入れない"
  },
- "shorts": []
+ "shorts": [
+  {
+   "question": 2,
+   "answer_gap": 3.3,
+   "note": "1本目：第2問 茶だんすの棚・初級",
+   "title": "シニアの間違い探し｜茶だんすの棚の1問 #脳トレ #頭の体操",
+   "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
+   "end_veil": [
+    {
+     "at": 0,
+     "lines": [
+      [
+       "いくつ見つかった？",
+       120,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "コメントで教えてね",
+       104,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": false
+    },
+    {
+     "at": 3.8,
+     "lines": [
+      [
+       "続きは長い動画で",
+       116,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "左下をクリック",
+       128,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "question": 4,
+   "answer_gap": 3.3,
+   "note": "2本目：第4問 茶の間の小物・中級",
+   "title": "シニアの間違い探し｜茶の間の小物の1問 #脳トレ #頭の体操",
+   "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
+   "end_veil": [
+    {
+     "at": 0,
+     "lines": [
+      [
+       "いくつ見つかった？",
+       120,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "コメントで教えてね",
+       104,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": false
+    },
+    {
+     "at": 3.8,
+     "lines": [
+      [
+       "続きは長い動画で",
+       116,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "左下をクリック",
+       128,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": true
+    }
+   ]
+  }
+ ]
 }

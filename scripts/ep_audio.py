@@ -140,9 +140,11 @@ def main(voice_dir, out):
         gain[a:b] = 0.6
     act = (np.abs(voice) > 0.01).astype(float)
     win = int(0.3 * SR)
-    act = np.convolve(act, np.ones(win) / win, mode="same") > 0.02
+    # 移動平均は uniform_filter1d で（np.convolve は長尺の約3,000万サンプルで O(N×窓) になり、数十分かかった。2026-11-22）
+    from scipy.ndimage import uniform_filter1d
+    act = uniform_filter1d(act, win, mode="constant") > 0.02
     duck = np.where(act, 0.45, 1.0)
-    duck = np.convolve(duck, np.ones(int(0.15 * SR)) / int(0.15 * SR), mode="same")
+    duck = uniform_filter1d(duck, int(0.15 * SR), mode="nearest")
     fade = np.clip(np.minimum(t_all / 1.5, (T.TOTAL - t_all) / 3.0), 0, 1)
     mix = voice + sfx + music * gain * duck * fade
     peak = np.abs(mix).max()

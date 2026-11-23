@@ -1,0 +1,712 @@
+{
+ "screen": {
+  "size": [
+   1920,
+   1080
+  ],
+  "picture_size_on_screen": [
+   960,
+   1080
+  ],
+  "safe_y_on_screen": [
+   54,
+   918
+  ],
+  "level_range_pct_of_screen_width": {
+   "やさしい": [
+    6.0,
+    8.0
+   ],
+   "初級": [
+    5.0,
+    6.0
+   ],
+   "中級": [
+    4.0,
+    5.0
+   ],
+   "上級": [
+    3.0,
+    4.0
+   ]
+  }
+ },
+ "note": "box_px・circle_px は 8:9 に切り抜いた高解像度の絵（qN_a.png、1856×2088）のピクセル。content_px はそのうち画面に出す範囲（白いふちを除いた8:9）。*_screen は画面の上での座標（右の絵は x に960を足す）。object_screen_width_pct は、変わる物そのものの幅を画面幅で割った値（難易度の基準）。object_picture_width_pct は片方の絵の幅で割った値（参考）。",
+ "questions": [
+  {
+   "q": 1,
+   "scene": "雪かきの道",
+   "level": "やさしい",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 121,
+   "outside_box_max_distance_px": 10.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "おけが赤",
+     "line": "左のおけが、赤くなりました。",
+     "box_px": [
+      130,
+      972,
+      373,
+      1223
+     ],
+     "box_screen": [
+      67,
+      503,
+      193,
+      633
+     ],
+     "circle_a_screen": [
+      67,
+      503,
+      193,
+      633
+     ],
+     "circle_b_screen": [
+      67,
+      503,
+      193,
+      633
+     ],
+     "object_w_px": 243,
+     "object_picture_width_pct": 13.09,
+     "object_screen_width_pct": 6.55,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "手ぶくろが青",
+     "line": "手ぶくろが、青くなりました。",
+     "box_px": [
+      1430,
+      980,
+      1746,
+      1213
+     ],
+     "box_screen": [
+      740,
+      507,
+      903,
+      627
+     ],
+     "circle_a_screen": [
+      740,
+      507,
+      903,
+      627
+     ],
+     "circle_b_screen": [
+      740,
+      507,
+      903,
+      627
+     ],
+     "object_w_px": 300,
+     "object_picture_width_pct": 16.16,
+     "object_screen_width_pct": 8.08,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "カラスが増える",
+     "line": "雪の上に、カラスがふえました。",
+     "box_px": [
+      515,
+      555,
+      770,
+      720
+     ],
+     "box_screen": [
+      266,
+      287,
+      398,
+      372
+     ],
+     "circle_a_screen": [
+      266,
+      287,
+      398,
+      372
+     ],
+     "circle_b_screen": [
+      266,
+      287,
+      398,
+      372
+     ],
+     "object_w_px": 240,
+     "object_picture_width_pct": 12.93,
+     "object_screen_width_pct": 6.47,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 2,
+   "scene": "雪だるまの庭",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 195,
+   "outside_box_max_distance_px": 10.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "小鳥がいない",
+     "line": "柱の小鳥が、いなくなりました。",
+     "box_px": [
+      61,
+      534,
+      351,
+      773
+     ],
+     "box_screen": [
+      32,
+      276,
+      182,
+      400
+     ],
+     "circle_a_screen": [
+      32,
+      276,
+      182,
+      400
+     ],
+     "circle_b_screen": [
+      32,
+      276,
+      182,
+      400
+     ],
+     "object_w_px": 230,
+     "object_picture_width_pct": 12.39,
+     "object_screen_width_pct": 6.2,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "手ぶくろが青",
+     "line": "手ぶくろが、青くなりました。",
+     "box_px": [
+      293,
+      1015,
+      579,
+      1337
+     ],
+     "box_screen": [
+      152,
+      525,
+      299,
+      692
+     ],
+     "circle_a_screen": [
+      152,
+      525,
+      299,
+      692
+     ],
+     "circle_b_screen": [
+      152,
+      525,
+      299,
+      692
+     ],
+     "object_w_px": 220,
+     "object_picture_width_pct": 11.85,
+     "object_screen_width_pct": 5.93,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "形",
+     "label": "鼻が丸い",
+     "line": "雪だるまの鼻が、丸くなりました。",
+     "box_px": [
+      942,
+      769,
+      1149,
+      888
+     ],
+     "box_screen": [
+      487,
+      398,
+      594,
+      459
+     ],
+     "circle_a_screen": [
+      487,
+      398,
+      594,
+      459
+     ],
+     "circle_b_screen": [
+      487,
+      398,
+      594,
+      459
+     ],
+     "object_w_px": 207,
+     "object_picture_width_pct": 11.15,
+     "object_screen_width_pct": 5.58,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 3,
+   "scene": "雪の玄関先",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 322,
+   "outside_box_max_distance_px": 10.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "植木鉢が青",
+     "line": "植木鉢が、青くなりました。",
+     "box_px": [
+      1605,
+      389,
+      1823,
+      693
+     ],
+     "box_screen": [
+      830,
+      201,
+      943,
+      358
+     ],
+     "circle_a_screen": [
+      830,
+      201,
+      943,
+      358
+     ],
+     "circle_b_screen": [
+      830,
+      201,
+      943,
+      358
+     ],
+     "object_w_px": 218,
+     "object_picture_width_pct": 11.75,
+     "object_screen_width_pct": 5.87,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "かさが赤",
+     "line": "かさが、赤くなりました。",
+     "box_px": [
+      480,
+      761,
+      666,
+      1250
+     ],
+     "box_screen": [
+      248,
+      394,
+      344,
+      647
+     ],
+     "circle_a_screen": [
+      248,
+      394,
+      344,
+      647
+     ],
+     "circle_b_screen": [
+      248,
+      394,
+      344,
+      647
+     ],
+     "object_w_px": 186,
+     "object_picture_width_pct": 10.02,
+     "object_screen_width_pct": 5.01,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "おけがない",
+     "line": "段の上のおけが、なくなりました。",
+     "box_px": [
+      1164,
+      1157,
+      1622,
+      1525
+     ],
+     "box_screen": [
+      602,
+      598,
+      839,
+      789
+     ],
+     "circle_a_screen": [
+      602,
+      598,
+      839,
+      789
+     ],
+     "circle_b_screen": [
+      602,
+      598,
+      839,
+      789
+     ],
+     "object_w_px": 260,
+     "object_picture_width_pct": 14.01,
+     "object_screen_width_pct": 7.0,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 4,
+   "scene": "冬の朝の窓辺",
+   "level": "中級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 157,
+   "outside_box_max_distance_px": 7.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "時計の文字盤が青",
+     "line": "時計の文字盤が、青くなりました。",
+     "box_px": [
+      102,
+      495,
+      290,
+      721
+     ],
+     "box_screen": [
+      53,
+      256,
+      150,
+      373
+     ],
+     "circle_a_screen": [
+      53,
+      256,
+      150,
+      373
+     ],
+     "circle_b_screen": [
+      53,
+      256,
+      150,
+      373
+     ],
+     "object_w_px": 188,
+     "object_picture_width_pct": 10.13,
+     "object_screen_width_pct": 5.06,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "花びんが赤",
+     "line": "花びんが、赤くなりました。",
+     "box_px": [
+      1578,
+      490,
+      1776,
+      775
+     ],
+     "box_screen": [
+      816,
+      253,
+      919,
+      401
+     ],
+     "circle_a_screen": [
+      816,
+      253,
+      919,
+      401
+     ],
+     "circle_b_screen": [
+      816,
+      253,
+      919,
+      401
+     ],
+     "object_w_px": 198,
+     "object_picture_width_pct": 10.67,
+     "object_screen_width_pct": 5.33,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "みかんが緑",
+     "line": "みかんがひとつ、緑色になりました。",
+     "box_px": [
+      1490,
+      1335,
+      1700,
+      1505
+     ],
+     "box_screen": [
+      771,
+      691,
+      879,
+      778
+     ],
+     "circle_a_screen": [
+      771,
+      691,
+      879,
+      778
+     ],
+     "circle_b_screen": [
+      771,
+      691,
+      879,
+      778
+     ],
+     "object_w_px": 190,
+     "object_picture_width_pct": 10.24,
+     "object_screen_width_pct": 5.12,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 5,
+   "scene": "雪うさぎの縁側",
+   "level": "上級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 89,
+   "outside_box_max_distance_px": 8.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "湯のみが赤",
+     "line": "湯のみが、赤くなりました。",
+     "box_px": [
+      200,
+      1006,
+      399,
+      1256
+     ],
+     "box_screen": [
+      103,
+      520,
+      206,
+      650
+     ],
+     "circle_a_screen": [
+      103,
+      520,
+      206,
+      650
+     ],
+     "circle_b_screen": [
+      103,
+      520,
+      206,
+      650
+     ],
+     "object_w_px": 189,
+     "object_picture_width_pct": 10.18,
+     "object_screen_width_pct": 5.09,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "赤い実がない",
+     "line": "赤い実が、なくなりました。",
+     "box_px": [
+      1533,
+      1046,
+      1680,
+      1178
+     ],
+     "box_screen": [
+      793,
+      541,
+      869,
+      609
+     ],
+     "circle_a_screen": [
+      793,
+      541,
+      869,
+      609
+     ],
+     "circle_b_screen": [
+      793,
+      541,
+      869,
+      609
+     ],
+     "object_w_px": 145,
+     "object_picture_width_pct": 7.81,
+     "object_screen_width_pct": 3.91,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "耳の葉が赤",
+     "line": "雪うさぎの耳の葉が、赤くなりました。",
+     "box_px": [
+      935,
+      940,
+      1170,
+      1125
+     ],
+     "box_screen": [
+      484,
+      486,
+      605,
+      582
+     ],
+     "circle_a_screen": [
+      484,
+      486,
+      605,
+      582
+     ],
+     "circle_b_screen": [
+      484,
+      486,
+      605,
+      582
+     ],
+     "object_w_px": 190,
+     "object_picture_width_pct": 10.24,
+     "object_screen_width_pct": 5.12,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "p",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  }
+ ]
+}
