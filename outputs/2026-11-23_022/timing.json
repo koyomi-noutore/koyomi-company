@@ -113,10 +113,34 @@
    "detail": "pictures",
    "sec": 43.2,
    "at": "2026-11-23T11:16:10+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures",
+   "sec": 10.3,
+   "at": "2026-11-23T11:16:45+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures",
+   "sec": 11.1,
+   "at": "2026-11-23T11:16:59+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures",
+   "sec": 18.3,
+   "at": "2026-11-23T11:17:27+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures",
+   "sec": 19.0,
+   "at": "2026-11-23T11:17:52+00:00"
   }
  ],
  "total_sec_by_step": {
-  "絵": 467.2
+  "絵": 525.9
  },
- "total_sec_all": 467.2
+ "total_sec_all": 525.9
 }

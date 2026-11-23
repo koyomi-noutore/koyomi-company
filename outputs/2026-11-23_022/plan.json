@@ -4,17 +4,17 @@
  "topics": [
   "きのこ狩りの里山"
  ],
- "note": "第21回（縁側のみかんと猫・冬）。公開日は未定（schedule.md 2026-11-22）。奇数の回：タイトルのみABテスト（サムネはB）。",
+ "note": "第22回（きのこ狩りの里山・秋）。公開日は未定（schedule.md 2026-11-22）。偶数の回：サムネのみABテスト（タイトルは第1段階の3案を記録、アップ時はA）。",
  "youtube": {
-  "title": "【間違い探し】縁側のみかんと猫｜シニア・高齢者の脳トレ",
+  "title": "【間違い探し】きのこ狩りの里山｜シニア・高齢者の脳トレ",
   "description_file": "description.md",
   "title_note": "32文字以内・【間違い探し】から。タイトルA（検索型）。3案は ab/titles.md",
   "publish_plan": "未定（CEOが決める）"
  },
  "screens": {
-  "opening_title": "縁側のみかんと猫の間違い探し　全5問",
+  "opening_title": "きのこ狩りの里山の間違い探し　全5問",
   "opening_sub": "最後は難問です",
-  "unchiku_header": "こよみ先生の 冬の小話",
+  "unchiku_header": "こよみ先生の 秋の小話",
   "unchiku_slides": [
    {
     "until": 7,
@@ -49,7 +49,7 @@
     "until": 15,
     "texts": [
      [
-      "みかんの白いすじは なに？",
+      "きのこは 植物の仲間？",
       960,
       380,
       100,
@@ -66,7 +66,7 @@
     "until": 24,
     "texts": [
      [
-      "実に栄養を送る",
+      "答えは ちがいます",
       960,
       330,
       110,
@@ -78,10 +78,10 @@
       6
      ],
      [
-      "通り道の あとです",
+      "カビに近い 菌類の仲間です",
       960,
       520,
-      100,
+      90,
       [
        59,
        47,
@@ -95,7 +95,7 @@
     "until": 30,
     "texts": [
      [
-      "白いすじは",
+      "かさの裏の ひだから",
       960,
       330,
       110,
@@ -107,10 +107,10 @@
       6
      ],
      [
-      "とらなくても だいじょうぶ",
+      "胞子を とばします",
       960,
       520,
-      90,
+      100,
       [
        59,
        47,
@@ -124,22 +124,22 @@
   "ending_titles": [
    [
     "15個",
-    "みかん名人"
+    "きのこ名人"
    ],
    [
     "11〜14個",
-    "縁側の名探偵"
+    "里山の名探偵"
    ],
    [
     "6〜10個",
-    "こたつの番人"
+    "どんぐり拾い"
    ],
    [
     "0〜5個",
-    "ひなたの猫さん"
+    "落ち葉の旅人"
    ]
   ],
-  "ending_note": "ひなたの猫さんも、毎日ためせば 名人です",
+  "ending_note": "落ち葉の旅人も、毎日ためせば 名人です",
   "ending_next": "ほかの間違い探しも どうぞ",
   "owl_layout": "bottom",
   "endscreen_at": 9.0,
@@ -198,7 +198,7 @@
    {
     "id": "op",
     "at": 0.0,
-    "text": "みかんと猫の間違い探し、全5問。",
+    "text": "里山の間違い探し、全5問。",
     "face": "smile",
     "until": 3.9
    },
@@ -222,21 +222,21 @@
    {
     "id": "u2",
     "at": 7.0,
-    "text": "みかんの白いすじは、なんのためにあるのでしょう？",
+    "text": "きのこは、植物の仲間でしょうか？",
     "face": "think",
     "until": 15.0
    },
    {
     "id": "u3",
     "at": 15.0,
-    "text": "答えは、実に栄養を送る、通り道のあとなんです。",
+    "text": "答えは、ちがいます。カビに近い、菌類の仲間なんです。",
     "face": "surprise",
     "until": 24.0
    },
    {
     "id": "u4",
     "at": 24.0,
-    "text": "白いすじは、とらなくても大丈夫ですよ。",
+    "text": "かさの裏のひだから、胞子を飛ばしてふえるんですよ。",
     "face": "wink",
     "until": 30.0
    }
@@ -282,6 +282,70 @@
   ]
  },
  "readings": [
+  [
+   "里山",
+   "さとやま"
+  ],
+  [
+   "狩り",
+   "がり"
+  ],
+  [
+   "巣箱",
+   "すばこ"
+  ],
+  [
+   "長靴",
+   "ながぐつ"
+  ],
+  [
+   "毛糸",
+   "けいと"
+  ],
+  [
+   "休み場",
+   "やすみば"
+  ],
+  [
+   "山道",
+   "やまみち"
+  ],
+  [
+   "胞子",
+   "ほうし"
+  ],
+  [
+   "菌類",
+   "きんるい"
+  ],
+  [
+   "酵母",
+   "こうぼ"
+  ],
+  [
+   "仲間",
+   "なかま"
+  ],
+  [
+   "岩",
+   "いわ"
+  ],
+  [
+   "栗",
+   "くり"
+  ],
+  [
+   "裏",
+   "うら"
+  ],
+  [
+   "飛ばし",
+   "とばし"
+  ],
+  [
+   "称号",
+   "しょうごう"
+  ],
   [
    "縁側のみかんと猫",
    "えんがわのみかんとねこ"
@@ -1118,22 +1182,27 @@
  "voice_override": {
   "u1": "ここでひとやすみ。こよみせんせいの、きせつのおはなしです。",
   "e1": "これでごもん、おしまいです。",
-  "e2": "じゅうごこのちがい、いくつみつかりましたか。きょうのしょうごうです。",
+  "e2": "じゅうごこのちがい、いくつみつかりましたか。きょうのしょーごーです。",
   "e3": "チャンネルとうろくとベルで、まいあさはちじはんに、もんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。",
   "c_comment": "みつかったかずを、あとでコメントでおしえてくださいね。",
   "s_intro": "うえとしたのえで、ちがいがみっつあります。みつけられますか。",
   "s_end": "いくつみつかったか、コメントでおしえてくださいね。ひだりしたから、つづきもどうぞ。",
   "q1_go": "みぎのえのちがいを、みっつさがしてください。どうぞ。",
-  "q3_go": "つづいて、だいさんもん。どうぞ。",
-  "q5_go": "さいごのだいごもん、なんもんです。どうぞ。",
-  "op": "みかんとねこのまちがいさがし、ごもん。",
+  "q3_go": "つづいて、だい、さん、もん。どうぞ。",
+  "q5_go": "さいごの、だい、ご、もん、なんもんです。どうぞ。",
+  "op": "さとやまの、まちがいさがし、ぜん、ごもん。",
   "op2": "さいごは、なんもんです。",
-  "u2": "みかんの、しろいすじは、なんのために、あるのでしょう？",
-  "u3": "こたえは、みに、えいようをおくる、とおりみちの、あとなんです。",
-  "u4": "しろいすじは、とらなくても、だいじょうぶですよ。",
+  "u2": "きのこは、しょくぶつの、なかまでしょうか？",
+  "u3": "こたえは、ちがいます。カビにちかい、きんるいの、なかまなんです。",
+  "u4": "かさのうらの、ひだから、ほうしをとばして、ふえるんですよ。",
   "e4": "ほかにも、いろいろな、まちがいさがしがあります。もっとむずかしいもんだいに、ちょうせんしたいかたは、がめんのどうがを、クリックしてくださいね。",
-  "q4_card": "だい、よんもん、ちゅうきゅう。みかんのきのにわです。",
-  "q4_go": "だい、よんもん、じっくりどうぞ。"
+  "q4_card": "だい、よん、もん、ちゅうきゅう。くりのきの、やまみちです。",
+  "q4_go": "だい、よん、もんです。じっくり、どうぞ。",
+  "q1_card": "だい、いち、もん、やさしいもんだい。さとやまの、いりぐちです。",
+  "q2_card": "だい、に、もん、しょきゅう。きりかぶの、きのこです。",
+  "q3_card": "だい、さん、もん、しょきゅう。さとやまの、やすみばです。",
+  "q5_card": "だい、ご、もん、じょうきゅう。きのこのきばこと、ねこです。",
+  "q2_go": "では、だい、に、もん。どうぞ。"
  },
  "voice": {
   "provider": "fish",
@@ -1282,7 +1351,7 @@
   },
   {
    "q": 3,
-   "scene": "里山の休けい所",
+   "scene": "里山の休み場",
    "level": "初級",
    "go": "続いて、第3問。どうぞ。",
    "prompt": "Scene: close-up of a rest spot in an autumn satoyama, golden trees behind. CENTER (main subject, medium size, about one third of the picture width): a wooden bench with a bamboo basket of mushrooms and a teapot with two cups on it, and an orange tabby cat sitting beside the basket on the bench. Autumn only, clear sunny day: no Halloween, harvest-festival or other dated holiday items, no winter or summer items. Do not use much red: no bright red maple leaves, no red mushrooms; use golden yellow, orange, brown and green foliage, keep the light natural daylight and the whites ordinary white. Every listed object is fully visible and rests on the ground, floor, rock, stump, log, bench or shelf, or hangs from a branch or hook; nothing floats. No letters, labels or writing anywhere. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object is SMALL: about one twelfth of the picture width, painted in the same style as the rest of the scene, with a natural shadow, no white outline and no sticker effect. Objects: (left, at 30% height) a small lantern hanging from a tree branch; (right, at 30% height) a small potted plant on a wooden post; (left, at 50% height) a small tin cup on a tree stump; (right, at 50% height) a small knitted cap on a flat rock; (left, at 70% height) a small folded cloth bag on the ground; (right, at 70% height) a small wooden stool on the ground.",
@@ -1492,8 +1561,8 @@
   }
  ],
  "thumbnail": {
-  "question": 1,
-  "big_text": "冬の間違いさがし",
+  "question": 3,
+  "big_text": "秋の間違いさがし",
   "highlight": "間違いさがし",
   "highlight_color": [
    255,
@@ -1529,8 +1598,8 @@
   {
    "question": 2,
    "answer_gap": 3.3,
-   "note": "1本目：第2問 こたつのみかん・初級",
-   "title": "シニアの間違い探し｜こたつのみかんの1問 #脳トレ #頭の体操",
+   "note": "1本目：第2問 切り株のきのこ・初級",
+   "title": "シニアの間違い探し｜切り株のきのこの1問 #脳トレ #頭の体操",
    "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
    "end_veil": [
     {
@@ -1586,8 +1655,8 @@
   {
    "question": 4,
    "answer_gap": 3.3,
-   "note": "2本目：第4問 みかんの木の庭・中級",
-   "title": "シニアの間違い探し｜みかんの木の庭の1問 #脳トレ #頭の体操",
+   "note": "2本目：第4問 栗の木の山道・中級",
+   "title": "シニアの間違い探し｜栗の木の山道の1問 #脳トレ #頭の体操",
    "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
    "end_veil": [
     {
