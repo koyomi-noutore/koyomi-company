@@ -1,8 +1,9 @@
 """Gemini画像APIの小さなラッパー。キーは環境変数 GEMINI_API_KEY からだけ読む。
 
-IMAGE_BACKEND=vertex のときだけ、Vertex AI（aiplatform.googleapis.com）経由で生成する。
+2026-11-23 CEO決定：Google Cloud の無料クレジットを使うため、**標準は Vertex AI（aiplatform.googleapis.com）経由**。
 認証は VERTEX_SA_KEY_B64（サービスアカウント鍵JSONのBase64）をメモリ上でデコードして行う。
-普段（未設定）は今までどおり AI Studio。バッチ（generate_batch）は AI Studio のみ。"""
+VERTEX_SA_KEY_B64 が無いとき、または IMAGE_BACKEND=aistudio のときは、今までどおり AI Studio（前払い）。
+Vertex のときの generate_batch は、AI Studio のバッチを使わず、同時4件ずつ Vertex で1枚ずつ作る（戻り値は同じ形）。"""
 import base64, io, json, os, sys, urllib.request
 from pathlib import Path
 from PIL import Image
@@ -65,10 +66,29 @@ BATCH_API = "https://generativelanguage.googleapis.com/v1beta/models/{model}:bat
 ROOT = "https://generativelanguage.googleapis.com/v1beta/"
 
 
+def use_vertex():
+    b = os.environ.get("IMAGE_BACKEND", "").lower()
+    if b == "aistudio":
+        return False
+    return b == "vertex" or bool(os.environ.get("VERTEX_SA_KEY_B64"))
+
+
 def generate_batch(jobs, model=DEFAULT_MODEL, poll=30, max_wait=6 * 3600, name="koyomi"):
     """急がない生成をまとめてバッチ（約半額）で頼む。jobs = {key: {"prompt", "images", "aspect", "size"}}。
-    結果が出るまで待ち、{key: Image} を返す（失敗した key は入らない）。入力の絵は容量を抑えるため JPEG（品質95）で送る。"""
+    結果が出るまで待ち、{key: Image} を返す（失敗した key は入らない）。入力の絵は容量を抑えるため JPEG（品質95）で送る。
+    Vertex のときは、同時4件ずつ Vertex で作る（無料クレジットを使うため）。"""
     import time
+    if use_vertex():
+        from concurrent.futures import ThreadPoolExecutor
+        def one(kj):
+            k, j = kj
+            try:
+                return str(k), generate_vertex(j["prompt"], j.get("images", ()), model, j.get("aspect", "16:9"), j.get("size", "2K"))
+            except Exception as e:
+                print(f"[gemini] Vertex の {k} は失敗：{str(e)[:200]}", flush=True)
+                return str(k), None
+        with ThreadPoolExecutor(4) as ex:
+            return {k: im for k, im in ex.map(one, jobs.items()) if im is not None}
     reqs = [{"request": _request(j["prompt"], j.get("images", ()), j.get("aspect", "16:9"), j.get("size", "2K"), "JPEG"),
              "metadata": {"key": str(k)}} for k, j in jobs.items()]
     op = _call("POST", BATCH_API.format(model=model),
@@ -157,7 +177,7 @@ def generate_vertex(prompt, images=(), model=DEFAULT_MODEL, aspect="16:9", size=
 
 
 def generate(prompt, images=(), model=DEFAULT_MODEL, aspect="16:9", size="2K"):
-    if os.environ.get("IMAGE_BACKEND", "").lower() == "vertex":
+    if use_vertex():
         return generate_vertex(prompt, images, model, aspect, size)
     key = gemini_key()
     body = _request(prompt, images, aspect, size)
