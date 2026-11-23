@@ -66,3 +66,20 @@ def gemini_key():
     if not k:
         raise SystemExit("GEMINI_API_KEY が設定されていません")
     return k
+
+
+def vertex_service_account(env="VERTEX_SA_KEY_B64"):
+    """Vertex AI 用サービスアカウント鍵（JSONをBase64にしたもの）をメモリ上でだけデコードして返す。
+    中身は表示・保存・ログ出力しない。エラー文にも値を含めない。"""
+    import base64
+    raw = os.environ.get(env)
+    if not raw:
+        raise SystemExit(f"{env} が設定されていません")
+    try:
+        info = json.loads(base64.b64decode("".join(raw.split())))
+    except Exception:
+        raise SystemExit(f"{env} をBase64のJSONとして読めません") from None
+    missing = [k for k in ("client_email", "private_key", "project_id") if not info.get(k)]
+    if missing:
+        raise SystemExit(f"{env} に必要な項目がありません: {', '.join(missing)}")
+    return info

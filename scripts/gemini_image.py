@@ -1,10 +1,14 @@
-"""Gemini画像APIの小さなラッパー。キーは環境変数 GEMINI_API_KEY からだけ読む。"""
+"""Gemini画像APIの小さなラッパー。キーは環境変数 GEMINI_API_KEY からだけ読む。
+
+IMAGE_BACKEND=vertex のときだけ、Vertex AI（aiplatform.googleapis.com）経由で生成する。
+認証は VERTEX_SA_KEY_B64（サービスアカウント鍵JSONのBase64）をメモリ上でデコードして行う。
+普段（未設定）は今までどおり AI Studio。バッチ（generate_batch）は AI Studio のみ。"""
 import base64, io, json, os, sys, urllib.request
 from pathlib import Path
 from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).parent))
-from credentials import gemini_key
+from credentials import gemini_key, vertex_service_account
 
 API = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 DEFAULT_MODEL = "gemini-3-pro-image"
@@ -101,7 +105,59 @@ def generate_batch(jobs, model=DEFAULT_MODEL, poll=30, max_wait=6 * 3600, name="
     return out
 
 
+VERTEX_API = "https://aiplatform.googleapis.com/v1/projects/{project}/locations/{loc}/publishers/google/models/{model}:generateContent"
+VERTEX_LOCATION = os.environ.get("VERTEX_LOCATION", "global")
+# AI Studio と Vertex でモデルIDが違う場合の読み替え
+VERTEX_MODEL_ALIAS = {"gemini-3-pro-image": "gemini-3-pro-image-preview"}
+_vtoken = {}
+
+
+def _vertex_token(info):
+    """サービスアカウントで署名したJWTをアクセストークンに交換する（1時間有効、期限前に取り直す）。"""
+    import time
+    if _vtoken.get("exp", 0) > time.time() + 60:
+        return _vtoken["tok"]
+    from cryptography.hazmat.primitives import hashes, serialization
+    from cryptography.hazmat.primitives.asymmetric import padding
+    b64 = lambda b: base64.urlsafe_b64encode(b).rstrip(b"=")
+    now = int(time.time())
+    head = b64(json.dumps({"alg": "RS256", "typ": "JWT"}).encode())
+    claim = b64(json.dumps({"iss": info["client_email"], "scope": "https://www.googleapis.com/auth/cloud-platform",
+                            "aud": "https://oauth2.googleapis.com/token", "iat": now, "exp": now + 3600}).encode())
+    key = serialization.load_pem_private_key(info["private_key"].encode(), password=None)
+    sig = b64(key.sign(head + b"." + claim, padding.PKCS1v15(), hashes.SHA256()))
+    data = ("grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion="
+            + (head + b"." + claim + b"." + sig).decode()).encode()
+    req = urllib.request.Request("https://oauth2.googleapis.com/token", data=data,
+                                 headers={"Content-Type": "application/x-www-form-urlencoded"})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        res = json.load(r)
+    _vtoken.update(tok=res["access_token"], exp=now + int(res.get("expires_in", 3600)))
+    return _vtoken["tok"]
+
+
+def generate_vertex(prompt, images=(), model=DEFAULT_MODEL, aspect="16:9", size="2K"):
+    info = vertex_service_account()
+    vmodel = VERTEX_MODEL_ALIAS.get(model, model)
+    body = _request(prompt, images, aspect, size)
+    for p in body["contents"][0]["parts"]:  # Vertex は camelCase
+        if "inline_data" in p:
+            d = p.pop("inline_data")
+            p["inlineData"] = {"mimeType": d["mime_type"], "data": d["data"]}
+    body["contents"][0]["role"] = "user"
+    url = VERTEX_API.format(project=info["project_id"], loc=VERTEX_LOCATION, model=vmodel)
+    req = urllib.request.Request(url, data=json.dumps(body).encode(),
+                                 headers={"Content-Type": "application/json",
+                                          "Authorization": "Bearer " + _vertex_token(info)})
+    with urllib.request.urlopen(req, timeout=300) as r:
+        res = json.load(r)
+    _log_usage("vertex:" + vmodel, size, res.get("usageMetadata", {}))
+    return _image_of(res)
+
+
 def generate(prompt, images=(), model=DEFAULT_MODEL, aspect="16:9", size="2K"):
+    if os.environ.get("IMAGE_BACKEND", "").lower() == "vertex":
+        return generate_vertex(prompt, images, model, aspect, size)
     key = gemini_key()
     body = _request(prompt, images, aspect, size)
     req = urllib.request.Request(API.format(model=model), data=json.dumps(body).encode(),
