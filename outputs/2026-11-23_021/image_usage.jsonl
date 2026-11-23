@@ -1,0 +1,16 @@
+{"time": "2026-11-23T08:26:39+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 638, "output_tokens": 1120, "total_tokens": 2084}
+{"time": "2026-11-23T08:26:41+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 605, "output_tokens": 1120, "total_tokens": 2114}
+{"time": "2026-11-23T08:26:41+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 637, "output_tokens": 1120, "total_tokens": 2102}
+{"time": "2026-11-23T08:26:43+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 642, "output_tokens": 1120, "total_tokens": 2118}
+{"time": "2026-11-23T08:27:05+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 578, "output_tokens": 1120, "total_tokens": 2092}
+{"time": "2026-11-23T08:29:07+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 766, "output_tokens": 1120, "total_tokens": 2068}
+{"time": "2026-11-23T08:29:07+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 770, "output_tokens": 1120, "total_tokens": 2134}
+{"time": "2026-11-23T08:29:08+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 789, "output_tokens": 1120, "total_tokens": 2145}
+{"time": "2026-11-23T08:29:12+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 793, "output_tokens": 1120, "total_tokens": 2159}
+{"time": "2026-11-23T08:29:55+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 778, "output_tokens": 1120, "total_tokens": 2154}
+{"time": "2026-11-23T08:33:01+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 794, "output_tokens": 1120, "total_tokens": 2182}
+{"time": "2026-11-23T08:33:05+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 789, "output_tokens": 1120, "total_tokens": 2183}
+{"time": "2026-11-23T08:34:31+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 650, "output_tokens": 1120, "total_tokens": 2246}
+{"time": "2026-11-23T08:35:51+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 644, "output_tokens": 1120, "total_tokens": 2163}
+{"time": "2026-11-23T08:36:39+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 665, "output_tokens": 1120, "total_tokens": 2205}
+{"time": "2026-11-23T08:37:46+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 780, "output_tokens": 1120, "total_tokens": 2157}
