@@ -1,0 +1,26 @@
+{
+ "runs": [
+  {
+   "step": "絵",
+   "detail": "pictures batch base",
+   "sec": 178.2,
+   "at": "2026-11-23T08:11:02+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit",
+   "sec": 147.9,
+   "at": "2026-11-23T08:14:09+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit:2 2 5",
+   "sec": 164.4,
+   "at": "2026-11-23T08:18:47+00:00"
+  }
+ ],
+ "total_sec_by_step": {
+  "絵": 490.5
+ },
+ "total_sec_all": 490.5
+}
