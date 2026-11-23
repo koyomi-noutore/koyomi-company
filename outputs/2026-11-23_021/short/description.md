@@ -1,6 +1,6 @@
 # 021 ショート1 投稿用メタデータ（第2問 こたつのみかん）
 
-- 長尺：https://youtu.be/kWcWRZ6BJTE（関連動画はCEOがStudioで設定する。APIでは設定できない）
+- 長尺：https://youtu.be/ECPc16LE7_o（関連動画はCEOがStudioで設定する。APIでは設定できない）
 
 ## タイトル
 ```
@@ -13,7 +13,7 @@
 
 続きの問題は長い動画で（全5問）
 【間違い探し】縁側のみかんと猫｜シニア・高齢者の脳トレ
-https://youtu.be/kWcWRZ6BJTE
+https://youtu.be/ECPc16LE7_o
 
 こよみ先生のまいにち脳トレ：毎日朝8時半に新しい問題をお届けします。
 
