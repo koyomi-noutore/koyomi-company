@@ -18,6 +18,50 @@ from episode_plan import plan
 W, H, FPS = 1920, 1080, 30
 BG = (246, 236, 216)
 INK = (59, 47, 37)
+# 季節の見た目（scripts/season_theme.json）。setup() が plan.json の theme／season か環境変数 KOYOMI_THEME から選んで、下の色を入れ替える。
+# 既定（秋）は、これまでの間違い探しの色そのまま。
+BG2 = (250, 240, 222)       # うんちく・登録のお願いの背景
+PANEL = (255, 250, 238)     # 札・枠の中・文字のふち取り
+ACCENT = (180, 70, 40)
+ACCENT2 = (150, 90, 50)
+MUTED = (110, 84, 60)
+EDGE = (180, 140, 100)
+EDGE2 = (150, 115, 80)
+DARK = (52, 40, 30)         # 上の帯・字幕の箱
+TRACK = (225, 212, 188)     # 残り時間の溝
+PARTICLES = {"kind": "leaf", "colors": [[214, 80, 50], [232, 176, 48], [200, 110, 40]],
+             "ending_colors": [[214, 80, 50], [232, 176, 48], [96, 150, 90], [90, 120, 200]]}
+THEME_NAME = "秋"
+REMAP = {}                  # plan.json に直接書かれた秋の色 → 今のテーマの色（完全に同じ値のときだけ置き換える）
+THEME_FILE = Path(__file__).parent / "season_theme.json"
+
+
+def theme_name():
+    """環境変数 KOYOMI_THEME > plan.json の theme > plan.json の season の標準 > 秋。"""
+    import os
+    cfg = json.loads(THEME_FILE.read_text(encoding="utf-8"))
+    p = plan()
+    name = os.environ.get("KOYOMI_THEME") or p.get("theme") or cfg["season_default"].get(p.get("season"), cfg["fallback"])
+    if name not in cfg["themes"]:
+        raise SystemExit(f"季節の見た目 {name!r} が season_theme.json にありません")
+    return name, cfg["themes"]
+
+
+def apply_theme():
+    global BG, BG2, INK, PANEL, ACCENT, ACCENT2, MUTED, EDGE, EDGE2, DARK, TRACK, PARTICLES, THEME_NAME, REMAP
+    name, themes = theme_name()
+    t, base = themes[name], themes["秋"]
+    c = lambda k: tuple(t[k])
+    BG, BG2, INK, PANEL, ACCENT, ACCENT2, MUTED, EDGE, EDGE2, DARK, TRACK = (
+        c(k) for k in ("bg", "bg2", "ink", "panel", "accent", "accent2", "muted", "edge", "edge2", "dark", "track"))
+    PARTICLES, THEME_NAME = t["particles"], name
+    REMAP = {tuple(base[k]): tuple(t[k]) for k in ("ink", "accent", "accent2", "muted", "panel")}
+
+
+def tc(col):
+    """plan.json の文字色（秋の色で書かれている）を今のテーマの色に。"""
+    col = tuple(col)
+    return REMAP.get(col, col)
 PW, PH = 960, 1080                  # 絵1枚の大きさ（画面の半分）
 XS = [0, 960]                       # 左の絵・右の絵の左端
 BAND_H = 54                         # 上の帯（画面の高さの5%）
@@ -60,6 +104,7 @@ def _font(path, size):
 def setup(out, work, fontp):
     global OUT, WORK, FONT
     OUT, WORK, FONT = Path(out), Path(work), str(fontp)
+    apply_theme()
     ans = json.loads((OUT / "answers.json").read_text(encoding="utf-8"))
     CTX["answers"] = {Q["q"]: Q for Q in ans["questions"]}
     CTX["voice"] = {v["id"]: v for v in json.loads((WORK / "voice" / "voice.json").read_text(encoding="utf-8"))}
@@ -71,7 +116,8 @@ def ease(x):
     return 1 - (1 - x) ** 3
 
 
-def text_center(d, xy, s, size, fill=INK, stroke=0, stroke_fill=None, anchor="mm"):
+def text_center(d, xy, s, size, fill=None, stroke=0, stroke_fill=None, anchor="mm"):
+    fill = INK if fill is None else fill
     d.text(xy, s, font=font(size), fill=fill, anchor=anchor, stroke_width=stroke, stroke_fill=stroke_fill)
 
 
@@ -198,7 +244,7 @@ def sub_img(text, maxc):
     bw, bh = int(wmax + 60), int(lh * len(ls) + 26)
     im = Image.new("RGBA", (bw, bh), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
-    d.rounded_rectangle((0, 0, bw - 1, bh - 1), 20, fill=(52, 40, 30, 235), outline=(255, 248, 230, 255), width=4)
+    d.rounded_rectangle((0, 0, bw - 1, bh - 1), 20, fill=DARK + (235,), outline=(255, 248, 230, 255), width=4)
     for k, l in enumerate(ls):
         d.text((bw / 2, 13 + lh * k + lh / 2), l, font=f, fill=(255, 255, 255), anchor="mm")
     return im
@@ -217,24 +263,33 @@ def draw_subtitle(im, t, area, align="center"):
 
 
 # ---------- 落ち葉（オープニング・うんちく・エンディング） ----------
-def leaves(d, t, n=18, seed=3, colors=((214, 80, 50), (232, 176, 48), (200, 110, 40))):
+def leaves(d, t, n=18, seed=3, ending=False):
+    """舞う物（テーマの particles：leaf＝落ち葉／petal＝花びら・若葉／snow＝雪）。ending=True はエンディング用の色。"""
     import random
     r = random.Random(seed)
-    if plan().get("season") == "冬":     # 2026-11-22 第17回：冬の回に秋の落ち葉が舞っていた。冬は雪のつぶにする
+    P = PARTICLES
+    if P["kind"] == "snow":     # 2026-11-22 第17回：冬の回に秋の落ち葉が舞っていた。冬は雪のつぶにする
+        fill, outline = tuple(P["fill"]), tuple(P["outline"])
         for i in range(n):
             x0, sp, ph, sz = r.uniform(0, W), r.uniform(30, 60), r.uniform(0, 100), r.uniform(8, 16)
             y = ((t + ph) * sp) % (H + 100) - 50
             x = x0 + 30 * math.sin((t + ph) * 0.7)
-            d.ellipse((x - sz, y - sz, x + sz, y + sz), fill=(255, 255, 255), outline=(190, 205, 225), width=2)
+            d.ellipse((x - sz, y - sz, x + sz, y + sz), fill=fill, outline=outline, width=2)
         return
+    colors = [tuple(c) for c in (P.get("ending_colors") if ending else None) or P["colors"]]
     for i in range(n):
         x0, sp, ph, sz = r.uniform(0, W), r.uniform(40, 80), r.uniform(0, 100), r.uniform(18, 34)
         c = colors[i % len(colors)]
         y = ((t + ph) * sp) % (H + 100) - 50
         x = x0 + 40 * math.sin((t + ph) * 0.9)
         a = (t + ph) * 1.3
-        pts = [(x + sz * math.cos(a + k * math.pi / 2.5) * (1 if k % 2 == 0 else 0.45),
-                y + sz * math.sin(a + k * math.pi / 2.5) * (1 if k % 2 == 0 else 0.45)) for k in range(5)]
+        if P["kind"] == "petal":     # 花びら・若葉：細長いしずく形
+            pts = [(x + sz * 1.1 * math.cos(k * math.pi / 4) * math.cos(a) - sz * 0.55 * math.sin(k * math.pi / 4) * math.sin(a),
+                    y + sz * 1.1 * math.cos(k * math.pi / 4) * math.sin(a) + sz * 0.55 * math.sin(k * math.pi / 4) * math.cos(a))
+                   for k in range(8)]
+        else:
+            pts = [(x + sz * math.cos(a + k * math.pi / 2.5) * (1 if k % 2 == 0 else 0.45),
+                    y + sz * math.sin(a + k * math.pi / 2.5) * (1 if k % 2 == 0 else 0.45)) for k in range(5)]
         d.polygon(pts, fill=c)
 
 
@@ -245,14 +300,14 @@ def question_base(q):
     for x, side in zip(XS, "ab"):
         im.paste(picture(q, side), (x, 0))
     d = ImageDraw.Draw(im)
-    d.line((W // 2, 0, W // 2, H), fill=(255, 250, 238), width=4)   # 左右の絵の境目
+    d.line((W // 2, 0, W // 2, H), fill=PANEL, width=4)   # 左右の絵の境目
     return im
 
 
 def draw_band(im, q, t, mode):
     """上の端の細い帯（高さ54px＝5%）。半透明で、絵をなるべく隠さない。"""
     Q = T.QUESTIONS[q]
-    layer = Image.new("RGBA", (W, BAND_H), (52, 40, 30, 165))
+    layer = Image.new("RGBA", (W, BAND_H), DARK + (165,))
     d = ImageDraw.Draw(layer)
     col = LEVEL_COLOR[Q["level"]]
     d.rounded_rectangle((10, 7, 150, BAND_H - 7), 18, fill=col + (255,))
@@ -261,7 +316,7 @@ def draw_band(im, q, t, mode):
     if mode == "solve":
         rem = max(0.0, T.SOLVE - (t - T.Q_START[q] - T.CARD))
         bx0, bx1, by0, by1 = 1100, 1790, 15, BAND_H - 15
-        d.rounded_rectangle((bx0, by0, bx1, by1), 12, fill=(225, 212, 188, 230))
+        d.rounded_rectangle((bx0, by0, bx1, by1), 12, fill=TRACK + (230,))
         frac = rem / T.SOLVE
         c = (110, 180, 100) if rem > 30 else (236, 170, 50) if rem > 10 else (230, 70, 60)
         if frac > 0:
@@ -279,9 +334,9 @@ def draw_rule_overlay(im, ro, alpha=1.0):
     w, h, y0 = 1180, 190, 86
     layer = Image.new("RGBA", (w, h), (0, 0, 0, 0))
     d = ImageDraw.Draw(layer)
-    d.rounded_rectangle((0, 0, w - 1, h - 1), 36, fill=(255, 250, 238, int(235 * alpha)), outline=(180, 70, 40, int(255 * alpha)), width=6)
-    d.text((w // 2, 72), ro["text"], font=font(76), fill=(59, 47, 37, int(255 * alpha)), anchor="mm")
-    d.text((w // 2, 148), ro.get("sub", ""), font=font(48), fill=(180, 70, 40, int(255 * alpha)), anchor="mm")
+    d.rounded_rectangle((0, 0, w - 1, h - 1), 36, fill=PANEL + (int(235 * alpha),), outline=ACCENT + (int(255 * alpha),), width=6)
+    d.text((w // 2, 72), ro["text"], font=font(76), fill=INK + (int(255 * alpha),), anchor="mm")
+    d.text((w // 2, 148), ro.get("sub", ""), font=font(48), fill=ACCENT + (int(255 * alpha),), anchor="mm")
     im.paste(layer, ((W - w) // 2, y0), layer)
 
 
@@ -382,7 +437,7 @@ def card_img(q):
     col = LEVEL_COLOR[Q["level"]]
     im = Image.new("RGB", (W, H), BG)
     d = ImageDraw.Draw(im)
-    d.rounded_rectangle((340, 170, 1580, 850), 60, fill=(255, 250, 238), outline=col, width=16)
+    d.rounded_rectangle((340, 170, 1580, 850), 60, fill=PANEL, outline=col, width=16)
     text_center(d, (960, 340), f"{q}問目", 190, fill=col)
     text_center(d, (960, 550), f"{Q['level']}　{LEVEL_STARS[Q['level']]}", 120)
     text_center(d, (960, 730), Q["scene"], 120)
@@ -419,8 +474,8 @@ def opening_base():
     sz, maxw = 120, 2 * min(cx, W - cx) - 80     # 長い題名は画面からはみ出さないよう縮める（2026-11-22 第19回：18字で左右が切れた）
     while sz > 60 and d.textlength(SC["opening_title"], font=font(sz)) > maxw:
         sz -= 4
-    text_center(d, (cx, 200), SC["opening_title"], sz, stroke=6, stroke_fill=(255, 250, 238))
-    text_center(d, (cx, 340), SC["opening_sub"], 58, fill=(150, 90, 50))
+    text_center(d, (cx, 200), SC["opening_title"], sz, stroke=6, stroke_fill=PANEL)
+    text_center(d, (cx, 340), SC["opening_sub"], 58, fill=ACCENT2)
     return im
 
 
@@ -430,9 +485,9 @@ def rule_base():
     im = Image.new("RGB", (W, H), BG)
     d = ImageDraw.Draw(im)
     for x, label in zip(XS, ("左の絵", "右の絵")):
-        d.rounded_rectangle((x + 40, 60, x + PW - 40, 840), 24, fill=(255, 250, 238), outline=(150, 115, 80), width=6)
+        d.rounded_rectangle((x + 40, 60, x + PW - 40, 840), 24, fill=PANEL, outline=EDGE2, width=6)
         text_center(d, (x + PW / 2, 200), label, 100)
-    text_center(d, (XS[0] + PW / 2, 480), "くらべて みよう", 84, fill=(110, 84, 60))
+    text_center(d, (XS[0] + PW / 2, 480), "くらべて みよう", 84, fill=MUTED)
     text_center(d, (XS[1] + PW / 2, 430), "違いは 3つ", 120, fill=RED)
     text_center(d, (XS[1] + PW / 2, 640), "1問 90秒", 100, fill=INK)
     return im
@@ -440,16 +495,16 @@ def rule_base():
 
 def render_unchiku(t):
     u = T.UNCHIKU[0]
-    im = Image.new("RGB", (W, H), (250, 240, 222))
+    im = Image.new("RGB", (W, H), BG2)
     d = ImageDraw.Draw(im)
     leaves(d, t)
     SC = plan()["screens"]
-    text_center(d, (80, 80), SC["unchiku_header"], 56, fill=(150, 90, 50), anchor="lm")
+    text_center(d, (80, 80), SC["unchiku_header"], 56, fill=ACCENT2, anchor="lm")
     dt = t - u
     # うんちくの画面：plan.json の screens.unchiku_slides。until（うんちくの頭からの秒）までその画面を出す
     slide = next((x for x in SC["unchiku_slides"] if dt < x["until"]), SC["unchiku_slides"][-1])
     for text, x, y, size, col, stroke in slide["texts"]:
-        text_center(d, (x, y), text, size, fill=tuple(col), stroke=stroke, stroke_fill=(255, 250, 238) if stroke else None)
+        text_center(d, (x, y), text, size, fill=tc(col), stroke=stroke, stroke_fill=PANEL if stroke else None)
     if slide.get("maple"):
         mx, my, mr, mc = slide["maple"]
         draw_maple(d, mx, my, mr, tuple(mc))
@@ -489,36 +544,36 @@ def render_ending(t):
     im = Image.new("RGB", (W, H), BG)
     d = ImageDraw.Draw(im)
     if dt < (0 if es is not None else 4.5):
-        leaves(d, t, n=40, seed=7, colors=((214, 80, 50), (232, 176, 48), (96, 150, 90), (90, 120, 200)))
+        leaves(d, t, n=40, seed=7, ending=True)
         cx = 1060 if owl_bottom() else 700
-        text_center(d, (cx, 380), "おつかれさまでした", 130, stroke=6, stroke_fill=(255, 250, 238))
-        text_center(d, (cx, 540), f"{len(T.QUESTIONS)}問 おしまい", 90, fill=(180, 70, 40))
+        text_center(d, (cx, 380), "おつかれさまでした", 130, stroke=6, stroke_fill=PANEL)
+        text_center(d, (cx, 540), f"{len(T.QUESTIONS)}問 おしまい", 90, fill=ACCENT)
     else:
         ox = 360 if owl_bottom() else 0       # 先生が左下にいるときは、称号の表を右へ
-        text_center(d, (420 + ox, 80), "今日の称号", 80, fill=(180, 70, 40))
+        text_center(d, (420 + ox, 80), "今日の称号", 80, fill=ACCENT)
         y = 170
         for i, (cnt, name) in enumerate(T.TITLES):
-            d.rounded_rectangle((60 + ox, y, 1160 + ox, y + 100), 24, fill=(255, 250, 238), outline=(180, 140, 100), width=4)
+            d.rounded_rectangle((60 + ox, y, 1160 + ox, y + 100), 24, fill=PANEL, outline=EDGE, width=4)
             text_center(d, (110 + ox, y + 50), cnt, 60, anchor="lm")
-            text_center(d, (520 + ox, y + 50), name, 68, fill=(180, 70, 40) if i == 0 else INK, anchor="lm")
+            text_center(d, (520 + ox, y + 50), name, 68, fill=ACCENT if i == 0 else INK, anchor="lm")
             y += 118
-        text_center(d, (610 + ox, y + 30), T.TITLE_NOTE, 50, fill=(110, 84, 60))
+        text_center(d, (610 + ox, y + 30), T.TITLE_NOTE, 50, fill=MUTED)
         if dt >= 11.5:
-            text_center(d, (610 + ox, y + 110), plan()["screens"]["ending_next"], 60, fill=(150, 90, 50))
+            text_center(d, (610 + ox, y + 110), plan()["screens"]["ending_next"], 60, fill=ACCENT2)
     draw_owl_and_sub(im, t, (W - OWL_SIZE - 40, H - OWL_SIZE - 60), (20, 1400, H - 24))
     return im
 
 
 def render_cta(t):
     """登録のお願い（2026-11-14 CEO指示）：理由つき。画面に大きく「毎朝8時半に新しい問題が届きます」。先生は左下・字幕の横。"""
-    im = Image.new("RGB", (W, H), (250, 240, 222))
+    im = Image.new("RGB", (W, H), BG2)
     d = ImageDraw.Draw(im)
     leaves(d, t, n=10, seed=5)
     for text, x, y, size, col, stroke in plan()["screens"].get("cta_texts", [
             ["チャンネル登録 と ベル", 960, 260, 110, [180, 70, 40], 6],
             ["毎朝8時半に 新しい問題が届きます", 960, 450, 84, [59, 47, 37], 0],
             ["毎日の 頭の体操の習慣に", 960, 590, 72, [110, 84, 60], 0]]):
-        text_center(d, (x, y), text, size, fill=tuple(col), stroke=stroke, stroke_fill=(255, 250, 238) if stroke else None)
+        text_center(d, (x, y), text, size, fill=tc(col), stroke=stroke, stroke_fill=PANEL if stroke else None)
     draw_owl_and_sub(im, t, (W - OWL_SIZE - 40, H - OWL_SIZE - 30), (20, 1400, H - 24))
     return im
 
@@ -528,7 +583,7 @@ def render_endscreen(t, dt):
     「おつかれさまでした」は上部中央に小さく。こよみ先生は画面下中央、字幕の横。"""
     im = Image.new("RGB", (W, H), BG)
     d = ImageDraw.Draw(im)
-    text_center(d, (W / 2, 70), "おつかれさまでした", 60, fill=(150, 90, 50))
+    text_center(d, (W / 2, 70), "おつかれさまでした", 60, fill=ACCENT2)
     ox = 470
     draw_owl(im, t, (ox, H - OWL_BOTTOM - 8), OWL_BOTTOM)
     draw_subtitle(im, t, (ox + OWL_BOTTOM + 8, W - 30, H - 24), align="left")
