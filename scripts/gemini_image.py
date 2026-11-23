@@ -107,8 +107,9 @@ def generate_batch(jobs, model=DEFAULT_MODEL, poll=30, max_wait=6 * 3600, name="
 
 VERTEX_API = "https://aiplatform.googleapis.com/v1/projects/{project}/locations/{loc}/publishers/google/models/{model}:generateContent"
 VERTEX_LOCATION = os.environ.get("VERTEX_LOCATION", "global")
-# AI Studio と Vertex でモデルIDが違う場合の読み替え
-VERTEX_MODEL_ALIAS = {"gemini-3-pro-image": "gemini-3-pro-image-preview"}
+# AI Studio と Vertex でモデルIDが違う場合の読み替え（2026-11-23：gemini-3-pro-image は Vertex でも同じ名前で使える。
+# -preview は global で 404 だったので読み替えない）
+VERTEX_MODEL_ALIAS = {}
 _vtoken = {}
 
 
