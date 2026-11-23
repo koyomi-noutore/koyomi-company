@@ -71,18 +71,18 @@ def easy_frame(state, remain=None):
 
 
 # ---------- ② 漢字・むずかしい（大きさ・向きばらばら・字どうしは重ならない・末の中に未） ----------
-HARD = {"main": "末", "odd": "未", "n": 26, "weight": "700Bold"}   # 2026-11-23 監査1回目：太さを下げ、回転は±30度、最小90px
+HARD = {"main": "末", "odd": "未", "n": 16, "weight": "700Bold"}   # 2026-11-23 監査1回目：太さを下げ、回転は±30度、最小90px
 
 
 def layout_hard():
     """大きい字から順に、重ならない場所をさがして置く。重なりは、字を描いた実際の形（インク）で最後に検査する。"""
     rnd = random.Random(5)
     x0, y0, x1, y1 = INNER
-    sizes = sorted([rnd.randint(90, 124) for _ in range(HARD["n"])], reverse=True)
-    odd_i = 6                                          # 大きさの順で7番目＝中くらいの大きさ（小さすぎて見えない・大きすぎて目立つ、を避ける）
+    sizes = sorted([rnd.randint(140, 170) for _ in range(HARD["n"])], reverse=True)
+    odd_i = 5                                          # 大きさの順で7番目＝中くらいの大きさ（小さすぎて見えない・大きすぎて目立つ、を避ける）
     placed = []
     for i, sz in enumerate(sizes):
-        rad = sz * 0.58
+        rad = sz * 0.52
         for _ in range(4000):
             cx = rnd.uniform(x0 + rad, x1 - rad); cy = rnd.uniform(y0 + rad, y1 - rad)
             if all(math.hypot(cx - px, cy - py) > rad + pr + 4 for _, px, py, _, _, pr in placed):
