@@ -355,6 +355,10 @@
    "だいがくいも"
   ],
   [
+   "湯のみ",
+   "ゆのみ"
+  ],
+  [
    "葉っぱ",
    "はっぱ"
   ],
@@ -377,10 +381,6 @@
   [
    "花びん",
    "かびん"
-  ],
-  [
-   "湯のみ",
-   "ゆのみ"
   ],
   [
    "新そば",
@@ -535,16 +535,8 @@
    "まえかけ"
   ],
   [
-   "お皿",
-   "おさら"
-  ],
-  [
-   "栗が",
-   "くりが"
-  ],
-  [
-   "2つ",
-   "ふたつ"
+   "増え",
+   "ふえ"
   ],
   [
    "紙袋",
@@ -793,10 +785,6 @@
   [
    "無く",
    "なく"
-  ],
-  [
-   "増え",
-   "ふえ"
   ],
   [
    "向い",
@@ -1402,18 +1390,19 @@
     },
     {
      "id": 3,
-     "type": "数",
-     "label": "栗が2つ",
-     "line": "お皿の栗が、2つになりました。",
-     "short_line": "栗が、2つに。",
+     "type": "増える",
+     "label": "湯のみが増える",
+     "line": "縁側に、湯のみがひとつ増えました。",
+     "short_line": "湯のみが、増えました。",
      "box": [
-      1380,
-      1125,
-      1700,
-      1290
+      1315,
+      1400,
+      1540,
+      1645
      ],
-     "object_w": 269,
-     "src": "3"
+     "object_w": 173,
+     "src": "p",
+     "context": "縁側でお茶を飲むとき、湯のみがもう1つ床に置いてあるのは普通"
     }
    ],
    "hint_diff": null,
@@ -1425,10 +1414,31 @@
    ],
    "edit_prompts": {
     "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small pot of chrysanthemum on the shelf at the upper left becomes blue (the flowers stay); (b) the red paper lantern becomes white; (c) the small teacup at the left becomes red; (d) the small dish of chestnuts becomes blue; (e) the folded cloth becomes red.",
-    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small teacup of green tea on the round tray becomes red.",
-    "3": "Edit this illustration and make exactly this change and nothing else. Keep the same thick outlines, colors and style. Do not move any object. Change: on the small blue-and-white dish of chestnuts at the right of the veranda, there are now only TWO chestnuts left (the other chestnuts are gone; the same dish, same size, same place; show the empty dish surface where they were)."
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small teacup of green tea on the round tray becomes red."
    },
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small pot of chrysanthemum on the shelf at the upper left becomes blue (the flowers stay); (b) the red paper lantern becomes white; (c) the small teacup at the left becomes red; (d) the small dish of chestnuts becomes blue; (e) the folded cloth becomes red."
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small pot of chrysanthemum on the shelf at the upper left becomes blue (the flowers stay); (b) the red paper lantern becomes white; (c) the small teacup at the left becomes red; (d) the small dish of chestnuts becomes blue; (e) the folded cloth becomes red.",
+   "program_ops": {
+    "p": [
+     {
+      "op": "copy",
+      "src": [
+       195,
+       1058,
+       382,
+       1255
+      ],
+      "mask": "outline",
+      "dst": [
+       1340,
+       1420
+      ],
+      "width": 173
+     }
+    ]
+   },
+   "program_edits": {
+    "p": "scripts/program_diffs.py"
+   }
   },
   {
    "q": 5,

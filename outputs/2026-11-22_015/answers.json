@@ -132,7 +132,7 @@
      "id": 3,
      "type": "色",
      "label": "柿の枝が緑",
-     "line": "柿の実と葉が、緑色になりました。",
+     "line": "柿の実と、葉っぱが、緑色になりました。",
      "box_px": [
       600,
       150,
@@ -454,7 +454,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 285,
+   "outside_box_pixels_diff_gt15": 253,
    "outside_box_max_distance_px": 8.0,
    "answers": [
     {
@@ -535,39 +535,39 @@
     },
     {
      "id": 3,
-     "type": "色",
-     "label": "お茶が赤",
-     "line": "お盆のお茶の色が、赤くなりました。",
+     "type": "増える",
+     "label": "湯のみが増える",
+     "line": "縁側に、湯のみがひとつ増えました。",
      "box_px": [
-      576,
-      1225,
-      748,
-      1295
+      1315,
+      1400,
+      1540,
+      1645
      ],
      "box_screen": [
-      298,
-      634,
-      387,
-      670
+      680,
+      724,
+      797,
+      851
      ],
      "circle_a_screen": [
-      298,
-      634,
-      387,
-      670
+      680,
+      724,
+      797,
+      851
      ],
      "circle_b_screen": [
-      298,
-      634,
-      387,
-      670
+      680,
+      724,
+      797,
+      851
      ],
-     "object_w_px": 172,
-     "object_picture_width_pct": 9.27,
-     "object_screen_width_pct": 4.63,
+     "object_w_px": 173,
+     "object_picture_width_pct": 9.32,
+     "object_screen_width_pct": 4.66,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "2",
+     "edit_version": "p",
      "made_by": "gemini",
      "note": ""
     }
