@@ -1,0 +1,1396 @@
+{
+ "episode": "022",
+ "season": "秋",
+ "topics": [
+  "きのこ狩りの里山"
+ ],
+ "note": "第21回（縁側のみかんと猫・冬）。公開日は未定（schedule.md 2026-11-22）。奇数の回：タイトルのみABテスト（サムネはB）。",
+ "youtube": {
+  "title": "【間違い探し】縁側のみかんと猫｜シニア・高齢者の脳トレ",
+  "description_file": "description.md",
+  "title_note": "32文字以内・【間違い探し】から。タイトルA（検索型）。3案は ab/titles.md",
+  "publish_plan": "未定（CEOが決める）"
+ },
+ "screens": {
+  "opening_title": "縁側のみかんと猫の間違い探し　全5問",
+  "opening_sub": "最後は難問です",
+  "unchiku_header": "こよみ先生の 冬の小話",
+  "unchiku_slides": [
+   {
+    "until": 7,
+    "texts": [
+     [
+      "ひと休み",
+      960,
+      330,
+      130,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "こよみ先生の 季節のお話",
+      960,
+      520,
+      80,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 15,
+    "texts": [
+     [
+      "みかんの白いすじは なに？",
+      960,
+      380,
+      100,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ]
+    ]
+   },
+   {
+    "until": 24,
+    "texts": [
+     [
+      "実に栄養を送る",
+      960,
+      330,
+      110,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "通り道の あとです",
+      960,
+      520,
+      100,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 30,
+    "texts": [
+     [
+      "白いすじは",
+      960,
+      330,
+      110,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "とらなくても だいじょうぶ",
+      960,
+      520,
+      90,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   }
+  ],
+  "ending_titles": [
+   [
+    "15個",
+    "みかん名人"
+   ],
+   [
+    "11〜14個",
+    "縁側の名探偵"
+   ],
+   [
+    "6〜10個",
+    "こたつの番人"
+   ],
+   [
+    "0〜5個",
+    "ひなたの猫さん"
+   ]
+  ],
+  "ending_note": "ひなたの猫さんも、毎日ためせば 名人です",
+  "ending_next": "ほかの間違い探しも どうぞ",
+  "owl_layout": "bottom",
+  "endscreen_at": 9.0,
+  "rule_overlay": {
+   "text": "右の絵で 違いを3つ さがそう",
+   "sub": "1問 90秒",
+   "sec": 8.0
+  }
+ },
+ "timeline": {
+  "total": 613.5,
+  "opening": [
+   0.0,
+   6.5
+  ],
+  "rule": [
+   6.5,
+   6.5
+  ],
+  "q_start": {
+   "1": 6.5,
+   "2": 114.5,
+   "3": 222.5,
+   "4": 360.5,
+   "5": 468.5
+  },
+  "unchiku": [
+   330.5,
+   360.5
+  ],
+  "ending": [
+   576.5,
+   613.5
+  ],
+  "card": 3.0,
+  "solve": 90.0,
+  "answer": 15.0,
+  "hint_at": null,
+  "ten_at": 80.0,
+  "ans_first": 1.6,
+  "ans_step": 4.3,
+  "solve_calls": [
+   [
+    30,
+    "あと60秒です。"
+   ],
+   [
+    60,
+    "あと30秒です。"
+   ]
+  ],
+  "go_delay": 1.8
+ },
+ "lines": {
+  "opening": [
+   {
+    "id": "op",
+    "at": 0.0,
+    "text": "みかんと猫の間違い探し、全5問。",
+    "face": "smile",
+    "until": 3.9
+   },
+   {
+    "id": "op2",
+    "at": 3.9,
+    "text": "最後は難問です。",
+    "face": "wink",
+    "until": 6.5
+   }
+  ],
+  "rule": [],
+  "unchiku": [
+   {
+    "id": "u1",
+    "at": 0.0,
+    "text": "ここでひと休み。こよみ先生の季節のお話です。",
+    "face": "smile",
+    "until": 7.0
+   },
+   {
+    "id": "u2",
+    "at": 7.0,
+    "text": "みかんの白いすじは、なんのためにあるのでしょう？",
+    "face": "think",
+    "until": 15.0
+   },
+   {
+    "id": "u3",
+    "at": 15.0,
+    "text": "答えは、実に栄養を送る、通り道のあとなんです。",
+    "face": "surprise",
+    "until": 24.0
+   },
+   {
+    "id": "u4",
+    "at": 24.0,
+    "text": "白いすじは、とらなくても大丈夫ですよ。",
+    "face": "wink",
+    "until": 30.0
+   }
+  ],
+  "ending": [
+   {
+    "id": "e1",
+    "at": 0.0,
+    "text": "これで5問、おしまいです。",
+    "face": "yay",
+    "until": 3.6
+   },
+   {
+    "id": "e2",
+    "at": 3.6,
+    "text": "15個の違い、いくつ見つかりましたか。今日の称号です。",
+    "face": "smile",
+    "until": 10.2
+   },
+   {
+    "id": "e3",
+    "at": 10.2,
+    "text": "チャンネル登録とベルで、毎朝8時半に問題が届きます。毎日の頭の体操にどうぞ。",
+    "face": "smile",
+    "until": 21.0
+   },
+   {
+    "id": "e4",
+    "at": 21.0,
+    "text": "ほかにも、いろいろな間違い探しがあります。もっと難しい問題に挑戦したい方は、画面の動画をクリックしてくださいね。",
+    "face": "wink",
+    "until": 36.0
+   }
+  ],
+  "extra": [
+   {
+    "id": "c_comment",
+    "at": 237.5,
+    "text": "見つかった数を、あとでコメントで教えてくださいね。",
+    "face": "smile",
+    "until": 244.5
+   }
+  ]
+ },
+ "readings": [
+  [
+   "縁側のみかんと猫",
+   "えんがわのみかんとねこ"
+  ],
+  [
+   "縁側のお茶の時間",
+   "えんがわのおちゃのじかん"
+  ],
+  [
+   "雪うさぎの耳の葉",
+   "ゆきうさぎのみみのは"
+  ],
+  [
+   "雪だるまと冬の朝",
+   "ゆきだるまとふゆのあさ"
+  ],
+  [
+   "こたつのみかん",
+   "こたつのみかん"
+  ],
+  [
+   "みかんの木の庭",
+   "みかんのきのにわ"
+  ],
+  [
+   "雪うさぎの縁側",
+   "ゆきうさぎのえんがわ"
+  ],
+  [
+   "縁側のひなた",
+   "えんがわのひなた"
+  ],
+  [
+   "みかん箱と猫",
+   "みかんばことねこ"
+  ],
+  [
+   "雪だるまの庭",
+   "ゆきだるまのにわ"
+  ],
+  [
+   "冬の朝の窓辺",
+   "ふゆのあさのまどべ"
+  ],
+  [
+   "時計の文字盤",
+   "とけいのもじばん"
+  ],
+  [
+   "雪だるまの鼻",
+   "ゆきだるまのはな"
+  ],
+  [
+   "間違い探し",
+   "まちがいさがし"
+  ],
+  [
+   "雪かきの道",
+   "ゆきかきのみち"
+  ],
+  [
+   "雪の玄関先",
+   "ゆきのげんかんさき"
+  ],
+  [
+   "麦わら帽子",
+   "むぎわらぼうし"
+  ],
+  [
+   "色えんぴつ",
+   "いろえんぴつ"
+  ],
+  [
+   "手ぶくろ",
+   "てぶくろ"
+  ],
+  [
+   "七味入れ",
+   "しちみいれ"
+  ],
+  [
+   "はし置き",
+   "はしおき"
+  ],
+  [
+   "赤とんぼ",
+   "あかとんぼ"
+  ],
+  [
+   "お月さま",
+   "おつきさま"
+  ],
+  [
+   "火ばさみ",
+   "ひばさみ"
+  ],
+  [
+   "赤いふた",
+   "あかいふた"
+  ],
+  [
+   "大学いも",
+   "だいがくいも"
+  ],
+  [
+   "茶わん",
+   "ちゃわん"
+  ],
+  [
+   "鉢植え",
+   "はちうえ"
+  ],
+  [
+   "丸ごと",
+   "まるごと"
+  ],
+  [
+   "通り道",
+   "とおりみち"
+  ],
+  [
+   "大丈夫",
+   "だいじょうぶ"
+  ],
+  [
+   "難しい",
+   "むずかしい"
+  ],
+  [
+   "段の上",
+   "だんのうえ"
+  ],
+  [
+   "雪の上",
+   "ゆきのうえ"
+  ],
+  [
+   "植木鉢",
+   "うえきばち"
+  ],
+  [
+   "花びん",
+   "かびん"
+  ],
+  [
+   "湯のみ",
+   "ゆのみ"
+  ],
+  [
+   "赤い実",
+   "あかいみ"
+  ],
+  [
+   "長いす",
+   "ながいす"
+  ],
+  [
+   "新そば",
+   "しんそば"
+  ],
+  [
+   "干し柿",
+   "ほしがき"
+  ],
+  [
+   "鉄びん",
+   "てつびん"
+  ],
+  [
+   "酉の市",
+   "とりのいち"
+  ],
+  [
+   "飛び石",
+   "とびいし"
+  ],
+  [
+   "掛け軸",
+   "かけじく"
+  ],
+  [
+   "切り株",
+   "きりかぶ"
+  ],
+  [
+   "石灯籠",
+   "いしどうろう"
+  ],
+  [
+   "少なく",
+   "すくなく"
+  ],
+  [
+   "向いて",
+   "むいて"
+  ],
+  [
+   "まん中",
+   "まんなか"
+  ],
+  [
+   "ゆで卵",
+   "ゆでたまご"
+  ],
+  [
+   "右はし",
+   "みぎはし"
+  ],
+  [
+   "茶色い",
+   "ちゃいろい"
+  ],
+  [
+   "花びら",
+   "はなびら"
+  ],
+  [
+   "土なべ",
+   "どなべ"
+  ],
+  [
+   "玉ねぎ",
+   "たまねぎ"
+  ],
+  [
+   "変わり",
+   "かわり"
+  ],
+  [
+   "落ち葉",
+   "おちば"
+  ],
+  [
+   "黄色い",
+   "きいろい"
+  ],
+  [
+   "大きく",
+   "おおきく"
+  ],
+  [
+   "舞って",
+   "まって"
+  ],
+  [
+   "葉っぱ",
+   "はっぱ"
+  ],
+  [
+   "魔法瓶",
+   "まほうびん"
+  ],
+  [
+   "小さな",
+   "ちいさな"
+  ],
+  [
+   "第1問",
+   "だいいちもん"
+  ],
+  [
+   "第2問",
+   "だいにもん"
+  ],
+  [
+   "第3問",
+   "だいさんもん"
+  ],
+  [
+   "第4問",
+   "だいよんもん"
+  ],
+  [
+   "第5問",
+   "だいごもん"
+  ],
+  [
+   "60秒",
+   "ろくじゅうびょう"
+  ],
+  [
+   "30秒",
+   "さんじゅうびょう"
+  ],
+  [
+   "10秒",
+   "じゅうびょう"
+  ],
+  [
+   "小さく",
+   "ちいさく"
+  ],
+  [
+   "取っ手",
+   "とって"
+  ],
+  [
+   "木の札",
+   "きのふだ"
+  ],
+  [
+   "大きな",
+   "おおきな"
+  ],
+  [
+   "前かけ",
+   "まえかけ"
+  ],
+  [
+   "時計",
+   "とけい"
+  ],
+  [
+   "お盆",
+   "おぼん"
+  ],
+  [
+   "栄養",
+   "えいよう"
+  ],
+  [
+   "登録",
+   "とうろく"
+  ],
+  [
+   "毎朝",
+   "まいあさ"
+  ],
+  [
+   "動画",
+   "どうが"
+  ],
+  [
+   "画面",
+   "がめん"
+  ],
+  [
+   "挑戦",
+   "ちょうせん"
+  ],
+  [
+   "違い",
+   "ちがい"
+  ],
+  [
+   "1羽",
+   "いちわ"
+  ],
+  [
+   "小鳥",
+   "ことり"
+  ],
+  [
+   "左の",
+   "ひだりの"
+  ],
+  [
+   "急須",
+   "きゅうす"
+  ],
+  [
+   "屋根",
+   "やね"
+  ],
+  [
+   "小屋",
+   "こや"
+  ],
+  [
+   "縁側",
+   "えんがわ"
+  ],
+  [
+   "朝市",
+   "あさいち"
+  ],
+  [
+   "お皿",
+   "おさら"
+  ],
+  [
+   "1匹",
+   "いっぴき"
+  ],
+  [
+   "お茶",
+   "おちゃ"
+  ],
+  [
+   "金色",
+   "きんいろ"
+  ],
+  [
+   "熊手",
+   "くまで"
+  ],
+  [
+   "飾り",
+   "かざり"
+  ],
+  [
+   "白く",
+   "しろく"
+  ],
+  [
+   "掛け",
+   "かけ"
+  ],
+  [
+   "漬物",
+   "つけもの"
+  ],
+  [
+   "軍手",
+   "ぐんて"
+  ],
+  [
+   "茶色",
+   "ちゃいろ"
+  ],
+  [
+   "風鈴",
+   "ふうりん"
+  ],
+  [
+   "黒板",
+   "こくばん"
+  ],
+  [
+   "反対",
+   "はんたい"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "黄色",
+   "きいろ"
+  ],
+  [
+   "赤く",
+   "あかく"
+  ],
+  [
+   "青く",
+   "あおく"
+  ],
+  [
+   "赤い",
+   "あかい"
+  ],
+  [
+   "筆箱",
+   "ふでばこ"
+  ],
+  [
+   "木箱",
+   "きばこ"
+  ],
+  [
+   "湯気",
+   "ゆげ"
+  ],
+  [
+   "紙袋",
+   "かみぶくろ"
+  ],
+  [
+   "消え",
+   "きえ"
+  ],
+  [
+   "付き",
+   "つき"
+  ],
+  [
+   "水筒",
+   "すいとう"
+  ],
+  [
+   "帽子",
+   "ぼうし"
+  ],
+  [
+   "上級",
+   "じょうきゅう"
+  ],
+  [
+   "中級",
+   "ちゅうきゅう"
+  ],
+  [
+   "初級",
+   "しょきゅう"
+  ],
+  [
+   "黒い",
+   "くろい"
+  ],
+  [
+   "一本",
+   "いっぽん"
+  ],
+  [
+   "高く",
+   "たかく"
+  ],
+  [
+   "短く",
+   "みじかく"
+  ],
+  [
+   "青い",
+   "あおい"
+  ],
+  [
+   "白い",
+   "しろい"
+  ],
+  [
+   "後半",
+   "こうはん"
+  ],
+  [
+   "最後",
+   "さいご"
+  ],
+  [
+   "難問",
+   "なんもん"
+  ],
+  [
+   "問題",
+   "もんだい"
+  ],
+  [
+   "答え",
+   "こたえ"
+  ],
+  [
+   "少し",
+   "すこし"
+  ],
+  [
+   "大根",
+   "だいこん"
+  ],
+  [
+   "小皿",
+   "こざら"
+  ],
+  [
+   "向き",
+   "むき"
+  ],
+  [
+   "一つ",
+   "ひとつ"
+  ],
+  [
+   "模様",
+   "もよう"
+  ],
+  [
+   "下駄",
+   "げた"
+  ],
+  [
+   "金属",
+   "きんぞく"
+  ],
+  [
+   "無く",
+   "なく"
+  ],
+  [
+   "増え",
+   "ふえ"
+  ],
+  [
+   "向い",
+   "むい"
+  ],
+  [
+   "金具",
+   "かなぐ"
+  ],
+  [
+   "一枚",
+   "いちまい"
+  ],
+  [
+   "真上",
+   "まうえ"
+  ],
+  [
+   "屋台",
+   "やたい"
+  ],
+  [
+   "銭湯",
+   "せんとう"
+  ],
+  [
+   "今日",
+   "きょう"
+  ],
+  [
+   "一緒",
+   "いっしょ"
+  ],
+  [
+   "山門",
+   "さんもん"
+  ],
+  [
+   "川辺",
+   "かわべ"
+  ],
+  [
+   "お面",
+   "おめん"
+  ],
+  [
+   "銀色",
+   "ぎんいろ"
+  ],
+  [
+   "丸い",
+   "まるい"
+  ],
+  [
+   "皮",
+   "かわ"
+  ],
+  [
+   "石",
+   "いし"
+  ],
+  [
+   "木",
+   "き"
+  ],
+  [
+   "庭",
+   "にわ"
+  ],
+  [
+   "猫",
+   "ねこ"
+  ],
+  [
+   "実",
+   "み"
+  ],
+  [
+   "番",
+   "ばん"
+  ],
+  [
+   "柱",
+   "はしら"
+  ],
+  [
+   "棚",
+   "たな"
+  ],
+  [
+   "鈴",
+   "すず"
+  ],
+  [
+   "菊",
+   "きく"
+  ],
+  [
+   "器",
+   "うつわ"
+  ],
+  [
+   "花",
+   "はな"
+  ],
+  [
+   "前",
+   "まえ"
+  ],
+  [
+   "笠",
+   "かさ"
+  ],
+  [
+   "鉢",
+   "はち"
+  ],
+  [
+   "柿",
+   "かき"
+  ],
+  [
+   "台",
+   "だい"
+  ],
+  [
+   "軒",
+   "のき"
+  ],
+  [
+   "鐘",
+   "かね"
+  ],
+  [
+   "竹",
+   "たけ"
+  ],
+  [
+   "枝",
+   "えだ"
+  ],
+  [
+   "絵",
+   "え"
+  ],
+  [
+   "上",
+   "うえ"
+  ],
+  [
+   "緑",
+   "みどり"
+  ],
+  [
+   "机",
+   "つくえ"
+  ],
+  [
+   "数",
+   "かず"
+  ],
+  [
+   "形",
+   "かたち"
+  ],
+  [
+   "先",
+   "さき"
+  ],
+  [
+   "下",
+   "した"
+  ],
+  [
+   "輪",
+   "わ"
+  ],
+  [
+   "針",
+   "はり"
+  ],
+  [
+   "牛",
+   "うし"
+  ],
+  [
+   "左",
+   "ひだり"
+  ],
+  [
+   "右",
+   "みぎ"
+  ],
+  [
+   "頭",
+   "あたま"
+  ],
+  [
+   "刃",
+   "は"
+  ],
+  [
+   "量",
+   "りょう"
+  ],
+  [
+   "苗",
+   "なえ"
+  ],
+  [
+   "丸",
+   "まる"
+  ],
+  [
+   "桶",
+   "おけ"
+  ],
+  [
+   "火",
+   "ひ"
+  ],
+  [
+   "葉",
+   "は"
+  ],
+  [
+   "色",
+   "いろ"
+  ],
+  [
+   "鍋",
+   "なべ"
+  ],
+  [
+   "畑",
+   "はたけ"
+  ],
+  [
+   "壁",
+   "かべ"
+  ],
+  [
+   "紋",
+   "もん"
+  ],
+  [
+   "星",
+   "ほし"
+  ],
+  [
+   "銀",
+   "ぎん"
+  ]
+ ],
+ "voice_override": {
+  "u1": "ここでひとやすみ。こよみせんせいの、きせつのおはなしです。",
+  "e1": "これでごもん、おしまいです。",
+  "e2": "じゅうごこのちがい、いくつみつかりましたか。きょうのしょうごうです。",
+  "e3": "チャンネルとうろくとベルで、まいあさはちじはんに、もんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。",
+  "c_comment": "みつかったかずを、あとでコメントでおしえてくださいね。",
+  "s_intro": "うえとしたのえで、ちがいがみっつあります。みつけられますか。",
+  "s_end": "いくつみつかったか、コメントでおしえてくださいね。ひだりしたから、つづきもどうぞ。",
+  "q1_go": "みぎのえのちがいを、みっつさがしてください。どうぞ。",
+  "q3_go": "つづいて、だいさんもん。どうぞ。",
+  "q5_go": "さいごのだいごもん、なんもんです。どうぞ。",
+  "op": "みかんとねこのまちがいさがし、ごもん。",
+  "op2": "さいごは、なんもんです。",
+  "u2": "みかんの、しろいすじは、なんのために、あるのでしょう？",
+  "u3": "こたえは、みに、えいようをおくる、とおりみちの、あとなんです。",
+  "u4": "しろいすじは、とらなくても、だいじょうぶですよ。",
+  "e4": "ほかにも、いろいろな、まちがいさがしがあります。もっとむずかしいもんだいに、ちょうせんしたいかたは、がめんのどうがを、クリックしてくださいね。",
+  "q4_card": "だい、よんもん、ちゅうきゅう。みかんのきのにわです。",
+  "q4_go": "だい、よんもん、じっくりどうぞ。"
+ },
+ "voice": {
+  "provider": "fish",
+  "reference_id": "63819275ce38440ea245ca988abf976e",
+  "model": "s1",
+  "speed": 0.88,
+  "credit": "音声：Fish Audio（AIで合成した音声です）"
+ },
+ "images": {
+  "model": "gemini-3-pro-image",
+  "size": "2K",
+  "aspect": "4:5",
+  "style": "A Japanese picture-book illustration in watercolor, but with BOLD, THICK, DARK ink outlines around every object (like a clear picture book for seniors), and CLEAR, SATURATED colors (not pale). Bright, clean background. Natural, hand-drawn, slightly rounded shapes; not geometric, not flat vector, not photorealistic. CLOSE-UP composition (not a wide landscape): the scene is seen from close, filling the picture. PORTRAIT-ISH composition, about 8:9. The painting fills the entire canvas edge to edge: no white border. No people. Absolutely no text, letters, numbers, logos or symbols anywhere. The MAIN SUBJECT named in the scene is drawn LARGE in the center of the picture. Around it, only a few other objects, each clearly separated with space around it, fully visible.\n",
+  "keep_alt": " Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text.",
+  "keep_remove": " Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object.",
+  "batch": true
+ },
+ "questions": [
+  {
+   "q": 1,
+   "scene": "里山の入り口",
+   "level": "やさしい",
+   "go": "",
+   "prompt": "Scene: close-up of the entrance of a sunny autumn satoyama (Japanese village woodland), a dirt path with fallen golden leaves, trees with yellow and orange leaves behind. CENTER, LARGE (main subject): a big round bamboo basket full of brown mushrooms (shiitake and shimeji, no red ones) standing on the path. Autumn only, clear sunny day: no Halloween, harvest-festival or other dated holiday items, no winter or summer items. Do not use much red: no bright red maple leaves, no red mushrooms; use golden yellow, orange, brown and green foliage, keep the light natural daylight and the whites ordinary white. Every listed object is fully visible and rests on the ground, floor, rock, stump, log, bench or shelf, or hangs from a branch or hook; nothing floats. No letters, labels or writing anywhere. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is about one fourteenth, VERY SMALL of the picture width, with plenty of empty space around it. Objects: (upper left, hanging from a tree branch by a string) a small wooden birdhouse; (upper right, on a tree stump) a small straw hat; (middle left, on the ground) a small pair of rubber boots; (middle right, on a flat rock) a small metal thermos bottle; (lower left, on the ground) a small wooden bucket; (lower right, on the ground) a small walking stick leaning against a rock.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompt": ""
+  },
+  {
+   "q": 2,
+   "scene": "切り株のきのこ",
+   "level": "初級",
+   "go": "",
+   "prompt": "Scene: close-up of a quiet autumn forest in a satoyama. CENTER (main subject, medium size, about one third of the picture width): a big mossy tree stump with a cluster of brown shiitake mushrooms growing on it and a fallen log beside it. Autumn only, clear sunny day: no Halloween, harvest-festival or other dated holiday items, no winter or summer items. Do not use much red: no bright red maple leaves, no red mushrooms; use golden yellow, orange, brown and green foliage, keep the light natural daylight and the whites ordinary white. Every listed object is fully visible and rests on the ground, floor, rock, stump, log, bench or shelf, or hangs from a branch or hook; nothing floats. No letters, labels or writing anywhere. Every listed object stands on the ground, a rock, a stump or a post with its base touching it and a natural cast shadow under it: no object hovers in the air. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object is SMALL: about one twelfth of the picture width, painted in the same style as the rest of the scene, with a natural shadow, no white outline and no sticker effect. Objects: (left, at 30% height) a small squirrel sitting on a mossy rock; (right, at 30% height) a small wicker basket of chestnuts on a flat rock; (left, at 50% height) a small stone lantern standing on the ground; (right, at 50% height) a small straw hat on top of a wooden post; (left, at 70% height) a small thermos bottle standing on a small tree stump; (right, at 70% height) a small wooden bucket on the ground.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompt": ""
+  },
+  {
+   "q": 3,
+   "scene": "里山の休けい所",
+   "level": "初級",
+   "go": "",
+   "prompt": "Scene: close-up of a rest spot in an autumn satoyama, golden trees behind. CENTER (main subject, medium size, about one third of the picture width): a wooden bench with a bamboo basket of mushrooms and a teapot with two cups on it, and an orange tabby cat sitting beside the basket on the bench. Autumn only, clear sunny day: no Halloween, harvest-festival or other dated holiday items, no winter or summer items. Do not use much red: no bright red maple leaves, no red mushrooms; use golden yellow, orange, brown and green foliage, keep the light natural daylight and the whites ordinary white. Every listed object is fully visible and rests on the ground, floor, rock, stump, log, bench or shelf, or hangs from a branch or hook; nothing floats. No letters, labels or writing anywhere. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object is SMALL: about one twelfth of the picture width, painted in the same style as the rest of the scene, with a natural shadow, no white outline and no sticker effect. Objects: (left, at 30% height) a small lantern hanging from a tree branch; (right, at 30% height) a small potted plant on a wooden post; (left, at 50% height) a small tin cup on a tree stump; (right, at 50% height) a small knitted cap on a flat rock; (left, at 70% height) a small folded cloth bag on the ground; (right, at 70% height) a small wooden stool on the ground.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompt": ""
+  },
+  {
+   "q": 4,
+   "scene": "栗の木の山道",
+   "level": "中級",
+   "go": "",
+   "prompt": "Scene: close-up of a sunny autumn mountain path covered with fallen leaves in a satoyama, a bamboo fence on the side. CENTER (main subject, medium size, about one quarter of the picture width): a big old chestnut tree with a few chestnut burrs on the ground and a ginger cat sitting on a stone under the tree. Autumn only, clear sunny day: no Halloween, harvest-festival or other dated holiday items, no winter or summer items. Do not use much red: no bright red maple leaves, no red mushrooms; use golden yellow, orange, brown and green foliage, keep the light natural daylight and the whites ordinary white. Every listed object is fully visible and rests on the ground, floor, rock, stump, log, bench or shelf, or hangs from a branch or hook; nothing floats. No letters, labels or writing anywhere. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 25% and 65% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object is SMALL: about one fifteenth of the picture width, painted in the same style as the rest of the scene, with a natural shadow, no white outline and no sticker effect. Objects: (left, at 30% height) a small stone fox statue on a mossy rock; (right, at 30% height) a small bell hanging from a branch of the tree; (left, at 45% height) a small teacup on a tree stump; (right, at 45% height) a small clay pot on the ground; (left, at 60% height) a small acorn with a leaf on the ground; (right, at 60% height) a small pair of garden gloves lying on a flat rock.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompt": ""
+  },
+  {
+   "q": 5,
+   "scene": "きのこの木箱と猫",
+   "level": "上級",
+   "go": "",
+   "prompt": "Scene: close-up of the forest floor of an autumn satoyama at the foot of a big tree with golden leaves, with a bamboo fence beyond. CENTER, LARGE (main subject): a wooden crate full of brown mushrooms with no label or writing, and a gray cat sitting on a cushion right beside the crate. Autumn only, clear sunny day: no Halloween, harvest-festival or other dated holiday items, no winter or summer items. Do not use much red: no bright red maple leaves, no red mushrooms; use golden yellow, orange, brown and green foliage, keep the light natural daylight and the whites ordinary white. Every listed object is fully visible and rests on the ground, floor, rock, stump, log, bench or shelf, or hangs from a branch or hook; nothing floats. No letters, labels or writing anywhere. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is painted in the same watercolor style as the rest of the scene with a natural cast shadow, with no white outline, no white halo and no sticker effect. Each listed object is about one sixteenth, VERY SMALL of the picture width, with plenty of empty space around it. Objects: (upper left, on a bamboo fence) a tiny sparrow; (upper right, hanging from a tree branch) a tiny bell; (middle left, on a tree stump) a tiny teacup; (middle right, on the ground) a tiny single acorn with a cap; (lower left, on a flat rock) a tiny pair of reading glasses; (lower right, on the ground) a tiny knitted sock.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompt": ""
+  }
+ ],
+ "thumbnail": {
+  "question": 1,
+  "big_text": "冬の間違いさがし",
+  "highlight": "間違いさがし",
+  "highlight_color": [
+   255,
+   214,
+   0
+  ],
+  "big_color": [
+   255,
+   255,
+   255
+  ],
+  "band_color": [
+   25,
+   35,
+   70
+  ],
+  "big_size": 132,
+  "sub_text": "3つ見つけられる？全5問",
+  "badges": [
+   [
+    "初級〜上級",
+    [
+     176,
+     62,
+     52
+    ]
+   ]
+  ],
+  "circle_hint": false,
+  "note": "ab/ の3案を使う（thumb_band.py）"
+ },
+ "shorts": [
+  {
+   "question": 2,
+   "answer_gap": 3.3,
+   "note": "1本目：第2問 こたつのみかん・初級",
+   "title": "シニアの間違い探し｜こたつのみかんの1問 #脳トレ #頭の体操",
+   "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
+   "end_veil": [
+    {
+     "at": 0,
+     "lines": [
+      [
+       "いくつ見つかった？",
+       120,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "コメントで教えてね",
+       104,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": false
+    },
+    {
+     "at": 3.8,
+     "lines": [
+      [
+       "続きは長い動画で",
+       116,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "左下をクリック",
+       128,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "question": 4,
+   "answer_gap": 3.3,
+   "note": "2本目：第4問 みかんの木の庭・中級",
+   "title": "シニアの間違い探し｜みかんの木の庭の1問 #脳トレ #頭の体操",
+   "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
+   "end_veil": [
+    {
+     "at": 0,
+     "lines": [
+      [
+       "いくつ見つかった？",
+       120,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "コメントで教えてね",
+       104,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": false
+    },
+    {
+     "at": 3.8,
+     "lines": [
+      [
+       "続きは長い動画で",
+       116,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "左下をクリック",
+       128,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": true
+    }
+   ]
+  }
+ ]
+}

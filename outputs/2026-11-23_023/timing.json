@@ -1,0 +1,38 @@
+{
+ "runs": [
+  {
+   "step": "絵",
+   "detail": "pictures base 1",
+   "sec": 29.3,
+   "at": "2026-11-23T11:04:58+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures base 5",
+   "sec": 30.6,
+   "at": "2026-11-23T11:05:00+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures base 2",
+   "sec": 30.8,
+   "at": "2026-11-23T11:05:00+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures base 4",
+   "sec": 32.1,
+   "at": "2026-11-23T11:05:01+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures base 3",
+   "sec": 36.4,
+   "at": "2026-11-23T11:05:06+00:00"
+  }
+ ],
+ "total_sec_by_step": {
+  "絵": 159.2
+ },
+ "total_sec_all": 159.2
+}
