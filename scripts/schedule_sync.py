@@ -6,6 +6,7 @@
   タブ「動画一覧」 A 動画ID / B 種類 / C 回 / D タイトル / E【入力】予定日 / F【入力】枠 / G 重複(式)
                    H YouTubeの状態 / I YouTubeの予約・公開時刻 / J 照合(式) / K Studioリンク / L キー(式・非表示)
   タブ「カレンダー」 今日から60日 × 8:30・14:30・18:30。動画一覧の入力から式で出す（プログラムを待たない）。
+  タブ「在庫」     予定日が空の非公開の動画を、種類ごとに式で並べる。
 
 決まり：
   - CEOが入力する E・F 列は絶対に書き換えない。例外は、タブを作った初回だけ、予約・公開済みの動画を YouTube の時刻で埋める。
@@ -37,7 +38,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from credentials import vertex_service_account  # noqa: E402
 
 CONF = Path(__file__).parent / "schedule_sheet.json"
-LIST, CAL = "動画一覧", "カレンダー"
+LIST, CAL, STOCK = "動画一覧", "カレンダー", "在庫"
 SLOTS = ["8:30", "14:30", "18:30"]
 JST = dt.timezone(dt.timedelta(hours=9))
 EPOCH = dt.datetime(1899, 12, 30, tzinfo=JST)  # スプレッドシートの日付の起点
@@ -182,7 +183,7 @@ def setup(sid, tok):
     meta = call(base + "?fields=sheets.properties", tok)
     have = {s["properties"]["title"]: s["properties"]["sheetId"] for s in meta["sheets"]}
     first = LIST not in have
-    add = [{"addSheet": {"properties": {"title": t}}} for t in (LIST, CAL) if t not in have]
+    add = [{"addSheet": {"properties": {"title": t}}} for t in (LIST, CAL, STOCK) if t not in have]
     if not add:
         return False
     if first:  # 日付・TODAY() を日本時間で計算させる
@@ -270,6 +271,24 @@ def setup(sid, tok):
         for c0, c1, w in [(0, 1, 90), (1, 4, 300)]:
             reqs.append({"updateDimensionProperties": {"range": {"sheetId": C, "dimension": "COLUMNS", "startIndex": c0,
                                                                  "endIndex": c1}, "properties": {"pixelSize": w}, "fields": "pixelSize"}})
+    if STOCK in [a["addSheet"]["properties"]["title"] for a in add if "addSheet" in a]:
+        S = have[STOCK]
+        q = f"'{LIST}'!"
+        cond = f"{q}$B$2:$B=A$1,{q}$E$2:$E=\"\",{q}$H$2:$H=\"非公開\""
+        vals.append({"range": f"'{STOCK}'!A1:D1", "values": [KINDS], "_raw": True})
+        vals.append({"range": f"'{STOCK}'!A2:D3", "values": [
+            [f'=IFERROR(ROWS(FILTER({q}$A$2:$A,{cond.replace("A$1", c + "$1")})),0)&"本"' for c in "ABCD"],
+            [f'=IFERROR(FILTER(IF({q}$C$2:$C="",{q}$D$2:$D,{q}$C$2:$C&"｜"&{q}$D$2:$D),{cond.replace("A$1", c + "$1")}),"（なし）")'
+             for c in "ABCD"]]})
+        reqs += [
+            {"updateSheetProperties": {"properties": {"sheetId": S, "gridProperties": {"frozenRowCount": 2}},
+                                       "fields": "gridProperties.frozenRowCount"}},
+            fmt(rng(S, 0, 2, 0, 4), {"textFormat": {"bold": True}, "backgroundColor": color("#E8EAED"),
+                                      "horizontalAlignment": "CENTER"},
+                "userEnteredFormat(textFormat,backgroundColor,horizontalAlignment)"),
+            {"updateDimensionProperties": {"range": {"sheetId": S, "dimension": "COLUMNS", "startIndex": 0, "endIndex": 4},
+                                           "properties": {"pixelSize": 330}, "fields": "pixelSize"}},
+        ]
     if reqs:
         call(base + ":batchUpdate", tok, {"requests": reqs})
     raw = [v for v in vals if v.pop("_raw", False)]
@@ -287,6 +306,8 @@ def sync(sid, tok, videos, first):
     cur = [r + [""] * (11 - len(r)) for r in cur]
     rows = {r[0]: i + 2 for i, r in enumerate(cur) if r[0]}
     eps = episode_map()
+    ep = lambda v: (eps.get(v["id"], "").replace("文字", "ちがう", 1) if kind(v) == "ちがうのどーれだ"
+                    else eps.get(v["id"], ""))
     data, added = [], 0
     put = lambda a1, vals: data.append({"range": f"'{LIST}'!{a1}", "values": [vals]})
     for vid, r in rows.items():  # 既存の行：自動の列だけ
@@ -296,7 +317,7 @@ def sync(sid, tok, videos, first):
             put(f"H{r}:I{r}", ["YouTubeになし", ""])
             continue
         st, t = state(v)
-        put(f"B{r}:D{r}", [old[1] or kind(v), old[2] or eps.get(vid, ""), v["snippet"]["title"]])
+        put(f"B{r}:D{r}", [old[1] or kind(v), old[2] or ep(v), v["snippet"]["title"]])
         put(f"H{r}:I{r}", [st, serial(t) if t else ""])
         put(f"K{r}", [f"https://studio.youtube.com/video/{vid}/edit"])
     new = [v for vid, v in videos.items() if vid not in rows]
@@ -307,7 +328,7 @@ def sync(sid, tok, videos, first):
         e = f = ""
         if first and t:  # 初回だけ：予約・公開済みを YouTube の時刻で埋める
             e, f = int(serial(t.replace(hour=0, minute=0, second=0, microsecond=0))), hm(t)
-        put(f"A{nxt}:F{nxt}", [v["id"], kind(v), eps.get(v["id"], ""), v["snippet"]["title"], e, f])
+        put(f"A{nxt}:F{nxt}", [v["id"], kind(v), ep(v), v["snippet"]["title"], e, f])
         put(f"H{nxt}:I{nxt}", [st, serial(t) if t else ""])
         put(f"K{nxt}", [f"https://studio.youtube.com/video/{v['id']}/edit"])
         nxt += 1
