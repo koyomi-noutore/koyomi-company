@@ -23,11 +23,17 @@
    "detail": "pictures batch edit 5",
    "sec": 29.9,
    "at": "2026-11-23T08:29:57+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit 1 2",
+   "sec": 35.1,
+   "at": "2026-11-23T08:33:10+00:00"
   }
  ],
  "total_sec_by_step": {
   "setup": 2.7,
-  "絵": 136.7
+  "絵": 171.8
  },
- "total_sec_all": 139.4
+ "total_sec_all": 174.5
 }
