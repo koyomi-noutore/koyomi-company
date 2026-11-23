@@ -540,32 +540,32 @@
      "line": "お皿のそばに、栗が2つ増えました。",
      "box_px": [
       1405,
-      1355,
-      1630,
-      1470
+      1345,
+      1640,
+      1485
      ],
      "box_screen": [
       727,
-      701,
-      843,
-      760
+      696,
+      848,
+      768
      ],
      "circle_a_screen": [
       727,
-      701,
-      843,
-      760
+      696,
+      848,
+      768
      ],
      "circle_b_screen": [
       727,
-      701,
-      843,
-      760
+      696,
+      848,
+      768
      ],
-     "object_w_px": 186,
-     "object_picture_width_pct": 10.02,
-     "object_screen_width_pct": 5.01,
-     "in_level_range": false,
+     "object_w_px": 182,
+     "object_picture_width_pct": 9.81,
+     "object_screen_width_pct": 4.9,
+     "in_level_range": true,
      "in_safe_y": true,
      "edit_version": "p",
      "made_by": "gemini",
