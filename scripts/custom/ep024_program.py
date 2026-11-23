@@ -29,10 +29,15 @@ crop = A.crop((region[0] + x0, region[1], region[0] + x1, region[3]))
 flipped = crop.transpose(Image.FLIP_LEFT_RIGHT)
 s = sil[:, x0:x1]
 sf = s[:, ::-1]
-union = ndi.binary_dilation(s | sf, iterations=3)
-alpha = Image.fromarray((union * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(2.5))
-out = Image.composite(flipped, crop, alpha)
+import cv2
+base = np.asarray(crop).copy()
+full = (ndi.binary_dilation(ndi.binary_dilation(s, iterations=10), iterations=1)).astype(np.uint8) * 255                # 元のアヒル全体を消して、まわりの床だけで埋める（黄色を引き込まない）
+hole = (ndi.binary_dilation(ndi.binary_dilation(s, iterations=10) & ~ndi.binary_erosion(sf, iterations=1), iterations=2)).astype(np.uint8) * 255          # そのうち、反転後のアヒルが覆わない所（くちばし・しっぽの跡）だけを使う
+filled = cv2.inpaint(np.ascontiguousarray(base), full, 9, cv2.INPAINT_TELEA)
+alpha = np.asarray(Image.fromarray((sf * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(0.8))).astype(float) / 255.0
+out = np.where(hole[..., None] > 0, filled, base).astype(float)
+out = out * (1 - alpha[..., None]) + np.asarray(flipped).astype(float) * alpha[..., None]
 E1 = A.copy()
-E1.paste(out, (region[0] + x0, region[1]))
+E1.paste(Image.fromarray(out.astype(np.uint8)), (region[0] + x0, region[1]))
 E1.save(work / "edit_1_duck.png")
 print("duck bbox", xs.min() + region[0], ys.min() + region[1], xs.max() + region[0], ys.max() + region[1])

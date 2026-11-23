@@ -1297,7 +1297,7 @@
   "q5_card": "ごもんめ、じょうきゅう。ばんだいと、ぎゅうにゅうです。",
   "q1_ans1": "ひだりの、こしかけが、あおくなりました。",
   "q1_ans2": "みぎうえの、おけが、なくなりました。",
-  "q1_ans3": "アヒルの、むきが、はんたいに、なりました。",
+  "q1_ans3": "アヒルが、ピンクに、なりました。",
   "q2_ans1": "ひだりの、うえきばちが、なくなりました。",
   "q2_ans2": "みぎの、マフラーの、しまが、あおくなりました。",
   "q2_ans3": "たなのまんなかの、かごが、タオルに、かわりました。",
@@ -1367,9 +1367,9 @@
     },
     {
      "id": 3,
-     "type": "向き",
-     "label": "アヒルの向き",
-     "line": "アヒルの向きが、反対になりました。",
+     "type": "色",
+     "label": "アヒルがピンク",
+     "line": "アヒルが、ピンクになりました。",
      "box": [
       1490,
       985,
@@ -1377,7 +1377,7 @@
       1260
      ],
      "object_w": 225,
-     "src": "duck"
+     "src": "2"
     }
    ],
    "hint_diff": null,
@@ -1388,8 +1388,8 @@
     2088
    ],
    "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small round wooden stool on the tile floor at the middle left becomes blue (the seat and the legs painted blue); (b) the small wooden bucket on the wooden wall shelf at the upper right is gone (show the plain empty wooden shelf); (c) the small yellow rubber duck on the right now faces the opposite direction (its beak points to the right instead of the left).",
-   "program_edits": {
-    "duck": "scripts/custom/ep024_program.py"
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. The change must be clearly visible. Do not move any object. Change: the small yellow rubber duck on the tile floor at the middle right becomes pink (same shape, same orange beak)."
    }
   },
   {

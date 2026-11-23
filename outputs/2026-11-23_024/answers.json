@@ -49,7 +49,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 157,
+   "outside_box_pixels_diff_gt15": 109,
    "outside_box_max_distance_px": 8.0,
    "answers": [
     {
@@ -162,7 +162,7 @@
      "object_screen_width_pct": 6.06,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "duck",
      "made_by": "gemini",
      "note": ""
     }
