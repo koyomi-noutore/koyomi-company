@@ -5,7 +5,7 @@
   絵の元（mikan_src.png）が無いときだけ画像APIを1回使う（Vertex 標準）。あれば作り直さない。
 流れ・音・こよみ先生・矢印は scripts/text_shorts.py の build をそのまま使う（KINDS・LINES に足すだけ）。
 """
-import math, random, sys, time
+import functools, math, random, sys, time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -30,9 +30,9 @@ def base(what, bg=T.CARD):
     """見出し（1行に収まる範囲で大きく）＋説明文2行（2026-11-23 CEO）。what＝字・みかん など。"""
     im = Image.new("RGB", (W, H), T.BG)
     d = ImageDraw.Draw(im)
-    T.text_c(d, (W // 2, 258), TITLE, T.fit(d, TITLE, 120, 900), (255, 255, 255))
-    for y, s_ in ((352, f"一つだけ違う{what}があるよ。"), (412, "見つけてみてね！")):
-        T.text_c(d, (W // 2, y), s_, T.fit(d, s_, 54, 860), T.ACCENT)
+    T.text_c(d, (W // 2, 272), TITLE, T.fit(d, TITLE, 120, 900), (255, 255, 255))
+    for y, s_ in ((347, f"一つだけ違う{what}があるよ。"), (396, "見つけてみてね！")):
+        T.text_c(d, (W // 2, y), s_, T.fit(d, s_, 46, 860), T.ACCENT)
     d.rounded_rectangle(PANEL, 40, fill=bg)
     return im, d
 
@@ -53,6 +53,7 @@ def glyph(ch, size, angle=0, weight="900Black"):
 EASY = {"main": "季", "odd": "李", "cols": 4, "rows": 5, "odd_at": (3, 1)}   # (行, 列)
 
 
+@functools.lru_cache(maxsize=None)   # コマごとに呼ばれるので、一度だけ計算する（hard の書き出しが500秒かかった反省）
 def layout_easy():
     rnd = random.Random(11)
     x0, y0, x1, y1 = INNER
@@ -78,24 +79,26 @@ def easy_frame(state, remain=None):
 
 # ---------- ② 漢字・むずかしい（大きさ・向きばらばら・字どうしは重ならない・末の中に未） ----------
 TILT = 120                                     # 向きの回転は±120度まで（2026-11-23 CEO。hard だけ）
-HARD = {"main": "末", "odd": "未", "n": 16, "weight": "700Bold"}   # 2026-11-23 監査1回目：太さを下げ、回転は±30度、最小90px
+HARD = {"key": "hard", "main": "末", "odd": "未", "n": 16, "weight": "700Bold", "size": (140, 170), "tilt": TILT, "seed": 5, "odd_i": 5}   # 2026-11-23 監査1回目：太さを下げ、回転は±30度、最小90px
 
 
-def layout_hard():
+@functools.lru_cache(maxsize=None)
+def _layout_scatter(key):
+    cfg = CFGS[key]
     """大きい字から順に、重ならない場所をさがして置く。重なりは、字を描いた実際の形（インク）で、置くたびに検査する（回転しても重ならない）。"""
     import numpy as np
     from PIL import ImageFilter
-    rnd = random.Random(5)
+    rnd = random.Random(cfg["seed"])
     x0, y0, x1, y1 = INNER
-    sizes = sorted([rnd.randint(140, 170) for _ in range(HARD["n"])], reverse=True)
-    odd_i = 5                                          # 大きさの順で6番目＝大きい方の字（小さすぎて見えない、を避ける）
+    sizes = sorted([rnd.randint(*cfg["size"]) for _ in range(cfg["n"])], reverse=True)
+    odd_i = cfg["odd_i"]                                          # 大きさの順で6番目＝大きい方の字（小さすぎて見えない、を避ける）
     occ = np.zeros((H, W), bool)
     placed = []
     for i, sz in enumerate(sizes):
-        ch = HARD["odd"] if i == odd_i else HARD["main"]
+        ch = cfg["odd"] if i == odd_i else cfg["main"]
         for _ in range(8000):
-            ang = rnd.randint(-TILT, TILT)
-            g = glyph(ch, sz, ang, HARD["weight"]).split()[3].point(lambda v: 255 if v > 30 else 0).filter(ImageFilter.MaxFilter(9))   # ふち4pxぶん太らせて、字どうしの間をあける
+            ang = rnd.randint(-cfg["tilt"], cfg["tilt"])
+            g = glyph(ch, sz, ang, cfg["weight"]).split()[3].point(lambda v: 255 if v > 30 else 0).filter(ImageFilter.MaxFilter(9))   # ふち4pxぶん太らせて、字どうしの間をあける
             bb = g.getbbox(); full = g.size[0]                  # 字の形の外枠だけにして、端まで使う
             g = g.crop(bb); gw, gh = g.size
             px = rnd.randint(x0, x1 - gw); py = rnd.randint(y0, y1 - gh)
@@ -107,6 +110,29 @@ def layout_hard():
         else:
             raise SystemExit(f"置ききれない（{i}個目）。個数か大きさを減らす")
     return placed
+
+
+def layout_scatter(cfg):
+    return _layout_scatter(cfg["key"])
+
+
+def layout_hard():
+    return layout_scatter(HARD)
+
+
+# ---------- ②b 漢字・ふつう（追加：大の中に犬。差は「ちょん」の点があるかどうかで、スマホでも見分けやすい） ----------
+FUTSU = {"key": "futsu", "main": "大", "odd": "犬", "n": 20, "weight": "700Bold", "size": (120, 150), "tilt": 60, "seed": 9, "odd_i": 6}
+CFGS = {"hard": HARD, "futsu": FUTSU}
+
+
+def futsu_frame(state, remain=None):
+    im, d = base("字")
+    for ch, cx, cy, sz, ang in layout_scatter(FUTSU):
+        g = glyph(ch, sz, ang, FUTSU["weight"])
+        im.paste(g, (int(cx - g.width / 2), int(cy - g.height / 2)), g)
+        if ch == FUTSU["odd"] and state:
+            circle(d, cx, cy, int(sz * 0.62))
+    return im
 
 
 def hard_frame(state, remain=None):
@@ -142,6 +168,52 @@ def mikan_pic():
     return im.resize((round(im.width * 150 / im.height), 150), Image.LANCZOS)
 
 
+MITTEN = {"cols": 3, "rows": 5, "odd_at": (1, 2)}
+MITTEN_PROMPT = ("A single red knitted winter mitten, front view, with a white snowflake pattern on the back of the hand and a thick white fluffy cuff, thumb pointing left, "
+                 "simple flat illustration, clean bold dark outlines, soft shading, centered, on a plain pure white background. No text, no letters, no ground shadow, nothing else in the picture.")
+SNOW_BOX = (425, 280, 705, 560)                 # 元の絵（1024px）の中の雪の結晶の場所。違い＝この模様があるか、ないか
+
+
+@functools.lru_cache(maxsize=None)
+def mitten_pics():
+    """冬の絵：赤い毛糸の手袋（画像API 1枚）。違う1つは、雪の結晶の模様を消したもの（プログラム）。"""
+    import numpy as np
+    from scipy.ndimage import distance_transform_edt
+    src = WORK / "mitten_src.png"
+    if not src.exists():
+        import gemini_image as G
+        G.generate(MITTEN_PROMPT, aspect="1:1", size="1K").save(src)
+    a = np.array(Image.open(src).convert("RGB"))
+    a[(a > 236).all(axis=2)] = 255
+    o = a.copy()
+    x0, y0, x1, y1 = SNOW_BOX
+    sub = o[y0:y1, x0:x1]
+    white = (sub > 200).all(axis=2)
+    idx = distance_transform_edt(white, return_distances=False, return_indices=True)   # 結晶の白い所を、いちばん近い赤で塗る
+    sub[:] = sub[idx[0], idx[1]]
+    bb = Image.fromarray(255 - a.min(axis=2)).point(lambda v: 255 if v > 40 else 0).getbbox()
+    out = []
+    for arr in (a, o):
+        im = Image.fromarray(arr).crop(bb)
+        out.append(im.resize((round(im.width * 150 / im.height), 150), Image.LANCZOS))
+    return out
+
+
+def mitten_frame(state, remain=None):
+    im, d = base("手袋", bg=(255, 255, 255))
+    pic, odd = mitten_pics()
+    x0, y0, x1, y1 = INNER
+    cw, ch = (x1 - x0) / MITTEN["cols"], (y1 - y0) / MITTEN["rows"]
+    for r in range(MITTEN["rows"]):
+        for c in range(MITTEN["cols"]):
+            p = odd if (r, c) == MITTEN["odd_at"] else pic
+            cx, cy = x0 + cw * (c + .5), y0 + ch * (r + .5)
+            im.paste(p, (int(cx - p.width / 2), int(cy - p.height / 2)))
+            if (r, c) == MITTEN["odd_at"] and state:
+                circle(d, cx, cy, 98)
+    return im
+
+
 def mikan_frame(state, remain=None):
     im, d = base("みかん", bg=(255, 255, 255))
     pic = mikan_pic(); odd = pic.transpose(Image.FLIP_LEFT_RIGHT)
@@ -167,6 +239,12 @@ T.LINES["hard"] = {"intro": ("違う漢字が、1つだけあります。どれ�
                    "ans": [("「年末」の『末』の中に、「未来」の『未』が、混ざっていました。", "ねんまつの、まつ、のなかに、みらいの、み、が、まざっていました。")]}
 T.LINES["mikan"] = {"intro": ("違うみかんが、1つだけあります。どれでしょう？", "ちがうみかんが、ひとつだけあります。どれでしょう？"),
                     "ans": [("葉っぱが反対向きの、みかんでした。", "はっぱが、はんたいむきの、みかんでした。")]}
+T.KINDS["futsu"] = ({"think": 18, "veil": [TITLE, "一つだけ違う字があるよ。", "見つけてみてね！"]}, futsu_frame, 1)
+T.KINDS["mitten"] = ({"think": 15, "veil": [TITLE, "一つだけ違う手袋があるよ。", "見つけてみてね！"]}, mitten_frame, 1)
+T.LINES["futsu"] = {"intro": ("違う漢字が、1つだけあります。どれでしょう？", "ちがうかんじが、ひとつだけあります。どれでしょう？"),
+                    "ans": [("「大小」の『大』の中に、「犬」の『犬』が、混ざっていました。", "だいしょうの、だい、のなかに、いぬの、いぬ、が、まざっていました。")]}
+T.LINES["mitten"] = {"intro": ("違う手袋が、1つだけあります。どれでしょう？", "ちがうてぶくろが、ひとつだけあります。どれでしょう？"),
+                     "ans": [("雪の結晶の模様が、ない手袋でした。", "ゆきの、けっしょうの、もようが、ないてぶくろでした。")]}
 ORDER = ["easy", "hard", "mikan"]
 
 
@@ -174,13 +252,13 @@ def check():
     """答えが1つだけ・字が重ならない・字が表示できる、を数値で確かめる（目で見る前に）。"""
     import numpy as np
     res = []
-    for name, lay, main, odd in (("easy", layout_easy(), EASY["main"], EASY["odd"]), ("hard", layout_hard(), HARD["main"], HARD["odd"])):
+    for name, lay, main, odd in (("easy", layout_easy(), EASY["main"], EASY["odd"]), ("hard", layout_hard(), HARD["main"], HARD["odd"]), ("futsu", layout_scatter(FUTSU), FUTSU["main"], FUTSU["odd"])):
         n_odd = sum(1 for c, *_ in lay if c == odd); kinds = {c for c, *_ in lay}
         res.append(f"{name}：字の数 {len(lay)}（{main}×{len(lay) - n_odd}、{odd}×{n_odd}）種類 {sorted(kinds)}  答え1つ：{'OK' if n_odd == 1 and kinds == {main, odd} else 'NG'}")
         # 重なり：字を1枚ずつ別の面に描いたインクどうしが触れていないか
         masks = []
         for ch, cx, cy, sz, ang in lay:
-            g = glyph(ch, sz, ang, HARD["weight"] if name == "hard" else "900Black").split()[3].point(lambda v: 255 if v > 30 else 0)
+            g = glyph(ch, sz, ang, CFGS[name]["weight"] if name in CFGS else "900Black").split()[3].point(lambda v: 255 if v > 30 else 0)
             m = Image.new("L", (W, H), 0); m.paste(g, (int(cx - g.width / 2), int(cy - g.height / 2))); masks.append(np.array(m) > 0)
         ov = sum(int((masks[i] & masks[j]).any()) for i in range(len(masks)) for j in range(i + 1, len(masks)))
         res.append(f"{name}：インクが重なる字の組 {ov}（0 が合格）")
@@ -192,6 +270,10 @@ def check():
     a = np.array(mikan_frame(0)); b = np.array(mikan_frame(1))
     pic = np.array(mikan_pic()); odd = pic[:, ::-1]
     res.append(f"mikan：反転で元と違う画素 {(pic != odd).any(axis=2).mean() * 100:.0f}%（違いが見える）／同じ絵14枚・違う絵1枚：構成どおり（台紙に貼る絵は2種類だけ）")
+    pic, odd = mitten_pics()
+    import numpy as np
+    diff = (np.array(pic).astype(int) != np.array(odd).astype(int)).any(axis=2)
+    res.append(f"mitten：元と違う画素 {diff.mean() * 100:.1f}%（雪の結晶の有無）。台紙に貼る絵は元14枚・違う1枚の2種類だけ")
     return res
 
 

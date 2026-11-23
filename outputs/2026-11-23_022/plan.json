@@ -1149,18 +1149,61 @@
   "style": "A Japanese picture-book illustration in watercolor, but with BOLD, THICK, DARK ink outlines around every object (like a clear picture book for seniors), and CLEAR, SATURATED colors (not pale). Bright, clean background. Natural, hand-drawn, slightly rounded shapes; not geometric, not flat vector, not photorealistic. CLOSE-UP composition (not a wide landscape): the scene is seen from close, filling the picture. PORTRAIT-ISH composition, about 8:9. The painting fills the entire canvas edge to edge: no white border. No people. Absolutely no text, letters, numbers, logos or symbols anywhere. The MAIN SUBJECT named in the scene is drawn LARGE in the center of the picture. Around it, only a few other objects, each clearly separated with space around it, fully visible.\n",
   "keep_alt": " Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text.",
   "keep_remove": " Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object.",
-  "batch": true
+  "batch": false
  },
  "questions": [
   {
    "q": 1,
    "scene": "里山の入り口",
    "level": "やさしい",
-   "go": "",
+   "go": "右の絵の違いを、3つ探してください。どうぞ。",
    "prompt": "Scene: close-up of the entrance of a sunny autumn satoyama (Japanese village woodland), a dirt path with fallen golden leaves, trees with yellow and orange leaves behind. CENTER, LARGE (main subject): a big round bamboo basket full of brown mushrooms (shiitake and shimeji, no red ones) standing on the path. Autumn only, clear sunny day: no Halloween, harvest-festival or other dated holiday items, no winter or summer items. Do not use much red: no bright red maple leaves, no red mushrooms; use golden yellow, orange, brown and green foliage, keep the light natural daylight and the whites ordinary white. Every listed object is fully visible and rests on the ground, floor, rock, stump, log, bench or shelf, or hangs from a branch or hook; nothing floats. No letters, labels or writing anywhere. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is about one fourteenth, VERY SMALL of the picture width, with plenty of empty space around it. Objects: (upper left, hanging from a tree branch by a string) a small wooden birdhouse; (upper right, on a tree stump) a small straw hat; (middle left, on the ground) a small pair of rubber boots; (middle right, on a flat rock) a small metal thermos bottle; (lower left, on the ground) a small wooden bucket; (lower right, on the ground) a small walking stick leaning against a rock.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "大きさ",
+     "label": "巣箱が小さい",
+     "line": "木にさげた巣箱が、小さくなりました。",
+     "box": [
+      250,
+      230,
+      600,
+      590
+     ],
+     "object_w": 310,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "帽子がない",
+     "line": "切り株の帽子が、なくなりました。",
+     "box": [
+      1400,
+      400,
+      1740,
+      640
+     ],
+     "object_w": 300,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "長靴が青",
+     "line": "左の長靴が、青くなりました。",
+     "box": [
+      80,
+      940,
+      410,
+      1290
+     ],
+     "object_w": 290,
+     "src": "1"
+    }
+   ],
    "hint_diff": null,
    "content_box": [
     0,
@@ -1168,17 +1211,63 @@
     1856,
     2088
    ],
-   "edit_prompt": ""
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small wooden birdhouse hanging from the rope at the upper left becomes much smaller, about half of its size, still hanging from the same rope at the same place; (b) the straw hat on the tree stump at the upper right is gone (show the bare top of the stump); (c) the pair of brown rubber boots on the ground at the left becomes blue.",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small wooden birdhouse hanging from the rope at the upper left becomes much smaller, about half of its size, still hanging from the same rope at the same place; (b) the straw hat on the tree stump at the upper right is gone (show the bare top of the stump); (c) the pair of brown rubber boots on the ground at the left becomes blue."
+   }
   },
   {
    "q": 2,
    "scene": "切り株のきのこ",
    "level": "初級",
-   "go": "",
+   "go": "では、第2問。どうぞ。",
    "prompt": "Scene: close-up of a quiet autumn forest in a satoyama. CENTER (main subject, medium size, about one third of the picture width): a big mossy tree stump with a cluster of brown shiitake mushrooms growing on it and a fallen log beside it. Autumn only, clear sunny day: no Halloween, harvest-festival or other dated holiday items, no winter or summer items. Do not use much red: no bright red maple leaves, no red mushrooms; use golden yellow, orange, brown and green foliage, keep the light natural daylight and the whites ordinary white. Every listed object is fully visible and rests on the ground, floor, rock, stump, log, bench or shelf, or hangs from a branch or hook; nothing floats. No letters, labels or writing anywhere. Every listed object stands on the ground, a rock, a stump or a post with its base touching it and a natural cast shadow under it: no object hovers in the air. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object is SMALL: about one twelfth of the picture width, painted in the same style as the rest of the scene, with a natural shadow, no white outline and no sticker effect. Objects: (left, at 30% height) a small squirrel sitting on a mossy rock; (right, at 30% height) a small wicker basket of chestnuts on a flat rock; (left, at 50% height) a small stone lantern standing on the ground; (right, at 50% height) a small straw hat on top of a wooden post; (left, at 70% height) a small thermos bottle standing on a small tree stump; (right, at 70% height) a small wooden bucket on the ground.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "大きさ",
+     "label": "灯籠が小さい",
+     "line": "石灯籠が、小さくなりました。",
+     "box": [
+      350,
+      300,
+      670,
+      900
+     ],
+     "object_w": 260,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "おけが緑",
+     "line": "右のおけが、緑色になりました。",
+     "box": [
+      1480,
+      730,
+      1750,
+      1020
+     ],
+     "object_w": 230,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "りすがいない",
+     "line": "岩の上のりすが、いなくなりました。",
+     "box": [
+      170,
+      1070,
+      420,
+      1310
+     ],
+     "object_w": 210,
+     "src": "1"
+    }
+   ],
    "hint_diff": null,
    "content_box": [
     0,
@@ -1186,17 +1275,63 @@
     1856,
     2088
    ],
-   "edit_prompt": ""
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the stone lantern at the upper left becomes smaller, about 60% of its size, still standing on the ground at the same place; (b) the wooden bucket on the ground at the right becomes green; (c) the small squirrel on the mossy rock at the left is gone (show the bare mossy top of the rock).",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the stone lantern at the upper left becomes smaller, about 60% of its size, still standing on the ground at the same place; (b) the wooden bucket on the ground at the right becomes green; (c) the small squirrel on the mossy rock at the left is gone (show the bare mossy top of the rock)."
+   }
   },
   {
    "q": 3,
    "scene": "里山の休けい所",
    "level": "初級",
-   "go": "",
+   "go": "続いて、第3問。どうぞ。",
    "prompt": "Scene: close-up of a rest spot in an autumn satoyama, golden trees behind. CENTER (main subject, medium size, about one third of the picture width): a wooden bench with a bamboo basket of mushrooms and a teapot with two cups on it, and an orange tabby cat sitting beside the basket on the bench. Autumn only, clear sunny day: no Halloween, harvest-festival or other dated holiday items, no winter or summer items. Do not use much red: no bright red maple leaves, no red mushrooms; use golden yellow, orange, brown and green foliage, keep the light natural daylight and the whites ordinary white. Every listed object is fully visible and rests on the ground, floor, rock, stump, log, bench or shelf, or hangs from a branch or hook; nothing floats. No letters, labels or writing anywhere. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object is SMALL: about one twelfth of the picture width, painted in the same style as the rest of the scene, with a natural shadow, no white outline and no sticker effect. Objects: (left, at 30% height) a small lantern hanging from a tree branch; (right, at 30% height) a small potted plant on a wooden post; (left, at 50% height) a small tin cup on a tree stump; (right, at 50% height) a small knitted cap on a flat rock; (left, at 70% height) a small folded cloth bag on the ground; (right, at 70% height) a small wooden stool on the ground.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "帽子がない",
+     "line": "岩の上の毛糸の帽子が、なくなりました。",
+     "box": [
+      1400,
+      250,
+      1660,
+      460
+     ],
+     "object_w": 220,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "植木鉢が青",
+     "line": "植木鉢が、青くなりました。",
+     "box": [
+      1510,
+      960,
+      1760,
+      1340
+     ],
+     "object_w": 210,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "向き",
+     "label": "急須の向き",
+     "line": "急須の向きが、反対になりました。",
+     "box": [
+      420,
+      1350,
+      700,
+      1590
+     ],
+     "object_w": 240,
+     "src": "1"
+    }
+   ],
    "hint_diff": null,
    "content_box": [
     0,
@@ -1204,17 +1339,76 @@
     1856,
     2088
    ],
-   "edit_prompt": ""
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the knitted cap on the mossy rock at the upper right is gone (show the bare mossy rock); (b) the clay pot of the potted plant on the wooden post at the right becomes blue (the plant stays); (c) the teapot on the bench is mirrored left to right so its spout points to the left instead of the right.",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the knitted cap on the mossy rock at the upper right is gone (show the bare mossy rock); (b) the clay pot of the potted plant on the wooden post at the right becomes blue (the plant stays); (c) the teapot on the bench is mirrored left to right so its spout points to the left instead of the right."
+   }
   },
   {
    "q": 4,
    "scene": "栗の木の山道",
    "level": "中級",
-   "go": "",
+   "go": "第4問です。じっくりどうぞ。",
    "prompt": "Scene: close-up of a sunny autumn mountain path covered with fallen leaves in a satoyama, a bamboo fence on the side. CENTER (main subject, medium size, about one quarter of the picture width): a big old chestnut tree with a few chestnut burrs on the ground and a ginger cat sitting on a stone under the tree. Autumn only, clear sunny day: no Halloween, harvest-festival or other dated holiday items, no winter or summer items. Do not use much red: no bright red maple leaves, no red mushrooms; use golden yellow, orange, brown and green foliage, keep the light natural daylight and the whites ordinary white. Every listed object is fully visible and rests on the ground, floor, rock, stump, log, bench or shelf, or hangs from a branch or hook; nothing floats. No letters, labels or writing anywhere. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 25% and 65% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object is SMALL: about one fifteenth of the picture width, painted in the same style as the rest of the scene, with a natural shadow, no white outline and no sticker effect. Objects: (left, at 30% height) a small stone fox statue on a mossy rock; (right, at 30% height) a small bell hanging from a branch of the tree; (left, at 45% height) a small teacup on a tree stump; (right, at 45% height) a small clay pot on the ground; (left, at 60% height) a small acorn with a leaf on the ground; (right, at 60% height) a small pair of garden gloves lying on a flat rock.",
    "answers_intro": "答えです。",
-   "retries": {},
-   "diffs": [],
+   "retries": {
+    "2": {
+     "crop": [
+      330,
+      1560,
+      830,
+      2060
+     ],
+     "aspect": "1:1",
+     "prompt": "Edit this picture: it shows two acorns with an oak leaf lying on the ground. Add exactly one more acorn of the same size and style lying on the ground next to them, so that there are three acorns in total. Keep the two original acorns, the oak leaf, the ground and everything else exactly the same, same outlines and colors. No text."
+    }
+   },
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "鐘が緑",
+     "line": "枝の鐘が、緑色になりました。",
+     "box": [
+      1380,
+      220,
+      1590,
+      540
+     ],
+     "object_w": 160,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "入れ替え",
+     "label": "きつねがうさぎ",
+     "line": "石のきつねが、うさぎに、変わりました。",
+     "box": [
+      190,
+      560,
+      470,
+      960
+     ],
+     "object_w": 200,
+     "src": "1",
+     "context": "里山の石像は、きつねでもうさぎでも自然（同じ岩の上、同じ置かれ方）"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "どんぐりが3つ",
+     "line": "どんぐりが、ふたつから、みっつに、ふえました。",
+     "box": [
+      370,
+      1640,
+      760,
+      1920
+     ],
+     "object_w": 190,
+     "src": "2",
+     "context": "木の下にどんぐりが落ちているのは自然（もう1つ近くに落ちているだけ）"
+    }
+   ],
    "hint_diff": null,
    "content_box": [
     0,
@@ -1222,17 +1416,65 @@
     1856,
     2088
    ],
-   "edit_prompt": ""
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the bronze bell hanging from the branch at the upper right becomes green; (b) the stone fox statue on the mossy rock at the left is replaced by a stone rabbit statue of the same size on the same rock (no red scarf); (c) on the ground at the lower left, a third acorn is added next to the two acorns.",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the bronze bell hanging from the branch at the upper right becomes green; (b) the stone fox statue on the mossy rock at the left is replaced by a stone rabbit statue of the same size on the same rock (no red scarf); (c) on the ground at the lower left, a third acorn is added next to the two acorns."
+   }
   },
   {
    "q": 5,
    "scene": "きのこの木箱と猫",
    "level": "上級",
-   "go": "",
+   "go": "最後の第5問、難問です。どうぞ。",
    "prompt": "Scene: close-up of the forest floor of an autumn satoyama at the foot of a big tree with golden leaves, with a bamboo fence beyond. CENTER, LARGE (main subject): a wooden crate full of brown mushrooms with no label or writing, and a gray cat sitting on a cushion right beside the crate. Autumn only, clear sunny day: no Halloween, harvest-festival or other dated holiday items, no winter or summer items. Do not use much red: no bright red maple leaves, no red mushrooms; use golden yellow, orange, brown and green foliage, keep the light natural daylight and the whites ordinary white. Every listed object is fully visible and rests on the ground, floor, rock, stump, log, bench or shelf, or hangs from a branch or hook; nothing floats. No letters, labels or writing anywhere. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is painted in the same watercolor style as the rest of the scene with a natural cast shadow, with no white outline, no white halo and no sticker effect. Each listed object is about one sixteenth, VERY SMALL of the picture width, with plenty of empty space around it. Objects: (upper left, on a bamboo fence) a tiny sparrow; (upper right, hanging from a tree branch) a tiny bell; (middle left, on a tree stump) a tiny teacup; (middle right, on the ground) a tiny single acorn with a cap; (lower left, on a flat rock) a tiny pair of reading glasses; (lower right, on the ground) a tiny knitted sock.",
    "answers_intro": "答えです。",
    "retries": {},
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "向き",
+     "label": "小鳥の向き",
+     "line": "小鳥の向きが、反対になりました。",
+     "box": [
+      120,
+      40,
+      430,
+      230
+     ],
+     "object_w": 210,
+     "src": "flip",
+     "note": "AIではなくプログラムで左右反転（同じ場所で向きだけ変える）"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "鐘が青",
+     "line": "枝の鐘が、青くなりました。",
+     "box": [
+      1460,
+      220,
+      1680,
+      500
+     ],
+     "object_w": 170,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "どんぐりが2つ",
+     "line": "どんぐりが、ひとつから、ふたつに、ふえました。",
+     "box": [
+      1560,
+      1180,
+      1856,
+      1350
+     ],
+     "object_w": 130,
+     "src": "1",
+     "context": "木の下にどんぐりが落ちているのは自然（もう1つ近くに落ちているだけ）"
+    }
+   ],
    "hint_diff": null,
    "content_box": [
     0,
@@ -1240,7 +1482,13 @@
     1856,
     2088
    ],
-   "edit_prompt": ""
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the sparrow on the fence at the upper left is mirrored left to right so it faces the other way, at the same place; (b) the bell hanging from the rope at the upper right becomes blue; (c) on the ground at the right, a second acorn with a cap is added right next to the single acorn.",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the sparrow on the fence at the upper left is mirrored left to right so it faces the other way, at the same place; (b) the bell hanging from the rope at the upper right becomes blue; (c) on the ground at the right, a second acorn with a cap is added right next to the single acorn."
+   },
+   "program_edits": {
+    "flip": "scripts/custom/ep022_flip_sparrow.py"
+   }
   }
  ],
  "thumbnail": {

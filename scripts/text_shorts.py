@@ -85,18 +85,26 @@ def pref_frame(state, remain=None):
     im = Image.new("RGB", (W, H), BG)
     d = ImageDraw.Draw(im)
     header(d, PREF["title"], PREF["sub"])
-    for i, (q, a) in enumerate(PREF["items"]):
+    for i, it in enumerate(PREF["items"]):
+        q, a = it[0], it[1]
+        label = it[2] if len(it) > 2 else None   # 2026-11-23：「宮城県の県庁所在地」のような見出し（なければ今までどおり）
         y = 640 + i * 270
         d.rounded_rectangle((X0 + 30, y - 120, X1 - 30, y + 120), 40, fill=CARD)
+        if label:
+            text_c(d, (W // 2, y - 80), label, fit(d, label, 46, 700), (90, 80, 70))
         shown = a if i < state else q
-        x = W // 2 - (len(shown) * 200) // 2 + 100
+        step = min(200, 740 // len(shown))
+        size = 170 if not label else min(150, step - 20)
+        cy = y if not label else y + 28
+        x = W // 2 - (len(shown) * step) // 2 + step // 2
         for k, ch in enumerate(shown):
-            cx = x + k * 200
+            cx = x + k * step
             if ch == "□":
-                d.rounded_rectangle((cx - 80, y - 80, cx + 80, y + 80), 16, outline=RED, width=10)
+                hb = size // 2 - 10
+                d.rounded_rectangle((cx - hb, cy - hb, cx + hb, cy + hb), 16, outline=RED, width=10)
             else:
                 hit = i < state and q[k] == "□"
-                text_c(d, (cx, y), ch, 170, RED if hit else INK)
+                text_c(d, (cx, cy), ch, size, RED if hit else INK)
     return im
 
 
@@ -232,19 +240,28 @@ def arrow(im, t):
     return im
 
 
+PROBLEM_ID = ""      # 問題ごとに声の保管場所を分ける（同じ種類の別の問題と上書きしない）
+
+
 def voice(kind, key, vt):
-    """声は Fish Audio（第12回と同じ こよみ先生の声・速さ）。同じ文はもう一度作らない。"""
-    import json, os, wave
-    vd = WORK / "voice"; vd.mkdir(parents=True, exist_ok=True)
+    """声は Fish Audio（第12回と同じ こよみ先生の声・速さ）。同じ文はもう一度作らない（別の問題で作った同じ文の声は使い回す）。"""
+    import hashlib, json, os, shutil, wave
+    vd = WORK / (f"voice_{PROBLEM_ID}" if PROBLEM_ID else "voice"); vd.mkdir(parents=True, exist_ok=True)
+    pool = WORK / "voice_pool"; pool.mkdir(parents=True, exist_ok=True)
     wav, meta = vd / f"{kind}_{key}.wav", vd / f"{kind}_{key}.json"
     from ep_timeline import BAD_SPLITS
     bad = [b for b in BAD_SPLITS if b in vt]
     if bad:   # 2026-11-22：「にはいる」が「には・いる」と読まれた。声を作る前に止める
         raise SystemExit(f"声に渡す文に {bad} がある（{kind}/{key}：{vt}）。「あてはまる」に言い換える")
     if not (wav.exists() and meta.exists() and json.loads(meta.read_text(encoding="utf-8"))["voice_text"] == vt):
-        os.environ.setdefault("KOYOMI_EPISODE_DIR", str(Path(__file__).resolve().parent.parent / "outputs/2026-11-23_012"))
-        import ep_voice as V
-        V.tts_line(vt, wav)
+        pw = pool / (hashlib.sha1(vt.encode("utf-8")).hexdigest()[:16] + ".wav")
+        if pw.exists():
+            shutil.copy(pw, wav)
+        else:
+            os.environ.setdefault("KOYOMI_EPISODE_DIR", str(Path(__file__).resolve().parent.parent / "outputs/2026-11-23_012"))
+            import ep_voice as V
+            V.tts_line(vt, wav)
+            shutil.copy(wav, pw)
         meta.write_text(json.dumps({"voice_text": vt}, ensure_ascii=False), encoding="utf-8")
     with wave.open(str(wav)) as w:
         return wav, w.getnframes() / w.getframerate()
@@ -337,15 +354,18 @@ def build(kind, out):
         dk = say(f"ans{k}", line) if line else 0
         last = k == n_ans
         seq.append((speaker(frame(k), "yay" if last else "smile", line[0] if line else L["ans"][0][0]), max(2.5, dk + 0.4) + (1.0 if last else 0))); t += seq[-1][1]
-    # 4. 最後：暗い幕＋「左下をクリック」と矢印（10コマ/秒で矢印を動かす）
+    # 4. 最後の2段（2026-11-23 CEO・共通）：①コメントの呼びかけ → ②「左下をクリック」＋矢印。共通の部品 scripts/short_outro.py を使う
     ev["end_at"] = t
-    dc = say("cta", CTA)
-    end = max(5.0, dc + 1.0)
-    base = veil(frame(n_ans), [("ほかの脳トレにも", 100, (255, 255, 255)), ("挑戦！", 110, (255, 255, 255)), ("左下をクリック", 120, ACCENT)])
-    base = speaker(base, "wink")
-    for i in range(int(end * 10)):
-        seq.append((arrow(base.copy(), i / 10), 0.1))
-    t += end
+    answer_img = seq[-1][0]
+    from short_outro import build_outro
+
+    def say_outro(key, line, off):
+        w, dur = voice(kind, key, line[1]); voices.append((w, t + off + 0.3, key, line)); return dur + 0.1
+
+    base = frame(n_ans)
+    outro, length = build_outro(base, say_outro, veil, speaker, arrow, comment="text")
+    seq.extend(outro)
+    t += length
     total = t
     tmp = out / f"_{kind}"; tmp.mkdir(parents=True, exist_ok=True)
     lst = []
@@ -359,10 +379,12 @@ def build(kind, out):
                     "-map", "0:v", "-map", "1:a", "-vf", f"fps={FPS},format=yuv420p",
                     "-c:v", "libx264", "-crf", "20", "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-t", f"{total:.2f}",
                     "-movflags", "+faststart", str(out / f"{kind}.mp4")], check=True)
-    idx = [0, 1, len(seq) - int(end * 10) - 1, len(seq) - 3]
-    S = Image.new("RGB", (4 * 270, 480))
-    for i, n in enumerate(idx):
-        S.paste(seq[n][0].resize((270, 480)), (i * 270, 0))
+    # 一覧画像：0:00・問題（考える時間）・答え・最後の2段（コメント／左下をクリック）
+    n_out = len(outro)
+    shots = [seq[0][0], seq[2][0], answer_img, outro[0][0], outro[n_out // 2][0]]
+    S = Image.new("RGB", (len(shots) * 270, 480))
+    for i, im_ in enumerate(shots):
+        S.paste(im_.resize((270, 480)), (i * 270, 0))
     S.save(out / f"{kind}_frames.jpg", quality=85)
     for p in tmp.iterdir():
         p.unlink()
@@ -370,7 +392,31 @@ def build(kind, out):
     return round(total, 1)
 
 
+def load_problem(path):
+    """問題の定義（problem.json）を読み、その種類の設定を差し替える。形は outputs/2026-11-23_text_004/problem.json を見る。"""
+    import json
+    global PROBLEM_ID
+    P = json.loads(Path(path).read_text(encoding="utf-8"))
+    kind = P["kind"]
+    PROBLEM_ID = P["id"]
+    cfg = KINDS[kind][0]
+    for k in ("title", "sub", "think", "veil", "across", "down", "answer", "word", "rows"):
+        if k in P:
+            cfg[k] = P[k]
+    if "items" in P:
+        cfg["items"] = [tuple(x) for x in P["items"]]
+    if "diffs" in P:
+        cfg["diffs"] = {(r, c): ch for r, c, ch in P["diffs"]}
+    LINES[kind] = {"intro": tuple(P["lines"]["intro"]), "ans": [tuple(x) for x in P["lines"]["ans"]]}
+    return kind
+
+
 if __name__ == "__main__":
     out = Path(sys.argv[1]).resolve(); out.mkdir(parents=True, exist_ok=True)
-    for k in (sys.argv[2:] or list(KINDS)):
+    args = sys.argv[2:]
+    if args and args[0].endswith(".json"):          # 問題の定義から作る：<出力フォルダ> <problem.json>
+        k = load_problem(args[0])
         print(k, build(k, out), "秒")
+    else:
+        for k in (args or list(KINDS)):
+            print(k, build(k, out), "秒")

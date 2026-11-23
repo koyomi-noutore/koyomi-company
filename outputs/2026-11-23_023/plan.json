@@ -1229,15 +1229,17 @@
     1856,
     2088
    ],
-   "edit_prompt": "",
-   "edit_prompts": {}
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the pair of yellow rubber boots on the gravel at the left becomes blue; (b) the small iron kettle on the big flat rock at the upper right is gone (show the plain flat rock top); (c) the woven bamboo basket hanging from the ginkgo branch at the upper left becomes about half of its size, still hanging from the same branch by its handle; (d) the folded picnic blanket at the lower left becomes blue-checked instead of green-checked; (e) the wooden bucket at the lower right is gone (show plain gravel).",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the pair of yellow rubber boots on the gravel at the left becomes blue; (b) the small iron kettle on the big flat rock at the upper right is gone (show the plain flat rock top); (c) the woven bamboo basket hanging from the ginkgo branch at the upper left becomes about half of its size, still hanging from the same branch by its handle; (d) the folded picnic blanket at the lower left becomes blue-checked instead of green-checked; (e) the wooden bucket at the lower right is gone (show plain gravel)."
+   }
   },
   {
    "q": 2,
    "scene": "川原の昼ごはん",
    "level": "初級",
    "go": "では、第2問。どうぞ。",
-   "prompt": "Scene: close-up of a sunny autumn riverside picnic spot in Japan, golden trees and a calm river behind, gravel and grass ground. CENTER (main subject, medium size, about one third of the picture width): a long wooden picnic table with a plain cloth, several wooden bowls of steaming taro stew on it and a stack of empty wooden bowls. Autumn only, sunny day: no Christmas, New Year's Eve or other dated holiday items, no summer items. Mostly yellow and orange autumn leaves, only a little red. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the ground, floor, table, rock, stump or hangs from a branch or hook; nothing floats. Each listed object is SMALL: about one sixteenth of the picture width. No letters, labels or writing anywhere. No people. Do not use much red: keep the light natural daylight and the whites ordinary white. Objects: (left, at 30% height, on a flat rock) a small iron kettle with a spout pointing to the left; (right, at 30% height, hanging from a branch) a small string of dried persimmons; (left, at 50% height, on the gravel) a small folding chair with a green seat; (right, at 50% height, on the gravel) a small white cooler box; (left, at 70% height, on the grass) a small wicker basket of chestnuts; (right, at 70% height, on the grass) a small pair of work gloves.",
+   "prompt": "Scene: close-up of a sunny autumn riverside picnic spot in Japan, golden trees and a calm river behind, the whole ground fully painted with gravel, grass tufts and fallen yellow leaves (no blank white paper areas anywhere). CENTER (main subject, medium size, about one third of the picture width): a long wooden picnic table with a plain cloth, several wooden bowls of steaming taro stew on it and a stack of empty wooden bowls. Autumn only, sunny day: no Christmas, New Year's Eve or other dated holiday items, no summer items. Mostly yellow and orange autumn leaves, only a little red. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the ground, floor, table, rock, stump or hangs from a branch or hook; nothing floats. Each listed object is SMALL: about one sixteenth of the picture width. No letters, labels or writing anywhere. No people. Do not use much red: keep the light natural daylight and the whites ordinary white. Objects: (left, at 30% height, on a flat rock) a small iron kettle with a spout pointing to the left; (right, at 30% height, hanging from a branch) a small string of dried persimmons; (left, at 50% height, on the gravel) a small folding chair with a green seat; (right, at 50% height, on the gravel) a small white cooler box; (left, at 70% height, on the grass) a small wicker basket of chestnuts; (right, at 70% height, on the grass) a small pair of work gloves.",
    "answers_intro": "答えです。",
    "retries": {},
    "diffs": [],
@@ -1248,8 +1250,10 @@
     1856,
     2088
    ],
-   "edit_prompt": "",
-   "edit_prompts": {}
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the white cooler box on the gravel at the right is mirrored left to right so that its carrying handle is on the left side instead of the right side; (b) of the pair of work gloves on the grass at the lower right, only the left-hand glove is gone (show plain grass) while the other glove stays exactly as it is; (c) the black iron kettle on the flat rock at the left becomes blue; (d) the green seat of the folding chair at the left becomes blue; (e) the wicker basket of chestnuts at the lower left is gone (show the grass).",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the white cooler box on the gravel at the right is mirrored left to right so that its carrying handle is on the left side instead of the right side; (b) of the pair of work gloves on the grass at the lower right, only the left-hand glove is gone (show plain grass) while the other glove stays exactly as it is; (c) the black iron kettle on the flat rock at the left becomes blue; (d) the green seat of the folding chair at the left becomes blue; (e) the wicker basket of chestnuts at the lower left is gone (show the grass)."
+   }
   },
   {
    "q": 3,
@@ -1267,8 +1271,10 @@
     1856,
     2088
    ],
-   "edit_prompt": "",
-   "edit_prompts": {}
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the green thermos flask on the tree stump at the left is gone (show the bare top of the stump); (b) the basket of chestnuts on the grass at the right becomes the same basket holding orange persimmons instead of chestnuts; (c) the metal tin cup hanging from the hook on the wooden post at the upper right becomes yellow (brass colored); (d) the teacup on the flat rock at the lower right is gone (show the bare rock).",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the green thermos flask on the tree stump at the left is gone (show the bare top of the stump); (b) the basket of chestnuts on the grass at the right becomes the same basket holding orange persimmons instead of chestnuts; (c) the metal tin cup hanging from the hook on the wooden post at the upper right becomes yellow (brass colored); (d) the teacup on the flat rock at the lower right is gone (show the bare rock)."
+   }
   },
   {
    "q": 4,
@@ -1286,8 +1292,10 @@
     1856,
     2088
    ],
-   "edit_prompt": "",
-   "edit_prompts": {}
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the wooden ladle lying on the mossy rock at the left is mirrored left to right so that its scoop points to the right and its handle points to the left, still resting on the rock; (b) the blue cloth bundle on the rock at the lower left changes from stripes to white polka dots on the same blue cloth; (c) the stack of three wooden bowls on the ground at the right becomes a stack of two bowls; (d) the teacup on the tree stump at the left is gone (show the bare top of the stump); (e) the hanging dried gourd becomes much smaller, still hanging from the same string.",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the wooden ladle lying on the mossy rock at the left is mirrored left to right so that its scoop points to the right and its handle points to the left, still resting on the rock; (b) the blue cloth bundle on the rock at the lower left changes from stripes to white polka dots on the same blue cloth; (c) the stack of three wooden bowls on the ground at the right becomes a stack of two bowls; (d) the teacup on the tree stump at the left is gone (show the bare top of the stump); (e) the hanging dried gourd becomes much smaller, still hanging from the same string."
+   }
   },
   {
    "q": 5,
@@ -1305,8 +1313,10 @@
     1856,
     2088
    ],
-   "edit_prompt": "",
-   "edit_prompts": {}
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny bamboo ladle hanging from the branch at the upper right is mirrored left to right so its scoop faces the other way; (b) the tiny wooden bowl on the flat rock at the left becomes blue; (c) the tiny single chestnut in its shell on the gravel at the right becomes two tiny chestnuts in their shells side by side; (d) the tiny sparrow on the branch at the upper left is mirrored left to right so it faces the other way; (e) the tiny wooden spoon on the picnic mat is gone (show the mat).",
+   "edit_prompts": {
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny bamboo ladle hanging from the branch at the upper right is mirrored left to right so its scoop faces the other way; (b) the tiny wooden bowl on the flat rock at the left becomes blue; (c) the tiny single chestnut in its shell on the gravel at the right becomes two tiny chestnuts in their shells side by side; (d) the tiny sparrow on the branch at the upper left is mirrored left to right so it faces the other way; (e) the tiny wooden spoon on the picnic mat is gone (show the mat)."
+   }
   }
  ],
  "thumbnail": {
