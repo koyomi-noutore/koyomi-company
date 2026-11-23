@@ -256,7 +256,7 @@ def draw_band(im, q, t, mode):
     d = ImageDraw.Draw(layer)
     col = LEVEL_COLOR[Q["level"]]
     d.rounded_rectangle((10, 7, 150, BAND_H - 7), 18, fill=col + (255,))
-    d.text((80, BAND_H // 2), f"第{q}問", font=font(34), fill=(255, 255, 255), anchor="mm")
+    d.text((80, BAND_H // 2), f"{q}問目", font=font(34), fill=(255, 255, 255), anchor="mm")
     d.text((168, BAND_H // 2), f"{Q['level']}　{Q['scene']}", font=font(34), fill=(255, 255, 255), anchor="lm")
     if mode == "solve":
         rem = max(0.0, T.SOLVE - (t - T.Q_START[q] - T.CARD))
@@ -383,7 +383,7 @@ def card_img(q):
     im = Image.new("RGB", (W, H), BG)
     d = ImageDraw.Draw(im)
     d.rounded_rectangle((340, 170, 1580, 850), 60, fill=(255, 250, 238), outline=col, width=16)
-    text_center(d, (960, 340), f"第{q}問", 190, fill=col)
+    text_center(d, (960, 340), f"{q}問目", 190, fill=col)
     text_center(d, (960, 550), f"{Q['level']}　{LEVEL_STARS[Q['level']]}", 120)
     text_center(d, (960, 730), Q["scene"], 120)
     return im
