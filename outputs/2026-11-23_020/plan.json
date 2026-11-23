@@ -283,6 +283,14 @@
  },
  "readings": [
   [
+   "四角く",
+   "しかく"
+  ],
+  [
+   "減り",
+   "へり"
+  ],
+  [
    "八百屋の店先",
    "やおやのみせさき"
   ],
@@ -1279,16 +1287,16 @@
     {
      "id": 1,
      "type": "形",
-     "label": "ちょうちんが細長い",
-     "line": "ちょうちんが、細長くなりました。",
+     "label": "ちょうちんが四角い",
+     "line": "ちょうちんが、四角くなりました。",
      "box": [
       100,
-      470,
-      400,
-      1050
+      540,
+      410,
+      885
      ],
-     "object_w": 245,
-     "src": "1"
+     "object_w": 270,
+     "src": "3"
     },
     {
      "id": 2,
@@ -1321,7 +1329,8 @@
    ],
    "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the cat sleeping on the cushion is gone (show only the empty cushion); (b) the round paper lantern hanging from the eave becomes a tall long cylindrical lantern; (c) the closed paper umbrella in the stand becomes blue; (d) the plate of three dumplings becomes two dumplings; (e) the clay pot of the green potted plant becomes blue.",
    "edit_prompts": {
-    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the brown teapot on the bench becomes a green teapot; (b) the small teacup next to the teapot becomes blue."
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the brown teapot on the bench becomes a green teapot; (b) the small teacup next to the teapot becomes blue.",
+    "3": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the round paper lantern hanging from the eave becomes a square box-shaped paper lantern with straight sides and flat top and bottom, keeping the same height and the same width as the round one (do not make it taller or longer), still hanging from the same place."
    }
   },
   {
@@ -1358,7 +1367,7 @@
      "id": 2,
      "type": "数",
      "label": "毛糸玉が1つ少ない",
-     "line": "棚の毛糸玉が、1つ少なくなりました。",
+     "line": "棚の毛糸玉が、1つ減りました。",
      "box": [
       1505,
       740,

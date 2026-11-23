@@ -198,7 +198,7 @@
    {
     "id": "op",
     "at": 0.0,
-    "text": "縁側のみかんと猫の間違い探し、全5問。",
+    "text": "みかんと猫の間違い探し、全5問。",
     "face": "smile",
     "until": 3.9
    },
@@ -283,32 +283,48 @@
  },
  "readings": [
   [
-   "1羽",
-   "いちわ"
+   "縁側のみかんと猫",
+   "えんがわのみかんとねこ"
   ],
   [
-   "雪かきの道",
-   "ゆきかきのみち"
+   "縁側のお茶の時間",
+   "えんがわのおちゃのじかん"
   ],
   [
-   "雪だるまの庭",
-   "ゆきだるまのにわ"
+   "雪うさぎの耳の葉",
+   "ゆきうさぎのみみのは"
   ],
   [
-   "雪の玄関先",
-   "ゆきのげんかんさき"
+   "雪だるまと冬の朝",
+   "ゆきだるまとふゆのあさ"
   ],
   [
-   "冬の朝の窓辺",
-   "ふゆのあさのまどべ"
+   "こたつのみかん",
+   "こたつのみかん"
+  ],
+  [
+   "みかんの木の庭",
+   "みかんのきのにわ"
   ],
   [
    "雪うさぎの縁側",
    "ゆきうさぎのえんがわ"
   ],
   [
-   "雪うさぎの耳の葉",
-   "ゆきうさぎのみみのは"
+   "縁側のひなた",
+   "えんがわのひなた"
+  ],
+  [
+   "みかん箱と猫",
+   "みかんばことねこ"
+  ],
+  [
+   "雪だるまの庭",
+   "ゆきだるまのにわ"
+  ],
+  [
+   "冬の朝の窓辺",
+   "ふゆのあさのまどべ"
   ],
   [
    "時計の文字盤",
@@ -319,16 +335,88 @@
    "ゆきだるまのはな"
   ],
   [
+   "間違い探し",
+   "まちがいさがし"
+  ],
+  [
+   "雪かきの道",
+   "ゆきかきのみち"
+  ],
+  [
+   "雪の玄関先",
+   "ゆきのげんかんさき"
+  ],
+  [
+   "麦わら帽子",
+   "むぎわらぼうし"
+  ],
+  [
+   "色えんぴつ",
+   "いろえんぴつ"
+  ],
+  [
+   "手ぶくろ",
+   "てぶくろ"
+  ],
+  [
+   "七味入れ",
+   "しちみいれ"
+  ],
+  [
+   "はし置き",
+   "はしおき"
+  ],
+  [
+   "赤とんぼ",
+   "あかとんぼ"
+  ],
+  [
+   "お月さま",
+   "おつきさま"
+  ],
+  [
+   "火ばさみ",
+   "ひばさみ"
+  ],
+  [
+   "赤いふた",
+   "あかいふた"
+  ],
+  [
+   "大学いも",
+   "だいがくいも"
+  ],
+  [
+   "茶わん",
+   "ちゃわん"
+  ],
+  [
+   "鉢植え",
+   "はちうえ"
+  ],
+  [
+   "丸ごと",
+   "まるごと"
+  ],
+  [
+   "通り道",
+   "とおりみち"
+  ],
+  [
+   "大丈夫",
+   "だいじょうぶ"
+  ],
+  [
+   "難しい",
+   "むずかしい"
+  ],
+  [
    "段の上",
    "だんのうえ"
   ],
   [
    "雪の上",
    "ゆきのうえ"
-  ],
-  [
-   "手ぶくろ",
-   "てぶくろ"
   ],
   [
    "植木鉢",
@@ -347,68 +435,8 @@
    "あかいみ"
   ],
   [
-   "小鳥",
-   "ことり"
-  ],
-  [
-   "左の",
-   "ひだりの"
-  ],
-  [
-   "柱",
-   "はしら"
-  ],
-  [
-   "雪だるまと冬の朝",
-   "ゆきだるまとふゆのあさ"
-  ],
-  [
-   "七味入れ",
-   "しちみいれ"
-  ],
-  [
    "長いす",
    "ながいす"
-  ],
-  [
-   "急須",
-   "きゅうす"
-  ],
-  [
-   "はし置き",
-   "はしおき"
-  ],
-  [
-   "屋根",
-   "やね"
-  ],
-  [
-   "小屋",
-   "こや"
-  ],
-  [
-   "棚",
-   "たな"
-  ],
-  [
-   "鈴",
-   "すず"
-  ],
-  [
-   "菊",
-   "きく"
-  ],
-  [
-   "器",
-   "うつわ"
-  ],
-  [
-   "花",
-   "はな"
-  ],
-  [
-   "前",
-   "まえ"
   ],
   [
    "新そば",
@@ -421,82 +449,6 @@
   [
    "鉄びん",
    "てつびん"
-  ],
-  [
-   "縁側",
-   "えんがわ"
-  ],
-  [
-   "朝市",
-   "あさいち"
-  ],
-  [
-   "お皿",
-   "おさら"
-  ],
-  [
-   "笠",
-   "かさ"
-  ],
-  [
-   "鉢",
-   "はち"
-  ],
-  [
-   "柿",
-   "かき"
-  ],
-  [
-   "台",
-   "だい"
-  ],
-  [
-   "軒",
-   "のき"
-  ],
-  [
-   "赤とんぼ",
-   "あかとんぼ"
-  ],
-  [
-   "1匹",
-   "いっぴき"
-  ],
-  [
-   "お茶",
-   "おちゃ"
-  ],
-  [
-   "金色",
-   "きんいろ"
-  ],
-  [
-   "鐘",
-   "かね"
-  ],
-  [
-   "麦わら帽子",
-   "むぎわらぼうし"
-  ],
-  [
-   "色えんぴつ",
-   "いろえんぴつ"
-  ],
-  [
-   "お月さま",
-   "おつきさま"
-  ],
-  [
-   "火ばさみ",
-   "ひばさみ"
-  ],
-  [
-   "赤いふた",
-   "あかいふた"
-  ],
-  [
-   "大学いも",
-   "だいがくいも"
   ],
   [
    "酉の市",
@@ -587,14 +539,6 @@
    "ちいさな"
   ],
   [
-   "少なく",
-   "すくなく"
-  ],
-  [
-   "向いて",
-   "むいて"
-  ],
-  [
    "第1問",
    "だいいちもん"
   ],
@@ -633,6 +577,102 @@
   [
    "取っ手",
    "とって"
+  ],
+  [
+   "木の札",
+   "きのふだ"
+  ],
+  [
+   "大きな",
+   "おおきな"
+  ],
+  [
+   "前かけ",
+   "まえかけ"
+  ],
+  [
+   "時計",
+   "とけい"
+  ],
+  [
+   "お盆",
+   "おぼん"
+  ],
+  [
+   "栄養",
+   "えいよう"
+  ],
+  [
+   "登録",
+   "とうろく"
+  ],
+  [
+   "毎朝",
+   "まいあさ"
+  ],
+  [
+   "動画",
+   "どうが"
+  ],
+  [
+   "画面",
+   "がめん"
+  ],
+  [
+   "挑戦",
+   "ちょうせん"
+  ],
+  [
+   "違い",
+   "ちがい"
+  ],
+  [
+   "1羽",
+   "いちわ"
+  ],
+  [
+   "小鳥",
+   "ことり"
+  ],
+  [
+   "左の",
+   "ひだりの"
+  ],
+  [
+   "急須",
+   "きゅうす"
+  ],
+  [
+   "屋根",
+   "やね"
+  ],
+  [
+   "小屋",
+   "こや"
+  ],
+  [
+   "縁側",
+   "えんがわ"
+  ],
+  [
+   "朝市",
+   "あさいち"
+  ],
+  [
+   "お皿",
+   "おさら"
+  ],
+  [
+   "1匹",
+   "いっぴき"
+  ],
+  [
+   "お茶",
+   "おちゃ"
+  ],
+  [
+   "金色",
+   "きんいろ"
   ],
   [
    "熊手",
@@ -691,10 +731,6 @@
    "あおく"
   ],
   [
-   "赤く",
-   "あかく"
-  ],
-  [
    "赤い",
    "あかい"
   ],
@@ -743,10 +779,6 @@
    "しょきゅう"
   ],
   [
-   "白く",
-   "しろく"
-  ],
-  [
    "黒い",
    "くろい"
   ],
@@ -761,14 +793,6 @@
   [
    "短く",
    "みじかく"
-  ],
-  [
-   "黄色",
-   "きいろ"
-  ],
-  [
-   "片方",
-   "かたほう"
   ],
   [
    "青い",
@@ -813,10 +837,6 @@
   [
    "向き",
    "むき"
-  ],
-  [
-   "反対",
-   "はんたい"
   ],
   [
    "一つ",
@@ -883,6 +903,98 @@
    "かわべ"
   ],
   [
+   "お面",
+   "おめん"
+  ],
+  [
+   "銀色",
+   "ぎんいろ"
+  ],
+  [
+   "丸い",
+   "まるい"
+  ],
+  [
+   "皮",
+   "かわ"
+  ],
+  [
+   "石",
+   "いし"
+  ],
+  [
+   "木",
+   "き"
+  ],
+  [
+   "庭",
+   "にわ"
+  ],
+  [
+   "猫",
+   "ねこ"
+  ],
+  [
+   "実",
+   "み"
+  ],
+  [
+   "番",
+   "ばん"
+  ],
+  [
+   "柱",
+   "はしら"
+  ],
+  [
+   "棚",
+   "たな"
+  ],
+  [
+   "鈴",
+   "すず"
+  ],
+  [
+   "菊",
+   "きく"
+  ],
+  [
+   "器",
+   "うつわ"
+  ],
+  [
+   "花",
+   "はな"
+  ],
+  [
+   "前",
+   "まえ"
+  ],
+  [
+   "笠",
+   "かさ"
+  ],
+  [
+   "鉢",
+   "はち"
+  ],
+  [
+   "柿",
+   "かき"
+  ],
+  [
+   "台",
+   "だい"
+  ],
+  [
+   "軒",
+   "のき"
+  ],
+  [
+   "鐘",
+   "かね"
+  ],
+  [
    "竹",
    "たけ"
   ],
@@ -917,14 +1029,6 @@
   [
    "先",
    "さき"
-  ],
-  [
-   "数",
-   "かず"
-  ],
-  [
-   "上",
-   "うえ"
   ],
   [
    "下",
@@ -983,10 +1087,6 @@
    "は"
   ],
   [
-   "緑",
-   "みどり"
-  ],
-  [
    "色",
    "いろ"
   ],
@@ -997,34 +1097,6 @@
   [
    "畑",
    "はたけ"
-  ],
-  [
-   "絵",
-   "え"
-  ],
-  [
-   "木の札",
-   "きのふだ"
-  ],
-  [
-   "お面",
-   "おめん"
-  ],
-  [
-   "大きな",
-   "おおきな"
-  ],
-  [
-   "銀色",
-   "ぎんいろ"
-  ],
-  [
-   "前かけ",
-   "まえかけ"
-  ],
-  [
-   "丸い",
-   "まるい"
   ],
   [
    "壁",
@@ -1054,7 +1126,7 @@
   "q1_go": "みぎのえのちがいを、みっつさがしてください。どうぞ。",
   "q3_go": "つづいて、だいさんもん。どうぞ。",
   "q5_go": "さいごのだいごもん、なんもんです。どうぞ。",
-  "op": "えんがわのみかんとねこの、まちがいさがし、ぜんごもん。",
+  "op": "みかんとねこのまちがいさがし、ごもん。",
   "op2": "さいごは、なんもんです。",
   "u2": "みかんの、しろいすじは、なんのために、あるのでしょう？",
   "u3": "こたえは、みに、えいようをおくる、とおりみちの、あとなんです。",
@@ -1090,43 +1162,43 @@
     {
      "id": 1,
      "type": "色",
-     "label": "x",
-     "line": "x",
+     "label": "スリッパが青",
+     "line": "左のスリッパが、青くなりました。",
      "box": [
-      0,
-      0,
-      10,
-      10
+      100,
+      1115,
+      435,
+      1320
      ],
-     "object_w": 200,
+     "object_w": 285,
      "src": "1"
     },
     {
      "id": 2,
-     "type": "色",
-     "label": "x",
-     "line": "x",
+     "type": "なくなる",
+     "label": "やかんがない",
+     "line": "右のやかんが、なくなりました。",
      "box": [
-      0,
-      0,
-      10,
-      10
+      1480,
+      860,
+      1790,
+      1185
      ],
-     "object_w": 200,
+     "object_w": 245,
      "src": "1"
     },
     {
      "id": 3,
-     "type": "色",
-     "label": "x",
-     "line": "x",
+     "type": "大きさ",
+     "label": "植木が小さい",
+     "line": "棚の鉢植えが、小さくなりました。",
      "box": [
-      0,
-      0,
-      10,
-      10
+      1480,
+      130,
+      1790,
+      445
      ],
-     "object_w": 200,
+     "object_w": 266,
      "src": "1"
     }
    ],
@@ -1153,44 +1225,44 @@
    "diffs": [
     {
      "id": 1,
-     "type": "色",
-     "label": "x",
-     "line": "x",
+     "type": "なくなる",
+     "label": "時計がない",
+     "line": "棚の時計が、なくなりました。",
      "box": [
-      0,
-      0,
-      10,
-      10
+      110,
+      340,
+      400,
+      590
      ],
-     "object_w": 200,
+     "object_w": 233,
      "src": "1"
     },
     {
      "id": 2,
-     "type": "色",
-     "label": "x",
-     "line": "x",
+     "type": "向き",
+     "label": "急須の向き",
+     "line": "急須の向きが、反対になりました。",
      "box": [
-      0,
-      0,
-      10,
-      10
+      1390,
+      780,
+      1790,
+      1085
      ],
-     "object_w": 200,
+     "object_w": 245,
      "src": "1"
     },
     {
      "id": 3,
      "type": "色",
-     "label": "x",
-     "line": "x",
+     "label": "スリッパが緑",
+     "line": "片方のスリッパが、緑色になりました。",
      "box": [
-      0,
-      0,
-      10,
-      10
+      1470,
+      1455,
+      1775,
+      1600
      ],
-     "object_w": 200,
+     "object_w": 255,
      "src": "1"
     }
    ],
@@ -1218,44 +1290,45 @@
     {
      "id": 1,
      "type": "色",
-     "label": "x",
-     "line": "x",
+     "label": "植木鉢が青",
+     "line": "植木鉢が、青くなりました。",
      "box": [
-      0,
-      0,
-      10,
-      10
+      115,
+      490,
+      375,
+      730
      ],
-     "object_w": 200,
+     "object_w": 213,
      "src": "1"
     },
     {
      "id": 2,
-     "type": "色",
-     "label": "x",
-     "line": "x",
+     "type": "なくなる",
+     "label": "めがねがない",
+     "line": "お盆の上のめがねが、なくなりました。",
      "box": [
-      0,
-      0,
-      10,
-      10
+      270,
+      1330,
+      530,
+      1510
      ],
-     "object_w": 200,
+     "object_w": 182,
      "src": "1"
     },
     {
      "id": 3,
-     "type": "色",
-     "label": "x",
-     "line": "x",
+     "type": "入れ替え",
+     "label": "器がみかんに",
+     "line": "皮の器が、みかんに、変わりました。",
      "box": [
-      0,
-      0,
-      10,
-      10
+      1600,
+      880,
+      1812,
+      1110
      ],
-     "object_w": 200,
-     "src": "1"
+     "object_w": 170,
+     "src": "1",
+     "context": "縁側のおやつの時間。皮をむいたみかんの器のそばで、丸ごとのみかんを器に盛っておくのは自然"
     }
    ],
    "hint_diff": null,
@@ -1275,63 +1348,64 @@
    "scene": "みかんの木の庭",
    "level": "中級",
    "go": "第4問です。じっくりどうぞ。",
-   "prompt": "Scene: close-up of a sunny winter Japanese garden seen from the veranda, a bamboo fence, bare ground with a few stepping stones. CENTER (main subject, medium size, about one quarter of the picture width): a small mandarin tree full of ripe orange mandarins, and a ginger cat sitting on a stepping stone under the tree. Winter only, cold sunny day: no Christmas, New Year's Eve or other dated holiday items, no summer items. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 70% of the picture height (never at the very top or near the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the ground, rock, shelf or fence post, or hangs from a branch; nothing floats. Each listed object is TINY: only about one twentieth of the picture width (like a small coin next to the tree), much smaller than the tree and the cat. No letters, labels or writing anywhere. The cat has a natural relaxed posture: its whole body rests on the stone, four legs and one tail, normal cat anatomy. Do not use much red: keep the light natural daylight and the whites ordinary white. Objects: (left, at 30% height) a tiny sparrow on a bamboo fence post; (right, at 30% height) a tiny wooden bird feeder hanging from a branch of the tree; (left, at 45% height) a tiny stone rabbit statue on a rock; (right, at 45% height) a tiny watering can on the ground; (left, at 62% height) a tiny stone water basin with a bamboo ladle on the ground; (right, at 62% height) a tiny pair of wooden garden clogs on the ground.",
+   "prompt": "Scene: close-up of a sunny winter Japanese garden seen from the veranda, a bamboo fence, bare ground with a few stepping stones. CENTER (main subject, medium size, about one quarter of the picture width): a small mandarin tree full of ripe orange mandarins, and a ginger cat sitting on a stepping stone under the tree. Winter only, cold sunny day: no Christmas, New Year's Eve or other dated holiday items, no summer items. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 25% and 65% of the picture height (never at the very top or near the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests naturally in the garden scene on the ground, a rock, a stump or a fence post, or hangs from a branch, with a natural shadow, painted in the same style as the rest of the scene, with no white outline and no sticker effect; nothing floats. Each listed object is SMALL: only about one fifteenth of the picture width. No letters, labels or writing anywhere. The cat has a natural relaxed posture: its whole body rests on the stone, four legs and one tail, normal cat anatomy. Do not use much red: keep the light natural daylight and the whites ordinary white. Objects: (left, at 30% height) a small stone rabbit statue on a mossy rock; (right, at 30% height) a small iron bell hanging from a branch of the tree; (left, at 45% height) a small teacup on a tree stump; (right, at 45% height) a small clay flowerpot on the ground; (left, at 60% height) a small mandarin with a green leaf on the ground; (right, at 60% height) a small pair of garden gloves lying on a flat rock.",
    "answers_intro": "答えです。",
    "retries": {},
    "diffs": [
     {
      "id": 1,
-     "type": "色",
-     "label": "x",
-     "line": "x",
+     "type": "入れ替え",
+     "label": "うさぎがふくろう",
+     "line": "石のうさぎが、ふくろうに、変わりました。",
      "box": [
-      0,
-      0,
-      10,
-      10
+      180,
+      460,
+      380,
+      800
      ],
-     "object_w": 200,
-     "src": "1"
+     "object_w": 155,
+     "src": "1",
+     "context": "庭石の上の石像は、うさぎでもふくろうでも庭にありそうで自然（置かれ方は同じ）"
     },
     {
      "id": 2,
-     "type": "色",
-     "label": "x",
-     "line": "x",
+     "type": "なくなる",
+     "label": "茶わんがない",
+     "line": "切り株の茶わんが、なくなりました。",
      "box": [
-      0,
-      0,
-      10,
-      10
+      175,
+      1130,
+      375,
+      1320
      ],
-     "object_w": 200,
+     "object_w": 155,
      "src": "1"
     },
     {
      "id": 3,
      "type": "色",
-     "label": "x",
-     "line": "x",
+     "label": "鈴が金色",
+     "line": "枝の鈴が、金色になりました。",
      "box": [
-      0,
-      0,
-      10,
-      10
+      1430,
+      420,
+      1620,
+      820
      ],
-     "object_w": 200,
+     "object_w": 144,
      "src": "1"
     }
    ],
    "hint_diff": null,
    "content_box": [
-    0,
-    0,
-    1856,
-    2088
+    160,
+    110,
+    1740,
+    1888
    ],
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the roof of the small wooden bird feeder hanging from the branch becomes green; (b) the small stone rabbit statue on the rock at the left is replaced by a small stone owl statue of the same size on the same rock; (c) the small watering can on the ground at the right is mirrored left to right so its spout points the other way; (d) the small sparrow on the fence post at the left is gone (show the bare post); (e) the pair of small wooden clogs at the lower right is gone.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small stone rabbit statue on the mossy rock at the left is replaced by a small stone owl statue of the same size on the same rock; (b) the small teacup on the tree stump at the left is gone (show the bare top of the stump); (c) the small iron bell hanging from the branch at the right becomes golden yellow; (d) the small mandarin with a leaf on the ground at the lower left is gone (show the bare ground).",
    "edit_prompts": {
-    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the roof of the small wooden bird feeder hanging from the branch becomes green; (b) the small stone rabbit statue on the rock at the left is replaced by a small stone owl statue of the same size on the same rock; (c) the small watering can on the ground at the right is mirrored left to right so its spout points the other way; (d) the small sparrow on the fence post at the left is gone (show the bare post); (e) the pair of small wooden clogs at the lower right is gone."
+    "1": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small stone rabbit statue on the mossy rock at the left is replaced by a small stone owl statue of the same size on the same rock; (b) the small teacup on the tree stump at the left is gone (show the bare top of the stump); (c) the small iron bell hanging from the branch at the right becomes golden yellow; (d) the small mandarin with a leaf on the ground at the lower left is gone (show the bare ground)."
    }
   },
   {
@@ -1345,44 +1419,44 @@
    "diffs": [
     {
      "id": 1,
-     "type": "色",
-     "label": "x",
-     "line": "x",
+     "type": "向き",
+     "label": "小鳥の向き",
+     "line": "小鳥の向きが、反対になりました。",
      "box": [
-      0,
-      0,
-      10,
-      10
+      260,
+      150,
+      690,
+      340
      ],
-     "object_w": 200,
+     "object_w": 170,
      "src": "1"
     },
     {
      "id": 2,
      "type": "色",
-     "label": "x",
-     "line": "x",
+     "label": "湯のみが緑",
+     "line": "湯のみが、緑色になりました。",
      "box": [
-      0,
-      0,
-      10,
-      10
+      95,
+      1215,
+      295,
+      1460
      ],
-     "object_w": 200,
+     "object_w": 145,
      "src": "1"
     },
     {
      "id": 3,
-     "type": "色",
-     "label": "x",
-     "line": "x",
+     "type": "数",
+     "label": "みかんが2つ",
+     "line": "みかんが、ひとつから、ふたつに、ふえました。",
      "box": [
-      0,
-      0,
-      10,
-      10
+      1385,
+      1030,
+      1745,
+      1245
      ],
-     "object_w": 200,
+     "object_w": 155,
      "src": "1"
     }
    ],
