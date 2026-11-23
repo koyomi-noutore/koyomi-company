@@ -1,0 +1,712 @@
+{
+ "screen": {
+  "size": [
+   1920,
+   1080
+  ],
+  "picture_size_on_screen": [
+   960,
+   1080
+  ],
+  "safe_y_on_screen": [
+   54,
+   918
+  ],
+  "level_range_pct_of_screen_width": {
+   "やさしい": [
+    6.0,
+    8.0
+   ],
+   "初級": [
+    5.0,
+    6.0
+   ],
+   "中級": [
+    4.0,
+    5.0
+   ],
+   "上級": [
+    3.0,
+    4.0
+   ]
+  }
+ },
+ "note": "box_px・circle_px は 8:9 に切り抜いた高解像度の絵（qN_a.png、1856×2088）のピクセル。content_px はそのうち画面に出す範囲（白いふちを除いた8:9）。*_screen は画面の上での座標（右の絵は x に960を足す）。object_screen_width_pct は、変わる物そのものの幅を画面幅で割った値（難易度の基準）。object_picture_width_pct は片方の絵の幅で割った値（参考）。",
+ "questions": [
+  {
+   "q": 1,
+   "scene": "湯船と富士山",
+   "level": "やさしい",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 157,
+   "outside_box_max_distance_px": 8.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "腰かけが青",
+     "line": "左の腰かけが、青くなりました。",
+     "box_px": [
+      75,
+      955,
+      420,
+      1275
+     ],
+     "box_screen": [
+      39,
+      494,
+      217,
+      659
+     ],
+     "circle_a_screen": [
+      39,
+      494,
+      217,
+      659
+     ],
+     "circle_b_screen": [
+      39,
+      494,
+      217,
+      659
+     ],
+     "object_w_px": 270,
+     "object_picture_width_pct": 14.55,
+     "object_screen_width_pct": 7.27,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "おけがない",
+     "line": "右上のおけが、なくなりました。",
+     "box_px": [
+      1435,
+      105,
+      1760,
+      305
+     ],
+     "box_screen": [
+      742,
+      54,
+      910,
+      158
+     ],
+     "circle_a_screen": [
+      742,
+      54,
+      910,
+      158
+     ],
+     "circle_b_screen": [
+      742,
+      54,
+      910,
+      158
+     ],
+     "object_w_px": 240,
+     "object_picture_width_pct": 12.93,
+     "object_screen_width_pct": 6.47,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "向き",
+     "label": "アヒルの向き",
+     "line": "アヒルの向きが、反対になりました。",
+     "box_px": [
+      1490,
+      985,
+      1790,
+      1260
+     ],
+     "box_screen": [
+      771,
+      509,
+      926,
+      652
+     ],
+     "circle_a_screen": [
+      771,
+      509,
+      926,
+      652
+     ],
+     "circle_b_screen": [
+      771,
+      509,
+      926,
+      652
+     ],
+     "object_w_px": 225,
+     "object_picture_width_pct": 12.12,
+     "object_screen_width_pct": 6.06,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 2,
+   "scene": "冬の脱衣所",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 25,
+   "outside_box_max_distance_px": 5.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "植木鉢がない",
+     "line": "左の植木鉢が、なくなりました。",
+     "box_px": [
+      60,
+      565,
+      420,
+      950
+     ],
+     "box_screen": [
+      31,
+      292,
+      217,
+      491
+     ],
+     "circle_a_screen": [
+      31,
+      292,
+      217,
+      491
+     ],
+     "circle_b_screen": [
+      31,
+      292,
+      217,
+      491
+     ],
+     "object_w_px": 275,
+     "object_picture_width_pct": 14.82,
+     "object_screen_width_pct": 7.41,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "マフラーのしまが青",
+     "line": "右のマフラーのしまが、青くなりました。",
+     "box_px": [
+      1500,
+      545,
+      1750,
+      1050
+     ],
+     "box_screen": [
+      776,
+      282,
+      905,
+      543
+     ],
+     "circle_a_screen": [
+      776,
+      282,
+      905,
+      543
+     ],
+     "circle_b_screen": [
+      776,
+      282,
+      905,
+      543
+     ],
+     "object_w_px": 213,
+     "object_picture_width_pct": 11.48,
+     "object_screen_width_pct": 5.74,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "入れ替え",
+     "label": "かごがタオルに",
+     "line": "棚の真ん中のかごが、タオルに変わりました。",
+     "box_px": [
+      815,
+      775,
+      1085,
+      1085
+     ],
+     "box_screen": [
+      422,
+      401,
+      561,
+      561
+     ],
+     "circle_a_screen": [
+      422,
+      401,
+      561,
+      561
+     ],
+     "circle_b_screen": [
+      422,
+      401,
+      561,
+      561
+     ],
+     "object_w_px": 190,
+     "object_picture_width_pct": 10.24,
+     "object_screen_width_pct": 5.12,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 3,
+   "scene": "玄関の下駄箱",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 81,
+   "outside_box_max_distance_px": 5.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "かさが黄色",
+     "line": "左のかさが、黄色くなりました。",
+     "box_px": [
+      395,
+      855,
+      570,
+      1460
+     ],
+     "box_screen": [
+      204,
+      442,
+      295,
+      755
+     ],
+     "circle_a_screen": [
+      204,
+      442,
+      295,
+      755
+     ],
+     "circle_b_screen": [
+      204,
+      442,
+      295,
+      755
+     ],
+     "object_w_px": 110,
+     "object_picture_width_pct": 5.93,
+     "object_screen_width_pct": 2.96,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "水仙の花がピンク",
+     "line": "水仙の花が、ピンクになりました。",
+     "box_px": [
+      1395,
+      550,
+      1730,
+      965
+     ],
+     "box_screen": [
+      722,
+      284,
+      895,
+      499
+     ],
+     "circle_a_screen": [
+      722,
+      284,
+      895,
+      499
+     ],
+     "circle_b_screen": [
+      722,
+      284,
+      895,
+      499
+     ],
+     "object_w_px": 230,
+     "object_picture_width_pct": 12.39,
+     "object_screen_width_pct": 6.2,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "2",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "入れ替え",
+     "label": "みかんが青りんごに",
+     "line": "かごの中が、みかんから青りんごに変わりました。",
+     "box_px": [
+      1380,
+      1330,
+      1730,
+      1630
+     ],
+     "box_screen": [
+      714,
+      688,
+      895,
+      843
+     ],
+     "circle_a_screen": [
+      714,
+      688,
+      895,
+      843
+     ],
+     "circle_b_screen": [
+      714,
+      688,
+      895,
+      843
+     ],
+     "object_w_px": 240,
+     "object_picture_width_pct": 12.93,
+     "object_screen_width_pct": 6.47,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 4,
+   "scene": "ゆげの洗い場",
+   "level": "中級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 10,
+   "outside_box_max_distance_px": 6.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "ポンプびんがない",
+     "line": "左のポンプびんが、なくなりました。",
+     "box_px": [
+      135,
+      755,
+      345,
+      1100
+     ],
+     "box_screen": [
+      70,
+      391,
+      178,
+      569
+     ],
+     "circle_a_screen": [
+      70,
+      391,
+      178,
+      569
+     ],
+     "circle_b_screen": [
+      70,
+      391,
+      178,
+      569
+     ],
+     "object_w_px": 128,
+     "object_picture_width_pct": 6.9,
+     "object_screen_width_pct": 3.45,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "向き",
+     "label": "ブラシの向き",
+     "line": "ブラシの向きが、反対になりました。",
+     "box_px": [
+      85,
+      1340,
+      675,
+      1665
+     ],
+     "box_screen": [
+      44,
+      693,
+      349,
+      861
+     ],
+     "circle_a_screen": [
+      44,
+      693,
+      349,
+      861
+     ],
+     "circle_b_screen": [
+      44,
+      693,
+      349,
+      861
+     ],
+     "object_w_px": 440,
+     "object_picture_width_pct": 23.71,
+     "object_screen_width_pct": 11.85,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "本数",
+     "label": "タオルの線が2本に",
+     "line": "タオルの青い線が、3本から2本になりました。",
+     "box_px": [
+      1455,
+      630,
+      1750,
+      1250
+     ],
+     "box_screen": [
+      753,
+      326,
+      905,
+      647
+     ],
+     "circle_a_screen": [
+      753,
+      326,
+      905,
+      647
+     ],
+     "circle_b_screen": [
+      753,
+      326,
+      905,
+      647
+     ],
+     "object_w_px": 205,
+     "object_picture_width_pct": 11.05,
+     "object_screen_width_pct": 5.52,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 5,
+   "scene": "番台と牛乳",
+   "level": "上級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 208,
+   "outside_box_max_distance_px": 10.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "湯のみの線が緑",
+     "line": "湯のみの青い線が、緑になりました。",
+     "box_px": [
+      420,
+      830,
+      610,
+      1010
+     ],
+     "box_screen": [
+      217,
+      429,
+      316,
+      522
+     ],
+     "circle_a_screen": [
+      217,
+      429,
+      316,
+      522
+     ],
+     "circle_b_screen": [
+      217,
+      429,
+      316,
+      522
+     ],
+     "object_w_px": 135,
+     "object_picture_width_pct": 7.27,
+     "object_screen_width_pct": 3.64,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "牛乳びんがない",
+     "line": "冷蔵庫のびんが、1本なくなりました。",
+     "box_px": [
+      1165,
+      725,
+      1305,
+      990
+     ],
+     "box_screen": [
+      603,
+      375,
+      675,
+      512
+     ],
+     "circle_a_screen": [
+      603,
+      375,
+      675,
+      512
+     ],
+     "circle_b_screen": [
+      603,
+      375,
+      675,
+      512
+     ],
+     "object_w_px": 90,
+     "object_picture_width_pct": 4.85,
+     "object_screen_width_pct": 2.42,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "牛乳が茶色",
+     "line": "下の段のびんが、茶色になりました。",
+     "box_px": [
+      1400,
+      1340,
+      1545,
+      1610
+     ],
+     "box_screen": [
+      724,
+      693,
+      799,
+      833
+     ],
+     "circle_a_screen": [
+      724,
+      693,
+      799,
+      833
+     ],
+     "circle_b_screen": [
+      724,
+      693,
+      799,
+      833
+     ],
+     "object_w_px": 85,
+     "object_picture_width_pct": 4.58,
+     "object_screen_width_pct": 2.29,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  }
+ ]
+}

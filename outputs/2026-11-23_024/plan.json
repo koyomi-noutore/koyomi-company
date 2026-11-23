@@ -1,0 +1,1795 @@
+{
+ "episode": "024",
+ "season": "冬",
+ "topics": [
+  "冬の銭湯"
+ ],
+ "note": "第24回（冬の銭湯・冬）。公開日は未定（schedule.md 2026-11-22）。偶数の回：サムネのみABテスト（タイトルはA）。",
+ "youtube": {
+  "title": "【間違い探し】冬の銭湯｜シニア・高齢者の脳トレ",
+  "description_file": "description.md",
+  "title_note": "32文字以内・【間違い探し】から。タイトルA（検索型）。3案は ab/titles.md",
+  "publish_plan": "未定（CEOが決める）"
+ },
+ "screens": {
+  "opening_title": "冬の銭湯の間違い探し　全5問",
+  "opening_sub": "最後は難問です",
+  "unchiku_header": "こよみ先生の 冬の小話",
+  "unchiku_slides": [
+   {
+    "until": 7,
+    "texts": [
+     [
+      "ひと休み",
+      960,
+      330,
+      130,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "こよみ先生の 季節のお話",
+      960,
+      520,
+      80,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 15,
+    "texts": [
+     [
+      "銭湯の壁に 富士山が多いわけ",
+      960,
+      380,
+      95,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ]
+    ]
+   },
+   {
+    "until": 24,
+    "texts": [
+     [
+      "100年以上前の 東京が",
+      960,
+      330,
+      110,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "はじまりと いわれています",
+      960,
+      520,
+      95,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 30,
+    "texts": [
+     [
+      "大きな富士山を",
+      960,
+      330,
+      110,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "ながめて ほっとしますね",
+      960,
+      520,
+      95,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   }
+  ],
+  "ending_titles": [
+   [
+    "15個",
+    "銭湯の名人"
+   ],
+   [
+    "11〜14個",
+    "湯けむりの名探偵"
+   ],
+   [
+    "6〜10個",
+    "番台の見習い"
+   ],
+   [
+    "0〜5個",
+    "湯上がりの見物人"
+   ]
+  ],
+  "ending_note": "湯上がりの見物人も、毎日ためせば 名人です",
+  "ending_next": "ほかの間違い探しも どうぞ",
+  "owl_layout": "bottom",
+  "endscreen_at": 9.0,
+  "rule_overlay": {
+   "text": "右の絵で 違いを3つ さがそう",
+   "sub": "1問 90秒",
+   "sec": 8.0
+  }
+ },
+ "timeline": {
+  "total": 613.5,
+  "opening": [
+   0.0,
+   6.5
+  ],
+  "rule": [
+   6.5,
+   6.5
+  ],
+  "q_start": {
+   "1": 6.5,
+   "2": 114.5,
+   "3": 222.5,
+   "4": 360.5,
+   "5": 468.5
+  },
+  "unchiku": [
+   330.5,
+   360.5
+  ],
+  "ending": [
+   576.5,
+   613.5
+  ],
+  "card": 3.0,
+  "solve": 90.0,
+  "answer": 15.0,
+  "hint_at": null,
+  "ten_at": 80.0,
+  "ans_first": 1.6,
+  "ans_step": 4.3,
+  "solve_calls": [
+   [
+    30,
+    "あと60秒です。"
+   ],
+   [
+    60,
+    "あと30秒です。"
+   ]
+  ],
+  "go_delay": 2.4
+ },
+ "lines": {
+  "opening": [
+   {
+    "id": "op",
+    "at": 0.0,
+    "text": "冬の銭湯の間違い探し、全5問。",
+    "face": "smile",
+    "until": 4.4
+   },
+   {
+    "id": "op2",
+    "at": 4.4,
+    "text": "最後は難問です。",
+    "face": "wink",
+    "until": 6.5
+   }
+  ],
+  "rule": [],
+  "unchiku": [
+   {
+    "id": "u1",
+    "at": 0.0,
+    "text": "ここでひと休み。こよみ先生の季節のお話です。",
+    "face": "smile",
+    "until": 7.0
+   },
+   {
+    "id": "u2",
+    "at": 7.0,
+    "text": "銭湯の壁に、富士山の絵が多いのをご存じですか？",
+    "face": "think",
+    "until": 15.0
+   },
+   {
+    "id": "u3",
+    "at": 15.0,
+    "text": "100年以上前に、東京で描かれたのが、はじまりといわれています。",
+    "face": "surprise",
+    "until": 24.0
+   },
+   {
+    "id": "u4",
+    "at": 24.0,
+    "text": "大きな富士山をながめると、ほっとしますね。",
+    "face": "wink",
+    "until": 30.0
+   }
+  ],
+  "ending": [
+   {
+    "id": "e1",
+    "at": 0.0,
+    "text": "これで5問目まで、おしまいです。",
+    "face": "yay",
+    "until": 4.2
+   },
+   {
+    "id": "e2",
+    "at": 4.2,
+    "text": "15個の違い、いくつ見つかりましたか。今日の称号です。",
+    "face": "smile",
+    "until": 10.8
+   },
+   {
+    "id": "e3",
+    "at": 10.8,
+    "text": "チャンネル登録とベルで、毎朝8時半に問題が届きます。毎日の頭の体操にどうぞ。",
+    "face": "smile",
+    "until": 21.0
+   },
+   {
+    "id": "e4",
+    "at": 21.0,
+    "text": "ほかにも、いろいろな間違い探しがあります。もっと難しい問題に挑戦したい方は、画面の動画をクリックしてくださいね。",
+    "face": "wink",
+    "until": 36.0
+   }
+  ],
+  "extra": [
+   {
+    "id": "c_comment",
+    "at": 237.5,
+    "text": "見つかった数を、あとでコメントで教えてくださいね。",
+    "face": "smile",
+    "until": 244.5
+   }
+  ]
+ },
+ "readings": [
+  [
+   "手前",
+   "てまえ"
+  ],
+  [
+   "結び目",
+   "むすびめ"
+  ],
+  [
+   "風呂敷",
+   "ふろしき"
+  ],
+  [
+   "反対向き",
+   "はんたいむき"
+  ],
+  [
+   "座る",
+   "すわる"
+  ],
+  [
+   "重ね",
+   "かさね"
+  ],
+  [
+   "減り",
+   "へり"
+  ],
+  [
+   "ひょうたん",
+   "ひょうたん"
+  ],
+  [
+   "芋煮会",
+   "いもにかい"
+  ],
+  [
+   "芋煮",
+   "いもに"
+  ],
+  [
+   "川原",
+   "かわら"
+  ],
+  [
+   "里芋",
+   "さといも"
+  ],
+  [
+   "昼ごはん",
+   "ひるごはん"
+  ],
+  [
+   "夕方",
+   "ゆうがた"
+  ],
+  [
+   "秋景色",
+   "あきげしき"
+  ],
+  [
+   "山形",
+   "やまがた"
+  ],
+  [
+   "宮城",
+   "みやぎ"
+  ],
+  [
+   "牛肉",
+   "ぎゅうにく"
+  ],
+  [
+   "豚肉",
+   "ぶたにく"
+  ],
+  [
+   "土地",
+   "とち"
+  ],
+  [
+   "家庭",
+   "かてい"
+  ],
+  [
+   "味",
+   "あじ"
+  ],
+  [
+   "縁側のみかんと猫",
+   "えんがわのみかんとねこ"
+  ],
+  [
+   "縁側のお茶の時間",
+   "えんがわのおちゃのじかん"
+  ],
+  [
+   "雪うさぎの耳の葉",
+   "ゆきうさぎのみみのは"
+  ],
+  [
+   "雪だるまと冬の朝",
+   "ゆきだるまとふゆのあさ"
+  ],
+  [
+   "こたつのみかん",
+   "こたつのみかん"
+  ],
+  [
+   "みかんの木の庭",
+   "みかんのきのにわ"
+  ],
+  [
+   "雪うさぎの縁側",
+   "ゆきうさぎのえんがわ"
+  ],
+  [
+   "縁側のひなた",
+   "えんがわのひなた"
+  ],
+  [
+   "みかん箱と猫",
+   "みかんばことねこ"
+  ],
+  [
+   "雪だるまの庭",
+   "ゆきだるまのにわ"
+  ],
+  [
+   "冬の朝の窓辺",
+   "ふゆのあさのまどべ"
+  ],
+  [
+   "時計の文字盤",
+   "とけいのもじばん"
+  ],
+  [
+   "雪だるまの鼻",
+   "ゆきだるまのはな"
+  ],
+  [
+   "間違い探し",
+   "まちがいさがし"
+  ],
+  [
+   "雪かきの道",
+   "ゆきかきのみち"
+  ],
+  [
+   "雪の玄関先",
+   "ゆきのげんかんさき"
+  ],
+  [
+   "麦わら帽子",
+   "むぎわらぼうし"
+  ],
+  [
+   "色えんぴつ",
+   "いろえんぴつ"
+  ],
+  [
+   "手ぶくろ",
+   "てぶくろ"
+  ],
+  [
+   "七味入れ",
+   "しちみいれ"
+  ],
+  [
+   "はし置き",
+   "はしおき"
+  ],
+  [
+   "赤とんぼ",
+   "あかとんぼ"
+  ],
+  [
+   "お月さま",
+   "おつきさま"
+  ],
+  [
+   "火ばさみ",
+   "ひばさみ"
+  ],
+  [
+   "赤いふた",
+   "あかいふた"
+  ],
+  [
+   "大学いも",
+   "だいがくいも"
+  ],
+  [
+   "茶わん",
+   "ちゃわん"
+  ],
+  [
+   "鉢植え",
+   "はちうえ"
+  ],
+  [
+   "丸ごと",
+   "まるごと"
+  ],
+  [
+   "通り道",
+   "とおりみち"
+  ],
+  [
+   "大丈夫",
+   "だいじょうぶ"
+  ],
+  [
+   "難しい",
+   "むずかしい"
+  ],
+  [
+   "段の上",
+   "だんのうえ"
+  ],
+  [
+   "雪の上",
+   "ゆきのうえ"
+  ],
+  [
+   "植木鉢",
+   "うえきばち"
+  ],
+  [
+   "花びん",
+   "かびん"
+  ],
+  [
+   "湯のみ",
+   "ゆのみ"
+  ],
+  [
+   "赤い実",
+   "あかいみ"
+  ],
+  [
+   "長いす",
+   "ながいす"
+  ],
+  [
+   "新そば",
+   "しんそば"
+  ],
+  [
+   "干し柿",
+   "ほしがき"
+  ],
+  [
+   "鉄びん",
+   "てつびん"
+  ],
+  [
+   "酉の市",
+   "とりのいち"
+  ],
+  [
+   "飛び石",
+   "とびいし"
+  ],
+  [
+   "掛け軸",
+   "かけじく"
+  ],
+  [
+   "切り株",
+   "きりかぶ"
+  ],
+  [
+   "石灯籠",
+   "いしどうろう"
+  ],
+  [
+   "少なく",
+   "すくなく"
+  ],
+  [
+   "向いて",
+   "むいて"
+  ],
+  [
+   "まん中",
+   "まんなか"
+  ],
+  [
+   "ゆで卵",
+   "ゆでたまご"
+  ],
+  [
+   "右はし",
+   "みぎはし"
+  ],
+  [
+   "茶色い",
+   "ちゃいろい"
+  ],
+  [
+   "花びら",
+   "はなびら"
+  ],
+  [
+   "土なべ",
+   "どなべ"
+  ],
+  [
+   "玉ねぎ",
+   "たまねぎ"
+  ],
+  [
+   "変わり",
+   "かわり"
+  ],
+  [
+   "落ち葉",
+   "おちば"
+  ],
+  [
+   "黄色い",
+   "きいろい"
+  ],
+  [
+   "大きく",
+   "おおきく"
+  ],
+  [
+   "舞って",
+   "まって"
+  ],
+  [
+   "葉っぱ",
+   "はっぱ"
+  ],
+  [
+   "魔法瓶",
+   "まほうびん"
+  ],
+  [
+   "小さな",
+   "ちいさな"
+  ],
+  [
+   "第1問",
+   "だいいちもん"
+  ],
+  [
+   "第2問",
+   "だいにもん"
+  ],
+  [
+   "第3問",
+   "だいさんもん"
+  ],
+  [
+   "第4問",
+   "だいよんもん"
+  ],
+  [
+   "第5問",
+   "だいごもん"
+  ],
+  [
+   "60秒",
+   "ろくじゅうびょう"
+  ],
+  [
+   "30秒",
+   "さんじゅうびょう"
+  ],
+  [
+   "10秒",
+   "じゅうびょう"
+  ],
+  [
+   "小さく",
+   "ちいさく"
+  ],
+  [
+   "取っ手",
+   "とって"
+  ],
+  [
+   "木の札",
+   "きのふだ"
+  ],
+  [
+   "大きな",
+   "おおきな"
+  ],
+  [
+   "前かけ",
+   "まえかけ"
+  ],
+  [
+   "時計",
+   "とけい"
+  ],
+  [
+   "お盆",
+   "おぼん"
+  ],
+  [
+   "栄養",
+   "えいよう"
+  ],
+  [
+   "登録",
+   "とうろく"
+  ],
+  [
+   "毎朝",
+   "まいあさ"
+  ],
+  [
+   "動画",
+   "どうが"
+  ],
+  [
+   "画面",
+   "がめん"
+  ],
+  [
+   "挑戦",
+   "ちょうせん"
+  ],
+  [
+   "違い",
+   "ちがい"
+  ],
+  [
+   "1羽",
+   "いちわ"
+  ],
+  [
+   "小鳥",
+   "ことり"
+  ],
+  [
+   "左の",
+   "ひだりの"
+  ],
+  [
+   "急須",
+   "きゅうす"
+  ],
+  [
+   "屋根",
+   "やね"
+  ],
+  [
+   "小屋",
+   "こや"
+  ],
+  [
+   "縁側",
+   "えんがわ"
+  ],
+  [
+   "朝市",
+   "あさいち"
+  ],
+  [
+   "お皿",
+   "おさら"
+  ],
+  [
+   "1匹",
+   "いっぴき"
+  ],
+  [
+   "お茶",
+   "おちゃ"
+  ],
+  [
+   "金色",
+   "きんいろ"
+  ],
+  [
+   "熊手",
+   "くまで"
+  ],
+  [
+   "飾り",
+   "かざり"
+  ],
+  [
+   "白く",
+   "しろく"
+  ],
+  [
+   "掛け",
+   "かけ"
+  ],
+  [
+   "漬物",
+   "つけもの"
+  ],
+  [
+   "軍手",
+   "ぐんて"
+  ],
+  [
+   "茶色",
+   "ちゃいろ"
+  ],
+  [
+   "風鈴",
+   "ふうりん"
+  ],
+  [
+   "黒板",
+   "こくばん"
+  ],
+  [
+   "反対",
+   "はんたい"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "黄色",
+   "きいろ"
+  ],
+  [
+   "赤く",
+   "あかく"
+  ],
+  [
+   "青く",
+   "あおく"
+  ],
+  [
+   "赤い",
+   "あかい"
+  ],
+  [
+   "筆箱",
+   "ふでばこ"
+  ],
+  [
+   "木箱",
+   "きばこ"
+  ],
+  [
+   "湯気",
+   "ゆげ"
+  ],
+  [
+   "紙袋",
+   "かみぶくろ"
+  ],
+  [
+   "消え",
+   "きえ"
+  ],
+  [
+   "付き",
+   "つき"
+  ],
+  [
+   "水筒",
+   "すいとう"
+  ],
+  [
+   "帽子",
+   "ぼうし"
+  ],
+  [
+   "上級",
+   "じょうきゅう"
+  ],
+  [
+   "中級",
+   "ちゅうきゅう"
+  ],
+  [
+   "初級",
+   "しょきゅう"
+  ],
+  [
+   "黒い",
+   "くろい"
+  ],
+  [
+   "一本",
+   "いっぽん"
+  ],
+  [
+   "高く",
+   "たかく"
+  ],
+  [
+   "短く",
+   "みじかく"
+  ],
+  [
+   "青い",
+   "あおい"
+  ],
+  [
+   "白い",
+   "しろい"
+  ],
+  [
+   "後半",
+   "こうはん"
+  ],
+  [
+   "最後",
+   "さいご"
+  ],
+  [
+   "難問",
+   "なんもん"
+  ],
+  [
+   "問題",
+   "もんだい"
+  ],
+  [
+   "答え",
+   "こたえ"
+  ],
+  [
+   "少し",
+   "すこし"
+  ],
+  [
+   "大根",
+   "だいこん"
+  ],
+  [
+   "小皿",
+   "こざら"
+  ],
+  [
+   "向き",
+   "むき"
+  ],
+  [
+   "一つ",
+   "ひとつ"
+  ],
+  [
+   "模様",
+   "もよう"
+  ],
+  [
+   "下駄",
+   "げた"
+  ],
+  [
+   "金属",
+   "きんぞく"
+  ],
+  [
+   "無く",
+   "なく"
+  ],
+  [
+   "増え",
+   "ふえ"
+  ],
+  [
+   "向い",
+   "むい"
+  ],
+  [
+   "金具",
+   "かなぐ"
+  ],
+  [
+   "一枚",
+   "いちまい"
+  ],
+  [
+   "真上",
+   "まうえ"
+  ],
+  [
+   "屋台",
+   "やたい"
+  ],
+  [
+   "銭湯",
+   "せんとう"
+  ],
+  [
+   "今日",
+   "きょう"
+  ],
+  [
+   "一緒",
+   "いっしょ"
+  ],
+  [
+   "山門",
+   "さんもん"
+  ],
+  [
+   "川辺",
+   "かわべ"
+  ],
+  [
+   "お面",
+   "おめん"
+  ],
+  [
+   "銀色",
+   "ぎんいろ"
+  ],
+  [
+   "丸い",
+   "まるい"
+  ],
+  [
+   "皮",
+   "かわ"
+  ],
+  [
+   "石",
+   "いし"
+  ],
+  [
+   "木",
+   "き"
+  ],
+  [
+   "庭",
+   "にわ"
+  ],
+  [
+   "猫",
+   "ねこ"
+  ],
+  [
+   "実",
+   "み"
+  ],
+  [
+   "番",
+   "ばん"
+  ],
+  [
+   "柱",
+   "はしら"
+  ],
+  [
+   "棚",
+   "たな"
+  ],
+  [
+   "鈴",
+   "すず"
+  ],
+  [
+   "菊",
+   "きく"
+  ],
+  [
+   "器",
+   "うつわ"
+  ],
+  [
+   "花",
+   "はな"
+  ],
+  [
+   "前",
+   "まえ"
+  ],
+  [
+   "笠",
+   "かさ"
+  ],
+  [
+   "鉢",
+   "はち"
+  ],
+  [
+   "柿",
+   "かき"
+  ],
+  [
+   "台",
+   "だい"
+  ],
+  [
+   "軒",
+   "のき"
+  ],
+  [
+   "鐘",
+   "かね"
+  ],
+  [
+   "竹",
+   "たけ"
+  ],
+  [
+   "枝",
+   "えだ"
+  ],
+  [
+   "絵",
+   "え"
+  ],
+  [
+   "上",
+   "うえ"
+  ],
+  [
+   "緑",
+   "みどり"
+  ],
+  [
+   "机",
+   "つくえ"
+  ],
+  [
+   "数",
+   "かず"
+  ],
+  [
+   "形",
+   "かたち"
+  ],
+  [
+   "先",
+   "さき"
+  ],
+  [
+   "下",
+   "した"
+  ],
+  [
+   "輪",
+   "わ"
+  ],
+  [
+   "針",
+   "はり"
+  ],
+  [
+   "牛",
+   "うし"
+  ],
+  [
+   "左",
+   "ひだり"
+  ],
+  [
+   "右",
+   "みぎ"
+  ],
+  [
+   "頭",
+   "あたま"
+  ],
+  [
+   "刃",
+   "は"
+  ],
+  [
+   "量",
+   "りょう"
+  ],
+  [
+   "苗",
+   "なえ"
+  ],
+  [
+   "丸",
+   "まる"
+  ],
+  [
+   "桶",
+   "おけ"
+  ],
+  [
+   "火",
+   "ひ"
+  ],
+  [
+   "葉",
+   "は"
+  ],
+  [
+   "色",
+   "いろ"
+  ],
+  [
+   "鍋",
+   "なべ"
+  ],
+  [
+   "畑",
+   "はたけ"
+  ],
+  [
+   "壁",
+   "かべ"
+  ],
+  [
+   "紋",
+   "もん"
+  ],
+  [
+   "星",
+   "ほし"
+  ],
+  [
+   "銀",
+   "ぎん"
+  ],
+  [
+   "銭湯",
+   "せんとう"
+  ],
+  [
+   "富士山",
+   "ふじさん"
+  ],
+  [
+   "湯船",
+   "ゆぶね"
+  ],
+  [
+   "脱衣所",
+   "だついじょ"
+  ],
+  [
+   "下駄箱",
+   "げたばこ"
+  ],
+  [
+   "洗い場",
+   "あらいば"
+  ],
+  [
+   "番台",
+   "ばんだい"
+  ],
+  [
+   "牛乳",
+   "ぎゅうにゅう"
+  ],
+  [
+   "玄関",
+   "げんかん"
+  ],
+  [
+   "壁",
+   "かべ"
+  ],
+  [
+   "絵",
+   "え"
+  ],
+  [
+   "東京",
+   "とうきょう"
+  ],
+  [
+   "描か",
+   "えがか"
+  ],
+  [
+   "大きな",
+   "おおきな"
+  ],
+  [
+   "多い",
+   "おおい"
+  ],
+  [
+   "百年以上前",
+   "ひゃくねんいじょうまえ"
+  ],
+  [
+   "100年以上前",
+   "ひゃくねんいじょうまえ"
+  ]
+ ],
+ "voice_override": {
+  "u1": "ここでひとやすみ。こよみせんせいの、きせつのおはなしです。",
+  "e1": "これで、ごもんめまで、おしまいです。",
+  "e2": "じゅうごこのちがい、いくつみつかりましたか。きょうのしょうごうです。",
+  "e3": "チャンネルとうろくとベルで、まいあさはちじはんに、もんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。",
+  "c_comment": "みつかったかずを、あとでコメントでおしえてくださいね。",
+  "s_intro": "うえとしたのえで、ちがいがみっつあります。みつけられますか。",
+  "s_end": "いくつみつかったか、コメントでおしえてくださいね。ひだりしたから、つづきもどうぞ。",
+  "q1_go": "みぎのえのちがいを、みっつさがしてください。どうぞ。",
+  "q2_go": "では、にもんめ。どうぞ。",
+  "q3_go": "つづいて、さんもんめ。どうぞ。",
+  "q4_go": "よんもんめです。じっくりどうぞ。",
+  "q5_go": "さいごの、ごもんめ、なんもんです。どうぞ。",
+  "op": "ふゆの、せんとうの、まちがいさがし、ぜん、ごもん。",
+  "op2": "さいごは、なんもんです。",
+  "u2": "せんとうの、かべに、ふじさんのえが、おおいのを、ごぞんじですか？",
+  "u3": "ひゃくねんいじょうまえに、とうきょうで、えがかれたのが、はじまりと、いわれています。",
+  "u4": "おおきなふじさんを、ながめると、ほっとしますね。",
+  "e4": "ほかにも、いろいろな、まちがいさがしがあります。もっとむずかしいもんだいに、ちょうせんしたいかたは、がめんのどうがを、クリックしてくださいね。",
+  "q1_card": "いちもんめ、やさしいもんだい。ゆぶねと、ふじさんです。",
+  "q2_card": "にもんめ、しょきゅう。ふゆのだついじょです。",
+  "q3_card": "さんもんめ、しょきゅう。げんかんの、げたばこです。",
+  "q4_card": "よんもんめ、ちゅうきゅう。ゆげの、あらいばです。",
+  "q5_card": "ごもんめ、じょうきゅう。ばんだいと、ぎゅうにゅうです。",
+  "q1_ans1": "ひだりの、こしかけが、あおくなりました。",
+  "q1_ans2": "みぎうえの、おけが、なくなりました。",
+  "q1_ans3": "アヒルの、むきが、はんたいに、なりました。",
+  "q2_ans1": "ひだりの、うえきばちが、なくなりました。",
+  "q2_ans2": "みぎの、マフラーの、しまが、あおくなりました。",
+  "q2_ans3": "たなのまんなかの、かごが、タオルに、かわりました。",
+  "q3_ans1": "ひだりの、かさが、きいろくなりました。",
+  "q3_ans2": "すいせんの、はなが、ピンクに、なりました。",
+  "q3_ans3": "かごのなかが、みかんから、あおりんごに、かわりました。",
+  "q4_ans1": "ひだりの、ポンプびんが、なくなりました。",
+  "q4_ans2": "ブラシの、むきが、はんたいに、なりました。",
+  "q4_ans3": "タオルの、あおいせんが、さんぼんから、にほんに、なりました。",
+  "q5_ans1": "ゆのみの、あおいせんが、みどりに、なりました。",
+  "q5_ans2": "れいぞうこの、びんが、いっぽん、なくなりました。",
+  "q5_ans3": "したのだんの、びんが、ちゃいろに、なりました。"
+ },
+ "voice": {
+  "provider": "fish",
+  "reference_id": "63819275ce38440ea245ca988abf976e",
+  "model": "s1",
+  "speed": 0.88,
+  "credit": "音声：Fish Audio（AIで合成した音声です）"
+ },
+ "images": {
+  "model": "gemini-3-pro-image",
+  "size": "2K",
+  "aspect": "4:5",
+  "style": "A Japanese picture-book illustration in watercolor, but with BOLD, THICK, DARK ink outlines around every object (like a clear picture book for seniors), and CLEAR, SATURATED colors (not pale). Bright, clean background. Natural, hand-drawn, slightly rounded shapes; not geometric, not flat vector, not photorealistic. CLOSE-UP composition (not a wide landscape): the scene is seen from close, filling the picture. PORTRAIT-ISH composition, about 8:9. The painting fills the entire canvas edge to edge: no white border. No people. Absolutely no text, letters, numbers, logos or symbols anywhere. The MAIN SUBJECT named in the scene is drawn LARGE in the center of the picture. Around it, only a few other objects, each clearly separated with space around it, fully visible.\n",
+  "keep_alt": " Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text.",
+  "keep_remove": " Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object.",
+  "batch": true
+ },
+ "questions": [
+  {
+   "q": 1,
+   "scene": "湯船と富士山",
+   "level": "やさしい",
+   "go": "右の絵の違いを、3つ探してください。どうぞ。",
+   "prompt": "Scene: close-up of the inside of a traditional Japanese public bathhouse (sento) bathing hall on a winter day, bright and clean, light blue and white tiles, soft steam, a small high window showing falling snow. CENTER, LARGE (main subject): a big tiled bathtub full of clear hot water with gentle steam, and on the wall behind it a big painted mural of snow-capped Mount Fuji with a blue lake and blue sky. Winter only: no Christmas, New Year's Eve or other dated holiday items, no yuzu, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the floor, a shelf or a counter, or hangs from a hook; nothing floats. Each listed object is about one sixteenth of the picture width, VERY SMALL, with plenty of empty space around it. No letters, labels, numbers or writing anywhere (every tag, curtain, bottle and sign is plain and blank). No people. Do not use much red or orange: keep the light natural daylight and the whites ordinary white; tiles are light blue, white and cream. Objects: (upper left, hanging from a hook on the tiled wall) a small yellow hand towel; (upper right, on a wooden wall shelf) a small wooden bucket; (middle left, on the tile floor) a small round wooden stool; (middle right, on the tile floor) a small yellow rubber duck; (lower left, on the tile floor) a small green plastic wash basin; (lower right, on the tile floor) a small white soap dish with a plain white soap bar.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "腰かけが青",
+     "line": "左の腰かけが、青くなりました。",
+     "box": [
+      75,
+      955,
+      420,
+      1275
+     ],
+     "object_w": 270,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "おけがない",
+     "line": "右上のおけが、なくなりました。",
+     "box": [
+      1435,
+      105,
+      1760,
+      305
+     ],
+     "object_w": 240,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "向き",
+     "label": "アヒルの向き",
+     "line": "アヒルの向きが、反対になりました。",
+     "box": [
+      1490,
+      985,
+      1790,
+      1260
+     ],
+     "object_w": 225,
+     "src": "duck"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small round wooden stool on the tile floor at the middle left becomes blue (the seat and the legs painted blue); (b) the small wooden bucket on the wooden wall shelf at the upper right is gone (show the plain empty wooden shelf); (c) the small yellow rubber duck on the right now faces the opposite direction (its beak points to the right instead of the left).",
+   "program_edits": {
+    "duck": "scripts/custom/ep024_program.py"
+   }
+  },
+  {
+   "q": 2,
+   "scene": "冬の脱衣所",
+   "level": "初級",
+   "go": "では、2問目。どうぞ。",
+   "prompt": "Scene: close-up of a retro Japanese bathhouse changing room on a winter day, polished wooden floor and wooden walls painted fully (no blank white areas), a large window with falling snow. CENTER (main subject, medium size, about one third of the picture width): a wooden locker unit with rows of square cubbyholes holding woven baskets and folded white towels. Winter only: no Christmas, New Year's Eve or other dated holiday items, no yuzu, no summer items. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the floor, a shelf or a bench, or hangs from a hook; nothing floats. Each listed object is SMALL: about one twentieth of the picture width. No letters, labels, numbers or writing anywhere (every tag, curtain, bottle and sign is plain and blank). No people. Do not use much red or orange: keep the light natural daylight and the whites ordinary white; tiles are light blue, white and cream. Objects: (left, at 30% height, on a wooden wall shelf) a small potted green plant; (right, at 30% height, hanging from a hook on the wall) a small knitted scarf with green and cream stripes; (left, at 50% height, on the wooden floor) a small wicker basket holding a folded white towel; (right, at 50% height, on the wooden floor) a small wooden bench with a green cushion; (left, at 70% height, on the wooden floor) a small pair of pink slippers; (right, at 70% height, on the wooden floor) a small round black cast-iron stove with a silver kettle on top.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "植木鉢がない",
+     "line": "左の植木鉢が、なくなりました。",
+     "box": [
+      60,
+      565,
+      420,
+      950
+     ],
+     "object_w": 275,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "マフラーのしまが青",
+     "line": "右のマフラーのしまが、青くなりました。",
+     "box": [
+      1500,
+      545,
+      1750,
+      1050
+     ],
+     "object_w": 213,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "入れ替え",
+     "label": "かごがタオルに",
+     "line": "棚の真ん中のかごが、タオルに変わりました。",
+     "box": [
+      815,
+      775,
+      1085,
+      1085
+     ],
+     "object_w": 190,
+     "src": "1",
+     "context": "脱衣所のロッカー棚。かごの代わりにタオルがたたんで置いてあるのは自然（同じ棚の同じ段で、ほかの段もタオルとかごが交互に並んでいる）"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the potted green plant on the small wooden wall shelf at the left is gone (show the plain empty shelf and the wooden wall); (b) the green stripes of the knitted scarf hanging on the hook at the right become blue stripes (cream stripes stay cream); (c) the wicker basket in the center cubbyhole of the middle row of the wooden locker unit is replaced by a folded white towel stack, like the towel stacks in the other cubbyholes."
+  },
+  {
+   "q": 3,
+   "scene": "玄関の下駄箱",
+   "level": "初級",
+   "go": "続いて、3問目。どうぞ。",
+   "prompt": "Scene: close-up of the entrance of a traditional Japanese bathhouse on a winter day, stone floor and a raised wooden step, a sliding glass door showing falling snow, wooden walls fully painted (no blank white areas). CENTER (main subject, medium size, about one third of the picture width): a big wooden shoe cabinet (geta-bako) with rows of small square compartments, each with a plain blank wooden key tag, and a plain dark-blue noren curtain without any writing hanging above it. Winter only: no Christmas, New Year's Eve or other dated holiday items, no yuzu, no summer items. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the floor, a shelf or a bench, or hangs from a hook; nothing floats. Each listed object is SMALL: about one twentieth of the picture width. No letters, labels, numbers or writing anywhere (every tag, curtain, bottle and sign is plain and blank). No people. Do not use much red or orange: keep the light natural daylight and the whites ordinary white; tiles are light blue, white and cream. Objects: (left, at 30% height, hanging from a hook on the wall) a small closed blue umbrella; (right, at 30% height, on a wooden shelf) a small pot of white narcissus flowers; (left, at 50% height, on the stone floor) a small pair of wooden geta sandals; (right, at 50% height, on the stone floor) a small pair of black rubber snow boots; (left, at 70% height, on the stone floor) a small straw broom leaning against the wall; (right, at 70% height, on the wooden step) a small basket of tangerines.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "かさが黄色",
+     "line": "左のかさが、黄色くなりました。",
+     "box": [
+      395,
+      855,
+      570,
+      1460
+     ],
+     "object_w": 110,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "水仙の花がピンク",
+     "line": "水仙の花が、ピンクになりました。",
+     "box": [
+      1395,
+      550,
+      1730,
+      965
+     ],
+     "object_w": 230,
+     "src": "2"
+    },
+    {
+     "id": 3,
+     "type": "入れ替え",
+     "label": "みかんが青りんごに",
+     "line": "かごの中が、みかんから青りんごに変わりました。",
+     "box": [
+      1380,
+      1330,
+      1730,
+      1630
+     ],
+     "object_w": 240,
+     "src": "1",
+     "context": "冬の玄関に置いたかご。みかんも青りんごも果物で、同じかごに盛っておくのは自然（かごも置かれ方も同じ）"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the closed blue umbrella hanging from the hook on the wall at the left becomes yellow; (b) the pot of white narcissus flowers on the wooden shelf at the right is gone (show the plain empty shelf); (c) the tangerines in the basket on the wooden step at the lower right become green apples (same basket, same amount of fruit).",
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. The change must be clearly visible. Do not move any object. Change: the white narcissus flowers in the pot on the wooden shelf at the right become pink (same pot, same green leaves, same number of flowers)."
+   }
+  },
+  {
+   "q": 4,
+   "scene": "ゆげの洗い場",
+   "level": "中級",
+   "go": "4問目です。じっくりどうぞ。",
+   "prompt": "Scene: close-up of the washing area of a Japanese bathhouse on a winter day, light blue and white tiled wall and floor, soft steam, a small window with falling snow, the whole wall and floor fully painted (no blank white areas). CENTER (main subject, medium size, about one third of the picture width): a row of three chrome faucets on the tiled wall, each with a round plain mirror above it. Winter only: no Christmas, New Year's Eve or other dated holiday items, no yuzu, no summer items. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the floor, a shelf or a bench, or hangs from a hook; nothing floats. Each listed object is SMALL: about one twenty-fourth of the picture width, VERY SMALL. No letters, labels, numbers or writing anywhere (every tag, curtain, bottle and sign is plain and blank). No people. Do not use much red or orange: keep the light natural daylight and the whites ordinary white; tiles are light blue, white and cream. Objects: (left, at 30% height, on a tiled shelf) a small white pump bottle with no label; (right, at 30% height, hanging from a hook) a small hand towel with three blue stripes; (left, at 45% height, on the tile floor) a small green scrub brush with a wooden handle lying with the brush end pointing left; (right, at 45% height, on a tiled shelf) a small row of three soap bars; (left, at 60% height, on the tile floor) a small orange plastic wash basin; (right, at 60% height, on the tile floor) a small silver bowl.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "ポンプびんがない",
+     "line": "左のポンプびんが、なくなりました。",
+     "box": [
+      135,
+      755,
+      345,
+      1100
+     ],
+     "object_w": 128,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "向き",
+     "label": "ブラシの向き",
+     "line": "ブラシの向きが、反対になりました。",
+     "box": [
+      85,
+      1340,
+      675,
+      1665
+     ],
+     "object_w": 440,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "本数",
+     "label": "タオルの線が2本に",
+     "line": "タオルの青い線が、3本から2本になりました。",
+     "box": [
+      1455,
+      630,
+      1750,
+      1250
+     ],
+     "object_w": 205,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small white pump bottle on the tiled shelf at the left is gone (show the plain tiled shelf and tile wall); (b) the green scrub brush lying on the tile floor now points the opposite way (bristles on the right, wooden handle on the left); (c) the hand towel hanging on the hook at the right has only two blue stripes instead of three."
+  },
+  {
+   "q": 5,
+   "scene": "番台と牛乳",
+   "level": "上級",
+   "go": "最後の5問目、難問です。どうぞ。",
+   "prompt": "Scene: close-up of the front hall of a traditional Japanese bathhouse on a winter day, wooden floor and wooden walls, a snowy window. CENTER, LARGE (main subject): a high wooden bandai (attendant's counter) with, beside it, a glass-door refrigerator full of glass milk bottles with plain paper caps and no labels. Winter only: no Christmas, New Year's Eve or other dated holiday items, no yuzu, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the floor, a shelf or a counter, or hangs from a hook; nothing floats. Each listed object is about one thirty-third of the picture width, TINY, with plenty of empty space around it. No letters, labels, numbers or writing anywhere (every tag, curtain, bottle, sign and figurine is plain and blank, with no characters on anything). No people. Do not use much red or orange: keep the light natural daylight and the whites ordinary white; tiles are light blue, white and cream. Objects: (upper left, on a wall shelf) a tiny wooden sparrow figurine standing and facing left; (upper right, hanging from a hook) a tiny woven bamboo basket; (middle left, on the counter) a tiny teacup on a saucer; (middle right, on the counter) a tiny tangerine on a small plate; (lower left, on the wooden floor) a tiny tabby cat sleeping on a cushion; (lower right, on the wooden floor) a tiny wooden crate of empty glass bottles. The painting reaches the very edge of the canvas on all four sides, with no paper margin.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "湯のみの線が緑",
+     "line": "湯のみの青い線が、緑になりました。",
+     "box": [
+      420,
+      830,
+      610,
+      1010
+     ],
+     "object_w": 135,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "牛乳びんがない",
+     "line": "冷蔵庫のびんが、1本なくなりました。",
+     "box": [
+      1165,
+      725,
+      1305,
+      990
+     ],
+     "object_w": 90,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "牛乳が茶色",
+     "line": "下の段のびんが、茶色になりました。",
+     "box": [
+      1400,
+      1340,
+      1545,
+      1610
+     ],
+     "object_w": 85,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the blue band on the small teacup on the counter becomes green (same teacup, same saucer); (b) the leftmost milk bottle in the front row of the top shelf of the refrigerator is gone (show the empty shelf behind it); (c) the milk in the second bottle from the right in the front row of the bottom shelf of the refrigerator becomes light brown, like coffee milk."
+  }
+ ],
+ "thumbnail": {
+  "question": 1,
+  "big_text": "冬の間違いさがし",
+  "highlight": "間違いさがし",
+  "highlight_color": [
+   255,
+   214,
+   0
+  ],
+  "big_color": [
+   255,
+   255,
+   255
+  ],
+  "band_color": [
+   25,
+   35,
+   70
+  ],
+  "big_size": 132,
+  "sub_text": "3つ見つけられる？全5問",
+  "badges": [
+   [
+    "初級〜上級",
+    [
+     176,
+     62,
+     52
+    ]
+   ]
+  ],
+  "circle_hint": false,
+  "note": "ab/ の3案を使う（thumb_band.py）"
+ },
+ "shorts": [
+  {
+   "question": 2,
+   "answer_gap": 3.3,
+   "note": "1本目：第2問 冬の脱衣所・初級",
+   "title": "シニアの間違い探し｜冬の脱衣所の1問 #脳トレ #頭の体操",
+   "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
+   "end_veil": [
+    {
+     "at": 0,
+     "lines": [
+      [
+       "いくつ見つかった？",
+       120,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "コメントで教えてね",
+       104,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": false
+    },
+    {
+     "at": 3.8,
+     "lines": [
+      [
+       "続きは長い動画で",
+       116,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "左下をクリック",
+       128,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "question": 4,
+   "answer_gap": 3.3,
+   "note": "2本目：第4問 ゆげの洗い場・中級",
+   "title": "シニアの間違い探し｜ゆげの洗い場の1問 #脳トレ #頭の体操",
+   "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
+   "end_veil": [
+    {
+     "at": 0,
+     "lines": [
+      [
+       "いくつ見つかった？",
+       120,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "コメントで教えてね",
+       104,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": false
+    },
+    {
+     "at": 3.8,
+     "lines": [
+      [
+       "続きは長い動画で",
+       116,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "左下をクリック",
+       128,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": true
+    }
+   ]
+  }
+ ]
+}

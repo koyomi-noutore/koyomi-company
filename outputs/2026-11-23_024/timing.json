@@ -1,0 +1,86 @@
+{
+ "runs": [
+  {
+   "step": "絵",
+   "detail": "pictures base 1",
+   "sec": 31.8,
+   "at": "2026-11-23T14:11:11+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures base 4",
+   "sec": 34.2,
+   "at": "2026-11-23T14:11:14+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures base 3",
+   "sec": 34.3,
+   "at": "2026-11-23T14:11:14+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures base 2",
+   "sec": 34.9,
+   "at": "2026-11-23T14:11:15+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures base 5",
+   "sec": 35.5,
+   "at": "2026-11-23T14:11:15+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures base 5",
+   "sec": 30.2,
+   "at": "2026-11-23T14:14:37+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures edit 4",
+   "sec": 36.5,
+   "at": "2026-11-23T14:15:55+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures edit 5",
+   "sec": 36.8,
+   "at": "2026-11-23T14:15:56+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures edit 3",
+   "sec": 37.1,
+   "at": "2026-11-23T14:15:56+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures edit 2",
+   "sec": 37.4,
+   "at": "2026-11-23T14:15:56+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures edit 1",
+   "sec": 38.4,
+   "at": "2026-11-23T14:15:57+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures edit 3 2",
+   "sec": 29.5,
+   "at": "2026-11-23T14:20:01+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures",
+   "sec": 19.3,
+   "at": "2026-11-23T14:20:32+00:00"
+  }
+ ],
+ "total_sec_by_step": {
+  "絵": 435.9
+ },
+ "total_sec_all": 435.9
+}

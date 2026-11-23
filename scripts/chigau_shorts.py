@@ -268,6 +268,30 @@ T.LINES["futsu"] = {"intro": ("違う漢字が、1つだけあります。どれ
                     "ans": [("「大小」の『大』の中に、「犬」の『犬』が、混ざっていました。", "だいしょうの、だい、のなかに、いぬの、いぬ、が、まざっていました。")]}
 T.LINES["mitten"] = {"intro": ("違う手袋が、1つだけあります。どれでしょう？", "ちがうてぶくろが、ひとつだけあります。どれでしょう？"),
                      "ans": [("模様のない、手袋でした。", "もようのない、てぶくろでした。")]}
+def load_problem(path):
+    """問題の定義（problem.json）から、散らし配置の漢字の回を登録する（2026-11-23：字の組を増やすため）。
+    kind は "scatter"。main（たくさんある字）・odd（1つだけ違う字）・n・weight・size・tilt・seed・odd_i・think・lines（intro と ans）。"""
+    import json
+    P = json.loads(Path(path).read_text(encoding="utf-8"))
+    key = P["id"]
+    cfg = {"key": key, "main": P["main"], "odd": P["odd"], "n": P["n"], "weight": P["weight"], "size": tuple(P["size"]),
+           "tilt": P["tilt"], "seed": P["seed"], "odd_i": P["odd_i"]}
+    CFGS[key] = cfg
+
+    def frame(state, remain=None, cfg=cfg):
+        im, d = base("字")
+        for ch, cx, cy, sz, ang in layout_scatter(cfg):
+            g = glyph(ch, sz, ang, cfg["weight"])
+            im.paste(g, (int(cx - g.width / 2), int(cy - g.height / 2)), g)
+            if ch == cfg["odd"] and state:
+                circle(d, cx, cy, int(sz * 0.62))
+        return im
+    T.KINDS[key] = ({"think": P["think"], "veil": [TITLE, "一つだけ違う字があるよ。", "見つけてみてね！"]}, frame, 1)
+    T.LINES[key] = {"intro": tuple(P["lines"]["intro"]), "ans": [tuple(x) for x in P["lines"]["ans"]]}
+    T.PROBLEM_ID = key
+    return key
+
+
 ORDER = ["easy", "hard", "mikan"]
 
 
@@ -338,6 +362,11 @@ def build(kind, out):
     subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(tmp / "list.txt"), "-i", str(tmp / "mix.wav"),
                     "-map", "0:v", "-map", "1:a", "-vf", f"fps={T.FPS},format=yuv420p", "-c:v", "libx264", "-crf", "20", "-c:a", "aac", "-b:a", "192k",
                     "-ar", "48000", "-t", f"{total:.2f}", "-movflags", "+faststart", str(out / f"{kind}.mp4")], check=True)
+    shots = [seq[0][0], seq[2][0], seq[n_ans_end - 1][0], frames[0][0], frames[len(frames) // 2][0]]   # 0:00・問題・答え・最後の2段
+    S = Image.new("RGB", (len(shots) * 270, 480))
+    for i, im_ in enumerate(shots):
+        S.paste(im_.resize((270, 480)), (i * 270, 0))
+    S.save(out / f"{kind}_frames.jpg", quality=85)
     for p in tmp.iterdir():
         p.unlink()
     tmp.rmdir()
@@ -351,6 +380,8 @@ if __name__ == "__main__":
     if "--check" in kinds:
         print("\n".join(check())); sys.exit()
     for k in kinds:
+        if k.endswith(".json"):
+            k = load_problem(k)
         t = time.time()
         sec = build(k, out)
         print(k, sec, "秒（作業", round(time.time() - t), "秒）", flush=True)
