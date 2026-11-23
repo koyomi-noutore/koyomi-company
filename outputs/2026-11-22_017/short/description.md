@@ -1,6 +1,6 @@
 # 017 ショート1 投稿用メタデータ（第2問 雪見の露天風呂）
 
-- 長尺：https://youtu.be/DbAKa31iRg4（関連動画はCEOがStudioで設定する。APIでは設定できない）
+- 長尺：https://youtu.be/rgj_u6wQtLo（関連動画はCEOがStudioで設定する。APIでは設定できない）
 
 ## タイトル
 ```
@@ -13,7 +13,7 @@
 
 続きの問題は長い動画で（全5問）
 【間違い探し】冬の温泉宿｜シニアの脳トレ・頭の体操 全5問
-https://youtu.be/DbAKa31iRg4
+https://youtu.be/rgj_u6wQtLo
 
 こよみ先生のまいにち脳トレ：毎日朝8時半に新しい問題をお届けします。
 

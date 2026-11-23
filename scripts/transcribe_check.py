@@ -20,7 +20,15 @@ def transcribe(wav):
     body = {"contents": [{"parts": [{"text": PROMPT}, {"inline_data": {"mime_type": "audio/wav", "data": data}}]}],
             "generationConfig": {"temperature": 0}}
     from gemini_image import generate_content  # 2026-11-24：Vertex 経由（無料クレジット）に統一
-    res = generate_content(MODEL, body, timeout=120)
+    import time, urllib.error
+    for i in range(8):     # Vertex は1分あたりの回数に上限があり 429 が返ることがある（2026-11-24）：待って取り直す
+        try:
+            res = generate_content(MODEL, body, timeout=120)
+            break
+        except urllib.error.HTTPError as e:
+            if e.code not in (429, 503) or i == 7:
+                raise
+            time.sleep(15 * (i + 1))
     return "".join(p.get("text", "") for p in res["candidates"][0]["content"]["parts"]).strip()
 
 

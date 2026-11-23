@@ -268,9 +268,26 @@ def compose(q, work, out_dir):
         for k in d.get("keep", []):  # 範囲の中でも、元の絵のまま残す所
             m = ImageChops.subtract(m, feather_mask(a.size, k, 10))
         b = Image.composite(ed, b, m)
+    tgt = _I.get("neutral_target")   # 2026-11-24：木の色の多い場面で赤÷青が1.44を超えるので、左右に同じ補正（plan.json images.neutral_target）
+    if tgt:
+        a, b = neutral_pair(a, b, tgt)
     out = Path(out_dir); out.mkdir(parents=True, exist_ok=True)
     a.save(out / f"q{q}_a.png"); b.save(out / f"q{q}_b.png")
     return a, b
+
+
+def neutral_pair(a, b, target):
+    """左の絵 a の赤÷青が target を超えるとき、a と b に同じ補正（赤を下げ青を上げる）をかける。違いは増えない。"""
+    import numpy as np
+    m = np.asarray(a.resize((100, 100))).reshape(-1, 3).mean(0)
+    ratio = m[0] / max(m[2], 1)
+    if ratio <= target:
+        return a, b
+    k = (target / ratio) ** 0.5
+    def fix(im):
+        r, g, bl = im.split()
+        return Image.merge("RGB", (r.point(lambda v: min(255, int(v * k))), g, bl.point(lambda v: min(255, int(v / k)))))
+    return fix(a), fix(b)
 
 
 def outside_diff(a, b, boxes, thr=15):

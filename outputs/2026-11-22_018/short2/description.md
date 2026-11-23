@@ -1,6 +1,6 @@
 # 018 ショート2 投稿用メタデータ（第4問 冬の台所の小物棚）
 
-- 長尺：https://youtu.be/A2Nwbn96Bq0（関連動画はCEOがStudioで設定する。APIでは設定できない）
+- 長尺：https://youtu.be/7BsSvWOhRHg（関連動画はCEOがStudioで設定する。APIでは設定できない）
 
 ## タイトル
 ```
@@ -13,7 +13,7 @@
 
 続きの問題は長い動画で（全5問）
 【間違い探し】冬の鍋料理｜シニアの脳トレ・頭の体操 全5問
-https://youtu.be/A2Nwbn96Bq0
+https://youtu.be/7BsSvWOhRHg
 
 こよみ先生のまいにち脳トレ：毎日朝8時半に新しい問題をお届けします。
 

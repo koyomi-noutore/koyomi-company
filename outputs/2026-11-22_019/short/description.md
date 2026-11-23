@@ -1,6 +1,6 @@
 # 019 ショート1 投稿用メタデータ（第2問 雪だるまの庭）
 
-- 長尺：https://youtu.be/tczICOzvspM（関連動画はCEOがStudioで設定する。APIでは設定できない）
+- 長尺：https://youtu.be/bMu8x66Nrwc（関連動画はCEOがStudioで設定する。APIでは設定できない）
 
 ## タイトル
 ```
@@ -13,7 +13,7 @@
 
 続きの問題は長い動画で（全5問）
 【間違い探し】雪だるまと冬の朝｜シニアの脳トレ全5問
-https://youtu.be/tczICOzvspM
+https://youtu.be/bMu8x66Nrwc
 
 こよみ先生のまいにち脳トレ：毎日朝8時半に新しい問題をお届けします。
 
