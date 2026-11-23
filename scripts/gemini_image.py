@@ -9,7 +9,7 @@ from pathlib import Path
 from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).parent))
-from credentials import gemini_key, vertex_service_account
+from credentials import gemini_key, vertex_service_account, rs256_sign
 
 API = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 DEFAULT_MODEL = "gemini-3-pro-image"
@@ -138,15 +138,12 @@ def _vertex_token(info):
     import time
     if _vtoken.get("exp", 0) > time.time() + 60:
         return _vtoken["tok"]
-    from cryptography.hazmat.primitives import hashes, serialization
-    from cryptography.hazmat.primitives.asymmetric import padding
     b64 = lambda b: base64.urlsafe_b64encode(b).rstrip(b"=")
     now = int(time.time())
     head = b64(json.dumps({"alg": "RS256", "typ": "JWT"}).encode())
     claim = b64(json.dumps({"iss": info["client_email"], "scope": "https://www.googleapis.com/auth/cloud-platform",
                             "aud": "https://oauth2.googleapis.com/token", "iat": now, "exp": now + 3600}).encode())
-    key = serialization.load_pem_private_key(info["private_key"].encode(), password=None)
-    sig = b64(key.sign(head + b"." + claim, padding.PKCS1v15(), hashes.SHA256()))
+    sig = b64(rs256_sign(info["private_key"], head + b"." + claim))
     data = ("grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion="
             + (head + b"." + claim + b"." + sig).decode()).encode()
     req = urllib.request.Request("https://oauth2.googleapis.com/token", data=data,
