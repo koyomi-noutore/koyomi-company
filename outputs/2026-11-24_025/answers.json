@@ -49,8 +49,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 121,
-   "outside_box_max_distance_px": 11.0,
+   "outside_box_pixels_diff_gt15": 110,
+   "outside_box_max_distance_px": 9.0,
    "answers": [
     {
      "id": 1,
@@ -130,39 +130,39 @@
     },
     {
      "id": 3,
-     "type": "形",
-     "label": "つぼのふたがない",
-     "line": "右下のつぼの、ふたが、なくなりました。",
+     "type": "色",
+     "label": "腰かけが緑",
+     "line": "左の腰かけが、緑になりました。",
      "box_px": [
-      1440,
-      1680,
-      1810,
-      2100
+      90,
+      1215,
+      500,
+      1625
      ],
      "box_screen": [
-      745,
-      869,
-      936,
-      1086
+      47,
+      628,
+      259,
+      841
      ],
      "circle_a_screen": [
-      745,
-      869,
-      936,
-      1086
+      47,
+      628,
+      259,
+      841
      ],
      "circle_b_screen": [
-      745,
-      869,
-      936,
-      1086
+      47,
+      628,
+      259,
+      841
      ],
-     "object_w_px": 285,
-     "object_picture_width_pct": 15.36,
-     "object_screen_width_pct": 7.68,
-     "in_level_range": true,
-     "in_safe_y": false,
-     "edit_version": "1",
+     "object_w_px": 370,
+     "object_picture_width_pct": 19.94,
+     "object_screen_width_pct": 9.97,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "3",
      "made_by": "gemini",
      "note": ""
     }
@@ -184,14 +184,14 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 323,
+   "outside_box_pixels_diff_gt15": 364,
    "outside_box_max_distance_px": 9.0,
    "answers": [
     {
      "id": 1,
-     "type": "数",
-     "label": "お椀が3つから2つ",
-     "line": "左の棚のお椀が、3つから2つになりました。",
+     "type": "なくなる",
+     "label": "お椀が1つ減る",
+     "line": "左のお椀が、1つ減りました。",
      "box_px": [
       315,
       500,
@@ -265,39 +265,39 @@
     },
     {
      "id": 3,
-     "type": "なくなる",
-     "label": "ねこがいない",
-     "line": "左下のねこが、いなくなりました。",
+     "type": "入れ替え",
+     "label": "おけがかごに",
+     "line": "左のおけが、かごに変わりました。",
      "box_px": [
-      190,
-      1640,
-      570,
-      2095
+      240,
+      1195,
+      640,
+      1625
      ],
      "box_screen": [
-      98,
-      848,
-      295,
-      1084
+      124,
+      618,
+      331,
+      841
      ],
      "circle_a_screen": [
-      98,
-      848,
-      295,
-      1084
+      124,
+      618,
+      331,
+      841
      ],
      "circle_b_screen": [
-      98,
-      848,
-      295,
-      1084
+      124,
+      618,
+      331,
+      841
      ],
-     "object_w_px": 235,
-     "object_picture_width_pct": 12.66,
-     "object_screen_width_pct": 6.33,
+     "object_w_px": 300,
+     "object_picture_width_pct": 16.16,
+     "object_screen_width_pct": 8.08,
      "in_level_range": false,
-     "in_safe_y": false,
-     "edit_version": "1",
+     "in_safe_y": true,
+     "edit_version": "3",
      "made_by": "gemini",
      "note": ""
     }
@@ -319,7 +319,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 120,
+   "outside_box_pixels_diff_gt15": 138,
    "outside_box_max_distance_px": 8.0,
    "answers": [
     {
@@ -400,39 +400,39 @@
     },
     {
      "id": 3,
-     "type": "数",
-     "label": "げたが片方",
-     "line": "左下のげたが、片方だけになりました。",
+     "type": "色",
+     "label": "急須が黒",
+     "line": "左の急須が、黒くなりました。",
      "box_px": [
-      195,
-      1615,
-      470,
-      1825
+      165,
+      985,
+      455,
+      1225
      ],
      "box_screen": [
-      101,
-      835,
-      243,
-      944
+      85,
+      509,
+      235,
+      634
      ],
      "circle_a_screen": [
-      101,
-      835,
-      243,
-      944
+      85,
+      509,
+      235,
+      634
      ],
      "circle_b_screen": [
-      101,
-      835,
-      243,
-      944
+      85,
+      509,
+      235,
+      634
      ],
-     "object_w_px": 245,
-     "object_picture_width_pct": 13.2,
-     "object_screen_width_pct": 6.6,
-     "in_level_range": false,
-     "in_safe_y": false,
-     "edit_version": "1",
+     "object_w_px": 200,
+     "object_picture_width_pct": 10.78,
+     "object_screen_width_pct": 5.39,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "4",
      "made_by": "gemini",
      "note": ""
     }
@@ -454,8 +454,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 77,
-   "outside_box_max_distance_px": 10.0,
+   "outside_box_pixels_diff_gt15": 19,
+   "outside_box_max_distance_px": 9.0,
    "answers": [
     {
      "id": 1,
@@ -499,7 +499,7 @@
      "id": 2,
      "type": "入れ替え",
      "label": "あんこが大根おろしに",
-     "line": "左のお椀が、あんこから大根おろしに変わりました。",
+     "line": "左のあんこが、大根おろしになりました。",
      "box_px": [
       260,
       895,
@@ -535,39 +535,39 @@
     },
     {
      "id": 3,
-     "type": "なくなる",
-     "label": "はしがない",
-     "line": "右のはしが、なくなりました。",
+     "type": "色",
+     "label": "器が紫",
+     "line": "右のきな粉の器が、紫になりました。",
      "box_px": [
-      1320,
-      1290,
-      1790,
-      1570
+      1490,
+      1035,
+      1785,
+      1270
      ],
      "box_screen": [
-      683,
-      667,
-      926,
-      812
+      771,
+      535,
+      923,
+      657
      ],
      "circle_a_screen": [
-      683,
-      667,
-      926,
-      812
+      771,
+      535,
+      923,
+      657
      ],
      "circle_b_screen": [
-      683,
-      667,
-      926,
-      812
+      771,
+      535,
+      923,
+      657
      ],
-     "object_w_px": 418,
-     "object_picture_width_pct": 22.52,
-     "object_screen_width_pct": 11.26,
+     "object_w_px": 262,
+     "object_picture_width_pct": 14.12,
+     "object_screen_width_pct": 7.06,
      "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "2",
+     "edit_version": "4",
      "made_by": "gemini",
      "note": ""
     }
@@ -589,14 +589,14 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 303,
-   "outside_box_max_distance_px": 9.0,
+   "outside_box_pixels_diff_gt15": 67,
+   "outside_box_max_distance_px": 7.0,
    "answers": [
     {
      "id": 1,
      "type": "向き",
      "label": "スプーンの向き",
-     "line": "右の壺のスプーンが、反対向きにかたむきました。",
+     "line": "スプーンが、反対にかたむきました。",
      "box_px": [
       1510,
       695,
@@ -632,77 +632,77 @@
     },
     {
      "id": 2,
-     "type": "数",
-     "label": "もちが3つから2つ",
-     "line": "木箱のもちが、3つから2つになりました。",
+     "type": "なくなる",
+     "label": "すずめがいない",
+     "line": "左上のすずめが、いなくなりました。",
      "box_px": [
-      1290,
-      1820,
-      1700,
-      2030
+      270,
+      165,
+      520,
+      385
      ],
      "box_screen": [
-      667,
-      941,
-      879,
-      1050
+      140,
+      85,
+      269,
+      199
      ],
      "circle_a_screen": [
-      667,
-      941,
-      879,
-      1050
+      140,
+      85,
+      269,
+      199
      ],
      "circle_b_screen": [
-      667,
-      941,
-      879,
-      1050
+      140,
+      85,
+      269,
+      199
      ],
-     "object_w_px": 125,
-     "object_picture_width_pct": 6.73,
-     "object_screen_width_pct": 3.37,
-     "in_level_range": true,
-     "in_safe_y": false,
-     "edit_version": "2",
+     "object_w_px": 200,
+     "object_picture_width_pct": 10.78,
+     "object_screen_width_pct": 5.39,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "5",
      "made_by": "gemini",
      "note": ""
     },
     {
      "id": 3,
-     "type": "なくなる",
-     "label": "湯のみがない",
-     "line": "左の湯のみが、なくなりました。",
+     "type": "色",
+     "label": "湯のみが黄色",
+     "line": "左の湯のみが、黄色くなりました。",
      "box_px": [
-      120,
-      955,
+      115,
+      960,
       370,
-      1150
+      1165
      ],
      "box_screen": [
-      62,
-      494,
+      59,
+      497,
       191,
-      595
+      603
      ],
      "circle_a_screen": [
-      62,
-      494,
+      59,
+      497,
       191,
-      595
+      603
      ],
      "circle_b_screen": [
-      62,
-      494,
+      59,
+      497,
       191,
-      595
+      603
      ],
      "object_w_px": 143,
      "object_picture_width_pct": 7.7,
      "object_screen_width_pct": 3.85,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "4",
      "made_by": "gemini",
      "note": ""
     }

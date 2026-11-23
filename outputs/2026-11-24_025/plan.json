@@ -1345,6 +1345,18 @@
   [
    "本",
    "ほん"
+  ],
+  [
+   "きな粉",
+   "きなこ"
+  ],
+  [
+   "紫",
+   "むらさき"
+  ],
+  [
+   "すずめ",
+   "すずめ"
   ]
  ],
  "voice_override": {
@@ -1373,19 +1385,19 @@
   "q5_card": "ごもんめ、じょうきゅう。のきしたの、どうぐだなです。",
   "q1_ans1": "みぎうえの、おけが、あおくなりました。",
   "q1_ans2": "ひだりうえの、ざるが、なくなりました。",
-  "q1_ans3": "みぎしたの、つぼの、ふたが、なくなりました。",
+  "q1_ans3": "ひだりの、こしかけが、みどりに、なりました。",
   "q2_ans1": "ひだりの、おわんが、ひとつ、へりました。",
   "q2_ans2": "ひしゃくが、ピンクに、なりました。",
-  "q2_ans3": "ひだりしたの、ねこが、いなくなりました。",
+  "q2_ans3": "ひだりの、おけが、かごに、かわりました。",
   "q3_ans1": "ひだりうえの、かごが、なくなりました。",
   "q3_ans2": "ひばちの、うえの、やかんが、つぼに、かわりました。",
-  "q3_ans3": "ひだりしたの、げたが、かたほうだけに、なりました。",
+  "q3_ans3": "ひだりの、きゅうすが、くろく、なりました。",
   "q4_ans1": "みぎうえの、しゃもじが、なくなりました。",
   "q4_ans2": "ひだりの、あんこが、だいこんおろしに、なりました。",
-  "q4_ans3": "みぎの、はしが、なくなりました。",
+  "q4_ans3": "みぎの、きなこの、うつわが、むらさきに、なりました。",
   "q5_ans1": "スプーンが、はんたいに、かたむきました。",
-  "q5_ans2": "きばこの、おもちが、ふたつに、なりました。",
-  "q5_ans3": "ひだりの、ゆのみが、なくなりました。"
+  "q5_ans2": "ひだりうえの、すずめが、いなくなりました。",
+  "q5_ans3": "ひだりの、ゆのみが、きいろく、なりました。"
  },
  "voice": {
   "provider": "fish",
@@ -1444,17 +1456,17 @@
     },
     {
      "id": 3,
-     "type": "形",
-     "label": "つぼのふたがない",
-     "line": "右下のつぼの、ふたが、なくなりました。",
+     "type": "色",
+     "label": "腰かけが緑",
+     "line": "左の腰かけが、緑になりました。",
      "box": [
-      1440,
-      1680,
-      1810,
-      2100
+      90,
+      1215,
+      500,
+      1625
      ],
-     "object_w": 285,
-     "src": "1"
+     "object_w": 370,
+     "src": "3"
     }
    ],
    "hint_diff": null,
@@ -1464,7 +1476,10 @@
     1856,
     2088
    ],
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small wooden bucket on the wooden wall shelf at the upper right becomes light blue (all of its wood painted blue, same shape); (b) the small bamboo sieve (zaru) hanging from the hook at the upper left is gone (show the plain wooden wall; the empty hook stays); (c) the lid of the blue ceramic water pot at the lower right is gone (show the open pot with water inside; no lid anywhere)."
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small wooden bucket on the wooden wall shelf at the upper right becomes light blue (all of its wood painted blue, same shape); (b) the small bamboo sieve (zaru) hanging from the hook at the upper left is gone (show the plain wooden wall; the empty hook stays); (c) the lid of the blue ceramic water pot at the lower right is gone (show the open pot with water inside; no lid anywhere).",
+   "edit_prompts": {
+    "3": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small round wooden stool on the ground at the left becomes green (the seat and the legs painted green)."
+   }
   },
   {
    "q": 2,
@@ -1473,23 +1488,11 @@
    "go": "では、2問目。どうぞ。",
    "prompt": "Scene: close-up of an outdoor mochi-steaming corner beside a wooden shed on a winter day, packed earth ground with a little thin snow, wooden walls fully painted (no blank white areas). CENTER (main subject, medium size, about one third of the picture width): a clay-and-stone stove (kamado) with a big iron pot and two stacked round bamboo steamers (seiro) on top, white steam rising, a small warm glow at the stove mouth. Winter only: no Christmas, New Year's Eve or New Year decorations (no kagami-mochi, no shimenawa, no kadomatsu), no yuzu, no summer items. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the floor, a shelf, a low table or a bench, or hangs from a hook; nothing floats. Each listed object is SMALL: about one twentieth of the picture width. No letters, labels, numbers or writing anywhere (every tag, cloth, bag and sign is plain and blank). No people, no hands. Do not use much red or orange: keep the light natural daylight and the whites ordinary white. Objects: (left, at 30% height, on a wooden wall shelf) a small neat stack of three white ceramic bowls; (right, at 30% height, hanging from a hook on the wall) a small bamboo ladle; (left, at 50% height, on the ground) a small round wooden bucket; (right, at 50% height, on the ground) a small bundle of firewood tied with straw rope; (left, at 70% height, on the ground) a small tabby cat sitting and facing left; (right, at 70% height, on the ground) a small pair of straw sandals.",
    "answers_intro": "答えです。",
-   "retries": {
-    "2": {
-     "crop": [
-      1250,
-      380,
-      1850,
-      1280
-     ],
-     "aspect": "2:3",
-     "prompt": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. Do not move or change anything else in this picture. The bamboo ladle hanging from the hook on the wooden wall becomes pink (the whole ladle painted pink, same shape, same hook)."
-    }
-   },
    "diffs": [
     {
      "id": 1,
-     "type": "数",
-     "label": "お椀が3つから2つ",
+     "type": "なくなる",
+     "label": "お椀が1つ減る",
      "line": "左のお椀が、1つ減りました。",
      "box": [
       315,
@@ -1516,17 +1519,18 @@
     },
     {
      "id": 3,
-     "type": "なくなる",
-     "label": "ねこがいない",
-     "line": "左下のねこが、いなくなりました。",
+     "type": "入れ替え",
+     "label": "おけがかごに",
+     "line": "左のおけが、かごに変わりました。",
      "box": [
-      190,
-      1640,
-      570,
-      2095
+      240,
+      1195,
+      640,
+      1625
      ],
-     "object_w": 235,
-     "src": "1"
+     "object_w": 300,
+     "src": "3",
+     "context": "かまどのそばの地面に置いた入れ物。薪や水を入れるおけも、かごも、庭仕事ではふつうに置いてある（置かれ方は同じ）"
     }
    ],
    "hint_diff": null,
@@ -1536,7 +1540,10 @@
     1856,
     2088
    ],
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the neat stack of three white bowls on the small wooden shelf at the left has only two bowls now; (b) the bamboo ladle hanging from the hook at the right now has its cup opening toward the left instead of the right (mirrored); (c) the small tabby cat sitting on the ground at the lower left is gone (show the plain packed earth ground)."
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the neat stack of three white bowls on the small wooden shelf at the left has only two bowls now; (b) the bamboo ladle hanging from the hook at the right now has its cup opening toward the left instead of the right (mirrored); (c) the small tabby cat sitting on the ground at the lower left is gone (show the plain packed earth ground).",
+   "edit_prompts": {
+    "3": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the round wooden bucket on the ground at the left of the stove is replaced by a round woven bamboo basket of the same size in the same place (no part of the bucket remains)."
+   }
   },
   {
    "q": 3,
@@ -1573,21 +1580,22 @@
       1600
      ],
      "object_w": 205,
-     "src": "1"
+     "src": "1",
+     "context": "縁側の火鉢の上。やかんの代わりに土のつぼがかかっているのは自然（火鉢も置かれ方も同じ）"
     },
     {
      "id": 3,
-     "type": "数",
-     "label": "げたが片方",
-     "line": "左下のげたが、片方だけになりました。",
+     "type": "色",
+     "label": "急須が黒",
+     "line": "左の急須が、黒くなりました。",
      "box": [
-      195,
-      1615,
-      470,
-      1825
+      165,
+      985,
+      455,
+      1225
      ],
-     "object_w": 245,
-     "src": "1"
+     "object_w": 200,
+     "src": "4"
     }
    ],
    "hint_diff": null,
@@ -1597,7 +1605,11 @@
     1856,
     2088
    ],
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small woven bamboo basket hanging from the hook under the eave at the upper left is gone (show the plain wall; the empty hook stays); (b) the black iron kettle on top of the clay charcoal brazier at the lower right is replaced by a small round brown clay pot with a lid (same place, the brazier itself unchanged, no part of the kettle remains); (c) the pair of wooden slippers on the stone step at the lower left becomes a single slipper (only one slipper, the other is gone; show the plain stone)."
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small woven bamboo basket hanging from the hook under the eave at the upper left is gone (show the plain wall; the empty hook stays); (b) the black iron kettle on top of the clay charcoal brazier at the lower right is replaced by a small round brown clay pot with a lid (same place, the brazier itself unchanged, no part of the kettle remains); (c) the pair of wooden slippers on the stone step at the lower left becomes a single slipper (only one slipper, the other is gone; show the plain stone).",
+   "edit_prompts": {
+    "3": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the blue-and-white teapot on the tray at the left of the veranda becomes plain green (the teapot painted green, same shape; the cups and tray stay the same).",
+    "4": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. The change must be clearly visible. Do not move any object. Change: the blue-and-white teapot on the tray at the left of the veranda becomes plain black like cast iron (only the teapot; the two small cups and the tray stay exactly the same as before, blue-and-white cups)."
+   }
   },
   {
    "q": 4,
@@ -1606,18 +1618,6 @@
    "go": "4問目です。じっくりどうぞ。",
    "prompt": "Scene: close-up of a traditional Japanese kitchen earthen floor (doma) on a winter day, wooden walls fully painted (no blank white areas), a small window with a little snow outside. CENTER (main subject, medium size, about one third of the picture width): a big wooden worktable with a heap of round white rice cakes on a wooden board. Winter only: no Christmas, New Year's Eve or New Year decorations (no kagami-mochi, no shimenawa, no kadomatsu), no yuzu, no summer items. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the floor, a shelf, a low table or a bench, or hangs from a hook; nothing floats. Each listed object is SMALL: about one twentieth of the picture width. No letters, labels, numbers or writing anywhere (every tag, cloth, bag and sign is plain and blank). No people, no hands. Do not use much red or orange: keep the light natural daylight and the whites ordinary white. Objects: (left, at 30% height, on a wooden wall shelf) a small neat stack of three white plates; (right, at 30% height, hanging from a hook) a small wooden rice paddle; (left, at 45% height, on the table) a small bowl of dark sweet red bean paste; (right, at 45% height, on the table) a small bowl of pale yellow soybean flour; (left, at 60% height, on the floor) a small green plastic basin; (right, at 60% height, on the table) a small pair of wooden chopsticks lying on a small chopstick rest, pointing to the left.",
    "answers_intro": "答えです。",
-   "retries": {
-    "2": {
-     "crop": [
-      1216,
-      1180,
-      1856,
-      1660
-     ],
-     "aspect": "4:3",
-     "prompt": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. Do not move or change anything else in this picture. On the wooden table, the pair of wooden chopsticks that lies on the small chopstick rest is completely gone (both chopsticks removed; show the plain wooden table surface where they lay). Only the small empty white chopstick rest stays."
-    }
-   },
    "diffs": [
     {
      "id": 1,
@@ -1645,21 +1645,22 @@
       1065
      ],
      "object_w": 250,
-     "src": "1"
+     "src": "1",
+     "context": "餅を丸める台の上。あんこの代わりに大根おろしを入れた器が置いてあるのは自然（同じ器・同じ置かれ方）"
     },
     {
      "id": 3,
-     "type": "なくなる",
-     "label": "はしがない",
-     "line": "右のはしが、なくなりました。",
+     "type": "色",
+     "label": "器が紫",
+     "line": "右のきな粉の器が、紫になりました。",
      "box": [
-      1320,
-      1290,
-      1790,
-      1570
+      1490,
+      1035,
+      1785,
+      1270
      ],
-     "object_w": 418,
-     "src": "2"
+     "object_w": 262,
+     "src": "4"
     }
    ],
    "hint_diff": null,
@@ -1669,7 +1670,11 @@
     1856,
     2088
    ],
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the wooden rice paddle hanging from the hook on the wall at the upper right is gone (show the plain wooden wall; the empty hook stays); (b) the small bowl of dark sweet red bean paste on the left of the table is now filled with white grated daikon radish instead (same bowl, no red bean paste remains); (c) the pair of wooden chopsticks lying on the chopstick rest on the right of the table is now only one chopstick (the other is gone)."
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the wooden rice paddle hanging from the hook on the wall at the upper right is gone (show the plain wooden wall; the empty hook stays); (b) the small bowl of dark sweet red bean paste on the left of the table is now filled with white grated daikon radish instead (same bowl, no red bean paste remains); (c) the pair of wooden chopsticks lying on the chopstick rest on the right of the table is now only one chopstick (the other is gone).",
+   "edit_prompts": {
+    "3": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small bowl of pale yellow soybean flour on the right side of the table: the bowl itself becomes green (the outside of the bowl painted green, the flour inside stays).",
+    "4": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. The change must be clearly visible. Do not move any object. Change: the small bowl of pale yellow soybean flour on the right side of the table: the bowl itself becomes purple (the outside of the bowl painted purple, the flour inside stays)."
+   }
   },
   {
    "q": 5,
@@ -1678,18 +1683,6 @@
    "go": "最後の5問目、難問です。どうぞ。",
    "prompt": "Scene: close-up of a wooden tool shelf under the eaves of a traditional Japanese house on a winter day, wooden floor and wooden walls, a little snow in the garden. CENTER, LARGE (main subject): a tall wooden shelf holding stacked bamboo steamers (seiro) and a big wooden mortar (usu) with a mallet (kine) leaning beside it. Winter only: no Christmas, New Year's Eve or New Year decorations (no kagami-mochi, no shimenawa, no kadomatsu), no yuzu, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the floor, a shelf or a counter, or hangs from a hook; nothing floats. Each listed object is about one twenty-fifth of the picture width, TINY, with plenty of empty space around it. No letters, labels, numbers or writing anywhere (every tag, cloth, bag and sign is plain and blank). No people, no hands. Do not use much red or orange: keep the light natural daylight and the whites ordinary white. Objects: (upper left, on the eave rail) a tiny sparrow standing and facing left; (upper right, hanging from a hook) a tiny woven bamboo basket; (middle left, on a shelf) a tiny teacup on a saucer; (middle right, on a shelf) a tiny wooden spoon in a tiny ceramic jar; (lower left, on the wooden floor) a tiny tabby cat sleeping on a cushion; (lower right, on the wooden floor) a tiny wooden crate of three round white rice cakes. The painting reaches the very edge of the canvas on all four sides, with no paper margin.",
    "answers_intro": "答えです。",
-   "retries": {
-    "2": {
-     "crop": [
-      1100,
-      1584,
-      1856,
-      2088
-     ],
-     "aspect": "3:2",
-     "prompt": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. Do not move or change anything else in this picture. The small wooden crate on the floor holds exactly TWO round white rice cakes now instead of three: remove one of the three, so two separate round white rice cakes remain, and show the plain empty wooden crate bottom where the third was. Do not turn the rice cakes into a block."
-    }
-   },
    "diffs": [
     {
      "id": 1,
@@ -1707,31 +1700,31 @@
     },
     {
      "id": 2,
-     "type": "数",
-     "label": "もちが3つから2つ",
-     "line": "木箱のもちが、2つになりました。",
+     "type": "なくなる",
+     "label": "すずめがいない",
+     "line": "左上のすずめが、いなくなりました。",
      "box": [
-      1290,
-      1820,
-      1700,
-      2030
+      270,
+      165,
+      520,
+      385
      ],
-     "object_w": 125,
-     "src": "2"
+     "object_w": 200,
+     "src": "5"
     },
     {
      "id": 3,
-     "type": "なくなる",
-     "label": "湯のみがない",
-     "line": "左の湯のみが、なくなりました。",
+     "type": "色",
+     "label": "湯のみが黄色",
+     "line": "左の湯のみが、黄色くなりました。",
      "box": [
-      120,
-      955,
+      115,
+      960,
       370,
-      1150
+      1165
      ],
      "object_w": 143,
-     "src": "1"
+     "src": "4"
     }
    ],
    "hint_diff": null,
@@ -1741,7 +1734,12 @@
     1856,
     2088
    ],
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the wooden spoon standing in the small ceramic jar on the right shelf now leans the opposite way (to the left instead of the right); (b) the small wooden crate on the floor at the lower right holds two white rice cakes instead of three; (c) the small teacup on the saucer on the left shelf is gone (the empty saucer stays)."
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the wooden spoon standing in the small ceramic jar on the right shelf now leans the opposite way (to the left instead of the right); (b) the small wooden crate on the floor at the lower right holds two white rice cakes instead of three; (c) the small teacup on the saucer on the left shelf is gone (the empty saucer stays).",
+   "edit_prompts": {
+    "3": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small teacup on the saucer on the left shelf becomes blue (the cup painted blue, the saucer unchanged); (b) the small wooden peg sticking out at the right side of the middle shelf of the wooden cabinet is gone (show the plain wooden shelf edge).",
+    "4": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. The change must be clearly visible. Do not move any object. Change: the small teacup on the saucer on the left shelf becomes yellow (the cup painted yellow, the saucer unchanged).",
+    "5": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. The change must be clearly visible. Do not move any object. Change: the small sparrow standing on the snowy wooden railing at the upper left is gone (show the plain snowy railing, no bird, no leftover outline or shadow)."
+   }
   }
  ],
  "thumbnail": {
