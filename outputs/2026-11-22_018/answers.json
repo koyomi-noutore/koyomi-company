@@ -674,32 +674,32 @@
      "label": "窓辺に湯のみ",
      "line": "窓辺に、湯のみがひとつ増えました。",
      "box_px": [
-      894,
-      366,
-      1046,
-      558
+      918,
+      405,
+      1066,
+      586
      ],
      "box_screen": [
-      462,
-      189,
-      541,
-      289
+      475,
+      209,
+      551,
+      303
      ],
      "circle_a_screen": [
-      462,
-      189,
-      541,
-      289
+      475,
+      209,
+      551,
+      303
      ],
      "circle_b_screen": [
-      462,
-      189,
-      541,
-      289
+      475,
+      209,
+      551,
+      303
      ],
-     "object_w_px": 140,
-     "object_picture_width_pct": 7.54,
-     "object_screen_width_pct": 3.77,
+     "object_w_px": 120,
+     "object_picture_width_pct": 6.47,
+     "object_screen_width_pct": 3.23,
      "in_level_range": true,
      "in_safe_y": true,
      "edit_version": "p",
