@@ -33,7 +33,7 @@ def make(out_dir, fontp):
         left = (c.width - pw) // 2
         return c.crop((left, 0, left + pw, ph)), s, left
     fa, s, left = fit(a)
-    fb, _, _ = fit(b)
+    fb, _, _ = fit(a)   # 2026-11-23/24 CEO厳守：サムネは左右とも元の絵（違いゼロ）
     im = Image.new("RGB", (TW, TH))
     im.paste(fa, (0, 0)); im.paste(fb, (pw, 0))
     d = ImageDraw.Draw(im)
