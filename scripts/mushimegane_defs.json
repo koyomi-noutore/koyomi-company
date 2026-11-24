@@ -1,0 +1,26 @@
+{
+  "_説明": "「この○○なーんだ？」虫めがねクイズの問題の定義（2026-11-24 CEO案の試作）。path は絵の中の道すじ（x,y は 0〜1。左上が 0,0）。最初は分かりにくい所から、物の特徴の部分へ順に。12秒で通る。",
+  "items": [
+    {"id": "kabu", "kind": "野菜", "answer": "かぶ", "answer_voice": "かぶ", "image": "kabu.png",
+     "prompt_subject": "one Japanese turnip (kabu) drawn whole: a round white bulb with a faint pink-purple tint near the top, a thin pointed root tail at the bottom, and a bunch of fresh green leaves on top.",
+     "path": [[0.37, 0.92], [0.55, 0.76], [0.45, 0.58], [0.58, 0.40], [0.52, 0.26], [0.70, 0.12]],
+     "path_note": "根の先 → 白い玉の下 → 白い玉 → 紫がかった首 → くき → 葉",
+     "intro_voice": "このやさい、なーんだ？むしめがねで、のぞいてね。",
+     "outro": {"line": ["何秒でわかったか、コメントで教えてくださいね。", "なんびょうでわかったか、コメントで、おしえてくださいね。"],
+               "veil": [["何秒で", 130], ["わかったか", 130], ["コメントで", 120]]}},
+    {"id": "tanuki", "kind": "動物", "answer": "たぬき", "answer_voice": "たぬき", "image": "tanuki.png",
+     "prompt_subject": "one cute tanuki (Japanese raccoon dog) sitting upright facing front: round body with a cream belly, dark eye patches, small rounded ears with dark tips, a bushy striped tail visible at one side.",
+     "path": [[0.58, 0.68], [0.20, 0.83], [0.70, 0.16], [0.45, 0.28]],
+     "path_note": "おなか → しっぽのしま → 耳 → 目のまわり",
+     "intro_voice": "このどうぶつ、なーんだ？むしめがねで、のぞいてね。",
+     "outro": {"line": ["わかったら、コメントで教えてくださいね。", "わかったら、コメントで、おしえてくださいね。"],
+               "veil": [["わかったら", 110], ["コメントで", 120], ["教えてね", 120]]}},
+    {"id": "oden", "kind": "食べ物", "answer": "おでん", "answer_voice": "おでん", "image": "oden.png",
+     "prompt_subject": "one round bowl of Japanese oden seen from slightly above: clear light-brown broth with a white daikon radish round slice, a boiled egg cut in half, a triangle konnyaku, and a chikuwa tube, a little steam above.",
+     "path": [[0.45, 0.82], [0.32, 0.62], [0.38, 0.44], [0.55, 0.52], [0.72, 0.58], [0.65, 0.38]],
+     "path_note": "器の底 → はんぺん → 大根 → たまご → ちくわ → こんにゃく",
+     "intro_sub": "この食べ物、なーんだ？虫めがねで、のぞいてみてね。", "intro_voice": "このたべもの、なーんだ？むしめがねで、のぞいてみてね。",
+     "outro": {"line": ["わかったら、画面を2回タップしてね。", "わかったら、がめんを、にかいタップしてね。"],
+               "veil": [["わかったら", 110], ["画面を2回", 120], ["タップしてね", 120]]}}
+  ]
+}
