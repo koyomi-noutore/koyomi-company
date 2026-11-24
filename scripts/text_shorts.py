@@ -22,12 +22,27 @@ os.environ.setdefault("KOYOMI_EPISODE_DIR", str(Path(__file__).resolve().parent.
 
 W, H, FPS = 1080, 1920, 30
 FONT = Path.home() / ".cache/koyomi/fonts/package/900Black/NotoSansJP_900Black.ttf"
-BG = (34, 48, 74)           # 落ち着いた2色：濃い藍
-CARD = (250, 243, 228)      #               生成り（カード）
-INK = (40, 34, 30)
-ACCENT = (255, 205, 40)     # 答え・強調の黄色
-RED = (220, 50, 40)
+# 色は scripts/season_theme.json の季節の色から読む（2026-11-24 夜 CEO厳守：ショートの背景は長尺と同じ季節の色。紺の決め打ちはやめた）。
+# 季節は set_season(season) か、問題の problem.json の "season"、または --season で決める（--season が最優先）。どれも無ければ「冬」（winter_A）。
+# 呼ぶ側（chigau_shorts.py・mushimegane_shorts.py）が T.BG・T.CARD・T.INK・T.RED・T.ACCENT を今までの名前で読めるように、名前は変えていない。
+BG = CARD = INK = RED = SEASON_ACCENT = EDGE = HIT = None
+THEME_NAME = ""
+SEASON_ARG = None           # コマンドラインで指定された季節（あれば problem.json の season より優先）
+ACCENT = (255, 205, 40)     # 暗い幕（VEIL）の上の強調の黄色。幕は季節によらず暗いので、この色は季節で変えない
 VEIL = 0.62                 # 暗い幕の濃さ
+
+
+def set_season(season=None, theme=None):
+    """季節の色（背景・カード・文字・赤など）を入れ替える。BG＝背景、CARD＝パネル、INK＝文字、RED＝答えの丸・のこり少ない秒数、
+    SEASON_ACCENT＝見出し・吹き出しの枠、EDGE＝カードの縁、HIT＝答えの欄の塗り。"""
+    global BG, CARD, INK, RED, SEASON_ACCENT, EDGE, HIT, THEME_NAME
+    from season_pick import pick
+    THEME_NAME, t = pick(season, theme)
+    BG, CARD, INK, RED, SEASON_ACCENT, EDGE, HIT = (t[k] for k in ("bg", "panel", "ink", "alert", "accent", "edge", "hit"))
+    return THEME_NAME
+
+
+set_season()
 X0, X1 = 90, 990            # 中身を置く横の範囲（左右の端・右のボタンを避ける）
 Y_TOP, Y_BOTTOM = 230, 1500  # 中身を置く縦の範囲（上120px・下のタイトルの帯を避ける）
 
@@ -62,17 +77,17 @@ def veil(im, lines):
 
 def header(d, title, sub=None):
     sz = fit(d, title, 84)
-    text_c(d, (W // 2, 300), title, sz, (255, 255, 255))
+    text_c(d, (W // 2, 300), title, sz, INK)
     if sub:
-        text_c(d, (W // 2, 395), sub, fit(d, sub, 54), ACCENT)
+        text_c(d, (W // 2, 395), sub, fit(d, sub, 54), SEASON_ACCENT)
 
 
 def footer(d, remain=None, tap=True):
     if remain is not None:
-        d.rounded_rectangle((W // 2 - 160, 1360, W // 2 + 160, 1450), 40, fill=CARD)
+        d.rounded_rectangle((W // 2 - 160, 1360, W // 2 + 160, 1450), 40, fill=CARD, outline=EDGE, width=4)
         text_c(d, (W // 2, 1405), f"のこり {remain}", 56, RED if remain <= 3 else INK)
     if tap:
-        text_c(d, (W // 2, 1500), "わかったら 画面を2回タップしてね", fit(d, "わかったら 画面を2回タップしてね", 50), (255, 255, 255))
+        text_c(d, (W // 2, 1500), "わかったら 画面を2回タップしてね", fit(d, "わかったら 画面を2回タップしてね", 50), INK)
 
 
 # ---------- ① 都道府県の穴埋め ----------
@@ -89,9 +104,9 @@ def pref_frame(state, remain=None):
         q, a = it[0], it[1]
         label = it[2] if len(it) > 2 else None   # 2026-11-23：「宮城県の県庁所在地」のような見出し（なければ今までどおり）
         y = 640 + i * 270
-        d.rounded_rectangle((X0 + 30, y - 120, X1 - 30, y + 120), 40, fill=CARD)
+        d.rounded_rectangle((X0 + 30, y - 120, X1 - 30, y + 120), 40, fill=CARD, outline=EDGE, width=4)
         if label:
-            text_c(d, (W // 2, y - 80), label, fit(d, label, 46, 700), (90, 80, 70))
+            text_c(d, (W // 2, y - 80), label, fit(d, label, 46, 700), INK)
         shown = a if i < state else q
         step = min(200, 740 // len(shown))
         size = 170 if not label else min(150, step - 20)
@@ -122,7 +137,7 @@ def cross_frame(state, remain=None):
     for dx, dy, ch in cells:
         x, y = cx + dx * cs, cy + dy * cs
         d.rounded_rectangle((x - cs // 2 + 8, y - cs // 2 + 8, x + cs // 2 - 8, y + cs // 2 - 8), 30,
-                            fill=ACCENT if (ch == "□" and state) else CARD)
+                            fill=HIT if (ch == "□" and state) else CARD, outline=EDGE, width=4)
         if ch == "□":
             if state:
                 text_c(d, (x, y), CROSS["answer"], 210, RED)
@@ -146,7 +161,7 @@ def kanji_frame(state, remain=None):
     panels = [(W // 2 - 430, False), (W // 2 + 10, True)]
     for px, right in panels:
         pw = cw * 3 + 20
-        d.rounded_rectangle((px, 450, px + pw, 450 + KANJI["rows"] * ch + 30), 24, fill=CARD)
+        d.rounded_rectangle((px, 450, px + pw, 450 + KANJI["rows"] * ch + 30), 24, fill=CARD, outline=EDGE, width=4)
         for r in range(KANJI["rows"]):
             for c in range(3):
                 s = KANJI["diffs"].get((r, c), KANJI["word"][c]) if right else KANJI["word"][c]
@@ -201,8 +216,9 @@ def speaker(im, face, sub=None):
     if sub:
         d = ImageDraw.Draw(im)
         x0, y0, x1, y1 = BUBBLE
-        d.rounded_rectangle(BUBBLE, 30, fill=(255, 255, 255), outline=ACCENT, width=5)
+        d.rounded_rectangle(BUBBLE, 30, fill=(255, 255, 255), outline=SEASON_ACCENT, width=5)
         d.polygon([(x0 + 2, y0 + 80), (x0 - 34, y0 + 110), (x0 + 2, y0 + 125)], fill=(255, 255, 255))
+        d.line([(x0 + 2, y0 + 80), (x0 - 34, y0 + 110), (x0 + 2, y0 + 125)], fill=SEASON_ACCENT, width=5)
         sz = 46
         ls = wrap(d, sub, sz, x1 - x0 - 50)
         while len(ls) > 3:
@@ -216,7 +232,7 @@ def speaker(im, face, sub=None):
 def timer(im, remain):
     d = ImageDraw.Draw(im)
     cx, cy, r = 955, 185, 52
-    d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=CARD, outline=RED if remain <= 3 else ACCENT, width=6)
+    d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=CARD, outline=RED if remain <= 3 else SEASON_ACCENT, width=6)
     text_c(d, (cx, cy), str(remain), 56, RED if remain <= 3 else INK)
     return im
 
@@ -399,6 +415,8 @@ def load_problem(path):
     P = json.loads(Path(path).read_text(encoding="utf-8"))
     kind = P["kind"]
     PROBLEM_ID = P["id"]
+    if (P.get("season") or P.get("theme")) and not SEASON_ARG:    # 問題に季節が書いてあれば、その季節の色（--season があればそちらが先。どちらも無ければ冬のまま）
+        set_season(P.get("season"), P.get("theme"))
     cfg = KINDS[kind][0]
     for k in ("title", "sub", "think", "veil", "across", "down", "answer", "word", "rows"):
         if k in P:
@@ -411,7 +429,19 @@ def load_problem(path):
     return kind
 
 
+def take_season(argv):
+    """コマンドラインの `--season 冬`（季節またはテーマ名）を取り除いて、その季節の色にする。なければ何もしない。"""
+    global SEASON_ARG
+    if "--season" in argv:
+        i = argv.index("--season")
+        SEASON_ARG = argv[i + 1]
+        del argv[i:i + 2]
+        set_season(SEASON_ARG)
+    return SEASON_ARG
+
+
 if __name__ == "__main__":
+    take_season(sys.argv)
     out = Path(sys.argv[1]).resolve(); out.mkdir(parents=True, exist_ok=True)
     args = sys.argv[2:]
     if args and args[0].endswith(".json"):          # 問題の定義から作る：<出力フォルダ> <problem.json>
