@@ -5,13 +5,14 @@
   絵（<id>.png）が無いときだけ画像APIを1枚使う（Vertex 標準）。あれば作り直さない。
 画面：季節の背景（scripts/season_theme.json の冬＝winter_A。2026-11-24 CEO厳守）に大きな見出し。中央の正方形の絵を黒でおおい、
 虫めがねがゆっくり動いて、レンズの円の中だけ絵が見える（直径は正方形の約3割・道すじは約12秒）。最後に黒を外して「正解は、○○でした」。
-音・声・こよみ先生・矢印は text_shorts.py の部品を使い、最後の流れは short_outro.py。
+音・声・こよみ先生・矢印は text_shorts.py の部品を使い、最後の流れは short_outro.py の build_outro（short_outro.py は変えていない。言い方の差し替えは、この中で SO.COMMENT・SO.CTA・SO.CTA_VEIL に実行時に入れる。T.CARD と同じやり方）。
 """
 import json, math, subprocess, sys, time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 import text_shorts as T
+import short_outro as SO
 from short_outro import build_outro
 from PIL import Image, ImageDraw
 
@@ -28,6 +29,8 @@ BLACK = (22, 20, 18)
 S = 720                                  # 正方形の一辺
 SX, SY = (W - S) // 2, 500               # 正方形の左上（下の y 1300 より下はこよみ先生と吹き出し）
 LENS_D = round(S * 0.30)                 # レンズの直径＝正方形の約3割
+LINE_Y = (190, 322, 440)                 # 0:00 の3行の中心の高さ。文字の大きさは 125・125・90px（上120pxと黒い正方形 y500〜 にかからない）
+SUB, SUB_SIZE = "虫めがねでのぞいてね", 90
 WALK = 12                                # 虫めがねが道すじを通る秒数＝考える時間
 RIM = (120, 78, 46)
 
@@ -76,9 +79,9 @@ def frame(item, pic, mode, t=0.0, remain=None):
         T.text_c(d, (W // 2, 250), "正解は", 110, INK)
         T.text_c(d, (W // 2, 395), f"「{item['answer']}」！", T.fit(d, f"「{item['answer']}」！", 150, 900), ACC)
     else:
-        T.text_c(d, (W // 2, 225), f"この{item['kind']}", T.fit(d, f"この{item['kind']}", 140, 900), INK)
-        T.text_c(d, (W // 2, 362), "なーんだ？", 140, ACC)
-        T.text_c(d, (W // 2, 450), "虫めがねで のぞいてね", 54, INK)
+        T.text_c(d, (W // 2, LINE_Y[0]), f"この{item['kind']}", T.fit(d, f"この{item['kind']}", 125, 900), INK)
+        T.text_c(d, (W // 2, LINE_Y[1]), "なーんだ？", 125, ACC)
+        T.text_c(d, (W // 2, LINE_Y[2]), SUB, SUB_SIZE, INK)
     if mode == "answer":
         im.paste(pic, (SX, SY))
         d.rectangle((SX - 3, SY - 3, SX + S + 2, SY + S + 2), outline=INK, width=6)
@@ -101,7 +104,7 @@ def build(item, out):
 
     def say(key, line, at=None):
         w, dur = T.voice(item["id"], key, line[1]); voices.append((w, (t if at is None else at) + 0.3, key, line)); return dur + 0.3
-    intro = (f"この{item['kind']}、なーんだ？虫めがねで、のぞいてね。", item["intro_voice"])
+    intro = (item.get("intro_sub", f"この{item['kind']}、なーんだ？虫めがねで、のぞいてね。"), item["intro_voice"])
     d = say("intro", intro)
     f0 = T.speaker(frame(item, pic, "cover", 0), "normal", intro[0])
     seq.append((f0, max(5.0, d + 0.6))); t += seq[-1][1]
@@ -119,10 +122,11 @@ def build(item, out):
     seq.append((T.speaker(frame(item, pic, "answer"), "yay", ans[0]), max(3.5, d + 1.5))); t += seq[-1][1]
     ev["end_at"] = t
     o = item["outro"]
-    comment = {"line": tuple(o["line"]), "veil": [tuple(v) for v in o["veil"]]}
+    SO.COMMENT["mm"] = {"line": tuple(o["line"]), "veil": [tuple(v) for v in o["veil"]]}
     cta = ("左下をクリックして、ほかの問題にも挑戦してくださいね。", "ひだりしたをクリックして、ほかのもんだいにも、ちょうせんしてくださいね。")
     cta_veil = [("ほかの問題にも", 110, (255, 255, 255)), ("挑戦！", 110, (255, 255, 255)), ("左下をクリック", 120, T.ACCENT)]
-    frames, length = build_outro(frame(item, pic, "answer"), lambda key, ln, off: say(key, ln, t + off), T.veil, T.speaker, T.arrow, comment=comment, cta=cta, cta_veil=cta_veil)
+    SO.CTA, SO.CTA_VEIL = cta, cta_veil
+    frames, length = build_outro(frame(item, pic, "answer"), lambda key, ln, off: say(key, ln, t + off), T.veil, T.speaker, T.arrow, comment="mm")
     seq += frames; total = t + length
     tmp = WORK / f"_{item['id']}"; tmp.mkdir(parents=True, exist_ok=True)
     lst = []
