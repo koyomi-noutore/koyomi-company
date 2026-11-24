@@ -19,7 +19,8 @@ sys.path.insert(0, str(Path(__file__).parent))
 from episode_plan import plan
 
 W, H, FPS = 1080, 1920, 30
-BG = (246, 236, 216)
+BG = (246, 236, 216)        # 季節の背景（apply_season が season_theme.json の bg に入れ替える。2026-11-24 夜 CEO厳守：ショートも長尺と同じ季節の見た目）
+FRAME = (255, 250, 238)     # 絵の枠（季節の panel）
 INK = (59, 47, 37)
 RED = (220, 30, 30)
 # 画面の作り（shorts.md「ショートの画面の作り（2026-11-18 夜 CEO決定・最新）」）：初期の形（第1回の台所）に戻す。
@@ -51,6 +52,17 @@ LINK_XY = (190, 1760)      # 関連動画のリンク（左下、y 約1700〜180
 # plan.json の "shorts": [{...1本目...}, {...2本目...}]（なければ "short"）。1本目は <回>/short/、2本目は <回>/short2/
 SUB = "short"
 VARIANT = 1
+
+
+def apply_season():
+    """間違い探しのショートの背景（左右のすき間）と絵の枠を、その長尺と同じ季節の色にする。
+    季節の決め方：環境変数 KOYOMI_THEME > plan.json の theme > plan.json の season > 「冬」（winter_A）。"""
+    global BG, FRAME
+    from season_pick import pick
+    p = plan()
+    name, t = pick(p.get("season"), p.get("theme"))
+    BG, FRAME = t["bg"], t["panel"]
+    return name
 
 
 def use(n):
@@ -204,10 +216,11 @@ def setup(ep, work, fontp):
     for side in "ab":
         im = Image.open(Path(ep) / f"q{q}_{side}.png").convert("RGB").crop(CROP)
         pics[side] = im.resize((PW, PH), Image.LANCZOS)
+    apply_season()
     base = Image.new("RGB", (W, H), BG)
     for side, y in YS.items():
         base.paste(pics[side], (PX, y))
-        ImageDraw.Draw(base).rectangle((PX - 4, y - 4, PX + PW + 3, y + PH + 3), outline=(255, 250, 238), width=4)
+        ImageDraw.Draw(base).rectangle((PX - 4, y - 4, PX + PW + 3, y + PH + 3), outline=FRAME, width=4)
     CTX["base"] = base
     # 幕の上の大きな文字は太い角ゴシック（Noto Sans JP Black）。CEOが「とても読みやすい」と評価した第8回・第9回のショートと同じ。
     # （サムネは 2026-11-18 夜から Zen Maru Gothic Bold。ショートの書体は変えていない）

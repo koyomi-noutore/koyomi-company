@@ -26,14 +26,15 @@ def font_w(size, weight="900Black"):
 TITLE = "ちがうのどーれだ？"
 
 
-def base(what, bg=T.CARD):
-    """見出し（1行に収まる範囲で大きく）＋説明文2行（2026-11-23 CEO）。what＝字・みかん など。"""
+def base(what, bg=None):
+    """見出し（1行に収まる範囲で大きく）＋説明文2行（2026-11-23 CEO）。what＝字・みかん など。
+    色は季節の色（text_shorts.set_season。2026-11-24 夜 CEO厳守）。背景＝季節の bg、見出し＝ink、説明文＝季節の accent、台紙＝panel（絵の白い背景の回は白）。"""
     im = Image.new("RGB", (W, H), T.BG)
     d = ImageDraw.Draw(im)
-    T.text_c(d, (W // 2, 272), TITLE, T.fit(d, TITLE, 120, 900), (255, 255, 255))
+    T.text_c(d, (W // 2, 272), TITLE, T.fit(d, TITLE, 120, 900), T.INK)
     for y, s_ in ((347, f"一つだけ違う{what}があるよ。"), (396, "見つけてみてね！")):
-        T.text_c(d, (W // 2, y), s_, T.fit(d, s_, 46, 860), T.ACCENT)
-    d.rounded_rectangle(PANEL, 40, fill=bg)
+        T.text_c(d, (W // 2, y), s_, T.fit(d, s_, 46, 860), T.SEASON_ACCENT)
+    d.rounded_rectangle(PANEL, 40, fill=bg or T.CARD, outline=T.EDGE, width=5)
     return im, d
 
 
@@ -274,6 +275,8 @@ def load_problem(path):
     import json
     P = json.loads(Path(path).read_text(encoding="utf-8"))
     key = P["id"]
+    if (P.get("season") or P.get("theme")) and not T.SEASON_ARG:   # 問題に季節があればその季節の色（--season が先。どちらも無ければ冬）
+        T.set_season(P.get("season"), P.get("theme"))
     cfg = {"key": key, "main": P["main"], "odd": P["odd"], "n": P["n"], "weight": P["weight"], "size": tuple(P["size"]),
            "tilt": P["tilt"], "seed": P["seed"], "odd_i": P["odd_i"]}
     CFGS[key] = cfg
@@ -374,6 +377,7 @@ def build(kind, out):
 
 
 if __name__ == "__main__":
+    T.take_season(sys.argv)                       # --season 冬（季節またはテーマ名）。省略は冬（winter_A）
     out = Path(sys.argv[1]).resolve(); out.mkdir(parents=True, exist_ok=True)
     WORK.mkdir(parents=True, exist_ok=True)
     kinds = sys.argv[2:] or ORDER

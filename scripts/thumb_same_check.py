@@ -1,6 +1,8 @@
 """サムネの左右が同じ絵か（違いゼロか）を確かめる（2026-11-24 CEO厳守ルール）。
 使い方：python3 scripts/thumb_same_check.py <サムネ画像> [...]
-上の帯と下の文字を除いた中央の帯（縦 25〜65%）で、左半分と右半分の差を比べる。差があれば「不合格」で終了コード1。"""
+上の帯と下の文字を除いた中央の帯（縦 25〜65%）で、左半分と右半分の差を比べる。差があれば「不合格」で終了コード1。
+make_episode.py が thumbnail の直後と upload・retitle・short-upload の前に自動で呼ぶ（thumb_guard）。
+ショート自身のサムネは0:00の画面で、絵を左右に並べたものではないので、この確認の対象外（長尺のサムネが合格でないとショートも上げない）。"""
 import sys
 from PIL import Image, ImageChops, ImageStat
 

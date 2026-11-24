@@ -36,6 +36,11 @@
   log-time <工程> <秒>        スクリプトの外の工程（監査など）の時間を outputs/<回>/timing.json に足す
   short-upload                ショートを非公開でアップロード（<回>/short/audit_passed と、長尺の <回>/upload.json が必要）
 
+サムネの確認（2026-11-24 CEO厳守）：scripts/thumb_same_check.py（左右が同じ絵か）を、thumbnail の直後と、upload・retitle・short-upload の前に自動で行う。
+  対象は <回>/ab/thumb_*.jpg と <回>/thumbnail.jpg。1枚でも不合格なら止まる（終了コード1）。サムネが1枚もなくても止まる。
+  ショート自身のサムネは0:00の画面（左右に並べた絵ではない）なので確認の対象外。かわりに、short-upload では元の長尺のサムネが全部合格でなければ上げない。
+  既存の在庫（第10〜19回など）は作り直さない（CEO判断）。それらの回で止まっても作り直さず、報告する。
+
 費用の記録：画像APIは <回>/image_usage.jsonl、声は <作業>/voice/usage.jsonl に自動で残る。cost.md は制作部が書く。
 """
 import json
@@ -142,14 +147,42 @@ def video(ep, work, font):
     log(f"動画：{ep / 'video.mp4'}")
 
 
+def thumb_files(ep):
+    """確認の対象：<回>/ab/thumb_*.jpg（テストと比較の案）と <回>/thumbnail.jpg（アップロード用）。"""
+    return sorted((ep / "ab").glob("thumb_*.jpg")) + ([ep / "thumbnail.jpg"] if (ep / "thumbnail.jpg").exists() else [])
+
+
+def thumb_guard(ep, what="サムネ", files=None, need=True):
+    """サムネが左右まったく同じ絵か確かめる（2026-11-24 CEO厳守。scripts/thumb_same_check.py）。1枚でも不合格なら、ここで止める（終了コード1）。
+    サムネを作った直後と、アップロードの前（upload・retitle・short-upload）で呼ぶ。files を省くと thumb_files(ep)。
+    need が True でサムネが1枚も無いときも止める（サムネなしでアップロードしない）。"""
+    import thumb_same_check as Tc
+    files = thumb_files(ep) if files is None else files
+    if not files:
+        if need:
+            raise SystemExit(f"{what}の確認：サムネ（{ep / 'thumbnail.jpg'}）がありません。サムネなしでは先へ進めません")
+        return
+    bad = []
+    for f_ in files:
+        ok, dd = Tc.check(f_)
+        log(f"{what}の確認：{'合格' if ok else '不合格（左右がちがう）'} {f_}  差={dd}")
+        if not ok:
+            bad.append(f_.name)
+    if bad:
+        log(f"{what}の確認：{len(bad)}枚が不合格です（{', '.join(bad)}）。サムネは、違いを作る前の元の絵を左右に2枚並べる決まりです（knowledge/episode-checklist.md【厳守】）。"
+            "作り直してから進めてください。")
+        sys.exit(1)
+
+
 def thumbnail(ep, font):
     # テストと比較の案（<回>/ab/thumb_A.jpg）があれば、それをアップロード用のサムネにする（2026-11-14 監査：旧型で上書きしていた）
     if (ep / "ab" / "thumb_A.jpg").exists():
         (ep / "thumbnail.jpg").write_bytes((ep / "ab" / "thumb_A.jpg").read_bytes())
         log(f"サムネ：{ep / 'thumbnail.jpg'}（ab/thumb_A.jpg を写した）")
-        return
-    import ep_thumbnail as Th
-    log(f"サムネ：{Th.make(ep, font)}")
+    else:
+        import ep_thumbnail as Th
+        log(f"サムネ：{Th.make(ep, font)}")
+    thumb_guard(ep, "サムネを作った直後")      # 2026-11-24 CEO厳守：左右がちがえば、ここで止める
 
 
 def check(ep, work):
@@ -168,6 +201,7 @@ def check(ep, work):
 def upload(ep):
     if not (ep / "audit_passed").exists():
         raise SystemExit("監査の合格（<回>/audit_passed）がありません。合格していない動画はアップロードしない（社則6章）")
+    thumb_guard(ep, "アップロード前")           # 2026-11-24 CEO厳守：ab/thumb_*.jpg と thumbnail.jpg の全部が合格でなければ上げない
     import youtube_upload as U
     U.upload(ep, thumbnail=ep / "thumbnail.jpg")
 
@@ -248,7 +282,9 @@ def run_step(ep, work, step, args):
         upload(ep)
     elif step == "retitle":
         import youtube_upload as U
-        U.retitle_and_thumbnail(ep, ep / (args[0] if args else "thumbnail_v3.jpg"))
+        new_thumb = ep / (args[0] if args else "thumbnail_v3.jpg")
+        thumb_guard(ep, "差し替えるサムネ", files=[new_thumb])    # 2026-11-24 CEO厳守：差し替えるサムネも左右が同じか確かめる
+        U.retitle_and_thumbnail(ep, new_thumb)
     elif step == "short":
         import ep_short as S
         S.use(args[0] if args else 1)          # short 2 で2本目（<回>/short2/）
@@ -281,6 +317,10 @@ def run_step(ep, work, step, args):
         S.use(args[0] if args else 1)
         if not (ep / S.SUB / "audit_passed").exists():
             raise SystemExit(f"ショートの監査の合格（<回>/{S.SUB}/audit_passed）がありません")
+        # ショートのサムネは0:00の画面（暗い幕と大きな文字。knowledge/shorts.md）で、絵を左右に並べたものではない。
+        # thumb_same_check は「左右の絵が同じか」を見る検査なので、ショート自身のサムネは確認の対象外。
+        # そのかわり、ショートは長尺へ案内する（関連動画・説明欄）ので、元の長尺のサムネ（ab/thumb_*.jpg と thumbnail.jpg）が全部合格でなければ上げない。
+        thumb_guard(ep, "ショートのアップロード前（元の長尺のサムネ）")
         import youtube_upload as U
         S.description(ep)
         U.upload(ep / S.SUB, short=True)

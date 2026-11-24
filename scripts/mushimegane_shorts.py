@@ -3,7 +3,7 @@
 使い方：python3 scripts/mushimegane_shorts.py <出力フォルダ> [id ...]   id は scripts/mushimegane_defs.json の items（kabu・tanuki・oden）
   <出力>/<id>.mp4（縦1080×1920・30fps）と readings_check.md。作業ファイルは ~/.cache/koyomi/mushimegane/。
   絵（<id>.png）が無いときだけ画像APIを1枚使う（Vertex 標準）。あれば作り直さない。
-画面：クリーム色の背景（間違い探しと同じ。scripts/season_theme.json の「秋」）に大きな見出し。中央の正方形の絵を黒でおおい、
+画面：季節の背景（scripts/season_theme.json の冬＝winter_A。2026-11-24 CEO厳守）に大きな見出し。中央の正方形の絵を黒でおおい、
 虫めがねがゆっくり動いて、レンズの円の中だけ絵が見える（直径は正方形の約3割・道すじは約12秒）。最後に黒を外して「正解は、○○でした」。
 音・声・こよみ先生・矢印は text_shorts.py の部品を使い、最後の流れは short_outro.py。
 """
@@ -19,8 +19,11 @@ W, H, FPS = T.W, T.H, T.FPS
 WORK = Path.home() / ".cache/koyomi/mushimegane"
 T.WORK = WORK
 DEFS = json.loads((Path(__file__).parent / "mushimegane_defs.json").read_text(encoding="utf-8"))["items"]
-THEME = json.loads((Path(__file__).parent / "season_theme.json").read_text(encoding="utf-8"))["themes"]["秋"]
+_ST = json.loads((Path(__file__).parent / "season_theme.json").read_text(encoding="utf-8"))
+SEASON = "冬"                              # 2026-11-24 CEO厳守：ショートの背景は長尺と同じ季節の色。今は全部「冬」（season_theme.json の season_default → winter_A）
+THEME = _ST["themes"][_ST["season_default"][SEASON]]
 BG, INK, ACC = tuple(THEME["bg"]), tuple(THEME["ink"]), tuple(THEME["accent"])
+T.CARD, T.INK = tuple(THEME["panel"]), tuple(THEME["ink"])   # 共通部品（吹き出し・のこり秒数の丸）の色もこの季節の色に（このプログラムの中だけ）
 BLACK = (22, 20, 18)
 S = 720                                  # 正方形の一辺
 SX, SY = (W - S) // 2, 500               # 正方形の左上（下の y 1300 より下はこよみ先生と吹き出し）
