@@ -1,0 +1,2027 @@
+{
+ "episode": "026",
+ "season": "冬",
+ "topics": [
+  "雪の駅"
+ ],
+ "note": "第26回（雪の駅・冬）。公開日は未定（schedule.md 2026-11-22）。偶数の回：サムネのみABテスト（タイトルはA）。",
+ "youtube": {
+  "title": "【間違い探し】雪の駅｜シニア・高齢者の脳トレ",
+  "description_file": "description.md",
+  "title_note": "32文字以内・【間違い探し】から。タイトルA（検索型）。3案は ab/titles.md",
+  "publish_plan": "未定（CEOが決める）"
+ },
+ "screens": {
+  "opening_title": "雪の駅の間違い探し　全5問",
+  "opening_sub": "最後は難問です",
+  "unchiku_header": "こよみ先生の 冬の小話",
+  "unchiku_slides": [
+   {
+    "until": 7,
+    "texts": [
+     [
+      "ひと休み",
+      960,
+      330,
+      130,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "こよみ先生の 季節のお話",
+      960,
+      520,
+      80,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 15,
+    "texts": [
+     [
+      "雪は なぜ 白いの？",
+      960,
+      380,
+      95,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ]
+    ]
+   },
+   {
+    "until": 24,
+    "texts": [
+     [
+      "氷のつぶが 光を",
+      960,
+      330,
+      110,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "はね返すからです",
+      960,
+      520,
+      95,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 30,
+    "texts": [
+     [
+      "ふんわり 積もった雪",
+      960,
+      330,
+      110,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "きれいですね",
+      960,
+      520,
+      95,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   }
+  ],
+  "ending_titles": [
+   [
+    "15個",
+    "雪の駅の名駅長"
+   ],
+   [
+    "11〜14個",
+    "ストーブの名探偵"
+   ],
+   [
+    "6〜10個",
+    "ホームの見習い"
+   ],
+   [
+    "0〜5個",
+    "雪景色の旅人"
+   ]
+  ],
+  "ending_note": "旅人も、毎日ためせば 名駅長です",
+  "ending_next": "ほかの間違い探しも どうぞ",
+  "owl_layout": "bottom",
+  "endscreen_at": 9.0,
+  "rule_overlay": {
+   "text": "右の絵で 違いを3つ さがそう",
+   "sub": "1問 90秒",
+   "sec": 8.0
+  }
+ },
+ "timeline": {
+  "total": 613.5,
+  "opening": [
+   0.0,
+   6.5
+  ],
+  "rule": [
+   6.5,
+   6.5
+  ],
+  "q_start": {
+   "1": 6.5,
+   "2": 114.5,
+   "3": 222.5,
+   "4": 360.5,
+   "5": 468.5
+  },
+  "unchiku": [
+   330.5,
+   360.5
+  ],
+  "ending": [
+   576.5,
+   613.5
+  ],
+  "card": 3.0,
+  "solve": 90.0,
+  "answer": 15.0,
+  "hint_at": null,
+  "ten_at": 80.0,
+  "ans_first": 1.6,
+  "ans_step": 4.3,
+  "solve_calls": [
+   [
+    30,
+    "あと60秒です。"
+   ],
+   [
+    60,
+    "あと30秒です。"
+   ]
+  ],
+  "go_delay": 2.4
+ },
+ "lines": {
+  "opening": [
+   {
+    "id": "op",
+    "at": 0.0,
+    "text": "雪の駅の間違い探し、全5問。",
+    "face": "smile",
+    "until": 4.2
+   },
+   {
+    "id": "op2",
+    "at": 4.2,
+    "text": "最後は難問。",
+    "face": "wink",
+    "until": 6.5
+   }
+  ],
+  "rule": [],
+  "unchiku": [
+   {
+    "id": "u1",
+    "at": 0.0,
+    "text": "ここでひと休み。こよみ先生の季節のお話です。",
+    "face": "smile",
+    "until": 7.0
+   },
+   {
+    "id": "u2",
+    "at": 7.0,
+    "text": "雪は、なぜ白く見えるのか、ご存じですか？",
+    "face": "think",
+    "until": 15.0
+   },
+   {
+    "id": "u3",
+    "at": 15.0,
+    "text": "氷のつぶが、光をあちこちにはね返すから、白く見えるんです。",
+    "face": "surprise",
+    "until": 24.0
+   },
+   {
+    "id": "u4",
+    "at": 24.0,
+    "text": "ふんわり積もった雪は、きれいですね。",
+    "face": "wink",
+    "until": 30.0
+   }
+  ],
+  "ending": [
+   {
+    "id": "e1",
+    "at": 0.0,
+    "text": "これで5問目まで、おしまいです。",
+    "face": "yay",
+    "until": 4.2
+   },
+   {
+    "id": "e2",
+    "at": 4.2,
+    "text": "15個の違い、いくつ見つかりましたか。結果発表です。",
+    "face": "smile",
+    "until": 10.8
+   },
+   {
+    "id": "e3",
+    "at": 10.8,
+    "text": "チャンネル登録とベルで、毎朝8時半に問題が届きます。毎日の頭の体操にどうぞ。",
+    "face": "smile",
+    "until": 21.0
+   },
+   {
+    "id": "e4",
+    "at": 21.0,
+    "text": "ほかにも、いろいろな間違い探しがあります。もっと難しい問題に挑戦したい方は、画面の動画をクリックしてくださいね。",
+    "face": "wink",
+    "until": 36.0
+   }
+  ],
+  "extra": [
+   {
+    "id": "c_comment",
+    "at": 237.5,
+    "text": "見つかった数を、あとでコメントで教えてくださいね。",
+    "face": "smile",
+    "until": 244.5
+   }
+  ]
+ },
+ "readings": [
+  [
+   "手前",
+   "てまえ"
+  ],
+  [
+   "結び目",
+   "むすびめ"
+  ],
+  [
+   "風呂敷",
+   "ふろしき"
+  ],
+  [
+   "反対向き",
+   "はんたいむき"
+  ],
+  [
+   "座る",
+   "すわる"
+  ],
+  [
+   "重ね",
+   "かさね"
+  ],
+  [
+   "減り",
+   "へり"
+  ],
+  [
+   "ひょうたん",
+   "ひょうたん"
+  ],
+  [
+   "芋煮会",
+   "いもにかい"
+  ],
+  [
+   "芋煮",
+   "いもに"
+  ],
+  [
+   "川原",
+   "かわら"
+  ],
+  [
+   "里芋",
+   "さといも"
+  ],
+  [
+   "昼ごはん",
+   "ひるごはん"
+  ],
+  [
+   "夕方",
+   "ゆうがた"
+  ],
+  [
+   "秋景色",
+   "あきげしき"
+  ],
+  [
+   "山形",
+   "やまがた"
+  ],
+  [
+   "宮城",
+   "みやぎ"
+  ],
+  [
+   "牛肉",
+   "ぎゅうにく"
+  ],
+  [
+   "豚肉",
+   "ぶたにく"
+  ],
+  [
+   "土地",
+   "とち"
+  ],
+  [
+   "家庭",
+   "かてい"
+  ],
+  [
+   "味",
+   "あじ"
+  ],
+  [
+   "縁側のみかんと猫",
+   "えんがわのみかんとねこ"
+  ],
+  [
+   "縁側のお茶の時間",
+   "えんがわのおちゃのじかん"
+  ],
+  [
+   "雪うさぎの耳の葉",
+   "ゆきうさぎのみみのは"
+  ],
+  [
+   "雪だるまと冬の朝",
+   "ゆきだるまとふゆのあさ"
+  ],
+  [
+   "こたつのみかん",
+   "こたつのみかん"
+  ],
+  [
+   "みかんの木の庭",
+   "みかんのきのにわ"
+  ],
+  [
+   "雪うさぎの縁側",
+   "ゆきうさぎのえんがわ"
+  ],
+  [
+   "縁側のひなた",
+   "えんがわのひなた"
+  ],
+  [
+   "みかん箱と猫",
+   "みかんばことねこ"
+  ],
+  [
+   "雪だるまの庭",
+   "ゆきだるまのにわ"
+  ],
+  [
+   "冬の朝の窓辺",
+   "ふゆのあさのまどべ"
+  ],
+  [
+   "時計の文字盤",
+   "とけいのもじばん"
+  ],
+  [
+   "雪だるまの鼻",
+   "ゆきだるまのはな"
+  ],
+  [
+   "間違い探し",
+   "まちがいさがし"
+  ],
+  [
+   "雪かきの道",
+   "ゆきかきのみち"
+  ],
+  [
+   "雪の玄関先",
+   "ゆきのげんかんさき"
+  ],
+  [
+   "麦わら帽子",
+   "むぎわらぼうし"
+  ],
+  [
+   "色えんぴつ",
+   "いろえんぴつ"
+  ],
+  [
+   "手ぶくろ",
+   "てぶくろ"
+  ],
+  [
+   "七味入れ",
+   "しちみいれ"
+  ],
+  [
+   "はし置き",
+   "はしおき"
+  ],
+  [
+   "赤とんぼ",
+   "あかとんぼ"
+  ],
+  [
+   "お月さま",
+   "おつきさま"
+  ],
+  [
+   "火ばさみ",
+   "ひばさみ"
+  ],
+  [
+   "赤いふた",
+   "あかいふた"
+  ],
+  [
+   "大学いも",
+   "だいがくいも"
+  ],
+  [
+   "茶わん",
+   "ちゃわん"
+  ],
+  [
+   "鉢植え",
+   "はちうえ"
+  ],
+  [
+   "丸ごと",
+   "まるごと"
+  ],
+  [
+   "通り道",
+   "とおりみち"
+  ],
+  [
+   "大丈夫",
+   "だいじょうぶ"
+  ],
+  [
+   "難しい",
+   "むずかしい"
+  ],
+  [
+   "段の上",
+   "だんのうえ"
+  ],
+  [
+   "雪の上",
+   "ゆきのうえ"
+  ],
+  [
+   "植木鉢",
+   "うえきばち"
+  ],
+  [
+   "花びん",
+   "かびん"
+  ],
+  [
+   "湯のみ",
+   "ゆのみ"
+  ],
+  [
+   "赤い実",
+   "あかいみ"
+  ],
+  [
+   "長いす",
+   "ながいす"
+  ],
+  [
+   "新そば",
+   "しんそば"
+  ],
+  [
+   "干し柿",
+   "ほしがき"
+  ],
+  [
+   "鉄びん",
+   "てつびん"
+  ],
+  [
+   "酉の市",
+   "とりのいち"
+  ],
+  [
+   "飛び石",
+   "とびいし"
+  ],
+  [
+   "掛け軸",
+   "かけじく"
+  ],
+  [
+   "切り株",
+   "きりかぶ"
+  ],
+  [
+   "石灯籠",
+   "いしどうろう"
+  ],
+  [
+   "少なく",
+   "すくなく"
+  ],
+  [
+   "向いて",
+   "むいて"
+  ],
+  [
+   "まん中",
+   "まんなか"
+  ],
+  [
+   "ゆで卵",
+   "ゆでたまご"
+  ],
+  [
+   "右はし",
+   "みぎはし"
+  ],
+  [
+   "茶色い",
+   "ちゃいろい"
+  ],
+  [
+   "花びら",
+   "はなびら"
+  ],
+  [
+   "土なべ",
+   "どなべ"
+  ],
+  [
+   "玉ねぎ",
+   "たまねぎ"
+  ],
+  [
+   "変わり",
+   "かわり"
+  ],
+  [
+   "落ち葉",
+   "おちば"
+  ],
+  [
+   "黄色い",
+   "きいろい"
+  ],
+  [
+   "大きく",
+   "おおきく"
+  ],
+  [
+   "舞って",
+   "まって"
+  ],
+  [
+   "葉っぱ",
+   "はっぱ"
+  ],
+  [
+   "魔法瓶",
+   "まほうびん"
+  ],
+  [
+   "小さな",
+   "ちいさな"
+  ],
+  [
+   "第1問",
+   "だいいちもん"
+  ],
+  [
+   "第2問",
+   "だいにもん"
+  ],
+  [
+   "第3問",
+   "だいさんもん"
+  ],
+  [
+   "第4問",
+   "だいよんもん"
+  ],
+  [
+   "第5問",
+   "だいごもん"
+  ],
+  [
+   "60秒",
+   "ろくじゅうびょう"
+  ],
+  [
+   "30秒",
+   "さんじゅうびょう"
+  ],
+  [
+   "10秒",
+   "じゅうびょう"
+  ],
+  [
+   "小さく",
+   "ちいさく"
+  ],
+  [
+   "取っ手",
+   "とって"
+  ],
+  [
+   "木の札",
+   "きのふだ"
+  ],
+  [
+   "大きな",
+   "おおきな"
+  ],
+  [
+   "前かけ",
+   "まえかけ"
+  ],
+  [
+   "時計",
+   "とけい"
+  ],
+  [
+   "お盆",
+   "おぼん"
+  ],
+  [
+   "栄養",
+   "えいよう"
+  ],
+  [
+   "登録",
+   "とうろく"
+  ],
+  [
+   "毎朝",
+   "まいあさ"
+  ],
+  [
+   "動画",
+   "どうが"
+  ],
+  [
+   "画面",
+   "がめん"
+  ],
+  [
+   "挑戦",
+   "ちょうせん"
+  ],
+  [
+   "違い",
+   "ちがい"
+  ],
+  [
+   "1羽",
+   "いちわ"
+  ],
+  [
+   "小鳥",
+   "ことり"
+  ],
+  [
+   "左の",
+   "ひだりの"
+  ],
+  [
+   "急須",
+   "きゅうす"
+  ],
+  [
+   "屋根",
+   "やね"
+  ],
+  [
+   "小屋",
+   "こや"
+  ],
+  [
+   "縁側",
+   "えんがわ"
+  ],
+  [
+   "朝市",
+   "あさいち"
+  ],
+  [
+   "お皿",
+   "おさら"
+  ],
+  [
+   "1匹",
+   "いっぴき"
+  ],
+  [
+   "お茶",
+   "おちゃ"
+  ],
+  [
+   "金色",
+   "きんいろ"
+  ],
+  [
+   "熊手",
+   "くまで"
+  ],
+  [
+   "飾り",
+   "かざり"
+  ],
+  [
+   "白く",
+   "しろく"
+  ],
+  [
+   "掛け",
+   "かけ"
+  ],
+  [
+   "漬物",
+   "つけもの"
+  ],
+  [
+   "軍手",
+   "ぐんて"
+  ],
+  [
+   "茶色",
+   "ちゃいろ"
+  ],
+  [
+   "風鈴",
+   "ふうりん"
+  ],
+  [
+   "黒板",
+   "こくばん"
+  ],
+  [
+   "反対",
+   "はんたい"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "黄色",
+   "きいろ"
+  ],
+  [
+   "赤く",
+   "あかく"
+  ],
+  [
+   "青く",
+   "あおく"
+  ],
+  [
+   "赤い",
+   "あかい"
+  ],
+  [
+   "筆箱",
+   "ふでばこ"
+  ],
+  [
+   "木箱",
+   "きばこ"
+  ],
+  [
+   "湯気",
+   "ゆげ"
+  ],
+  [
+   "紙袋",
+   "かみぶくろ"
+  ],
+  [
+   "消え",
+   "きえ"
+  ],
+  [
+   "付き",
+   "つき"
+  ],
+  [
+   "水筒",
+   "すいとう"
+  ],
+  [
+   "帽子",
+   "ぼうし"
+  ],
+  [
+   "上級",
+   "じょうきゅう"
+  ],
+  [
+   "中級",
+   "ちゅうきゅう"
+  ],
+  [
+   "初級",
+   "しょきゅう"
+  ],
+  [
+   "黒い",
+   "くろい"
+  ],
+  [
+   "一本",
+   "いっぽん"
+  ],
+  [
+   "高く",
+   "たかく"
+  ],
+  [
+   "短く",
+   "みじかく"
+  ],
+  [
+   "青い",
+   "あおい"
+  ],
+  [
+   "白い",
+   "しろい"
+  ],
+  [
+   "後半",
+   "こうはん"
+  ],
+  [
+   "最後",
+   "さいご"
+  ],
+  [
+   "難問",
+   "なんもん"
+  ],
+  [
+   "問題",
+   "もんだい"
+  ],
+  [
+   "答え",
+   "こたえ"
+  ],
+  [
+   "少し",
+   "すこし"
+  ],
+  [
+   "大根",
+   "だいこん"
+  ],
+  [
+   "小皿",
+   "こざら"
+  ],
+  [
+   "向き",
+   "むき"
+  ],
+  [
+   "一つ",
+   "ひとつ"
+  ],
+  [
+   "模様",
+   "もよう"
+  ],
+  [
+   "下駄",
+   "げた"
+  ],
+  [
+   "金属",
+   "きんぞく"
+  ],
+  [
+   "無く",
+   "なく"
+  ],
+  [
+   "増え",
+   "ふえ"
+  ],
+  [
+   "向い",
+   "むい"
+  ],
+  [
+   "金具",
+   "かなぐ"
+  ],
+  [
+   "一枚",
+   "いちまい"
+  ],
+  [
+   "真上",
+   "まうえ"
+  ],
+  [
+   "屋台",
+   "やたい"
+  ],
+  [
+   "銭湯",
+   "せんとう"
+  ],
+  [
+   "今日",
+   "きょう"
+  ],
+  [
+   "一緒",
+   "いっしょ"
+  ],
+  [
+   "山門",
+   "さんもん"
+  ],
+  [
+   "川辺",
+   "かわべ"
+  ],
+  [
+   "お面",
+   "おめん"
+  ],
+  [
+   "銀色",
+   "ぎんいろ"
+  ],
+  [
+   "丸い",
+   "まるい"
+  ],
+  [
+   "皮",
+   "かわ"
+  ],
+  [
+   "石",
+   "いし"
+  ],
+  [
+   "木",
+   "き"
+  ],
+  [
+   "庭",
+   "にわ"
+  ],
+  [
+   "猫",
+   "ねこ"
+  ],
+  [
+   "実",
+   "み"
+  ],
+  [
+   "番",
+   "ばん"
+  ],
+  [
+   "柱",
+   "はしら"
+  ],
+  [
+   "棚",
+   "たな"
+  ],
+  [
+   "鈴",
+   "すず"
+  ],
+  [
+   "菊",
+   "きく"
+  ],
+  [
+   "器",
+   "うつわ"
+  ],
+  [
+   "花",
+   "はな"
+  ],
+  [
+   "前",
+   "まえ"
+  ],
+  [
+   "笠",
+   "かさ"
+  ],
+  [
+   "鉢",
+   "はち"
+  ],
+  [
+   "柿",
+   "かき"
+  ],
+  [
+   "台",
+   "だい"
+  ],
+  [
+   "軒",
+   "のき"
+  ],
+  [
+   "鐘",
+   "かね"
+  ],
+  [
+   "竹",
+   "たけ"
+  ],
+  [
+   "枝",
+   "えだ"
+  ],
+  [
+   "絵",
+   "え"
+  ],
+  [
+   "上",
+   "うえ"
+  ],
+  [
+   "緑",
+   "みどり"
+  ],
+  [
+   "机",
+   "つくえ"
+  ],
+  [
+   "数",
+   "かず"
+  ],
+  [
+   "形",
+   "かたち"
+  ],
+  [
+   "先",
+   "さき"
+  ],
+  [
+   "下",
+   "した"
+  ],
+  [
+   "輪",
+   "わ"
+  ],
+  [
+   "針",
+   "はり"
+  ],
+  [
+   "牛",
+   "うし"
+  ],
+  [
+   "左",
+   "ひだり"
+  ],
+  [
+   "右",
+   "みぎ"
+  ],
+  [
+   "頭",
+   "あたま"
+  ],
+  [
+   "刃",
+   "は"
+  ],
+  [
+   "量",
+   "りょう"
+  ],
+  [
+   "苗",
+   "なえ"
+  ],
+  [
+   "丸",
+   "まる"
+  ],
+  [
+   "桶",
+   "おけ"
+  ],
+  [
+   "火",
+   "ひ"
+  ],
+  [
+   "葉",
+   "は"
+  ],
+  [
+   "色",
+   "いろ"
+  ],
+  [
+   "鍋",
+   "なべ"
+  ],
+  [
+   "畑",
+   "はたけ"
+  ],
+  [
+   "壁",
+   "かべ"
+  ],
+  [
+   "紋",
+   "もん"
+  ],
+  [
+   "星",
+   "ほし"
+  ],
+  [
+   "銀",
+   "ぎん"
+  ],
+  [
+   "銭湯",
+   "せんとう"
+  ],
+  [
+   "富士山",
+   "ふじさん"
+  ],
+  [
+   "湯船",
+   "ゆぶね"
+  ],
+  [
+   "脱衣所",
+   "だついじょ"
+  ],
+  [
+   "下駄箱",
+   "げたばこ"
+  ],
+  [
+   "洗い場",
+   "あらいば"
+  ],
+  [
+   "番台",
+   "ばんだい"
+  ],
+  [
+   "牛乳",
+   "ぎゅうにゅう"
+  ],
+  [
+   "玄関",
+   "げんかん"
+  ],
+  [
+   "壁",
+   "かべ"
+  ],
+  [
+   "絵",
+   "え"
+  ],
+  [
+   "東京",
+   "とうきょう"
+  ],
+  [
+   "描か",
+   "えがか"
+  ],
+  [
+   "大きな",
+   "おおきな"
+  ],
+  [
+   "多い",
+   "おおい"
+  ],
+  [
+   "百年以上前",
+   "ひゃくねんいじょうまえ"
+  ],
+  [
+   "100年以上前",
+   "ひゃくねんいじょうまえ"
+  ],
+  [
+   "真ん中",
+   "まんなか"
+  ],
+  [
+   "真中",
+   "まんなか"
+  ],
+  [
+   "線",
+   "せん"
+  ],
+  [
+   "餅つき",
+   "もちつき"
+  ],
+  [
+   "餅",
+   "もち"
+  ],
+  [
+   "結果発表",
+   "けっかはっぴょう"
+  ],
+  [
+   "お椀",
+   "おわん"
+  ],
+  [
+   "椀",
+   "わん"
+  ],
+  [
+   "土間",
+   "どま"
+  ],
+  [
+   "軒下",
+   "のきした"
+  ],
+  [
+   "道具だな",
+   "どうぐだな"
+  ],
+  [
+   "もち米",
+   "もちごめ"
+  ],
+  [
+   "ご存じ",
+   "ごぞんじ"
+  ],
+  [
+   "強い",
+   "つよい"
+  ],
+  [
+   "釜",
+   "かま"
+  ],
+  [
+   "土のつぼ",
+   "つちのつぼ"
+  ],
+  [
+   "大根おろし",
+   "だいこんおろし"
+  ],
+  [
+   "ひしゃく",
+   "ひしゃく"
+  ],
+  [
+   "本",
+   "ほん"
+  ],
+  [
+   "きな粉",
+   "きなこ"
+  ],
+  [
+   "紫",
+   "むらさき"
+  ],
+  [
+   "すずめ",
+   "すずめ"
+  ],
+  [
+   "雪の駅",
+   "ゆきのえき"
+  ],
+  [
+   "雪の駅舎の前",
+   "ゆきのえきしゃのまえ"
+  ],
+  [
+   "駅舎",
+   "えきしゃ"
+  ],
+  [
+   "雪のホーム",
+   "ゆきのホーム"
+  ],
+  [
+   "待合室のストーブ",
+   "まちあいしつのストーブ"
+  ],
+  [
+   "待合室",
+   "まちあいしつ"
+  ],
+  [
+   "改札の前",
+   "かいさつのまえ"
+  ],
+  [
+   "改札",
+   "かいさつ"
+  ],
+  [
+   "雪のホームと列車",
+   "ゆきのホームとれっしゃ"
+  ],
+  [
+   "列車",
+   "れっしゃ"
+  ],
+  [
+   "提灯",
+   "ちょうちん"
+  ],
+  [
+   "毛布",
+   "もうふ"
+  ],
+  [
+   "氷",
+   "こおり"
+  ],
+  [
+   "積もった",
+   "つもった"
+  ],
+  [
+   "黄色く",
+   "きいろく"
+  ],
+  [
+   "縞",
+   "しま"
+  ],
+  [
+   "木のたる",
+   "きのたる"
+  ],
+  [
+   "雪",
+   "ゆき"
+  ],
+  [
+   "見える",
+   "みえる"
+  ],
+  [
+   "光",
+   "ひかり"
+  ],
+  [
+   "駅長",
+   "えきちょう"
+  ],
+  [
+   "名探偵",
+   "めいたんてい"
+  ],
+  [
+   "見習い",
+   "みならい"
+  ],
+  [
+   "旅人",
+   "たびびと"
+  ],
+  [
+   "雪景色",
+   "ゆきげしき"
+  ],
+  [
+   "毎日",
+   "まいにち"
+  ],
+  [
+   "全5問",
+   "ぜんごもん"
+  ],
+  [
+   "ミルク缶",
+   "ミルクかん"
+  ],
+  [
+   "缶",
+   "かん"
+  ],
+  [
+   "腰かけ",
+   "こしかけ"
+  ],
+  [
+   "水筒",
+   "すいとう"
+  ],
+  [
+   "傘",
+   "かさ"
+  ],
+  [
+   "向き",
+   "むき"
+  ],
+  [
+   "しまの場所",
+   "しまのばしょ"
+  ],
+  [
+   "場所",
+   "ばしょ"
+  ]
+ ],
+ "voice_override": {
+  "u1": "ここでひとやすみ。こよみせんせいの、きせつのおはなしです。",
+  "e1": "これで、ごもんめまで、おしまいです。",
+  "e2": "じゅうごこの、ちがい、いくつ、みつかりましたか。けっかはっぴょうです。",
+  "e3": "チャンネルとうろくとベルで、まいあさはちじはんに、もんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。",
+  "c_comment": "みつかったかずを、あとでコメントでおしえてくださいね。",
+  "s_intro": "うえとしたのえで、ちがいがみっつあります。みつけられますか。",
+  "s_end": "いくつみつかったか、コメントでおしえてくださいね。ひだりしたから、つづきもどうぞ。",
+  "q1_go": "みぎのえのちがいを、みっつさがしてください。どうぞ。",
+  "q2_go": "では、にもんめ。どうぞ。",
+  "q3_go": "つづいて、さんもんめ。どうぞ。",
+  "q4_go": "よんもんめです。じっくりどうぞ。",
+  "q5_go": "さいごの、ごもんめ、なんもんです。どうぞ。",
+  "op": "ゆきの、えきの、まちがいさがし、ぜんごもん。",
+  "op2": "さいごは、なんもん。",
+  "u2": "ゆきは、なぜしろく、みえるのか、ごぞんじですか？",
+  "u3": "こおりのつぶが、ひかりを、あちこちにはねかえすから、しろく、みえるんです。",
+  "u4": "ふんわりつもった、ゆきは、きれいですね。",
+  "e4": "ほかにも、いろいろな、まちがいさがしがあります。もっとむずかしいもんだいに、ちょうせんしたいかたは、がめんのどうがを、クリックしてくださいね。",
+  "q1_card": "いちもんめ、やさしいもんだい。えきしゃの、まえです。",
+  "q2_card": "にもんめ、しょきゅう。ゆきの、ホームです。",
+  "q3_card": "さんもんめ、しょきゅう。まちあいしつの、ストーブです。",
+  "q4_card": "よんもんめ、ちゅうきゅう。かいさつの、まえです。",
+  "q5_card": "ごもんめ、じょうきゅう。ゆきのホームと、れっしゃです。",
+  "q1_ans1": "ひだりうえの、ちょうちんが、なくなりました。",
+  "q1_ans2": "みぎの、すいとうが、みどりに、なりました。",
+  "q1_ans3": "ひだりの、ベンチが、こしかけに、かわりました。",
+  "q2_ans1": "ひだりの、もうふが、ひとつ、へりました。",
+  "q2_ans2": "みぎの、かさが、きいろく、なりました。",
+  "q2_ans3": "みぎの、ミルクかんが、きのたるに、かわりました。",
+  "q3_ans1": "ひだりの、かごの、りんごが、ひとつ、へりました。",
+  "q3_ans2": "みぎうえの、うえきばちが、あおく、なりました。",
+  "q3_ans3": "みぎの、かばんが、リュックに、かわりました。",
+  "q4_ans1": "ひだりの、きゅうすが、はんたいむきに、なりました。",
+  "q4_ans2": "みぎうえの、ランプが、なくなりました。",
+  "q4_ans3": "ひざかけの、しまの、ばしょが、かわりました。",
+  "q5_ans1": "ひだりうえの、ことりが、はんたいを、むきました。",
+  "q5_ans2": "ベンチの、てぶくろが、かたほうに、なりました。",
+  "q5_ans3": "ひだりしたの、バケツが、きいろく、なりました。"
+ },
+ "voice": {
+  "provider": "fish",
+  "reference_id": "63819275ce38440ea245ca988abf976e",
+  "model": "s1",
+  "speed": 0.88,
+  "credit": "音声：Fish Audio（AIで合成した音声です）"
+ },
+ "images": {
+  "model": "gemini-3-pro-image",
+  "size": "2K",
+  "aspect": "4:5",
+  "style": "A Japanese picture-book illustration in watercolor, but with BOLD, THICK, DARK ink outlines around every object (like a clear picture book for seniors), and CLEAR, SATURATED colors (not pale). Bright, clean background. Natural, hand-drawn, slightly rounded shapes; not geometric, not flat vector, not photorealistic. CLOSE-UP composition (not a wide landscape): the scene is seen from close, filling the picture. PORTRAIT-ISH composition, about 8:9. The painting fills the entire canvas edge to edge: no white border. No people. Absolutely no text, letters, numbers, logos or symbols anywhere. The MAIN SUBJECT named in the scene is drawn LARGE in the center of the picture. Around it, only a few other objects, each clearly separated with space around it, fully visible.\n",
+  "keep_alt": " Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text.",
+  "keep_remove": " Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object.",
+  "batch": true,
+  "neutral_target": 1.4
+ },
+ "questions": [
+  {
+   "q": 1,
+   "scene": "雪の駅舎の前",
+   "level": "やさしい",
+   "go": "右の絵の違いを、3つ探してください。どうぞ。",
+   "prompt": "Scene: close-up of the front of a small old wooden station building in the countryside on a clear winter day, snow on the roof and a little thin snow on the ground, a wooden platform fence and a bare tree behind. CENTER, LARGE (main subject): the wooden station entrance with a sliding glass-and-wood door, snow piled on the roof edge, a plain blank wooden board above the door. Winter only: no Christmas, New Year's Eve or New Year decorations, no yuzu, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, a low table, a shelf or a step, or hangs from a hook; nothing floats. Each listed object is about one sixteenth of the picture width, VERY SMALL, with plenty of empty space around it. No letters, labels, numbers or writing anywhere (no station name board, no clock, no timetable, no signboard; every tag, cloth, bag and sign is plain and blank). No people, no hands. Do not use much red or orange: keep the light natural daylight and the whites ordinary white. Objects: (upper left, hanging from a hook on the wooden wall) a small round cream paper lantern; (upper right, on a wooden wall shelf) a small green pine bonsai in a plain pot; (middle left, on the ground) a small wooden bench; (middle right, on a small low wooden table) a small blue thermos flask; (lower left, on the ground) a small blue snow shovel leaning against the wall; (lower right, on the ground) a small neat stack of two wooden crates.",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "ちょうちんがない",
+     "line": "左上のちょうちんが、なくなりました。",
+     "src": "1",
+     "box": [
+      285,
+      525,
+      519,
+      930
+     ],
+     "object_w": 234
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "水筒が緑",
+     "line": "右の水筒が、緑になりました。",
+     "src": "3",
+     "box": [
+      1480,
+      1190,
+      1640,
+      1490
+     ],
+     "object_w": 100
+    },
+    {
+     "id": 3,
+     "type": "形",
+     "label": "ベンチが腰かけに",
+     "line": "左のベンチが、腰かけに変わりました。",
+     "src": "4",
+     "box": [
+      90,
+      1130,
+      400,
+      1460
+     ],
+     "object_w": 287,
+     "context": "駅舎の前の地面に、木の腰かけが置いてあるのは普通"
+    }
+   ],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small round cream paper lantern hanging from the hook on the wooden wall at the upper left is gone (show the plain wooden wall; the empty hook stays); (b) the small blue snow shovel leaning against the wall at the lower left becomes yellow (the whole shovel painted yellow, same shape); (c) the small neat stack of two wooden crates at the lower right now has three crates stacked neatly (one more crate on top, same crates).",
+   "answers_intro": "答えです。",
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "edit_prompts": {
+    "3": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. The change must be clearly visible. Do not move any object. Change: the small blue thermos flask on the small low wooden table at the middle right becomes green (the whole flask painted green, same shape).",
+    "4": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. The change must be clearly visible. Do not move any object. Change: the small wooden bench on the ground at the middle left is replaced by a small round wooden stool of about the same size in the same place (no part of the bench remains)."
+   }
+  },
+  {
+   "q": 2,
+   "scene": "雪のホーム",
+   "level": "初級",
+   "go": "では、2問目。どうぞ。",
+   "prompt": "Scene: close-up of a snowy station platform under a wooden roof on a winter day, packed snow on the ground, a wooden fence and a bare tree beyond, wooden posts and walls fully painted (no blank white areas). CENTER (main subject, medium size, about one third of the picture width): a long wooden platform bench with a little snow on its edge, beside a wooden post. Winter only: no Christmas, New Year's Eve or New Year decorations, no yuzu, no summer items. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the floor, a shelf, a low table or a bench, or hangs from a hook; nothing floats. Each listed object is SMALL: about one twentieth of the picture width. No letters, labels, numbers or writing anywhere (no station name board, no clock, no timetable, no signboard; every tag, cloth, bag and sign is plain and blank). No people, no hands. Do not use much red or orange: keep the light natural daylight and the whites ordinary white. Objects: (left, at 30% height, on a wooden wall shelf) a small neat stack of three folded plain blue blankets; (right, at 30% height, hanging from a hook on a post) a small folded green umbrella; (left, at 50% height, on the ground) a small pair of grey rubber boots standing side by side; (right, at 50% height, on the ground) a small metal milk can with a lid; (left, at 70% height, on the ground) a small potted green evergreen shrub; (right, at 70% height, on the ground) a small round wooden stool.",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "毛布が1枚減る",
+     "line": "左の毛布が、1枚、へりました。",
+     "src": "1",
+     "box": [
+      43,
+      698,
+      455,
+      889
+     ],
+     "object_w": 380
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "傘が黄色",
+     "line": "右のかさが、黄色くなりました。",
+     "src": "1",
+     "box": [
+      1453,
+      590,
+      1552,
+      988
+     ],
+     "object_w": 99
+    },
+    {
+     "id": 3,
+     "type": "入れ替え",
+     "label": "ミルク缶がたる",
+     "line": "右のミルク缶が、木のたるに変わりました。",
+     "src": "1",
+     "box": [
+      1462,
+      1231,
+      1850,
+      1609
+     ],
+     "object_w": 388,
+     "context": "ホームの地面に、木のたるが置いてあるのは普通"
+    }
+   ],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the neat stack of three folded blue blankets on the wooden wall shelf at the left has only two blankets now; (b) the small folded green umbrella hanging from the hook on the post at the right becomes yellow (the whole umbrella painted yellow, same shape); (c) the small metal milk can with a lid on the ground at the right is replaced by a small round wooden barrel with iron bands of the same size in the same place (no part of the milk can remains).",
+   "answers_intro": "答えです。",
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {}
+  },
+  {
+   "q": 3,
+   "scene": "待合室のストーブ",
+   "level": "初級",
+   "go": "つづいて、3問目。どうぞ。",
+   "prompt": "Scene: close-up of the inside of a small old wooden waiting room of a snowy country station on a winter day, wooden floor, wooden walls fully painted (no blank white areas), a small window with a little snow outside. CENTER (main subject, medium size, about one third of the picture width): a big black iron stove with a chimney pipe going up, a soft warm glow from its small window. Winter only: no Christmas, New Year's Eve or New Year decorations, no yuzu, no summer items. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the floor, a shelf, a low table or a bench, or hangs from a hook; nothing floats. Each listed object is SMALL: about one twentieth of the picture width. No letters, labels, numbers or writing anywhere (no station name board, no clock, no timetable, no signboard; every tag, cloth, bag and sign is plain and blank). No people, no hands. Do not use much red or orange: keep the light natural daylight and the whites ordinary white. Objects: (left, at 30% height, on a wooden wall shelf) a small basket holding three green apples; (right, at 30% height, hanging from a hook on the wall) a small pair of plain grey knitted mittens; (left, at 50% height, on the floor) a small round wooden stool; (right, at 50% height, on the floor) a small brown leather suitcase with no labels; (left, at 70% height, on the floor) a small pair of black boots standing side by side; (right, at 70% height, on the floor) a small potted green plant in a plain clay pot.",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "りんごが1つ減る",
+     "line": "左のかごの、りんごが、ひとつ、へりました。",
+     "src": "1",
+     "box": [
+      160,
+      760,
+      450,
+      1030
+     ],
+     "object_w": 290
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "植木鉢が青",
+     "line": "右上の植木鉢が、青くなりました。",
+     "src": "3",
+     "box": [
+      1490,
+      490,
+      1770,
+      770
+     ],
+     "object_w": 236
+    },
+    {
+     "id": 3,
+     "type": "入れ替え",
+     "label": "かばんがリュック",
+     "line": "右のかばんが、リュックに変わりました。",
+     "src": "1",
+     "box": [
+      1265,
+      1391,
+      1850,
+      2061
+     ],
+     "object_w": 585,
+     "context": "待合室の床に、リュックが置いてあるのは普通"
+    }
+   ],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small basket on the wooden wall shelf at the left holds only two green apples now (one fewer); (b) the small pair of grey knitted mittens hanging from the hook on the wall at the right becomes blue (the mittens painted blue, same shape); (c) the small brown leather suitcase on the floor at the right is replaced by a small plain green canvas backpack of the same size in the same place (no part of the suitcase remains).",
+   "answers_intro": "答えです。",
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {},
+   "edit_prompts": {
+    "3": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. The change must be clearly visible. Do not move any object. Change: the plain clay flower pot of the small potted green plant on the floor at the upper right becomes bright blue (only the pot painted blue, same shape; the green plant stays the same)."
+   }
+  },
+  {
+   "q": 4,
+   "scene": "改札の前",
+   "level": "中級",
+   "go": "4問目です。じっくりどうぞ。",
+   "prompt": "Scene: close-up of the ticket-gate hall of a small old wooden snowy station on a winter day, wooden walls fully painted (no blank white areas), a small window with a little snow outside. CENTER (main subject, medium size, about one third of the picture width): a wooden ticket gate with a low wooden railing and a plain wooden counter, with a long wooden waiting bench beside it. Winter only: no Christmas, New Year's Eve or New Year decorations, no yuzu, no summer items. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the floor, a shelf, a low table or a bench, or hangs from a hook; nothing floats. Each listed object is SMALL: about one twentieth of the picture width. No letters, labels, numbers or writing anywhere (no station name board, no clock, no timetable, no signboard; every tag, cloth, bag and sign is plain and blank). No people, no hands. Do not use much red or orange: keep the light natural daylight and the whites ordinary white. Objects: (left, at 30% height, on a wooden wall shelf) a small white enamel teapot with its spout pointing to the right; (right, at 30% height, hanging from a hook) a small black oil lantern with a glass globe; (left, at 45% height, on the bench) a small folded blanket with two plain blue stripes; (right, at 45% height, on the bench) a small round tin lunch box with a lid; (left, at 60% height, on the floor) a small cardboard box tied with string; (right, at 60% height, on the floor) a small wooden umbrella stand holding two plain umbrellas.",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "向き",
+     "label": "急須の向き",
+     "line": "左の急須が、反対向きになりました。",
+     "src": "1",
+     "box": [
+      69,
+      386,
+      336,
+      625
+     ],
+     "object_w": 267
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "ランプがない",
+     "line": "右上のランプが、なくなりました。",
+     "src": "1",
+     "box": [
+      1579,
+      447,
+      1804,
+      929
+     ],
+     "object_w": 225
+    },
+    {
+     "id": 3,
+     "type": "模様",
+     "label": "毛布のしまの場所",
+     "line": "ひざかけの、しまの場所が、変わりました。",
+     "src": "1",
+     "box": [
+      158,
+      1090,
+      544,
+      1316
+     ],
+     "object_w": 386
+    }
+   ],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small white enamel teapot on the wooden wall shelf at the upper left now has its spout pointing to the left instead of the right (mirrored); (b) the small black oil lantern hanging from the hook at the upper right is gone (show the plain wooden wall; the empty hook stays); (c) the small folded blanket on the bench at the left now has three plain blue stripes instead of two.",
+   "answers_intro": "答えです。",
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {}
+  },
+  {
+   "q": 5,
+   "scene": "雪のホームと列車",
+   "level": "上級",
+   "go": "最後の5問目、難問です。どうぞ。",
+   "prompt": "Scene: close-up of a snowy station platform in the countryside on a winter day, wooden platform roof with wooden posts, a little snow on the ground. CENTER, LARGE (main subject): a small old-fashioned single-car local train standing at the platform, plain cream-and-green body, no numbers and no writing on it, a little snow on its roof. Winter only: no Christmas, New Year's Eve or New Year decorations, no yuzu, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the floor, a bench, a shelf or the ground, or hangs from a hook; nothing floats. Each listed object is about one twenty-fifth of the picture width, TINY, with plenty of empty space around it. No letters, labels, numbers or writing anywhere (no station name board, no clock, no timetable, no signboard; every tag, cloth, bag and sign is plain and blank). No people, no hands. Do not use much red or orange: keep the light natural daylight and the whites ordinary white. Objects: (upper left, on the platform roof beam) a tiny small bird standing and facing left; (upper right, hanging from a hook on a roof post) a tiny plain black lantern; (middle left, on a wooden bench) a tiny pair of grey knitted gloves lying side by side; (middle right, on a small wooden crate) a tiny green potted plant; (lower left, on the platform ground) a tiny blue bucket; (lower right, on the platform ground) a tiny wooden hand cart with two wheels.",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "向き",
+     "label": "小鳥の向き",
+     "line": "左上の小鳥が、反対を向きました。",
+     "src": "1",
+     "box": [
+      222,
+      36,
+      451,
+      221
+     ],
+     "object_w": 229
+    },
+    {
+     "id": 2,
+     "type": "数",
+     "label": "手ぶくろが片方",
+     "line": "ベンチの手ぶくろが、かたほうになりました。",
+     "src": "1",
+     "box": [
+      100,
+      1340,
+      310,
+      1540
+     ],
+     "object_w": 210
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "バケツが黄色",
+     "line": "左下のバケツが、黄色くなりました。",
+     "src": "1",
+     "box": [
+      184,
+      1796,
+      446,
+      2082
+     ],
+     "object_w": 262
+    }
+   ],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny small bird standing on the platform roof beam at the upper left now faces right instead of left (mirrored, same bird); (b) the tiny pair of grey knitted gloves lying on the wooden bench at the left is now only one glove (the other is gone; show the plain bench); (c) the tiny blue bucket on the platform ground at the lower left becomes yellow (the whole bucket painted yellow, same shape).",
+   "answers_intro": "答えです。",
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "retries": {}
+  }
+ ],
+ "thumbnail": {
+  "question": 1,
+  "big_text": "冬の間違いさがし",
+  "highlight": "間違いさがし",
+  "highlight_color": [
+   255,
+   214,
+   0
+  ],
+  "big_color": [
+   255,
+   255,
+   255
+  ],
+  "band_color": [
+   25,
+   35,
+   70
+  ],
+  "big_size": 132,
+  "sub_text": "3つ見つけられる？全5問",
+  "badges": [
+   [
+    "初級〜上級",
+    [
+     176,
+     62,
+     52
+    ]
+   ]
+  ],
+  "circle_hint": false,
+  "note": "ab/ の3案を使う（thumb_band.py）"
+ },
+ "shorts": [
+  {
+   "question": 2,
+   "answer_gap": 3.3,
+   "note": "1本目：第2問 雪のホーム・初級",
+   "title": "シニアの間違い探し｜雪のホームの1問 #脳トレ #頭の体操",
+   "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
+   "end_veil": [
+    {
+     "at": 0,
+     "lines": [
+      [
+       "いくつ見つかった？",
+       120,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "コメントで教えてね",
+       104,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": false
+    },
+    {
+     "at": 3.8,
+     "lines": [
+      [
+       "続きは長い動画で",
+       116,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "左下をクリック",
+       128,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "question": 4,
+   "answer_gap": 3.3,
+   "note": "2本目：第4問 改札の前・中級",
+   "title": "シニアの間違い探し｜改札の前の1問 #脳トレ #頭の体操",
+   "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
+   "end_veil": [
+    {
+     "at": 0,
+     "lines": [
+      [
+       "いくつ見つかった？",
+       120,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "コメントで教えてね",
+       104,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": false
+    },
+    {
+     "at": 3.8,
+     "lines": [
+      [
+       "続きは長い動画で",
+       116,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "左下をクリック",
+       128,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": true
+    }
+   ]
+  }
+ ],
+ "unchiku_source": "雪の結晶は透明な氷の粒で、光が表面でいろいろな向きに反射・散乱するため白く見える（気象庁・理科の一般的な説明）。"
+}
