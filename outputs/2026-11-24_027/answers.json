@@ -1,0 +1,712 @@
+{
+ "screen": {
+  "size": [
+   1920,
+   1080
+  ],
+  "picture_size_on_screen": [
+   960,
+   1080
+  ],
+  "safe_y_on_screen": [
+   54,
+   918
+  ],
+  "level_range_pct_of_screen_width": {
+   "やさしい": [
+    6.0,
+    8.0
+   ],
+   "初級": [
+    5.0,
+    6.0
+   ],
+   "中級": [
+    4.0,
+    5.0
+   ],
+   "上級": [
+    3.0,
+    4.0
+   ]
+  }
+ },
+ "note": "box_px・circle_px は 8:9 に切り抜いた高解像度の絵（qN_a.png、1856×2088）のピクセル。content_px はそのうち画面に出す範囲（白いふちを除いた8:9）。*_screen は画面の上での座標（右の絵は x に960を足す）。object_screen_width_pct は、変わる物そのものの幅を画面幅で割った値（難易度の基準）。object_picture_width_pct は片方の絵の幅で割った値（参考）。",
+ "questions": [
+  {
+   "q": 1,
+   "scene": "おでん屋台の外観",
+   "level": "やさしい",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 97,
+   "outside_box_max_distance_px": 9.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "ちょうちんが青",
+     "line": "左上のちょうちんが、青くなりました。",
+     "box_px": [
+      255,
+      600,
+      485,
+      830
+     ],
+     "box_screen": [
+      132,
+      310,
+      251,
+      429
+     ],
+     "circle_a_screen": [
+      132,
+      310,
+      251,
+      429
+     ],
+     "circle_b_screen": [
+      132,
+      310,
+      251,
+      429
+     ],
+     "object_w_px": 202,
+     "object_picture_width_pct": 10.88,
+     "object_screen_width_pct": 5.44,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "腰かけが緑",
+     "line": "左の腰かけが、緑になりました。",
+     "box_px": [
+      135,
+      1265,
+      380,
+      1610
+     ],
+     "box_screen": [
+      70,
+      654,
+      197,
+      833
+     ],
+     "circle_a_screen": [
+      70,
+      654,
+      197,
+      833
+     ],
+     "circle_b_screen": [
+      70,
+      654,
+      197,
+      833
+     ],
+     "object_w_px": 214,
+     "object_picture_width_pct": 11.53,
+     "object_screen_width_pct": 5.77,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "おけがない",
+     "line": "右上のおけが、なくなりました。",
+     "box_px": [
+      1500,
+      570,
+      1730,
+      850
+     ],
+     "box_screen": [
+      776,
+      295,
+      895,
+      440
+     ],
+     "circle_a_screen": [
+      776,
+      295,
+      895,
+      440
+     ],
+     "circle_b_screen": [
+      776,
+      295,
+      895,
+      440
+     ],
+     "object_w_px": 212,
+     "object_picture_width_pct": 11.42,
+     "object_screen_width_pct": 5.71,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 2,
+   "scene": "屋台のカウンター",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 193,
+   "outside_box_max_distance_px": 6.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "お椀が1つ減る",
+     "line": "左のお椀が、1つ減りました。",
+     "box_px": [
+      400,
+      290,
+      710,
+      640
+     ],
+     "box_screen": [
+      207,
+      150,
+      367,
+      331
+     ],
+     "circle_a_screen": [
+      207,
+      150,
+      367,
+      331
+     ],
+     "circle_b_screen": [
+      207,
+      150,
+      367,
+      331
+     ],
+     "object_w_px": 250,
+     "object_picture_width_pct": 13.47,
+     "object_screen_width_pct": 6.73,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "形",
+     "label": "おたまの柄が短い",
+     "line": "右のおたまの柄が、短くなりました。",
+     "box_px": [
+      1325,
+      254,
+      1532,
+      769
+     ],
+     "box_screen": [
+      685,
+      131,
+      792,
+      398
+     ],
+     "circle_a_screen": [
+      685,
+      131,
+      792,
+      398
+     ],
+     "circle_b_screen": [
+      685,
+      131,
+      792,
+      398
+     ],
+     "object_w_px": 200,
+     "object_picture_width_pct": 10.78,
+     "object_screen_width_pct": 5.39,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "3",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "湯のみが緑",
+     "line": "左の湯のみが、緑になりました。",
+     "box_px": [
+      75,
+      1275,
+      245,
+      1495
+     ],
+     "box_screen": [
+      39,
+      659,
+      127,
+      773
+     ],
+     "circle_a_screen": [
+      39,
+      659,
+      127,
+      773
+     ],
+     "circle_b_screen": [
+      39,
+      659,
+      127,
+      773
+     ],
+     "object_w_px": 147,
+     "object_picture_width_pct": 7.92,
+     "object_screen_width_pct": 3.96,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 3,
+   "scene": "夜の屋台の並び",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 124,
+   "outside_box_max_distance_px": 9.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "ねこがいない",
+     "line": "左下のねこが、いなくなりました。",
+     "box_px": [
+      130,
+      1550,
+      415,
+      1930
+     ],
+     "box_screen": [
+      67,
+      802,
+      215,
+      998
+     ],
+     "circle_a_screen": [
+      67,
+      802,
+      215,
+      998
+     ],
+     "circle_b_screen": [
+      67,
+      802,
+      215,
+      998
+     ],
+     "object_w_px": 200,
+     "object_picture_width_pct": 10.78,
+     "object_screen_width_pct": 5.39,
+     "in_level_range": true,
+     "in_safe_y": false,
+     "edit_version": "2",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "おけが青",
+     "line": "左のおけが、青くなりました。",
+     "box_px": [
+      340,
+      1020,
+      615,
+      1260
+     ],
+     "box_screen": [
+      176,
+      528,
+      318,
+      652
+     ],
+     "circle_a_screen": [
+      176,
+      528,
+      318,
+      652
+     ],
+     "circle_b_screen": [
+      176,
+      528,
+      318,
+      652
+     ],
+     "object_w_px": 243,
+     "object_picture_width_pct": 13.09,
+     "object_screen_width_pct": 6.55,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "入れ替え",
+     "label": "木箱がかごに",
+     "line": "右の木箱が、かごに変わりました。",
+     "box_px": [
+      1330,
+      1235,
+      1825,
+      1515
+     ],
+     "box_screen": [
+      688,
+      639,
+      944,
+      784
+     ],
+     "circle_a_screen": [
+      688,
+      639,
+      944,
+      784
+     ],
+     "circle_b_screen": [
+      688,
+      639,
+      944,
+      784
+     ],
+     "object_w_px": 250,
+     "object_picture_width_pct": 13.47,
+     "object_screen_width_pct": 6.73,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 4,
+   "scene": "湯気の鍋まわり",
+   "level": "中級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 50,
+   "outside_box_max_distance_px": 9.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "湯のみが緑",
+     "line": "右の湯のみが、緑になりました。",
+     "box_px": [
+      1535,
+      1130,
+      1730,
+      1375
+     ],
+     "box_screen": [
+      794,
+      584,
+      895,
+      711
+     ],
+     "circle_a_screen": [
+      794,
+      584,
+      895,
+      711
+     ],
+     "circle_b_screen": [
+      794,
+      584,
+      895,
+      711
+     ],
+     "object_w_px": 170,
+     "object_picture_width_pct": 9.16,
+     "object_screen_width_pct": 4.58,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "数",
+     "label": "串が2本に",
+     "line": "左の串が、2本に減りました。",
+     "box_px": [
+      300,
+      900,
+      400,
+      1160
+     ],
+     "box_screen": [
+      155,
+      466,
+      207,
+      600
+     ],
+     "circle_a_screen": [
+      155,
+      466,
+      207,
+      600
+     ],
+     "circle_b_screen": [
+      155,
+      466,
+      207,
+      600
+     ],
+     "object_w_px": 110,
+     "object_picture_width_pct": 5.93,
+     "object_screen_width_pct": 2.96,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "ざるおたまがない",
+     "line": "右上のざるおたまが、なくなりました。",
+     "box_px": [
+      1390,
+      170,
+      1700,
+      880
+     ],
+     "box_screen": [
+      719,
+      88,
+      879,
+      455
+     ],
+     "circle_a_screen": [
+      719,
+      88,
+      879,
+      455
+     ],
+     "circle_b_screen": [
+      719,
+      88,
+      879,
+      455
+     ],
+     "object_w_px": 170,
+     "object_picture_width_pct": 9.16,
+     "object_screen_width_pct": 4.58,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 5,
+   "scene": "のれんの前",
+   "level": "上級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 191,
+   "outside_box_max_distance_px": 10.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "すずめがいない",
+     "line": "左上のすずめが、いなくなりました。",
+     "box_px": [
+      170,
+      20,
+      470,
+      290
+     ],
+     "box_screen": [
+      88,
+      10,
+      243,
+      150
+     ],
+     "circle_a_screen": [
+      88,
+      10,
+      243,
+      150
+     ],
+     "circle_b_screen": [
+      88,
+      10,
+      243,
+      150
+     ],
+     "object_w_px": 200,
+     "object_picture_width_pct": 10.78,
+     "object_screen_width_pct": 5.39,
+     "in_level_range": false,
+     "in_safe_y": false,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "湯のみが青",
+     "line": "左の湯のみが、青くなりました。",
+     "box_px": [
+      190,
+      1060,
+      420,
+      1230
+     ],
+     "box_screen": [
+      98,
+      548,
+      217,
+      636
+     ],
+     "circle_a_screen": [
+      98,
+      548,
+      217,
+      636
+     ],
+     "circle_b_screen": [
+      98,
+      548,
+      217,
+      636
+     ],
+     "object_w_px": 150,
+     "object_picture_width_pct": 8.08,
+     "object_screen_width_pct": 4.04,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "2",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "数",
+     "label": "みかんが2個",
+     "line": "右下のみかんが、2個に減りました。",
+     "box_px": [
+      1430,
+      1710,
+      1585,
+      1845
+     ],
+     "box_screen": [
+      740,
+      884,
+      820,
+      954
+     ],
+     "circle_a_screen": [
+      740,
+      884,
+      820,
+      954
+     ],
+     "circle_b_screen": [
+      740,
+      884,
+      820,
+      954
+     ],
+     "object_w_px": 150,
+     "object_picture_width_pct": 8.08,
+     "object_screen_width_pct": 4.04,
+     "in_level_range": false,
+     "in_safe_y": false,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  }
+ ]
+}
