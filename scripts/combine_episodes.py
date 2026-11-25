@@ -12,6 +12,8 @@
   3. 新しいフォルダに、10問の plan.json・answers.json・絵・description.md を作る。
      新しく作る：冒頭の予告・各問の声かけ・うんちく（秋の日はつるべ落とし）・エンディング（第34回と同じ汎用の案内）。
      答えの文は元の回の文（番号の言い方は「N問目」）。季節は元の回の season。
+  3b. つなぐ前に、check が止める項目（同じ物・同じ変化／上級の大きさ）を一覧にして出す（--preflight なら一覧だけ。何も作らない）。
+      止める項目があるときは、scripts/swap_diff.py で違いを差し替えてから進める（2026-11-26 CEO：重なる2問のうち1問だけ、その場面の別の物の違いに）。
   4. そのあとは make_episode.py <新しいフォルダ> voice → audio → video → thumbnail → check（または all。絵は作り直さない）。
 うんちくの題材（TALK）は秋用。別の季節の組を作るときは TALK を差し替える（knowledge/episode-index.md で重なりを確かめる）。
 """
@@ -99,6 +101,31 @@ def order_questions(srcs):
     return out
 
 
+def stop_list(seq):
+    """つなぐ前の確認：check が「止める」項目（同じ物・同じ変化のくり返し／上級の大きさ）を、どの問のどの違いか分かる形で一覧にする。
+    seq＝order_questions の結果。くり返しは後ろの問の違いを差し替える候補にする（ep_check の判定と同じ：_object_of・表記ゆれ表）。"""
+    import ep_check as C
+    out, seen_label, seen_obj = [], {}, {}
+    for newq, (tag, s_, Q) in enumerate(seq, 1):
+        A = next(x for x in s_["ans"]["questions"] if x["q"] == Q["q"])
+        size = {a["id"]: a["object_screen_width_pct"] for a in A["answers"]}
+        src = f"{tag}={s_['dir'].name}の{Q['q']}問目"
+        for d in Q["diffs"]:
+            lab = str(d.get("label", "")).strip()
+            obj = C._object_of(lab)
+            here = f"第{newq}問 違い{d['id']}「{lab}」（{src}・{Q['level']}・{size.get(d['id'])}%）"
+            if lab in seen_label:
+                out.append(f"差し替え候補 {here}：同じ変化が{seen_label[lab]}にもある")
+            elif obj and obj in seen_obj:
+                out.append(f"差し替え候補 {here}：同じ物「{obj}」が{seen_obj[obj]}にもある")
+            seen_label.setdefault(lab, f"第{newq}問 違い{d['id']}")
+            if obj:
+                seen_obj.setdefault(obj, f"第{newq}問 違い{d['id']}「{lab}」")
+            if Q["level"] == "上級" and size.get(d["id"], 0) > C.UPPER_MAX:
+                out.append(f"差し替え候補 {here}：上級なのに{C.UPPER_MAX}%を超える（3.0〜{C.UPPER_MAX}%の小さい物に）")
+    return out
+
+
 def fmt(t):
     t = int(t)
     return f"{t // 60}:{t % 60:02d}"
@@ -110,6 +137,10 @@ def main(argv):
     i = 0
     while i < len(argv):
         if argv[i].startswith("--"):
+            if argv[i] == "--preflight":      # 何も作らず、止める項目の一覧だけ出す
+                opts["preflight"] = "1"
+                i += 1
+                continue
             opts[argv[i][2:]] = argv[i + 1]
             i += 2
         else:
@@ -117,6 +148,7 @@ def main(argv):
             i += 1
     new, da, db = (Path(x).resolve() for x in pos)
     srcs = [load(da), load(db)]
+    pre_only = "preflight" in opts
     season = srcs[0]["plan"]["season"]
     if srcs[1]["plan"]["season"] != season:
         raise SystemExit("2回の季節（plan.json の season）がちがいます。同じ季節の組だけつなぐ")
@@ -124,8 +156,18 @@ def main(argv):
     n = len(seq)
     if n != 10:
         raise SystemExit(f"問題が{n}問です（全10問の組だけ）")
+    import os
+    os.environ.setdefault("KOYOMI_EPISODE_DIR", str(srcs[0]["dir"]))     # ep_check を読み込むために要る（中身は使わない）
+    stops = stop_list(seq)
+    print(f"つなぐ前の確認：check が止める項目 {len(stops)}件" + ("" if not stops else "（差し替えが要る。scripts/swap_diff.py）"))
+    for x in stops:
+        print("  × " + x)
+    if pre_only:
+        return
     ta = opts.get("topic-a") or srcs[0]["plan"]["topics"][0]
     tb = opts.get("topic-b") or srcs[1]["plan"]["topics"][0]
+    if (new / "swaps.json").exists() and "force" not in opts:
+        raise SystemExit(f"{new} には差し替え（swaps.json）がある。つなぎ直すと差し替えが消える。やり直すときは --force 1")
     new.mkdir(parents=True, exist_ok=True)
 
     # ---- 絵・答え・問題 ----
@@ -292,20 +334,10 @@ def main(argv):
 """
     (new / "description.md").write_text(desc, encoding="utf-8")
 
-    # ---- 先にわかる問題の知らせ（check が止める内容と同じ決まり。元の絵は直さない） ----
-    import os
-    os.environ["KOYOMI_EPISODE_DIR"] = str(new)
-    import ep_check as C
-    from episode_plan import plan as _p
-    pre = C.repeat_problems()
-    for Q in answers:
-        if Q["level"] == "上級":
-            pre += [f"第{Q['q']}問 違い{a['id']}：上級なのに {a['object_screen_width_pct']}%（4.0%以下の決まり）" for a in Q["answers"]
-                    if a["object_screen_width_pct"] > C.UPPER_MAX]
     print(f"作った：{new}（全{n}問・{total:.1f}秒＝{fmt(total)}）\nタイトル（{len(title)}字）：{title}")
     print("\n".join(order_note))
     print("チャプター：\n" + chapters)
-    print(f"check で止まる見込み {len(pre)}件：\n" + "\n".join("  × " + p for p in pre) if pre else "check で止まる見込み：なし")
+    print(f"check が止める項目：{len(stops)}件" + ("" if not stops else "（上の一覧。swap_diff.py で差し替える）"))
 
 
 if __name__ == "__main__":
