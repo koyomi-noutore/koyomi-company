@@ -195,6 +195,11 @@ def check(ep, work):
     if sheet:
         log(f"一覧画像：{sheet}")
     log(f"拡大チェック（消し残り）：{C.zoom_sheet(ep, work / 'zoom.png')}")
+    if r.get("blocking"):   # 2026-11-25 CEO決定：上級が4.0%を超える・同じ物／同じ変化のくり返しは、ここで止める
+        log("止める：次を直してから進める（監査に回さない）")
+        for p in r["blocking"]:
+            log(f"  × {p}")
+        sys.exit(1)
     return r
 
 

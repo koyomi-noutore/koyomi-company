@@ -30,9 +30,42 @@ LEVEL_TYPES = {"やさしい": _EASY, "初級": _EASY + ("向き", "入れ替え
 DIFF_TYPES = ("増える", "なくなる", "色", "形", "向き", "模様", "大きさ", "数", "一部欠け", "入れ替え")
 
 
+UPPER_MAX = 4.0   # 上級（第5問）の大きさの上限（2026-11-25 CEO決定。目安 3.0〜4.0% の上を超えたら止める）
+
+
+def _object_of(label):
+    """違いの label（例「小さい雪だるまのマフラーが緑」）から物の名前（「マフラー」）を取り出す。"""
+    head = str(label).split("が")[0].split("は")[0]
+    return head.split("の")[-1].strip()
+
+
+def repeat_problems():
+    """同じ物・同じ変化は1回の動画の中で1度まで（2026-11-25 CEO決定）。plan.json の diffs の label で調べる。"""
+    from episode_plan import plan as _plan
+    seen_label, seen_obj, out = {}, {}, []
+    for Q in _plan()["questions"]:
+        for d in Q.get("diffs", []):
+            lab = str(d.get("label", "")).strip()
+            if not lab:
+                continue
+            obj = _object_of(lab)
+            key = (Q["q"], d["id"])
+            if lab in seen_label:
+                q0, i0 = seen_label[lab]
+                out.append(f"第{Q['q']}問 違い{d['id']}：同じ変化「{lab}」が第{q0}問 違い{i0}にもある（1回の動画で1度まで。2026-11-25 CEO決定）")
+            elif obj and obj in seen_obj:
+                q0, i0, lab0 = seen_obj[obj]
+                out.append(f"第{Q['q']}問 違い{d['id']}：同じ物「{obj}」が第{q0}問 違い{i0}（{lab0}）にもある（1回の動画で1度まで。2026-11-25 CEO決定）")
+            seen_label.setdefault(lab, key)
+            if obj:
+                seen_obj.setdefault(obj, (Q["q"], d["id"], lab))
+    return out
+
+
 def numeric(out_dir, work):
     out, work = Path(out_dir), Path(work)
     problems, info = [], {}
+    blocking = []   # 2026-11-25 CEO決定：これが1つでもあれば check で止める（make_episode が終了コード1）
     ans = json.loads((out / "answers.json").read_text(encoding="utf-8"))
     for Q in ans["questions"]:
         lo, hi = LEVEL_RANGE[Q["level"]]
@@ -57,6 +90,8 @@ def numeric(out_dir, work):
                     problems.append(f"第{Q['q']}問 違い{ia}と{ib}：近すぎる（中心の距離 {dist:.0f}%・すき間 {gap:.0f}%。目安は中心{MIN_CENTER_DIST_PCT}%以上・すき間{MIN_GAP_PCT}%以上）")
         for a in Q["answers"]:
             p = a["object_screen_width_pct"]
+            if Q["level"] == "上級" and p > UPPER_MAX:   # 2026-11-25 CEO決定：上級は4.0%以下。超えたら止める
+                blocking.append(f"第{Q['q']}問 違い{a['id']}：上級なのに大きさ {p}%（上級は{UPPER_MAX}%以下。2026-11-25 CEO決定）")
             if not (lo - TOL <= p <= hi + TOL_UP):
                 problems.append(f"第{Q['q']}問 違い{a['id']}：大きさ {p}% が{Q['level']}の目安 {lo}〜{hi}% の外")
             if not a["in_safe_y"]:
@@ -76,6 +111,7 @@ def numeric(out_dir, work):
             problems.append(f"第{Q['q']}問：違いの type が決まりの種類にない {bad}（{'・'.join(DIFF_TYPES)}）")
         if sum(t in ("増える", "なくなる") for t in types) > 1:
             problems.append(f"第{Q['q']}問：「増える・なくなる」が{sum(t in ('増える', 'なくなる') for t in types)}つ（1つまで）")
+    blocking += repeat_problems()
     vj = work / "voice" / "voice.json"
     import ep_timeline as T
     problems += [f"読み・間：{p}" for p in T.readings_check(out / "readings_check.md")]
@@ -107,7 +143,8 @@ def numeric(out_dir, work):
             problems.append(f"サムネの大きさか容量が違う：{info['thumbnail']}")
     else:
         problems.append("サムネがまだない")
-    res = {"problems": problems, "info": info}
+    problems = blocking + problems
+    res = {"problems": problems, "blocking": blocking, "info": info}
     (out / "check.json").write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
     return res
 
