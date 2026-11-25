@@ -1,0 +1,14 @@
+{
+ "video_id": "TqPp0aY6AfE",
+ "url": "https://youtu.be/TqPp0aY6AfE",
+ "studio": "https://studio.youtube.com/video/TqPp0aY6AfE/edit",
+ "privacy": "private",
+ "title": "お茶に合うおやつはなーんだ？｜虫めがねクイズ",
+ "thumbnail": true,
+ "short": true,
+ "category": "27",
+ "playlists": [
+  "虫めがねクイズ｜この○○なーんだ？"
+ ],
+ "thumbnail_note": "0:00 の画面を thumbnails.set で設定"
+}

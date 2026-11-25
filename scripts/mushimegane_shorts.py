@@ -295,7 +295,7 @@ def build(item, out):
         u = u * u * (3 - 2 * u)
         seq.append((T.speaker(frame(item, pic, "peel", L=2 * S * (1 - u) + 0.0), "surprise", None), 0.05))
     t += n_peel * 0.05
-    ans = (f"正解は、{item['answer']}でした。", f"せいかいは、{item['answer_voice']}でした。")
+    ans = (f"正解は、{item.get('answer_sub', item['answer'])}でした。", f"せいかいは、{item['answer_voice']}でした。")
     ev["pon"] = [t + 0.3]
     d = say("ans", ans)
     seq.append((T.speaker(frame(item, pic, "answer"), "yay", ans[0]), max(3.5, d + 1.5))); t += seq[-1][1]

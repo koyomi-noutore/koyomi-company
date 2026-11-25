@@ -1,0 +1,14 @@
+{
+ "video_id": "fhPPCVs6mds",
+ "url": "https://youtu.be/fhPPCVs6mds",
+ "studio": "https://studio.youtube.com/video/fhPPCVs6mds/edit",
+ "privacy": "private",
+ "title": "昔なつかしいおやつはなーんだ？｜虫めがねクイズ",
+ "thumbnail": true,
+ "short": true,
+ "category": "27",
+ "playlists": [
+  "虫めがねクイズ｜この○○なーんだ？"
+ ],
+ "thumbnail_note": "0:00 の画面を thumbnails.set で設定"
+}
