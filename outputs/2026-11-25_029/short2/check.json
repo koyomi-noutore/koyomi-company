@@ -1,0 +1,40 @@
+{
+ "voice": {
+  "s_intro": {
+   "clipped": 0,
+   "rms_db": -15.2
+  },
+  "s_tap": {
+   "clipped": 0,
+   "rms_db": -14.7
+  },
+  "s_ans0": {
+   "clipped": 0,
+   "rms_db": -14.3
+  },
+  "s_ans1": {
+   "clipped": 0,
+   "rms_db": -14.6
+  },
+  "s_ans2": {
+   "clipped": 0,
+   "rms_db": -15.4
+  },
+  "s_ans3": {
+   "clipped": 0,
+   "rms_db": -17.1
+  },
+  "s_end": {
+   "clipped": 0,
+   "rms_db": -15.5
+  }
+ },
+ "duration": 44.9,
+ "size": [
+  1080,
+  1920
+ ],
+ "question": 4,
+ "problems": [],
+ "safe_check_image": "/home/user/koyomi-company/outputs/2026-11-25_029/short2/phone_question.png"
+}
