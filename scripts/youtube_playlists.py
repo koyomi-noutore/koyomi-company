@@ -89,7 +89,7 @@ def targets(folder, short):
         ep = ep.parent
     if re.match(r"\d{4}-\d{2}-\d{2}_mushi_\d+$", ep.name):   # 虫めがねクイズのショート（2026-11-25 CEO：専用の再生リスト）
         return ["mushi"]
-    if re.match(r"\d{4}-\d{2}-\d{2}_text_\d+$", ep.name):   # 文字の脳トレのショート（2026-11-22 CEO：専用の再生リスト）
+    if re.match(r"\d{4}-\d{2}-\d{2}_(text|tlong)_\d+$", ep.name):   # 文字の脳トレのショート・長尺（2026-11-25 CEO：長尺も同じ再生リスト）
         return ["text"]
     m = re.match(r"(\d{4})-(\d{2})-\d{2}_\d+$", ep.name)
     if not m:
