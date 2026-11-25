@@ -79,44 +79,93 @@ INTRO_GAP = 1.5          # 最初の画面の行の高さ（2026-11-25 CEO：行
 INTRO_MAX, INTRO_CHARS, INTRO_HEIGHT = 170, 7, 1150   # 1行の大きさの上限・1行の字数の目安・全体の高さの上限
 
 
-def _split_line(s):
-    """長い行を、空白・読点・助詞の切れ目で2行に分ける（1行 INTRO_CHARS 字ぐらいまで）。"""
+PARTICLES = "はがをにのでともや"
+PUNCT = "？！。、」』）"
+
+
+def _atoms(s):
+    """行を、切ってよい所で区切った塊にする。各塊は (文字, 前の塊と空白・読点で分かれていたか)。"""
     import re
-    s = s.strip()
-    if len(s.replace(" ", "")) <= INTRO_CHARS:
-        return [s.replace(" ", "")] if " " not in s.strip() else [s]
-    parts = [x for x in re.split(r"[ 　、]+", s) if x]
-    if len(parts) >= 2:
-        out, cur = [], ""
-        for x in parts:
-            if cur and len(cur) + len(x) > INTRO_CHARS:
-                out.append(cur); cur = x
+    out = []
+    for ti, chunk in enumerate([x for x in re.split(r"[ \u3000、]+", s.strip()) if x]):
+        cur, first = "", True
+        for i, ch in enumerate(chunk):
+            cur += ch
+            nxt = chunk[i + 1] if i + 1 < len(chunk) else ""
+            hira_next = "\u3040" <= nxt <= "\u309f"
+            kana_run = len(re.search(r"[\u3040-\u309f]*$", cur).group(0))
+            cut = nxt and ((ch in "？！") or (ch in PARTICLES and not hira_next and nxt not in PUNCT)
+                           or (kana_run >= 4 and "\u4e00" <= nxt <= "\u9fff"))      # 4字以上のひらがな（あてはまる）のあと、漢字が続くとき
+            if cut:
+                out.append((cur, first and ti > 0)); cur, first = "", False
+        if cur:
+            out.append((cur, first and ti > 0))
+    return out
+
+
+def _split_line(s):
+    """（互換）1つの入力行を、言葉の途中で切らずに行に分ける。_split_rows の1行版。"""
+    return _split_rows([s])
+
+
+def _split_rows(texts):
+    """入力の行（texts）を、言葉の途中で切らずに、出力の行 [(文字, 何番目の入力行か)] にする（2026-11-25 監査R-1）。
+    切ってよい所：空白・読点、「？」「！」のあと、助詞（は・が・を・に・の・で・と・も・や）のあと（助詞のあとにひらがなが続くときは言葉の途中なので切らない）、
+    4字以上のひらがなのあとに漢字が続く所（あてはまる｜漢字は？）。1行 INTRO_CHARS 字までに詰め、1〜2字だけの行は前（なければ次）の行につなぐ（入力の行をまたいでもよい）。
+    切れる所がなければ1行のまま（小さくなる）。空白で分けた塊をつなぐときは、空白を1つ残す。"""
+    rows = []   # [文字, 入力行の番号]
+    for ti, t in enumerate(texts):
+        mine = []
+        for a, sp in _atoms(t):
+            pure = lambda x: x.replace(" ", "")
+            if mine and len(pure(mine[-1])) + len(pure(a)) <= INTRO_CHARS:
+                mine[-1] += (" " if sp else "") + a
             else:
-                cur += x
-        return out + [cur]
-    mid = len(s) // 2
-    kana = lambda c: "\u3040" <= c <= "\u30ff"
-    cand = [i for i in range(1, len(s)) if kana(s[i - 1]) != kana(s[i]) and s[i - 1] not in "？！」』"] + [i + 1 for i, ch in enumerate(s[:-1]) if ch in "はがをにのでともや"]   # ひらがなと漢字の境目・助詞の後ろ
-    k = min(cand, key=lambda i: abs(i - mid)) if cand else mid
-    if abs(k - mid) > 2:
-        k = mid
-    return [s[:k], s[k:]]
+                mine.append(a)
+        rows += [[m, ti] for m in mine]
+    k = 0
+    while k < len(rows) and len(rows) > 1:
+        if len(rows[k][0].replace(" ", "")) <= 2:
+            if k > 0:
+                rows[k - 1][0] += rows.pop(k)[0]; k -= 1
+            else:
+                rows[1][0] = rows[0][0] + rows[1][0]; rows.pop(0)
+            continue
+        k += 1
+    return rows
 
 
-def intro_lines(texts, last_color=None):
-    """最初の画面（0:00＝サムネ）の文字を、文字数を減らして大きくする。texts＝入力の行。長い行は2行に分け、
-    1行ごとに幅800px に収まる最大の大きさ（上限170px）にする。最後の入力行は last_color（なければ ACCENT）、ほかは白。
-    全体が高すぎるときは、まとめて小さくする。"""
-    rows = []
-    for i, t in enumerate(texts):
-        for part in _split_line(t):
-            rows.append([part, (255, 255, 255) if i < len(texts) - 1 or len(texts) == 1 else (last_color or ACCENT)])
+def intro_lines(texts, explicit=False):
+    """最初の画面（0:00＝サムネ）の文字の行と大きさ。
+    自動（explicit=False）：texts＝入力の行。長い行は _split_line で言葉の切れ目で分け、1行ごとに幅800pxに収まる最大の大きさ（上限170px）にし、
+      1画面の中の大きさは、いちばん小さい行の1.2倍までにそろえる。最後の入力行は黄色、ほかは白。全体が高すぎるときはまとめて小さくする。
+    作る人が行を書く（explicit=True。problem.json の "intro_lines"）：texts の各要素は "行" か ["行", "accent"]（黄色）。そのとおりの行で、
+      幅800pxに収まる最大の大きさ。100px未満になる行があれば、理由を出して止まる。"""
     d = ImageDraw.Draw(Image.new("RGB", (10, 10)))
-    sizes = [fit(d, r[0], INTRO_MAX, 800) for r in rows]
+    rows = []
+    if explicit:
+        for t in texts:
+            txt, col = (t, "white") if isinstance(t, str) else (t[0], t[1] if len(t) > 1 else "white")
+            sz = fit(d, txt, INTRO_MAX, 800)
+            if sz < 100:
+                raise SystemExit(f"intro_lines の「{txt}」が長すぎる（{len(txt)}字。幅800pxだと{sz}px）。100px以上にするため、1行7〜8字までに分けて書き直す")
+            rows.append([txt, ACCENT if col == "accent" else (255, 255, 255), sz])
+        sizes = [r[2] for r in rows]
+    else:
+        for part, i in _split_rows(texts):
+            rows.append([part, (255, 255, 255) if i < len(texts) - 1 or len(texts) == 1 else ACCENT])
+        sizes = [fit(d, r[0], INTRO_MAX, 800) for r in rows]
+        cap = round(min(sizes) * 1.2)
+        sizes = [min(sz, cap) for sz in sizes]
     tot = sum(sz * INTRO_GAP for sz in sizes)
     if tot > INTRO_HEIGHT:
         sizes = [int(sz * INTRO_HEIGHT / tot) for sz in sizes]
     return [(r[0], sz, r[1]) for r, sz in zip(rows, sizes)]
+
+
+def intro_from_cfg(cfg):
+    """その問題の最初の画面の行。cfg に "intro_lines" があればそれを使い、なければ "veil" を自動で分ける。"""
+    return intro_lines(cfg["intro_lines"], explicit=True) if cfg.get("intro_lines") else intro_lines(cfg["veil"])
 
 
 def header(d, title, sub=None):
@@ -397,7 +446,7 @@ def build(kind, out):
 
     # 1. 暗い幕＋問題文（0:00 から出ている＝サムネ）
     d_intro = say("intro", L["intro"])
-    vl = intro_lines(cfg["veil"])     # 2026-11-25 CEO：文字を大きく・行間を広く。最初の画面は吹き出しを出さない（サムネ。こよみ先生は今の位置のまま）
+    vl = intro_from_cfg(cfg)     # 2026-11-25 CEO：文字を大きく・行間を広く。最初の画面は吹き出しを出さない（サムネ。こよみ先生は今の位置のまま）
     seq.append((speaker(veil(frame(0), vl, INTRO_GAP), "normal", None), max(4.0, d_intro + 0.4))); t += seq[-1][1]
     # 2. 考える時間（右上にのこり秒数）。はじめに「わかったら2回タップ」
     say("tap", TAP)
@@ -462,7 +511,7 @@ def load_problem(path):
     if (P.get("season") or P.get("theme")) and not SEASON_ARG:    # 問題に季節が書いてあれば、その季節の色（--season があればそちらが先。どちらも無ければ冬のまま）
         set_season(P.get("season"), P.get("theme"))
     cfg = KINDS[kind][0]
-    for k in ("title", "sub", "think", "veil", "across", "down", "answer", "word", "rows"):
+    for k in ("title", "sub", "think", "veil", "intro_lines", "across", "down", "answer", "word", "rows"):
         if k in P:
             cfg[k] = P[k]
     if "items" in P:

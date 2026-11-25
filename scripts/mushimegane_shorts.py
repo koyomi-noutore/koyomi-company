@@ -186,7 +186,7 @@ def build(item, out):
     intro = (item.get("intro_sub", f"この{item['kind']}、なーんだ？虫めがねで、のぞいてみてね。"), item["intro_voice"])
     d = say("intro", intro)
     # 最初の画面（0:00＝サムネ）：暗い幕の上に大きな文字。吹き出しは出さない（こよみ先生は今の位置）
-    vl = T.intro_lines([f"この{item['kind']}", "なーんだ？", "虫めがねで、のぞいてみてね"])
+    vl = T.intro_lines([f"この{item['kind']}", "なーんだ？", ["虫めがねで", "accent"], ["のぞいてみてね", "accent"]], explicit=True)
     seq.append((T.speaker(T.veil(frame(item, pic, "cover", 0), vl, T.INTRO_GAP), "normal", None), max(5.0, d + 0.6))); t += seq[-1][1]
     # 考える時間＝虫めがねが道すじを通る（15コマ/秒。のこり秒数を右上に出す）
     step = 1 / 15
