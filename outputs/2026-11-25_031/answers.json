@@ -1,0 +1,712 @@
+{
+ "screen": {
+  "size": [
+   1920,
+   1080
+  ],
+  "picture_size_on_screen": [
+   960,
+   1080
+  ],
+  "safe_y_on_screen": [
+   54,
+   918
+  ],
+  "level_range_pct_of_screen_width": {
+   "やさしい": [
+    6.0,
+    8.0
+   ],
+   "初級": [
+    5.0,
+    6.0
+   ],
+   "中級": [
+    4.0,
+    5.0
+   ],
+   "上級": [
+    3.0,
+    4.0
+   ]
+  }
+ },
+ "note": "box_px・circle_px は 8:9 に切り抜いた高解像度の絵（qN_a.png、1856×2088）のピクセル。content_px はそのうち画面に出す範囲（白いふちを除いた8:9）。*_screen は画面の上での座標（右の絵は x に960を足す）。object_screen_width_pct は、変わる物そのものの幅を画面幅で割った値（難易度の基準）。object_picture_width_pct は片方の絵の幅で割った値（参考）。",
+ "questions": [
+  {
+   "q": 1,
+   "scene": "雪の山小屋",
+   "level": "やさしい",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 176,
+   "outside_box_max_distance_px": 9.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "そりがない",
+     "line": "左上のそりが、なくなりました。",
+     "box_px": [
+      48,
+      776,
+      424,
+      980
+     ],
+     "box_screen": [
+      25,
+      401,
+      219,
+      507
+     ],
+     "circle_a_screen": [
+      25,
+      401,
+      219,
+      507
+     ],
+     "circle_b_screen": [
+      25,
+      401,
+      219,
+      507
+     ],
+     "object_w_px": 300,
+     "object_picture_width_pct": 16.16,
+     "object_screen_width_pct": 8.08,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "腰かけが水色",
+     "line": "右の腰かけが、水色になりました。",
+     "box_px": [
+      1299,
+      1448,
+      1645,
+      1656
+     ],
+     "box_screen": [
+      672,
+      749,
+      851,
+      857
+     ],
+     "circle_a_screen": [
+      672,
+      749,
+      851,
+      857
+     ],
+     "circle_b_screen": [
+      672,
+      749,
+      851,
+      857
+     ],
+     "object_w_px": 330,
+     "object_picture_width_pct": 17.78,
+     "object_screen_width_pct": 8.89,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "おけが黄色",
+     "line": "左下のおけが、黄色になりました。",
+     "box_px": [
+      207,
+      1780,
+      437,
+      2018
+     ],
+     "box_screen": [
+      107,
+      921,
+      226,
+      1044
+     ],
+     "circle_a_screen": [
+      107,
+      921,
+      226,
+      1044
+     ],
+     "circle_b_screen": [
+      107,
+      921,
+      226,
+      1044
+     ],
+     "object_w_px": 230,
+     "object_picture_width_pct": 12.39,
+     "object_screen_width_pct": 6.2,
+     "in_level_range": true,
+     "in_safe_y": false,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 2,
+   "scene": "薪ストーブの部屋",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 176,
+   "outside_box_max_distance_px": 8.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "マグカップが緑",
+     "line": "左上のマグカップが、緑になりました。",
+     "box_px": [
+      199,
+      706,
+      380,
+      852
+     ],
+     "box_screen": [
+      103,
+      365,
+      197,
+      441
+     ],
+     "circle_a_screen": [
+      103,
+      365,
+      197,
+      441
+     ],
+     "circle_b_screen": [
+      103,
+      365,
+      197,
+      441
+     ],
+     "object_w_px": 181,
+     "object_picture_width_pct": 9.75,
+     "object_screen_width_pct": 4.88,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "ランプがない",
+     "line": "右のランプが、なくなりました。",
+     "box_px": [
+      1445,
+      872,
+      1675,
+      1337
+     ],
+     "box_screen": [
+      747,
+      451,
+      866,
+      692
+     ],
+     "circle_a_screen": [
+      747,
+      451,
+      866,
+      692
+     ],
+     "circle_b_screen": [
+      747,
+      451,
+      866,
+      692
+     ],
+     "object_w_px": 230,
+     "object_picture_width_pct": 12.39,
+     "object_screen_width_pct": 6.2,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "形",
+     "label": "敷物が四角",
+     "line": "左下の敷物が、四角になりました。",
+     "box_px": [
+      156,
+      1674,
+      922,
+      2048
+     ],
+     "box_screen": [
+      81,
+      866,
+      477,
+      1059
+     ],
+     "circle_a_screen": [
+      81,
+      866,
+      477,
+      1059
+     ],
+     "circle_b_screen": [
+      81,
+      866,
+      477,
+      1059
+     ],
+     "object_w_px": 700,
+     "object_picture_width_pct": 37.72,
+     "object_screen_width_pct": 18.86,
+     "in_level_range": false,
+     "in_safe_y": false,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 3,
+   "scene": "小屋の入口",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 3110,
+   "outside_box_max_distance_px": 13.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "手袋がない",
+     "line": "左上の手袋が、なくなりました。",
+     "box_px": [
+      248,
+      664,
+      473,
+      1030
+     ],
+     "box_screen": [
+      128,
+      343,
+      245,
+      533
+     ],
+     "circle_a_screen": [
+      128,
+      343,
+      245,
+      533
+     ],
+     "circle_b_screen": [
+      128,
+      343,
+      245,
+      533
+     ],
+     "object_w_px": 225,
+     "object_picture_width_pct": 12.12,
+     "object_screen_width_pct": 6.06,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "ミルク缶が水色",
+     "line": "右のミルク缶が、水色になりました。",
+     "box_px": [
+      1409,
+      1274,
+      1597,
+      1576
+     ],
+     "box_screen": [
+      729,
+      659,
+      826,
+      815
+     ],
+     "circle_a_screen": [
+      729,
+      659,
+      826,
+      815
+     ],
+     "circle_b_screen": [
+      729,
+      659,
+      826,
+      815
+     ],
+     "object_w_px": 190,
+     "object_picture_width_pct": 10.24,
+     "object_screen_width_pct": 5.12,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "入れ替え",
+     "label": "かごが箱に",
+     "line": "左下のかごが、箱に変わりました。",
+     "box_px": [
+      87,
+      1420,
+      445,
+      1810
+     ],
+     "box_screen": [
+      45,
+      734,
+      230,
+      936
+     ],
+     "circle_a_screen": [
+      45,
+      734,
+      230,
+      936
+     ],
+     "circle_b_screen": [
+      45,
+      734,
+      230,
+      936
+     ],
+     "object_w_px": 330,
+     "object_picture_width_pct": 17.78,
+     "object_screen_width_pct": 8.89,
+     "in_level_range": false,
+     "in_safe_y": false,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 4,
+   "scene": "山小屋の食卓",
+   "level": "中級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 199,
+   "outside_box_max_distance_px": 7.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "数",
+     "label": "マグカップが2個",
+     "line": "左上のカップが、2個に減りました。",
+     "box_px": [
+      780,
+      584,
+      970,
+      826
+     ],
+     "box_screen": [
+      403,
+      302,
+      502,
+      427
+     ],
+     "circle_a_screen": [
+      403,
+      302,
+      502,
+      427
+     ],
+     "circle_b_screen": [
+      403,
+      302,
+      502,
+      427
+     ],
+     "object_w_px": 190,
+     "object_picture_width_pct": 10.24,
+     "object_screen_width_pct": 5.12,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "向き",
+     "label": "ポットの口が反対向き",
+     "line": "右のポットが、反対向きになりました。",
+     "box_px": [
+      1385,
+      935,
+      1735,
+      1215
+     ],
+     "box_screen": [
+      716,
+      484,
+      897,
+      628
+     ],
+     "circle_a_screen": [
+      716,
+      484,
+      897,
+      628
+     ],
+     "circle_b_screen": [
+      716,
+      484,
+      897,
+      628
+     ],
+     "object_w_px": 290,
+     "object_picture_width_pct": 15.62,
+     "object_screen_width_pct": 7.81,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "2",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "腰かけが緑",
+     "line": "左下の腰かけが、緑になりました。",
+     "box_px": [
+      276,
+      1481,
+      815,
+      2082
+     ],
+     "box_screen": [
+      143,
+      766,
+      422,
+      1077
+     ],
+     "circle_a_screen": [
+      143,
+      766,
+      422,
+      1077
+     ],
+     "circle_b_screen": [
+      143,
+      766,
+      422,
+      1077
+     ],
+     "object_w_px": 520,
+     "object_picture_width_pct": 28.02,
+     "object_screen_width_pct": 14.01,
+     "in_level_range": false,
+     "in_safe_y": false,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 5,
+   "scene": "雪の森と軒先",
+   "level": "上級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 122,
+   "outside_box_max_distance_px": 8.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "形",
+     "label": "提灯が四角",
+     "line": "左上の提灯が、四角になりました。",
+     "box_px": [
+      269,
+      263,
+      560,
+      746
+     ],
+     "box_screen": [
+      139,
+      136,
+      290,
+      386
+     ],
+     "circle_a_screen": [
+      139,
+      136,
+      290,
+      386
+     ],
+     "circle_b_screen": [
+      139,
+      136,
+      290,
+      386
+     ],
+     "object_w_px": 260,
+     "object_picture_width_pct": 14.01,
+     "object_screen_width_pct": 7.0,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "雪うさぎがない",
+     "line": "右の雪うさぎが、いなくなりました。",
+     "box_px": [
+      1508,
+      1180,
+      1757,
+      1510
+     ],
+     "box_screen": [
+      780,
+      610,
+      909,
+      781
+     ],
+     "circle_a_screen": [
+      780,
+      610,
+      909,
+      781
+     ],
+     "circle_b_screen": [
+      780,
+      610,
+      909,
+      781
+     ],
+     "object_w_px": 249,
+     "object_picture_width_pct": 13.42,
+     "object_screen_width_pct": 6.71,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "おけが水色",
+     "line": "左下のおけが、水色になりました。",
+     "box_px": [
+      322,
+      1798,
+      626,
+      2012
+     ],
+     "box_screen": [
+      167,
+      930,
+      324,
+      1041
+     ],
+     "circle_a_screen": [
+      167,
+      930,
+      324,
+      1041
+     ],
+     "circle_b_screen": [
+      167,
+      930,
+      324,
+      1041
+     ],
+     "object_w_px": 304,
+     "object_picture_width_pct": 16.38,
+     "object_screen_width_pct": 8.19,
+     "in_level_range": false,
+     "in_safe_y": false,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  }
+ ]
+}

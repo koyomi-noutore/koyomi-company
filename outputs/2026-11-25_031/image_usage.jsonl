@@ -8,3 +8,5 @@
 {"time": "2026-11-25T07:02:12+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 770, "output_tokens": 1120, "total_tokens": 2105}
 {"time": "2026-11-25T07:04:10+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 763, "output_tokens": 1120, "total_tokens": 2067}
 {"time": "2026-11-25T07:06:21+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 765, "output_tokens": 1120, "total_tokens": 2052}
+{"time": "2026-11-25T07:11:27+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 655, "output_tokens": 1120, "total_tokens": 2044}
+{"time": "2026-11-25T07:15:41+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 655, "output_tokens": 1120, "total_tokens": 2045}
