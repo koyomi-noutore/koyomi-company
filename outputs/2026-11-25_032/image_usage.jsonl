@@ -1,2 +1,4 @@
 {"time": "2026-11-25T07:43:30+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 688, "output_tokens": 1120, "total_tokens": 2288}
 {"time": "2026-11-25T07:43:33+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 694, "output_tokens": 1120, "total_tokens": 2304}
+{"time": "2026-11-25T07:45:11+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 669, "output_tokens": 1120, "total_tokens": 2244}
+{"time": "2026-11-25T07:45:47+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 635, "output_tokens": 1120, "total_tokens": 2125}
