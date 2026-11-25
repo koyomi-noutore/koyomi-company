@@ -589,8 +589,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 124,
-   "outside_box_max_distance_px": 11.0,
+   "outside_box_pixels_diff_gt15": 50,
+   "outside_box_max_distance_px": 5.0,
    "answers": [
     {
      "id": 1,
@@ -659,10 +659,10 @@
       931,
       528
      ],
-     "object_w_px": 190,
-     "object_picture_width_pct": 10.24,
-     "object_screen_width_pct": 5.12,
-     "in_level_range": false,
+     "object_w_px": 136,
+     "object_picture_width_pct": 7.33,
+     "object_screen_width_pct": 3.66,
+     "in_level_range": true,
      "in_safe_y": true,
      "edit_version": "2",
      "made_by": "gemini",
@@ -697,10 +697,10 @@
       290,
       936
      ],
-     "object_w_px": 90,
-     "object_picture_width_pct": 4.85,
-     "object_screen_width_pct": 2.42,
-     "in_level_range": false,
+     "object_w_px": 130,
+     "object_picture_width_pct": 7.0,
+     "object_screen_width_pct": 3.5,
+     "in_level_range": true,
      "in_safe_y": false,
      "edit_version": "1",
      "made_by": "gemini",

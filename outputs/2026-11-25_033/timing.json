@@ -95,10 +95,35 @@
    "detail": "pictures compose",
    "sec": 24.3,
    "at": "2026-11-25T08:18:34+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures compose",
+   "sec": 25.1,
+   "at": "2026-11-25T08:20:40+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures answers",
+   "sec": 5.6,
+   "at": "2026-11-25T08:20:55+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "voice",
+   "sec": 0.0,
+   "at": "2026-11-25T08:20:55+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "audio",
+   "sec": 1.5,
+   "at": "2026-11-25T08:20:56+00:00"
   }
  ],
  "total_sec_by_step": {
-  "絵": 455.6
+  "絵": 486.3,
+  "音声": 1.5
  },
- "total_sec_all": 455.6
+ "total_sec_all": 487.8
 }

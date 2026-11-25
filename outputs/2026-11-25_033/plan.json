@@ -1838,7 +1838,7 @@
       1800,
       1020
      ],
-     "object_w": 190,
+     "object_w": 136,
      "src": "2"
     },
     {
@@ -1852,7 +1852,7 @@
       560,
       1810
      ],
-     "object_w": 90,
+     "object_w": 130,
      "src": "1"
     }
    ],
@@ -1867,17 +1867,9 @@
    "edit_prompts": {
     "2": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. The change must be clearly visible. Do not move any object. Change: the tiny teacup on the saucer on the left shelf becomes blue (the cup painted blue, the saucer unchanged)."
    },
-   "retries": {
-    "2": {
-     "crop": [
-      1500,
-      620,
-      1836,
-      1040
-     ],
-     "aspect": "4:5",
-     "prompt": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. Change: the navy knitted wool hat hanging from the wooden peg becomes GREEN and about 30 percent smaller (a smaller green knitted hat, still hanging from the same peg at the same place). The wooden rail, pegs and wall stay exactly the same. No text."
-    }
+   "retries": {},
+   "program_edits": {
+    "2": "scripts/custom/ep033_hat.py"
    }
   }
  ],
