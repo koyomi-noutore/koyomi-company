@@ -25,14 +25,14 @@ def transcribe(wav):
         try:
             res = generate_content(MODEL, body, timeout=45)
             break
-        except (TimeoutError, ConnectionError) as e:    # 読み取りの時間切れ（2026-11-25）：取り直す
-            if i == 7:
-                raise
-            time.sleep(10)
         except urllib.error.HTTPError as e:
             if e.code not in (429, 503) or i == 7:
                 raise
             time.sleep(15 * (i + 1))
+        except (TimeoutError, ConnectionError, urllib.error.URLError) as e:    # 読み取りの時間切れ（2026-11-25）：取り直す
+            if i == 7:
+                raise
+            time.sleep(10)
     return "".join(p.get("text", "") for p in res["candidates"][0]["content"]["parts"]).strip()
 
 

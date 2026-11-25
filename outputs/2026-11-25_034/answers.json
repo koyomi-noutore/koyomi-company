@@ -35,7 +35,7 @@
  "questions": [
   {
    "q": 1,
-   "scene": "雪の公園の雪だるま",
+   "scene": "雪の公園",
    "level": "やさしい",
    "hint_diff": null,
    "image_size": [
@@ -49,14 +49,14 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 228,
+   "outside_box_pixels_diff_gt15": 234,
    "outside_box_max_distance_px": 12.0,
    "answers": [
     {
      "id": 1,
-     "type": "なくなる",
-     "label": "紙ぶくろがない",
-     "line": "右上の紙ぶくろが、なくなりました。",
+     "type": "色",
+     "label": "紙ぶくろが黄色",
+     "line": "右上の紙ぶくろが、黄色になりました。",
      "box_px": [
       1420,
       460,
@@ -86,7 +86,7 @@
      "object_screen_width_pct": 6.03,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "2",
      "made_by": "gemini",
      "note": ""
     },
@@ -326,7 +326,7 @@
      "id": 1,
      "type": "形",
      "label": "そりが細長い",
-     "line": "左上のそりが、細長い形になりました。",
+     "line": "左上のそりが、細長くなりました。",
      "box_px": [
       120,
       440,
@@ -461,7 +461,7 @@
      "id": 1,
      "type": "色",
      "label": "マフラーが緑",
-     "line": "まん中の小さな雪だるまのマフラーが、緑になりました。",
+     "line": "まん中のマフラーが、緑になりました。",
      "box_px": [
       850,
       830,
@@ -499,7 +499,7 @@
      "id": 2,
      "type": "数",
      "label": "松ぼっくりが2つ",
-     "line": "左のかごの松ぼっくりが、2つに減りました。",
+     "line": "左の松ぼっくりが、2つに減りました。",
      "box_px": [
       90,
       1030,
@@ -596,7 +596,7 @@
      "id": 1,
      "type": "模様",
      "label": "カップが水玉",
-     "line": "左上のカップの模様が、水玉になりました。",
+     "line": "左上のカップが、水玉になりました。",
      "box_px": [
       120,
       700,
@@ -672,7 +672,7 @@
      "id": 3,
      "type": "色",
      "label": "毛糸玉が水色",
-     "line": "左下の毛糸玉が、水色になりました。",
+     "line": "左下の毛糸が、水色になりました。",
      "box_px": [
       100,
       1285,

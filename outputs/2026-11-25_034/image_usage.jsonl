@@ -17,3 +17,4 @@
 {"time": "2026-11-25T09:23:56+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 767, "output_tokens": 1120, "total_tokens": 2144}
 {"time": "2026-11-25T09:23:57+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 774, "output_tokens": 1120, "total_tokens": 2105}
 {"time": "2026-11-25T09:25:35+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 771, "output_tokens": 1120, "total_tokens": 2188}
+{"time": "2026-11-25T09:52:22+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 722, "output_tokens": 1120, "total_tokens": 2047}

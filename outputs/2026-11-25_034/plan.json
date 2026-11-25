@@ -1750,9 +1750,9 @@
    "diffs": [
     {
      "id": 1,
-     "type": "なくなる",
-     "label": "紙ぶくろがない",
-     "line": "右上の紙ぶくろが、なくなりました。",
+     "type": "色",
+     "label": "紙ぶくろが黄色",
+     "line": "右上の紙ぶくろが、黄色になりました。",
      "box": [
       1420,
       460,
@@ -1760,7 +1760,7 @@
       820
      ],
      "object_w": 224,
-     "src": "1"
+     "src": "2"
     },
     {
      "id": 2,
@@ -1794,7 +1794,9 @@
    ],
    "answers_intro": "答えです。",
    "retries": {},
-   "edit_prompts": {},
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. The change must be clearly visible. Do not move any object. Change: the small plain brown paper bag standing on the snow at the upper right becomes bright yellow (the bag painted bright yellow, same shape, same place). Leave the snowman, the scarf, the snowballs and everything else exactly as they are."
+   },
    "hint_diff": null,
    "content_box": [
     0,
@@ -2094,8 +2096,8 @@
   {
    "question": 2,
    "answer_gap": 3.3,
-   "note": "1本目：第2問 土手の杭と凧・初級",
-   "title": "シニアの間違い探し｜土手の杭と凧の1問 #脳トレ #頭の体操",
+   "note": "1本目：第2問 ベンチと雪だるま・初級",
+   "title": "シニアの間違い探し｜ベンチと雪だるまの1問 #脳トレ #頭の体操",
    "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
    "end_veil": [
     {
@@ -2146,13 +2148,17 @@
      ],
      "arrow": true
     }
-   ]
+   ],
+   "ans_delay": {
+    "2": 0.5,
+    "3": 0.5
+   }
   },
   {
    "question": 4,
    "answer_gap": 3.3,
-   "note": "2本目：第4問 枯れすすきの原・中級",
-   "title": "シニアの間違い探し｜枯れすすきの原の1問 #脳トレ #頭の体操",
+   "note": "2本目：第4問 雪だるまの親子・中級",
+   "title": "シニアの間違い探し｜雪だるまの親子の1問 #脳トレ #頭の体操",
    "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
    "end_veil": [
     {
@@ -2203,7 +2209,11 @@
      ],
      "arrow": true
     }
-   ]
+   ],
+   "ans_delay": {
+    "2": 0.2,
+    "3": 0.5
+   }
   }
  ],
  "unchiku_source": "雪だるまの名前は、置物の「だるま」に形が近いからという説がある。日本では玉が2つ（体と頭）のものが多いといわれる（諸説あり。一般的な知識。効果をうたうものではない）。"
