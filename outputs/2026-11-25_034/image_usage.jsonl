@@ -6,3 +6,4 @@
 {"time": "2026-11-25T09:10:24+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 719, "output_tokens": 1120, "total_tokens": 2209}
 {"time": "2026-11-25T09:10:25+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 747, "output_tokens": 1120, "total_tokens": 2278}
 {"time": "2026-11-25T09:12:17+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 725, "output_tokens": 1120, "total_tokens": 2317}
+{"time": "2026-11-25T09:14:03+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 720, "output_tokens": 1120, "total_tokens": 2270}
