@@ -1,0 +1,43 @@
+{
+ "id": "text_051",
+ "kind": "pic",
+ "series": "ちがうのどーれだ",
+ "what": "招き猫",
+ "level": "ふつう",
+ "recolor": {
+  "hue": [
+   345,
+   14
+  ],
+  "sat_min": 110,
+  "val_min": 70,
+  "to": 225,
+  "region": [
+   0.3,
+   0.4,
+   0.72,
+   0.66
+  ]
+ },
+ "prompt": "A single cute maneki-neko (Japanese beckoning cat figurine), white cat with a raised right paw, a bright red bib with a gold bell around the neck, holding a plain gold oval koban coin with NO writing, NO letters, NO characters and NO markings on the coin, simple flat illustration, clean bold dark outlines, soft shading, front view, centered, on a plain pure white background. No text, no letters, no ground shadow, nothing else in the picture.",
+ "cols": 3,
+ "rows": 3,
+ "odd_at": [
+  1,
+  0
+ ],
+ "pic_h": 235,
+ "think": 20,
+ "lines": {
+  "intro": [
+   "違う招き猫が、1つだけあります。どれでしょう？",
+   "ちがうまねきねこが、ひとつだけあります。どれでしょう？"
+  ],
+  "ans": [
+   [
+    "前かけが、青い招き猫でした。",
+    "まえかけが、あおい、まねきねこでした。"
+   ]
+  ]
+ }
+}

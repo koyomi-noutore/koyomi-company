@@ -101,7 +101,7 @@ def _layout_scatter(key):
         ch = cfg["odd"] if i == odd_i else cfg["main"]
         for _ in range(8000):
             ang = rnd.randint(-cfg["tilt"], cfg["tilt"])
-            g = glyph(ch, sz, ang, cfg["weight"]).split()[3].point(lambda v: 255 if v > 30 else 0).filter(ImageFilter.MaxFilter(9))   # ふち4pxぶん太らせて、字どうしの間をあける
+            g = glyph(ch, sz, ang, cfg["weight"]).split()[3].point(lambda v: 255 if v > 30 else 0).filter(ImageFilter.MaxFilter(cfg.get("pad", 9)))   # ふち4pxぶん太らせて、字どうしの間をあける
             bb = g.getbbox(); full = g.size[0]                  # 字の形の外枠だけにして、端まで使う
             g = g.crop(bb); gw, gh = g.size
             px = rnd.randint(x0, x1 - gw); py = rnd.randint(y0, y1 - gh)
@@ -280,7 +280,7 @@ def load_problem(path):
     if (P.get("season") or P.get("theme")) and not T.SEASON_ARG:   # 問題に季節があればその季節の色（--season が先。どちらも無ければ冬）
         T.set_season(P.get("season"), P.get("theme"))
     cfg = {"key": key, "main": P["main"], "odd": P["odd"], "n": P["n"], "weight": P["weight"], "size": tuple(P["size"]),
-           "tilt": P["tilt"], "seed": P["seed"], "odd_i": P["odd_i"]}
+           "tilt": P["tilt"], "seed": P["seed"], "odd_i": P["odd_i"], "pad": P.get("pad", 9)}
     CFGS[key] = cfg
 
     def frame(state, remain=None, cfg=cfg):

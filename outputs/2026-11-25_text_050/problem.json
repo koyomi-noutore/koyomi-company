@@ -1,0 +1,37 @@
+{
+ "id": "text_050",
+ "kind": "pic",
+ "series": "ちがうのどーれだ",
+ "what": "みかん",
+ "level": "ふつう",
+ "recolor": {
+  "hue": [
+   12,
+   45
+  ],
+  "sat_min": 120,
+  "val_min": 140,
+  "to": 62
+ },
+ "prompt": "A single cute mandarin orange (mikan) with one green leaf attached on the top and a small brown stem, simple flat illustration, clean bold dark outlines, soft shading, a few tiny dimple dots on the skin, front view, centered, on a plain pure white background. No text, no letters, no ground shadow, nothing else in the picture.",
+ "cols": 3,
+ "rows": 4,
+ "odd_at": [
+  2,
+  0
+ ],
+ "pic_h": 175,
+ "think": 18,
+ "lines": {
+  "intro": [
+   "違うみかんが、1つだけあります。どれでしょう？",
+   "ちがうみかんが、ひとつだけあります。どれでしょう？"
+  ],
+  "ans": [
+   [
+    "黄緑色の、みかんでした。",
+    "きみどりいろの、みかんでした。"
+   ]
+  ]
+ }
+}

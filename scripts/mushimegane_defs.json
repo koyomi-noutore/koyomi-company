@@ -78,6 +78,396 @@
     0.5
    ],
    "speed_px": 135
+  },
+  {
+   "id": "daikon",
+   "kind": "野菜",
+   "answer": "だいこん",
+   "answer_voice": "だいこん",
+   "image": "daikon.png",
+   "prompt_subject": "one whole Japanese daikon radish: a long thick white tapered root with a few tiny root hairs, topped with a short bunch of green leaves.",
+   "path_note": "",
+   "intro_voice": "このやさい、なーんだ？むしめがねで、のぞいてみてね。",
+   "grid": 4,
+   "skip": 3,
+   "seed": 327,
+   "start": [
+    0.87,
+    0.87
+   ],
+   "feature": [
+    0.68,
+    0.22
+   ],
+   "finale": [
+    0.68,
+    0.22
+   ],
+   "speed_px": 135
+  },
+  {
+   "id": "renkon",
+   "kind": "野菜",
+   "answer": "れんこん",
+   "answer_voice": "れんこん",
+   "image": "renkon.png",
+   "prompt_subject": "one Japanese lotus root (renkon) shown as a short chain of two or three connected segments, pale beige-brown skin, one segment cut open at the front showing the round cross-section with a pattern of large holes.",
+   "path_note": "",
+   "intro_voice": "このやさい、なーんだ？むしめがねで、のぞいてみてね。",
+   "grid": 4,
+   "skip": 3,
+   "seed": 109,
+   "start": [
+    0.13,
+    0.13
+   ],
+   "feature": [
+    0.72,
+    0.65
+   ],
+   "finale": [
+    0.72,
+    0.65
+   ],
+   "speed_px": 135
+  },
+  {
+   "id": "negi",
+   "kind": "野菜",
+   "answer": "ねぎ",
+   "answer_voice": "ねぎ",
+   "image": "negi.png",
+   "prompt_subject": "three Japanese long green onions (negi) lying together as a bundle, white lower stalks and long green upper leaves, with small root tufts at the bottom.",
+   "path_note": "",
+   "intro_voice": "このやさい、なーんだ？むしめがねで、のぞいてみてね。",
+   "grid": 4,
+   "skip": 3,
+   "seed": 130,
+   "start": [
+    0.13,
+    0.87
+   ],
+   "feature": [
+    0.72,
+    0.4
+   ],
+   "finale": [
+    0.72,
+    0.4
+   ],
+   "speed_px": 135
+  },
+  {
+   "id": "fukuro",
+   "kind": "動物",
+   "answer": "ふくろう",
+   "answer_voice": "ふくろう",
+   "image": "fukuro.png",
+   "prompt_subject": "one cute owl sitting upright facing front: round brown feathered body, big round eyes with a facial disc, small beak, ear tufts, perched on a short branch.",
+   "path_note": "",
+   "intro_voice": "このどうぶつ、なーんだ？むしめがねで、のぞいてみてね。",
+   "grid": 4,
+   "skip": 3,
+   "seed": 100,
+   "start": [
+    0.13,
+    0.13
+   ],
+   "feature": [
+    0.5,
+    0.4
+   ],
+   "finale": [
+    0.5,
+    0.4
+   ],
+   "speed_px": 135
+  },
+  {
+   "id": "usagi",
+   "kind": "動物",
+   "answer": "うさぎ",
+   "answer_voice": "うさぎ",
+   "image": "usagi.png",
+   "prompt_subject": "one cute white rabbit sitting facing front: round body, two long upright ears with pink inside, pink nose, small round tail, big dark eyes.",
+   "path_note": "",
+   "intro_voice": "このどうぶつ、なーんだ？むしめがねで、のぞいてみてね。",
+   "grid": 4,
+   "skip": 3,
+   "seed": 100,
+   "start": [
+    0.13,
+    0.13
+   ],
+   "feature": [
+    0.5,
+    0.4
+   ],
+   "finale": [
+    0.5,
+    0.4
+   ],
+   "speed_px": 135
+  },
+  {
+   "id": "pengin",
+   "kind": "動物",
+   "answer": "ペンギン",
+   "answer_voice": "ペンギン",
+   "image": "pengin.png",
+   "prompt_subject": "one cute penguin standing upright facing front: black back and head, white belly, orange beak and orange feet, small flippers.",
+   "path_note": "",
+   "intro_voice": "このどうぶつ、なーんだ？むしめがねで、のぞいてみてね。",
+   "grid": 4,
+   "skip": 3,
+   "seed": 100,
+   "start": [
+    0.13,
+    0.13
+   ],
+   "feature": [
+    0.5,
+    0.4
+   ],
+   "finale": [
+    0.5,
+    0.4
+   ],
+   "speed_px": 135
+  },
+  {
+   "id": "taiyaki",
+   "kind": "食べ物",
+   "answer": "たいやき",
+   "answer_voice": "たいやき",
+   "image": "taiyaki.png",
+   "prompt_subject": "one taiyaki (Japanese fish-shaped cake) seen from the side: golden brown, with scale pattern, an eye, fins and tail.",
+   "path_note": "",
+   "intro_voice": "このたべもの、なーんだ？むしめがねで、のぞいてみてね。",
+   "grid": 4,
+   "skip": 3,
+   "seed": 100,
+   "start": [
+    0.13,
+    0.13
+   ],
+   "feature": [
+    0.5,
+    0.4
+   ],
+   "finale": [
+    0.5,
+    0.4
+   ],
+   "speed_px": 135
+  },
+  {
+   "id": "mikan",
+   "kind": "食べ物",
+   "answer": "みかん",
+   "answer_voice": "みかん",
+   "image": "mikan.png",
+   "prompt_subject": "two Japanese mikan mandarin oranges, one whole with a green stem and leaf, one peeled showing its segments.",
+   "path_note": "",
+   "intro_voice": "このたべもの、なーんだ？むしめがねで、のぞいてみてね。",
+   "grid": 4,
+   "skip": 3,
+   "seed": 100,
+   "start": [
+    0.13,
+    0.13
+   ],
+   "feature": [
+    0.5,
+    0.4
+   ],
+   "finale": [
+    0.5,
+    0.4
+   ],
+   "speed_px": 135
+  },
+  {
+   "id": "tsubaki",
+   "kind": "花",
+   "answer": "つばき",
+   "answer_voice": "つばき",
+   "image": "tsubaki.png",
+   "prompt_subject": "one branch of a Japanese camellia (tsubaki) with a large red flower with yellow stamens in the center and glossy dark green leaves.",
+   "path_note": "",
+   "intro_voice": "このはな、なーんだ？むしめがねで、のぞいてみてね。",
+   "grid": 4,
+   "skip": 3,
+   "seed": 100,
+   "start": [
+    0.13,
+    0.13
+   ],
+   "feature": [
+    0.5,
+    0.4
+   ],
+   "finale": [
+    0.5,
+    0.4
+   ],
+   "speed_px": 135
+  },
+  {
+   "id": "yakan",
+   "kind": "道具",
+   "answer": "やかん",
+   "answer_voice": "やかん",
+   "image": "yakan.png",
+   "prompt_subject": "one old-fashioned metal kettle (yakan) with a round body, a curved spout, an arched handle on top, and a lid with a small knob, a little steam from the spout.",
+   "path_note": "",
+   "intro_voice": "このどうぐ、なーんだ？むしめがねで、のぞいてみてね。",
+   "grid": 4,
+   "skip": 3,
+   "seed": 100,
+   "start": [
+    0.13,
+    0.13
+   ],
+   "feature": [
+    0.5,
+    0.4
+   ],
+   "finale": [
+    0.5,
+    0.4
+   ],
+   "speed_px": 135
+  },
+  {
+   "id": "kotatsu",
+   "kind": "道具",
+   "answer": "こたつ",
+   "answer_voice": "こたつ",
+   "image": "kotatsu.png",
+   "prompt_subject": "one Japanese kotatsu seen from slightly above: a low square wooden table with a thick quilted futon blanket draped over it, a bright mandarin orange in a basket on top.",
+   "path_note": "",
+   "intro_voice": "このどうぐ、なーんだ？むしめがねで、のぞいてみてね。",
+   "grid": 4,
+   "skip": 3,
+   "seed": 100,
+   "start": [
+    0.13,
+    0.13
+   ],
+   "feature": [
+    0.5,
+    0.4
+   ],
+   "finale": [
+    0.5,
+    0.4
+   ],
+   "speed_px": 135
+  },
+  {
+   "id": "yutanpo",
+   "kind": "道具",
+   "answer": "湯たんぽ",
+   "answer_voice": "ゆたんぽ",
+   "image": "yutanpo.png",
+   "prompt_subject": "one Japanese yutanpo hot water bottle: a rounded flat metal body with ridges and a screw cap, in a knitted cover, wrapped halfway with a soft scarf.",
+   "path_note": "",
+   "intro_voice": "このどうぐ、なーんだ？むしめがねで、のぞいてみてね。",
+   "grid": 4,
+   "skip": 3,
+   "seed": 100,
+   "start": [
+    0.13,
+    0.13
+   ],
+   "feature": [
+    0.5,
+    0.4
+   ],
+   "finale": [
+    0.5,
+    0.4
+   ],
+   "speed_px": 135
+  },
+  {
+   "id": "tako",
+   "kind": "生き物",
+   "answer": "たこ",
+   "answer_voice": "たこ",
+   "image": "tako.png",
+   "prompt_subject": "one octopus (tako) seen from the front: a round bulbous head, big eyes, and eight curling tentacles with suckers.",
+   "path_note": "",
+   "intro_voice": "このいきもの、なーんだ？むしめがねで、のぞいてみてね。",
+   "grid": 4,
+   "skip": 3,
+   "seed": 100,
+   "start": [
+    0.13,
+    0.13
+   ],
+   "feature": [
+    0.5,
+    0.4
+   ],
+   "finale": [
+    0.5,
+    0.4
+   ],
+   "speed_px": 135
+  },
+  {
+   "id": "kani",
+   "kind": "生き物",
+   "answer": "かに",
+   "answer_voice": "かに",
+   "image": "kani.png",
+   "prompt_subject": "one red crab (kani) seen from above: oval shell, two large claws raised, eyes on stalks, four pairs of legs on each side.",
+   "path_note": "",
+   "intro_voice": "このいきもの、なーんだ？むしめがねで、のぞいてみてね。",
+   "grid": 4,
+   "skip": 3,
+   "seed": 100,
+   "start": [
+    0.13,
+    0.13
+   ],
+   "feature": [
+    0.5,
+    0.4
+   ],
+   "finale": [
+    0.5,
+    0.4
+   ],
+   "speed_px": 135
+  },
+  {
+   "id": "dango",
+   "kind": "食べ物",
+   "answer": "だんご",
+   "answer_voice": "だんご",
+   "image": "dango.png",
+   "prompt_subject": "one skewer of three round tricolor dango rice dumplings (pink, white and green), on a wooden stick.",
+   "path_note": "",
+   "intro_voice": "このたべもの、なーんだ？むしめがねで、のぞいてみてね。",
+   "grid": 4,
+   "skip": 3,
+   "seed": 100,
+   "start": [
+    0.13,
+    0.13
+   ],
+   "feature": [
+    0.5,
+    0.4
+   ],
+   "finale": [
+    0.5,
+    0.4
+   ],
+   "speed_px": 135
   }
  ]
 }

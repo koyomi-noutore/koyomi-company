@@ -1,0 +1,116 @@
+{
+ "runs": [
+  {
+   "step": "絵",
+   "detail": "pictures batch base",
+   "sec": 11.1,
+   "at": "2026-11-25T06:38:40+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base",
+   "sec": 30.0,
+   "at": "2026-11-25T06:40:43+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base 1",
+   "sec": 6.0,
+   "at": "2026-11-25T06:42:53+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base 1",
+   "sec": 6.0,
+   "at": "2026-11-25T06:43:07+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base 2",
+   "sec": 6.7,
+   "at": "2026-11-25T06:43:34+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base 4",
+   "sec": 31.9,
+   "at": "2026-11-25T06:44:26+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base 5",
+   "sec": 33.1,
+   "at": "2026-11-25T06:45:19+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base 1",
+   "sec": 7.6,
+   "at": "2026-11-25T06:45:47+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base 2",
+   "sec": 7.4,
+   "at": "2026-11-25T06:46:14+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base 1",
+   "sec": 6.7,
+   "at": "2026-11-25T06:46:41+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base 2",
+   "sec": 5.6,
+   "at": "2026-11-25T06:47:07+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base 1",
+   "sec": 7.5,
+   "at": "2026-11-25T06:47:37+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base 2",
+   "sec": 7.0,
+   "at": "2026-11-25T06:48:09+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base 1",
+   "sec": 6.0,
+   "at": "2026-11-25T06:48:40+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base 2",
+   "sec": 6.8,
+   "at": "2026-11-25T06:49:12+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base 1",
+   "sec": 5.7,
+   "at": "2026-11-25T06:49:43+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base 2",
+   "sec": 6.7,
+   "at": "2026-11-25T06:50:15+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base 1",
+   "sec": 34.2,
+   "at": "2026-11-25T06:51:14+00:00"
+  }
+ ],
+ "total_sec_by_step": {
+  "絵": 226.0
+ },
+ "total_sec_all": 226.0
+}
