@@ -179,10 +179,40 @@
    "detail": "pictures batch edit 5",
    "sec": 30.0,
    "at": "2026-11-25T06:59:13+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit:2 2",
+   "sec": 9.0,
+   "at": "2026-11-25T07:00:32+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit:2 4",
+   "sec": 27.8,
+   "at": "2026-11-25T07:01:20+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit:2 2",
+   "sec": 9.7,
+   "at": "2026-11-25T07:01:49+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit:2 2",
+   "sec": 9.0,
+   "at": "2026-11-25T07:02:18+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit:2 2",
+   "sec": 37.5,
+   "at": "2026-11-25T07:03:16+00:00"
   }
  ],
  "total_sec_by_step": {
-  "絵": 491.6
+  "絵": 584.6
  },
- "total_sec_all": 491.6
+ "total_sec_all": 584.6
 }

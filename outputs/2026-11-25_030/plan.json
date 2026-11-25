@@ -1730,7 +1730,9 @@
    ],
    "answers_intro": "答えです。",
    "retries": {},
-   "edit_prompts": {},
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. The change must be clearly visible. Do not move any object. Change: the straw hat lying on the grass in the upper left part of the picture (above the black rubber boots) is gone (show the plain dry grass where it was, no leftover outline, and do NOT add any stone or other object there). Leave the sparrow, the boots, the mug and everything else exactly as they are."
+   },
    "hint_diff": null,
    "content_box": [
     0,
@@ -1854,7 +1856,9 @@
    ],
    "answers_intro": "答えです。",
    "retries": {},
-   "edit_prompts": {},
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. The change must be clearly visible. Do not move any object. Change: the small blue-and-white plate on the mossy stone at the lower left holds only two round brown rice crackers now (one fewer than before; same plate, same stone, same place). Do NOT change the boots, the sandals or anything else; the black rubber boots stay black."
+   },
    "hint_diff": null,
    "content_box": [
     0,
