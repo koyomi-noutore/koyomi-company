@@ -281,11 +281,14 @@ TAP = ("わかったら、画面を2回タップしてね。", "わかったら�
 TAP_REMAIN = 10     # 2026-11-25 CEO：「2回タップ」の呼びかけは出題中（考える時間の残りが約10秒のとき）に出す
 
 
+TAP_EARLY = 2.0   # 2026-11-25 CEO：「2回タップ」の声の開始を2秒早く（ep_short.tap_at も同じ）
+
+
 def tap_offset(think, dur):
     """考える時間（think 秒）の初めから数えて、「2回タップ」の声を始める秒。残りが約 TAP_REMAIN 秒のとき。考える時間が短い（14秒より短い）ときは真ん中。
     ただし声が、残り5〜1秒のカウント音（ピッ）にかからないように、残り5.5秒より前に終わらせる。"""
     off = think - TAP_REMAIN if think >= TAP_REMAIN + 4 else think / 2
-    return max(0.5, min(off, think - 5.5 - dur))
+    return max(0.5, min(off, think - 5.5 - dur) - TAP_EARLY)   # 2026-11-25 CEO：2回タップの声は2秒早く
 
 
 def tap_window(off, dur, i, step=1.0):

@@ -93,7 +93,7 @@ def tap_at(solve, c=None):
     start = 4.0
     think = solve - start
     off = think - 10 if think >= 14 else think / 2
-    return round(start + max(0.5, min(off, think - 5.5 - TAP_DUR)), 2)
+    return round(start + max(0.5, min(off, think - 5.5 - TAP_DUR) - 2.0), 2)   # 2026-11-25 CEO：2秒早く（text_shorts.TAP_EARLY と同じ）
 
 
 def lines(ep):
