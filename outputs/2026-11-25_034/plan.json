@@ -78,7 +78,7 @@
     "until": 24,
     "texts": [
      [
-      "「だるま」に似ている",
+      "「だるま」と形が近い",
       960,
       330,
       115,
@@ -241,7 +241,7 @@
    {
     "id": "u3",
     "at": 15.0,
-    "text": "置物の「だるま」に形が似ているから、という説があります。",
+    "text": "置物の「だるま」と形が近いから、という説があります。",
     "face": "surprise",
     "until": 24.0
    },
@@ -294,6 +294,62 @@
   ]
  },
  "readings": [
+  [
+   "近い",
+   "ちかい"
+  ],
+  [
+   "細長",
+   "ほそなが"
+  ],
+  [
+   "毛糸",
+   "けいと"
+  ],
+  [
+   "松ぼっくり",
+   "まつぼっくり"
+  ],
+  [
+   "毛糸玉",
+   "けいとだま"
+  ],
+  [
+   "水玉",
+   "みずたま"
+  ],
+  [
+   "耳あて",
+   "みみあて"
+  ],
+  [
+   "細長い",
+   "ほそながい"
+  ],
+  [
+   "切り株",
+   "きりかぶ"
+  ],
+  [
+   "缶",
+   "かん"
+  ],
+  [
+   "紙ぶくろ",
+   "かみぶくろ"
+  ],
+  [
+   "雪玉",
+   "ゆきだま"
+  ],
+  [
+   "雪だるま",
+   "ゆきだるま"
+  ],
+  [
+   "丸い",
+   "まるい"
+  ],
   [
    "雪の公園",
    "ゆきのこうえん"
@@ -1651,10 +1707,10 @@
   "op": "ゆきだるまの、まちがいさがし、ぜんごもん。",
   "op2": "さいごは、なんもんです。",
   "u2": "ゆきだるまの、なまえのゆらい、しっていますか？",
-  "u3": "おきものの、だるまに、かたちがにているから、というせつがあります。",
+  "u3": "おきものの、だるまと、かたちがちかいから、というせつがあります。",
   "u4": "にほんの、ゆきだるまは、たまがふたつのものが、おおいそうです。",
-  "q1_card": "いちもんめ、やさしいもんだい。ゆきのこうえんの、ゆきだるまです。",
-  "q2_card": "にもんめ、しょきゅう。ベンチと、ゆきだるまです。",
+  "q1_card": "いちもんめ、やさしいもんだい。ゆきの、こうえんです。",
+  "q2_card": "にもんめ、しょきゅう。べんちと、ゆきだるまです。",
   "q3_card": "さんもんめ、しょきゅう。そりの、おかです。",
   "q4_card": "よんもんめ、ちゅうきゅう。ゆきだるまの、おやこです。",
   "q5_card": "ごもんめ、じょうきゅう。ゆきの、あずまやです。",
@@ -1662,7 +1718,9 @@
   "q2_go": "では、にもんめ。どうぞ。",
   "q3_go": "つづいて、さんもんめ。どうぞ。",
   "q4_go": "よんもんめです。じっくりどうぞ。",
-  "q5_go": "さいごの、ごもんめ、なんもんです。どうぞ。"
+  "q5_go": "さいごの、ごもんめ、なんもんです。どうぞ。",
+  "q2_ans3": "ひだりしたの、クマが、アヒルにかわりました。",
+  "q5_ans1": "ひだりうえの、かっぷが、みずたまに、なりました。"
  },
  "voice": {
   "provider": "fish",
@@ -1684,12 +1742,56 @@
  "questions": [
   {
    "q": 1,
-   "scene": "雪の公園の雪だるま",
+   "scene": "雪の公園",
    "level": "やさしい",
    "go": "右の絵の違いを、3つ探してください。どうぞ。",
    "prompt": "Scene: close-up of a snowy park on a bright calm winter day: smooth white snow on the ground with soft blue shadows, a few bare trees and a low plain wooden fence in the background, clear pale blue sky. CENTER (main subject): a big snowman made of two stacked round snowballs (a big body and a smaller head), standing firmly on the snow, with a black top hat, two coal eyes, a small carrot nose, two brown stick arms and a plain blue knitted scarf. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every snowman and every object stands or rests firmly on the snow-covered ground (or on the stump named below): nothing floats, nothing hangs in the air, the sky is clear and plain. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows at 25%, 45% and 65% of the picture height; never at the very top, never in the lower third; far apart, never clustered, never touching the snowman. Each listed object is SMALL: about one twenty-fifth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No people, no hands, no animals, no birds. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white. Objects: (left, at 25% height, on the snow) a small round wicker basket with a handle; (right, at 25% height, on the snow) a small cream-colored teapot; (left, at 45% height, on the snow) a small stack of three white snowballs; (right, at 45% height, on the snow) a small plain wooden crate; (left, at 65% height, on the snow) a small cream-colored knitted wool hat; (right, at 65% height, on the snow) a small plain brown paper bag with a folded top.",
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small cream teapot on the snow at the upper right becomes light blue (the teapot painted light blue, same shape); (b) the small stack of three white snowballs at the middle left now has four snowballs (one more snowball added on the stack, same place); (c) the small brown paper bag on the snow at the lower right is gone (show the plain snow, no leftover outline).",
-   "diffs": [],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small plain brown paper bag on the snow at the upper right is gone (show the plain snow, no leftover outline); (b) the small stack of three white snowballs at the middle left now has four snowballs (one more snowball added, same place); (c) the snowman's blue knitted scarf becomes bright green (the scarf painted bright green, same shape, same snowman).",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "紙ぶくろがない",
+     "line": "右上の紙ぶくろが、なくなりました。",
+     "box": [
+      1420,
+      460,
+      1780,
+      820
+     ],
+     "object_w": 224,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "マフラーが緑",
+     "line": "雪だるまのマフラーが、緑になりました。",
+     "box": [
+      725,
+      690,
+      1130,
+      1110
+     ],
+     "object_w": 383,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "増える",
+     "label": "雪玉が増える",
+     "line": "左の雪玉が、1つ増えました。",
+     "box": [
+      120,
+      970,
+      480,
+      1280
+     ],
+     "object_w": 316,
+     "src": "1",
+     "context": "雪の上に積んだ雪玉。3つでも4つでも自然（同じ場所・同じ積み方）"
+    }
+   ],
    "answers_intro": "答えです。",
    "retries": {},
    "edit_prompts": {},
@@ -1708,7 +1810,51 @@
    "go": "では、2問目。どうぞ。",
    "prompt": "Scene: close-up of a snowy park corner in winter: white snow on the ground, a few bare trees and a plain fence behind; the picture is bright and clear. CENTER (main subject, medium size, about one third of the picture width): a wooden park bench with a thin layer of snow on its seat, its four legs standing on the ground, and next to it a medium snowman made of two stacked snowballs with two stick arms and a plain green knitted scarf, standing on the snow. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every snowman and every object stands or rests firmly on the snow-covered ground (or on the bench, stump or stone named below): nothing floats, nothing hangs in the air, the sky is clear and plain. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object is SMALL: about one twentieth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No people, no hands, no animals, no birds. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white. Objects: (left, at 30% height, on the snow) a small brown stuffed teddy bear sitting; (right, at 30% height, on the snow) a pair of small white ice skates; (left, at 50% height, on the snow) a small round wooden stool; (right, at 50% height, on the snow) a small tin lantern with a metal frame and glass sides, unlit; (left, at 70% height, on the snow) a small cream-colored scarf lying folded; (right, at 70% height, on the snow) a small bundle of green pine branches tied with string, lying flat.",
    "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small brown teddy bear sitting on the snow at the lower left is replaced by a small yellow toy duck sitting in the same place (same size); (b) the small tin lantern on the snow at the right middle is gone (show the plain snow, no leftover outline); (c) the small cream scarf lying on the snow at the upper left becomes bright green (the scarf painted bright green, same shape).",
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "マフラーが緑",
+     "line": "左上のマフラーが、緑になりました。",
+     "box": [
+      235,
+      450,
+      605,
+      780
+     ],
+     "object_w": 294,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "ランタンがない",
+     "line": "右のランタンが、なくなりました。",
+     "box": [
+      1480,
+      765,
+      1720,
+      1220
+     ],
+     "object_w": 175,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "入れ替え",
+     "label": "クマがアヒル",
+     "line": "左下のクマが、アヒルに変わりました。",
+     "box": [
+      170,
+      1290,
+      520,
+      1710
+     ],
+     "object_w": 290,
+     "src": "1",
+     "context": "雪の上に置き忘れた小さなぬいぐるみ。クマでもアヒルでも自然（同じ場所・同じ座り方）"
+    }
+   ],
    "answers_intro": "答えです。",
    "retries": {},
    "edit_prompts": {},
@@ -1725,9 +1871,53 @@
    "scene": "そりの丘",
    "level": "初級",
    "go": "続いて、3問目。どうぞ。",
-   "prompt": "Scene: close-up of a gentle snowy hill in a park in winter, smooth white snow with soft blue shadows, a few bare trees behind; the picture is bright and clear. CENTER (main subject, medium size, about one third of the picture width): a long wooden toboggan sled with a curled front, lying FLAT on the snow on the slope. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every snowman and every object stands or rests firmly on the snow-covered ground (or on the stump named below): nothing floats, nothing hangs in the air, the sky is clear and plain. IMPORTANT LAYOUT: every listed object is placed in a band between 22% and 72% of the picture height, in two columns (left and right) and three rows at 28%, 46% and 64% of the picture height; never at the very top, never in the lower third. Spread them far apart, never clustered, never touching the main subject. Each listed object is SMALL: about one thirtieth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No people, no hands, no animals, no birds. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white. Objects: (left, at 28% height, on the snow) a small round blue plastic saucer sled lying flat; (right, at 28% height, on the snow) a small folded plain blue blanket; (left, at 46% height, on the snow) a small wooden mallet lying flat; (right, at 46% height, on the snow) a small round tree stump with an empty flat top; (left, at 64% height, on the snow) a pair of small grey earmuffs lying on the snow; (right, at 64% height, on the snow) a small coil of rope.",
+   "prompt": "Scene: close-up of a gentle snowy hill in a park in winter, smooth white snow with soft blue shadows, a few bare trees behind; the picture is bright and clear. CENTER (main subject, medium size, about one third of the picture width): a long wooden toboggan sled with a curled front, lying FLAT on the snow in the middle of the picture. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every snowman and every object stands or rests firmly on the snow-covered ground (or on the stump named below): nothing floats, nothing hangs in the air, the sky is clear and plain. IMPORTANT LAYOUT: put the six listed objects in two columns, the left column near the left edge and the right column near the right edge of the picture, in three rows at 20%, 36% and 52% of the picture height measured from the top. The whole lower 40% of the picture is EMPTY plain snow with nothing on it, so keep every object and the main subject out of the lower 40%. Far apart, never clustered, never touching the main subject. Each listed object is SMALL: about one fiftieth of the picture width, much smaller than the main subject. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No people, no hands, no animals, no birds. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white. The painting reaches the very edge of the canvas on all four sides, with no paper margin and no dark border line. Objects: (left, at 20% height, on the snow) a small round blue plastic saucer sled lying flat; (right, at 20% height, on the snow) a small folded plain blue blanket; (left, at 36% height, on the snow) a small wooden mallet lying flat; (right, at 36% height, on the snow) a small round tree stump with an empty flat top; (left, at 52% height, on the snow) a pair of small grey earmuffs lying on the snow; (right, at 52% height, on the snow) a small coil of rope.",
    "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small round blue saucer sled at the upper left becomes a long narrow rectangular blue plastic sled (same blue color, same place); (b) a small white teacup on a saucer now stands on top of the tree stump at the right middle (add the teacup, nothing else changes); (c) the pair of small grey earmuffs on the snow at the lower left becomes light green (the earmuffs painted light green, same shape).",
-   "diffs": [],
+   "diffs": [
+    {
+     "id": 1,
+     "type": "形",
+     "label": "そりが細長い",
+     "line": "左上のそりが、細長くなりました。",
+     "box": [
+      120,
+      440,
+      700,
+      790
+     ],
+     "object_w": 330,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "増える",
+     "label": "ティーカップが増える",
+     "line": "右の切り株に、ティーカップが増えました。",
+     "box": [
+      1380,
+      780,
+      1700,
+      1090
+     ],
+     "object_w": 294,
+     "src": "1",
+     "context": "切り株をテーブル代わりにした休けい。カップがのっていても自然（切り株の上に置かれている）"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "耳あてが緑",
+     "line": "左下の耳あてが、緑になりました。",
+     "box": [
+      200,
+      1160,
+      450,
+      1430
+     ],
+     "object_w": 211,
+     "src": "1"
+    }
+   ],
    "answers_intro": "答えです。",
    "retries": {},
    "edit_prompts": {},
@@ -1744,12 +1934,57 @@
    "scene": "雪だるまの親子",
    "level": "中級",
    "go": "4問目です。じっくりどうぞ。",
-   "prompt": "Scene: close-up of a snowy park in winter, white snow on the ground, a few bare trees and a plain fence behind; the picture is bright and clear. CENTER (main subject, medium size, about one third of the picture width, placed at about 30% of the picture height): a family of three snowmen standing side by side in a row on the snow (big, medium and small, each made of two stacked snowballs with stick arms, coal eyes and a plain blue scarf). Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every snowman and every object stands or rests firmly on the snow-covered ground (or on the stump named below): nothing floats, nothing hangs in the air, the sky is clear and plain. IMPORTANT LAYOUT: all six listed objects are placed in the snow in FRONT of the snowmen, between 46% and 80% of the picture height, in three columns (far left, center, far right); never at the very top, never in the bottom fifth. Spread them far apart, never clustered, never touching the snowmen. Each listed object is SMALL: about one thirty-fifth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No people, no hands, no animals, no birds. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white. Objects: (far left, at 48% height, on the snow) a small flat wicker tray with four brown pine cones on it; (far right, at 50% height, on the snow) a small garden trowel lying flat; (center, at 60% height, on the snow) a small stack of three flat grey stones; (far left, at 68% height, on the snow) a small tin watering can; (far right, at 66% height, on the snow) a pair of small black rubber boots standing; (center, at 78% height, on the snow) a small round tin lunch box with a lid.",
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small wicker tray at the far left has only three pine cones now (one fewer than before; same tray, same place); (b) the small round tin lunch box on the snow at the center bottom is gone (show the plain snow, no leftover outline); (c) the pair of small black rubber boots at the far right becomes green (the boots painted green, same shape).",
-   "diffs": [],
+   "prompt": "Scene: close-up of a snowy park in winter, white snow on the ground, a few bare trees and a plain fence behind; the picture is bright and clear. CENTER (main subject): a family of three snowmen standing close together side by side in a row in the middle of the picture, occupying only the middle third of the picture width (big, medium and small, each made of two stacked snowballs with stick arms, coal eyes and a plain blue scarf). Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every snowman and every object stands or rests firmly on the snow-covered ground (or on the stump named below): nothing floats, nothing hangs in the air, the sky is clear and plain. IMPORTANT LAYOUT: put the six listed objects in two columns, the left column near the left edge and the right column near the right edge of the picture, in three rows at 20%, 36% and 52% of the picture height measured from the top. The whole lower 40% of the picture is EMPTY plain snow with nothing on it, so keep every object and the main subject out of the lower 40%. Far apart, never clustered, never touching the main subject. Each listed object is SMALL: about one fiftieth of the picture width, much smaller than the main subject. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No people, no hands, no animals, no birds. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white. The painting reaches the very edge of the canvas on all four sides, with no paper margin and no dark border line. Objects: (left, at 20% height, on the snow) a small flat wicker tray with four brown pine cones on it; (right, at 20% height, on the snow) a small garden trowel lying flat; (left, at 36% height, on the snow) a small stack of three flat grey stones; (right, at 36% height, on the snow) a small round tin lunch box with a lid; (left, at 52% height, on the snow) a pair of small black rubber boots standing; (right, at 52% height, on the snow) a small tin watering can.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small wicker tray at the middle left has only three pine cones now (one fewer than before; same tray, same place); (b) the small round tin lunch box on the snow at the lower right is gone (show the plain snow, no leftover outline); (c) the blue scarf of the smallest snowman (the small one standing in front, in the middle) becomes bright green (same scarf shape; the other two scarves stay blue).",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "マフラーが緑",
+     "line": "まん中のマフラーが、緑になりました。",
+     "box": [
+      850,
+      830,
+      1065,
+      1010
+     ],
+     "object_w": 169,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "数",
+     "label": "松ぼっくりが2つ",
+     "line": "左の松ぼっくりが、2つに減りました。",
+     "box": [
+      90,
+      1030,
+      540,
+      1330
+     ],
+     "object_w": 400,
+     "src": "2"
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "缶がない",
+     "line": "右下の丸い缶が、なくなりました。",
+     "box": [
+      1390,
+      1355,
+      1745,
+      1650
+     ],
+     "object_w": 277,
+     "src": "1"
+    }
+   ],
    "answers_intro": "答えです。",
    "retries": {},
-   "edit_prompts": {},
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. The change must be clearly visible. Do not move any object. Change: the flat wicker tray at the left middle (with brown pine cones on it) now holds exactly THREE pine cones: take away the pine cone at the right end of the tray and the one at the front, leaving a clear gap, so that only the left cone, the top cone and one more remain (three in total, one fewer than before; the tray itself and its place stay the same). Do NOT change the snowmen, the scarves, the boots or anything else."
+   },
    "hint_diff": null,
    "content_box": [
     0,
@@ -1763,9 +1998,52 @@
    "scene": "雪の東屋",
    "level": "上級",
    "go": "最後の5問目、難問です。どうぞ。",
-   "prompt": "Scene: close-up of a snowy park with a small wooden gazebo (azumaya) with a snow-covered pointed roof and a bench inside, bare trees and a plain fence behind, bright winter daylight, white snow in front. CENTER, LARGE (main subject): the snow-covered wooden gazebo, its posts standing on the ground. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every snowman and every object stands or rests firmly on the snow-covered ground (or on the stump named below): nothing floats, nothing hangs in the air, the sky is clear and plain. IMPORTANT LAYOUT: put all listed objects in the snowy foreground in FRONT of the gazebo, on the white snow, between 58% and 80% of the picture height; none of them is in the sky, on the roof or in the trees. Spread them far apart, never clustered. Each listed object is fully visible and rests on the snow; nothing floats. Each listed object is EXTREMELY TINY, like a coin: about one forty-fifth of the picture width, far smaller than the door of the gazebo. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No people, no hands, no animals, no birds. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white. Objects: (far left, at 58% height) a tiny white mug with horizontal blue stripes standing on the snow; (far right, at 60% height) a tiny brown pine cone lying on the snow; (far left, at 72% height) a tiny stack of three flat grey pebbles; (far right, at 72% height) a tiny pair of acorns; (center, at 78% height) a tiny ball of cream-colored wool yarn on the snow. The painting reaches the very edge of the canvas on all four sides, with no paper margin and no dark border line.",
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny white mug with blue stripes at the far left now has round blue dots instead of stripes (same mug, same place); (b) the tiny brown pine cone on the snow at the far right is gone (show the plain snow, no leftover outline); (c) the tiny ball of cream wool yarn at the center bottom becomes light blue (the yarn painted light blue, same shape).",
-   "diffs": [],
+   "prompt": "Scene: a snowy park with a small wooden gazebo (azumaya) with a snow-covered pointed roof and a bench inside, standing in the middle of the picture and occupying only the middle 45% of the picture width, bare trees and a plain fence behind, bright winter daylight, white snow all around. CENTER (main subject): the snow-covered wooden gazebo, its posts standing on the ground. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every snowman and every object stands or rests firmly on the snow-covered ground (or on the stump named below): nothing floats, nothing hangs in the air, the sky is clear and plain. IMPORTANT LAYOUT: put the six listed objects in two columns, the left column near the left edge and the right column near the right edge of the picture, in three rows at 14%, 28% and 42% of the picture height measured from the top. The whole lower 45% of the picture is EMPTY plain snow with nothing on it, so keep every object and the main subject out of the lower 45%. Far apart, never clustered, never touching the main subject. Each listed object is EXTREMELY TINY, like a coin: about one ninetieth of the picture width, much smaller than the main subject. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No people, no hands, no animals, no birds. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white. The painting reaches the very edge of the canvas on all four sides, with no paper margin and no dark border line. Objects: (left, at 14% height, on the snow) a tiny white mug with horizontal blue stripes standing on the snow; (right, at 14% height, on the snow) a tiny pair of acorns; (left, at 28% height, on the snow) a tiny stack of three flat grey pebbles; (right, at 28% height, on the snow) a tiny brown pine cone lying on the snow; (left, at 42% height, on the snow) a tiny ball of cream-colored wool yarn on the snow; (right, at 42% height, on the snow) a tiny wooden spoon lying flat on the snow.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny white mug with blue stripes at the upper left now has round blue dots instead of stripes (same mug, same place); (b) the tiny brown pine cone on the snow at the right middle is gone (show the plain snow, no leftover outline); (c) the tiny ball of cream wool yarn at the lower left becomes light blue (the yarn painted light blue, same shape).",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "模様",
+     "label": "カップが水玉",
+     "line": "左上のカップが、水玉になりました。",
+     "box": [
+      120,
+      700,
+      330,
+      905
+     ],
+     "object_w": 122,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "松ぼっくりがない",
+     "line": "右の松ぼっくりが、なくなりました。",
+     "box": [
+      1530,
+      960,
+      1790,
+      1220
+     ],
+     "object_w": 162,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "毛糸玉が水色",
+     "line": "左下の毛糸が、水色になりました。",
+     "box": [
+      100,
+      1285,
+      420,
+      1520
+     ],
+     "object_w": 153,
+     "src": "1"
+    }
+   ],
    "answers_intro": "答えです。",
    "retries": {},
    "edit_prompts": {},
@@ -1928,5 +2206,5 @@
    ]
   }
  ],
- "unchiku_source": "雪だるまの名前は、置物の「だるま」に形が似ているからという説がある。日本では玉が2つ（体と頭）のものが多いといわれる（諸説あり。一般的な知識。効果をうたうものではない）。"
+ "unchiku_source": "雪だるまの名前は、置物の「だるま」に形が近いからという説がある。日本では玉が2つ（体と頭）のものが多いといわれる（諸説あり。一般的な知識。効果をうたうものではない）。"
 }
