@@ -23,12 +23,16 @@ def transcribe(wav):
     import time, urllib.error
     for i in range(8):     # Vertex は1分あたりの回数に上限があり 429 が返ることがある（2026-11-24）：待って取り直す
         try:
-            res = generate_content(MODEL, body, timeout=120)
+            res = generate_content(MODEL, body, timeout=45)
             break
         except urllib.error.HTTPError as e:
             if e.code not in (429, 503) or i == 7:
                 raise
             time.sleep(15 * (i + 1))
+        except (TimeoutError, ConnectionError, urllib.error.URLError) as e:    # 読み取りの時間切れ（2026-11-25）：取り直す
+            if i == 7:
+                raise
+            time.sleep(10)
     return "".join(p.get("text", "") for p in res["candidates"][0]["content"]["parts"]).strip()
 
 
