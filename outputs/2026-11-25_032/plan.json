@@ -1744,9 +1744,9 @@
     },
     {
      "id": 2,
-     "type": "入れ替え",
-     "label": "かぶがにんじんに",
-     "line": "右上のかぶが、にんじんに変わりました。",
+     "type": "色",
+     "label": "ふくろが緑",
+     "line": "左下のふくろが、緑になりました。",
      "box": [
       0,
       0,
@@ -1754,8 +1754,7 @@
       10
      ],
      "object_w": 100,
-     "src": "1",
-     "context": "八百屋の木箱の上に野菜が置かれている（かぶ→にんじんは自然）"
+     "src": "2"
     },
     {
      "id": 3,
@@ -1774,7 +1773,9 @@
    ],
    "answers_intro": "答えです。",
    "retries": {},
-   "edit_prompts": {},
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. The change must be clearly visible. Do not move any object. Change: the small beige cloth sack tied at the top, standing on the ground at the lower left, becomes light green (the whole sack painted light green, same shape, same place)."
+   },
    "hint_diff": null,
    "content_box": [
     0,
@@ -1922,9 +1923,9 @@
    "diffs": [
     {
      "id": 1,
-     "type": "向き",
-     "label": "小鳥が右向き",
-     "line": "左上の小鳥が、右向きになりました。",
+     "type": "色",
+     "label": "植木鉢が水色",
+     "line": "右の鉢が、水色になりました。",
      "box": [
       0,
       0,
@@ -1932,7 +1933,7 @@
       10
      ],
      "object_w": 100,
-     "src": "1"
+     "src": "2"
     },
     {
      "id": 2,
@@ -1965,7 +1966,9 @@
    ],
    "answers_intro": "答えです。",
    "retries": {},
-   "edit_prompts": {},
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. The change must be clearly visible. Do not move any object. Change: the green flower pot holding the small plant, standing on the round wooden stool in the middle right, becomes light blue (the whole pot painted light blue, same shape, same place; the plant stays green)."
+   },
    "hint_diff": null,
    "content_box": [
     0,
