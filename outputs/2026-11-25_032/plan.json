@@ -1609,6 +1609,10 @@
   [
    "しま模様",
    "しまもよう"
+  ],
+  [
+   "かに",
+   "かに"
   ]
  ],
  "voice_override": {
@@ -1817,9 +1821,9 @@
     },
     {
      "id": 3,
-     "type": "向き",
-     "label": "たいが反対向き",
-     "line": "左のたいが、反対向きになりました。",
+     "type": "入れ替え",
+     "label": "たいがかに",
+     "line": "左のたいが、かにに変わりました。",
      "box": [
       0,
       0,
@@ -1827,12 +1831,15 @@
       10
      ],
      "object_w": 100,
-     "src": "1"
+     "src": "2",
+     "context": "魚屋の皿に魚の代わりにかにが載る（自然）"
     }
    ],
    "answers_intro": "答えです。",
    "retries": {},
-   "edit_prompts": {},
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. The change must be clearly visible. Do not move any object. Change: the small red sea bream lying on the white plate at the left edge of the counter is replaced by a small red crab with claws, lying on the same white plate (the bream is completely gone, no fish left on the plate)."
+   },
    "hint_diff": null,
    "content_box": [
     0,
@@ -1861,7 +1868,7 @@
       10
      ],
      "object_w": 100,
-     "src": "1"
+     "src": "2"
     },
     {
      "id": 2,
@@ -1894,7 +1901,9 @@
    ],
    "answers_intro": "答えです。",
    "retries": {},
-   "edit_prompts": {},
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. The change must be clearly visible. Do not move any object. Change: the neat stack of three small wooden crates at the left now has only TWO crates: the top (uppermost) crate is completely gone and the middle and bottom crates remain; show the plain wall and sky behind where the top crate was, with no leftover outline or shadow."
+   },
    "hint_diff": null,
    "content_box": [
     0,

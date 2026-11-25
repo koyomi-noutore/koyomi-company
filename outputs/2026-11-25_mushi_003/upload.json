@@ -1,0 +1,14 @@
+{
+ "video_id": "tqgpatrvcfg",
+ "url": "https://youtu.be/tqgpatrvcfg",
+ "studio": "https://studio.youtube.com/video/tqgpatrvcfg/edit",
+ "privacy": "private",
+ "title": "毎日の料理に使う野菜は？｜虫めがねクイズ",
+ "thumbnail": true,
+ "short": true,
+ "category": "27",
+ "playlists": [
+  "虫めがねクイズ｜この○○なーんだ？"
+ ],
+ "thumbnail_note": "0:00 の画面を thumbnails.set で設定"
+}

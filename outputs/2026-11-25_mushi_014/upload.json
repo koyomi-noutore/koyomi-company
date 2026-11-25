@@ -1,0 +1,14 @@
+{
+ "video_id": "CTFeUicZ2Js",
+ "url": "https://youtu.be/CTFeUicZ2Js",
+ "studio": "https://studio.youtube.com/video/CTFeUicZ2Js/edit",
+ "privacy": "private",
+ "title": "冬においしい海の幸は？｜シニアの脳トレ",
+ "thumbnail": true,
+ "short": true,
+ "category": "27",
+ "playlists": [
+  "虫めがねクイズ｜この○○なーんだ？"
+ ],
+ "thumbnail_note": "0:00 の画面を thumbnails.set で設定"
+}

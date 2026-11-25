@@ -1,0 +1,14 @@
+{
+ "video_id": "LWZvI81qd20",
+ "url": "https://youtu.be/LWZvI81qd20",
+ "studio": "https://studio.youtube.com/video/LWZvI81qd20/edit",
+ "privacy": "private",
+ "title": "庭に咲く花はなーんだ？｜虫めがねクイズ",
+ "thumbnail": true,
+ "short": true,
+ "category": "27",
+ "playlists": [
+  "虫めがねクイズ｜この○○なーんだ？"
+ ],
+ "thumbnail_note": "0:00 の画面を thumbnails.set で設定"
+}

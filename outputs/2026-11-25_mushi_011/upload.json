@@ -1,0 +1,14 @@
+{
+ "video_id": "mcy7MssNq_o",
+ "url": "https://youtu.be/mcy7MssNq_o",
+ "studio": "https://studio.youtube.com/video/mcy7MssNq_o/edit",
+ "privacy": "private",
+ "title": "冬の家にある物はなーんだ？｜虫めがねクイズ",
+ "thumbnail": true,
+ "short": true,
+ "category": "27",
+ "playlists": [
+  "虫めがねクイズ｜この○○なーんだ？"
+ ],
+ "thumbnail_note": "0:00 の画面を thumbnails.set で設定"
+}
