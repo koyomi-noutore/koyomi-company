@@ -454,7 +454,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 199,
+   "outside_box_pixels_diff_gt15": 158,
    "outside_box_max_distance_px": 7.0,
    "answers": [
     {
@@ -497,9 +497,9 @@
     },
     {
      "id": 2,
-     "type": "向き",
-     "label": "ポットの口が反対向き",
-     "line": "右のポットが、反対向きになりました。",
+     "type": "色",
+     "label": "ポットが黄色",
+     "line": "右のポットが、黄色になりました。",
      "box_px": [
       1385,
       935,

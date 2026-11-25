@@ -1627,7 +1627,7 @@
   "q2_go": "では、にもんめ。どうぞ。",
   "q3_go": "つづいて、さんもんめ。どうぞ。",
   "q4_go": "よんもんめです。じっくりどうぞ。",
-  "q5_go": "さいごの、ごもんめ、なんもんです。どうぞ。",
+  "q5_go": "さいごの、ごもんめ、とても、むずかしい、もんだいです。どうぞ。",
   "op": "ふゆの、しょうてんがい、ぜんごもん。",
   "op2": "さいごは、なんもんです。",
   "u2": "ぶりは、おおきくなるにつれて、なまえがかわるさかななのを、ごぞんじですか？",
@@ -1638,7 +1638,8 @@
   "q2_card": "にもんめ、しょきゅう。やおやの、だいです。",
   "q3_card": "さんもんめ、しょきゅう。さかなやの、だいです。",
   "q4_card": "よんもんめ、ちゅうきゅう。さかなやの、のきさきです。",
-  "q5_card": "ごもんめ、じょうきゅう。ふゆのしょうてんがいの、とおりです。"
+  "q5_card": "ごもんめ、じょうきゅう。ふゆの、しょうてんがいの、とおりです。",
+  "q1_ans2": "みぎの、こしかけが、しかくくなりました。"
  },
  "voice": {
   "provider": "fish",
@@ -1917,7 +1918,7 @@
    "q": 5,
    "scene": "冬の商店街の通り",
    "level": "上級",
-   "go": "最後の5問目、難問です。どうぞ。",
+   "go": "最後の5問目、とても難しい問題です。どうぞ。",
    "prompt": "Scene: close-up of a shopping street on a winter day with a greengrocer's shop front on the left and a fish shop front on the right, plain cream awnings with light snow, wooden crates of vegetables and a tray of fish, light snow on the pavement, bright winter daylight. CENTER, LARGE (main subject): the shop fronts with their crates and awnings. Winter only, with light snow: no Christmas, New Year's Eve, New Year or other dated holiday items, no summer items. Every awning, curtain, banner, tag and bag is completely plain and blank: no writing, no signboard with letters, no price tags with numbers. No people, no hands. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; the winter picture is bright and clear. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object rests on the ground, a floor, a shelf, a crate, a stand, a counter or a stool, or hangs from a hook; nothing floats. No letters, labels, numbers or writing anywhere. Each listed object is about one thirty-fifth of the picture width, EXTREMELY TINY, drawn very small with a lot of empty space around it. Objects: (upper left, standing on the rod of the awning of the greengrocer) a tiny brown sparrow standing and facing left; (upper right, hanging from the awning rod of the fish shop) a tiny plain round wooden tag, blank; (middle left, on a wooden crate) a tiny white teacup; (middle right, on a wooden stool) a tiny green plant pot with a small plant; (lower left, on the pavement) a tiny pair of rubber boots; (lower right, on the pavement) a tiny plain white cat sitting.",
    "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny brown sparrow on the awning rod at the upper left now faces RIGHT instead of left (the bird mirrored, same size and place); (b) the tiny white teacup on the wooden crate at the middle left is gone (show the plain crate top, no leftover outline); (c) the tiny round wooden tag hanging at the upper right becomes a tiny square wooden tag (same size).",
    "diffs": [

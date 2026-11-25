@@ -25,6 +25,10 @@ def transcribe(wav):
         try:
             res = generate_content(MODEL, body, timeout=120)
             break
+        except (TimeoutError, OSError) as e:    # 読み取りの時間切れ（2026-11-25）：取り直す
+            if i == 7:
+                raise
+            time.sleep(10)
         except urllib.error.HTTPError as e:
             if e.code not in (429, 503) or i == 7:
                 raise
