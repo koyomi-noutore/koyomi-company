@@ -203,7 +203,7 @@ def scatter(Q, area=AREA, canvas=(W, H)):
     placed = []
     for i, sz in enumerate(sizes):
         ch = Q["odd"] if i == Q["odd_i"] else Q["main"]
-        for _ in range(8000):
+        for _ in range(500):
             ang = rnd.randint(-Q["tilt"], Q["tilt"])
             g = glyph(ch, sz, ang, Q["weight"]).split()[3].point(lambda v: 255 if v > 30 else 0).filter(ImageFilter.MaxFilter(9))
             bb = g.getbbox(); full = g.size[0]
@@ -227,7 +227,13 @@ _LAY = {}
 def layout(Q):
     key = (Q["main"], Q["odd"], Q["seed"], Q["n"], tuple(Q["size"]), Q["tilt"], Q["odd_i"])
     if key not in _LAY:
-        _LAY[key] = scatter(Q)
+        for k in range(200):        # 置ききれないときは、乱数の種を変えて置き直す（同じ問題は毎回同じ置き方になる）
+            try:
+                _LAY[key] = scatter(dict(Q, seed=Q["seed"] + 100 * k)); break
+            except SystemExit:
+                continue
+        else:
+            raise SystemExit(f"置ききれない（{Q['main']}/{Q['odd']}）。個数か大きさを減らす")
     return _LAY[key]
 
 
@@ -427,6 +433,10 @@ def check_kanji(folder, P):
         bad.append(f"新しい問題 {new} 問（11問以上にする）")
     if reuse > n // 2:
         bad.append(f"ショートで使った問題 {reuse} 問（半分まで）")
+    origs = [d[3].split("「")[-1].rstrip("」") for Q in Qs for d in Q["diffs"]]    # 変える元の字（「野球場の「野」」の「野」）
+    odup = {x for x in origs if origs.count(x) > 1}
+    if odup:
+        bad.append(f"同じ字を2問で変えている（同じ物・同じ変化は1度まで）：{sorted(odup)}")
     dup = {x for x in allsubs if allsubs.count(x) > 1}
     if dup:
         bad.append(f"同じ「違う字」が複数の問にある（同じ物・同じ変化は1度まで）：{sorted(dup)}")
@@ -496,7 +506,10 @@ def check_chigau(folder, P):
         ov = sum(int((masks[a] & masks[b]).any()) for a in range(len(masks)) for b in range(a + 1, len(masks)))
         if ov:
             bad.append(f"{i}問目：インクが重なる字の組が {ov}")
-        inside = all(AREA[0] - 5 <= cx - sz / 2 and cx + sz / 2 <= AREA[2] + 5 and AREA[1] - 5 <= cy and cy <= AREA[3] + 5 for _, cx, cy, sz, _ in lay)
+        inside = True
+        for m_ in masks:
+            ys, xs = np.where(m_)
+            inside &= bool(xs.min() >= AREA[0] - 5 and xs.max() <= AREA[2] + 5 and ys.min() >= AREA[1] - 5 and ys.max() <= AREA[3] + 5)
         if not inside:
             bad.append(f"{i}問目：台紙からはみ出す字がある")
         reused = (m + o) in used
@@ -757,8 +770,12 @@ def make_thumbnail(P, folder):
         return
     if P["kind"] == "chigau_long":     # 字がたくさん散らばる台紙（左右とも同じ絵）
         d.rounded_rectangle((40, 30, pw * sc - 40, 660), 60, fill=TH["panel"], outline=TH["edge"], width=8)
-        Qt = dict(Q, n=Th.get("n", 6), size=Th.get("size", [210, 260]), seed=Th.get("seed", 5), odd_i=Th.get("odd_i", 2), tilt=Th.get("tilt", 12))
-        lay = scatter(Qt, area=(90, 60, pw * sc - 90, 640), canvas=(pw * sc, ph * sc))
+        Qt = dict(Q, odd=Q["main"], n=Th.get("n", 6), size=Th.get("size", [210, 260]), seed=Th.get("seed", 5), odd_i=Th.get("odd_i", 2), tilt=Th.get("tilt", 12))
+        for k in range(200):
+            try:
+                lay = scatter(dict(Qt, seed=Qt["seed"] + 100 * k), area=(90, 60, pw * sc - 90, 640), canvas=(pw * sc, ph * sc)); break
+            except SystemExit:
+                continue
         for ch, cx, cy, sz, ang in lay:
             g = glyph(ch, sz, ang, Q["weight"])
             im.paste(g, (int(cx - g.width / 2), int(cy - g.height / 2)), g)
