@@ -1,0 +1,27 @@
+{
+ "runs": [
+  {
+   "step": "balance",
+   "detail": "balance",
+   "sec": 1.0,
+   "at": "2026-11-25T22:34:50+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "voice",
+   "sec": 125.8,
+   "at": "2026-11-25T22:37:00+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "audio",
+   "sec": 10.5,
+   "at": "2026-11-25T22:38:16+00:00"
+  }
+ ],
+ "total_sec_by_step": {
+  "balance": 1.0,
+  "音声": 136.3
+ },
+ "total_sec_all": 137.3
+}

@@ -91,6 +91,13 @@ def targets(folder, short):
         return ["mushi"]
     if re.match(r"\d{4}-\d{2}-\d{2}_(text|tlong)_\d+$", ep.name):   # 文字の脳トレのショート・長尺（2026-11-25 CEO：長尺も同じ再生リスト）
         return ["text"]
+    if re.match(r"\d{4}-\d{2}-\d{2}_w10_\d+$", ep.name):   # 2回分をつないだ全10問の長尺（2026-11-26 CEO：長尺と季節の再生リスト。季節は plan.json の season）
+        keys = ["short"] if short else ["long"]
+        pj = ep / "plan.json"
+        s_ = json.loads(pj.read_text(encoding="utf-8")).get("season") if pj.exists() else None
+        if s_ in ("秋", "冬") and not short:
+            keys.append({"秋": "autumn", "冬": "winter"}[s_])
+        return keys
     m = re.match(r"(\d{4})-(\d{2})-\d{2}_\d+$", ep.name)
     if not m:
         return []

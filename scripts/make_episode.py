@@ -41,6 +41,9 @@
   ショート自身のサムネは0:00の画面（左右に並べた絵ではない）なので確認の対象外。かわりに、short-upload では元の長尺のサムネが全部合格でなければ上げない。
   既存の在庫（第10〜19回など）は作り直さない（CEO判断）。それらの回で止まっても作り直さず、報告する。
 
+2回分をつないだ全10問の回（2026-11-26 CEO決定）：scripts/combine_episodes.py が <回>/ に plan.json（combined あり）・絵・answers.json・description.md を作る。
+  そのあとは voice → audio → video → thumbnail → check（all も可。pictures は何もしない＝画像APIは使わない）。サムネは plan.json の thumbnail.style=band（thumb_band.py）。
+
 費用の記録：画像APIは <回>/image_usage.jsonl、声は <作業>/voice/usage.jsonl に自動で残る。cost.md は制作部が書く。
 """
 import json
@@ -74,7 +77,15 @@ def setup(work):
     return font
 
 
+def combined(ep):
+    """2回分をつないだ回（scripts/combine_episodes.py が作る。plan.json に combined がある）。絵・答えはもう <回>/ にある。"""
+    return "combined" in json.loads((ep / "plan.json").read_text(encoding="utf-8"))
+
+
 def pictures(ep, work, args):
+    if combined(ep):
+        log("絵：つないだ回なので作らない（元の回の絵・答えを写してある。画像APIは使わない）")
+        return
     import ep_pictures as P
     pw = work / "pictures"
     pw.mkdir(parents=True, exist_ok=True)
@@ -174,11 +185,20 @@ def thumb_guard(ep, what="サムネ", files=None, need=True):
         sys.exit(1)
 
 
+def plan_thumb(ep):
+    return json.loads((ep / "plan.json").read_text(encoding="utf-8")).get("thumbnail", {})
+
+
 def thumbnail(ep, font):
     # テストと比較の案（<回>/ab/thumb_A.jpg）があれば、それをアップロード用のサムネにする（2026-11-14 監査：旧型で上書きしていた）
     if (ep / "ab" / "thumb_A.jpg").exists():
         (ep / "thumbnail.jpg").write_bytes((ep / "ab" / "thumb_A.jpg").read_bytes())
         log(f"サムネ：{ep / 'thumbnail.jpg'}（ab/thumb_A.jpg を写した）")
+    elif plan_thumb(ep).get("style") == "band":     # 2026-11-26 つないだ長尺：サムネの標準（黄帯・左右とも元の絵）
+        import thumb_band as B
+        c = plan_thumb(ep)
+        B.make(ep / "thumbnail.jpg", ep, c["question"], B.Y if c.get("band") == "yellow" else B.K, tuple(c["top"]), tuple(c["bottom"]))
+        log(f"サムネ：{ep / 'thumbnail.jpg'}（thumb_band.py）")
     else:
         import ep_thumbnail as Th
         log(f"サムネ：{Th.make(ep, font)}")
