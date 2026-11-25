@@ -29,8 +29,11 @@ CTA_VEIL = [("ほかの脳トレにも", 100, WHITE), ("挑戦！", 110, WHITE),
 COMMENT_MIN, CTA_MIN = 2.0, 5.0
 
 
-def build_outro(base, say, veil, speaker, arrow, comment="text"):
-    c = COMMENT[comment]
+def build_outro(base, say, veil, speaker, arrow, comment="text", cta=None, cta_veil=None):
+    """comment は "text"／"find" のほか、{"line": (字幕, 声), "veil": [(文字, 大きさ), ...]} の辞書でもよい。cta・cta_veil で②の言い方も変えられる。
+    ②（左下をクリック＋矢印）は吹き出しを出さない（矢印と重なるため。2026-11-25 CEO）。こよみ先生は今の位置のまま。"""
+    c = COMMENT[comment] if isinstance(comment, str) else comment
+    cta = cta or CTA
     frames, off = [], 0.0
     # ① コメントの呼びかけ（約2秒）
     d = say("comment", c["line"], off)
@@ -38,9 +41,9 @@ def build_outro(base, say, veil, speaker, arrow, comment="text"):
     lines = [(s, sz, YELLOW if i == 2 else WHITE) for i, (s, sz) in enumerate(c["veil"])]
     frames.append((speaker(veil(base, lines), "smile", c["line"][0]), n)); off += n
     # ② 左下をクリック＋矢印
-    d = say("cta", CTA, off)
+    d = say("cta", cta, off)
     end = max(CTA_MIN, d + 1.0)
-    b2 = speaker(veil(base, CTA_VEIL), "wink", CTA[0])
+    b2 = speaker(veil(base, cta_veil or CTA_VEIL), "wink", None)
     for i in range(int(end * 10)):
         frames.append((arrow(b2.copy(), i / 10), 0.1))
     return frames, off + end
