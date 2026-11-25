@@ -43,7 +43,8 @@ from credentials import vertex_service_account, rs256_sign  # noqa: E402
 CONF = Path(__file__).parent / "schedule_sheet.json"
 LIST, CAL, STOCK = "動画一覧", "カレンダー", "在庫"
 SLOTS = ["8:30", "14:30", "18:30"]
-DELETE = "削除"   # 枠の選択肢。作り直して不要になった動画などに付ける（カレンダー・在庫・注意から外す。2026-11-24 CEO）
+DELETE = "削除"
+USED10 = "10問版"   # 2026-11-26 CEO：10問の長尺に使った5問の回。単独では出さない（削除と同じく在庫・カレンダー・注意から外す）   # 枠の選択肢。作り直して不要になった動画などに付ける（カレンダー・在庫・注意から外す。2026-11-24 CEO）
 JST = dt.timezone(dt.timedelta(hours=9))
 EPOCH = dt.datetime(1899, 12, 30, tzinfo=JST)  # スプレッドシートの日付の起点
 HEAD = ["動画ID", "種類", "回", "タイトル", "【入力】予定日", "【入力】枠", None,
@@ -191,7 +192,7 @@ def color(h):
 def stock_formulas():
     """在庫タブ 2〜3行目の式（予定日が空・非公開・枠が「削除」でない動画を種類ごとに）。"""
     q = f"'{LIST}'!"
-    cond = f"{q}$B$2:$B=A$1,{q}$E$2:$E=\"\",{q}$H$2:$H=\"非公開\",{q}$F$2:$F<>\"{DELETE}\""
+    cond = f"{q}$B$2:$B=A$1,{q}$E$2:$E=\"\",{q}$H$2:$H=\"非公開\",{q}$F$2:$F<>\"{DELETE}\",{q}$F$2:$F<>\"{USED10}\""
     return [[f'=IFERROR(ROWS(FILTER({q}$A$2:$A,{cond.replace("A$1", c + "$1")})),0)&"本"' for c in "ABCD"],
             [f'=IFERROR(FILTER(IF({q}$C$2:$C="",{q}$D$2:$D,{q}$C$2:$C&"｜"&{q}$D$2:$D),{cond.replace("A$1", c + "$1")}),"（なし）")'
              for c in "ABCD"]]
@@ -201,7 +202,7 @@ def slot_rule(sheet):
     """枠（F列）の選択肢：8:30・14:30・18:30・削除。"""
     return {"setDataValidation": {"range": {"sheetId": sheet, "startRowIndex": 1, "endRowIndex": 1000,
                                             "startColumnIndex": 5, "endColumnIndex": 6}, "rule": {
-        "condition": {"type": "ONE_OF_LIST", "values": [{"userEnteredValue": s} for s in SLOTS + [DELETE]]},
+        "condition": {"type": "ONE_OF_LIST", "values": [{"userEnteredValue": s} for s in SLOTS + [DELETE, USED10]]},
         "strict": False, "showCustomUi": True}}}
 
 
@@ -213,7 +214,7 @@ def upgrade(sid, tok):
     sh = {s["properties"]["title"]: s for s in meta["sheets"]}
     L = sh[LIST]["properties"]["sheetId"]
     reqs = [slot_rule(L)]
-    gray = f'=$F2="{DELETE}"'
+    gray = f'=OR($F2="{DELETE}",$F2="{USED10}")'
     if not any(gray == v.get("userEnteredValue") for r in sh[LIST].get("conditionalFormats", [])
                for v in r.get("booleanRule", {}).get("condition", {}).get("values", [])):
         reqs.append({"addConditionalFormatRule": {"index": 0, "rule": {
@@ -227,7 +228,7 @@ def upgrade(sid, tok):
                                                  "data": [{"range": f"'{STOCK}'!A2:D3", "values": stock_formulas()}]})
 
 
-def mark_deleted(sid, tok, ids):
+def mark_deleted(sid, tok, ids, value=None):
     """指定した動画の行の枠を「削除」にする（CEOの指示があったときだけ使う。予定日が入っている行は変えない）。"""
     base = f"https://sheets.googleapis.com/v4/spreadsheets/{sid}"
     cur = call(base + f"/values/{urllib.parse.quote(LIST)}!A2:F", tok).get("values", [])
@@ -238,7 +239,7 @@ def mark_deleted(sid, tok, ids):
             if r[4]:
                 print("予定日が入っているので変えない：", r[0], r[4], r[5])
                 continue
-            data.append({"range": f"'{LIST}'!F{i + 2}", "values": [[DELETE]]})
+            data.append({"range": f"'{LIST}'!F{i + 2}", "values": [[value or DELETE]]})
             done.append(r[0])
     if data:
         call(base + "/values:batchUpdate", tok, {"valueInputOption": "RAW", "data": data})
@@ -406,7 +407,7 @@ def report(sid, tok):
     warn = []
     for r in rows:
         r = r + [""] * (10 - len(r))
-        flag = "" if r[5] == DELETE else " ".join(x for x in (r[6], r[9]) if x)
+        flag = "" if r[5] in (DELETE, USED10) else " ".join(x for x in (r[6], r[9]) if x)
         if flag:
             warn.append(f"{flag}\t{r[0]}\t{r[1]}\t入力 {r[4] or '—'} {r[5] or ''}\tYouTube {r[7]} {r[8] or '—'}\t{r[3][:30]}")
     print(f"動画 {len(rows)} 本。注意 {len(warn)} 件")
@@ -431,6 +432,7 @@ def main():
     ap.add_argument("--sheet")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--mark-deleted", nargs="+", metavar="動画ID", help="その動画の行の枠を「削除」にする（CEOの指示のときだけ）")
+    ap.add_argument("--mark-used10", nargs="+", metavar="動画ID", help="その動画の行の枠を「10問版」にする（10問の長尺に使った5問の回。単独で出さない）")
     ap.add_argument("--fill-new", action="store_true",
                     help="今回足す新しい行だけ、予約・公開済みなら予定日・枠をYouTubeの時刻で埋める（既存の行には触らない）")
     a = ap.parse_args()
@@ -447,6 +449,8 @@ def main():
     upgrade(sid, tok)
     if a.mark_deleted:
         print("「削除」にした行：", mark_deleted(sid, tok, set(a.mark_deleted)))
+    if a.mark_used10:
+        print("「10問版」にした行：", mark_deleted(sid, tok, set(a.mark_used10), USED10))
     have = call(f"https://sheets.googleapis.com/v4/spreadsheets/{sid}/values/{urllib.parse.quote(LIST)}!A2:A", tok).get("values", [])
     videos = youtube_videos([r[0] for r in have if r])
     added = sync(sid, tok, videos, first or a.fill_new)
