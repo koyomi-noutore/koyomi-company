@@ -2,3 +2,7 @@
 {"time": "2026-11-25T07:43:33+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 694, "output_tokens": 1120, "total_tokens": 2304}
 {"time": "2026-11-25T07:45:11+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 669, "output_tokens": 1120, "total_tokens": 2244}
 {"time": "2026-11-25T07:45:47+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 635, "output_tokens": 1120, "total_tokens": 2125}
+{"time": "2026-11-25T07:47:31+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 695, "output_tokens": 1120, "total_tokens": 2184}
+{"time": "2026-11-25T07:49:42+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 763, "output_tokens": 1120, "total_tokens": 2069}
+{"time": "2026-11-25T07:49:43+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 758, "output_tokens": 1120, "total_tokens": 2079}
+{"time": "2026-11-25T07:51:47+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 776, "output_tokens": 1120, "total_tokens": 2152}

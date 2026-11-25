@@ -161,7 +161,7 @@
    "id": "fukuro",
    "kind": "動物",
    "answer": "ふくろう",
-   "answer_voice": "ふくろう",
+   "answer_voice": "とりの、ふくろう",
    "image": "fukuro.png",
    "prompt_subject": "one cute owl sitting upright facing front: round brown feathered body, big round eyes with a facial disc, small beak, ear tufts, perched on a short branch.",
    "path_note": "",
@@ -181,7 +181,8 @@
     0.5,
     0.3
    ],
-   "speed_px": 135
+   "speed_px": 135,
+   "answer_sub": "鳥のふくろう"
   },
   {
    "id": "usagi",
@@ -371,23 +372,23 @@
    "answer": "湯たんぽ",
    "answer_voice": "ゆたんぽ",
    "image": "yutanpo.png",
-   "prompt_subject": "one Japanese yutanpo hot water bottle: a rounded flat metal body with ridges and a screw cap, in a knitted cover, wrapped halfway with a soft scarf.",
+   "prompt_subject": "one traditional Japanese yutanpo (metal hot water bottle), shown alone: a flat oval-shaped metal body (tin or copper) lying upright, its whole surface covered with horizontal corrugated wave-shaped ridges, and a round screw cap on a short raised neck at the top. Plain bare metal, no cloth cover, no scarf, no clothes, no knitting. Fill the frame, no paper edge, no border, no shadow.",
    "path_note": "",
    "intro_voice": "このどうぐ、なーんだ？むしめがねで、のぞいてみてね。",
    "grid": 4,
    "skip": 3,
-   "seed": 105,
+   "seed": 136,
    "start": [
     0.87,
     0.87
    ],
    "feature": [
-    0.38,
-    0.13
+    0.62,
+    0.3
    ],
    "finale": [
-    0.38,
-    0.13
+    0.62,
+    0.3
    ],
    "speed_px": 135
   },

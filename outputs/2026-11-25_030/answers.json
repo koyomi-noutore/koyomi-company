@@ -184,8 +184,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 362,
-   "outside_box_max_distance_px": 10.0,
+   "outside_box_pixels_diff_gt15": 314,
+   "outside_box_max_distance_px": 9.0,
    "answers": [
     {
      "id": 1,
@@ -266,35 +266,35 @@
     {
      "id": 3,
      "type": "なくなる",
-     "label": "麦わら帽子がない",
-     "line": "左上の麦わら帽子が、なくなりました。",
+     "label": "マフラーがない",
+     "line": "左上のマフラーが、なくなりました。",
      "box_px": [
-      152,
-      558,
-      655,
-      750
+      190,
+      520,
+      640,
+      800
      ],
      "box_screen": [
-      79,
-      289,
-      339,
-      388
+      98,
+      269,
+      331,
+      414
      ],
      "circle_a_screen": [
-      79,
-      289,
-      339,
-      388
+      98,
+      269,
+      331,
+      414
      ],
      "circle_b_screen": [
-      79,
-      289,
-      339,
-      388
+      98,
+      269,
+      331,
+      414
      ],
-     "object_w_px": 330,
-     "object_picture_width_pct": 17.78,
-     "object_screen_width_pct": 8.89,
+     "object_w_px": 230,
+     "object_picture_width_pct": 12.39,
+     "object_screen_width_pct": 6.2,
      "in_level_range": false,
      "in_safe_y": true,
      "edit_version": "2",
@@ -319,8 +319,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 168,
-   "outside_box_max_distance_px": 10.0,
+   "outside_box_pixels_diff_gt15": 242,
+   "outside_box_max_distance_px": 11.0,
    "answers": [
     {
      "id": 1,
@@ -367,25 +367,25 @@
      "line": "まん中の缶が、なくなりました。",
      "box_px": [
       1023,
-      1118,
+      1060,
       1350,
       1320
      ],
      "box_screen": [
       529,
-      578,
+      548,
       698,
       683
      ],
      "circle_a_screen": [
       529,
-      578,
+      548,
       698,
       683
      ],
      "circle_b_screen": [
       529,
-      578,
+      548,
       698,
       683
      ],
@@ -405,25 +405,25 @@
      "line": "左下の木づちが、向きを変えました。",
      "box_px": [
       180,
-      1391,
+      1350,
       817,
       1730
      ],
      "box_screen": [
       93,
-      719,
+      698,
       423,
       895
      ],
      "circle_a_screen": [
       93,
-      719,
+      698,
       423,
       895
      ],
      "circle_b_screen": [
       93,
-      719,
+      698,
       423,
       895
      ],
@@ -589,45 +589,45 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 206,
+   "outside_box_pixels_diff_gt15": 176,
    "outside_box_max_distance_px": 11.0,
    "answers": [
     {
      "id": 1,
      "type": "向き",
-     "label": "小鳥が右向き",
-     "line": "左上の小鳥が、右向きになりました。",
+     "label": "小鳥が左向き",
+     "line": "左上の小鳥が、左向きになりました。",
      "box_px": [
-      367,
-      127,
-      559,
-      318
+      341,
+      100,
+      601,
+      268
      ],
      "box_screen": [
-      190,
-      66,
-      289,
-      164
+      176,
+      52,
+      311,
+      139
      ],
      "circle_a_screen": [
-      190,
-      66,
-      289,
-      164
+      176,
+      52,
+      311,
+      139
      ],
      "circle_b_screen": [
-      190,
-      66,
-      289,
-      164
+      176,
+      52,
+      311,
+      139
      ],
-     "object_w_px": 110,
-     "object_picture_width_pct": 5.93,
-     "object_screen_width_pct": 2.96,
-     "in_level_range": false,
-     "in_safe_y": true,
-     "edit_version": "1",
-     "made_by": "gemini",
+     "object_w_px": 140,
+     "object_picture_width_pct": 7.54,
+     "object_screen_width_pct": 3.77,
+     "in_level_range": true,
+     "in_safe_y": false,
+     "edit_version": "flip",
+     "made_by": "program",
      "note": ""
     },
     {

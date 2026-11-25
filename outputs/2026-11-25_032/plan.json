@@ -210,7 +210,7 @@
    {
     "id": "op",
     "at": 0.0,
-    "text": "冬の商店街の間違い探し、全5問。",
+    "text": "冬の商店街、全5問。",
     "face": "smile",
     "until": 4.4
    },
@@ -1605,6 +1605,10 @@
   [
    "果物",
    "くだもの"
+  ],
+  [
+   "しま模様",
+   "しまもよう"
   ]
  ],
  "voice_override": {
@@ -1620,7 +1624,7 @@
   "q3_go": "つづいて、さんもんめ。どうぞ。",
   "q4_go": "よんもんめです。じっくりどうぞ。",
   "q5_go": "さいごの、ごもんめ、なんもんです。どうぞ。",
-  "op": "ふゆの、しょうてんがいの、まちがいさがし、ぜんごもん。",
+  "op": "ふゆの、しょうてんがい、ぜんごもん。",
   "op2": "さいごは、なんもんです。",
   "u2": "ぶりは、おおきくなるにつれて、なまえがかわるさかななのを、ごぞんじですか？",
   "u3": "わかし、いなだ、わらさ、そしてぶり。しゅっせうおと、よばれます。",
@@ -1781,7 +1785,7 @@
    "level": "初級",
    "go": "つづいて、3問目。どうぞ。",
    "prompt": "Scene: close-up of a fish shop counter in a Japanese shopping street on a winter day, a plain cream awning with a little snow, plain wall behind, hooks on a wooden post. CENTER (main subject, medium size, about one third of the picture width): a wooden counter with a big silver-and-blue fish (a yellowtail) lying on crushed ice. Winter only, with light snow: no Christmas, New Year's Eve, New Year or other dated holiday items, no summer items. Every awning, curtain, banner, tag and bag is completely plain and blank: no writing, no signboard with letters, no price tags with numbers. No people, no hands. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; the winter picture is bright and clear. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the ground, a floor, a shelf, a crate, a stand, a counter or a stool, or hangs from a hook; nothing floats. No letters, labels, numbers or writing anywhere. Each listed object is SMALL: about one sixteenth of the picture width. Objects: (left, at 30% height, hanging from a hook on the wall) a small plain white hand towel; (right, at 30% height, hanging from a hook on a post) a small plain yellow apron; (left, at 50% height, on the counter) a small white plate with one small sea bream fish lying on it, head to the left; (right, at 50% height, on the counter) a small silver weighing scale; (left, at 70% height, on the ground) a small wooden tub; (right, at 70% height, on the ground) a small wooden stool.",
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small plain white hand towel hanging at the left becomes light blue (all of the towel painted light blue); (b) the small plain yellow apron hanging at the right now has clear dark blue stripes (vertical stripes, same shape); (c) the small sea bream on the white plate on the counter now lies with its head to the RIGHT instead of the left (the fish mirrored, same plate).",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small plain white hand towel hanging at the left becomes light blue (all of the towel painted light blue); (b) the small plain yellow apron hanging at the right becomes green (all of the apron painted green, same shape); (c) the small sea bream on the white plate on the counter now lies with its head to the RIGHT instead of the left (the fish mirrored, same plate).",
    "diffs": [
     {
      "id": 1,
@@ -1799,9 +1803,9 @@
     },
     {
      "id": 2,
-     "type": "模様",
-     "label": "前かけがしましま",
-     "line": "右上の前かけが、しましま模様になりました。",
+     "type": "色",
+     "label": "前かけが緑",
+     "line": "右上の前かけが、緑になりました。",
      "box": [
       0,
       0,
@@ -1815,7 +1819,7 @@
      "id": 3,
      "type": "向き",
      "label": "たいが反対向き",
-     "line": "左のおさらのたいが、反対向きになりました。",
+     "line": "左のたいが、反対向きになりました。",
      "box": [
       0,
       0,
