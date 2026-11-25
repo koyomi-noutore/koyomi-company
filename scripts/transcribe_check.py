@@ -25,7 +25,7 @@ def transcribe(wav):
         try:
             res = generate_content(MODEL, body, timeout=120)
             break
-        except (TimeoutError, OSError) as e:    # 読み取りの時間切れ（2026-11-25）：取り直す
+        except (TimeoutError, ConnectionError) as e:    # 読み取りの時間切れ（2026-11-25）：取り直す
             if i == 7:
                 raise
             time.sleep(10)
