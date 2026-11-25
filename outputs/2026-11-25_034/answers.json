@@ -49,8 +49,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 234,
-   "outside_box_max_distance_px": 12.0,
+   "outside_box_pixels_diff_gt15": 70,
+   "outside_box_max_distance_px": 7.0,
    "answers": [
     {
      "id": 1,
@@ -265,9 +265,9 @@
     },
     {
      "id": 3,
-     "type": "入れ替え",
-     "label": "クマがアヒル",
-     "line": "左下のクマが、アヒルに変わりました。",
+     "type": "色",
+     "label": "クマが白",
+     "line": "左下のクマが、白くなりました。",
      "box_px": [
       170,
       1290,
