@@ -342,9 +342,12 @@ def build(kind, out):
     d_intro = say("intro", L["intro"])
     vl = T.intro_from_cfg(cfg)     # 2026-11-25 CEO：文字を大きく・行間を広く。最初の画面は吹き出しを出さない（サムネ）
     seq.append((T.speaker(T.veil(frame(0), vl, T.INTRO_GAP), "normal", None), max(4.0, d_intro + 0.4))); t += seq[-1][1]
-    say("tap", T.TAP)
+    w_tap, d_tap = T.voice(kind, "tap", T.TAP[1])     # 出題中（残り約10秒）に、声と吹き出しで「わかったら、画面を2回タップしてね」（2026-11-25 CEO）
+    off_tap = T.tap_offset(cfg["think"], d_tap)
+    voices.append((w_tap, t + off_tap, "tap", T.TAP))
     for s_ in range(cfg["think"], 0, -1):
-        seq.append((T.timer(T.speaker(frame(0), "think" if s_ < cfg["think"] - 3 else "smile", T.TAP[0]), s_), 1.0)); t += 1.0
+        i_ = cfg["think"] - s_
+        seq.append((T.timer(T.speaker(frame(0), "think" if s_ < cfg["think"] - 3 else "smile", T.TAP[0] if T.tap_window(off_tap, d_tap, i_) else None), s_), 1.0)); t += 1.0
     ev["solve_end"] = t
     d0 = say("ans0", T.ANS0)
     seq.append((T.speaker(frame(0), "surprise", T.ANS0[0]), max(1.5, d0 + 0.2))); t += seq[-1][1]

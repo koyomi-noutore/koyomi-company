@@ -80,6 +80,22 @@ def cfg():
     return c
 
 
+TAP_TEXT = "わかったら、画面を2回タップしてね。"
+TAP_VOICE = "わかったら、がめんを、にかいタップしてね。"
+TAP_DUR = 2.7                  # 声の長さの見込み（声を作る前に開始秒を決めるため）
+
+
+def tap_at(solve, c=None):
+    """「2回タップ」の声を始める秒。考える時間の残りが約10秒のとき（短いときは真ん中）。残り5〜1秒のカウント音（ピッ）にかからないよう、残り5.5秒より前に終える。
+    考える時間は、最初の幕が消える頃（約4秒）から solve まで。plan.json の short に "tap_at" があればその秒。"""
+    if c and c.get("tap_at") is not None:
+        return c["tap_at"]
+    start = 4.0
+    think = solve - start
+    off = think - 10 if think >= 14 else think / 2
+    return round(start + max(0.5, min(off, think - 5.5 - TAP_DUR)), 2)
+
+
 def lines(ep):
     """ショートのセリフ：(id, 開始秒, 字幕, 声に渡す文)。答えのセリフは長尺と同じ文を使う。"""
     import ep_timeline as T
@@ -88,13 +104,15 @@ def lines(ep):
     Q = {x["q"]: x for x in plan()["questions"]}[q]
     L = [("s_intro", c["intro_at"], c["intro"])]
     a0 = c["solve"]
+    if c.get("tap", True):      # 2026-11-25 CEO：「わかったら、画面を2回タップしてね」は出題中（残り約10秒）に。plan.json の short に "tap": false で外せる
+        L.append(("s_tap", tap_at(a0, c), TAP_TEXT))
     L.append(("s_ans0", a0, Q.get("answers_intro", "答えです。")))
     for i, d in enumerate(Q["diffs"]):
         L.append((f"s_ans{i + 1}", a0 + 1.6 + c["answer_gap"] * i, d.get("short_line", d["line"])))   # ショートだけ短くしたいとき（長尺はそのまま）
     end_at = a0 + 1.6 + c["answer_gap"] * len(Q["diffs"]) + 0.4
     L.append(("s_end", end_at + 0.4, c["end"]))
     total = round(end_at + c["end_len"], 1)
-    out = [(lid, t, s, T.to_voice(lid, s)) for lid, t, s in L]
+    out = [(lid, t, s, TAP_VOICE if lid == "s_tap" else T.to_voice(lid, s)) for lid, t, s in L]
     left = [(lid, "".join(T.KANJI.findall(vt))) for lid, t, s, vt in out if T.KANJI.search(vt)]
     if left:   # 読み間違いゼロ（2026-11-15）：声に渡す文に漢字を残さない
         raise SystemExit(f"ショートの声に渡す文に漢字が残っている：{left}（plan.json の readings に読みを足す）")
