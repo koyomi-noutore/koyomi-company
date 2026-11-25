@@ -26,6 +26,7 @@ W, H, FPS = 1920, 1080, 30
 WORK = Path.home() / ".cache/koyomi/text_long"
 T.WORK = WORK                                   # 声・こよみ先生の画像の置き場（text_shorts の voice・owl がここを使う）
 LEVEL_COLOR = {"やさしい": (70, 140, 190), "ふつう": (214, 128, 48), "むずかしい": (176, 62, 52)}
+ROW = {1: "いち", 2: "に", 3: "さん", 4: "よん", 5: "ご", 6: "ろく", 7: "なな"}
 NUM = {1: "いち", 2: "に", 3: "さん", 4: "よん", 5: "ご", 6: "ろく", 7: "なな", 8: "はち", 9: "きゅう", 10: "じゅう",
        11: "じゅういち", 12: "じゅうに", 13: "じゅうさん", 14: "じゅうよん", 15: "じゅうご", 16: "じゅうろく", 17: "じゅうなな",
        18: "じゅうはち", 19: "じゅうきゅう", 20: "にじゅう"}     # 「○問目」の読み（2026-11-23：「第2問」が崩れた。「にもんめ」と言う）
@@ -82,7 +83,7 @@ def owl(face, size=OWL_S):
     return T.owl(face).resize((size, size), Image.LANCZOS)
 
 
-def speaker(im, face, sub=None):
+def speaker(im, face, sub=None, one_line=False):
     o = owl(face)
     im.paste(o, OWL_XY, o)
     if sub:
@@ -91,6 +92,10 @@ def speaker(im, face, sub=None):
         d.rounded_rectangle(BUB, 34, fill=(255, 255, 255), outline=TH["accent"], width=6)
         d.polygon([(x0 + 3, y0 + 80), (x0 - 40, y0 + 112), (x0 + 3, y0 + 130)], fill=(255, 255, 255))
         sz = 68
+        if one_line:      # 1行に収まる大きさがあれば、そちらにする（2行目に「に。」だけ残るのを避ける。漢字の回で使う）
+            for z in range(68, 55, -4):
+                if d.textlength(sub, font=f(z)) <= x1 - x0 - 70:
+                    sz = z; break
         ls = T.wrap(d, sub, sz, x1 - x0 - 70)
         while len(ls) > 2 and sz > 54:
             sz -= 4; ls = T.wrap(d, sub, sz, x1 - x0 - 70)
@@ -101,10 +106,8 @@ def speaker(im, face, sub=None):
 
 
 # ---------- 各問の画面 ----------
-def question_frame(i, n, Q, state, remain=None, sub=None, face="normal", rule=False, think=15):
-    """state 0＝問題、1＝答え。remain＝のこり秒数（考える時間）。sub＝先生の吹き出しの字幕。"""
-    im = Image.new("RGB", (W, H), TH["bg"])
-    d = ImageDraw.Draw(im)
+def header(d, i, n, Q, remain, think):
+    """上の帯：番号札・難しさ・（のこり秒数の丸 または 全○問）。"""
     lc = LEVEL_COLOR.get(Q["level"], TH["accent"])
     d.rounded_rectangle((60, 40, 400, 190), 40, fill=TH["accent"])
     tc(d, (230, 117), f"{i}問目", 100, (255, 255, 255))
@@ -117,6 +120,13 @@ def question_frame(i, n, Q, state, remain=None, sub=None, face="normal", rule=Fa
         d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=TH["panel"])
         d.arc((cx - r, cy - r, cx + r, cy + r), -90, -90 + 360 * remain / think, fill=TH["alert"] if remain <= 3 else TH["accent"], width=16)
         tc(d, (cx, cy), str(remain), 104, TH["alert"] if remain <= 3 else TH["ink"])
+
+
+def question_frame(i, n, Q, state, remain=None, sub=None, face="normal", rule=False, think=15):
+    """state 0＝問題、1＝答え。remain＝のこり秒数（考える時間）。sub＝先生の吹き出しの字幕。"""
+    im = Image.new("RGB", (W, H), TH["bg"])
+    d = ImageDraw.Draw(im)
+    header(d, i, n, Q, remain, think)
     clue = Q["clue"]
     tc(d, (W // 2, 310), clue, fit(d, clue, 104, 1760), TH["ink"])
     rule_txt = "□の中の漢字を、考えてみてね" if rule else "□にあてはまる漢字は？"
@@ -138,6 +148,32 @@ def question_frame(i, n, Q, state, remain=None, sub=None, face="normal", rule=Fa
         else:
             tc(d, (cx, cy), ch, size, TH["ink"])
     return speaker(im, face, sub)
+
+
+def kanji_frame(i, n, Q, state, remain=None, sub=None, face="normal", rule=False, think=15):
+    """漢字の間違い探し：左右に同じ言葉を並べ、右に違う字が2つ。state＝答えを見せた数（0〜2）。左右の違う所に赤丸を付ける。"""
+    im = Image.new("RGB", (W, H), TH["bg"])
+    d = ImageDraw.Draw(im)
+    header(d, i, n, Q, remain, think)
+    tc(d, (1130, 118), "左と右で、ちがう字が2つあるよ" if rule else "左と右で、ちがう字は？", 62, TH["ink"])
+    word, rows = Q["word"], Q["rows"]
+    size, ch = (120, 142) if rows <= 4 else (98, 116)
+    cw = int(size * 1.3)
+    pw, ph = cw * 3 + 30, ch * rows + 28
+    gap = 140
+    x0 = (W - (2 * pw + gap)) // 2
+    y0 = 214
+    diffs = {(r, c): sub_ for r, c, sub_, *_ in Q["diffs"]}
+    for side, px in ((0, x0), (1, x0 + pw + gap)):
+        d.rounded_rectangle((px, y0, px + pw, y0 + ph), 28, fill=TH["panel"], outline=TH["edge"], width=6)
+        for r in range(rows):
+            for c in range(3):
+                x, y = px + 15 + cw * c + cw // 2, y0 + 14 + ch * r + ch // 2
+                tc(d, (x, y), diffs.get((r, c), word[c]) if side else word[c], size, TH["ink"])
+                if (r, c) in diffs and state > [(a_, b_) for a_, b_, *_ in Q["diffs"]].index((r, c)):
+                    rr = int(size * 0.66)
+                    d.ellipse((x - rr, y - rr, x + rr, y + rr), outline=TH["alert"], width=10)
+    return speaker(im, face, sub, one_line=True)
 
 
 def card_frame(lines, face, sub, t=0.0, with_snow=True, owl_big=True):
@@ -213,8 +249,14 @@ def lines_of(P):
     """声に渡す文（字幕, 声）。出題・答え・オープニング・ひと言・エンディング。"""
     n = len(P["questions"])
     L = {"open": tuple(P["opening"]["line"])}
+    kanji = P["kind"] == "kanji_long"
     for i, Q in enumerate(P["questions"], 1):
         Q["_i"] = i
+        if kanji:
+            L[f"q{i:02d}_intro"] = (f"{i}問目です。違う漢字が、2つあります。", f"{Q.get('num_voice', NUM[i] + 'もんめ、です。')}ちがうかんじが、ふたつあります。")
+            for k, (r, c, sub_, ot, ov, st, sv) in enumerate(Q["diffs"], 1):
+                L[f"q{i:02d}_ans{k}"] = (f"上から{r + 1}行目、{ot}が、{st}に。", f"うえから、{ROW[r + 1]}ぎょうめ、{ov}、{sv}。")
+            continue
         L[f"q{i:02d}_intro"] = (f"{i}問目です。{Q['clue_sub']}□にあてはまる漢字は？", f"{Q.get('num_voice', NUM[i] + 'もんめ、です。')}{Q['clue_voice']}しかくにあてはまる、かんじは？")
         L[f"q{i:02d}_ans"] = (f"答えは、{Q['a']}です。", f"こたえは、{Q['ans_voice']}")
     for k, br in P.get("breaks", {}).items():
@@ -238,8 +280,96 @@ def used_answers(folder):
     return out
 
 
+def used_words(folder):
+    """ショートで出した漢字の間違い探しの言葉（outputs/*_text_*/problem.json の kanji）と、違う字の組。"""
+    out = {}
+    for p in sorted(Path(folder).resolve().parent.glob("*_text_*/problem.json")):
+        try:
+            J = json.loads(p.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if J.get("kind") == "kanji":
+            out[J["word"]] = (p.parent.name[-8:], [d[2] for d in J["diffs"]])
+    return out
+
+
+_NOTDEF = {}
+
+
+def has_glyph(ch):
+    """フォントに字があるか（存在しない字の「豆腐」と同じ形でないか）。PIL で描いて比べる。"""
+    if not _NOTDEF:
+        _NOTDEF["m"] = bytes(f(120).getmask("\uffff"))
+    m = f(120).getmask(ch)
+    return m.getbbox() is not None and bytes(m) != _NOTDEF["m"]
+
+
+def check_kanji(folder, P):
+    Qs, n = P["questions"], len(P["questions"])
+    used = used_words(folder)
+    L = lines_of(P)
+    bad, rows, reuse, new = [], [], 0, 0
+    levels = [Q["level"] for Q in Qs]
+    if n != P["count"]:
+        bad.append(f"問題数 {n} ≠ {P['count']}")
+    if levels != sorted(levels, key=lambda x: ["やさしい", "ふつう", "むずかしい"].index(x)):
+        bad.append("難しさの順（やさしい→ふつう）になっていない")
+    if len({Q["word"] for Q in Qs}) != n:
+        bad.append("同じ言葉が2問ある")
+    allsubs = []
+    for i, Q in enumerate(Qs, 1):
+        w, dfs = Q["word"], Q["diffs"]
+        if len(w) != 3 or len(dfs) != 2:
+            bad.append(f"{i}問目：言葉は3字・違う字は2つ（{w}・{len(dfs)}つ）")
+            continue
+        cells = [(d[0], d[1]) for d in dfs]
+        if len(set(cells)) != 2 or cells[0][0] == cells[1][0]:
+            bad.append(f"{i}問目：違う字が同じ行・同じ場所にある")
+        for r, c, sub_, ot, ov, st, sv in dfs:
+            if not (0 <= r < Q["rows"] and 0 <= c < 3):
+                bad.append(f"{i}問目：場所が範囲外 ({r},{c})")
+            if sub_ == w[c]:
+                bad.append(f"{i}問目：違う字が元と同じ（{sub_}）")
+            for ch in (w[c], sub_):
+                if not has_glyph(ch):
+                    bad.append(f"{i}問目：「{ch}」がフォントにない（豆腐になる）")
+            if w[c] not in ot or sub_ not in st:
+                bad.append(f"{i}問目：答えの文に元の字・違う字が入っていない（{ot}／{st}）")
+            allsubs.append(sub_)
+        reused = w in used
+        if reused != Q["origin"].startswith("reuse"):
+            bad.append(f"{i}問目：origin が実際と違う（言葉 {w}：{'ショートで出した' if reused else '出していない'}）")
+        reuse += reused; new += not reused
+        for key in [f"q{i:02d}_intro"] + [f"q{i:02d}_ans{k}" for k in (1, 2)]:
+            vt = L[key][1]
+            if re.search(r"[\u4e00-\u9fff]", vt):
+                bad.append(f"{key}：声の文に漢字が残っている：{vt}")
+            if "はいる" in vt or "にいる" in vt:
+                bad.append(f"{key}：「入る」系の読みがある：{vt}")
+        cs = "　".join(f"{d[0] + 1}行目の「{w[d[1]]}」→「{d[2]}」" for d in dfs)
+        rows.append(f"| {i} | {Q['level']} | {w}（{Q['rows']}行） | {cs} | {'・'.join(d[3] + '→' + d[5] for d in dfs)} | {'フォントにある' if all(has_glyph(d[2]) for d in dfs) else 'NG'} | {'ショート ' + used[w][0] if reused else '新しい問題'} |")
+    if new < 11:
+        bad.append(f"新しい問題 {new} 問（11問以上にする）")
+    if reuse > n // 2:
+        bad.append(f"ショートで使った問題 {reuse} 問（半分まで）")
+    dup = {x for x in allsubs if allsubs.count(x) > 1}
+    if dup:
+        bad.append(f"同じ「違う字」が複数の問にある（同じ物・同じ変化は1度まで）：{sorted(dup)}")
+    md = [f"# 答えの確かめ（{P['id']}：{P['series']} 全{n}問）", "",
+          "scripts/text_long.py check の結果。各問「3字の言葉・違う字は2つ（別の行）・違う字が元と違う・どちらの字もフォントにある（本当にある字）・声の文に漢字なし・同じ違う字を重ねない」を確かめた。",
+          "違う字は、元の字と形が似ていて、部品の足し引き・入れ替えがスマホの大きさでも見分けられる組にした。点1つの違いなど小さすぎる差は使っていない。", "",
+          f"新しい問題 {n - reuse} 問・ショートで使った言葉 {reuse} 問（半分まで）。", "",
+          "| 問 | 難しさ | 言葉 | 違う字（行目：元→違う） | 答えの言い方 | 字の確認 | 出どころ |", "|---|---|---|---|---|---|---|"] + rows
+    md += ["", "結果：" + ("不合格 " + str(len(bad)) + " 件" if bad else "合格")]
+    (Path(folder) / "answer_check.md").write_text("\n".join(md) + "\n", encoding="utf-8")
+    print("\n".join(bad) if bad else f"OK：{n}問（新しい {n - reuse}・ショート {reuse}）")
+    return not bad
+
+
 def check(folder):
     P = load(folder)
+    if P["kind"] == "kanji_long":
+        return check_kanji(folder, P)
     Qs, n = P["questions"], len(P["questions"])
     used = used_answers(folder)
     bad, rows, reuse, new = [], [], 0, 0
@@ -334,15 +464,24 @@ def build(folder):
             br = P["breaks"][str(i)]
             seq.append((card_frame([(br["title"], 150, TH["accent"]), (br["sub"], 72, TH["accent2"])], "wink", V[key][2][0], 0, with_snow=False), ln)); t += ln
         t0 = t
-        chapters.append((t0, f"{i}問目（{Q['clue']}）"))
+        frame = kanji_frame if P["kind"] == "kanji_long" else question_frame
+        think = Q.get("think", P.get("think", 15))
+        chapters.append((t0, f"{i}問目（{Q.get('clue') or Q['word']}）"))
         ev["start"].append(t0)
         d = say(f"q{i:02d}_intro", t)
         ln = d + 0.3 + 0.5
-        seq.append((question_frame(i, n, Q, 0, None, V[f"q{i:02d}_intro"][2][0], "normal", rule=(i == 1), think=think), ln)); t += ln
+        seq.append((frame(i, n, Q, 0, None, V[f"q{i:02d}_intro"][2][0], "normal", rule=(i == 1), think=think), ln)); t += ln
         ev["think"].append((t, t + think))
         for r in range(think, 0, -1):
-            seq.append((question_frame(i, n, Q, 0, r, None, "think" if r < think - 3 else "smile", think=think), 1.0)); t += 1.0
+            seq.append((frame(i, n, Q, 0, r, None, "think" if r < think - 3 else "smile", think=think), 1.0)); t += 1.0
         ev["solve_end"].append(t)
+        if P["kind"] == "kanji_long":          # 答え：違う字を1つずつ（赤丸・ポン・声）
+            for k in range(1, 3):
+                ev["pon"].append(t + 0.35)
+                d = say(f"q{i:02d}_ans{k}", t + 0.4)
+                ln = 0.4 + d + 0.3 + (1.3 if k == 2 else 0.5)
+                seq.append((kanji_frame(i, n, Q, k, None, V[f"q{i:02d}_ans{k}"][2][0], "yay" if k == 2 else "smile", think=think), ln)); t += ln
+            continue
         ev["pon"].append(t + 0.35)
         d = say(f"q{i:02d}_ans", t + 0.4)
         ln = 0.4 + d + 0.3 + 1.3
@@ -379,7 +518,9 @@ def build(folder):
                     "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-t", f"{total:.2f}", "-movflags", "+faststart", str(folder / "video.mp4")], check=True)
     # 一覧画像：0:00・オープニング・1問目（問題・答え）・エンディング
     k0 = int(o_len * 10)      # 1問目の問題の絵の位置
-    shots = [seq[0][0], seq[k0 // 2][0], seq[k0][0], seq[k0 + 1 + think // 2][0], seq[k0 + 1 + think][0], seq[-30][0]]
+    t1 = Qs[0].get("think", P.get("think", 15))
+    a1 = k0 + 1 + t1 + (1 if P["kind"] == "kanji_long" else 0)      # 1問目の答え（漢字は2つ目まで見せた絵）
+    shots = [seq[0][0], seq[k0 // 2][0], seq[k0][0], seq[k0 + 1 + t1 // 2][0], seq[a1][0], seq[-30][0]]
     S = Image.new("RGB", (3 * 640, 2 * 360))
     for k, im in enumerate(shots):
         S.paste(im.resize((640, 360)), ((k % 3) * 640, (k // 3) * 360))
@@ -439,6 +580,15 @@ def make_thumbnail(P, folder):
     sc = 2
     im = Image.new("RGB", (pw * sc, ph * sc), TH["bg"])
     d = ImageDraw.Draw(im)
+    if P["kind"] == "kanji_long":       # 漢字の間違い探し：言葉を3列×3行に並べた台紙（違いゼロ）
+        w = Q["word"]
+        d.rounded_rectangle((120, 30, pw * sc - 120, 650), 60, fill=TH["panel"], outline=TH["edge"], width=8)
+        for r in range(3):
+            for c in range(3):
+                tc(d, (pw * sc // 2 + (c - 1) * 310, 30 + 100 + r * 200 + 10), w[c], 210, TH["ink"])
+        pic = im.resize((pw, ph), Image.LANCZOS)
+        TB_make(pic, P, folder)
+        return
     clue = Q["clue"]
     tc(d, (pw * sc // 2, 120), clue, fit(d, clue, 120, pw * sc - 80), TH["ink"])
     d.rounded_rectangle((50, 215, pw * sc - 50, 655), 60, fill=TH["panel"], outline=TH["edge"], width=8)
@@ -455,6 +605,13 @@ def make_thumbnail(P, folder):
         else:
             tc(d, (cx, cy), ch, size, TH["ink"])
     pic = im.resize((pw, ph), Image.LANCZOS)
+    TB_make(pic, P, folder)
+
+
+def TB_make(pic, P, folder):
+    import thumb_band as TB
+    Th = P["thumbnail"]
+    top = 170
     TB.pics = lambda ep, qn, sat=1.15: (pic, pic, top)        # 左右とも同じ絵（違いゼロ）
     out = Path(folder) / "ab"
     out.mkdir(exist_ok=True)
