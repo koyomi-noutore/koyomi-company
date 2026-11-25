@@ -1,0 +1,13 @@
+{"time": "2026-11-25T00:27:53+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 592, "output_tokens": 1120, "total_tokens": 2116}
+{"time": "2026-11-25T00:27:54+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 685, "output_tokens": 1120, "total_tokens": 2155}
+{"time": "2026-11-25T00:27:55+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 683, "output_tokens": 1120, "total_tokens": 2153}
+{"time": "2026-11-25T00:27:59+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 690, "output_tokens": 1120, "total_tokens": 2354}
+{"time": "2026-11-25T00:28:19+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 676, "output_tokens": 1120, "total_tokens": 2253}
+{"time": "2026-11-25T00:29:04+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 767, "output_tokens": 1120, "total_tokens": 2162}
+{"time": "2026-11-25T00:29:04+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 765, "output_tokens": 1120, "total_tokens": 2131}
+{"time": "2026-11-25T00:29:05+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 764, "output_tokens": 1120, "total_tokens": 2127}
+{"time": "2026-11-25T00:29:06+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 763, "output_tokens": 1120, "total_tokens": 2095}
+{"time": "2026-11-25T00:29:31+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 769, "output_tokens": 1120, "total_tokens": 2229}
+{"time": "2026-11-25T00:30:40+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 719, "output_tokens": 1120, "total_tokens": 2059}
+{"time": "2026-11-25T00:49:46+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 749, "output_tokens": 1120, "total_tokens": 2166}
+{"time": "2026-11-25T00:49:46+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 738, "output_tokens": 1120, "total_tokens": 2136}

@@ -1,0 +1,1902 @@
+{
+ "episode": "027",
+ "season": "冬",
+ "topics": [
+  "おでんの屋台"
+ ],
+ "note": "第27回（おでんの屋台・冬）。公開日は未定（schedule.md 2026-11-22）。奇数の回：タイトルのみABテスト（サムネはB）。第7回（おでん）と場面・違いを重ねない。",
+ "youtube": {
+  "title": "【間違い探し】おでんの屋台｜シニア・高齢者の脳トレ",
+  "description_file": "description.md",
+  "title_note": "32文字以内・【間違い探し】から。タイトルA（検索型）。3案は ab/titles.md",
+  "publish_plan": "未定（CEOが決める）"
+ },
+ "screens": {
+  "opening_title": "おでんの屋台の間違い探し　全5問",
+  "opening_sub": "最後は難問です",
+  "unchiku_header": "こよみ先生の 冬の小話",
+  "unchiku_slides": [
+   {
+    "until": 7,
+    "texts": [
+     [
+      "ひと休み",
+      960,
+      330,
+      130,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "こよみ先生の 季節のお話",
+      960,
+      520,
+      80,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 15,
+    "texts": [
+     [
+      "おでんは いつ おいしい？",
+      960,
+      380,
+      105,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ]
+    ]
+   },
+   {
+    "until": 24,
+    "texts": [
+     [
+      "さめるときに",
+      960,
+      330,
+      115,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "味が しみこみます",
+      960,
+      520,
+      100,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 30,
+    "texts": [
+     [
+      "ひと晩おくと",
+      960,
+      330,
+      115,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "また おいしい",
+      960,
+      520,
+      100,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   }
+  ],
+  "ending_titles": [
+   [
+    "15個",
+    "屋台の大将"
+   ],
+   [
+    "11〜14個",
+    "のれんの常連さん"
+   ],
+   [
+    "6〜10個",
+    "湯気の見習い"
+   ],
+   [
+    "0〜5個",
+    "ほかほかの見物人"
+   ]
+  ],
+  "ending_note": "ほかほかの見物人も、毎日ためせば 大将です",
+  "ending_next": "ほかの間違い探しも どうぞ",
+  "owl_layout": "bottom",
+  "endscreen_at": 9.0,
+  "rule_overlay": {
+   "text": "右の絵で 違いを3つ さがそう",
+   "sub": "1問 90秒",
+   "sec": 8.0
+  }
+ },
+ "timeline": {
+  "total": 613.5,
+  "opening": [
+   0.0,
+   6.5
+  ],
+  "rule": [
+   6.5,
+   6.5
+  ],
+  "q_start": {
+   "1": 6.5,
+   "2": 114.5,
+   "3": 222.5,
+   "4": 360.5,
+   "5": 468.5
+  },
+  "unchiku": [
+   330.5,
+   360.5
+  ],
+  "ending": [
+   576.5,
+   613.5
+  ],
+  "card": 3.0,
+  "solve": 90.0,
+  "answer": 15.0,
+  "hint_at": null,
+  "ten_at": 80.0,
+  "ans_first": 1.6,
+  "ans_step": 4.3,
+  "solve_calls": [
+   [
+    30,
+    "あと60秒です。"
+   ],
+   [
+    60,
+    "あと30秒です。"
+   ]
+  ],
+  "go_delay": 2.4
+ },
+ "lines": {
+  "opening": [
+   {
+    "id": "op",
+    "at": 0.0,
+    "text": "おでん屋台の間違い探し、全5問。",
+    "face": "smile",
+    "until": 4.2
+   },
+   {
+    "id": "op2",
+    "at": 4.2,
+    "text": "最後は難問。",
+    "face": "wink",
+    "until": 6.5
+   }
+  ],
+  "rule": [],
+  "unchiku": [
+   {
+    "id": "u1",
+    "at": 0.0,
+    "text": "ここでひと休み。こよみ先生の季節のお話です。",
+    "face": "smile",
+    "until": 7.0
+   },
+   {
+    "id": "u2",
+    "at": 7.0,
+    "text": "おでんは、あつあつのときだけが、おいしいと思いますか？",
+    "face": "think",
+    "until": 15.0
+   },
+   {
+    "id": "u3",
+    "at": 15.0,
+    "text": "じつは、さめていくときに、味がしみこみやすいといわれています。",
+    "face": "surprise",
+    "until": 24.0
+   },
+   {
+    "id": "u4",
+    "at": 24.0,
+    "text": "ひと晩おくと、また、ちがったおいしさがありますね。",
+    "face": "wink",
+    "until": 30.0
+   }
+  ],
+  "ending": [
+   {
+    "id": "e1",
+    "at": 0.0,
+    "text": "これで5問目まで、おしまいです。",
+    "face": "yay",
+    "until": 4.2
+   },
+   {
+    "id": "e2",
+    "at": 4.2,
+    "text": "15個の違い、いくつ見つかりましたか。結果発表です。",
+    "face": "smile",
+    "until": 10.8
+   },
+   {
+    "id": "e3",
+    "at": 10.8,
+    "text": "チャンネル登録とベルで、毎朝8時半に問題が届きます。毎日の頭の体操にどうぞ。",
+    "face": "smile",
+    "until": 21.0
+   },
+   {
+    "id": "e4",
+    "at": 21.0,
+    "text": "ほかにも、いろいろな間違い探しがあります。もっと難しい問題に挑戦したい方は、画面の動画をクリックしてくださいね。",
+    "face": "wink",
+    "until": 36.0
+   }
+  ],
+  "extra": [
+   {
+    "id": "c_comment",
+    "at": 237.5,
+    "text": "見つかった数を、あとでコメントで教えてくださいね。",
+    "face": "smile",
+    "until": 244.5
+   }
+  ]
+ },
+ "readings": [
+  [
+   "柄",
+   "え"
+  ],
+  [
+   "串",
+   "くし"
+  ],
+  [
+   "2本",
+   "にほん"
+  ],
+  [
+   "手前",
+   "てまえ"
+  ],
+  [
+   "結び目",
+   "むすびめ"
+  ],
+  [
+   "風呂敷",
+   "ふろしき"
+  ],
+  [
+   "反対向き",
+   "はんたいむき"
+  ],
+  [
+   "座る",
+   "すわる"
+  ],
+  [
+   "重ね",
+   "かさね"
+  ],
+  [
+   "減り",
+   "へり"
+  ],
+  [
+   "ひょうたん",
+   "ひょうたん"
+  ],
+  [
+   "芋煮会",
+   "いもにかい"
+  ],
+  [
+   "芋煮",
+   "いもに"
+  ],
+  [
+   "川原",
+   "かわら"
+  ],
+  [
+   "里芋",
+   "さといも"
+  ],
+  [
+   "昼ごはん",
+   "ひるごはん"
+  ],
+  [
+   "夕方",
+   "ゆうがた"
+  ],
+  [
+   "秋景色",
+   "あきげしき"
+  ],
+  [
+   "山形",
+   "やまがた"
+  ],
+  [
+   "宮城",
+   "みやぎ"
+  ],
+  [
+   "牛肉",
+   "ぎゅうにく"
+  ],
+  [
+   "豚肉",
+   "ぶたにく"
+  ],
+  [
+   "土地",
+   "とち"
+  ],
+  [
+   "家庭",
+   "かてい"
+  ],
+  [
+   "味",
+   "あじ"
+  ],
+  [
+   "縁側のみかんと猫",
+   "えんがわのみかんとねこ"
+  ],
+  [
+   "縁側のお茶の時間",
+   "えんがわのおちゃのじかん"
+  ],
+  [
+   "雪うさぎの耳の葉",
+   "ゆきうさぎのみみのは"
+  ],
+  [
+   "雪だるまと冬の朝",
+   "ゆきだるまとふゆのあさ"
+  ],
+  [
+   "こたつのみかん",
+   "こたつのみかん"
+  ],
+  [
+   "みかんの木の庭",
+   "みかんのきのにわ"
+  ],
+  [
+   "雪うさぎの縁側",
+   "ゆきうさぎのえんがわ"
+  ],
+  [
+   "縁側のひなた",
+   "えんがわのひなた"
+  ],
+  [
+   "みかん箱と猫",
+   "みかんばことねこ"
+  ],
+  [
+   "雪だるまの庭",
+   "ゆきだるまのにわ"
+  ],
+  [
+   "冬の朝の窓辺",
+   "ふゆのあさのまどべ"
+  ],
+  [
+   "時計の文字盤",
+   "とけいのもじばん"
+  ],
+  [
+   "雪だるまの鼻",
+   "ゆきだるまのはな"
+  ],
+  [
+   "間違い探し",
+   "まちがいさがし"
+  ],
+  [
+   "雪かきの道",
+   "ゆきかきのみち"
+  ],
+  [
+   "雪の玄関先",
+   "ゆきのげんかんさき"
+  ],
+  [
+   "麦わら帽子",
+   "むぎわらぼうし"
+  ],
+  [
+   "色えんぴつ",
+   "いろえんぴつ"
+  ],
+  [
+   "手ぶくろ",
+   "てぶくろ"
+  ],
+  [
+   "七味入れ",
+   "しちみいれ"
+  ],
+  [
+   "はし置き",
+   "はしおき"
+  ],
+  [
+   "赤とんぼ",
+   "あかとんぼ"
+  ],
+  [
+   "お月さま",
+   "おつきさま"
+  ],
+  [
+   "火ばさみ",
+   "ひばさみ"
+  ],
+  [
+   "赤いふた",
+   "あかいふた"
+  ],
+  [
+   "大学いも",
+   "だいがくいも"
+  ],
+  [
+   "茶わん",
+   "ちゃわん"
+  ],
+  [
+   "鉢植え",
+   "はちうえ"
+  ],
+  [
+   "丸ごと",
+   "まるごと"
+  ],
+  [
+   "通り道",
+   "とおりみち"
+  ],
+  [
+   "大丈夫",
+   "だいじょうぶ"
+  ],
+  [
+   "難しい",
+   "むずかしい"
+  ],
+  [
+   "段の上",
+   "だんのうえ"
+  ],
+  [
+   "雪の上",
+   "ゆきのうえ"
+  ],
+  [
+   "植木鉢",
+   "うえきばち"
+  ],
+  [
+   "花びん",
+   "かびん"
+  ],
+  [
+   "湯のみ",
+   "ゆのみ"
+  ],
+  [
+   "赤い実",
+   "あかいみ"
+  ],
+  [
+   "長いす",
+   "ながいす"
+  ],
+  [
+   "新そば",
+   "しんそば"
+  ],
+  [
+   "干し柿",
+   "ほしがき"
+  ],
+  [
+   "鉄びん",
+   "てつびん"
+  ],
+  [
+   "酉の市",
+   "とりのいち"
+  ],
+  [
+   "飛び石",
+   "とびいし"
+  ],
+  [
+   "掛け軸",
+   "かけじく"
+  ],
+  [
+   "切り株",
+   "きりかぶ"
+  ],
+  [
+   "石灯籠",
+   "いしどうろう"
+  ],
+  [
+   "少なく",
+   "すくなく"
+  ],
+  [
+   "向いて",
+   "むいて"
+  ],
+  [
+   "まん中",
+   "まんなか"
+  ],
+  [
+   "ゆで卵",
+   "ゆでたまご"
+  ],
+  [
+   "右はし",
+   "みぎはし"
+  ],
+  [
+   "茶色い",
+   "ちゃいろい"
+  ],
+  [
+   "花びら",
+   "はなびら"
+  ],
+  [
+   "土なべ",
+   "どなべ"
+  ],
+  [
+   "玉ねぎ",
+   "たまねぎ"
+  ],
+  [
+   "変わり",
+   "かわり"
+  ],
+  [
+   "落ち葉",
+   "おちば"
+  ],
+  [
+   "黄色い",
+   "きいろい"
+  ],
+  [
+   "大きく",
+   "おおきく"
+  ],
+  [
+   "舞って",
+   "まって"
+  ],
+  [
+   "葉っぱ",
+   "はっぱ"
+  ],
+  [
+   "魔法瓶",
+   "まほうびん"
+  ],
+  [
+   "小さな",
+   "ちいさな"
+  ],
+  [
+   "第1問",
+   "だいいちもん"
+  ],
+  [
+   "第2問",
+   "だいにもん"
+  ],
+  [
+   "第3問",
+   "だいさんもん"
+  ],
+  [
+   "第4問",
+   "だいよんもん"
+  ],
+  [
+   "第5問",
+   "だいごもん"
+  ],
+  [
+   "60秒",
+   "ろくじゅうびょう"
+  ],
+  [
+   "30秒",
+   "さんじゅうびょう"
+  ],
+  [
+   "10秒",
+   "じゅうびょう"
+  ],
+  [
+   "小さく",
+   "ちいさく"
+  ],
+  [
+   "取っ手",
+   "とって"
+  ],
+  [
+   "木の札",
+   "きのふだ"
+  ],
+  [
+   "大きな",
+   "おおきな"
+  ],
+  [
+   "前かけ",
+   "まえかけ"
+  ],
+  [
+   "時計",
+   "とけい"
+  ],
+  [
+   "お盆",
+   "おぼん"
+  ],
+  [
+   "栄養",
+   "えいよう"
+  ],
+  [
+   "登録",
+   "とうろく"
+  ],
+  [
+   "毎朝",
+   "まいあさ"
+  ],
+  [
+   "動画",
+   "どうが"
+  ],
+  [
+   "画面",
+   "がめん"
+  ],
+  [
+   "挑戦",
+   "ちょうせん"
+  ],
+  [
+   "違い",
+   "ちがい"
+  ],
+  [
+   "1羽",
+   "いちわ"
+  ],
+  [
+   "小鳥",
+   "ことり"
+  ],
+  [
+   "左の",
+   "ひだりの"
+  ],
+  [
+   "急須",
+   "きゅうす"
+  ],
+  [
+   "屋根",
+   "やね"
+  ],
+  [
+   "小屋",
+   "こや"
+  ],
+  [
+   "縁側",
+   "えんがわ"
+  ],
+  [
+   "朝市",
+   "あさいち"
+  ],
+  [
+   "お皿",
+   "おさら"
+  ],
+  [
+   "1匹",
+   "いっぴき"
+  ],
+  [
+   "お茶",
+   "おちゃ"
+  ],
+  [
+   "金色",
+   "きんいろ"
+  ],
+  [
+   "熊手",
+   "くまで"
+  ],
+  [
+   "飾り",
+   "かざり"
+  ],
+  [
+   "白く",
+   "しろく"
+  ],
+  [
+   "掛け",
+   "かけ"
+  ],
+  [
+   "漬物",
+   "つけもの"
+  ],
+  [
+   "軍手",
+   "ぐんて"
+  ],
+  [
+   "茶色",
+   "ちゃいろ"
+  ],
+  [
+   "風鈴",
+   "ふうりん"
+  ],
+  [
+   "黒板",
+   "こくばん"
+  ],
+  [
+   "反対",
+   "はんたい"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "黄色",
+   "きいろ"
+  ],
+  [
+   "赤く",
+   "あかく"
+  ],
+  [
+   "青く",
+   "あおく"
+  ],
+  [
+   "赤い",
+   "あかい"
+  ],
+  [
+   "筆箱",
+   "ふでばこ"
+  ],
+  [
+   "木箱",
+   "きばこ"
+  ],
+  [
+   "湯気",
+   "ゆげ"
+  ],
+  [
+   "紙袋",
+   "かみぶくろ"
+  ],
+  [
+   "消え",
+   "きえ"
+  ],
+  [
+   "付き",
+   "つき"
+  ],
+  [
+   "水筒",
+   "すいとう"
+  ],
+  [
+   "帽子",
+   "ぼうし"
+  ],
+  [
+   "上級",
+   "じょうきゅう"
+  ],
+  [
+   "中級",
+   "ちゅうきゅう"
+  ],
+  [
+   "初級",
+   "しょきゅう"
+  ],
+  [
+   "黒い",
+   "くろい"
+  ],
+  [
+   "一本",
+   "いっぽん"
+  ],
+  [
+   "高く",
+   "たかく"
+  ],
+  [
+   "短く",
+   "みじかく"
+  ],
+  [
+   "青い",
+   "あおい"
+  ],
+  [
+   "白い",
+   "しろい"
+  ],
+  [
+   "後半",
+   "こうはん"
+  ],
+  [
+   "最後",
+   "さいご"
+  ],
+  [
+   "難問",
+   "なんもん"
+  ],
+  [
+   "問題",
+   "もんだい"
+  ],
+  [
+   "答え",
+   "こたえ"
+  ],
+  [
+   "少し",
+   "すこし"
+  ],
+  [
+   "大根",
+   "だいこん"
+  ],
+  [
+   "小皿",
+   "こざら"
+  ],
+  [
+   "向き",
+   "むき"
+  ],
+  [
+   "一つ",
+   "ひとつ"
+  ],
+  [
+   "模様",
+   "もよう"
+  ],
+  [
+   "下駄",
+   "げた"
+  ],
+  [
+   "金属",
+   "きんぞく"
+  ],
+  [
+   "無く",
+   "なく"
+  ],
+  [
+   "増え",
+   "ふえ"
+  ],
+  [
+   "向い",
+   "むい"
+  ],
+  [
+   "金具",
+   "かなぐ"
+  ],
+  [
+   "一枚",
+   "いちまい"
+  ],
+  [
+   "真上",
+   "まうえ"
+  ],
+  [
+   "屋台",
+   "やたい"
+  ],
+  [
+   "銭湯",
+   "せんとう"
+  ],
+  [
+   "今日",
+   "きょう"
+  ],
+  [
+   "一緒",
+   "いっしょ"
+  ],
+  [
+   "山門",
+   "さんもん"
+  ],
+  [
+   "川辺",
+   "かわべ"
+  ],
+  [
+   "お面",
+   "おめん"
+  ],
+  [
+   "銀色",
+   "ぎんいろ"
+  ],
+  [
+   "丸い",
+   "まるい"
+  ],
+  [
+   "皮",
+   "かわ"
+  ],
+  [
+   "石",
+   "いし"
+  ],
+  [
+   "木",
+   "き"
+  ],
+  [
+   "庭",
+   "にわ"
+  ],
+  [
+   "猫",
+   "ねこ"
+  ],
+  [
+   "実",
+   "み"
+  ],
+  [
+   "番",
+   "ばん"
+  ],
+  [
+   "柱",
+   "はしら"
+  ],
+  [
+   "棚",
+   "たな"
+  ],
+  [
+   "鈴",
+   "すず"
+  ],
+  [
+   "菊",
+   "きく"
+  ],
+  [
+   "器",
+   "うつわ"
+  ],
+  [
+   "花",
+   "はな"
+  ],
+  [
+   "前",
+   "まえ"
+  ],
+  [
+   "笠",
+   "かさ"
+  ],
+  [
+   "鉢",
+   "はち"
+  ],
+  [
+   "柿",
+   "かき"
+  ],
+  [
+   "台",
+   "だい"
+  ],
+  [
+   "軒",
+   "のき"
+  ],
+  [
+   "鐘",
+   "かね"
+  ],
+  [
+   "竹",
+   "たけ"
+  ],
+  [
+   "枝",
+   "えだ"
+  ],
+  [
+   "絵",
+   "え"
+  ],
+  [
+   "上",
+   "うえ"
+  ],
+  [
+   "緑",
+   "みどり"
+  ],
+  [
+   "机",
+   "つくえ"
+  ],
+  [
+   "数",
+   "かず"
+  ],
+  [
+   "形",
+   "かたち"
+  ],
+  [
+   "先",
+   "さき"
+  ],
+  [
+   "下",
+   "した"
+  ],
+  [
+   "輪",
+   "わ"
+  ],
+  [
+   "針",
+   "はり"
+  ],
+  [
+   "牛",
+   "うし"
+  ],
+  [
+   "左",
+   "ひだり"
+  ],
+  [
+   "右",
+   "みぎ"
+  ],
+  [
+   "頭",
+   "あたま"
+  ],
+  [
+   "刃",
+   "は"
+  ],
+  [
+   "量",
+   "りょう"
+  ],
+  [
+   "苗",
+   "なえ"
+  ],
+  [
+   "丸",
+   "まる"
+  ],
+  [
+   "桶",
+   "おけ"
+  ],
+  [
+   "火",
+   "ひ"
+  ],
+  [
+   "葉",
+   "は"
+  ],
+  [
+   "色",
+   "いろ"
+  ],
+  [
+   "鍋",
+   "なべ"
+  ],
+  [
+   "畑",
+   "はたけ"
+  ],
+  [
+   "壁",
+   "かべ"
+  ],
+  [
+   "紋",
+   "もん"
+  ],
+  [
+   "星",
+   "ほし"
+  ],
+  [
+   "銀",
+   "ぎん"
+  ],
+  [
+   "銭湯",
+   "せんとう"
+  ],
+  [
+   "富士山",
+   "ふじさん"
+  ],
+  [
+   "湯船",
+   "ゆぶね"
+  ],
+  [
+   "脱衣所",
+   "だついじょ"
+  ],
+  [
+   "下駄箱",
+   "げたばこ"
+  ],
+  [
+   "洗い場",
+   "あらいば"
+  ],
+  [
+   "番台",
+   "ばんだい"
+  ],
+  [
+   "牛乳",
+   "ぎゅうにゅう"
+  ],
+  [
+   "玄関",
+   "げんかん"
+  ],
+  [
+   "壁",
+   "かべ"
+  ],
+  [
+   "絵",
+   "え"
+  ],
+  [
+   "東京",
+   "とうきょう"
+  ],
+  [
+   "描か",
+   "えがか"
+  ],
+  [
+   "大きな",
+   "おおきな"
+  ],
+  [
+   "多い",
+   "おおい"
+  ],
+  [
+   "百年以上前",
+   "ひゃくねんいじょうまえ"
+  ],
+  [
+   "100年以上前",
+   "ひゃくねんいじょうまえ"
+  ],
+  [
+   "真ん中",
+   "まんなか"
+  ],
+  [
+   "真中",
+   "まんなか"
+  ],
+  [
+   "線",
+   "せん"
+  ],
+  [
+   "餅つき",
+   "もちつき"
+  ],
+  [
+   "餅",
+   "もち"
+  ],
+  [
+   "結果発表",
+   "けっかはっぴょう"
+  ],
+  [
+   "お椀",
+   "おわん"
+  ],
+  [
+   "椀",
+   "わん"
+  ],
+  [
+   "土間",
+   "どま"
+  ],
+  [
+   "軒下",
+   "のきした"
+  ],
+  [
+   "道具だな",
+   "どうぐだな"
+  ],
+  [
+   "もち米",
+   "もちごめ"
+  ],
+  [
+   "ご存じ",
+   "ごぞんじ"
+  ],
+  [
+   "強い",
+   "つよい"
+  ],
+  [
+   "釜",
+   "かま"
+  ],
+  [
+   "土のつぼ",
+   "つちのつぼ"
+  ],
+  [
+   "大根おろし",
+   "だいこんおろし"
+  ],
+  [
+   "ひしゃく",
+   "ひしゃく"
+  ],
+  [
+   "本",
+   "ほん"
+  ],
+  [
+   "きな粉",
+   "きなこ"
+  ],
+  [
+   "紫",
+   "むらさき"
+  ],
+  [
+   "すずめ",
+   "すずめ"
+  ]
+ ],
+ "voice_override": {
+  "u1": "ここでひとやすみ。こよみせんせいの、きせつのおはなしです。",
+  "e1": "これで、ごもんめまで、おしまいです。",
+  "e2": "じゅうごこの、ちがい、いくつ、みつかりましたか。けっかはっぴょうです。",
+  "e3": "チャンネルとうろくとベルで、まいあさはちじはんに、もんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。",
+  "c_comment": "みつかったかずを、あとでコメントでおしえてくださいね。",
+  "s_intro": "うえとしたのえで、ちがいがみっつあります。みつけられますか。",
+  "s_end": "いくつみつかったか、コメントでおしえてくださいね。ひだりしたから、つづきもどうぞ。",
+  "q1_go": "みぎのえのちがいを、みっつさがしてください。どうぞ。",
+  "q2_go": "では、にもんめ。どうぞ。",
+  "q3_go": "つづいて、さんもんめ。どうぞ。",
+  "q4_go": "よんもんめです。じっくりどうぞ。",
+  "q5_go": "さいごの、ごもんめ、なんもんです。どうぞ。",
+  "op": "おでんやたいの、まちがいさがし、ぜんごもん。",
+  "op2": "さいごは、なんもん。",
+  "u2": "おでんは、あつあつのときだけが、おいしいと、おもいますか？",
+  "u3": "じつは、さめていくときに、あじがしみこみやすいと、いわれています。",
+  "u4": "ひとばんおくと、また、ちがったおいしさがありますね。",
+  "e4": "ほかにも、いろいろな、まちがいさがしがあります。もっとむずかしいもんだいに、ちょうせんしたいかたは、がめんのどうがを、クリックしてくださいね。",
+  "q1_card": "いちもんめ、やさしいもんだい。おでんやたいの、がいかんです。",
+  "q2_card": "にもんめ、しょきゅう。やたいの、カウンターです。",
+  "q3_card": "さんもんめ、しょきゅう。よるの、やたいの、ならびです。",
+  "q4_card": "よんもんめ、ちゅうきゅう。ゆげの、なべまわりです。",
+  "q5_card": "ごもんめ、じょうきゅう。のれんの、まえです。",
+  "q1_ans1": "ひだりうえの、ちょうちんが、あおくなりました。",
+  "q1_ans2": "ひだりの、こしかけが、みどりに、なりました。",
+  "q1_ans3": "みぎうえの、おけが、なくなりました。",
+  "q2_ans1": "ひだりの、おわんが、ひとつ、へりました。",
+  "q2_ans2": "みぎの、おたまの、えが、みじかくなりました。",
+  "q2_ans3": "ひだりの、ゆのみが、みどりに、なりました。",
+  "q3_ans1": "ひだりしたの、ねこが、いなくなりました。",
+  "q3_ans2": "ひだりの、おけが、あおくなりました。",
+  "q3_ans3": "みぎの、はこが、かごに、かわりました。",
+  "q4_ans1": "みぎの、ゆのみが、みどりに、なりました。",
+  "q4_ans2": "ひだりの、くしが、にほんに、へりました。",
+  "q4_ans3": "みぎうえの、あみじゃくしが、なくなりました。",
+  "q5_ans1": "ひだりうえの、すずめが、いなくなりました。",
+  "q5_ans2": "ひだりの、ゆのみが、あおくなりました。",
+  "q5_ans3": "みぎしたの、みかんが、にこに、へりました。"
+ },
+ "voice": {
+  "provider": "fish",
+  "reference_id": "63819275ce38440ea245ca988abf976e",
+  "model": "s1",
+  "speed": 0.88,
+  "credit": "音声：Fish Audio（AIで合成した音声です）"
+ },
+ "images": {
+  "model": "gemini-3-pro-image",
+  "size": "2K",
+  "aspect": "4:5",
+  "style": "A Japanese picture-book illustration in watercolor, but with BOLD, THICK, DARK ink outlines around every object (like a clear picture book for seniors), and CLEAR, SATURATED colors (not pale). Bright, clean background. Natural, hand-drawn, slightly rounded shapes; not geometric, not flat vector, not photorealistic. CLOSE-UP composition (not a wide landscape): the scene is seen from close, filling the picture. PORTRAIT-ISH composition, about 8:9. The painting fills the entire canvas edge to edge: no white border. No people. Absolutely no text, letters, numbers, logos or symbols anywhere. The MAIN SUBJECT named in the scene is drawn LARGE in the center of the picture. Around it, only a few other objects, each clearly separated with space around it, fully visible.\n",
+  "keep_alt": " Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text.",
+  "keep_remove": " Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object.",
+  "batch": true,
+  "neutral_target": 1.4
+ },
+ "questions": [
+  {
+   "q": 1,
+   "scene": "おでん屋台の外観",
+   "level": "やさしい",
+   "go": "右の絵の違いを、3つ探してください。どうぞ。",
+   "prompt": "Scene: close-up of a sunny-bright winter street corner with a traditional Japanese oden food cart (yatai) parked on a lightly snowy stone-paved street, a plain wall behind. CENTER, LARGE (main subject): the wooden oden cart with a small tiled roof, a plain navy blank noren curtain hanging in front, and gentle white steam rising from the top. Winter only: no Christmas, New Year's Eve or New Year decorations (no kagami-mochi, no shimenawa, no kadomatsu), no yuzu, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground or a shelf, or hangs from a hook; nothing floats. Each listed object is about one sixteenth of the picture width, VERY SMALL, with plenty of empty space around it. No letters, labels, numbers or writing anywhere (every noren curtain, lantern, sign, tag and bag is plain and blank). No people, no hands. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; even though it is an evening street the picture is bright and clear. Objects: (upper left, hanging from a hook on the eave of the cart roof) a small round plain cream paper lantern; (upper right, on a wooden wall shelf) a small wooden water bucket; (middle left, on the ground) a small round wooden stool; (middle right, on the ground) a small clay charcoal brazier; (lower left, on the ground) a small neat stack of firewood; (lower right, on the ground) a small green potted camellia plant.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "ちょうちんが青",
+     "line": "左上のちょうちんが、青くなりました。",
+     "box": [
+      255,
+      600,
+      485,
+      830
+     ],
+     "object_w": 202,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "腰かけが緑",
+     "line": "左の腰かけが、緑になりました。",
+     "box": [
+      135,
+      1265,
+      380,
+      1610
+     ],
+     "object_w": 214,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "おけがない",
+     "line": "右上のおけが、なくなりました。",
+     "box": [
+      1500,
+      570,
+      1730,
+      850
+     ],
+     "object_w": 212,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the round paper lantern hanging at the upper left from the cart eave becomes light blue (all of it painted blue, same shape); (b) the small round wooden stool on the ground at the left becomes green (the seat and the legs painted green); (c) the small wooden water bucket on the wall shelf at the upper right is gone (show the plain wall; the empty shelf stays).",
+   "edit_prompts": {}
+  },
+  {
+   "q": 2,
+   "scene": "屋台のカウンター",
+   "level": "初級",
+   "go": "では、2問目。どうぞ。",
+   "prompt": "Scene: close-up of the customer side of an oden food cart counter on a winter evening (bright, clear picture), wooden walls fully painted (no blank white areas). CENTER (main subject, medium size, about one third of the picture width): a square copper oden pot built into the wooden counter, with several plain unlabeled oden pieces (konnyaku, tofu, fish cake, kelp rolls) simmering in clear broth and white steam rising. Winter only: no Christmas, New Year's Eve or New Year decorations (no kagami-mochi, no shimenawa, no kadomatsu), no yuzu, no summer items. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the floor, a shelf, a counter, a bench or the ground, or hangs from a hook; nothing floats. Each listed object is SMALL: about one twentieth of the picture width. No letters, labels, numbers or writing anywhere (every noren curtain, lantern, sign, tag and bag is plain and blank). No people, no hands. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; even though it is an evening street the picture is bright and clear. Objects: (left, at 30% height, on a wooden wall shelf) a small neat stack of three white ceramic bowls; (right, at 30% height, hanging from a hook on the wall) a small wooden ladle; (left, at 50% height, on the counter) a small bamboo chopstick holder with chopsticks; (right, at 50% height, on the counter) a small yellow ceramic dish; (left, at 70% height, on the counter) a small blue-and-white teacup; (right, at 70% height, on the floor) a small round wooden stool.",
+   "answers_intro": "答えです。",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "お椀が1つ減る",
+     "line": "左のお椀が、1つ減りました。",
+     "box": [
+      400,
+      290,
+      710,
+      640
+     ],
+     "object_w": 250,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "形",
+     "label": "おたまの柄が短い",
+     "line": "右のおたまの柄が、短くなりました。",
+     "box": [
+      1325,
+      254,
+      1532,
+      769
+     ],
+     "object_w": 200,
+     "src": "3",
+     "context": "壁のフックにかかったおたま。柄の短いおたまも自然（同じ場所・同じつるし方）"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "湯のみが緑",
+     "line": "左の湯のみが、緑になりました。",
+     "box": [
+      75,
+      1275,
+      245,
+      1495
+     ],
+     "object_w": 147,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the neat stack of three white bowls on the wall shelf at the upper left has only two bowls now; (b) the wooden ladle hanging from the hook at the upper right now hangs mirrored, with its cup toward the left instead of the right; (c) the small blue-and-white teacup on the counter at the left becomes plain green (the cup painted green, same shape).",
+   "edit_prompts": {
+    "3": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. The change must be clearly visible. Do not move any object. Change: the wooden ladle hanging from the hook at the upper right now has a much shorter handle (about half as long as before); the cup bowl stays the same size; it still hangs from the same hook, nothing else changes."
+   },
+   "retries": {}
+  },
+  {
+   "q": 3,
+   "scene": "夜の屋台の並び",
+   "level": "初級",
+   "go": "続いて、3問目。どうぞ。",
+   "prompt": "Scene: close-up of a winter evening lane with a row of three small food carts (yatai) side by side, each with a plain blank cream noren curtain and a small roof, on a lightly snowy stone-paved street, a plain wooden fence behind and a bit of grey-blue sky above it; the picture is bright and clear. CENTER (main subject, medium size, about one third of the picture width): the middle cart with steam rising. Winter only: no Christmas, New Year's Eve or New Year decorations (no kagami-mochi, no shimenawa, no kadomatsu), no yuzu, no summer items. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the floor, a shelf, a counter, a bench or the ground, or hangs from a hook; nothing floats. Each listed object is SMALL: about one twentieth of the picture width. No letters, labels, numbers or writing anywhere (every noren curtain, lantern, sign, tag and bag is plain and blank). No people, no hands. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; even though it is an evening street the picture is bright and clear. Objects: (left, at 30% height, on the ground) a small round wooden water bucket; (right, at 30% height, on the ground) a small iron street lamp on a post; (left, at 50% height, on the ground) a small wooden bench; (right, at 50% height, on the ground) a small wooden crate; (left, at 70% height, on the ground) a small tabby cat sitting and facing right; (right, at 70% height, on the ground) a small round wooden barrel. Keep ALL listed objects between 20% and 75% of the picture height: the bottom quarter of the picture is empty snowy ground with no objects, and the cat sits clearly above it. The painting reaches the very edge of the canvas on all four sides, with no paper margin and no white border: a TALL portrait scene, with the snowy stone street filling the bottom third and the sky and fence filling the top, and the whole picture is one full-bleed painting.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "ねこがいない",
+     "line": "左下のねこが、いなくなりました。",
+     "box": [
+      130,
+      1550,
+      415,
+      1930
+     ],
+     "object_w": 200,
+     "src": "2"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "おけが青",
+     "line": "左のおけが、青くなりました。",
+     "box": [
+      340,
+      1020,
+      615,
+      1260
+     ],
+     "object_w": 243,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "入れ替え",
+     "label": "木箱がかごに",
+     "line": "右の木箱が、かごに変わりました。",
+     "box": [
+      1330,
+      1235,
+      1825,
+      1515
+     ],
+     "object_w": 250,
+     "src": "1",
+     "context": "雪の道の端。木箱の代わりにかごが置いてあるのは自然（同じ場所・同じ置かれ方）"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small round wooden bucket on the ground at the left becomes light blue (all of its wood painted blue, same shape); (b) the wooden crate on the right is replaced by a round woven bamboo basket of about the same size in the same place (no part of the crate remains).",
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. The change must be clearly visible. Do not move any object. Change: the tabby cat sitting on the snowy ground at the lower left is gone (show plain snowy ground, no cat, no leftover outline, shadow or paw prints)."
+   }
+  },
+  {
+   "q": 4,
+   "scene": "湯気の鍋まわり",
+   "level": "中級",
+   "go": "4問目です。じっくりどうぞ。",
+   "prompt": "Scene: close-up of the cooking corner of an oden food cart on a winter evening (bright, clear picture), wooden walls fully painted (no blank white areas). CENTER (main subject, medium size, about one third of the picture width): a big square copper oden pot with several plain unlabeled oden pieces simmering and a lot of white steam rising. Winter only: no Christmas, New Year's Eve or New Year decorations (no kagami-mochi, no shimenawa, no kadomatsu), no yuzu, no summer items. IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the floor, a shelf, a counter, a bench or the ground, or hangs from a hook; nothing floats. Each listed object is SMALL: about one twentieth of the picture width. No letters, labels, numbers or writing anywhere (every noren curtain, lantern, sign, tag and bag is plain and blank). No people, no hands. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; even though it is an evening street the picture is bright and clear. Objects: (left, at 30% height, on a wooden wall shelf) a small plain white plate; (right, at 30% height, hanging from a hook) a small wire-mesh strainer ladle; (left, at 45% height, on the counter) a small cup holding a bundle of three bamboo skewers; (right, at 45% height, on the counter) a small pair of metal tongs lying on a small stand, pointing to the right; (left, at 60% height, on the floor) a small round wooden bucket; (right, at 60% height, on the counter) a small yellow ceramic cup.",
+   "answers_intro": "答えです。",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "湯のみが緑",
+     "line": "右の湯のみが、緑になりました。",
+     "box": [
+      1535,
+      1130,
+      1730,
+      1375
+     ],
+     "object_w": 170,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "数",
+     "label": "串が2本に",
+     "line": "左の串が、2本に減りました。",
+     "box": [
+      300,
+      900,
+      400,
+      1160
+     ],
+     "object_w": 110,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "ざるおたまがない",
+     "line": "右上のざるおたまが、なくなりました。",
+     "box": [
+      1390,
+      170,
+      1700,
+      880
+     ],
+     "object_w": 170,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small yellow ceramic cup on the right of the counter becomes green (the cup painted green, same shape); (b) the cup at the left of the counter holds only two bamboo skewers now (one fewer than before); (c) the wire-mesh strainer ladle hanging from the hook at the upper right is gone (show the plain wooden wall; the empty hook stays).",
+   "edit_prompts": {},
+   "retries": {}
+  },
+  {
+   "q": 5,
+   "scene": "のれんの前",
+   "level": "上級",
+   "go": "最後の5問目、難問です。どうぞ。",
+   "prompt": "Scene: close-up of the entrance of an oden food cart on a winter evening (bright, clear picture), seen from the street, a wooden counter behind a plain navy blank noren curtain, a little snow on the ground. CENTER, LARGE (main subject): the cart front with the navy noren curtain parted and a warm glow and steam inside, a wooden stool in front. Winter only: no Christmas, New Year's Eve or New Year decorations (no kagami-mochi, no shimenawa, no kadomatsu), no yuzu, no summer items. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, a shelf or the cart roof, or hangs from a hook; nothing floats. Each listed object is about one twenty-fifth of the picture width, TINY, with plenty of empty space around it. No letters, labels, numbers or writing anywhere (every noren curtain, lantern, sign, tag and bag is plain and blank). No people, no hands. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; even though it is an evening street the picture is bright and clear. Objects: (upper left, on the edge of the cart roof) a tiny sparrow standing and facing left; (upper right, hanging from a hook) a tiny wooden ladle hanging with its cup toward the right; (middle left, on a shelf) a tiny teacup on a saucer; (middle right, on a shelf) a tiny ceramic jar with a lid; (lower left, on the ground) a tiny tabby cat sleeping on a cushion; (lower right, on the ground) a tiny wooden crate of three round tangerines. The cart roof edge is at about 28% of the picture height, so the sparrow is well below the top fifth; the crate of tangerines is at about 75% height with empty ground below it. The painting reaches the very edge of the canvas on all four sides, with no paper margin.",
+   "answers_intro": "答えです。",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "すずめがいない",
+     "line": "左上のすずめが、いなくなりました。",
+     "box": [
+      170,
+      20,
+      470,
+      290
+     ],
+     "object_w": 200,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "湯のみが青",
+     "line": "左の湯のみが、青くなりました。",
+     "box": [
+      190,
+      1060,
+      420,
+      1230
+     ],
+     "object_w": 150,
+     "src": "2"
+    },
+    {
+     "id": 3,
+     "type": "数",
+     "label": "みかんが2個",
+     "line": "右下のみかんが、2個に減りました。",
+     "box": [
+      1430,
+      1710,
+      1585,
+      1845
+     ],
+     "object_w": 150,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny sparrow standing on the edge of the cart roof at the upper left is gone (show the plain snowy roof edge, no bird, no leftover outline); (b) the wooden crate at the lower right holds two tangerines now instead of three (one tangerine is gone).",
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. The change must be clearly visible. Do not move any object. Change: the tiny teacup on the saucer on the left shelf becomes blue (the cup painted blue, the saucer unchanged)."
+   },
+   "retries": {}
+  }
+ ],
+ "thumbnail": {
+  "question": 1,
+  "big_text": "冬の間違いさがし",
+  "highlight": "間違いさがし",
+  "highlight_color": [
+   255,
+   214,
+   0
+  ],
+  "big_color": [
+   255,
+   255,
+   255
+  ],
+  "band_color": [
+   25,
+   35,
+   70
+  ],
+  "big_size": 132,
+  "sub_text": "3つ見つけられる？全5問",
+  "badges": [
+   [
+    "初級〜上級",
+    [
+     176,
+     62,
+     52
+    ]
+   ]
+  ],
+  "circle_hint": false,
+  "note": "ab/ の3案を使う（thumb_band.py）"
+ },
+ "shorts": [
+  {
+   "question": 2,
+   "answer_gap": 3.3,
+   "note": "1本目：第2問 屋台のカウンター・初級",
+   "title": "シニアの間違い探し｜屋台のカウンターの1問 #脳トレ #頭の体操",
+   "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
+   "end_veil": [
+    {
+     "at": 0,
+     "lines": [
+      [
+       "いくつ見つかった？",
+       120,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "コメントで教えてね",
+       104,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": false
+    },
+    {
+     "at": 3.8,
+     "lines": [
+      [
+       "続きは長い動画で",
+       116,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "左下をクリック",
+       128,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "question": 4,
+   "answer_gap": 3.3,
+   "note": "2本目：第4問 湯気の鍋まわり・中級",
+   "title": "シニアの間違い探し｜湯気の鍋まわりの1問 #脳トレ #頭の体操",
+   "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
+   "end_veil": [
+    {
+     "at": 0,
+     "lines": [
+      [
+       "いくつ見つかった？",
+       120,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "コメントで教えてね",
+       104,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": false
+    },
+    {
+     "at": 3.8,
+     "lines": [
+      [
+       "続きは長い動画で",
+       116,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "左下をクリック",
+       128,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": true
+    }
+   ]
+  }
+ ],
+ "unchiku_source": "おでんは、冷めていく過程で具に味がしみこみやすいと一般にいわれる（一般的な料理の知識。効果をうたうものではない）。"
+}
