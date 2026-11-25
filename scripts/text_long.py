@@ -155,7 +155,7 @@ def kanji_frame(i, n, Q, state, remain=None, sub=None, face="normal", rule=False
     im = Image.new("RGB", (W, H), TH["bg"])
     d = ImageDraw.Draw(im)
     header(d, i, n, Q, remain, think)
-    tc(d, (1130, 118), "左と右で、ちがう字が2つあるよ" if rule else "左と右で、ちがう字は？", 62, TH["ink"])
+    tc(d, (1230 if rule else 1130, 118), "左と右で、ちがう字が2つあるよ" if rule else "左と右で、ちがう字は？", 56 if rule else 62, TH["ink"])
     word, rows = Q["word"], Q["rows"]
     size, ch = (120, 142) if rows <= 4 else (98, 116)
     cw = int(size * 1.3)
@@ -253,7 +253,7 @@ def lines_of(P):
     for i, Q in enumerate(P["questions"], 1):
         Q["_i"] = i
         if kanji:
-            L[f"q{i:02d}_intro"] = (f"{i}問目です。違う漢字が、2つあります。", f"{Q.get('num_voice', NUM[i] + 'もんめ、です。')}ちがうかんじが、ふたつあります。")
+            L[f"q{i:02d}_intro"] = (f"{Q.get('num_sub', str(i) + '問目です。')}違う漢字が、2つあります。", f"{Q.get('num_voice', NUM[i] + 'もんめ、です。')}ちがうかんじが、ふたつあります。")
             for k, (r, c, sub_, ot, ov, st, sv) in enumerate(Q["diffs"], 1):
                 L[f"q{i:02d}_ans{k}"] = (f"上から{r + 1}行目、{ot}が、{st}に。", f"うえから、{ROW[r + 1]}ぎょうめ、{ov}、{sv}。")
             continue
@@ -477,9 +477,9 @@ def build(folder):
         ev["solve_end"].append(t)
         if P["kind"] == "kanji_long":          # 答え：違う字を1つずつ（赤丸・ポン・声）
             for k in range(1, 3):
-                ev["pon"].append(t + 0.35)
-                d = say(f"q{i:02d}_ans{k}", t + 0.4)
-                ln = 0.4 + d + 0.3 + (1.3 if k == 2 else 0.5)
+                ev["pon"].append(t + 0.2)
+                d = say(f"q{i:02d}_ans{k}", t + 0.3)
+                ln = 0.3 + d + 0.25 + (0.9 if k == 2 else 0.1)
                 seq.append((kanji_frame(i, n, Q, k, None, V[f"q{i:02d}_ans{k}"][2][0], "yay" if k == 2 else "smile", think=think), ln)); t += ln
             continue
         ev["pon"].append(t + 0.35)
@@ -509,7 +509,7 @@ def build(folder):
         p.unlink()
     lst = []
     for i, (im, dt) in enumerate(seq):
-        p = tmp / f"{i:04d}.jpg"; im.save(p, quality=95, subsampling=0); lst.append(f"file '{p}'\nduration {dt:.4f}\n")
+        p = tmp / f"{i:04d}.jpg"; im.save(p, quality=92); lst.append(f"file '{p}'\nduration {dt:.4f}\n")
     (tmp / "list.txt").write_text("".join(lst) + f"file '{tmp / f'{len(seq) - 1:04d}.jpg'}'\n", encoding="utf-8")
     mix_audio(voices, ev, total, tmp / "mix.wav")
     T.readings_check("tlong", voices, folder)
@@ -541,7 +541,12 @@ def mmss(s):
 
 def write_description(P, folder, chapters, total):
     D = P["description"]
-    chs = list(chapters) + [(ENDING_AT[0], "エンディング")]
+    # チャプター：「オープニング」は10秒未満なので出さない（YouTube は10秒未満のチャプターがあると目次を出さない）。最初の行は 0:00 の「1問目」にする。
+    chs = [(a, b) for a, b in chapters if b != "オープニング"] + [(ENDING_AT[0], "エンディング")]
+    chs[0] = (0.0, chs[0][1])
+    short = [(b, round(nxt - a, 1)) for (a, b), (nxt, _) in zip(chs, chs[1:] + [(total, "")]) if nxt - a < 10]
+    if short:
+        sys.exit(f"10秒未満のチャプターがある（YouTube で目次が出ない）：{short}")
     body = D["body"].rstrip() + "\n\n【目次】\n" + "\n".join(f"{mmss(a)} {b}" for a, b in chs)
     desc = f"""# {P['id']} YouTube 投稿用メタデータ（文字の脳トレ 長尺）
 
@@ -585,7 +590,7 @@ def make_thumbnail(P, folder):
         d.rounded_rectangle((120, 30, pw * sc - 120, 650), 60, fill=TH["panel"], outline=TH["edge"], width=8)
         for r in range(3):
             for c in range(3):
-                tc(d, (pw * sc // 2 + (c - 1) * 310, 30 + 100 + r * 200 + 10), w[c], 210, TH["ink"])
+                tc(d, (pw * sc // 2 + (c - 1) * 310, 30 + 100 + r * 200 + 10), w[c], 170, TH["ink"])
         pic = im.resize((pw, ph), Image.LANCZOS)
         TB_make(pic, P, folder)
         return
