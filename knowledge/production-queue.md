@@ -18,7 +18,7 @@
 | 7 | 文字の脳トレ×3 | 漢字の間違い探し（食べ物の言葉） | なし | 完了 | text_037 親子丼 hsb6BOrbGlE／text_038 味噌汁 _x-WWZL_0vQ／text_039 和菓子 jv5Ie0CiJWk |
 | 8 | ちがうのどーれだ×3 | 漢字版（大/犬・王/玉・日/目）※大/犬は既出（文字13）のため木/本に替えた | なし | 完了 | text_040 木/本 DyE1qcftwew／text_041 王/玉 pNRsLby7rJo／text_042 日/目 mzBhJkoJcjM |
 | 9 | 文字の脳トレ×3 | 都道府県（「か行」で始まる県／「島」がつく県／旧国名） | なし | 完了 | text_046 か行 AKpOeGNh_4A／text_047 島 Q9H-PG0tXJc／text_048 旧国名 9UVMjFyqSE8 |
-| 10 | 文字の脳トレ×3 | ひらがな十字（冬の言葉） | なし | 作業中（2026-11-25 06:35 UTC） | |
+| 10 | 文字の脳トレ×3 | ひらがな十字（冬の言葉） | なし | 完了 | text_052 火鉢・椿 PwqSc8_i1Ls／text_053 あられ・つらら uv70jOZB5DQ／text_054 小雪・冬場 O_XreI_Y8EI |
 | 11 | 文字の脳トレ×3 | 漢字の間違い探し（城・寺の名前） | なし | 完了 | text_055 大阪城 DkYKqI30nT0／text_056 金閣寺 EBzI1hb2JpU／text_057 清水寺 Mul6KxD9UBw |
 | 12 | ちがうのどーれだ×3 | 漢字版（人/入・千/干・未/末 の散らし配置）※未/末は3回目で見分けにくいため田/由に替えた（監査 11/25） | なし | 完了 | text_043 人/入 9xjmJAmME8U／text_044 千/干 vxbwBOgCTmU／text_045 田/由 WjUmltuVirk |
 | 13 | 間違い探し 長尺 第25回 | 冬：餅つきの庭 | あり | 完了 | 長尺 s0uqGqk0edI |
