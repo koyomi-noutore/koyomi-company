@@ -277,7 +277,20 @@ LINES = {
                         "ちがうかんじが、ふたつあります。"),
               "ans": [("3行目、お城の「城」が、区域の「域」に。", "さんぎょうめ、おしろの、しろが、くいきの、いきに。"), ("6行目、路地の「路」が、省略の「略」になっていました。", "ろくぎょうめ、ろじの、ろが、しょうりゃくの、りゃくに、なっていました。")]},
 }
-TAP = ("わかったら、画面を2回タップしてくださいね。", "わかったら、がめんを、にかいタップしてくださいね。")
+TAP = ("わかったら、画面を2回タップしてね。", "わかったら、がめんを、にかいタップしてね。")
+TAP_REMAIN = 10     # 2026-11-25 CEO：「2回タップ」の呼びかけは出題中（考える時間の残りが約10秒のとき）に出す
+
+
+def tap_offset(think, dur):
+    """考える時間（think 秒）の初めから数えて、「2回タップ」の声を始める秒。残りが約 TAP_REMAIN 秒のとき。考える時間が短い（14秒より短い）ときは真ん中。
+    ただし声が、残り5〜1秒のカウント音（ピッ）にかからないように、残り5.5秒より前に終わらせる。"""
+    off = think - TAP_REMAIN if think >= TAP_REMAIN + 4 else think / 2
+    return max(0.5, min(off, think - 5.5 - dur))
+
+
+def tap_window(off, dur, i, step=1.0):
+    """出題中の吹き出し：その秒（i〜i+step）が、声の間（off〜off+dur＋少し）にかかるか。"""
+    return i + step > off and i < off + dur + 0.3
 ANS0 = ("答えです。", "こたえです。")
 CTA = ("左下をクリックして、ほかの脳トレにも挑戦してくださいね。", "ひだりしたをクリックして、ほかののうトレにも、ちょうせんしてくださいね。")
 WORK = Path.home() / ".cache/koyomi/text_shorts"
@@ -449,9 +462,12 @@ def build(kind, out):
     vl = intro_from_cfg(cfg)     # 2026-11-25 CEO：文字を大きく・行間を広く。最初の画面は吹き出しを出さない（サムネ。こよみ先生は今の位置のまま）
     seq.append((speaker(veil(frame(0), vl, INTRO_GAP), "normal", None), max(4.0, d_intro + 0.4))); t += seq[-1][1]
     # 2. 考える時間（右上にのこり秒数）。はじめに「わかったら2回タップ」
-    say("tap", TAP)
+    w_tap, d_tap = voice(kind, "tap", TAP[1])     # 出題中（残り約10秒）に、声と吹き出しで「わかったら、画面を2回タップしてね」
+    off_tap = tap_offset(cfg["think"], d_tap)
+    voices.append((w_tap, t + off_tap, "tap", TAP))
     for s_ in range(cfg["think"], 0, -1):
-        seq.append((timer(speaker(frame(0), "think" if s_ < cfg["think"] - 3 else "smile", TAP[0]), s_), 1.0)); t += 1.0
+        i_ = cfg["think"] - s_
+        seq.append((timer(speaker(frame(0), "think" if s_ < cfg["think"] - 3 else "smile", TAP[0] if tap_window(off_tap, d_tap, i_) else None), s_), 1.0)); t += 1.0
     # 3. 答え
     ev["solve_end"] = t
     d0 = say("ans0", ANS0)

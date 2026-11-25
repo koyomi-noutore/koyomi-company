@@ -1,5 +1,5 @@
 {
- "_説明": "「この○○なーんだ？」虫めがねクイズの問題の定義（2026-11-24 CEO案の試作）。道すじ＝rows（[y, 'LR'/'RL'] の順番。上から y=0.13・0.38・0.62・0.87）を順に、ジグザグでなぞる。最初は当てにくい所、最後に特徴的な所（finale の点）。path に点を直接書いてもよい。x,y は 0〜1（左上が 0,0）。",
+ "_説明": "「この○○なーんだ？」虫めがねクイズの問題の定義。道すじ＝気まぐれな曲線（2026-11-25 CEO）：seed（乱数の種。同じ種なら同じ道すじ）・grid（ます目の数）・skip（回らずに飛ばすます目の数）・start（出発。当てにくい所）・feature（特徴的な所。早く見せない）・finale（最後の点）・speed_px（平均の速さ px/秒）。rows や path を書くと昔のジグザグ・点の列になる。",
  "items": [
   {
    "id": "kabu",
@@ -8,50 +8,24 @@
    "answer_voice": "かぶ",
    "image": "kabu.png",
    "prompt_subject": "one Japanese turnip (kabu) drawn whole: a round white bulb with a faint pink-purple tint near the top, a thin pointed root tail at the bottom, and a bunch of fresh green leaves on top.",
-   "path_note": "根の先・白い玉の下 → 玉のまわり → 玉のうえ・紫の首 → 葉（最後）",
+   "path_note": "左上の背景から → 気まぐれにます目を回る → 最後に葉と首",
    "intro_voice": "このやさい、なーんだ？むしめがねで、のぞいてみてね。",
-   "outro": {
-    "line": [
-     "何秒でわかったか、コメントで教えてくださいね。",
-     "なんびょうでわかったか、コメントで、おしえてくださいね。"
-    ],
-    "veil": [
-     [
-      "何秒で",
-      130
-     ],
-     [
-      "わかったか",
-      130
-     ],
-     [
-      "コメントで",
-      120
-     ]
-    ]
-   },
-   "rows": [
-    [
-     0.87,
-     "RL"
-    ],
-    [
-     0.62,
-     "LR"
-    ],
-    [
-     0.38,
-     "RL"
-    ],
-    [
-     0.13,
-     "LR"
-    ]
+   "grid": 4,
+   "skip": 3,
+   "seed": 372,
+   "start": [
+    0.13,
+    0.13
+   ],
+   "feature": [
+    0.58,
+    0.27
    ],
    "finale": [
-    0.55,
-    0.25
-   ]
+    0.58,
+    0.27
+   ],
+   "speed_px": 135
   },
   {
    "id": "tanuki",
@@ -60,50 +34,24 @@
    "answer_voice": "たぬき",
    "image": "tanuki.png",
    "prompt_subject": "one cute tanuki (Japanese raccoon dog) sitting upright facing front: round body with a cream belly, dark eye patches, small rounded ears with dark tips, a bushy striped tail visible at one side.",
-   "path_note": "しっぽ・足 → おなか → 耳・頭 → 顔（目・鼻）（最後）",
+   "path_note": "右下から → 気まぐれにます目を回る → 最後に顔（目・鼻）",
    "intro_voice": "このどうぶつ、なーんだ？むしめがねで、のぞいてみてね。",
-   "outro": {
-    "line": [
-     "わかったら、コメントで教えてくださいね。",
-     "わかったら、コメントで、おしえてくださいね。"
-    ],
-    "veil": [
-     [
-      "わかったら",
-      110
-     ],
-     [
-      "コメントで",
-      120
-     ],
-     [
-      "教えてね",
-      120
-     ]
-    ]
-   },
-   "rows": [
-    [
-     0.87,
-     "LR"
-    ],
-    [
-     0.62,
-     "RL"
-    ],
-    [
-     0.13,
-     "LR"
-    ],
-    [
-     0.38,
-     "RL"
-    ]
+   "grid": 4,
+   "skip": 3,
+   "seed": 478,
+   "start": [
+    0.87,
+    0.87
+   ],
+   "feature": [
+    0.5,
+    0.3
    ],
    "finale": [
     0.5,
     0.3
-   ]
+   ],
+   "speed_px": 135
   },
   {
    "id": "oden",
@@ -112,50 +60,24 @@
    "answer_voice": "おでん",
    "image": "oden.png",
    "prompt_subject": "one round bowl of Japanese oden seen from slightly above: clear light-brown broth with a white daikon radish round slice, a boiled egg cut in half, a triangle konnyaku, and a chikuwa tube, a little steam above.",
-   "path_note": "湯気・背景 → 器の底 → 具の上側 → 具（たまご・ちくわ・大根）（最後）",
+   "path_note": "左上の背景から → 気まぐれにます目を回る → 最後に具（たまご・ちくわ・大根）",
    "intro_voice": "このたべもの、なーんだ？むしめがねで、のぞいてみてね。",
-   "outro": {
-    "line": [
-     "わかったら、画面を2回タップしてね。",
-     "わかったら、がめんを、にかいタップしてね。"
-    ],
-    "veil": [
-     [
-      "わかったら",
-      110
-     ],
-     [
-      "画面を2回",
-      120
-     ],
-     [
-      "タップしてね",
-      120
-     ]
-    ]
-   },
-   "rows": [
-    [
-     0.13,
-     "LR"
-    ],
-    [
-     0.87,
-     "RL"
-    ],
-    [
-     0.38,
-     "LR"
-    ],
-    [
-     0.62,
-     "RL"
-    ]
+   "grid": 4,
+   "skip": 3,
+   "seed": 157,
+   "start": [
+    0.13,
+    0.13
+   ],
+   "feature": [
+    0.55,
+    0.5
    ],
    "finale": [
     0.55,
     0.5
-   ]
+   ],
+   "speed_px": 135
   }
  ]
 }
