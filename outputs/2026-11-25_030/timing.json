@@ -215,10 +215,65 @@
    "detail": "pictures batch base 3",
    "sec": 7.2,
    "at": "2026-11-25T07:04:24+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base 3",
+   "sec": 31.3,
+   "at": "2026-11-25T07:05:20+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit 3",
+   "sec": 8.2,
+   "at": "2026-11-25T07:06:18+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit 3",
+   "sec": 30.9,
+   "at": "2026-11-25T07:07:14+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures compose",
+   "sec": 24.2,
+   "at": "2026-11-25T07:08:23+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures answers",
+   "sec": 5.3,
+   "at": "2026-11-25T07:08:46+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "voice",
+   "sec": 0.0,
+   "at": "2026-11-25T07:08:46+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures answers",
+   "sec": 5.3,
+   "at": "2026-11-25T07:08:58+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "voice",
+   "sec": 0.0,
+   "at": "2026-11-25T07:08:58+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "voice",
+   "sec": 0.0,
+   "at": "2026-11-25T07:09:01+00:00"
   }
  ],
  "total_sec_by_step": {
-  "絵": 591.8
+  "絵": 697.0,
+  "音声": 0.0
  },
- "total_sec_all": 591.8
+ "total_sec_all": 697.0
 }

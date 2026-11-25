@@ -1569,6 +1569,10 @@
   [
    "スズメ",
    "スズメ"
+  ],
+  [
+   "向きを変え",
+   "むきを、かえ"
   ]
  ],
  "voice_override": {
@@ -1594,7 +1598,8 @@
   "q2_card": "にもんめ、しょきゅう。どての、くいと、たこです。",
   "q3_card": "さんもんめ、しょきゅう。たこづくりの、さぎょうだいです。",
   "q4_card": "よんもんめ、ちゅうきゅう。かれすすきの、はらです。",
-  "q5_card": "ごもんめ、じょうきゅう。かわらの、はしです。"
+  "q5_card": "ごもんめ、じょうきゅう。かわらの、はしです。",
+  "q3_ans3": "ひだりしたの、きづちが、むきを、かえました。"
  },
  "voice": {
   "provider": "fish",
@@ -1628,12 +1633,12 @@
      "label": "水筒がない",
      "line": "左上の水筒が、なくなりました。",
      "box": [
-      0,
-      0,
-      100,
-      100
+      240,
+      617,
+      462,
+      845
      ],
-     "object_w": 300,
+     "object_w": 140,
      "src": "1"
     },
     {
@@ -1642,12 +1647,12 @@
      "label": "糸巻きが緑",
      "line": "右の糸巻きが、緑になりました。",
      "box": [
-      0,
-      0,
-      100,
-      100
+      1311,
+      1262,
+      1694,
+      1535
      ],
-     "object_w": 200,
+     "object_w": 170,
      "src": "1"
     },
     {
@@ -1656,10 +1661,10 @@
      "label": "手ぶくろが水色",
      "line": "左下の手ぶくろが、水色になりました。",
      "box": [
-      0,
-      0,
-      100,
-      100
+      201,
+      1729,
+      562,
+      1964
      ],
      "object_w": 300,
      "src": "1"
@@ -1686,17 +1691,18 @@
    "diffs": [
     {
      "id": 1,
-     "type": "なくなる",
-     "label": "スズメがいない",
-     "line": "左上のスズメが、なくなりました。",
+     "type": "入れ替え",
+     "label": "スズメが毛糸の帽子",
+     "line": "左下のスズメが、帽子に変わりました。",
      "box": [
-      0,
-      0,
-      100,
-      100
+      103,
+      1266,
+      409,
+      1609
      ],
-     "object_w": 150,
-     "src": "1"
+     "object_w": 170,
+     "src": "1",
+     "context": "岩の上に置いた小物。スズメでも毛糸の帽子でも自然（同じ場所・同じ置かれ方）"
     },
     {
      "id": 2,
@@ -1704,28 +1710,27 @@
      "label": "カップが黄色",
      "line": "右のカップが、黄色になりました。",
      "box": [
-      0,
-      0,
-      100,
-      100
+      1367,
+      988,
+      1528,
+      1138
      ],
-     "object_w": 150,
+     "object_w": 140,
      "src": "1"
     },
     {
      "id": 3,
-     "type": "入れ替え",
-     "label": "帽子が毛糸の帽子",
-     "line": "左下の麦わら帽子が、毛糸の帽子に変わりました。",
+     "type": "なくなる",
+     "label": "麦わら帽子がない",
+     "line": "左上の麦わら帽子が、なくなりました。",
      "box": [
-      0,
-      0,
-      100,
-      100
+      152,
+      558,
+      655,
+      750
      ],
-     "object_w": 200,
-     "src": "1",
-     "context": "草の上に置いた帽子。麦わら帽子でも毛糸の帽子でも自然（同じ場所・同じ置かれ方）"
+     "object_w": 330,
+     "src": "2"
     }
    ],
    "answers_intro": "答えです。",
@@ -1747,48 +1752,48 @@
    "level": "初級",
    "go": "続いて、3問目。どうぞ。",
    "prompt": "Scene: close-up of a rough wooden workbench standing on a riverbank in winter, dry golden grass with frost, a river and bare trees behind; the picture is bright and clear. CENTER (main subject, medium size, about one third of the picture width): the wooden workbench with a half-made bamboo kite frame (thin crossed bamboo sticks, no paper yet) lying on top; the bench legs stand on the ground. Winter only, with frost and bare trees: no Christmas, New Year's Eve or New Year decorations (no kagami-mochi, no shimenawa, no kadomatsu), no yuzu, no summer items, no snowman. Any kite is always lying FLAT on the ground or leaning on the ground, tied by its string to a wooden stake in the ground: no kite in the air, nothing hanging in the sky, the sky is clear and empty.  IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 25% and 65% of the picture height (never at the very top, and NOTHING in the bottom third of the picture; the bottom third shows only bare frosty ground). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the ground, a flat stone or the grass; nothing floats. Each listed object is SMALL: about one twentieth of the picture width. No letters, labels, numbers or writing anywhere (kites, bags and tins are plain, with simple geometric patterns only). No people, no hands. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white. Objects: (left, at 30% height, on a flat stone) a small white teacup; (right, at 30% height, on the ground) a small round wooden stool; (left, at 45% height, on the ground) a small coil of rope; (right, at 45% height, on the ground) a small round metal tin with a lid; (left, at 60% height, on the ground) a small wooden mallet lying flat with its heavy head on the left and its handle pointing right; (right, at 60% height, on the ground) a small folded plain grey blanket.",
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small white teacup on the flat stone at the upper left becomes green (the cup painted green, same shape); (b) the small round metal tin with a lid on the ground at the right is gone (show the plain ground, no leftover outline); (c) the small wooden mallet on the ground at the lower left is turned the other way round: its heavy head is now on the right and its handle points left (same size, same place).",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small white teacup on the grey stone at the left becomes light blue (the cup painted light blue, same shape); (b) the small green round metal tin with a lid in the middle of the picture is gone (show the plain frosty ground, no leftover outline); (c) the wooden mallet lying at the lower left is turned the other way round: its heavy head is now on the right and its handle points left (same size, same place, lying flat on the ground).",
    "diffs": [
     {
      "id": 1,
      "type": "色",
-     "label": "湯のみが緑",
-     "line": "左上の湯のみが、緑になりました。",
+     "label": "湯のみが水色",
+     "line": "左の湯のみが、水色になりました。",
      "box": [
-      0,
-      0,
-      100,
-      100
+      225,
+      810,
+      410,
+      1000
      ],
-     "object_w": 150,
+     "object_w": 110,
      "src": "1"
     },
     {
      "id": 2,
      "type": "なくなる",
      "label": "缶がない",
-     "line": "右の缶が、なくなりました。",
+     "line": "まん中の缶が、なくなりました。",
      "box": [
-      0,
-      0,
-      100,
-      100
+      1023,
+      1118,
+      1350,
+      1320
      ],
-     "object_w": 150,
+     "object_w": 300,
      "src": "1"
     },
     {
      "id": 3,
      "type": "向き",
      "label": "木づちが反対向き",
-     "line": "左下の木づちが、反対向きになりました。",
+     "line": "左下の木づちが、向きを変えました。",
      "box": [
-      0,
-      0,
-      100,
-      100
+      180,
+      1391,
+      817,
+      1730
      ],
-     "object_w": 200,
+     "object_w": 637,
      "src": "1"
     }
    ],
@@ -1817,13 +1822,13 @@
      "label": "おせんべいが2枚",
      "line": "左上のおせんべいが、2枚に減りました。",
      "box": [
-      0,
-      0,
       100,
-      100
+      1415,
+      430,
+      1620
      ],
-     "object_w": 200,
-     "src": "1"
+     "object_w": 280,
+     "src": "2"
     },
     {
      "id": 2,
@@ -1831,26 +1836,26 @@
      "label": "やかんがない",
      "line": "右のやかんが、なくなりました。",
      "box": [
-      0,
-      0,
-      100,
-      100
+      1493,
+      1055,
+      1772,
+      1336
      ],
-     "object_w": 200,
+     "object_w": 260,
      "src": "1"
     },
     {
      "id": 3,
      "type": "色",
      "label": "長ぐつが緑",
-     "line": "左下の長ぐつが、緑になりました。",
+     "line": "左上の長ぐつが、緑になりました。",
      "box": [
-      0,
-      0,
       100,
-      100
+      760,
+      395,
+      1060
      ],
-     "object_w": 200,
+     "object_w": 250,
      "src": "1"
     }
    ],
@@ -1881,12 +1886,12 @@
      "label": "小鳥が右向き",
      "line": "左上の小鳥が、右向きになりました。",
      "box": [
-      0,
-      0,
-      100,
-      100
+      367,
+      127,
+      559,
+      318
      ],
-     "object_w": 150,
+     "object_w": 110,
      "src": "1"
     },
     {
@@ -1895,12 +1900,12 @@
      "label": "おけがない",
      "line": "右のおけが、なくなりました。",
      "box": [
-      0,
-      0,
-      100,
-      100
+      1468,
+      1237,
+      1820,
+      1458
      ],
-     "object_w": 150,
+     "object_w": 330,
      "src": "1"
     },
     {
@@ -1909,12 +1914,12 @@
      "label": "かごが水色",
      "line": "左下のかごが、水色になりました。",
      "box": [
-      0,
-      0,
-      100,
-      100
+      434,
+      1708,
+      677,
+      1962
      ],
-     "object_w": 150,
+     "object_w": 240,
      "src": "1"
     }
    ],
