@@ -1,0 +1,37 @@
+{
+ "id": "text_049",
+ "kind": "pic",
+ "series": "ちがうのどーれだ",
+ "what": "雪だるま",
+ "level": "ふつう",
+ "recolor": {
+  "hue": [
+   345,
+   14
+  ],
+  "sat_min": 110,
+  "val_min": 70,
+  "to": 225
+ },
+ "prompt": "A single cute snowman made of three white snowballs, wearing a bright red knitted scarf, a plain black top hat, two black coal eyes, an orange carrot nose, three black buttons, two brown stick arms, simple flat illustration, clean bold dark outlines, soft shading, front view, centered, on a plain pure white background. No text, no letters, no snow on the ground, no ground shadow, nothing else in the picture.",
+ "cols": 3,
+ "rows": 3,
+ "odd_at": [
+  1,
+  2
+ ],
+ "pic_h": 235,
+ "think": 20,
+ "lines": {
+  "intro": [
+   "違う雪だるまが、1つだけあります。どれでしょう？",
+   "ちがうゆきだるまが、ひとつだけあります。どれでしょう？"
+  ],
+  "ans": [
+   [
+    "マフラーが、青い雪だるまでした。",
+    "まふらーが、あおい、ゆきだるまでした。"
+   ]
+  ]
+ }
+}
