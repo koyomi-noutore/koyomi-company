@@ -310,14 +310,14 @@
   {
    "id": "q1_card",
    "start": 7.0,
-   "slot_end": 12.4,
+   "slot_end": 12.8,
    "subtitle": "1問目、やさしい問題。里山です。",
    "voice_text": "いちもんめ、やさしい。さとやまです。",
    "face": "normal"
   },
   {
    "id": "q1_go",
-   "start": 12.4,
+   "start": 12.8,
    "slot_end": 18.0,
    "subtitle": "右の絵の違いを、3つ探してください。どうぞ。",
    "voice_text": "みぎのえのちがいを、みっつさがしてください。どうぞ。",
@@ -382,14 +382,14 @@
   {
    "id": "q2_card",
    "start": 115.0,
-   "slot_end": 120.4,
+   "slot_end": 120.8,
    "subtitle": "2問目、やさしい問題。川原の芋煮鍋です。",
    "voice_text": "にもんめ、やさしいもんだい。かわらの、いもに、なべです。",
    "face": "normal"
   },
   {
    "id": "q2_go",
-   "start": 120.4,
+   "start": 120.8,
    "slot_end": 126.0,
    "subtitle": "では、2問目。どうぞ。",
    "voice_text": "では、にもんめ。どうぞ。",
@@ -454,14 +454,14 @@
   {
    "id": "q3_card",
    "start": 223.0,
-   "slot_end": 228.4,
+   "slot_end": 228.8,
    "subtitle": "3問目、初級。切り株のきのこです。",
    "voice_text": "さんもんめ、しょきゅう。きりかぶの、きのこです。",
    "face": "normal"
   },
   {
    "id": "q3_go",
-   "start": 228.4,
+   "start": 228.8,
    "slot_end": 234.0,
    "subtitle": "つぎは、3問目です。どうぞ。",
    "voice_text": "つぎは、さんもんめです。どうぞ。",
@@ -526,14 +526,14 @@
   {
    "id": "q4_card",
    "start": 331.0,
-   "slot_end": 336.4,
+   "slot_end": 336.8,
    "subtitle": "4問目、初級。川原の昼ごはんです。",
    "voice_text": "よんもんめ、しょきゅう。かわらのひるごはんです。",
    "face": "normal"
   },
   {
    "id": "q4_go",
-   "start": 336.4,
+   "start": 336.8,
    "slot_end": 342.0,
    "subtitle": "4問目も、3つ探してください。どうぞ。",
    "voice_text": "よんもんめも、みっつ、さがしてください。どうぞ。",
@@ -598,14 +598,14 @@
   {
    "id": "q5_card",
    "start": 439.0,
-   "slot_end": 444.4,
+   "slot_end": 444.8,
    "subtitle": "5問目、初級。里山の休み場です。",
    "voice_text": "ごもんめ、しょきゅう。さとやまの、やすみばです。",
    "face": "normal"
   },
   {
    "id": "q5_go",
-   "start": 444.4,
+   "start": 444.8,
    "slot_end": 450.0,
    "subtitle": "さあ、5問目。どうぞ。",
    "voice_text": "さあ、ごもんめ。どうぞ。",
@@ -710,14 +710,14 @@
   {
    "id": "q6_card",
    "start": 579.0,
-   "slot_end": 584.4,
+   "slot_end": 584.8,
    "subtitle": "6問目、初級。里芋とお野菜です。",
    "voice_text": "ろくもんめ、しょきゅう。さといもとおやさいです。",
    "face": "normal"
   },
   {
    "id": "q6_go",
-   "start": 584.4,
+   "start": 584.8,
    "slot_end": 590.0,
    "subtitle": "ゆっくり、6問目。どうぞ。",
    "voice_text": "ゆっくり、ろくもんめ。どうぞ。",
@@ -782,14 +782,14 @@
   {
    "id": "q7_card",
    "start": 687.0,
-   "slot_end": 692.4,
+   "slot_end": 692.8,
    "subtitle": "7問目、中級。栗の山道です。",
    "voice_text": "ななもんめ、ちゅうきゅう。くりの、やまみちです。",
    "face": "normal"
   },
   {
    "id": "q7_go",
-   "start": 692.4,
+   "start": 692.8,
    "slot_end": 698.0,
    "subtitle": "もう少しです。7問目、どうぞ。",
    "voice_text": "もうすこしです。ななもんめ、どうぞ。",
@@ -854,14 +854,14 @@
   {
    "id": "q8_card",
    "start": 795.0,
-   "slot_end": 800.4,
+   "slot_end": 800.8,
    "subtitle": "8問目、中級。川原の秋景色です。",
    "voice_text": "はちもんめ、ちゅうきゅう。かわらのあきげしきです。",
    "face": "normal"
   },
   {
    "id": "q8_go",
-   "start": 800.4,
+   "start": 800.8,
    "slot_end": 806.0,
    "subtitle": "では、8問目。どうぞ。",
    "voice_text": "では、はちもんめ。どうぞ。",
@@ -904,7 +904,7 @@
    "start": 889.6,
    "slot_end": 893.9,
    "subtitle": "ひしゃくの向きが、反対になりました。",
-   "voice_text": "ひしゃくの、むきが、はんたいに、なりました。",
+   "voice_text": "ひしゃくの、むきが、ぎゃくに、なりました。",
    "face": "smile"
   },
   {
@@ -926,14 +926,14 @@
   {
    "id": "q9_card",
    "start": 903.0,
-   "slot_end": 908.4,
+   "slot_end": 908.8,
    "subtitle": "9問目、上級。きのこの木箱です。",
    "voice_text": "きゅうもんめ、じょうきゅう。きのこの、きばこです。",
    "face": "normal"
   },
   {
    "id": "q9_go",
-   "start": 908.4,
+   "start": 908.8,
    "slot_end": 914.0,
    "subtitle": "つぎは、9問目です。どうぞ。",
    "voice_text": "つぎは、きゅうもんめです。どうぞ。",
@@ -998,14 +998,14 @@
   {
    "id": "q10_card",
    "start": 1011.0,
-   "slot_end": 1016.4,
+   "slot_end": 1016.8,
    "subtitle": "10問目、上級。夕方の川原です。",
    "voice_text": "じゅうもんめ、じょうきゅう。ゆうがたのかわらです。",
    "face": "normal"
   },
   {
    "id": "q10_go",
-   "start": 1016.4,
+   "start": 1016.8,
    "slot_end": 1022.0,
    "subtitle": "10問目も、3つ探してください。どうぞ。",
    "voice_text": "じゅうもんめも、みっつ、さがしてください。どうぞ。",
@@ -1048,7 +1048,7 @@
    "start": 1105.6,
    "slot_end": 1109.8999999999999,
    "subtitle": "ひしゃくの向きが、反対になりました。",
-   "voice_text": "ひしゃくの、むきが、はんたいに、なりました。",
+   "voice_text": "ひしゃくの、むきが、ぎゃくに、なりました。",
    "face": "smile"
   },
   {

@@ -32,6 +32,9 @@ ENDING_LEN = 37.0
 MID_AFTER = 5              # うんちくを入れる位置（5問目のあと）
 SEASON_KANA = {"春": "はる", "夏": "なつ", "秋": "あき", "冬": "ふゆ"}
 
+# transcribe_check で読み違いが続いた文の言い換え（声に渡す文だけ。字幕は元の文のまま）
+VOICE_PATCH = {"ひしゃくの、むきが、はんたいに、なりました。": "ひしゃくの、むきが、ぎゃくに、なりました。"}
+
 # 各問の案内（2問目以降。字幕の文, 声に渡す文）。{n} は fix_numbers が「N問目」を読みに直す
 GO_VARIANTS = [
     ("では、{n}問目。どうぞ。", "では、{n}問目。どうぞ。"),
@@ -163,7 +166,7 @@ def main(argv):
         vo[f"q{newq}_go"] = questions[newq - 1].pop("_go_voice")
         for k in range(1, 4):                                # 答えの文は元の回のまま（読みの上書きも引き継ぐ）
             if f"q{oq}_ans{k}" in ov:
-                vo[f"q{newq}_ans{k}"] = ov[f"q{oq}_ans{k}"]
+                vo[f"q{newq}_ans{k}"] = VOICE_PATCH.get(ov[f"q{oq}_ans{k}"], ov[f"q{oq}_ans{k}"])
 
     season_kana = SEASON_KANA[season]
     lines = {
@@ -201,7 +204,7 @@ def main(argv):
     timeline = {"total": total, "opening": [0.0, OPENING_END], "rule": [OPENING_END, OPENING_END], "q_start": q_start,
                 "unchiku": unchiku, "ending": ending, "card": CARD, "solve": SOLVE, "answer": ANSWER, "hint_at": None,
                 "ten_at": 80.0, "ans_first": 1.6, "ans_step": 4.3, "solve_calls": [[30, "あと60秒です。"], [60, "あと30秒です。"]],
-                "go_delay": 2.4}
+                "go_delay": 2.8}
 
     # ---- 画面・題・サムネ ----
     base = srcs[0]["plan"]["screens"]
