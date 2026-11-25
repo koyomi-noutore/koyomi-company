@@ -1,0 +1,484 @@
+{
+ "id": "tlong_003",
+ "kind": "chigau_long",
+ "series": "ちがうのどーれだ 漢字版",
+ "season": "冬",
+ "count": 20,
+ "think": 15,
+ "opening": {
+  "title": "ちがうのどーれだ",
+  "count": "全20問",
+  "sub": "1つだけ違う漢字をさがそう",
+  "line": [
+   "全20問。さっそく、1問目です。",
+   "ぜんにじゅうもん。さっそく、いちもんめです。"
+  ]
+ },
+ "breaks": {
+  "11": {
+   "title": "ここから「ふつう」",
+   "sub": "字の形が、もっと似てきます",
+   "line": [
+    "ここからは、ふつうの問題です。",
+    "ここからは、ふつうの、もんだいです。"
+   ]
+  }
+ },
+ "ending": {
+  "title": "おつかれさまでした",
+  "sub": "20問、いくつわかりましたか？",
+  "note": "ほかの脳トレもどうぞ",
+  "min_len": 20.0,
+  "lines": [
+   [
+    "全部で20問、おつかれさまでした。いくつ、わかりましたか？",
+    "ぜんぶで、にじゅうもん。おつかれさまでした。いくつ、わかりましたか？"
+   ],
+   [
+    "ほかにも、脳トレがたくさんあります。画面の動画を、クリックしてくださいね。",
+    "ほかにも、のうトレが、たくさんあります。がめんの、どうがを、クリックしてくださいね。"
+   ],
+   [
+    "チャンネル登録とベルで、毎朝8時半に問題が届きます。毎日の頭の体操にどうぞ。",
+    "チャンネルとうろくと、ベルで、まいあさ、はちじはんに、もんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。"
+   ]
+  ]
+ },
+ "questions": [
+  {
+   "level": "やさしい",
+   "main": "林",
+   "odd": "森",
+   "n": 8,
+   "size": [
+    200,
+    260
+   ],
+   "tilt": 10,
+   "weight": "700Bold",
+   "seed": 11,
+   "odd_i": 2,
+   "think": 15,
+   "main_text": "「林」",
+   "main_voice": "はやし",
+   "odd_text": "「森」",
+   "odd_voice": "もり",
+   "origin": "new"
+  },
+  {
+   "level": "やさしい",
+   "main": "花",
+   "odd": "化",
+   "n": 8,
+   "size": [
+    200,
+    260
+   ],
+   "tilt": 10,
+   "weight": "700Bold",
+   "seed": 12,
+   "odd_i": 1,
+   "think": 15,
+   "main_text": "「花」",
+   "main_voice": "はな",
+   "odd_text": "「化粧」の「化」",
+   "odd_voice": "けしょうの、け",
+   "origin": "new"
+  },
+  {
+   "level": "やさしい",
+   "main": "雨",
+   "odd": "雪",
+   "n": 8,
+   "size": [
+    200,
+    260
+   ],
+   "tilt": 10,
+   "weight": "700Bold",
+   "seed": 13,
+   "odd_i": 3,
+   "think": 15,
+   "main_text": "「雨」",
+   "main_voice": "あめ",
+   "odd_text": "「雪」",
+   "odd_voice": "ゆき",
+   "origin": "new"
+  },
+  {
+   "level": "やさしい",
+   "main": "海",
+   "odd": "毎",
+   "n": 8,
+   "size": [
+    200,
+    260
+   ],
+   "tilt": 10,
+   "weight": "700Bold",
+   "seed": 14,
+   "odd_i": 2,
+   "think": 15,
+   "main_text": "「海」",
+   "main_voice": "うみ",
+   "odd_text": "「毎日」の「毎」",
+   "odd_voice": "まいにちの、まい",
+   "origin": "new"
+  },
+  {
+   "level": "やさしい",
+   "main": "国",
+   "odd": "回",
+   "n": 8,
+   "size": [
+    200,
+    260
+   ],
+   "tilt": 10,
+   "weight": "700Bold",
+   "seed": 15,
+   "odd_i": 1,
+   "think": 15,
+   "main_text": "「国」",
+   "main_voice": "くに",
+   "odd_text": "「回数」の「回」",
+   "odd_voice": "かいすうの、かい",
+   "origin": "new"
+  },
+  {
+   "level": "やさしい",
+   "main": "貝",
+   "odd": "見",
+   "n": 8,
+   "size": [
+    200,
+    260
+   ],
+   "tilt": 10,
+   "weight": "700Bold",
+   "seed": 16,
+   "odd_i": 2,
+   "think": 15,
+   "main_text": "「貝」",
+   "main_voice": "かい",
+   "odd_text": "「見る」の「見」",
+   "odd_voice": "みるの、み",
+   "origin": "new"
+  },
+  {
+   "level": "やさしい",
+   "main": "門",
+   "odd": "問",
+   "n": 8,
+   "size": [
+    200,
+    260
+   ],
+   "tilt": 10,
+   "weight": "700Bold",
+   "seed": 17,
+   "odd_i": 3,
+   "think": 15,
+   "main_text": "「門」",
+   "main_voice": "もん",
+   "odd_text": "「質問」の「問」",
+   "odd_voice": "しつもんの、もん",
+   "origin": "new"
+  },
+  {
+   "level": "やさしい",
+   "main": "山",
+   "odd": "出",
+   "n": 8,
+   "size": [
+    200,
+    260
+   ],
+   "tilt": 10,
+   "weight": "700Bold",
+   "seed": 18,
+   "odd_i": 2,
+   "think": 15,
+   "main_text": "「山」",
+   "main_voice": "やま",
+   "odd_text": "「出口」の「出」",
+   "odd_voice": "でぐちの、で",
+   "origin": "new"
+  },
+  {
+   "level": "やさしい",
+   "main": "夕",
+   "odd": "多",
+   "n": 8,
+   "size": [
+    200,
+    260
+   ],
+   "tilt": 10,
+   "weight": "700Bold",
+   "seed": 19,
+   "odd_i": 1,
+   "think": 15,
+   "main_text": "「夕」",
+   "main_voice": "ゆう",
+   "odd_text": "「多い」の「多」",
+   "odd_voice": "おおいの、おお",
+   "origin": "new"
+  },
+  {
+   "level": "やさしい",
+   "main": "川",
+   "odd": "州",
+   "n": 8,
+   "size": [
+    200,
+    260
+   ],
+   "tilt": 10,
+   "weight": "700Bold",
+   "seed": 20,
+   "odd_i": 2,
+   "think": 15,
+   "main_text": "「川」",
+   "main_voice": "かわ",
+   "odd_text": "「九州」の「州」",
+   "odd_voice": "きゅうしゅうの、しゅう",
+   "origin": "new"
+  },
+  {
+   "level": "ふつう",
+   "main": "口",
+   "odd": "日",
+   "n": 9,
+   "size": [
+    175,
+    225
+   ],
+   "tilt": 20,
+   "weight": "700Bold",
+   "seed": 21,
+   "odd_i": 2,
+   "think": 20,
+   "main_text": "「口」",
+   "main_voice": "くち",
+   "odd_text": "「お日さま」の「日」",
+   "odd_voice": "おひさまの、ひ",
+   "origin": "new"
+  },
+  {
+   "level": "ふつう",
+   "main": "米",
+   "odd": "来",
+   "n": 9,
+   "size": [
+    175,
+    225
+   ],
+   "tilt": 20,
+   "weight": "700Bold",
+   "seed": 22,
+   "odd_i": 3,
+   "think": 20,
+   "main_text": "「米」",
+   "main_voice": "こめ",
+   "odd_text": "「来年」の「来」",
+   "odd_voice": "らいねんの、らい",
+   "origin": "new"
+  },
+  {
+   "level": "ふつう",
+   "main": "弟",
+   "odd": "第",
+   "n": 9,
+   "size": [
+    175,
+    225
+   ],
+   "tilt": 20,
+   "weight": "700Bold",
+   "seed": 23,
+   "odd_i": 1,
+   "think": 20,
+   "main_text": "「弟」",
+   "main_voice": "おとうと",
+   "odd_text": "「第一」の「第」",
+   "odd_voice": "だいいちの、だい",
+   "origin": "new"
+  },
+  {
+   "level": "ふつう",
+   "main": "角",
+   "odd": "用",
+   "n": 9,
+   "size": [
+    175,
+    225
+   ],
+   "tilt": 20,
+   "weight": "700Bold",
+   "seed": 24,
+   "odd_i": 2,
+   "think": 20,
+   "main_text": "「角」",
+   "main_voice": "かど",
+   "odd_text": "「用事」の「用」",
+   "odd_voice": "ようじの、よう",
+   "origin": "new"
+  },
+  {
+   "level": "ふつう",
+   "main": "水",
+   "odd": "永",
+   "n": 9,
+   "size": [
+    175,
+    225
+   ],
+   "tilt": 20,
+   "weight": "700Bold",
+   "seed": 25,
+   "odd_i": 3,
+   "think": 20,
+   "main_text": "「水」",
+   "main_voice": "みず",
+   "odd_text": "「永久」の「永」",
+   "odd_voice": "えいきゅうの、えい",
+   "origin": "new"
+  },
+  {
+   "level": "ふつう",
+   "main": "白",
+   "odd": "百",
+   "n": 9,
+   "size": [
+    175,
+    225
+   ],
+   "tilt": 20,
+   "weight": "700Bold",
+   "seed": 26,
+   "odd_i": 2,
+   "think": 20,
+   "main_text": "「白」",
+   "main_voice": "しろ",
+   "odd_text": "「百円」の「百」",
+   "odd_voice": "ひゃくえんの、ひゃく",
+   "origin": "new"
+  },
+  {
+   "level": "ふつう",
+   "main": "万",
+   "odd": "方",
+   "n": 9,
+   "size": [
+    175,
+    225
+   ],
+   "tilt": 20,
+   "weight": "700Bold",
+   "seed": 27,
+   "odd_i": 1,
+   "think": 20,
+   "main_text": "「一万円」の「万」",
+   "main_voice": "いちまんえんの、まん",
+   "odd_text": "「方向」の「方」",
+   "odd_voice": "ほうこうの、ほう",
+   "origin": "new"
+  },
+  {
+   "level": "ふつう",
+   "main": "天",
+   "odd": "夫",
+   "n": 9,
+   "size": [
+    175,
+    225
+   ],
+   "tilt": 20,
+   "weight": "700Bold",
+   "seed": 28,
+   "odd_i": 2,
+   "think": 20,
+   "main_text": "「天気」の「天」",
+   "main_voice": "てんきの、てん",
+   "odd_text": "「夫婦」の「夫」",
+   "odd_voice": "ふうふの、ふう",
+   "origin": "new"
+  },
+  {
+   "level": "ふつう",
+   "main": "鳥",
+   "odd": "烏",
+   "n": 9,
+   "size": [
+    175,
+    225
+   ],
+   "tilt": 15,
+   "weight": "700Bold",
+   "seed": 29,
+   "odd_i": 3,
+   "think": 20,
+   "main_text": "「鳥」",
+   "main_voice": "とり",
+   "odd_text": "「烏（からす）」",
+   "odd_voice": "からす",
+   "origin": "reuse text_028"
+  },
+  {
+   "level": "ふつう",
+   "main": "牛",
+   "odd": "午",
+   "n": 9,
+   "size": [
+    200,
+    250
+   ],
+   "tilt": 12,
+   "weight": "700Bold",
+   "seed": 30,
+   "odd_i": 2,
+   "think": 20,
+   "main_text": "「牛」",
+   "main_voice": "うし",
+   "odd_text": "「午前」の「午」",
+   "odd_voice": "ごぜんの、ご",
+   "origin": "reuse text_018"
+  }
+ ],
+ "thumbnail": {
+  "q": 3,
+  "emph": "1つ",
+  "rest": "見つかる？",
+  "bottom": [
+   "間違いさがし"
+  ],
+  "n": 6,
+  "size": [
+   210,
+   260
+  ],
+  "seed": 5,
+  "odd_i": 2,
+  "tilt": 12
+ },
+ "description": {
+  "title": "【ちがうのどーれだ】漢字の仲間はずれは？全20問｜脳トレ",
+  "body": "同じ漢字がたくさん散らばる中に、形の似た字が1つだけ混ざっています。どれか、探してみましょう。全20問。前半はやさしい問題、後半は形がもっと似てくるふつうの問題です。\n仲間はずれ探しで、シニアの方の脳トレ・頭の体操に。高齢者のレクリエーションやデイサービスでも、みんなで楽しめます。\n\n【あそびかた】\n・1問ごとに、同じ漢字がたくさん並びます。その中の、違う字を1つ探してください。\n・15秒ほど考えたら、答え合わせです。\n・わかったら、コメントで教えてくださいね。\n\n音声：Fish Audio",
+  "tags": [
+   "ちがうのどーれだ",
+   "漢字 仲間はずれ",
+   "仲間はずれ探し",
+   "漢字クイズ",
+   "間違い探し 高齢者",
+   "脳トレ",
+   "頭の体操",
+   "高齢者 レクリエーション",
+   "デイサービス レクリエーション",
+   "レクリエーション",
+   "シニア 脳トレ",
+   "クイズ",
+   "こよみ先生"
+  ]
+ }
+}

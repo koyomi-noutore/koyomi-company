@@ -176,6 +176,77 @@ def kanji_frame(i, n, Q, state, remain=None, sub=None, face="normal", rule=False
     return speaker(im, face, sub, one_line=True)
 
 
+# ---------- ちがうのどーれだ（漢字版）：散らし配置（scripts/chigau_shorts.py の考え方を、横画面で） ----------
+def font_w(size, weight="700Bold"):
+    from PIL import ImageFont
+    return ImageFont.truetype(str(Path.home() / f".cache/koyomi/fonts/package/{weight}/NotoSansJP_{weight}.ttf"), size)
+
+
+def glyph(ch, size, angle=0, weight="700Bold"):
+    """1文字を透明な正方形に描き、angle 度まわす。"""
+    s = int(size * 1.5)
+    g = Image.new("RGBA", (s, s), (0, 0, 0, 0))
+    ImageDraw.Draw(g).text((s / 2, s / 2), ch, font=font_w(size, weight), fill=tuple(TH["ink"]) + (255,), anchor="mm")
+    return g.rotate(angle, resample=Image.BICUBIC) if angle else g
+
+
+AREA = (190, 245, 1730, 770)          # 字を置く範囲（台紙 160〜1760 × 215〜800 の内側）
+
+
+def scatter(Q, area=AREA, canvas=(W, H)):
+    """大きい字から順に、重ならない場所をさがして置く（インクの形で検査）。戻り値＝[(字, 中心x, 中心y, 大きさ, 角度)]。"""
+    from PIL import ImageFilter
+    rnd = random.Random(Q["seed"])
+    x0, y0, x1, y1 = area
+    sizes = sorted([rnd.randint(*Q["size"]) for _ in range(Q["n"])], reverse=True)
+    occ = np.zeros((canvas[1], canvas[0]), bool)
+    placed = []
+    for i, sz in enumerate(sizes):
+        ch = Q["odd"] if i == Q["odd_i"] else Q["main"]
+        for _ in range(8000):
+            ang = rnd.randint(-Q["tilt"], Q["tilt"])
+            g = glyph(ch, sz, ang, Q["weight"]).split()[3].point(lambda v: 255 if v > 30 else 0).filter(ImageFilter.MaxFilter(9))
+            bb = g.getbbox(); full = g.size[0]
+            g = g.crop(bb); gw, gh = g.size
+            if gw > x1 - x0 or gh > y1 - y0:
+                continue
+            px = rnd.randint(x0, x1 - gw); py = rnd.randint(y0, y1 - gh)
+            cx = px + gw / 2 - (bb[0] + gw / 2 - full / 2); cy = py + gh / 2 - (bb[1] + gh / 2 - full / 2)
+            m = np.array(g) > 0
+            if not (occ[py:py + gh, px:px + gw] & m).any():
+                occ[py:py + gh, px:px + gw] |= m
+                placed.append((ch, cx, cy, sz, ang)); break
+        else:
+            raise SystemExit(f"置ききれない（{Q['main']}/{Q['odd']} {i}個目）。個数か大きさを減らす")
+    return placed
+
+
+_LAY = {}
+
+
+def layout(Q):
+    key = (Q["main"], Q["odd"], Q["seed"], Q["n"], tuple(Q["size"]), Q["tilt"], Q["odd_i"])
+    if key not in _LAY:
+        _LAY[key] = scatter(Q)
+    return _LAY[key]
+
+
+def chigau_frame(i, n, Q, state, remain=None, sub=None, face="normal", rule=False, think=15):
+    """ちがうのどーれだ：同じ字がたくさん散らばる中に、違う字が1つ。state＝1で赤丸。"""
+    im = Image.new("RGB", (W, H), TH["bg"])
+    d = ImageDraw.Draw(im)
+    header(d, i, n, Q, remain, think)
+    tc(d, (1230 if rule else 1130, 118), "一つだけ違う字があるよ" if rule else "ちがうのどーれだ？", 56 if rule else 66, TH["ink"])
+    d.rounded_rectangle((160, 215, 1760, 800), 44, fill=TH["panel"], outline=TH["edge"], width=6)
+    for ch, cx, cy, sz, ang in layout(Q):
+        g = glyph(ch, sz, ang, Q["weight"])
+        im.paste(g, (int(cx - g.width / 2), int(cy - g.height / 2)), g)
+        if ch == Q["odd"] and state:
+            r_ = int(sz * 0.64)
+            d.ellipse((cx - r_, cy - r_, cx + r_, cy + r_), outline=TH["alert"], width=12)
+    return speaker(im, face, sub, one_line=True)
+
+
 def card_frame(lines, face, sub, t=0.0, with_snow=True, owl_big=True):
     """オープニング・ひと言のカード・エンディング。lines＝[(文字, 大きさ, 色)]（中央に縦に並べる）。"""
     im = Image.new("RGB", (W, H), TH["bg"])
@@ -252,6 +323,10 @@ def lines_of(P):
     kanji = P["kind"] == "kanji_long"
     for i, Q in enumerate(P["questions"], 1):
         Q["_i"] = i
+        if P["kind"] == "chigau_long":
+            L[f"q{i:02d}_intro"] = (f"{i}問目です。違う漢字が、1つだけあります。どれでしょう？", f"{Q.get('num_voice', NUM[i] + 'もんめです。')}ちがうかんじが、ひとつだけあります。どれでしょう？")
+            L[f"q{i:02d}_ans"] = (f"{Q['main_text']}の中に、{Q['odd_text']}が、混ざっていました。", f"{Q['main_voice']}、のなかに、{Q['odd_voice']}、が、まざっていました。")
+            continue
         if kanji:
             L[f"q{i:02d}_intro"] = (f"{Q.get('num_sub', str(i) + '問目です。')}違う漢字が、2つあります。", f"{Q.get('num_voice', NUM[i] + 'もんめ、です。')}ちがうかんじが、ふたつあります。")
             for k, (r, c, sub_, ot, ov, st, sv) in enumerate(Q["diffs"], 1):
@@ -366,10 +441,96 @@ def check_kanji(folder, P):
     return not bad
 
 
+def used_pairs(folder):
+    """ショートで出した「ちがうのどーれだ」の漢字の組（outputs/*_text_*/problem.json の scatter と、problem.json のない初期の3組）。"""
+    out = {"季李": "text_010", "末未": "text_011", "大犬": "text_013"}
+    for p in sorted(Path(folder).resolve().parent.glob("*_text_*/problem.json")):
+        try:
+            J = json.loads(p.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if J.get("kind") == "scatter":
+            out[J["main"] + J["odd"]] = p.parent.name[-8:]
+    return out
+
+
+def small_ratio(a, b, size=40):
+    """幅300pxに縮めたときの、2つの字の形の違い（重ねたときの食い違い面積÷字のインク面積）。末/未は0.09（小さすぎて不合格だった）、牛/午は0.38（合格）。"""
+    def g(ch):
+        im = Image.new("L", (size * 2, size * 2), 0)
+        ImageDraw.Draw(im).text((size, size), ch, font=font_w(size), fill=255, anchor="mm")
+        return np.array(im) > 110
+    A, B = g(a), g(b)
+    return float((A ^ B).sum() / max(A.sum(), 1))
+
+
+def check_chigau(folder, P):
+    Qs, n = P["questions"], len(P["questions"])
+    used = used_pairs(folder)
+    L = lines_of(P)
+    bad, rows, reuse = [], [], 0
+    levels = [Q["level"] for Q in Qs]
+    if n != P["count"]:
+        bad.append(f"問題数 {n} ≠ {P['count']}")
+    if levels != sorted(levels, key=lambda x: ["やさしい", "ふつう", "むずかしい"].index(x)):
+        bad.append("難しさの順（やさしい→ふつう）になっていない")
+    odds = [Q["odd"] for Q in Qs]
+    if len(set(odds)) != n or len({Q["main"] for Q in Qs}) != n:
+        bad.append("同じ字が複数の問にある（同じ物・同じ変化は1度まで）")
+    for i, Q in enumerate(Qs, 1):
+        m, o = Q["main"], Q["odd"]
+        for ch in (m, o):
+            if not has_glyph(ch):
+                bad.append(f"{i}問目：「{ch}」がフォントにない")
+        ratio = small_ratio(m, o)
+        if ratio < P.get("min_ratio", 0.30) and not (m + o in used and Q["origin"].startswith("reuse") and ratio >= 0.30):
+            bad.append(f"{i}問目：{m}/{o} は差が小さい（{ratio:.2f}。0.30以上にする）")
+        lay = layout(Q)
+        n_odd = sum(1 for c, *_ in lay if c == o)
+        if n_odd != 1 or len(lay) != Q["n"]:
+            bad.append(f"{i}問目：違う字が{n_odd}個（1個にする）")
+        masks = []
+        for ch, cx, cy, sz, ang in lay:
+            g = glyph(ch, sz, ang, Q["weight"]).split()[3].point(lambda v: 255 if v > 30 else 0)
+            mk = Image.new("L", (W, H), 0); mk.paste(g, (int(cx - g.width / 2), int(cy - g.height / 2))); masks.append(np.array(mk) > 0)
+        ov = sum(int((masks[a] & masks[b]).any()) for a in range(len(masks)) for b in range(a + 1, len(masks)))
+        if ov:
+            bad.append(f"{i}問目：インクが重なる字の組が {ov}")
+        inside = all(AREA[0] - 5 <= cx - sz / 2 and cx + sz / 2 <= AREA[2] + 5 and AREA[1] - 5 <= cy and cy <= AREA[3] + 5 for _, cx, cy, sz, _ in lay)
+        if not inside:
+            bad.append(f"{i}問目：台紙からはみ出す字がある")
+        reused = (m + o) in used
+        if reused != Q["origin"].startswith("reuse"):
+            bad.append(f"{i}問目：origin が実際と違う（組 {m}/{o}：{'ショートで出した' if reused else '出していない'}）")
+        reuse += reused
+        for key in (f"q{i:02d}_intro", f"q{i:02d}_ans"):
+            vt = L[key][1]
+            if re.search(r"[\u4e00-\u9fff]", vt):
+                bad.append(f"{key}：声の文に漢字が残っている：{vt}")
+            if "はいる" in vt or "にいる" in vt:
+                bad.append(f"{key}：「入る」系の読みがある：{vt}")
+        rows.append(f"| {i} | {Q['level']} | {m} の中に {o} | {Q['n']}個（{m}×{Q['n'] - 1}・{o}×1） | {ratio:.2f} | 重なり0・台紙の中・フォントにある | 回転±{Q['tilt']}° | {'ショート ' + used[m + o] if reused else '新しい組'} |")
+    if n - reuse < 11:
+        bad.append(f"新しい組 {n - reuse} 組（11組以上にする）")
+    if reuse > n // 2:
+        bad.append(f"ショートで使った組 {reuse} 組（半分まで）")
+    md = [f"# 答えの確かめ（{P['id']}：{P['series']} 全{n}問）", "",
+          "scripts/text_long.py check の結果。各問「違う字は1個・字が重ならない・台紙の中に収まる・どちらの字もフォントにある・声の文に漢字なし・同じ字を2問で使わない」と、**幅300pxに縮めたときの字の形の違い**を数値で確かめた。",
+          "形の違い＝同じ大きさで重ねたときの食い違い面積÷字のインク面積（40px で測定）。基準：0.30以上（参考：末/未 0.09＝小さすぎて差し戻し、牛/午 0.38＝合格、大/犬 0.14）。字は大きめ（190〜290px）で、回転は小さくした。", "",
+          f"新しい組 {n - reuse} 組・ショートで使った組 {reuse} 組（半分まで）。", "",
+          "| 問 | 難しさ | 組 | 数 | 形の違い | 確認 | 向き | 出どころ |", "|---|---|---|---|---|---|---|---|"] + rows
+    md += ["", "結果：" + ("不合格 " + str(len(bad)) + " 件" if bad else "合格（違う字は全問で1個）")]
+    (Path(folder) / "answer_check.md").write_text("\n".join(md) + "\n", encoding="utf-8")
+    print("\n".join(bad) if bad else f"OK：{n}問（新しい {n - reuse}・ショート {reuse}）")
+    return not bad
+
+
 def check(folder):
     P = load(folder)
     if P["kind"] == "kanji_long":
         return check_kanji(folder, P)
+    if P["kind"] == "chigau_long":
+        return check_chigau(folder, P)
     Qs, n = P["questions"], len(P["questions"])
     used = used_answers(folder)
     bad, rows, reuse, new = [], [], 0, 0
@@ -464,9 +625,9 @@ def build(folder):
             br = P["breaks"][str(i)]
             seq.append((card_frame([(br["title"], 150, TH["accent"]), (br["sub"], 72, TH["accent2"])], "wink", V[key][2][0], 0, with_snow=False), ln)); t += ln
         t0 = t
-        frame = kanji_frame if P["kind"] == "kanji_long" else question_frame
+        frame = {"kanji_long": kanji_frame, "chigau_long": chigau_frame}.get(P["kind"], question_frame)
         think = Q.get("think", P.get("think", 15))
-        chapters.append((t0, f"{i}問目（{Q.get('clue') or Q['word']}）"))
+        chapters.append((t0, f"{i}問目（{Q.get('clue') or Q.get('word') or Q['main'] + 'の中の1字'}）"))
         ev["start"].append(t0)
         d = say(f"q{i:02d}_intro", t)
         ln = d + 0.3 + 0.5
@@ -485,7 +646,7 @@ def build(folder):
         ev["pon"].append(t + 0.35)
         d = say(f"q{i:02d}_ans", t + 0.4)
         ln = 0.4 + d + 0.3 + 1.3
-        seq.append((question_frame(i, n, Q, 1, None, V[f"q{i:02d}_ans"][2][0], "yay", think=think), ln)); t += ln
+        seq.append((frame(i, n, Q, 1, None, V[f"q{i:02d}_ans"][2][0], "yay", think=think), ln)); t += ln
     # エンディング（汎用の案内・登録のお願いは最後だけ）
     ev["end_at"] = t
     ENDING_AT[0] = t
@@ -591,6 +752,16 @@ def make_thumbnail(P, folder):
         for r in range(3):
             for c in range(3):
                 tc(d, (pw * sc // 2 + (c - 1) * 310, 30 + 100 + r * 200 + 10), w[c], 170, TH["ink"])
+        pic = im.resize((pw, ph), Image.LANCZOS)
+        TB_make(pic, P, folder)
+        return
+    if P["kind"] == "chigau_long":     # 字がたくさん散らばる台紙（左右とも同じ絵）
+        d.rounded_rectangle((40, 30, pw * sc - 40, 660), 60, fill=TH["panel"], outline=TH["edge"], width=8)
+        Qt = dict(Q, n=Th.get("n", 6), size=Th.get("size", [210, 260]), seed=Th.get("seed", 5), odd_i=Th.get("odd_i", 2), tilt=Th.get("tilt", 12))
+        lay = scatter(Qt, area=(90, 60, pw * sc - 90, 640), canvas=(pw * sc, ph * sc))
+        for ch, cx, cy, sz, ang in lay:
+            g = glyph(ch, sz, ang, Q["weight"])
+            im.paste(g, (int(cx - g.width / 2), int(cy - g.height / 2)), g)
         pic = im.resize((pw, ph), Image.LANCZOS)
         TB_make(pic, P, folder)
         return
