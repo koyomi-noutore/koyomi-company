@@ -770,7 +770,7 @@ def make_thumbnail(P, folder):
         return
     if P["kind"] == "chigau_long":     # 字がたくさん散らばる台紙（左右とも同じ絵）
         d.rounded_rectangle((40, 30, pw * sc - 40, 660), 60, fill=TH["panel"], outline=TH["edge"], width=8)
-        Qt = dict(Q, n=Th.get("n", 6), size=Th.get("size", [210, 260]), seed=Th.get("seed", 5), odd_i=Th.get("odd_i", 2), tilt=Th.get("tilt", 12))
+        Qt = dict(Q, odd=Q["main"], n=Th.get("n", 6), size=Th.get("size", [210, 260]), seed=Th.get("seed", 5), odd_i=Th.get("odd_i", 2), tilt=Th.get("tilt", 12))
         for k in range(200):
             try:
                 lay = scatter(dict(Qt, seed=Qt["seed"] + 100 * k), area=(90, 60, pw * sc - 90, 640), canvas=(pw * sc, ph * sc)); break
