@@ -1,0 +1,712 @@
+{
+ "screen": {
+  "size": [
+   1920,
+   1080
+  ],
+  "picture_size_on_screen": [
+   960,
+   1080
+  ],
+  "safe_y_on_screen": [
+   54,
+   918
+  ],
+  "level_range_pct_of_screen_width": {
+   "やさしい": [
+    6.0,
+    8.0
+   ],
+   "初級": [
+    5.0,
+    6.0
+   ],
+   "中級": [
+    4.0,
+    5.0
+   ],
+   "上級": [
+    3.0,
+    4.0
+   ]
+  }
+ },
+ "note": "box_px・circle_px は 8:9 に切り抜いた高解像度の絵（qN_a.png、1856×2088）のピクセル。content_px はそのうち画面に出す範囲（白いふちを除いた8:9）。*_screen は画面の上での座標（右の絵は x に960を足す）。object_screen_width_pct は、変わる物そのものの幅を画面幅で割った値（難易度の基準）。object_picture_width_pct は片方の絵の幅で割った値（参考）。",
+ "questions": [
+  {
+   "q": 1,
+   "scene": "縁側の猫と座布団",
+   "level": "やさしい",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 192,
+   "outside_box_max_distance_px": 8.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "かごがない",
+     "line": "左上のかごが、なくなりました。",
+     "box_px": [
+      85,
+      0,
+      500,
+      480
+     ],
+     "box_screen": [
+      44,
+      0,
+      259,
+      248
+     ],
+     "circle_a_screen": [
+      44,
+      0,
+      259,
+      248
+     ],
+     "circle_b_screen": [
+      44,
+      0,
+      259,
+      248
+     ],
+     "object_w_px": 355,
+     "object_picture_width_pct": 19.13,
+     "object_screen_width_pct": 9.56,
+     "in_level_range": false,
+     "in_safe_y": false,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "おけが青",
+     "line": "右のおけが、青くなりました。",
+     "box_px": [
+      1400,
+      1030,
+      1750,
+      1310
+     ],
+     "box_screen": [
+      724,
+      533,
+      905,
+      678
+     ],
+     "circle_a_screen": [
+      724,
+      533,
+      905,
+      678
+     ],
+     "circle_b_screen": [
+      724,
+      533,
+      905,
+      678
+     ],
+     "object_w_px": 297,
+     "object_picture_width_pct": 16.0,
+     "object_screen_width_pct": 8.0,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "毛糸玉が緑",
+     "line": "左下の毛糸玉が、緑になりました。",
+     "box_px": [
+      215,
+      1610,
+      435,
+      1795
+     ],
+     "box_screen": [
+      111,
+      833,
+      225,
+      928
+     ],
+     "circle_a_screen": [
+      111,
+      833,
+      225,
+      928
+     ],
+     "circle_b_screen": [
+      111,
+      833,
+      225,
+      928
+     ],
+     "object_w_px": 168,
+     "object_picture_width_pct": 9.05,
+     "object_screen_width_pct": 4.53,
+     "in_level_range": false,
+     "in_safe_y": false,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 2,
+   "scene": "軒下の干し柿",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 1977,
+   "outside_box_max_distance_px": 12.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "巣箱がない",
+     "line": "左上の巣箱が、なくなりました。",
+     "box_px": [
+      50,
+      215,
+      330,
+      535
+     ],
+     "box_screen": [
+      26,
+      111,
+      171,
+      277
+     ],
+     "circle_a_screen": [
+      26,
+      111,
+      171,
+      277
+     ],
+     "circle_b_screen": [
+      26,
+      111,
+      171,
+      277
+     ],
+     "object_w_px": 260,
+     "object_picture_width_pct": 14.01,
+     "object_screen_width_pct": 7.0,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "入れ替え",
+     "label": "腰かけが木箱に",
+     "line": "右下の腰かけが、木箱に変わりました。",
+     "box_px": [
+      1220,
+      1640,
+      1720,
+      2060
+     ],
+     "box_screen": [
+      631,
+      848,
+      890,
+      1066
+     ],
+     "circle_a_screen": [
+      631,
+      848,
+      890,
+      1066
+     ],
+     "circle_b_screen": [
+      631,
+      848,
+      890,
+      1066
+     ],
+     "object_w_px": 330,
+     "object_picture_width_pct": 17.78,
+     "object_screen_width_pct": 8.89,
+     "in_level_range": false,
+     "in_safe_y": false,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "手ぬぐいが緑",
+     "line": "右上の手ぬぐいが、緑になりました。",
+     "box_px": [
+      1480,
+      720,
+      1710,
+      1060
+     ],
+     "box_screen": [
+      766,
+      372,
+      884,
+      548
+     ],
+     "circle_a_screen": [
+      766,
+      372,
+      884,
+      548
+     ],
+     "circle_b_screen": [
+      766,
+      372,
+      884,
+      548
+     ],
+     "object_w_px": 190,
+     "object_picture_width_pct": 10.24,
+     "object_screen_width_pct": 5.12,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 3,
+   "scene": "ひなたの猫",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 417,
+   "outside_box_max_distance_px": 12.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "えさ入れがない",
+     "line": "左下のえさの器が、なくなりました。",
+     "box_px": [
+      200,
+      1650,
+      520,
+      1880
+     ],
+     "box_screen": [
+      103,
+      853,
+      269,
+      972
+     ],
+     "circle_a_screen": [
+      103,
+      853,
+      269,
+      972
+     ],
+     "circle_b_screen": [
+      103,
+      853,
+      269,
+      972
+     ],
+     "object_w_px": 280,
+     "object_picture_width_pct": 15.09,
+     "object_screen_width_pct": 7.54,
+     "in_level_range": false,
+     "in_safe_y": false,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "ひざ掛けが青",
+     "line": "右のひざ掛けが、青くなりました。",
+     "box_px": [
+      1210,
+      1170,
+      1790,
+      1430
+     ],
+     "box_screen": [
+      626,
+      605,
+      926,
+      740
+     ],
+     "circle_a_screen": [
+      626,
+      605,
+      926,
+      740
+     ],
+     "circle_b_screen": [
+      626,
+      605,
+      926,
+      740
+     ],
+     "object_w_px": 520,
+     "object_picture_width_pct": 28.02,
+     "object_screen_width_pct": 14.01,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "入れ替え",
+     "label": "花瓶がつぼに",
+     "line": "左上の花瓶が、つぼに変わりました。",
+     "box_px": [
+      40,
+      100,
+      420,
+      560
+     ],
+     "box_screen": [
+      21,
+      52,
+      217,
+      290
+     ],
+     "circle_a_screen": [
+      21,
+      52,
+      217,
+      290
+     ],
+     "circle_b_screen": [
+      21,
+      52,
+      217,
+      290
+     ],
+     "object_w_px": 300,
+     "object_picture_width_pct": 16.16,
+     "object_screen_width_pct": 8.08,
+     "in_level_range": false,
+     "in_safe_y": false,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 4,
+   "scene": "火鉢のまわり",
+   "level": "中級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 47,
+   "outside_box_max_distance_px": 9.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "数",
+     "label": "干し柿が4つに",
+     "line": "左上の干し柿が、4つに減りました。",
+     "box_px": [
+      250,
+      670,
+      410,
+      860
+     ],
+     "box_screen": [
+      129,
+      347,
+      212,
+      445
+     ],
+     "circle_a_screen": [
+      129,
+      347,
+      212,
+      445
+     ],
+     "circle_b_screen": [
+      129,
+      347,
+      212,
+      445
+     ],
+     "object_w_px": 115,
+     "object_picture_width_pct": 6.2,
+     "object_screen_width_pct": 3.1,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "模様",
+     "label": "ふろしきの模様",
+     "line": "右のふろしきの模様が、変わりました。",
+     "box_px": [
+      1340,
+      925,
+      1770,
+      1265
+     ],
+     "box_screen": [
+      693,
+      478,
+      916,
+      654
+     ],
+     "circle_a_screen": [
+      693,
+      478,
+      916,
+      654
+     ],
+     "circle_b_screen": [
+      693,
+      478,
+      916,
+      654
+     ],
+     "object_w_px": 400,
+     "object_picture_width_pct": 21.55,
+     "object_screen_width_pct": 10.78,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "湯たんぽが青",
+     "line": "左下の湯たんぽが、青くなりました。",
+     "box_px": [
+      185,
+      1700,
+      640,
+      2030
+     ],
+     "box_screen": [
+      96,
+      879,
+      331,
+      1050
+     ],
+     "circle_a_screen": [
+      96,
+      879,
+      331,
+      1050
+     ],
+     "circle_b_screen": [
+      96,
+      879,
+      331,
+      1050
+     ],
+     "object_w_px": 420,
+     "object_picture_width_pct": 22.63,
+     "object_screen_width_pct": 11.31,
+     "in_level_range": false,
+     "in_safe_y": false,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 5,
+   "scene": "ひるねの猫",
+   "level": "上級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 124,
+   "outside_box_max_distance_px": 11.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "ひょうたんがない",
+     "line": "左上のひょうたんが、なくなりました。",
+     "box_px": [
+      130,
+      140,
+      320,
+      390
+     ],
+     "box_screen": [
+      67,
+      72,
+      166,
+      202
+     ],
+     "circle_a_screen": [
+      67,
+      72,
+      166,
+      202
+     ],
+     "circle_b_screen": [
+      67,
+      72,
+      166,
+      202
+     ],
+     "object_w_px": 146,
+     "object_picture_width_pct": 7.87,
+     "object_screen_width_pct": 3.93,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "帽子が緑",
+     "line": "右の毛糸の帽子が、緑になりました。",
+     "box_px": [
+      1520,
+      640,
+      1800,
+      1020
+     ],
+     "box_screen": [
+      786,
+      331,
+      931,
+      528
+     ],
+     "circle_a_screen": [
+      786,
+      331,
+      931,
+      528
+     ],
+     "circle_b_screen": [
+      786,
+      331,
+      931,
+      528
+     ],
+     "object_w_px": 190,
+     "object_picture_width_pct": 10.24,
+     "object_screen_width_pct": 5.12,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "2",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "数",
+     "label": "おせんべいが2枚に",
+     "line": "左下のおせんべいが、2枚に減りました。",
+     "box_px": [
+      300,
+      1640,
+      560,
+      1810
+     ],
+     "box_screen": [
+      155,
+      848,
+      290,
+      936
+     ],
+     "circle_a_screen": [
+      155,
+      848,
+      290,
+      936
+     ],
+     "circle_b_screen": [
+      155,
+      848,
+      290,
+      936
+     ],
+     "object_w_px": 90,
+     "object_picture_width_pct": 4.85,
+     "object_screen_width_pct": 2.42,
+     "in_level_range": false,
+     "in_safe_y": false,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2035 @@
+{
+ "episode": "033",
+ "season": "冬",
+ "topics": [
+  "縁側のひなたぼっこ（干し柿・猫）"
+ ],
+ "note": "第33回（縁側のひなたぼっこ・干し柿と猫・冬）。公開日は未定（schedule.md 2026-11-22）。奇数の回：タイトルのみABテスト（サムネはB）。人は描かない・絵の中に文字なし。第21回（縁側のみかんと猫）・第13回（干し柿の縁側）の違い（スリッパ・やかん・植木鉢・時計・急須・湯のみ・めがね・鈴・小鳥・みかん・ちょうちん・笠・柿の色・鉄びん・じょうろ）と重ねない。",
+ "youtube": {
+  "title": "【間違い探し】縁側のひなたぼっこ｜シニア・高齢者の脳トレ",
+  "description_file": "description.md",
+  "title_note": "32文字以内・【間違い探し】から。タイトルA（検索型）。3案は ab/titles.md",
+  "publish_plan": "未定（CEOが決める）"
+ },
+ "screens": {
+  "opening_title": "ひなたぼっこの間違い探し　全5問",
+  "opening_sub": "最後は難問です",
+  "unchiku_header": "こよみ先生の 冬の小話",
+  "unchiku_slides": [
+   {
+    "until": 7,
+    "texts": [
+     [
+      "ひと休み",
+      960,
+      330,
+      130,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "こよみ先生の 季節のお話",
+      960,
+      520,
+      80,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 15,
+    "texts": [
+     [
+      "干し柿の 白い粉",
+      960,
+      380,
+      115,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ]
+    ]
+   },
+   {
+    "until": 24,
+    "texts": [
+     [
+      "カビではなく",
+      960,
+      330,
+      115,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "甘みが 出たもの",
+      960,
+      520,
+      105,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 30,
+    "texts": [
+     [
+      "白い粉は",
+      960,
+      330,
+      115,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "甘みの しるし",
+      960,
+      520,
+      105,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   }
+  ],
+  "ending_titles": [
+   [
+    "15個",
+    "縁側の名人"
+   ],
+   [
+    "11〜14個",
+    "ひなたぼっこ上手"
+   ],
+   [
+    "6〜10個",
+    "干し柿の見習い"
+   ],
+   [
+    "0〜5個",
+    "ひなたの昼寝ねこ"
+   ]
+  ],
+  "ending_note": "ひなたの昼寝ねこも、毎日ためせば 名人です",
+  "ending_next": "ほかの間違い探しも どうぞ",
+  "owl_layout": "bottom",
+  "endscreen_at": 9.0,
+  "rule_overlay": {
+   "text": "右の絵で 違いを3つ さがそう",
+   "sub": "1問 90秒",
+   "sec": 8.0
+  }
+ },
+ "timeline": {
+  "total": 613.5,
+  "opening": [
+   0.0,
+   6.5
+  ],
+  "rule": [
+   6.5,
+   6.5
+  ],
+  "q_start": {
+   "1": 6.5,
+   "2": 114.5,
+   "3": 222.5,
+   "4": 360.5,
+   "5": 468.5
+  },
+  "unchiku": [
+   330.5,
+   360.5
+  ],
+  "ending": [
+   576.5,
+   613.5
+  ],
+  "card": 3.0,
+  "solve": 90.0,
+  "answer": 15.0,
+  "hint_at": null,
+  "ten_at": 80.0,
+  "ans_first": 1.6,
+  "ans_step": 4.3,
+  "solve_calls": [
+   [
+    30,
+    "あと60秒です。"
+   ],
+   [
+    60,
+    "あと30秒です。"
+   ]
+  ],
+  "go_delay": 2.4
+ },
+ "lines": {
+  "opening": [
+   {
+    "id": "op",
+    "at": 0.0,
+    "text": "ひなたぼっこの間違い探し、全5問。",
+    "face": "smile",
+    "until": 4.2
+   },
+   {
+    "id": "op2",
+    "at": 4.2,
+    "text": "最後は難問。",
+    "face": "wink",
+    "until": 6.5
+   }
+  ],
+  "rule": [],
+  "unchiku": [
+   {
+    "id": "u1",
+    "at": 0.0,
+    "text": "ここでひと休み。こよみ先生の季節のお話です。",
+    "face": "smile",
+    "until": 7.0
+   },
+   {
+    "id": "u2",
+    "at": 7.0,
+    "text": "干し柿の表面に、白い粉がふくことを、ご存じですか？",
+    "face": "think",
+    "until": 15.0
+   },
+   {
+    "id": "u3",
+    "at": 15.0,
+    "text": "あれはカビではなく、柿の甘みが、外に出てきたものといわれています。",
+    "face": "surprise",
+    "until": 24.0
+   },
+   {
+    "id": "u4",
+    "at": 24.0,
+    "text": "白い粉は、甘みが出てきたしるし。ひなたで、ゆっくり育つ味ですね。",
+    "face": "wink",
+    "until": 30.0
+   }
+  ],
+  "ending": [
+   {
+    "id": "e1",
+    "at": 0.0,
+    "text": "これで5問目まで、おしまいです。",
+    "face": "yay",
+    "until": 4.2
+   },
+   {
+    "id": "e2",
+    "at": 4.2,
+    "text": "15個の違い、いくつ見つかりましたか。結果発表です。",
+    "face": "smile",
+    "until": 10.8
+   },
+   {
+    "id": "e3",
+    "at": 10.8,
+    "text": "チャンネル登録とベルで、毎朝8時半に問題が届きます。毎日の頭の体操にどうぞ。",
+    "face": "smile",
+    "until": 21.0
+   },
+   {
+    "id": "e4",
+    "at": 21.0,
+    "text": "ほかにも、いろいろな間違い探しがあります。もっと難しい問題に挑戦したい方は、画面の動画をクリックしてくださいね。",
+    "face": "wink",
+    "until": 36.0
+   }
+  ],
+  "extra": [
+   {
+    "id": "c_comment",
+    "at": 237.5,
+    "text": "見つかった数を、あとでコメントで教えてくださいね。",
+    "face": "smile",
+    "until": 244.5
+   }
+  ]
+ },
+ "readings": [
+  [
+   "巣箱",
+   "すばこ"
+  ],
+  [
+   "右上",
+   "みぎうえ"
+  ],
+  [
+   "左上",
+   "ひだりうえ"
+  ],
+  [
+   "右下",
+   "みぎした"
+  ],
+  [
+   "左下",
+   "ひだりした"
+  ],
+  [
+   "日なた",
+   "ひなた"
+  ],
+  [
+   "二つ",
+   "ふたつ"
+  ],
+  [
+   "三つ",
+   "みっつ"
+  ],
+  [
+   "四つ",
+   "よっつ"
+  ],
+  [
+   "出て",
+   "でて"
+  ],
+  [
+   "外",
+   "そと"
+  ],
+  [
+   "表面",
+   "ひょうめん"
+  ],
+  [
+   "育つ",
+   "そだつ"
+  ],
+  [
+   "甘み",
+   "あまみ"
+  ],
+  [
+   "粉",
+   "こな"
+  ],
+  [
+   "昼寝",
+   "ひるね"
+  ],
+  [
+   "煎餅",
+   "せんべい"
+  ],
+  [
+   "お煎餅",
+   "おせんべい"
+  ],
+  [
+   "瓢箪",
+   "ひょうたん"
+  ],
+  [
+   "壺",
+   "つぼ"
+  ],
+  [
+   "花瓶",
+   "かびん"
+  ],
+  [
+   "餌",
+   "えさ"
+  ],
+  [
+   "膝掛け",
+   "ひざかけ"
+  ],
+  [
+   "腰かけ",
+   "こしかけ"
+  ],
+  [
+   "ちりとり",
+   "ちりとり"
+  ],
+  [
+   "手ぬぐい",
+   "てぬぐい"
+  ],
+  [
+   "湯たんぽ",
+   "ゆたんぽ"
+  ],
+  [
+   "火鉢",
+   "ひばち"
+  ],
+  [
+   "干し柿の",
+   "ほしがきの"
+  ],
+  [
+   "竹かご",
+   "たけかご"
+  ],
+  [
+   "毛糸玉",
+   "けいとだま"
+  ],
+  [
+   "柄",
+   "え"
+  ],
+  [
+   "串",
+   "くし"
+  ],
+  [
+   "2本",
+   "にほん"
+  ],
+  [
+   "手前",
+   "てまえ"
+  ],
+  [
+   "結び目",
+   "むすびめ"
+  ],
+  [
+   "風呂敷",
+   "ふろしき"
+  ],
+  [
+   "反対向き",
+   "はんたいむき"
+  ],
+  [
+   "座る",
+   "すわる"
+  ],
+  [
+   "重ね",
+   "かさね"
+  ],
+  [
+   "減り",
+   "へり"
+  ],
+  [
+   "ひょうたん",
+   "ひょうたん"
+  ],
+  [
+   "芋煮会",
+   "いもにかい"
+  ],
+  [
+   "芋煮",
+   "いもに"
+  ],
+  [
+   "川原",
+   "かわら"
+  ],
+  [
+   "里芋",
+   "さといも"
+  ],
+  [
+   "昼ごはん",
+   "ひるごはん"
+  ],
+  [
+   "夕方",
+   "ゆうがた"
+  ],
+  [
+   "秋景色",
+   "あきげしき"
+  ],
+  [
+   "山形",
+   "やまがた"
+  ],
+  [
+   "宮城",
+   "みやぎ"
+  ],
+  [
+   "牛肉",
+   "ぎゅうにく"
+  ],
+  [
+   "豚肉",
+   "ぶたにく"
+  ],
+  [
+   "土地",
+   "とち"
+  ],
+  [
+   "家庭",
+   "かてい"
+  ],
+  [
+   "味",
+   "あじ"
+  ],
+  [
+   "縁側のみかんと猫",
+   "えんがわのみかんとねこ"
+  ],
+  [
+   "縁側のお茶の時間",
+   "えんがわのおちゃのじかん"
+  ],
+  [
+   "雪うさぎの耳の葉",
+   "ゆきうさぎのみみのは"
+  ],
+  [
+   "雪だるまと冬の朝",
+   "ゆきだるまとふゆのあさ"
+  ],
+  [
+   "こたつのみかん",
+   "こたつのみかん"
+  ],
+  [
+   "みかんの木の庭",
+   "みかんのきのにわ"
+  ],
+  [
+   "雪うさぎの縁側",
+   "ゆきうさぎのえんがわ"
+  ],
+  [
+   "縁側のひなた",
+   "えんがわのひなた"
+  ],
+  [
+   "みかん箱と猫",
+   "みかんばことねこ"
+  ],
+  [
+   "雪だるまの庭",
+   "ゆきだるまのにわ"
+  ],
+  [
+   "冬の朝の窓辺",
+   "ふゆのあさのまどべ"
+  ],
+  [
+   "時計の文字盤",
+   "とけいのもじばん"
+  ],
+  [
+   "雪だるまの鼻",
+   "ゆきだるまのはな"
+  ],
+  [
+   "間違い探し",
+   "まちがいさがし"
+  ],
+  [
+   "雪かきの道",
+   "ゆきかきのみち"
+  ],
+  [
+   "雪の玄関先",
+   "ゆきのげんかんさき"
+  ],
+  [
+   "麦わら帽子",
+   "むぎわらぼうし"
+  ],
+  [
+   "色えんぴつ",
+   "いろえんぴつ"
+  ],
+  [
+   "手ぶくろ",
+   "てぶくろ"
+  ],
+  [
+   "七味入れ",
+   "しちみいれ"
+  ],
+  [
+   "はし置き",
+   "はしおき"
+  ],
+  [
+   "赤とんぼ",
+   "あかとんぼ"
+  ],
+  [
+   "お月さま",
+   "おつきさま"
+  ],
+  [
+   "火ばさみ",
+   "ひばさみ"
+  ],
+  [
+   "赤いふた",
+   "あかいふた"
+  ],
+  [
+   "大学いも",
+   "だいがくいも"
+  ],
+  [
+   "茶わん",
+   "ちゃわん"
+  ],
+  [
+   "鉢植え",
+   "はちうえ"
+  ],
+  [
+   "丸ごと",
+   "まるごと"
+  ],
+  [
+   "通り道",
+   "とおりみち"
+  ],
+  [
+   "大丈夫",
+   "だいじょうぶ"
+  ],
+  [
+   "難しい",
+   "むずかしい"
+  ],
+  [
+   "段の上",
+   "だんのうえ"
+  ],
+  [
+   "雪の上",
+   "ゆきのうえ"
+  ],
+  [
+   "植木鉢",
+   "うえきばち"
+  ],
+  [
+   "花びん",
+   "かびん"
+  ],
+  [
+   "湯のみ",
+   "ゆのみ"
+  ],
+  [
+   "赤い実",
+   "あかいみ"
+  ],
+  [
+   "長いす",
+   "ながいす"
+  ],
+  [
+   "新そば",
+   "しんそば"
+  ],
+  [
+   "干し柿",
+   "ほしがき"
+  ],
+  [
+   "鉄びん",
+   "てつびん"
+  ],
+  [
+   "酉の市",
+   "とりのいち"
+  ],
+  [
+   "飛び石",
+   "とびいし"
+  ],
+  [
+   "掛け軸",
+   "かけじく"
+  ],
+  [
+   "切り株",
+   "きりかぶ"
+  ],
+  [
+   "石灯籠",
+   "いしどうろう"
+  ],
+  [
+   "少なく",
+   "すくなく"
+  ],
+  [
+   "向いて",
+   "むいて"
+  ],
+  [
+   "まん中",
+   "まんなか"
+  ],
+  [
+   "ゆで卵",
+   "ゆでたまご"
+  ],
+  [
+   "右はし",
+   "みぎはし"
+  ],
+  [
+   "茶色い",
+   "ちゃいろい"
+  ],
+  [
+   "花びら",
+   "はなびら"
+  ],
+  [
+   "土なべ",
+   "どなべ"
+  ],
+  [
+   "玉ねぎ",
+   "たまねぎ"
+  ],
+  [
+   "変わり",
+   "かわり"
+  ],
+  [
+   "落ち葉",
+   "おちば"
+  ],
+  [
+   "黄色い",
+   "きいろい"
+  ],
+  [
+   "大きく",
+   "おおきく"
+  ],
+  [
+   "舞って",
+   "まって"
+  ],
+  [
+   "葉っぱ",
+   "はっぱ"
+  ],
+  [
+   "魔法瓶",
+   "まほうびん"
+  ],
+  [
+   "小さな",
+   "ちいさな"
+  ],
+  [
+   "第1問",
+   "だいいちもん"
+  ],
+  [
+   "第2問",
+   "だいにもん"
+  ],
+  [
+   "第3問",
+   "だいさんもん"
+  ],
+  [
+   "第4問",
+   "だいよんもん"
+  ],
+  [
+   "第5問",
+   "だいごもん"
+  ],
+  [
+   "60秒",
+   "ろくじゅうびょう"
+  ],
+  [
+   "30秒",
+   "さんじゅうびょう"
+  ],
+  [
+   "10秒",
+   "じゅうびょう"
+  ],
+  [
+   "小さく",
+   "ちいさく"
+  ],
+  [
+   "取っ手",
+   "とって"
+  ],
+  [
+   "木の札",
+   "きのふだ"
+  ],
+  [
+   "大きな",
+   "おおきな"
+  ],
+  [
+   "前かけ",
+   "まえかけ"
+  ],
+  [
+   "時計",
+   "とけい"
+  ],
+  [
+   "お盆",
+   "おぼん"
+  ],
+  [
+   "栄養",
+   "えいよう"
+  ],
+  [
+   "登録",
+   "とうろく"
+  ],
+  [
+   "毎朝",
+   "まいあさ"
+  ],
+  [
+   "動画",
+   "どうが"
+  ],
+  [
+   "画面",
+   "がめん"
+  ],
+  [
+   "挑戦",
+   "ちょうせん"
+  ],
+  [
+   "違い",
+   "ちがい"
+  ],
+  [
+   "1羽",
+   "いちわ"
+  ],
+  [
+   "小鳥",
+   "ことり"
+  ],
+  [
+   "左の",
+   "ひだりの"
+  ],
+  [
+   "急須",
+   "きゅうす"
+  ],
+  [
+   "屋根",
+   "やね"
+  ],
+  [
+   "小屋",
+   "こや"
+  ],
+  [
+   "縁側",
+   "えんがわ"
+  ],
+  [
+   "朝市",
+   "あさいち"
+  ],
+  [
+   "お皿",
+   "おさら"
+  ],
+  [
+   "1匹",
+   "いっぴき"
+  ],
+  [
+   "お茶",
+   "おちゃ"
+  ],
+  [
+   "金色",
+   "きんいろ"
+  ],
+  [
+   "熊手",
+   "くまで"
+  ],
+  [
+   "飾り",
+   "かざり"
+  ],
+  [
+   "白く",
+   "しろく"
+  ],
+  [
+   "掛け",
+   "かけ"
+  ],
+  [
+   "漬物",
+   "つけもの"
+  ],
+  [
+   "軍手",
+   "ぐんて"
+  ],
+  [
+   "茶色",
+   "ちゃいろ"
+  ],
+  [
+   "風鈴",
+   "ふうりん"
+  ],
+  [
+   "黒板",
+   "こくばん"
+  ],
+  [
+   "反対",
+   "はんたい"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "黄色",
+   "きいろ"
+  ],
+  [
+   "赤く",
+   "あかく"
+  ],
+  [
+   "青く",
+   "あおく"
+  ],
+  [
+   "赤い",
+   "あかい"
+  ],
+  [
+   "筆箱",
+   "ふでばこ"
+  ],
+  [
+   "木箱",
+   "きばこ"
+  ],
+  [
+   "湯気",
+   "ゆげ"
+  ],
+  [
+   "紙袋",
+   "かみぶくろ"
+  ],
+  [
+   "消え",
+   "きえ"
+  ],
+  [
+   "付き",
+   "つき"
+  ],
+  [
+   "水筒",
+   "すいとう"
+  ],
+  [
+   "帽子",
+   "ぼうし"
+  ],
+  [
+   "上級",
+   "じょうきゅう"
+  ],
+  [
+   "中級",
+   "ちゅうきゅう"
+  ],
+  [
+   "初級",
+   "しょきゅう"
+  ],
+  [
+   "黒い",
+   "くろい"
+  ],
+  [
+   "一本",
+   "いっぽん"
+  ],
+  [
+   "高く",
+   "たかく"
+  ],
+  [
+   "短く",
+   "みじかく"
+  ],
+  [
+   "青い",
+   "あおい"
+  ],
+  [
+   "白い",
+   "しろい"
+  ],
+  [
+   "後半",
+   "こうはん"
+  ],
+  [
+   "最後",
+   "さいご"
+  ],
+  [
+   "難問",
+   "なんもん"
+  ],
+  [
+   "問題",
+   "もんだい"
+  ],
+  [
+   "答え",
+   "こたえ"
+  ],
+  [
+   "少し",
+   "すこし"
+  ],
+  [
+   "大根",
+   "だいこん"
+  ],
+  [
+   "小皿",
+   "こざら"
+  ],
+  [
+   "向き",
+   "むき"
+  ],
+  [
+   "一つ",
+   "ひとつ"
+  ],
+  [
+   "模様",
+   "もよう"
+  ],
+  [
+   "下駄",
+   "げた"
+  ],
+  [
+   "金属",
+   "きんぞく"
+  ],
+  [
+   "無く",
+   "なく"
+  ],
+  [
+   "増え",
+   "ふえ"
+  ],
+  [
+   "向い",
+   "むい"
+  ],
+  [
+   "金具",
+   "かなぐ"
+  ],
+  [
+   "一枚",
+   "いちまい"
+  ],
+  [
+   "真上",
+   "まうえ"
+  ],
+  [
+   "屋台",
+   "やたい"
+  ],
+  [
+   "銭湯",
+   "せんとう"
+  ],
+  [
+   "今日",
+   "きょう"
+  ],
+  [
+   "一緒",
+   "いっしょ"
+  ],
+  [
+   "山門",
+   "さんもん"
+  ],
+  [
+   "川辺",
+   "かわべ"
+  ],
+  [
+   "お面",
+   "おめん"
+  ],
+  [
+   "銀色",
+   "ぎんいろ"
+  ],
+  [
+   "丸い",
+   "まるい"
+  ],
+  [
+   "皮",
+   "かわ"
+  ],
+  [
+   "石",
+   "いし"
+  ],
+  [
+   "木",
+   "き"
+  ],
+  [
+   "庭",
+   "にわ"
+  ],
+  [
+   "猫",
+   "ねこ"
+  ],
+  [
+   "実",
+   "み"
+  ],
+  [
+   "番",
+   "ばん"
+  ],
+  [
+   "柱",
+   "はしら"
+  ],
+  [
+   "棚",
+   "たな"
+  ],
+  [
+   "鈴",
+   "すず"
+  ],
+  [
+   "菊",
+   "きく"
+  ],
+  [
+   "器",
+   "うつわ"
+  ],
+  [
+   "花",
+   "はな"
+  ],
+  [
+   "前",
+   "まえ"
+  ],
+  [
+   "笠",
+   "かさ"
+  ],
+  [
+   "鉢",
+   "はち"
+  ],
+  [
+   "柿",
+   "かき"
+  ],
+  [
+   "台",
+   "だい"
+  ],
+  [
+   "軒",
+   "のき"
+  ],
+  [
+   "鐘",
+   "かね"
+  ],
+  [
+   "竹",
+   "たけ"
+  ],
+  [
+   "枝",
+   "えだ"
+  ],
+  [
+   "絵",
+   "え"
+  ],
+  [
+   "上",
+   "うえ"
+  ],
+  [
+   "緑",
+   "みどり"
+  ],
+  [
+   "机",
+   "つくえ"
+  ],
+  [
+   "数",
+   "かず"
+  ],
+  [
+   "形",
+   "かたち"
+  ],
+  [
+   "先",
+   "さき"
+  ],
+  [
+   "下",
+   "した"
+  ],
+  [
+   "輪",
+   "わ"
+  ],
+  [
+   "針",
+   "はり"
+  ],
+  [
+   "牛",
+   "うし"
+  ],
+  [
+   "左",
+   "ひだり"
+  ],
+  [
+   "右",
+   "みぎ"
+  ],
+  [
+   "頭",
+   "あたま"
+  ],
+  [
+   "刃",
+   "は"
+  ],
+  [
+   "量",
+   "りょう"
+  ],
+  [
+   "苗",
+   "なえ"
+  ],
+  [
+   "丸",
+   "まる"
+  ],
+  [
+   "桶",
+   "おけ"
+  ],
+  [
+   "火",
+   "ひ"
+  ],
+  [
+   "葉",
+   "は"
+  ],
+  [
+   "色",
+   "いろ"
+  ],
+  [
+   "鍋",
+   "なべ"
+  ],
+  [
+   "畑",
+   "はたけ"
+  ],
+  [
+   "壁",
+   "かべ"
+  ],
+  [
+   "紋",
+   "もん"
+  ],
+  [
+   "星",
+   "ほし"
+  ],
+  [
+   "銀",
+   "ぎん"
+  ],
+  [
+   "銭湯",
+   "せんとう"
+  ],
+  [
+   "富士山",
+   "ふじさん"
+  ],
+  [
+   "湯船",
+   "ゆぶね"
+  ],
+  [
+   "脱衣所",
+   "だついじょ"
+  ],
+  [
+   "下駄箱",
+   "げたばこ"
+  ],
+  [
+   "洗い場",
+   "あらいば"
+  ],
+  [
+   "番台",
+   "ばんだい"
+  ],
+  [
+   "牛乳",
+   "ぎゅうにゅう"
+  ],
+  [
+   "玄関",
+   "げんかん"
+  ],
+  [
+   "壁",
+   "かべ"
+  ],
+  [
+   "絵",
+   "え"
+  ],
+  [
+   "東京",
+   "とうきょう"
+  ],
+  [
+   "描か",
+   "えがか"
+  ],
+  [
+   "大きな",
+   "おおきな"
+  ],
+  [
+   "多い",
+   "おおい"
+  ],
+  [
+   "百年以上前",
+   "ひゃくねんいじょうまえ"
+  ],
+  [
+   "100年以上前",
+   "ひゃくねんいじょうまえ"
+  ],
+  [
+   "真ん中",
+   "まんなか"
+  ],
+  [
+   "真中",
+   "まんなか"
+  ],
+  [
+   "線",
+   "せん"
+  ],
+  [
+   "餅つき",
+   "もちつき"
+  ],
+  [
+   "餅",
+   "もち"
+  ],
+  [
+   "結果発表",
+   "けっかはっぴょう"
+  ],
+  [
+   "お椀",
+   "おわん"
+  ],
+  [
+   "椀",
+   "わん"
+  ],
+  [
+   "土間",
+   "どま"
+  ],
+  [
+   "軒下",
+   "のきした"
+  ],
+  [
+   "道具だな",
+   "どうぐだな"
+  ],
+  [
+   "もち米",
+   "もちごめ"
+  ],
+  [
+   "ご存じ",
+   "ごぞんじ"
+  ],
+  [
+   "強い",
+   "つよい"
+  ],
+  [
+   "釜",
+   "かま"
+  ],
+  [
+   "土のつぼ",
+   "つちのつぼ"
+  ],
+  [
+   "大根おろし",
+   "だいこんおろし"
+  ],
+  [
+   "ひしゃく",
+   "ひしゃく"
+  ],
+  [
+   "本",
+   "ほん"
+  ],
+  [
+   "きな粉",
+   "きなこ"
+  ],
+  [
+   "紫",
+   "むらさき"
+  ],
+  [
+   "すずめ",
+   "すずめ"
+  ]
+ ],
+ "voice_override": {
+  "u1": "ここでひとやすみ。こよみせんせいの、きせつのおはなしです。",
+  "e1": "これで、ごもんめまで、おしまいです。",
+  "e2": "じゅうごこの、ちがい、いくつ、みつかりましたか。けっかはっぴょうです。",
+  "e3": "チャンネルとうろくとベルで、まいあさはちじはんに、もんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。",
+  "c_comment": "みつかったかずを、あとでコメントでおしえてくださいね。",
+  "s_intro": "うえとしたのえで、ちがいがみっつあります。みつけられますか。",
+  "s_end": "いくつみつかったか、コメントでおしえてくださいね。ひだりしたから、つづきもどうぞ。",
+  "q1_go": "みぎのえのちがいを、みっつさがしてください。どうぞ。",
+  "q2_go": "では、にもんめ。どうぞ。",
+  "q3_go": "つづいて、さんもんめ。どうぞ。",
+  "q4_go": "よんもんめです。じっくりどうぞ。",
+  "q5_go": "さいごの、ごもんめ、なんもんです。どうぞ。",
+  "e4": "ほかにも、いろいろな、まちがいさがしがあります。もっとむずかしいもんだいに、ちょうせんしたいかたは、がめんのどうがを、クリックしてくださいね。",
+  "op": "ひなたぼっこの、まちがいさがし、ぜんごもん。",
+  "op2": "さいごは、なんもん。",
+  "u2": "ほしがきの、ひょうめんに、しろいこなが、ふくことを、ごぞんじですか？",
+  "u3": "あれは、カビではなく、かきの、あまみが、そとにでてきたものと、いわれています。",
+  "u4": "しろいこなは、あまみが、でてきたしるし。ひなたで、ゆっくりそだつ、あじですね。",
+  "q1_card": "いちもんめ、やさしいもんだい。えんがわの、ねこです。",
+  "q2_card": "にもんめ、しょきゅう。のきしたの、ほしがきです。",
+  "q3_card": "さんもんめ、しょきゅう。ひなたの、ねこです。",
+  "q4_card": "よんもんめ、ちゅうきゅう。ひばちの、まわりです。",
+  "q5_card": "ごもんめ、じょうきゅう。ひるねの、ねこです。",
+  "q1_ans1": "ひだりうえの、かごが、なくなりました。",
+  "q1_ans2": "みぎの、おけが、あおく、なりました。",
+  "q1_ans3": "ひだりしたの、けいとだまが、みどりに、なりました。",
+  "q2_ans1": "ひだりうえの、すばこが、なくなりました。",
+  "q2_ans2": "みぎしたの、こしかけが、きばこに、かわりました。",
+  "q2_ans3": "みぎうえの、てぬぐいが、みどりに、なりました。",
+  "q3_ans1": "ひだりしたの、えさのうつわが、なくなりました。",
+  "q3_ans2": "みぎの、ひざかけが、あおく、なりました。",
+  "q3_ans3": "ひだりうえの、かびんが、つぼに、かわりました。",
+  "q4_ans1": "ひだりうえの、ほしがきが、よっつに、へりました。",
+  "q4_ans2": "みぎの、ふろしきの、もようが、かわりました。",
+  "q4_ans3": "ひだりしたの、ゆたんぽが、あおく、なりました。",
+  "q5_ans1": "ひだりうえの、ひょうたんが、なくなりました。",
+  "q5_ans2": "みぎの、ぼうしが、みどりに、なりました。",
+  "q5_ans3": "ひだりしたの、おせんべいが、みっつから、ふたつに、へりました。"
+ },
+ "voice": {
+  "provider": "fish",
+  "reference_id": "63819275ce38440ea245ca988abf976e",
+  "model": "s1",
+  "speed": 0.88,
+  "credit": "音声：Fish Audio（AIで合成した音声です）"
+ },
+ "images": {
+  "model": "gemini-3-pro-image",
+  "size": "2K",
+  "aspect": "4:5",
+  "style": "A Japanese picture-book illustration in watercolor, but with BOLD, THICK, DARK ink outlines around every object (like a clear picture book for seniors), and CLEAR, SATURATED colors (not pale). Bright, clean background. Natural, hand-drawn, slightly rounded shapes; not geometric, not flat vector, not photorealistic. CLOSE-UP composition (not a wide landscape): the scene is seen from close, filling the picture. PORTRAIT-ISH composition, about 8:9. The painting fills the entire canvas edge to edge: no white border. No people. Absolutely no text, letters, numbers, logos or symbols anywhere. The MAIN SUBJECT named in the scene is drawn LARGE in the center of the picture. Around it, only a few other objects, each clearly separated with space around it, fully visible.\n",
+  "keep_alt": " Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text.",
+  "keep_remove": " Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object.",
+  "batch": true,
+  "neutral_target": 1.4
+ },
+ "questions": [
+  {
+   "q": 1,
+   "scene": "縁側の猫と座布団",
+   "level": "やさしい",
+   "go": "右の絵の違いを、3つ探してください。どうぞ。",
+   "prompt": "Scene: close-up of a sunny winter engawa (Japanese wooden veranda) in bright warm daylight: plain shoji screens behind, a wooden floor, a garden edge. CENTER, LARGE (main subject): a tabby cat sitting relaxed in a loaf posture on a plain flat indigo zabuton cushion on the engawa floor, eyes half closed, basking in the sun. A string of dried persimmons hangs at the upper right from the eave. Winter only: no Christmas, New Year's Eve or New Year decorations (no kagami-mochi, no shimenawa, no kadomatsu), no yuzu, no summer items (no wind chime, no fan). Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the floor, a shelf, a railing or the ground, or hangs from a hook; nothing floats. Each listed object is about one twelfth of the picture width, with plenty of empty space around it. No letters, labels, numbers or writing anywhere (every cloth, paper, tag and bag is plain and blank). No people, no hands. Dried persimmons are a muted brown-orange, not bright red. Do not use much red: keep the light natural bright daylight-white and the whites ordinary white. Objects: (upper left, hanging from a hook on the eave) a small round plain bamboo basket; (upper right, hanging from the eave) a string of five small dried persimmons; (middle right, on the floor) a small round wooden bucket; (lower left, on the floor) a small cream ball of yarn resting in a small round woven basket; (lower right, on the floor) a small clay charcoal brazier (hibachi) with no smoke.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "かごがない",
+     "line": "左上のかごが、なくなりました。",
+     "box": [
+      85,
+      0,
+      500,
+      480
+     ],
+     "object_w": 355,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "おけが青",
+     "line": "右のおけが、青くなりました。",
+     "box": [
+      1400,
+      1030,
+      1750,
+      1310
+     ],
+     "object_w": 297,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "毛糸玉が緑",
+     "line": "左下の毛糸玉が、緑になりました。",
+     "box": [
+      215,
+      1610,
+      435,
+      1795
+     ],
+     "object_w": 168,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small round bamboo basket hanging from the hook at the upper left is gone (show the plain eave and wall; the empty hook stays); (b) the small round wooden bucket on the floor at the middle right becomes light blue (all of its wood painted blue, same shape); (c) the cream ball of yarn in the small basket at the lower left becomes green (the yarn painted green, the basket unchanged).",
+   "edit_prompts": {}
+  },
+  {
+   "q": 2,
+   "scene": "軒下の干し柿",
+   "level": "初級",
+   "go": "では、2問目。どうぞ。",
+   "prompt": "Scene: close-up of a winter engawa corner under the eave in bright sunlight, plain wooden wall behind. CENTER, LARGE (main subject): a big wooden drying pole under the eave with many strings of orange dried persimmons hanging down like a curtain, soft winter sun on them. Winter only: no Christmas, New Year's Eve or New Year decorations (no kagami-mochi, no shimenawa, no kadomatsu), no yuzu, no summer items (no wind chime, no fan). Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the floor, a shelf, a railing or the ground, or hangs from a hook; nothing floats. Each listed object is about one sixteenth of the picture width, with space around it. No letters, labels, numbers or writing anywhere (every cloth, paper, tag and bag is plain and blank). No people, no hands. Dried persimmons are a muted brown-orange, not bright red. Do not use much red: keep the light natural bright daylight-white and the whites ordinary white. Objects: (upper left, on the wall) a small wooden birdhouse; (upper right, hanging over the wooden railing) a small folded plain cream cotton hand towel; (middle left, on the floor) a small metal dustpan with a short handle pointing to the left; (middle right, on the floor) a small clay charcoal brazier; (lower left, on the floor) a small neat stack of firewood; (lower right, on the floor, beside the engawa) a small round wooden stool.",
+   "answers_intro": "答えです。",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "巣箱がない",
+     "line": "左上の巣箱が、なくなりました。",
+     "box": [
+      50,
+      215,
+      330,
+      535
+     ],
+     "object_w": 260,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "入れ替え",
+     "label": "腰かけが木箱に",
+     "line": "右下の腰かけが、木箱に変わりました。",
+     "box": [
+      1220,
+      1640,
+      1720,
+      2060
+     ],
+     "object_w": 330,
+     "src": "1",
+     "context": "縁側の端に置く腰かけの代わりに、木箱が置いてあるのは自然（同じ場所・同じ置かれ方）"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "手ぬぐいが緑",
+     "line": "右上の手ぬぐいが、緑になりました。",
+     "box": [
+      1480,
+      720,
+      1710,
+      1060
+     ],
+     "object_w": 190,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small wooden birdhouse on the wall at the upper left is gone (show the plain wooden wall boards, no birdhouse, no leftover outline or shadow); (b) the small folded cream hand towel hanging over the railing at the upper right becomes light green (the towel painted green); (c) the small round wooden stool on the floor at the lower right is replaced by a small plain wooden crate of about the same size in the same place (no part of the stool remains).",
+   "edit_prompts": {},
+   "retries": {}
+  },
+  {
+   "q": 3,
+   "scene": "ひなたの猫",
+   "level": "初級",
+   "go": "続いて、3問目。どうぞ。",
+   "prompt": "Scene: close-up of a sunny winter engawa in bright daylight, plain shoji screens and a short wooden wall behind. CENTER, LARGE (main subject): a tabby cat sitting upright and calm on the wooden engawa floor, facing the garden, in a warm sunbeam. Winter only: no Christmas, New Year's Eve or New Year decorations (no kagami-mochi, no shimenawa, no kadomatsu), no yuzu, no summer items (no wind chime, no fan). Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the floor, a shelf, a railing or the ground, or hangs from a hook; nothing floats. Each listed object is about one sixteenth of the picture width, with space around it. No letters, labels, numbers or writing anywhere (every cloth, paper, tag and bag is plain and blank). No people, no hands. Dried persimmons are a muted brown-orange, not bright red. Do not use much red: keep the light natural bright daylight-white and the whites ordinary white. Objects: (upper left, on a small wooden wall shelf) a small round plain white ceramic vase with a green sprig; (upper right, hanging from the eave) a string of three small dried persimmons; (middle right, on the floor) a small folded plain cream wool lap blanket; (lower left, on the floor) a small plain round ceramic cat food bowl; (lower right, on the floor) a small clay charcoal brazier.",
+   "answers_intro": "答えです。",
+   "retries": {},
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "えさ入れがない",
+     "line": "左下のえさの器が、なくなりました。",
+     "box": [
+      200,
+      1650,
+      520,
+      1880
+     ],
+     "object_w": 280,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "ひざ掛けが青",
+     "line": "右のひざ掛けが、青くなりました。",
+     "box": [
+      1210,
+      1170,
+      1790,
+      1430
+     ],
+     "object_w": 520,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "入れ替え",
+     "label": "花瓶がつぼに",
+     "line": "左上の花瓶が、つぼに変わりました。",
+     "box": [
+      40,
+      100,
+      420,
+      560
+     ],
+     "object_w": 300,
+     "src": "1",
+     "context": "縁側の飾り棚の上。花瓶でも、ふたつきのつぼでも自然（同じ場所・同じ置かれ方）"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small round ceramic cat food bowl on the floor at the lower left is gone (show the plain wooden floor, no bowl, no shadow, no ring); (b) the folded cream wool lap blanket on the floor at the middle right becomes light blue (the blanket painted blue); (c) the small white ceramic vase with the green sprig on the shelf at the upper left is replaced by a small ceramic lidded jar of about the same size in the same place (no part of the vase remains).",
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. The change must be clearly visible. Do not move any object. Change: the tabby cat sitting on the snowy ground at the lower left is gone (show plain snowy ground, no cat, no leftover outline, shadow or paw prints)."
+   }
+  },
+  {
+   "q": 4,
+   "scene": "火鉢のまわり",
+   "level": "中級",
+   "go": "4問目です。じっくりどうぞ。",
+   "prompt": "Scene: close-up of a winter engawa corner in bright daylight, plain wooden wall and shoji behind. CENTER, LARGE (main subject): a big round clay charcoal brazier (hibachi) with a soft glow, on the wooden floor, with a plain flat cushion beside it. Winter only: no Christmas, New Year's Eve or New Year decorations (no kagami-mochi, no shimenawa, no kadomatsu), no yuzu, no summer items (no wind chime, no fan). Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the floor, a shelf, a railing or the ground, or hangs from a hook; nothing floats. Each listed object is about one twentieth of the picture width, SMALL. No letters, labels, numbers or writing anywhere (every cloth, paper, tag and bag is plain and blank). No people, no hands. Dried persimmons are a muted brown-orange, not bright red. Do not use much red: keep the light natural bright daylight-white and the whites ordinary white. Objects: (upper left, hanging from the eave) a string of four small dried persimmons; (upper right, on a small wall shelf) a small plain white ceramic dish; (middle right, on the floor) a small cloth bundle wrapped in a plain blue-and-white checkered furoshiki cloth with a knot on top; (middle left, on the floor) a small round wooden stool; (lower left, on the floor) a small cream ceramic hot-water bottle (yutanpo); (lower right, on the floor) a small bamboo basket of firewood.",
+   "answers_intro": "答えです。",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "数",
+     "label": "干し柿が4つに",
+     "line": "左上の干し柿が、4つに減りました。",
+     "box": [
+      250,
+      670,
+      410,
+      860
+     ],
+     "object_w": 115,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "模様",
+     "label": "ふろしきの模様",
+     "line": "右のふろしきの模様が、変わりました。",
+     "box": [
+      1340,
+      925,
+      1770,
+      1265
+     ],
+     "object_w": 400,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "湯たんぽが青",
+     "line": "左下の湯たんぽが、青くなりました。",
+     "box": [
+      185,
+      1700,
+      640,
+      2030
+     ],
+     "object_w": 420,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the string of five dried persimmons hanging at the upper left has only four persimmons now (the lowest one is gone); (b) the checkered furoshiki cloth bundle on the floor at the middle right now has a plain pattern of small round polka dots instead of checks (same shape, same blue-and-white colors); (c) the cream ceramic hot-water bottle on the floor at the lower left becomes light blue (the whole bottle painted blue, same shape).",
+   "edit_prompts": {},
+   "retries": {}
+  },
+  {
+   "q": 5,
+   "scene": "ひるねの猫",
+   "level": "上級",
+   "go": "最後の5問目、難問です。どうぞ。",
+   "prompt": "Scene: a WIDE, DISTANT view of a whole sunny winter engawa room in bright daylight, seen from far back so that the long wooden floor, the shoji screens, the beams and a little garden are all visible, with lots of floor and wall space. CENTER (main subject, medium size): a tabby cat sleeping curled up in a round shape on a plain flat indigo zabuton cushion on the wooden floor, in a warm sunbeam. Winter only: no Christmas, New Year's Eve or New Year decorations (no kagami-mochi, no shimenawa, no kadomatsu), no yuzu, no summer items (no wind chime, no fan). Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the floor, a shelf, a railing or the ground, or hangs from a hook; nothing floats. Each listed object is about one thirty-fifth of the picture width, MINIATURE and very small compared with the room, with plenty of empty space around it. No letters, labels, numbers or writing anywhere (every cloth, paper, tag and bag is plain and blank). No people, no hands. Dried persimmons are a muted brown-orange, not bright red. Do not use much red: keep the light natural bright daylight-white and the whites ordinary white. Objects: (upper left, hanging from a hook on the eave) a tiny plain dried gourd (hyotan); (upper right, hanging from the eave) a tiny string of three dried persimmons; (middle right, hanging from a wooden peg on the wall) a tiny navy knitted wool hat; (middle left, on the floor) a tiny wooden stool; (lower left, on a small low wooden tray on the floor) a tiny plain white plate holding three round rice crackers; (lower right, on the floor) a tiny clay charcoal brazier.",
+   "answers_intro": "答えです。",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "ひょうたんがない",
+     "line": "左上のひょうたんが、なくなりました。",
+     "box": [
+      130,
+      140,
+      320,
+      390
+     ],
+     "object_w": 146,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "帽子が緑",
+     "line": "右の毛糸の帽子が、緑になりました。",
+     "box": [
+      1520,
+      640,
+      1800,
+      1020
+     ],
+     "object_w": 190,
+     "src": "2"
+    },
+    {
+     "id": 3,
+     "type": "数",
+     "label": "おせんべいが2枚に",
+     "line": "左下のおせんべいが、2枚に減りました。",
+     "box": [
+      300,
+      1640,
+      560,
+      1810
+     ],
+     "object_w": 90,
+     "src": "1"
+    }
+   ],
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny dried gourd hanging from the hook at the upper left is gone (show the plain eave and the sky; the empty hook and string stay); (b) the plain white plate on the low tray at the lower left holds two round rice crackers now instead of three (one cracker is gone, the other two stay in place).",
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. The change must be clearly visible. Do not move any object. Change: the tiny teacup on the saucer on the left shelf becomes blue (the cup painted blue, the saucer unchanged)."
+   },
+   "retries": {
+    "2": {
+     "crop": [
+      1500,
+      620,
+      1836,
+      1040
+     ],
+     "aspect": "4:5",
+     "prompt": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. Change: the navy knitted wool hat hanging from the wooden peg becomes GREEN and about 30 percent smaller (a smaller green knitted hat, still hanging from the same peg at the same place). The wooden rail, pegs and wall stay exactly the same. No text."
+    }
+   }
+  }
+ ],
+ "thumbnail": {
+  "question": 1,
+  "big_text": "冬の間違いさがし",
+  "highlight": "間違いさがし",
+  "highlight_color": [
+   255,
+   214,
+   0
+  ],
+  "big_color": [
+   255,
+   255,
+   255
+  ],
+  "band_color": [
+   25,
+   35,
+   70
+  ],
+  "big_size": 132,
+  "sub_text": "3つ見つけられる？全5問",
+  "badges": [
+   [
+    "初級〜上級",
+    [
+     176,
+     62,
+     52
+    ]
+   ]
+  ],
+  "circle_hint": false,
+  "note": "ab/ の3案を使う（thumb_band.py）"
+ },
+ "shorts": [
+  {
+   "question": 2,
+   "answer_gap": 3.3,
+   "note": "1本目：第2問 軒下の干し柿・初級",
+   "title": "シニアの間違い探し｜軒下の干し柿の1問 #脳トレ #頭の体操",
+   "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
+   "end_veil": [
+    {
+     "at": 0,
+     "lines": [
+      [
+       "いくつ見つかった？",
+       120,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "コメントで教えてね",
+       104,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": false
+    },
+    {
+     "at": 3.8,
+     "lines": [
+      [
+       "続きは長い動画で",
+       116,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "左下をクリック",
+       128,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "question": 4,
+   "answer_gap": 3.3,
+   "note": "2本目：第4問 火鉢のまわり・中級",
+   "title": "シニアの間違い探し｜火鉢のまわりの1問 #脳トレ #頭の体操",
+   "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
+   "end_veil": [
+    {
+     "at": 0,
+     "lines": [
+      [
+       "いくつ見つかった？",
+       120,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "コメントで教えてね",
+       104,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": false
+    },
+    {
+     "at": 3.8,
+     "lines": [
+      [
+       "続きは長い動画で",
+       116,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "左下をクリック",
+       128,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": true
+    }
+   ]
+  }
+ ],
+ "unchiku_source": "干し柿の白い粉は、柿の糖分が表面に出て固まったもので、カビではないと一般にいわれる（一般的な食の知識。効果をうたうものではない）。"
+}

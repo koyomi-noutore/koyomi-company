@@ -1,0 +1,104 @@
+{
+ "runs": [
+  {
+   "step": "絵",
+   "detail": "pictures batch base",
+   "sec": 35.4,
+   "at": "2026-11-25T08:03:27+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base 3 4 5",
+   "sec": 29.7,
+   "at": "2026-11-25T08:05:02+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base 3 5",
+   "sec": 33.3,
+   "at": "2026-11-25T08:07:08+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit:1 1 2 3 4 5",
+   "sec": 18.9,
+   "at": "2026-11-25T08:07:34+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit:1 1 2 3 4 5",
+   "sec": 30.6,
+   "at": "2026-11-25T08:08:08+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit:1 1 2 3 4 5",
+   "sec": 41.1,
+   "at": "2026-11-25T08:09:09+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit:1 2 4 5",
+   "sec": 11.0,
+   "at": "2026-11-25T08:10:15+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit:1 2 4 5",
+   "sec": 40.2,
+   "at": "2026-11-25T08:11:10+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit:1 2 4 5",
+   "sec": 38.1,
+   "at": "2026-11-25T08:12:03+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit:1 2 4 5",
+   "sec": 7.9,
+   "at": "2026-11-25T08:12:26+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base 5",
+   "sec": 5.6,
+   "at": "2026-11-25T08:12:32+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base 5",
+   "sec": 29.6,
+   "at": "2026-11-25T08:13:12+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit:1 4",
+   "sec": 31.5,
+   "at": "2026-11-25T08:14:50+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit:1 5",
+   "sec": 30.6,
+   "at": "2026-11-25T08:16:32+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures compose",
+   "sec": 47.8,
+   "at": "2026-11-25T08:17:25+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures compose",
+   "sec": 24.3,
+   "at": "2026-11-25T08:18:34+00:00"
+  }
+ ],
+ "total_sec_by_step": {
+  "絵": 455.6
+ },
+ "total_sec_all": 455.6
+}
