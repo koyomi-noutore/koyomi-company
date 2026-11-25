@@ -24,6 +24,7 @@ def font_w(size, weight="900Black"):
 
 
 TITLE = "ちがうのどーれだ？"
+VEIL_TXT = [TITLE, "見つけてみてね！"]          # 最初の画面（0:00＝サムネ）。文字数を減らして大きく（2026-11-25 CEO）。説明の2行は台紙の上の見出しにある
 
 
 def base(what, bg=None):
@@ -254,17 +255,17 @@ def mikan_frame(state, remain=None):
 
 
 # ---------- T.build に登録（流れ・声・音・こよみ先生・矢印は共通） ----------
-T.KINDS["easy"] = ({"think": 15, "veil": [TITLE, "一つだけ違う字があるよ。", "見つけてみてね！"]}, easy_frame, 1)
-T.KINDS["hard"] = ({"think": 20, "veil": [TITLE, "一つだけ違う字があるよ。", "見つけてみてね！"]}, hard_frame, 1)
-T.KINDS["mikan"] = ({"think": 15, "veil": [TITLE, "一つだけ違うみかんがあるよ。", "見つけてみてね！"]}, mikan_frame, 1)
+T.KINDS["easy"] = ({"think": 15, "veil": VEIL_TXT}, easy_frame, 1)
+T.KINDS["hard"] = ({"think": 20, "veil": VEIL_TXT}, hard_frame, 1)
+T.KINDS["mikan"] = ({"think": 15, "veil": VEIL_TXT}, mikan_frame, 1)
 T.LINES["easy"] = {"intro": ("違う漢字が、1つだけあります。どれでしょう？", "ちがうかんじが、ひとつだけあります。どれでしょう？"),
                    "ans": [("「季節」の『季』の中に、「李（すもも）」の『李』が、混ざっていました。", "きせつの、き、のなかに、すももの、り、が、まざっていました。")]}
 T.LINES["hard"] = {"intro": ("違う漢字が、1つだけあります。どれでしょう？", "ちがうかんじが、ひとつだけあります。どれでしょう？"),
                    "ans": [("「年末」の『末』の中に、「未来」の『未』が、混ざっていました。", "ねんまつの、まつ、のなかに、みらいの、み、が、まざっていました。")]}
 T.LINES["mikan"] = {"intro": ("違うみかんが、1つだけあります。どれでしょう？", "ちがうみかんが、ひとつだけあります。どれでしょう？"),
                     "ans": [("葉っぱが反対向きの、みかんでした。", "はっぱが、はんたいむきの、みかんでした。")]}
-T.KINDS["futsu"] = ({"think": 18, "veil": [TITLE, "一つだけ違う字があるよ。", "見つけてみてね！"]}, futsu_frame, 1)
-T.KINDS["mitten"] = ({"think": 15, "veil": [TITLE, "一つだけ違う手袋があるよ。", "見つけてみてね！"]}, mitten_frame, 1)
+T.KINDS["futsu"] = ({"think": 18, "veil": VEIL_TXT}, futsu_frame, 1)
+T.KINDS["mitten"] = ({"think": 15, "veil": VEIL_TXT}, mitten_frame, 1)
 T.LINES["futsu"] = {"intro": ("違う漢字が、1つだけあります。どれでしょう？", "ちがうかんじが、ひとつだけあります。どれでしょう？"),
                     "ans": [("「大小」の『大』の中に、「犬」の『犬』が、混ざっていました。", "だいしょうの、だい、のなかに、いぬの、いぬ、が、まざっていました。")]}
 T.LINES["mitten"] = {"intro": ("違う手袋が、1つだけあります。どれでしょう？", "ちがうてぶくろが、ひとつだけあります。どれでしょう？"),
@@ -289,7 +290,7 @@ def load_problem(path):
             if ch == cfg["odd"] and state:
                 circle(d, cx, cy, int(sz * 0.62))
         return im
-    T.KINDS[key] = ({"think": P["think"], "veil": [TITLE, "一つだけ違う字があるよ。", "見つけてみてね！"]}, frame, 1)
+    T.KINDS[key] = ({"think": P["think"], "veil": VEIL_TXT}, frame, 1)
     T.LINES[key] = {"intro": tuple(P["lines"]["intro"]), "ans": [tuple(x) for x in P["lines"]["ans"]]}
     T.PROBLEM_ID = key
     return key
@@ -338,8 +339,8 @@ def build(kind, out):
     def say(key, line, at=None):
         w, dur = T.voice(kind, key, line[1]); voices.append((w, (t if at is None else at) + 0.3, key, line)); return dur + 0.3
     d_intro = say("intro", L["intro"])
-    vl = [(s_, 96 if i < 2 else 72, (255, 255, 255) if i < 2 else T.ACCENT) for i, s_ in enumerate(cfg["veil"])]
-    seq.append((T.speaker(T.veil(frame(0), vl), "normal", L["intro"][0]), max(4.0, d_intro + 0.4))); t += seq[-1][1]
+    vl = T.intro_lines(cfg["veil"])     # 2026-11-25 CEO：文字を大きく・行間を広く。最初の画面は吹き出しを出さない（サムネ）
+    seq.append((T.speaker(T.veil(frame(0), vl, T.INTRO_GAP), "normal", None), max(4.0, d_intro + 0.4))); t += seq[-1][1]
     say("tap", T.TAP)
     for s_ in range(cfg["think"], 0, -1):
         seq.append((T.timer(T.speaker(frame(0), "think" if s_ < cfg["think"] - 3 else "smile", T.TAP[0]), s_), 1.0)); t += 1.0

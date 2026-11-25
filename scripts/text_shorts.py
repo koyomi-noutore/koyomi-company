@@ -61,18 +61,62 @@ def fit(d, s, size, maxw=800):
     return size
 
 
-def veil(im, lines):
-    """暗い幕＋大きな文字（行ごとに [文字, 大きさ, 色]）。"""
+def veil(im, lines, gap=1.35):
+    """暗い幕＋大きな文字（行ごとに [文字, 大きさ, 色]）。gap＝行の高さ（文字の大きさの何倍か）。"""
     v = Image.blend(im, Image.new("RGB", im.size, (0, 0, 0)), VEIL)
     d = ImageDraw.Draw(v)
-    total = sum(int(sz * 1.35) for _, sz, _ in lines)
+    total = sum(int(sz * gap) for _, sz, _ in lines)
     y = 900 - total // 2
     for s, sz, col in lines:
         sz = fit(d, s, sz)
-        y += int(sz * 1.35) // 2
+        y += int(sz * gap) // 2
         text_c(d, (W // 2, y), s, sz, col, stroke=6, stroke_fill=(0, 0, 0))
-        y += int(sz * 1.35) // 2
+        y += int(sz * gap) // 2
     return v
+
+
+INTRO_GAP = 1.5          # 最初の画面の行の高さ（2026-11-25 CEO：行間も広げる）
+INTRO_MAX, INTRO_CHARS, INTRO_HEIGHT = 170, 7, 1150   # 1行の大きさの上限・1行の字数の目安・全体の高さの上限
+
+
+def _split_line(s):
+    """長い行を、空白・読点・助詞の切れ目で2行に分ける（1行 INTRO_CHARS 字ぐらいまで）。"""
+    import re
+    s = s.strip()
+    if len(s.replace(" ", "")) <= INTRO_CHARS:
+        return [s.replace(" ", "")] if " " not in s.strip() else [s]
+    parts = [x for x in re.split(r"[ 　、]+", s) if x]
+    if len(parts) >= 2:
+        out, cur = [], ""
+        for x in parts:
+            if cur and len(cur) + len(x) > INTRO_CHARS:
+                out.append(cur); cur = x
+            else:
+                cur += x
+        return out + [cur]
+    mid = len(s) // 2
+    kana = lambda c: "\u3040" <= c <= "\u30ff"
+    cand = [i for i in range(1, len(s)) if kana(s[i - 1]) != kana(s[i]) and s[i - 1] not in "？！」』"] + [i + 1 for i, ch in enumerate(s[:-1]) if ch in "はがをにのでともや"]   # ひらがなと漢字の境目・助詞の後ろ
+    k = min(cand, key=lambda i: abs(i - mid)) if cand else mid
+    if abs(k - mid) > 2:
+        k = mid
+    return [s[:k], s[k:]]
+
+
+def intro_lines(texts, last_color=None):
+    """最初の画面（0:00＝サムネ）の文字を、文字数を減らして大きくする。texts＝入力の行。長い行は2行に分け、
+    1行ごとに幅800px に収まる最大の大きさ（上限170px）にする。最後の入力行は last_color（なければ ACCENT）、ほかは白。
+    全体が高すぎるときは、まとめて小さくする。"""
+    rows = []
+    for i, t in enumerate(texts):
+        for part in _split_line(t):
+            rows.append([part, (255, 255, 255) if i < len(texts) - 1 or len(texts) == 1 else (last_color or ACCENT)])
+    d = ImageDraw.Draw(Image.new("RGB", (10, 10)))
+    sizes = [fit(d, r[0], INTRO_MAX, 800) for r in rows]
+    tot = sum(sz * INTRO_GAP for sz in sizes)
+    if tot > INTRO_HEIGHT:
+        sizes = [int(sz * INTRO_HEIGHT / tot) for sz in sizes]
+    return [(r[0], sz, r[1]) for r, sz in zip(rows, sizes)]
 
 
 def header(d, title, sub=None):
@@ -93,7 +137,7 @@ def footer(d, remain=None, tap=True):
 # ---------- ① 都道府県の穴埋め ----------
 PREF = {"title": "「は行」で始まる 都道府県", "sub": "□にあてはまる漢字は？",
         "items": [("□□道", "北海道"), ("□庫県", "兵庫県"), ("□井県", "福井県")],
-        "think": 12, "veil": ["「は行」で始まる", "都道府県の □ に", "あてはまる漢字は？"]}
+        "think": 12, "veil": ["「は行」の都道府県", "□の漢字は？"]}
 
 
 def pref_frame(state, remain=None):
@@ -125,7 +169,7 @@ def pref_frame(state, remain=None):
 
 # ---------- ② ひらがな十字（真ん中に入る1文字） ----------
 CROSS = {"across": "さ□な", "down": "あ□り", "answer": "か", "think": 17,
-         "veil": ["真ん中の □ に", "あてはまる ひらがなは？", "たて・よこ とも 言葉になる"]}
+         "veil": ["真ん中の□に", "あてはまる", "ひらがなは？"]}
 
 
 def cross_frame(state, remain=None):
@@ -150,7 +194,7 @@ def cross_frame(state, remain=None):
 
 # ---------- ③ 漢字の間違い探し（左右、違いは2つ） ----------
 KANJI = {"word": "姫路城", "rows": 6, "diffs": {(2, 2): "域", (5, 1): "略"}, "think": 19,
-         "veil": ["左と右で", "ちがう漢字が 2つ", "見つけられますか？"]}
+         "veil": ["左右で違う", "漢字を", "2つ探そう"]}
 
 
 def kanji_frame(state, remain=None):
@@ -353,8 +397,8 @@ def build(kind, out):
 
     # 1. 暗い幕＋問題文（0:00 から出ている＝サムネ）
     d_intro = say("intro", L["intro"])
-    vl = [(s_, 96 if i < 2 else 72, (255, 255, 255) if i < 2 else ACCENT) for i, s_ in enumerate(cfg["veil"])]
-    seq.append((speaker(veil(frame(0), vl), "normal", L["intro"][0]), max(4.0, d_intro + 0.4))); t += seq[-1][1]
+    vl = intro_lines(cfg["veil"])     # 2026-11-25 CEO：文字を大きく・行間を広く。最初の画面は吹き出しを出さない（サムネ。こよみ先生は今の位置のまま）
+    seq.append((speaker(veil(frame(0), vl, INTRO_GAP), "normal", None), max(4.0, d_intro + 0.4))); t += seq[-1][1]
     # 2. 考える時間（右上にのこり秒数）。はじめに「わかったら2回タップ」
     say("tap", TAP)
     for s_ in range(cfg["think"], 0, -1):
