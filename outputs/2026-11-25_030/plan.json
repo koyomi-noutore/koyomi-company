@@ -1,0 +1,2099 @@
+{
+ "episode": "030",
+ "season": "冬",
+ "topics": [
+  "凧あげの河原"
+ ],
+ "note": "第30回（凧あげの河原・冬）。公開日は未定（schedule.md 2026-11-22）。偶数の回：サムネのみABテスト（タイトルはA）。人は描かない。凧は地面に置いて杭に糸でつなぐ（空に浮かせない）。",
+ "youtube": {
+  "title": "【間違い探し】凧あげの河原｜シニア・高齢者の脳トレ",
+  "description_file": "description.md",
+  "title_note": "32文字以内・【間違い探し】から。タイトルA（検索型）。3案は ab/titles.md",
+  "publish_plan": "未定（CEOが決める）"
+ },
+ "screens": {
+  "opening_title": "凧あげの河原の間違い探し　全5問",
+  "opening_sub": "最後は難問です",
+  "unchiku_header": "こよみ先生の 冬の小話",
+  "unchiku_slides": [
+   {
+    "until": 7,
+    "texts": [
+     [
+      "ひと休み",
+      960,
+      330,
+      130,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "こよみ先生の 季節のお話",
+      960,
+      520,
+      80,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 15,
+    "texts": [
+     [
+      "凧の むかしの名前",
+      960,
+      330,
+      115,
+      [
+       59,
+       47,
+       37
+      ],
+      6
+     ],
+     [
+      "知っていますか？",
+      960,
+      520,
+      100,
+      [
+       180,
+       70,
+       40
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 24,
+    "texts": [
+     [
+      "「いかのぼり」",
+      960,
+      330,
+      125,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "イカに似ていたから という説",
+      960,
+      520,
+      85,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 30,
+    "texts": [
+     [
+      "高く上がる凧は",
+      960,
+      330,
+      115,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "見上げるだけで 楽しい",
+      960,
+      520,
+      100,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   }
+  ],
+  "ending_titles": [
+   [
+    "15個",
+    "凧あげの名人"
+   ],
+   [
+    "11〜14個",
+    "河原の常連さん"
+   ],
+   [
+    "6〜10個",
+    "糸巻きの見習い"
+   ],
+   [
+    "0〜5個",
+    "のんびり見物さん"
+   ]
+  ],
+  "ending_note": "見物さんも、毎日ためせば 名人です",
+  "ending_next": "ほかの間違い探しも どうぞ",
+  "owl_layout": "bottom",
+  "endscreen_at": 9.0,
+  "rule_overlay": {
+   "text": "右の絵で 違いを3つ さがそう",
+   "sub": "1問 90秒",
+   "sec": 8.0
+  }
+ },
+ "timeline": {
+  "total": 613.5,
+  "opening": [
+   0.0,
+   6.5
+  ],
+  "rule": [
+   6.5,
+   6.5
+  ],
+  "q_start": {
+   "1": 6.5,
+   "2": 114.5,
+   "3": 222.5,
+   "4": 360.5,
+   "5": 468.5
+  },
+  "unchiku": [
+   330.5,
+   360.5
+  ],
+  "ending": [
+   576.5,
+   613.5
+  ],
+  "card": 3.0,
+  "solve": 90.0,
+  "answer": 15.0,
+  "hint_at": null,
+  "ten_at": 80.0,
+  "ans_first": 1.6,
+  "ans_step": 4.3,
+  "solve_calls": [
+   [
+    30,
+    "あと60秒です。"
+   ],
+   [
+    60,
+    "あと30秒です。"
+   ]
+  ],
+  "go_delay": 2.4
+ },
+ "lines": {
+  "opening": [
+   {
+    "id": "op",
+    "at": 0.0,
+    "text": "凧あげの間違い探し、全5問。",
+    "face": "smile",
+    "until": 4.2
+   },
+   {
+    "id": "op2",
+    "at": 4.2,
+    "text": "最後は難問です。",
+    "face": "wink",
+    "until": 6.5
+   }
+  ],
+  "rule": [],
+  "unchiku": [
+   {
+    "id": "u1",
+    "at": 0.0,
+    "text": "ここでひと休み。こよみ先生の季節のお話です。",
+    "face": "smile",
+    "until": 7.0
+   },
+   {
+    "id": "u2",
+    "at": 7.0,
+    "text": "凧のむかしの名前、知っていますか？",
+    "face": "think",
+    "until": 15.0
+   },
+   {
+    "id": "u3",
+    "at": 15.0,
+    "text": "「いかのぼり」と呼ばれ、形がイカのようだから、という説があります。",
+    "face": "surprise",
+    "until": 24.0
+   },
+   {
+    "id": "u4",
+    "at": 24.0,
+    "text": "高く上がる凧は、見上げるだけで楽しいですね。",
+    "face": "wink",
+    "until": 30.0
+   }
+  ],
+  "ending": [
+   {
+    "id": "e1",
+    "at": 0.0,
+    "text": "これで5問目まで、おしまいです。",
+    "face": "yay",
+    "until": 4.2
+   },
+   {
+    "id": "e2",
+    "at": 4.2,
+    "text": "15個の違い、いくつ見つかりましたか。結果発表です。",
+    "face": "smile",
+    "until": 10.8
+   },
+   {
+    "id": "e3",
+    "at": 10.8,
+    "text": "チャンネル登録とベルで、毎朝8時半に問題が届きます。毎日の頭の体操にどうぞ。",
+    "face": "smile",
+    "until": 21.0
+   },
+   {
+    "id": "e4",
+    "at": 21.0,
+    "text": "ほかにも、いろいろな間違い探しがあります。もっと難しい問題に挑戦したい方は、画面の動画をクリックしてくださいね。",
+    "face": "wink",
+    "until": 36.0
+   }
+  ],
+  "extra": [
+   {
+    "id": "c_comment",
+    "at": 237.5,
+    "text": "見つかった数を、あとでコメントで教えてくださいね。",
+    "face": "smile",
+    "until": 244.5
+   }
+  ]
+ },
+ "readings": [
+  [
+   "腰かけ",
+   "こしかけ"
+  ],
+  [
+   "雪見障子",
+   "ゆきみしょうじ"
+  ],
+  [
+   "露天風呂",
+   "ろてんぶろ"
+  ],
+  [
+   "雪見",
+   "ゆきみ"
+  ],
+  [
+   "障子",
+   "しょうじ"
+  ],
+  [
+   "縁台",
+   "えんだい"
+  ],
+  [
+   "湯上がり",
+   "ゆあがり"
+  ],
+  [
+   "雪だるま",
+   "ゆきだるま"
+  ],
+  [
+   "水差し",
+   "みずさし"
+  ],
+  [
+   "水色",
+   "みずいろ"
+  ],
+  [
+   "手ぬぐい",
+   "てぬぐい"
+  ],
+  [
+   "置物",
+   "おきもの"
+  ],
+  [
+   "雪景色",
+   "ゆきげしき"
+  ],
+  [
+   "景色",
+   "けしき"
+  ],
+  [
+   "部屋",
+   "へや"
+  ],
+  [
+   "座った",
+   "すわった"
+  ],
+  [
+   "上げる",
+   "あげる"
+  ],
+  [
+   "半分",
+   "はんぶん"
+  ],
+  [
+   "雪の庭",
+   "ゆきのにわ"
+  ],
+  [
+   "竹垣",
+   "たけがき"
+  ],
+  [
+   "2つ",
+   "ふたつ"
+  ],
+  [
+   "柄",
+   "え"
+  ],
+  [
+   "串",
+   "くし"
+  ],
+  [
+   "2本",
+   "にほん"
+  ],
+  [
+   "手前",
+   "てまえ"
+  ],
+  [
+   "結び目",
+   "むすびめ"
+  ],
+  [
+   "風呂敷",
+   "ふろしき"
+  ],
+  [
+   "反対向き",
+   "はんたいむき"
+  ],
+  [
+   "座る",
+   "すわる"
+  ],
+  [
+   "重ね",
+   "かさね"
+  ],
+  [
+   "減り",
+   "へり"
+  ],
+  [
+   "ひょうたん",
+   "ひょうたん"
+  ],
+  [
+   "芋煮会",
+   "いもにかい"
+  ],
+  [
+   "芋煮",
+   "いもに"
+  ],
+  [
+   "川原",
+   "かわら"
+  ],
+  [
+   "里芋",
+   "さといも"
+  ],
+  [
+   "昼ごはん",
+   "ひるごはん"
+  ],
+  [
+   "夕方",
+   "ゆうがた"
+  ],
+  [
+   "秋景色",
+   "あきげしき"
+  ],
+  [
+   "山形",
+   "やまがた"
+  ],
+  [
+   "宮城",
+   "みやぎ"
+  ],
+  [
+   "牛肉",
+   "ぎゅうにく"
+  ],
+  [
+   "豚肉",
+   "ぶたにく"
+  ],
+  [
+   "土地",
+   "とち"
+  ],
+  [
+   "家庭",
+   "かてい"
+  ],
+  [
+   "味",
+   "あじ"
+  ],
+  [
+   "縁側のみかんと猫",
+   "えんがわのみかんとねこ"
+  ],
+  [
+   "縁側のお茶の時間",
+   "えんがわのおちゃのじかん"
+  ],
+  [
+   "雪うさぎの耳の葉",
+   "ゆきうさぎのみみのは"
+  ],
+  [
+   "雪だるまと冬の朝",
+   "ゆきだるまとふゆのあさ"
+  ],
+  [
+   "こたつのみかん",
+   "こたつのみかん"
+  ],
+  [
+   "みかんの木の庭",
+   "みかんのきのにわ"
+  ],
+  [
+   "雪うさぎの縁側",
+   "ゆきうさぎのえんがわ"
+  ],
+  [
+   "縁側のひなた",
+   "えんがわのひなた"
+  ],
+  [
+   "みかん箱と猫",
+   "みかんばことねこ"
+  ],
+  [
+   "雪だるまの庭",
+   "ゆきだるまのにわ"
+  ],
+  [
+   "冬の朝の窓辺",
+   "ふゆのあさのまどべ"
+  ],
+  [
+   "時計の文字盤",
+   "とけいのもじばん"
+  ],
+  [
+   "雪だるまの鼻",
+   "ゆきだるまのはな"
+  ],
+  [
+   "間違い探し",
+   "まちがいさがし"
+  ],
+  [
+   "雪かきの道",
+   "ゆきかきのみち"
+  ],
+  [
+   "雪の玄関先",
+   "ゆきのげんかんさき"
+  ],
+  [
+   "麦わら帽子",
+   "むぎわらぼうし"
+  ],
+  [
+   "色えんぴつ",
+   "いろえんぴつ"
+  ],
+  [
+   "手ぶくろ",
+   "てぶくろ"
+  ],
+  [
+   "七味入れ",
+   "しちみいれ"
+  ],
+  [
+   "はし置き",
+   "はしおき"
+  ],
+  [
+   "赤とんぼ",
+   "あかとんぼ"
+  ],
+  [
+   "お月さま",
+   "おつきさま"
+  ],
+  [
+   "火ばさみ",
+   "ひばさみ"
+  ],
+  [
+   "赤いふた",
+   "あかいふた"
+  ],
+  [
+   "大学いも",
+   "だいがくいも"
+  ],
+  [
+   "茶わん",
+   "ちゃわん"
+  ],
+  [
+   "鉢植え",
+   "はちうえ"
+  ],
+  [
+   "丸ごと",
+   "まるごと"
+  ],
+  [
+   "通り道",
+   "とおりみち"
+  ],
+  [
+   "大丈夫",
+   "だいじょうぶ"
+  ],
+  [
+   "難しい",
+   "むずかしい"
+  ],
+  [
+   "段の上",
+   "だんのうえ"
+  ],
+  [
+   "雪の上",
+   "ゆきのうえ"
+  ],
+  [
+   "植木鉢",
+   "うえきばち"
+  ],
+  [
+   "花びん",
+   "かびん"
+  ],
+  [
+   "湯のみ",
+   "ゆのみ"
+  ],
+  [
+   "赤い実",
+   "あかいみ"
+  ],
+  [
+   "長いす",
+   "ながいす"
+  ],
+  [
+   "新そば",
+   "しんそば"
+  ],
+  [
+   "干し柿",
+   "ほしがき"
+  ],
+  [
+   "鉄びん",
+   "てつびん"
+  ],
+  [
+   "酉の市",
+   "とりのいち"
+  ],
+  [
+   "飛び石",
+   "とびいし"
+  ],
+  [
+   "掛け軸",
+   "かけじく"
+  ],
+  [
+   "切り株",
+   "きりかぶ"
+  ],
+  [
+   "石灯籠",
+   "いしどうろう"
+  ],
+  [
+   "少なく",
+   "すくなく"
+  ],
+  [
+   "向いて",
+   "むいて"
+  ],
+  [
+   "まん中",
+   "まんなか"
+  ],
+  [
+   "ゆで卵",
+   "ゆでたまご"
+  ],
+  [
+   "右はし",
+   "みぎはし"
+  ],
+  [
+   "茶色い",
+   "ちゃいろい"
+  ],
+  [
+   "花びら",
+   "はなびら"
+  ],
+  [
+   "土なべ",
+   "どなべ"
+  ],
+  [
+   "玉ねぎ",
+   "たまねぎ"
+  ],
+  [
+   "変わり",
+   "かわり"
+  ],
+  [
+   "落ち葉",
+   "おちば"
+  ],
+  [
+   "黄色い",
+   "きいろい"
+  ],
+  [
+   "大きく",
+   "おおきく"
+  ],
+  [
+   "舞って",
+   "まって"
+  ],
+  [
+   "葉っぱ",
+   "はっぱ"
+  ],
+  [
+   "魔法瓶",
+   "まほうびん"
+  ],
+  [
+   "小さな",
+   "ちいさな"
+  ],
+  [
+   "第1問",
+   "だいいちもん"
+  ],
+  [
+   "第2問",
+   "だいにもん"
+  ],
+  [
+   "第3問",
+   "だいさんもん"
+  ],
+  [
+   "第4問",
+   "だいよんもん"
+  ],
+  [
+   "第5問",
+   "だいごもん"
+  ],
+  [
+   "60秒",
+   "ろくじゅうびょう"
+  ],
+  [
+   "30秒",
+   "さんじゅうびょう"
+  ],
+  [
+   "10秒",
+   "じゅうびょう"
+  ],
+  [
+   "小さく",
+   "ちいさく"
+  ],
+  [
+   "取っ手",
+   "とって"
+  ],
+  [
+   "木の札",
+   "きのふだ"
+  ],
+  [
+   "大きな",
+   "おおきな"
+  ],
+  [
+   "前かけ",
+   "まえかけ"
+  ],
+  [
+   "時計",
+   "とけい"
+  ],
+  [
+   "お盆",
+   "おぼん"
+  ],
+  [
+   "栄養",
+   "えいよう"
+  ],
+  [
+   "登録",
+   "とうろく"
+  ],
+  [
+   "毎朝",
+   "まいあさ"
+  ],
+  [
+   "動画",
+   "どうが"
+  ],
+  [
+   "画面",
+   "がめん"
+  ],
+  [
+   "挑戦",
+   "ちょうせん"
+  ],
+  [
+   "違い",
+   "ちがい"
+  ],
+  [
+   "1羽",
+   "いちわ"
+  ],
+  [
+   "小鳥",
+   "ことり"
+  ],
+  [
+   "左の",
+   "ひだりの"
+  ],
+  [
+   "急須",
+   "きゅうす"
+  ],
+  [
+   "屋根",
+   "やね"
+  ],
+  [
+   "小屋",
+   "こや"
+  ],
+  [
+   "縁側",
+   "えんがわ"
+  ],
+  [
+   "朝市",
+   "あさいち"
+  ],
+  [
+   "お皿",
+   "おさら"
+  ],
+  [
+   "1匹",
+   "いっぴき"
+  ],
+  [
+   "お茶",
+   "おちゃ"
+  ],
+  [
+   "金色",
+   "きんいろ"
+  ],
+  [
+   "熊手",
+   "くまで"
+  ],
+  [
+   "飾り",
+   "かざり"
+  ],
+  [
+   "白く",
+   "しろく"
+  ],
+  [
+   "掛け",
+   "かけ"
+  ],
+  [
+   "漬物",
+   "つけもの"
+  ],
+  [
+   "軍手",
+   "ぐんて"
+  ],
+  [
+   "茶色",
+   "ちゃいろ"
+  ],
+  [
+   "風鈴",
+   "ふうりん"
+  ],
+  [
+   "黒板",
+   "こくばん"
+  ],
+  [
+   "反対",
+   "はんたい"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "黄色",
+   "きいろ"
+  ],
+  [
+   "赤く",
+   "あかく"
+  ],
+  [
+   "青く",
+   "あおく"
+  ],
+  [
+   "赤い",
+   "あかい"
+  ],
+  [
+   "筆箱",
+   "ふでばこ"
+  ],
+  [
+   "木箱",
+   "きばこ"
+  ],
+  [
+   "湯気",
+   "ゆげ"
+  ],
+  [
+   "紙袋",
+   "かみぶくろ"
+  ],
+  [
+   "消え",
+   "きえ"
+  ],
+  [
+   "付き",
+   "つき"
+  ],
+  [
+   "水筒",
+   "すいとう"
+  ],
+  [
+   "帽子",
+   "ぼうし"
+  ],
+  [
+   "上級",
+   "じょうきゅう"
+  ],
+  [
+   "中級",
+   "ちゅうきゅう"
+  ],
+  [
+   "初級",
+   "しょきゅう"
+  ],
+  [
+   "黒い",
+   "くろい"
+  ],
+  [
+   "一本",
+   "いっぽん"
+  ],
+  [
+   "高く",
+   "たかく"
+  ],
+  [
+   "短く",
+   "みじかく"
+  ],
+  [
+   "青い",
+   "あおい"
+  ],
+  [
+   "白い",
+   "しろい"
+  ],
+  [
+   "後半",
+   "こうはん"
+  ],
+  [
+   "最後",
+   "さいご"
+  ],
+  [
+   "難問",
+   "なんもん"
+  ],
+  [
+   "問題",
+   "もんだい"
+  ],
+  [
+   "答え",
+   "こたえ"
+  ],
+  [
+   "少し",
+   "すこし"
+  ],
+  [
+   "大根",
+   "だいこん"
+  ],
+  [
+   "小皿",
+   "こざら"
+  ],
+  [
+   "向き",
+   "むき"
+  ],
+  [
+   "一つ",
+   "ひとつ"
+  ],
+  [
+   "模様",
+   "もよう"
+  ],
+  [
+   "下駄",
+   "げた"
+  ],
+  [
+   "金属",
+   "きんぞく"
+  ],
+  [
+   "無く",
+   "なく"
+  ],
+  [
+   "増え",
+   "ふえ"
+  ],
+  [
+   "向い",
+   "むい"
+  ],
+  [
+   "金具",
+   "かなぐ"
+  ],
+  [
+   "一枚",
+   "いちまい"
+  ],
+  [
+   "真上",
+   "まうえ"
+  ],
+  [
+   "屋台",
+   "やたい"
+  ],
+  [
+   "銭湯",
+   "せんとう"
+  ],
+  [
+   "今日",
+   "きょう"
+  ],
+  [
+   "一緒",
+   "いっしょ"
+  ],
+  [
+   "山門",
+   "さんもん"
+  ],
+  [
+   "川辺",
+   "かわべ"
+  ],
+  [
+   "お面",
+   "おめん"
+  ],
+  [
+   "銀色",
+   "ぎんいろ"
+  ],
+  [
+   "丸い",
+   "まるい"
+  ],
+  [
+   "皮",
+   "かわ"
+  ],
+  [
+   "石",
+   "いし"
+  ],
+  [
+   "木",
+   "き"
+  ],
+  [
+   "庭",
+   "にわ"
+  ],
+  [
+   "猫",
+   "ねこ"
+  ],
+  [
+   "実",
+   "み"
+  ],
+  [
+   "番",
+   "ばん"
+  ],
+  [
+   "柱",
+   "はしら"
+  ],
+  [
+   "棚",
+   "たな"
+  ],
+  [
+   "鈴",
+   "すず"
+  ],
+  [
+   "菊",
+   "きく"
+  ],
+  [
+   "器",
+   "うつわ"
+  ],
+  [
+   "花",
+   "はな"
+  ],
+  [
+   "前",
+   "まえ"
+  ],
+  [
+   "笠",
+   "かさ"
+  ],
+  [
+   "鉢",
+   "はち"
+  ],
+  [
+   "柿",
+   "かき"
+  ],
+  [
+   "台",
+   "だい"
+  ],
+  [
+   "軒",
+   "のき"
+  ],
+  [
+   "鐘",
+   "かね"
+  ],
+  [
+   "竹",
+   "たけ"
+  ],
+  [
+   "枝",
+   "えだ"
+  ],
+  [
+   "絵",
+   "え"
+  ],
+  [
+   "上",
+   "うえ"
+  ],
+  [
+   "緑",
+   "みどり"
+  ],
+  [
+   "机",
+   "つくえ"
+  ],
+  [
+   "数",
+   "かず"
+  ],
+  [
+   "形",
+   "かたち"
+  ],
+  [
+   "先",
+   "さき"
+  ],
+  [
+   "下",
+   "した"
+  ],
+  [
+   "輪",
+   "わ"
+  ],
+  [
+   "針",
+   "はり"
+  ],
+  [
+   "牛",
+   "うし"
+  ],
+  [
+   "左",
+   "ひだり"
+  ],
+  [
+   "右",
+   "みぎ"
+  ],
+  [
+   "頭",
+   "あたま"
+  ],
+  [
+   "刃",
+   "は"
+  ],
+  [
+   "量",
+   "りょう"
+  ],
+  [
+   "苗",
+   "なえ"
+  ],
+  [
+   "丸",
+   "まる"
+  ],
+  [
+   "桶",
+   "おけ"
+  ],
+  [
+   "火",
+   "ひ"
+  ],
+  [
+   "葉",
+   "は"
+  ],
+  [
+   "色",
+   "いろ"
+  ],
+  [
+   "鍋",
+   "なべ"
+  ],
+  [
+   "畑",
+   "はたけ"
+  ],
+  [
+   "壁",
+   "かべ"
+  ],
+  [
+   "紋",
+   "もん"
+  ],
+  [
+   "星",
+   "ほし"
+  ],
+  [
+   "銀",
+   "ぎん"
+  ],
+  [
+   "銭湯",
+   "せんとう"
+  ],
+  [
+   "富士山",
+   "ふじさん"
+  ],
+  [
+   "湯船",
+   "ゆぶね"
+  ],
+  [
+   "脱衣所",
+   "だついじょ"
+  ],
+  [
+   "下駄箱",
+   "げたばこ"
+  ],
+  [
+   "洗い場",
+   "あらいば"
+  ],
+  [
+   "番台",
+   "ばんだい"
+  ],
+  [
+   "牛乳",
+   "ぎゅうにゅう"
+  ],
+  [
+   "玄関",
+   "げんかん"
+  ],
+  [
+   "壁",
+   "かべ"
+  ],
+  [
+   "絵",
+   "え"
+  ],
+  [
+   "東京",
+   "とうきょう"
+  ],
+  [
+   "描か",
+   "えがか"
+  ],
+  [
+   "大きな",
+   "おおきな"
+  ],
+  [
+   "多い",
+   "おおい"
+  ],
+  [
+   "百年以上前",
+   "ひゃくねんいじょうまえ"
+  ],
+  [
+   "100年以上前",
+   "ひゃくねんいじょうまえ"
+  ],
+  [
+   "真ん中",
+   "まんなか"
+  ],
+  [
+   "真中",
+   "まんなか"
+  ],
+  [
+   "線",
+   "せん"
+  ],
+  [
+   "餅つき",
+   "もちつき"
+  ],
+  [
+   "餅",
+   "もち"
+  ],
+  [
+   "結果発表",
+   "けっかはっぴょう"
+  ],
+  [
+   "お椀",
+   "おわん"
+  ],
+  [
+   "椀",
+   "わん"
+  ],
+  [
+   "土間",
+   "どま"
+  ],
+  [
+   "軒下",
+   "のきした"
+  ],
+  [
+   "道具だな",
+   "どうぐだな"
+  ],
+  [
+   "もち米",
+   "もちごめ"
+  ],
+  [
+   "ご存じ",
+   "ごぞんじ"
+  ],
+  [
+   "強い",
+   "つよい"
+  ],
+  [
+   "釜",
+   "かま"
+  ],
+  [
+   "土のつぼ",
+   "つちのつぼ"
+  ],
+  [
+   "大根おろし",
+   "だいこんおろし"
+  ],
+  [
+   "ひしゃく",
+   "ひしゃく"
+  ],
+  [
+   "本",
+   "ほん"
+  ],
+  [
+   "きな粉",
+   "きなこ"
+  ],
+  [
+   "紫",
+   "むらさき"
+  ],
+  [
+   "すずめ",
+   "すずめ"
+  ],
+  [
+   "凧",
+   "たこ"
+  ],
+  [
+   "河原",
+   "かわら"
+  ],
+  [
+   "杭",
+   "くい"
+  ],
+  [
+   "土手",
+   "どて"
+  ],
+  [
+   "枯れすすき",
+   "かれすすき"
+  ],
+  [
+   "作業台",
+   "さぎょうだい"
+  ],
+  [
+   "橋",
+   "はし"
+  ],
+  [
+   "糸巻き",
+   "いとまき"
+  ],
+  [
+   "左上",
+   "ひだりうえ"
+  ],
+  [
+   "毛糸",
+   "けいと"
+  ],
+  [
+   "木づち",
+   "きづち"
+  ],
+  [
+   "長ぐつ",
+   "ながぐつ"
+  ],
+  [
+   "缶",
+   "かん"
+  ],
+  [
+   "2枚",
+   "にまい"
+  ],
+  [
+   "減りました",
+   "へりました"
+  ],
+  [
+   "名前",
+   "なまえ"
+  ],
+  [
+   "呼ばれ",
+   "よばれ"
+  ],
+  [
+   "似ている",
+   "にている"
+  ],
+  [
+   "上がる",
+   "あがる"
+  ],
+  [
+   "見上げる",
+   "みあげる"
+  ],
+  [
+   "楽しい",
+   "たのしい"
+  ],
+  [
+   "全5問",
+   "ぜんごもん"
+  ],
+  [
+   "右向き",
+   "みぎむき"
+  ],
+  [
+   "かご",
+   "かご"
+  ],
+  [
+   "おけ",
+   "おけ"
+  ],
+  [
+   "スズメ",
+   "スズメ"
+  ],
+  [
+   "向きを変え",
+   "むきを、かえ"
+  ],
+  [
+   "左向き",
+   "ひだりむき"
+  ],
+  [
+   "マフラー",
+   "マフラー"
+  ]
+ ],
+ "voice_override": {
+  "u1": "ここでひとやすみ。こよみせんせいの、きせつのおはなしです。",
+  "e1": "これで、ごもんめまで、おしまいです。",
+  "e2": "じゅうごこの、ちがい、いくつ、みつかりましたか。けっかはっぴょうです。",
+  "e3": "チャンネルとうろくとベルで、まいあさはちじはんに、もんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。",
+  "c_comment": "みつかったかずを、あとでコメントでおしえてくださいね。",
+  "s_intro": "うえとしたのえで、ちがいがみっつあります。みつけられますか。",
+  "s_end": "いくつみつかったか、コメントでおしえてくださいね。ひだりしたから、つづきもどうぞ。",
+  "q1_go": "みぎのえのちがいを、みっつさがしてください。どうぞ。",
+  "q2_go": "では、にもんめ。どうぞ。",
+  "q3_go": "つづいて、さんもんめ。どうぞ。",
+  "q4_go": "よんもんめです。じっくりどうぞ。",
+  "q5_go": "さいごの、ごもんめ、なんもんです。どうぞ。",
+  "op": "たこあげの、まちがいさがし、ぜんごもん。",
+  "op2": "さいごは、なんもんです。",
+  "u2": "たこの、むかしの、なまえ、しっていますか？",
+  "u3": "いかのぼりとよばれ、かたちがイカのようだから、というせつがあります。",
+  "u4": "たかくあがるたこは、みあげるだけで、たのしいですね。",
+  "e4": "ほかにも、いろいろな、まちがいさがしがあります。もっとむずかしいもんだいに、ちょうせんしたいかたは、がめんのどうがを、クリックしてくださいね。",
+  "q1_card": "いちもんめ、やさしいもんだい。たこあげの、かわらです。",
+  "q2_card": "にもんめ、しょきゅう。どての、くいと、たこです。",
+  "q3_card": "さんもんめ、しょきゅう。たこづくりの、さぎょうだいです。",
+  "q4_card": "よんもんめ、ちゅうきゅう。かれすすきの、はらです。",
+  "q5_card": "ごもんめ、じょうきゅう。かわらの、はしです。",
+  "q3_ans3": "ひだりしたの、きづちが、むきを、かえました。",
+  "q5_ans1": "ひだりうえの、ことりが、ひだりむきに、なりました。",
+  "q2_ans3": "ひだりうえの、マフラーが、なくなりました。"
+ },
+ "voice": {
+  "provider": "fish",
+  "reference_id": "63819275ce38440ea245ca988abf976e",
+  "model": "s1",
+  "speed": 0.88,
+  "credit": "音声：Fish Audio（AIで合成した音声です）"
+ },
+ "images": {
+  "model": "gemini-3-pro-image",
+  "size": "2K",
+  "aspect": "4:5",
+  "style": "A Japanese picture-book illustration in watercolor, but with BOLD, THICK, DARK ink outlines around every object (like a clear picture book for seniors), and CLEAR, SATURATED colors (not pale). Bright, clean background. Natural, hand-drawn, slightly rounded shapes; not geometric, not flat vector, not photorealistic. CLOSE-UP composition (not a wide landscape): the scene is seen from close, filling the picture. PORTRAIT-ISH composition, about 8:9. The painting fills the entire canvas edge to edge: no white border. No people. Absolutely no text, letters, numbers, logos or symbols anywhere. The MAIN SUBJECT named in the scene is drawn LARGE in the center of the picture. Around it, only a few other objects, each clearly separated with space around it, fully visible.\n",
+  "keep_alt": " Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text.",
+  "keep_remove": " Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object.",
+  "batch": true,
+  "neutral_target": 1.4
+ },
+ "questions": [
+  {
+   "q": 1,
+   "scene": "凧あげの河原",
+   "level": "やさしい",
+   "go": "右の絵の違いを、3つ探してください。どうぞ。",
+   "prompt": "Scene: close-up of a winter riverbank (kawara) on a bright calm winter day: dry golden grass with a little frost, a wide gently flowing river with small grey pebbles on the near shore, bare willow trees and dry reeds in the background, clear pale blue sky. CENTER, LARGE (main subject): a big diamond-shaped paper kite, plain cream and blue with a simple geometric pattern and a long tail of paper bows, lying FLAT on the dry grass, its long string tied to a thick wooden stake hammered into the ground beside it. Winter only, with frost and bare trees: no Christmas, New Year's Eve or New Year decorations (no kagami-mochi, no shimenawa, no kadomatsu), no yuzu, no summer items, no snowman. Any kite is always lying FLAT on the ground or leaning on the ground, tied by its string to a wooden stake in the ground: no kite in the air, nothing hanging in the sky, the sky is clear and empty. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on the ground, a flat stone or the grass; nothing floats. Each listed object is about one sixteenth of the picture width, VERY SMALL, with plenty of empty space around it. No letters, labels, numbers or writing anywhere (kites, bags and tins are plain, with simple geometric patterns only). No people, no hands. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white. Objects: (upper left, on the grass) a small blue thermos flask standing upright; (upper right, on the grass) a small stack of three grey stones; (middle left, on the grass) a small wicker picnic basket; (middle right, on a flat stone) a small wooden string reel with white string wound on it; (lower left, on a flat stone) a pair of small cream-colored knitted gloves; (lower right, on the grass) a small wooden stake with a short rope tied around it.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small blue thermos flask on the grass at the upper left is gone (show the plain dry grass, no leftover outline); (b) the small wooden string reel on the flat stone at the middle right becomes bright green (the wooden reel painted bright green, same shape); (c) the pair of small cream knitted gloves on the flat stone at the lower left becomes light blue (the gloves painted light blue, same shape).",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "水筒がない",
+     "line": "左上の水筒が、なくなりました。",
+     "box": [
+      240,
+      617,
+      462,
+      845
+     ],
+     "object_w": 140,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "糸巻きが緑",
+     "line": "右の糸巻きが、緑になりました。",
+     "box": [
+      1311,
+      1262,
+      1694,
+      1535
+     ],
+     "object_w": 170,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "手ぶくろが水色",
+     "line": "左下の手ぶくろが、水色になりました。",
+     "box": [
+      201,
+      1729,
+      562,
+      1964
+     ],
+     "object_w": 300,
+     "src": "1"
+    }
+   ],
+   "answers_intro": "答えです。",
+   "retries": {},
+   "edit_prompts": {},
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
+  },
+  {
+   "q": 2,
+   "scene": "土手の杭と凧",
+   "level": "初級",
+   "go": "では、2問目。どうぞ。",
+   "prompt": "Scene: close-up of a grassy riverbank slope (dote) in winter, dry golden grass with light frost, a river and dry reeds behind; the picture is bright and clear. CENTER (main subject, medium size, about one third of the picture width): a rectangular green paper kite with a plain white stripe and a short tail, lying FLAT on the grass, its string tied to a wooden stake hammered into the ground. Winter only, with frost and bare trees: no Christmas, New Year's Eve or New Year decorations (no kagami-mochi, no shimenawa, no kadomatsu), no yuzu, no summer items, no snowman. Any kite is always lying FLAT on the ground or leaning on the ground, tied by its string to a wooden stake in the ground: no kite in the air, nothing hanging in the sky, the sky is clear and empty.  IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the ground, a flat stone or the grass; nothing floats. Each listed object is SMALL: about one twentieth of the picture width. No letters, labels, numbers or writing anywhere (kites, bags and tins are plain, with simple geometric patterns only). No people, no hands. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white. Objects: (left, at 30% height, on a flat stone) a small brown sparrow standing; (right, at 30% height, on the ground) a small round wooden bucket; (left, at 50% height, on the ground) a pair of small black rubber boots standing; (right, at 50% height, on a flat stone) a small white enamel mug; (left, at 70% height, on the grass) a small straw hat lying upside up; (right, at 70% height, on the ground) a small bundle of dry pampas grass tied with string, lying flat.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small brown sparrow on the flat stone at the upper left is gone (show the plain flat stone, no leftover outline); (b) the small white enamel mug on the flat stone at the right becomes bright yellow (the mug painted bright yellow, same shape); (c) the small straw hat on the grass at the lower left is replaced by a small dark navy knitted wool cap lying in the same place (same size).",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "入れ替え",
+     "label": "スズメが毛糸の帽子",
+     "line": "左下のスズメが、帽子に変わりました。",
+     "box": [
+      103,
+      1266,
+      409,
+      1609
+     ],
+     "object_w": 170,
+     "src": "1",
+     "context": "岩の上に置いた小物。スズメでも毛糸の帽子でも自然（同じ場所・同じ置かれ方）"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "カップが黄色",
+     "line": "右のカップが、黄色になりました。",
+     "box": [
+      1367,
+      988,
+      1528,
+      1138
+     ],
+     "object_w": 140,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "マフラーがない",
+     "line": "左上のマフラーが、なくなりました。",
+     "box": [
+      190,
+      520,
+      640,
+      800
+     ],
+     "object_w": 230,
+     "src": "2"
+    }
+   ],
+   "answers_intro": "答えです。",
+   "retries": {},
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. The change must be clearly visible. Do not move any object. Change: the straw hat lying on the grass in the upper left part of the picture (above the black rubber boots) is gone (show the plain dry grass where it was, no leftover outline, and do NOT add any stone or other object there). Leave the sparrow, the boots, the mug and everything else exactly as they are."
+   },
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
+  },
+  {
+   "q": 3,
+   "scene": "凧づくりの作業台",
+   "level": "初級",
+   "go": "続いて、3問目。どうぞ。",
+   "prompt": "Scene: close-up of a rough wooden workbench standing on a riverbank in winter, dry golden grass with frost, a river and bare trees behind; the picture is bright and clear. CENTER (main subject, medium size, about one third of the picture width): the wooden workbench with a half-made bamboo kite frame (thin crossed bamboo sticks, no paper yet) lying on top; the bench legs stand on the ground. Winter only, with frost and bare trees: no Christmas, New Year's Eve or New Year decorations (no kagami-mochi, no shimenawa, no kadomatsu), no yuzu, no summer items, no snowman. Any kite is always lying FLAT on the ground or leaning on the ground, tied by its string to a wooden stake in the ground: no kite in the air, nothing hanging in the sky, the sky is clear and empty.  IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 25% and 65% of the picture height (never at the very top, and NOTHING in the bottom third of the picture; the bottom third shows only bare frosty ground). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the ground, a flat stone or the grass; nothing floats. Each listed object is SMALL: about one twentieth of the picture width. No letters, labels, numbers or writing anywhere (kites, bags and tins are plain, with simple geometric patterns only). No people, no hands. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white. Objects: (left, at 30% height, on a flat stone) a small white teacup; (right, at 30% height, on the ground) a small round wooden stool; (left, at 45% height, on the ground) a small coil of rope; (right, at 45% height, on the ground) a small round metal tin with a lid; (left, at 60% height, on the ground) a small wooden mallet lying flat with its heavy head on the left and its handle pointing right; (right, at 60% height, on the ground) a small folded plain grey blanket.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small white teacup on the grey stone at the left becomes light blue (the cup painted light blue, same shape); (b) the small green round metal tin with a lid in the middle of the picture is gone (show the plain frosty ground, no leftover outline); (c) the wooden mallet lying at the lower left is turned the other way round: its heavy head is now on the right and its handle points left (same size, same place, lying flat on the ground).",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "湯のみが水色",
+     "line": "左の湯のみが、水色になりました。",
+     "box": [
+      225,
+      810,
+      410,
+      1000
+     ],
+     "object_w": 110,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "缶がない",
+     "line": "まん中の缶が、なくなりました。",
+     "box": [
+      1023,
+      1060,
+      1350,
+      1320
+     ],
+     "object_w": 300,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "向き",
+     "label": "木づちが反対向き",
+     "line": "左下の木づちが、向きを変えました。",
+     "box": [
+      180,
+      1350,
+      817,
+      1730
+     ],
+     "object_w": 637,
+     "src": "1"
+    }
+   ],
+   "answers_intro": "答えです。",
+   "retries": {},
+   "edit_prompts": {},
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
+  },
+  {
+   "q": 4,
+   "scene": "枯れすすきの原",
+   "level": "中級",
+   "go": "4問目です。じっくりどうぞ。",
+   "prompt": "Scene: close-up of a field of dry pampas grass (susuki) on a riverbank in winter, silvery plumes, light frost on the ground, a river behind; the picture is bright and clear. CENTER (main subject, medium size, about one third of the picture width): a big clump of tall dry pampas grass, and at its foot a diamond-shaped paper kite lying FLAT on the ground with its string tied to a wooden stake. Winter only, with frost and bare trees: no Christmas, New Year's Eve or New Year decorations (no kagami-mochi, no shimenawa, no kadomatsu), no yuzu, no summer items, no snowman. Any kite is always lying FLAT on the ground or leaning on the ground, tied by its string to a wooden stake in the ground: no kite in the air, nothing hanging in the sky, the sky is clear and empty.  IMPORTANT LAYOUT: every listed object must be placed in the MIDDLE BAND of the picture, between 20% and 75% of the picture height (never at the very top or at the bottom). Spread them far apart, never clustered, never touching the main subject. Each listed object rests on the ground, a flat stone or the grass; nothing floats. Each listed object is SMALL: about one twentieth of the picture width. No letters, labels, numbers or writing anywhere (kites, bags and tins are plain, with simple geometric patterns only). No people, no hands. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white. Objects: (left, at 30% height, on a flat stone) a small plate with three small round rice crackers; (right, at 30% height, on the ground) a small wicker basket; (left, at 50% height, on the ground) a small pair of straw sandals; (right, at 50% height, on a flat stone) a small black iron kettle; (left, at 70% height, on the ground) a pair of small black rubber boots standing; (right, at 70% height, on the ground) a small wooden string reel.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small plate on the flat stone at the upper left has only two rice crackers now (one fewer than before, same plate, same place); (b) the small black iron kettle on the flat stone at the right is gone (show the plain flat stone, no leftover outline); (c) the pair of small black rubber boots at the lower left becomes green (the boots painted green, same shape).",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "数",
+     "label": "おせんべいが2枚",
+     "line": "下のおせんべいが、2枚に減りました。",
+     "box": [
+      100,
+      1415,
+      430,
+      1620
+     ],
+     "object_w": 280,
+     "src": "2"
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "やかんがない",
+     "line": "右のやかんが、なくなりました。",
+     "box": [
+      1493,
+      1055,
+      1772,
+      1336
+     ],
+     "object_w": 260,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "長ぐつが緑",
+     "line": "左上の長ぐつが、緑になりました。",
+     "box": [
+      100,
+      760,
+      395,
+      1060
+     ],
+     "object_w": 250,
+     "src": "1"
+    }
+   ],
+   "answers_intro": "答えです。",
+   "retries": {},
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly this change, and nothing else. Keep the same thick outlines, colors and style. The change must be clearly visible. Do not move any object. Change: the small blue-and-white plate on the mossy stone at the lower left holds only two round brown rice crackers now (one fewer than before; same plate, same stone, same place). Do NOT change the boots, the sandals or anything else; the black rubber boots stay black."
+   },
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
+  },
+  {
+   "q": 5,
+   "scene": "河原の橋",
+   "level": "上級",
+   "go": "最後の5問目、難問です。どうぞ。",
+   "prompt": "Scene: close-up of a frosty riverbank with a long stone arched bridge crossing a calm river in the middle of the picture, dry golden grass and frost in front, bare willow trees and dry reeds, bright winter daylight. CENTER, LARGE (main subject): the stone arched bridge with its reflection in the river. Winter only, with frost and bare trees: no Christmas, New Year's Eve or New Year decorations (no kagami-mochi, no shimenawa, no kadomatsu), no yuzu, no summer items, no snowman. Any kite is always lying FLAT on the ground or leaning on the ground, tied by its string to a wooden stake in the ground: no kite in the air, nothing hanging in the sky, the sky is clear and empty. Spread the listed objects over the whole picture at the given positions, far apart, never clustered. Keep every listed object BELOW the top fifth and ABOVE the bottom fifth of the picture. Each listed object is fully visible and rests on a post, the ground, a flat stone or the grass; nothing floats. Each listed object is about one thirty-second of the picture width, TINY, with plenty of empty space around it. No letters, labels, numbers or writing anywhere (kites, bags and tins are plain, with simple geometric patterns only). No people, no hands. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white. Objects: (upper left, standing on a wooden post) a tiny brown bird facing left; (upper right, on the grass) a tiny stack of three grey stones; (middle left, on the grass) a tiny blue thermos flask standing upright; (middle right, on the ground) a tiny round wooden bucket; (lower left, on the ground) a tiny wicker basket; (lower right, on the grass) a tiny diamond-shaped kite lying flat with its string tied to a tiny wooden stake. The bridge is at about 45% of the picture height; the painting reaches the very edge of the canvas on all four sides, with no paper margin.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same thick outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the tiny brown bird on the wooden post at the upper left now faces right (mirrored, same bird, same pose, same place); (b) the tiny round wooden bucket on the ground at the middle right is gone (show the plain ground, no leftover outline); (c) the tiny wicker basket on the ground at the lower left becomes light blue (the basket painted light blue, same shape).",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "向き",
+     "label": "小鳥が左向き",
+     "line": "左上の小鳥が、左向きになりました。",
+     "box": [
+      341,
+      100,
+      601,
+      268
+     ],
+     "object_w": 140,
+     "src": "flip"
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "おけがない",
+     "line": "右の小さなおけが、なくなりました。",
+     "box": [
+      1468,
+      1237,
+      1820,
+      1458
+     ],
+     "object_w": 330,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "かごが水色",
+     "line": "左下のかごが、水色になりました。",
+     "box": [
+      434,
+      1708,
+      677,
+      1962
+     ],
+     "object_w": 240,
+     "src": "1"
+    }
+   ],
+   "answers_intro": "答えです。",
+   "retries": {},
+   "edit_prompts": {},
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
+  }
+ ],
+ "thumbnail": {
+  "question": 1,
+  "big_text": "冬の間違いさがし",
+  "highlight": "間違いさがし",
+  "highlight_color": [
+   255,
+   214,
+   0
+  ],
+  "big_color": [
+   255,
+   255,
+   255
+  ],
+  "band_color": [
+   25,
+   35,
+   70
+  ],
+  "big_size": 132,
+  "sub_text": "3つ見つけられる？全5問",
+  "badges": [
+   [
+    "初級〜上級",
+    [
+     176,
+     62,
+     52
+    ]
+   ]
+  ],
+  "circle_hint": false,
+  "note": "ab/ の3案を使う（thumb_band.py）"
+ },
+ "shorts": [
+  {
+   "question": 2,
+   "answer_gap": 3.3,
+   "note": "1本目：第2問 土手の杭と凧・初級",
+   "title": "シニアの間違い探し｜土手の杭と凧の1問 #脳トレ #頭の体操",
+   "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
+   "end_veil": [
+    {
+     "at": 0,
+     "lines": [
+      [
+       "いくつ見つかった？",
+       120,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "コメントで教えてね",
+       104,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": false
+    },
+    {
+     "at": 3.8,
+     "lines": [
+      [
+       "続きは長い動画で",
+       116,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "左下をクリック",
+       128,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "question": 4,
+   "answer_gap": 3.3,
+   "note": "2本目：第4問 枯れすすきの原・中級",
+   "title": "シニアの間違い探し｜枯れすすきの原の1問 #脳トレ #頭の体操",
+   "end": "いくつ見つかったか、コメントで教えてくださいね。左下から、続きもどうぞ。",
+   "end_veil": [
+    {
+     "at": 0,
+     "lines": [
+      [
+       "いくつ見つかった？",
+       120,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "コメントで教えてね",
+       104,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": false
+    },
+    {
+     "at": 3.8,
+     "lines": [
+      [
+       "続きは長い動画で",
+       116,
+       [
+        255,
+        255,
+        255
+       ]
+      ],
+      [
+       "左下をクリック",
+       128,
+       [
+        255,
+        214,
+        0
+       ]
+      ]
+     ],
+     "arrow": true
+    }
+   ]
+  }
+ ],
+ "unchiku_source": "凧の古い呼び名「いかのぼり」は、江戸時代の文献などにみられる呼び名で、形がイカに似ていたからという説がある（諸説あり。一般的な知識。効果をうたうものではない）。"
+}
