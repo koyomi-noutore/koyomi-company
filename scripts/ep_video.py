@@ -463,7 +463,9 @@ def render_card(q, t):
 @lru_cache(maxsize=1)
 def opening_base():
     im = Image.new("RGB", (W, H), BG)
-    thumbs = [picture(q, "a").resize((216, 243), Image.LANCZOS) for q in range(1, 6)]
+    qs = sorted(T.QUESTIONS)
+    qs = qs[::max(1, len(qs) // 5)][:5]       # 5問の回は全部（1〜5）。10問の回は1つおき（1・3・5・7・9）
+    thumbs = [picture(q, "a").resize((216, 243), Image.LANCZOS) for q in qs]
     x, y = (420, 460) if owl_bottom() else (60, 560)    # 先生が左下にいるときは、絵を右上へ
     for k, th in enumerate(thumbs):
         th = Image.blend(Image.new("RGB", th.size, BG), th, 0.6)

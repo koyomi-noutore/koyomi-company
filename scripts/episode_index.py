@@ -57,7 +57,8 @@ def machigai():
         for q in p["questions"]:
             labs = "・".join(x.get("label", "") for x in q.get("diffs", []))
             qs.append(f"{q['q']}{q.get('scene', '')}（{labs}）")
-        rows.append(f"| 第{n}回 | {cell(p.get('season', ''))} | {cell(topic)} | {cell(' ／ '.join(qs))} | {cell(unchiku(p))} | {vid(d)} | {d.name} |")
+        label = f"つなぎ {d.name.split('_', 1)[1]}" if "_w10_" in d.name else f"第{n}回"   # 2回分をつないだ全10問の回（combine_episodes.py）は回番号を持たない
+        rows.append(f"| {label} | {cell(p.get('season', ''))} | {cell(topic)} | {cell(' ／ '.join(qs))} | {cell(unchiku(p))} | {vid(d)} | {d.name} |")
     return rows
 
 

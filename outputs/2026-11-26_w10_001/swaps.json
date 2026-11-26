@@ -1,0 +1,121 @@
+[
+ {
+  "q": 2,
+  "id": 1,
+  "type": "色",
+  "label": "石が青",
+  "line": "左の石が、青くなりました。",
+  "voice": "ひだりの、いしが、あおくなりました。",
+  "box": [
+   290,
+   1200,
+   640,
+   1530
+  ],
+  "object_w": 283,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the rounded grey stone at the far left of the stone ring (left of the pot, standing on the pebbly ground) so that it becomes clearly BLUE (a bright blue stone), keeping the same shape, size, thick outlines and shading. The other stones, the fire, the logs and the pot stay exactly the same."
+ },
+ {
+  "q": 5,
+  "id": 1,
+  "type": "色",
+  "label": "バッグが赤",
+  "line": "地面のバッグが、赤くなりました。",
+  "voice": "じめんの、バッグが、あかくなりました。",
+  "box": [
+   135,
+   640,
+   485,
+   845
+  ],
+  "object_w": 317,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the light-blue flowered bag lying on the ground so that it becomes clearly bright RED (keeping its flower pattern as slightly lighter red/pink flowers), same shape, thick outlines and position. The ground and everything else stay exactly the same."
+ },
+ {
+  "q": 7,
+  "id": 3,
+  "type": "なくなる",
+  "label": "雲がない",
+  "line": "空の雲が、なくなりました。",
+  "voice": "そらの、くもが、なくなりました。",
+  "box": [
+   365,
+   205,
+   705,
+   335
+  ],
+  "object_w": 195,
+  "prompt": "Edit this image: erase the white fluffy cloud in the middle of the image and repaint that whole area as clear plain blue sky, exactly the same blue gradient as the sky around it. The result must contain NO cloud and no cloud outline in the middle of the image. Do not change the trees or hills.",
+  "smooth": [
+   375,
+   214,
+   695,
+   325
+  ]
+ },
+ {
+  "q": 9,
+  "id": 2,
+  "type": "色",
+  "label": "きのこが紫",
+  "line": "木箱のきのこが、紫になりました。",
+  "voice": "はこの、きのこが、むらさきに、なりました。",
+  "box": [
+   760,
+   915,
+   918,
+   1030
+  ],
+  "object_w": 147,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the single brown mushroom cap in the middle of the picture (the top one of the pile, with its short stem) so that it becomes clearly PURPLE (violet), keeping the same shape, white highlights, thick outline and shading. The other mushrooms stay brown."
+ },
+ {
+  "q": 10,
+  "id": 1,
+  "type": "色",
+  "label": "ふたの取っ手が金色",
+  "line": "ふたの取っ手が、金色になりました。",
+  "voice": "ふたの、とってが、きんいろに、なりました。",
+  "box": [
+   855,
+   880,
+   990,
+   985
+  ],
+  "object_w": 110,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the black iron handle (knob) on top of the pot lid so that it becomes shiny GOLD (yellow brass), keeping the same shape, thick outline and position. The lid and the rest of the pot stay black."
+ },
+ {
+  "q": 10,
+  "id": 2,
+  "type": "増える",
+  "label": "ちょうちょが増える",
+  "line": "空に、ちょうちょが、ふえました。",
+  "voice": "そらに、ちょうちょが、ふえました。",
+  "context": "川原の空を飛ぶ虫。風景の中に1匹飛んでいてもふつう",
+  "box": [
+   1245,
+   445,
+   1365,
+   555
+  ],
+  "object_w": 110,
+  "prompt": "Edit this picture-book illustration: add exactly ONE small yellow butterfly flying in the empty blue sky in the middle of this image. The butterfly is small: about one fourth of the width of this image. Draw it in the same picture-book watercolor style with thick dark outlines. Do not change the leaves or anything else."
+ },
+ {
+  "q": 10,
+  "id": 3,
+  "type": "色",
+  "label": "枝の葉が赤",
+  "line": "枝の葉が、1枚、赤くなりました。",
+  "voice": "えだの、はが、いちまい、あかくなりました。",
+  "box": [
+   650,
+   290,
+   790,
+   375
+  ],
+  "object_w": 115,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the single yellow leaf in the middle of this image (the leaf at the top of the small leaf group, pointing to the upper right) so that it becomes clearly bright RED, keeping the same shape and thick outline. All the other leaves stay yellow or orange."
+ }
+]
