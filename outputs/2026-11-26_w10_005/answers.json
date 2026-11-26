@@ -319,8 +319,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 0,
-   "outside_box_max_distance_px": 0.0,
+   "outside_box_pixels_diff_gt15": 841,
+   "outside_box_max_distance_px": 8.0,
    "answers": [
     {
      "id": 1,
@@ -454,7 +454,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 307,
+   "outside_box_pixels_diff_gt15": 800,
    "outside_box_max_distance_px": 9.0,
    "answers": [
     {
@@ -724,7 +724,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 22,
+   "outside_box_pixels_diff_gt15": 121,
    "outside_box_max_distance_px": 8.0,
    "answers": [
     {
@@ -1077,7 +1077,7 @@
      "id": 3,
      "type": "色",
      "label": "器が紫",
-     "line": "右のきな粉の器が、紫になりました。",
+     "line": "きな粉の器が、紫になりました。",
      "box_px": [
       1490,
       1035,
@@ -1129,8 +1129,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 0,
-   "outside_box_max_distance_px": 0.0,
+   "outside_box_pixels_diff_gt15": 208,
+   "outside_box_max_distance_px": 7.0,
    "answers": [
     {
      "id": 1,
@@ -1264,8 +1264,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 22,
-   "outside_box_max_distance_px": 5.0,
+   "outside_box_pixels_diff_gt15": 447,
+   "outside_box_max_distance_px": 6.0,
    "answers": [
     {
      "id": 1,
@@ -1334,10 +1334,10 @@
       119,
       217
      ],
-     "object_w_px": 150,
-     "object_picture_width_pct": 8.08,
-     "object_screen_width_pct": 4.04,
-     "in_level_range": false,
+     "object_w_px": 148,
+     "object_picture_width_pct": 7.97,
+     "object_screen_width_pct": 3.99,
+     "in_level_range": true,
      "in_safe_y": true,
      "edit_version": "swap",
      "made_by": "gemini",
@@ -1345,9 +1345,9 @@
     },
     {
      "id": 3,
-     "type": "なくなる",
-     "label": "湯気がない",
-     "line": "せいろの湯気が、なくなりました。",
+     "type": "数",
+     "label": "湯気が少ない",
+     "line": "せいろの湯気が、少なくなりました。",
      "box_px": [
       873,
       679,

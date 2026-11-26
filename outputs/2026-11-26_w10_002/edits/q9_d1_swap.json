@@ -1,1 +1,1 @@
-{"crop": [1083, 50, 1618, 585], "prompt": "Edit this picture-book illustration: make the long icicle hanging from the wooden eaves about HALF as long (cut off its lower half), and repaint the freed area below it exactly like the pale background (soft snowy-blue sky and distant trees). The short icicle next to it and the eaves stay exactly the same. No leftover outline.", "box": [1290, 200, 1410, 435]}
+{"crop": [1067, 40, 1617, 590], "prompt": "manual: icicle shortened (middle squashed, tip kept)", "box": [1275, 190, 1410, 440]}

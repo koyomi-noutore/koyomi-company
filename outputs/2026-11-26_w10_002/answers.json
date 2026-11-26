@@ -589,7 +589,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 1591,
+   "outside_box_pixels_diff_gt15": 327,
    "outside_box_max_distance_px": 8.0,
    "answers": [
     {
@@ -675,26 +675,26 @@
      "line": "壁に立てかけたほうきが、なくなりました。",
      "box_px": [
       1170,
-      540,
-      1400,
+      528,
+      1419,
       1310
      ],
      "box_screen": [
       605,
-      279,
-      724,
+      273,
+      734,
       678
      ],
      "circle_a_screen": [
       605,
-      279,
-      724,
+      273,
+      734,
       678
      ],
      "circle_b_screen": [
       605,
-      279,
-      724,
+      273,
+      734,
       678
      ],
      "object_w_px": 230,
@@ -1129,8 +1129,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 17,
-   "outside_box_max_distance_px": 2.0,
+   "outside_box_pixels_diff_gt15": 8,
+   "outside_box_max_distance_px": 1.0,
    "answers": [
     {
      "id": 1,
@@ -1138,28 +1138,28 @@
      "label": "つららが短い",
      "line": "軒のつららが、短くなりました。",
      "box_px": [
-      1290,
-      200,
+      1275,
+      190,
       1410,
-      435
+      440
      ],
      "box_screen": [
-      667,
-      103,
+      659,
+      98,
       729,
-      225
+      228
      ],
      "circle_a_screen": [
-      667,
-      103,
+      659,
+      98,
       729,
-      225
+      228
      ],
      "circle_b_screen": [
-      667,
-      103,
+      659,
+      98,
       729,
-      225
+      228
      ],
      "object_w_px": 120,
      "object_picture_width_pct": 6.47,
@@ -1269,39 +1269,39 @@
    "answers": [
     {
      "id": 1,
-     "type": "模様",
-     "label": "カップが水玉",
-     "line": "左上のカップが、水玉になりました。",
+     "type": "形",
+     "label": "毛糸玉の糸が短い",
+     "line": "毛糸玉の糸が、短くなりました。",
      "box_px": [
-      120,
-      700,
-      330,
-      905
+      296,
+      1430,
+      430,
+      1515
      ],
      "box_screen": [
-      62,
-      362,
-      171,
-      468
+      153,
+      740,
+      222,
+      784
      ],
      "circle_a_screen": [
-      62,
-      362,
-      171,
-      468
+      153,
+      740,
+      222,
+      784
      ],
      "circle_b_screen": [
-      62,
-      362,
-      171,
-      468
+      153,
+      740,
+      222,
+      784
      ],
-     "object_w_px": 122,
-     "object_picture_width_pct": 6.57,
-     "object_screen_width_pct": 3.29,
+     "object_w_px": 135,
+     "object_picture_width_pct": 7.27,
+     "object_screen_width_pct": 3.64,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     },
