@@ -49,7 +49,8 @@ def lines():
         a = s + CARD + SOLVE
         L.append((f"q{q}_ans0", a, Q["answers_intro"], "smile", a + ANS_FIRST))
         for i, line in enumerate(Q["answers"]):
-            L.append((f"q{q}_ans{i + 1}", a + ANS_FIRST + ANS_STEP * i, line, "smile", a + ANS_FIRST + ANS_STEP * (i + 1)))
+            sh = _T.get("ans_shift", {}).get(f"q{q}_ans{i + 1}", 0.0)   # 前の声との聞こえる無音を0.4秒以上にするため、開始だけ遅らせる（2026-11-26 監査W10-5-2）
+            L.append((f"q{q}_ans{i + 1}", a + ANS_FIRST + ANS_STEP * i + sh, line, "smile", a + ANS_FIRST + ANS_STEP * (i + 1)))
     for part, base in (("unchiku", UNCHIKU[0]), ("ending", ENDING[0])) + ((("cta", CTA[0]),) if CTA else ()):
         L += [(x["id"], base + x["at"], x["text"], x["face"], base + x["until"]) for x in Ls[part]]
     # 決まった時刻に入れるセリフ（例：中盤のコメントのお願い）。lines.extra の at・until は動画の頭からの秒
