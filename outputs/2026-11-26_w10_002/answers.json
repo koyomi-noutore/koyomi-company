@@ -589,7 +589,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 207,
+   "outside_box_pixels_diff_gt15": 211,
    "outside_box_max_distance_px": 8.0,
    "answers": [
     {
@@ -670,36 +670,36 @@
     },
     {
      "id": 3,
-     "type": "色",
-     "label": "右の長靴の口が黄色",
-     "line": "右の長靴の口が、黄色くなりました。",
+     "type": "数",
+     "label": "戸の格子が1本少ない",
+     "line": "戸の格子が、1本少なくなりました。",
      "box_px": [
-      950,
-      1335,
-      1170,
-      1432
+      1050,
+      140,
+      1235,
+      700
      ],
      "box_screen": [
-      491,
-      691,
-      605,
-      741
+      543,
+      72,
+      639,
+      362
      ],
      "circle_a_screen": [
-      491,
-      691,
-      605,
-      741
+      543,
+      72,
+      639,
+      362
      ],
      "circle_b_screen": [
-      491,
-      691,
-      605,
-      741
+      543,
+      72,
+      639,
+      362
      ],
-     "object_w_px": 210,
-     "object_picture_width_pct": 11.31,
-     "object_screen_width_pct": 5.66,
+     "object_w_px": 190,
+     "object_picture_width_pct": 10.24,
+     "object_screen_width_pct": 5.12,
      "in_level_range": true,
      "in_safe_y": true,
      "edit_version": "swap",

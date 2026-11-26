@@ -34,18 +34,18 @@
  {
   "q": 5,
   "id": 3,
-  "type": "色",
-  "label": "右の長靴の口が黄色",
-  "line": "右の長靴の口が、黄色くなりました。",
-  "voice": "みぎの、ながぐつの、くちが、きいろく、なりました。",
+  "type": "数",
+  "label": "戸の格子が1本少ない",
+  "line": "戸の格子が、1本少なくなりました。",
+  "voice": "との、こうしが、いっぽん、すくなくなりました。",
   "box": [
-   950,
-   1335,
-   1170,
-   1432
+   1050,
+   140,
+   1235,
+   700
   ],
-  "object_w": 210,
-  "prompt": "Edit this picture-book illustration: recolor ONLY the dark navy-blue top cuff band (the opening rim at the top) of the RIGHT-hand red rain boot so that it becomes clearly bright YELLOW, keeping the same shape, thick outlines and shading. The red boot body, the left boot, the snow and everything else stay exactly the same."
+  "object_w": 190,
+  "prompt": "Edit this picture-book illustration: in the right-hand sliding door, there are three tall vertical wooden lattice bars in the upper paper-pane section. Remove ONLY the MIDDLE one of these three vertical bars completely (the whole bar from top to bottom), and repaint its place as plain cream paper pane like the neighbouring panes. The two horizontal cross rails stay but simply continue across the gap. The other two vertical bars, the door frame, the broom and everything else stay exactly the same."
  },
  {
   "q": 8,
