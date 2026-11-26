@@ -1,1 +1,1 @@
-{"crop": [335, 1410, 835, 1910], "prompt": "Edit this picture-book illustration: add exactly ONE more single straw sandal (zori) lying on the wooden floor immediately to the RIGHT of the existing pair of straw sandals (the pair is on the left side of this image), same weave style, size and colors, slightly angled. It must lie flat on the floor. Do not change the existing sandals or the wall.", "box": [515, 1560, 655, 1760]}
+{"crop": [297, 1338, 823, 1864], "method": "copy of existing object pasted (no image API)", "box": [489, 1488, 632, 1714]}

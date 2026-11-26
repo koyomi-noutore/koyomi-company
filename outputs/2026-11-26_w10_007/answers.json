@@ -460,8 +460,8 @@
     {
      "id": 1,
      "type": "色",
-     "label": "植木鉢が青",
-     "line": "棚の植木鉢が、青くなりました。",
+     "label": "植木鉢が黄色",
+     "line": "棚の植木鉢が、黄色になりました。",
      "box_px": [
       1450,
       384,
@@ -1264,14 +1264,14 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 0,
-   "outside_box_max_distance_px": 0.0,
+   "outside_box_pixels_diff_gt15": 131,
+   "outside_box_max_distance_px": 7.0,
    "answers": [
     {
      "id": 1,
      "type": "色",
-     "label": "提灯のふたが赤",
-     "line": "ちょうちんのふたが、赤くなりました。",
+     "label": "提灯のふたが青",
+     "line": "ちょうちんのふたが、青くなりました。",
      "box_px": [
       330,
       680,
@@ -1307,36 +1307,36 @@
     },
     {
      "id": 2,
-     "type": "数",
-     "label": "松ぼっくりが2つ",
-     "line": "切り株の松ぼっくりが、2つに増えました。",
+     "type": "色",
+     "label": "松ぼっくりが緑",
+     "line": "切り株の松ぼっくりが、緑になりました。",
      "box_px": [
       290,
       1240,
-      520,
-      1390
+      420,
+      1380
      ],
      "box_screen": [
       150,
       641,
-      269,
-      719
+      217,
+      714
      ],
      "circle_a_screen": [
       150,
       641,
-      269,
-      719
+      217,
+      714
      ],
      "circle_b_screen": [
       150,
       641,
-      269,
-      719
+      217,
+      714
      ],
-     "object_w_px": 120,
-     "object_picture_width_pct": 6.47,
-     "object_screen_width_pct": 3.23,
+     "object_w_px": 130,
+     "object_picture_width_pct": 7.0,
+     "object_screen_width_pct": 3.5,
      "in_level_range": true,
      "in_safe_y": true,
      "edit_version": "swap",
@@ -1345,32 +1345,32 @@
     },
     {
      "id": 3,
-     "type": "色",
-     "label": "雪うさぎの耳の葉が赤",
-     "line": "雪うさぎの耳の葉が、赤くなりました。",
+     "type": "形",
+     "label": "雪うさぎの耳の葉が丸い",
+     "line": "雪うさぎの耳の葉が、丸くなりました。",
      "box_px": [
-      1580,
-      1190,
-      1720,
-      1300
+      1550,
+      1150,
+      1750,
+      1310
      ],
      "box_screen": [
-      817,
-      616,
-      890,
-      672
+      802,
+      595,
+      905,
+      678
      ],
      "circle_a_screen": [
-      817,
-      616,
-      890,
-      672
+      802,
+      595,
+      905,
+      678
      ],
      "circle_b_screen": [
-      817,
-      616,
-      890,
-      672
+      802,
+      595,
+      905,
+      678
      ],
      "object_w_px": 140,
      "object_picture_width_pct": 7.54,

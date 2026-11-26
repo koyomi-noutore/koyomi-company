@@ -7,3 +7,5 @@
 {"time": "2026-11-26T02:52:07+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 672, "output_tokens": 1120, "total_tokens": 2097}
 {"time": "2026-11-26T02:55:41+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 676, "output_tokens": 1120, "total_tokens": 2012}
 {"time": "2026-11-26T02:59:18+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 683, "output_tokens": 1120, "total_tokens": 2058}
+{"time": "2026-11-26T03:17:37+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 679, "output_tokens": 1120, "total_tokens": 2017}
+{"time": "2026-11-26T03:18:41+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 678, "output_tokens": 1120, "total_tokens": 2055}

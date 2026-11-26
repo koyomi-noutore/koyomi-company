@@ -18,26 +18,26 @@
  {
   "q": 3,
   "id": 2,
-  "type": "なくなる",
-  "label": "雪だるまがない",
-  "line": "左の雪だるまが、なくなりました。",
-  "voice": "ひだりの、ゆきだるまが、なくなりました。",
+  "type": "色",
+  "label": "ほうきの穂が赤",
+  "line": "ほうきの穂が、赤くなりました。",
+  "voice": "ほうきの、ほが、あかく、なりました。",
   "box": [
-   30,
-   600,
-   385,
-   1010
+   240,
+   1640,
+   540,
+   2080
   ],
-  "object_w": 215,
-  "prompt": "Edit this picture-book illustration: erase the small snowman standing at the left, INCLUDING both of its brown twig arms (the left twig arm reaches out to the very left edge of the snowman, remove it completely), the carrot nose and the coal eyes and buttons, and repaint that whole area as the plain snowy ground and the wooden fence/wall behind it, matching the surroundings exactly. The result must contain NO snowman, no twig, no snow lump, no outline and no shadow where it stood. Do not change the wooden post, the broom or the stove."
+  "object_w": 250,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the straw bristles (the bushy yellow straw head at the bottom) of the broom leaning at the left so that they become clearly bright RED, keeping the same shape, size, thick outlines and straw texture. The wooden broom handle, the post, the snow and everything else stay exactly the same."
  },
  {
   "q": 6,
   "id": 3,
   "type": "色",
-  "label": "つぼが緑",
-  "line": "右下のつぼが、緑になりました。",
-  "voice": "みぎしたの、つぼが、みどりに、なりました。",
+  "label": "つぼが赤",
+  "line": "右下のつぼが、赤くなりました。",
+  "voice": "みぎしたの、つぼが、あかく、なりました。",
   "box": [
    1410,
    1650,
@@ -45,15 +45,15 @@
    2080
   ],
   "object_w": 340,
-  "prompt": "Edit this picture-book illustration: recolor ONLY the brown clay jar (pot with a lid) at the bottom right so that it becomes clearly GREEN (a celadon / jade green glaze), keeping the same shape, size, thick outlines and shading. The floor and everything else stay exactly the same."
+  "prompt": "Edit this picture-book illustration: recolor ONLY the brown clay jar (pot with a lid) at the bottom right so that it becomes clearly bright RED (a red glaze), keeping the same shape, size, thick outlines and shading. The floor and everything else stay exactly the same."
  },
  {
   "q": 9,
   "id": 1,
   "type": "色",
   "label": "街灯の電球が青",
-  "line": "右の街灯の、あかりが、青くなりました。",
-  "voice": "みぎの、がいとうの、あかりが、あおく、なりました。",
+  "line": "街灯の灯りが、青くなりました。",
+  "voice": "がいとうの、あかりが、あおく、なりました。",
   "box": [
    1350,
    590,
@@ -83,26 +83,26 @@
   "q": 9,
   "id": 3,
   "type": "増える",
-  "label": "小鳥が増える",
-  "line": "雪の上に、小鳥が、1羽、増えました。",
-  "voice": "ゆきのうえに、ことりが、いちわ、ふえました。",
+  "label": "小さな雪だるまが増える",
+  "line": "雪の上に、小さな雪だるまが、1つ、増えました。",
+  "voice": "ゆきのうえに、ちいさな、ゆきだるまが、ひとつ、ふえました。",
   "box": [
    1290,
    1490,
    1510,
    1710
   ],
-  "object_w": 105,
-  "context": "雪の商店街の道に、スズメが1羽とまっているのは自然",
-  "prompt": "Edit this picture-book illustration: add ONE tiny brown sparrow standing on the snowy ground, placed at the CENTER of this image (the whole bird fully inside the picture). The sparrow must be SMALL: its total width (beak to tail) is only about one sixth of the width of this image, so most of the image stays empty snow. Same thick dark outlines and watercolor picture-book style. Do not add anything else."
+  "object_w": 120,
+  "context": "雪の商店街の道に、子どもが作った小さな雪だるまがあるのは自然",
+  "prompt": "Edit this picture-book illustration: add ONE tiny snowman (two stacked snowballs, two coal eyes, a small orange carrot nose, two twig arms) standing on the snowy ground, placed at the CENTER of this image. It must be SMALL: its width is only about one quarter of the width of this image. Same thick dark outlines and watercolor picture-book style. Do not add anything else."
  },
  {
   "q": 10,
   "id": 1,
   "type": "色",
   "label": "葉っぱが赤",
-  "line": "雪うさぎの葉っぱが、赤くなりました。",
-  "voice": "ゆきうさぎの、はっぱが、あかく、なりました。",
+  "line": "雪うさぎの葉が、赤くなりました。",
+  "voice": "ゆきうさぎの、はが、あかく、なりました。",
   "box": [
    340,
    1020,
@@ -132,17 +132,17 @@
   "q": 10,
   "id": 3,
   "type": "増える",
-  "label": "みかんが増える",
-  "line": "雪の石の上に、みかんが、1つ、増えました。",
-  "voice": "ゆきの、いしのうえに、みかんが、ひとつ、ふえました。",
+  "label": "松ぼっくりが増える",
+  "line": "雪の石の上に、松ぼっくりが、1つ、増えました。",
+  "voice": "ゆきの、いしのうえに、まつぼっくりが、ひとつ、ふえました。",
   "box": [
    670,
    1470,
    890,
    1690
   ],
-  "object_w": 100,
-  "context": "雪の石段の上にみかんが1つ置いてあるのは自然（お供え・おやつ）",
-  "prompt": "Edit this picture-book illustration: add ONE single round orange mandarin (with a small green leaf on top) sitting on the flat snow-covered top of the large stone step, placed at the CENTER of this image. The mandarin is SMALL: its diameter is only about one quarter (25 percent) of the width of this image. Same thick dark outlines and watercolor picture-book style. Do not add anything else."
+  "object_w": 110,
+  "context": "雪の石段の上に松ぼっくりが落ちているのは自然",
+  "prompt": "Edit this picture-book illustration: add ONE brown pine cone lying on the flat snow-covered top of the large stone step, placed at the CENTER of this image. It is SMALL: its length is only about one quarter of the width of this image. Same thick dark outlines and watercolor picture-book style. Do not add anything else."
  }
 ]

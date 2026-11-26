@@ -67,9 +67,9 @@
   "q": 10,
   "id": 1,
   "type": "色",
-  "label": "提灯のふたが赤",
-  "line": "ちょうちんのふたが、赤くなりました。",
-  "voice": "ちょうちんの、ふたが、あかくなりました。",
+  "label": "提灯のふたが青",
+  "line": "ちょうちんのふたが、青くなりました。",
+  "voice": "ちょうちんの、ふたが、あおくなりました。",
   "box": [
    330,
    680,
@@ -77,48 +77,47 @@
    750
   ],
   "object_w": 140,
-  "prompt": "Edit this picture-book illustration: recolor ONLY the small dark grey/black metal cap at the very bottom of the hanging paper lantern (center-left of this image) so that it becomes clearly bright RED, keeping the same shape, thick outline and shading. The paper lantern body, its lines and everything else stay exactly the same."
+  "prompt": "Edit this picture-book illustration: recolor ONLY the small dark grey/black metal cap at the very bottom of the hanging paper lantern (center-left of this image) so that it becomes clearly bright BLUE, keeping the same shape, thick outline and shading. The paper lantern body, its lines and everything else stay exactly the same."
  },
  {
   "q": 10,
   "id": 2,
-  "type": "数",
-  "label": "松ぼっくりが2つ",
-  "line": "切り株の松ぼっくりが、2つに増えました。",
-  "voice": "きりかぶの、まつぼっくりが、ふたつに、ふえました。",
+  "type": "色",
+  "label": "松ぼっくりが緑",
+  "line": "切り株の松ぼっくりが、緑になりました。",
+  "voice": "きりかぶの、まつぼっくりが、みどりに、なりました。",
   "box": [
    290,
    1240,
-   520,
-   1390
+   420,
+   1380
   ],
-  "object_w": 120,
-  "prompt": "Edit this picture-book illustration: on top of the snowy tree stump in the center of this image there is already one brown pine cone. Add exactly ONE more pine cone of the same kind, slightly smaller, resting on the flat snowy top of the stump just to the RIGHT of the existing pine cone, clearly sitting on the snow. Same watercolor picture-book style with thick dark outlines. Keep the existing pine cone, the stump and everything else exactly the same.",
-  "context": "雪の積もった切り株の上に、松ぼっくりが置かれている。切り株の上は物を置ける平らな所で、2つ並んでもふつう。"
+  "object_w": 130,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the brown pine cone sitting on top of the snowy tree stump in the center of this image so that it becomes clearly GREEN (a green pine cone), keeping the same shape, scales, thick outlines and shading. The stump, its snow and everything else stay exactly the same."
  },
  {
   "q": 10,
   "id": 3,
-  "type": "色",
-  "label": "雪うさぎの耳の葉が赤",
-  "line": "雪うさぎの耳の葉が、赤くなりました。",
-  "voice": "ゆきうさぎの、みみの、はが、あかくなりました。",
+  "type": "形",
+  "label": "雪うさぎの耳の葉が丸い",
+  "line": "雪うさぎの耳の葉が、丸くなりました。",
+  "voice": "ゆきうさぎの、みみの、はが、まるく、なりました。",
   "box": [
-   1580,
-   1190,
-   1720,
-   1300
+   1550,
+   1150,
+   1750,
+   1310
   ],
   "object_w": 140,
-  "prompt": "Edit this picture-book illustration: recolor ONLY the two green leaves that serve as the ears of the little snow rabbit (center of this image) so that they become clearly bright RED, keeping the same leaf shape, thick outlines and veins. The snow rabbit's white body, face and everything else stay exactly the same."
+  "prompt": "Edit this picture-book illustration: redraw the two ear leaves of the little snow rabbit (center of this image) as two ROUND, plump, almost circular green leaves (like round coins, each with a short stem and one center vein), crisp thick dark outline, flat clean watercolor green, positioned where the old pointed leaves were. The old pointed leaves must be completely gone: repaint the area behind and around them as clean white snow and the pale blue background trees. No blur, no halo, no smear. The snow rabbit's white body, face and everything else stay exactly the same."
  },
  {
   "q": 4,
   "id": 1,
   "type": "色",
-  "label": "植木鉢が青",
-  "line": "棚の植木鉢が、青くなりました。",
-  "voice": "たなの、うえきばちが、あおくなりました。",
+  "label": "植木鉢が黄色",
+  "line": "棚の植木鉢が、黄色になりました。",
+  "voice": "たなの、うえきばちが、きいろに、なりました。",
   "box": [
    1450,
    384,
@@ -126,6 +125,6 @@
    564
   ],
   "object_w": 210,
-  "prompt": "Edit this picture-book illustration: recolor ONLY the terracotta flower pot (holding the green plant, standing on the wall shelf at the upper right of this image) so that it becomes clearly bright BLUE, keeping the same shape, thick outlines and shading. The green plant, the shelf and everything else stay exactly the same."
+  "prompt": "Edit this picture-book illustration: recolor ONLY the terracotta flower pot (holding the green plant, standing on the wall shelf at the upper right of this image) so that it becomes clearly bright YELLOW, keeping the same shape, thick outlines and shading. The green plant, the shelf and everything else stay exactly the same."
  }
 ]

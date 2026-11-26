@@ -8,13 +8,13 @@
   "voice": "とっくりが、いっぽん、ふえました。",
   "context": "雪の岩の上に置かれた徳利。2本並んでいてもふつう",
   "box": [
-   1290,
-   1480,
-   1600,
-   1870
+   1240,
+   1485,
+   1429,
+   1832
   ],
-  "object_w": 150,
-  "prompt": "Edit this picture-book illustration: add exactly ONE more blue-and-white sake bottle (tokkuri), the same style and about the same size as the existing one, standing upright on the snowy rock immediately to the LEFT of the existing bottle (the existing bottle is on the right side of this image). Its base must rest on the snow-covered rock surface. Do not change the existing bottle."
+  "object_w": 170,
+  "prompt": "(画像APIは使わず、元の絵の物を複製して貼った)"
  },
  {
   "q": 5,
@@ -37,17 +37,17 @@
   "id": 1,
   "type": "増える",
   "label": "ぞうりが増える",
-  "line": "ぞうりが、1足、増えました。",
-  "voice": "ぞうりが、いっそく、ふえました。",
+  "line": "ぞうりが、1つ、増えました。",
+  "voice": "ぞうりが、ひとつ、ふえました。",
   "context": "入口の床に置かれたぞうり。何足あってもふつう",
   "box": [
-   555,
-   1715,
-   785,
-   1870
+   489,
+   1488,
+   632,
+   1714
   ],
-  "object_w": 210,
-  "prompt": "Edit this picture-book illustration: add exactly ONE more single straw sandal (zori) lying on the wooden floor immediately to the RIGHT of the existing pair of straw sandals (the pair is on the left side of this image), same weave style, size and colors, slightly angled. It must lie flat on the floor. Do not change the existing sandals or the wall."
+  "object_w": 130,
+  "prompt": "(画像APIは使わず、元の絵の物を複製して貼った)"
  },
  {
   "q": 9,
@@ -101,17 +101,17 @@
   "q": 10,
   "id": 1,
   "type": "色",
-  "label": "うさぎの左の葉が黄色",
-  "line": "左の葉が、黄色くなりました。",
-  "voice": "ひだりの、はが、きいろくなりました。",
+  "label": "うさぎの右の葉が青",
+  "line": "うさぎの右の葉が、青くなりました。",
+  "voice": "うさぎの、みぎの、はが、あおくなりました。",
   "box": [
-   340,
-   1020,
-   470,
-   1130
+   430,
+   990,
+   520,
+   1120
   ],
   "object_w": 113,
-  "prompt": "Edit this picture-book illustration: recolor ONLY the LEFT green leaf (the one leaning left) on the snow rabbit's head so that it becomes clearly YELLOW, keeping the same shape and thick outline. The right leaf stays green. The rabbit and everything else stay exactly the same."
+  "prompt": "Edit this picture-book illustration: recolor ONLY the RIGHT green leaf (the one standing upright on the right) on the snow rabbit's head so that it becomes clearly bright BLUE, keeping the same shape, veins and thick outline. The left leaf stays green. The rabbit and everything else stay exactly the same."
  },
  {
   "q": 10,
