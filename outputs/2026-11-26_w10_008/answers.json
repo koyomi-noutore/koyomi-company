@@ -1129,8 +1129,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 371,
-   "outside_box_max_distance_px": 8.0,
+   "outside_box_pixels_diff_gt15": 0,
+   "outside_box_max_distance_px": 0.0,
    "answers": [
     {
      "id": 1,
@@ -1210,37 +1210,37 @@
     },
     {
      "id": 3,
-     "type": "増える",
-     "label": "小さな雪だるまが増える",
-     "line": "小さな雪だるまが、増えました。",
+     "type": "なくなる",
+     "label": "ボタンがない",
+     "line": "雪だるまのボタンが、なくなりました。",
      "box_px": [
-      1290,
-      1490,
-      1510,
-      1710
+      850,
+      1010,
+      970,
+      1200
      ],
      "box_screen": [
-      667,
-      771,
-      781,
-      884
+      440,
+      522,
+      502,
+      621
      ],
      "circle_a_screen": [
-      667,
-      771,
-      781,
-      884
+      440,
+      522,
+      502,
+      621
      ],
      "circle_b_screen": [
-      667,
-      771,
-      781,
-      884
+      440,
+      522,
+      502,
+      621
      ],
-     "object_w_px": 120,
-     "object_picture_width_pct": 6.47,
-     "object_screen_width_pct": 3.23,
-     "in_level_range": true,
+     "object_w_px": 100,
+     "object_picture_width_pct": 5.39,
+     "object_screen_width_pct": 2.69,
+     "in_level_range": false,
      "in_safe_y": true,
      "edit_version": "swap",
      "made_by": "gemini",
@@ -1264,43 +1264,43 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 3,
-   "outside_box_max_distance_px": 2.0,
+   "outside_box_pixels_diff_gt15": 107,
+   "outside_box_max_distance_px": 7.0,
    "answers": [
     {
      "id": 1,
      "type": "色",
-     "label": "葉っぱが赤",
-     "line": "雪うさぎの葉が、赤くなりました。",
+     "label": "雨どいが赤",
+     "line": "左の雨どいが、赤くなりました。",
      "box_px": [
-      340,
-      1020,
-      510,
-      1145
+      345,
+      30,
+      495,
+      585
      ],
      "box_screen": [
-      176,
-      528,
-      264,
-      592
+      178,
+      16,
+      256,
+      303
      ],
      "circle_a_screen": [
-      176,
-      528,
-      264,
-      592
+      178,
+      16,
+      256,
+      303
      ],
      "circle_b_screen": [
-      176,
-      528,
-      264,
-      592
+      178,
+      16,
+      256,
+      303
      ],
-     "object_w_px": 128,
-     "object_picture_width_pct": 6.9,
-     "object_screen_width_pct": 3.45,
+     "object_w_px": 130,
+     "object_picture_width_pct": 7.0,
+     "object_screen_width_pct": 3.5,
      "in_level_range": true,
-     "in_safe_y": true,
+     "in_safe_y": false,
      "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
@@ -1309,7 +1309,7 @@
      "id": 2,
      "type": "色",
      "label": "ランタンのガラスが黄色",
-     "line": "ランタンのガラスが、黄色くなりました。",
+     "line": "壁のランタンのガラスが、黄色くなりました。",
      "box_px": [
       1490,
       480,
@@ -1346,31 +1346,31 @@
     {
      "id": 3,
      "type": "増える",
-     "label": "松ぼっくりが増える",
-     "line": "石の上に、松ぼっくりが、増えました。",
+     "label": "つららが1本増える",
+     "line": "屋根に、つららが、1本、増えました。",
      "box_px": [
-      670,
-      1470,
-      890,
-      1690
+      950,
+      285,
+      1080,
+      405
      ],
      "box_screen": [
-      347,
-      760,
-      460,
-      874
+      491,
+      147,
+      559,
+      209
      ],
      "circle_a_screen": [
-      347,
-      760,
-      460,
-      874
+      491,
+      147,
+      559,
+      209
      ],
      "circle_b_screen": [
-      347,
-      760,
-      460,
-      874
+      491,
+      147,
+      559,
+      209
      ],
      "object_w_px": 110,
      "object_picture_width_pct": 5.93,

@@ -23,3 +23,6 @@
 {"time": "2026-11-26T03:28:35+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 695, "output_tokens": 1120, "total_tokens": 2061}
 {"time": "2026-11-26T03:29:29+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 683, "output_tokens": 1120, "total_tokens": 2011}
 {"time": "2026-11-26T03:56:30+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 703, "output_tokens": 1120, "total_tokens": 2082}
+{"time": "2026-11-26T04:40:08+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 696, "output_tokens": 1120, "total_tokens": 2067}
+{"time": "2026-11-26T04:40:24+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 682, "output_tokens": 1120, "total_tokens": 2004}
+{"time": "2026-11-26T04:41:18+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 714, "output_tokens": 1120, "total_tokens": 2082}

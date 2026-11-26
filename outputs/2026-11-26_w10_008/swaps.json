@@ -98,43 +98,42 @@
  {
   "q": 9,
   "id": 3,
-  "type": "増える",
-  "label": "小さな雪だるまが増える",
-  "line": "小さな雪だるまが、増えました。",
-  "voice": "ちいさな、ゆきだるまが、ふえました。",
+  "type": "なくなる",
+  "label": "ボタンがない",
+  "line": "雪だるまのボタンが、なくなりました。",
+  "voice": "ゆきだるまの、ぼたんが、なくなりました。",
   "box": [
-   1290,
-   1490,
-   1510,
-   1710
+   850,
+   1010,
+   970,
+   1200
   ],
-  "object_w": 120,
-  "context": "雪の商店街の道に、子どもが作った小さな雪だるまがあるのは自然",
-  "prompt": "Edit this picture-book illustration: add ONE tiny snowman (two stacked snowballs, two coal eyes, a small orange carrot nose, two twig arms) standing on the snowy ground, placed at the CENTER of this image. It must be SMALL: its width is only about one quarter of the width of this image. Same thick dark outlines and watercolor picture-book style. Do not add anything else."
+  "object_w": 100,
+  "prompt": "Edit this picture-book illustration: remove ONLY the two black round coal buttons in the middle of the big snowman's chest (middle snowball), so that this part is plain smooth white snow. Repaint the spots as the same white snow with soft blue shading, no ghost, no outline, no dots left. The snowman's face, mouth, the red hat and everything else stay exactly the same."
  },
  {
   "q": 10,
   "id": 1,
   "type": "色",
-  "label": "葉っぱが赤",
-  "line": "雪うさぎの葉が、赤くなりました。",
-  "voice": "ゆきうさぎの、はが、あかく、なりました。",
+  "label": "雨どいが赤",
+  "line": "左の雨どいが、赤くなりました。",
+  "voice": "ひだりの、あまどいが、あかく、なりました。",
   "box": [
-   340,
-   1020,
-   510,
-   1145
+   345,
+   30,
+   495,
+   585
   ],
-  "object_w": 128,
-  "prompt": "Edit this picture-book illustration: recolor ONLY the two small green leaves (the ears) on top of the tiny snow bunny so that they become clearly bright RED, same shape, thick outlines and position. The snow bunny's white body, the rock and everything else stay exactly the same."
+  "object_w": 130,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the grey vertical rain gutter pipe (downspout) running down along the left of the wooden wall, including its small bracket, so that it becomes clearly bright RED, same shape, size and thick outlines. The wall, the fence, the sky and everything else stay exactly the same."
  },
  {
   "q": 10,
   "id": 2,
   "type": "色",
   "label": "ランタンのガラスが黄色",
-  "line": "ランタンのガラスが、黄色くなりました。",
-  "voice": "ランタンの、ガラスが、きいろく、なりました。",
+  "line": "壁のランタンのガラスが、黄色くなりました。",
+  "voice": "かべの、らんたんの、がらすが、きいろく、なりました。",
   "box": [
    1490,
    480,
@@ -148,17 +147,17 @@
   "q": 10,
   "id": 3,
   "type": "増える",
-  "label": "松ぼっくりが増える",
-  "line": "石の上に、松ぼっくりが、増えました。",
-  "voice": "いしのうえに、まつぼっくりが、ふえました。",
+  "label": "つららが1本増える",
+  "line": "屋根に、つららが、1本、増えました。",
+  "voice": "やねに、つららが、いっぽん、ふえました。",
   "box": [
-   670,
-   1470,
-   890,
-   1690
+   950,
+   285,
+   1080,
+   405
   ],
   "object_w": 110,
-  "context": "雪の石段の上に松ぼっくりが落ちているのは自然",
-  "prompt": "Edit this picture-book illustration: add ONE brown pine cone lying on the flat snow-covered top of the large stone step, placed at the CENTER of this image. It is SMALL: its length is only about one quarter of the width of this image. Same thick dark outlines and watercolor picture-book style. Do not add anything else."
+  "context": "雪の積もった軒の下につららが下がるのは自然",
+  "prompt": "Edit this picture-book illustration: add ONE small icicle (a single translucent pale blue and white ice spike with thick dark outline) hanging straight down from the underside of the snow-covered roof edge, placed at the CENTER of this image, attached to the roof edge. It must be SMALL: about 90 percent as wide as a fence board and only about one fifth of the height of this image. Same thick dark outlines and watercolor picture-book style. Do not add anything else."
  }
 ]
