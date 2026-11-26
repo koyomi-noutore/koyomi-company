@@ -1,0 +1,23 @@
+[
+ {"q":8,"id":1,"type":"数","label":"お椀が1つに減る","line":"スープのお椀が、2つから1つに減りました。","voice":"スープの、おわんが、ふたつから、ひとつに、へりました。",
+  "box":[730,1075,950,1225],"object_w":220,
+  "prompt":"Edit this picture-book illustration: on the wooden table there are two bowls of soup. Remove ONLY the LEFT soup bowl (the one at the center of this image, in front of the big pot) and repaint that spot as the plain wooden table top with the same wood grain and the same soft shadow as the table around it. The result must contain no bowl, no bowl outline and no ghost. The big pot, the other bowl on the right and the table stay exactly the same."},
+ {"q":8,"id":3,"type":"なくなる","label":"パンがない","line":"まな板のパンが、なくなりました。","voice":"まないたの、パンが、なくなりました。",
+  "box":[100,830,330,985],"object_w":230,
+  "prompt":"Edit this picture-book illustration: erase ONLY the round loaf of bread that sits on the wooden cutting board in the center of this image. Leave the empty wooden cutting board exactly as it is (with its handle), and repaint the spot where the bread was as the plain board surface with continuing wood grain. The result must contain NO bread, no bread outline and no ghost. The shelf and the wall stay exactly the same."},
+ {"q":9,"id":2,"type":"数","label":"積み石が1つ減る","line":"積み石が、1つ減りました。","voice":"つみいしが、ひとつ、へりました。",
+  "box":[1380,240,1520,330],"object_w":120,
+  "prompt":"Edit this picture-book illustration: the stack of balanced stones (cairn) in the center of this image has three stones. Remove ONLY the smallest TOP stone so that the stack has just two stones (the bottom big stone and the middle one). Repaint the area where the top stone was as plain pale blue sky exactly like the sky around it. The result must contain no third stone, no outline and no ghost. The two lower stones, the grass and everything else stay exactly the same."},
+ {"q":9,"id":3,"type":"色","label":"穂がピンク","line":"手前のススキの穂が、ピンクになりました。","voice":"てまえの、ススキの、ほが、ピンクに、なりました。",
+  "box":[165,1540,305,1705],"object_w":130,
+  "prompt":"Edit this picture-book illustration: recolor ONLY the one fluffy reed plume (the third plume from the left, slanting up to the right, in the lower-left reed cluster at the center of this image) so that it becomes clearly bright PINK, keeping the same shape, thick outlines, frost and shading. The other plumes, the stalks, the leaves, the water and the basket stay exactly the same."},
+ {"q":10,"id":1,"type":"色","label":"提灯の下のふたが赤","line":"ちょうちんの下の黒いふたが、赤くなりました。","voice":"ちょうちんの、したの、くろい、ふたが、あかくなりました。",
+  "box":[330,680,500,750],"object_w":140,
+  "prompt":"Edit this picture-book illustration: recolor ONLY the small dark grey/black metal cap at the very bottom of the hanging paper lantern (center-left of this image) so that it becomes clearly bright RED, keeping the same shape, thick outline and shading. The paper lantern body, its lines and everything else stay exactly the same."},
+ {"q":10,"id":2,"type":"なくなる","label":"松ぼっくりがない","line":"切り株の松ぼっくりが、なくなりました。","voice":"きりかぶの、まつぼっくりが、なくなりました。",
+  "box":[290,1240,420,1380],"object_w":130,
+  "prompt":"Edit this picture-book illustration: erase ONLY the brown pine cone sitting on top of the snowy tree stump in the center of this image. Repaint the spot as the smooth white snow cap of the stump with the same soft blue shading as the snow around it. The result must contain NO pine cone, no outline and no ghost. The stump, its snow and the background trees stay exactly the same."},
+ {"q":10,"id":3,"type":"色","label":"雪うさぎの耳の葉が赤","line":"雪うさぎの耳の葉が、赤くなりました。","voice":"ゆきうさぎの、みみの、はが、あかくなりました。",
+  "box":[1580,1190,1720,1300],"object_w":140,
+  "prompt":"Edit this picture-book illustration: recolor ONLY the two green leaves that serve as the ears of the little snow rabbit (center of this image) so that they become clearly bright RED, keeping the same leaf shape, thick outlines and veins. The snow rabbit's white body, face and everything else stay exactly the same."}
+]

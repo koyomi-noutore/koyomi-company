@@ -1,0 +1,149 @@
+[
+ {
+  "q": 3,
+  "id": 2,
+  "type": "増える",
+  "label": "とっくりが増える",
+  "line": "とっくりが、1本、増えました。",
+  "voice": "とっくりが、いっぽん、ふえました。",
+  "context": "雪の岩の上に置かれた徳利。2本並んでいてもふつう",
+  "box": [
+   1255,
+   1560,
+   1420,
+   1870
+  ],
+  "object_w": 150,
+  "prompt": "Edit this picture-book illustration: add exactly ONE more blue-and-white sake bottle (tokkuri), the same style and about the same size as the existing one, standing upright on the snowy rock immediately to the LEFT of the existing bottle (the existing bottle is on the right side of this image). Its base must rest on the snow-covered rock surface. Do not change the existing bottle."
+ },
+ {
+  "q": 5,
+  "id": 3,
+  "type": "なくなる",
+  "label": "はし置きがない",
+  "line": "はし置きが、なくなりました。",
+  "voice": "はしおきが、なくなりました。",
+  "box": [
+   310,
+   1570,
+   520,
+   1770
+  ],
+  "object_w": 186,
+  "prompt": "Edit this picture-book illustration: erase ONLY the small pale-blue ceramic chopstick rest under the left end of the chopsticks. The chopsticks stay in exactly the same position and shape, lying on the wooden table, their left tips now resting directly on the table. Repaint the area under it as plain wooden table with the same grain and a soft shadow."
+ },
+ {
+  "q": 6,
+  "id": 1,
+  "type": "増える",
+  "label": "ぞうりが増える",
+  "line": "ぞうりが、1足、増えました。",
+  "voice": "ぞうりが、いっそく、ふえました。",
+  "context": "入口の床に置かれたぞうり。何足あってもふつう",
+  "box": [
+   515,
+   1560,
+   655,
+   1760
+  ],
+  "object_w": 140,
+  "prompt": "Edit this picture-book illustration: add exactly ONE more single straw sandal (zori) lying on the wooden floor immediately to the RIGHT of the existing pair of straw sandals (the pair is on the left side of this image), same weave style, size and colors, slightly angled. It must lie flat on the floor. Do not change the existing sandals or the wall."
+ },
+ {
+  "q": 9,
+  "id": 1,
+  "type": "色",
+  "label": "こけしの花が青",
+  "line": "こけしの花が、青くなりました。",
+  "voice": "こけしの、はなが、あおくなりました。",
+  "box": [
+   140,
+   28,
+   262,
+   360
+  ],
+  "object_w": 119,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the red and orange flower pattern painted on the body of the kokeshi doll so that the flowers become clearly bright BLUE, keeping the same shapes and thick outlines. The face, hair, green leaves, the doll's shape and the background stay exactly the same."
+ },
+ {
+  "q": 9,
+  "id": 2,
+  "type": "色",
+  "label": "鈴のひもが青",
+  "line": "鈴のひもが、青くなりました。",
+  "voice": "すずの、ひもが、あおくなりました。",
+  "box": [
+   1640,
+   785,
+   1775,
+   1110
+  ],
+  "object_w": 115,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the twisted rope cord and its small tassel hanging from the silver bell so that they become clearly bright BLUE, keeping the same shape and thick outlines. The silver bell and everything else stay exactly the same."
+ },
+ {
+  "q": 9,
+  "id": 3,
+  "type": "なくなる",
+  "label": "窓の外の木がない",
+  "line": "窓の外の木が、なくなりました。",
+  "voice": "まどの、そとの、きが、なくなりました。",
+  "box": [
+   1170,
+   30,
+   1320,
+   260
+  ],
+  "object_w": 120,
+  "prompt": "Edit this picture-book illustration: erase ONLY the small bare tree (thin brown trunk and branches) seen through the right-hand window pane, and repaint that area as plain snowy field and pale winter sky like the rest of the view outside. Keep the window frame and bars exactly the same."
+ },
+ {
+  "q": 10,
+  "id": 1,
+  "type": "色",
+  "label": "うさぎの左の葉が黄色",
+  "line": "雪うさぎの左の葉が、黄色くなりました。",
+  "voice": "ゆきうさぎの、ひだりの、はが、きいろくなりました。",
+  "box": [
+   340,
+   1020,
+   470,
+   1130
+  ],
+  "object_w": 113,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the LEFT green leaf (the one leaning left) on the snow rabbit's head so that it becomes clearly YELLOW, keeping the same shape and thick outline. The right leaf stays green. The rabbit and everything else stay exactly the same."
+ },
+ {
+  "q": 10,
+  "id": 2,
+  "type": "増える",
+  "label": "雲が増える",
+  "line": "空に、雲が、増えました。",
+  "voice": "そらに、くもが、ふえました。",
+  "context": "冬の空に浮かぶ雲。風景に雲があってもふつう",
+  "box": [
+   1480,
+   120,
+   1690,
+   260
+  ],
+  "object_w": 145,
+  "prompt": "Edit this picture-book illustration: add exactly ONE small white fluffy cloud in the empty pale blue sky in the middle of this image. The cloud is small: about one third of the width of this image, drawn with soft thin outline in the same watercolor style. Do not change the trees or anything else."
+ },
+ {
+  "q": 10,
+  "id": 3,
+  "type": "色",
+  "label": "灯籠の窓が黄色",
+  "line": "右の灯籠の窓が、黄色くなりました。",
+  "voice": "みぎの、とうろうの、まどが、きいろくなりました。",
+  "box": [
+   1735,
+   810,
+   1856,
+   890
+  ],
+  "object_w": 118,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the two small blue-grey window openings of the stone lantern's lamp box (the part under its snowy roof) so that they glow clearly warm YELLOW, as if a light is lit inside, keeping the same shapes and thick outlines. The lantern stone and everything else stay exactly the same."
+ }
+]
