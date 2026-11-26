@@ -34,26 +34,26 @@
  {
   "q": 5,
   "id": 3,
-  "type": "なくなる",
-  "label": "ほうきがない",
-  "line": "壁に立てかけたほうきが、なくなりました。",
-  "voice": "かべに、たてかけた、ほうきが、なくなりました。",
+  "type": "色",
+  "label": "右の長靴の口が黄色",
+  "line": "右の長靴の口が、黄色くなりました。",
+  "voice": "みぎの、ながぐつの、くちが、きいろく、なりました。",
   "box": [
+   950,
+   1335,
    1170,
-   528,
-   1419,
-   1310
+   1432
   ],
-  "object_w": 230,
-  "prompt": "Edit this picture-book illustration: erase ONLY the straw broom leaning against the wall on the right side of the sliding door (long handle and straw bristles). Repaint that whole area exactly like the surrounding plaster wall and wooden door frame. The result must contain NO broom and no broom outline. The wooden tub next to it, the door and the snow stay exactly the same."
+  "object_w": 210,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the dark navy-blue top cuff band (the opening rim at the top) of the RIGHT-hand red rain boot so that it becomes clearly bright YELLOW, keeping the same shape, thick outlines and shading. The red boot body, the left boot, the snow and everything else stay exactly the same."
  },
  {
   "q": 8,
   "id": 1,
   "type": "色",
   "label": "右の雪だるまの腕が赤",
-  "line": "右の雪だるまの腕の枝が、赤くなりました。",
-  "voice": "みぎの、ゆきだるまの、うでのえだが、あかくなりました。",
+  "line": "右の雪だるまの腕が、赤くなりました。",
+  "voice": "みぎの、ゆきだるまの、うでが、あかくなりました。",
   "box": [
    1335,
    535,
@@ -84,8 +84,8 @@
   "id": 3,
   "type": "色",
   "label": "左の葉が黄色",
-  "line": "左の雪うさぎの左の葉が、黄色くなりました。",
-  "voice": "ひだりの、ゆきうさぎの、ひだりの、はが、きいろく、なりました。",
+  "line": "左の葉が、黄色くなりました。",
+  "voice": "ひだりの、はが、きいろく、なりました。",
   "box": [
    650,
    1110,
@@ -116,8 +116,8 @@
   "id": 2,
   "type": "色",
   "label": "柱の台が青",
-  "line": "右手前の柱の台が、青くなりました。",
-  "voice": "みぎてまえの、はしらの、だいが、あおくなりました。",
+  "line": "手前の柱の台が、青くなりました。",
+  "voice": "てまえの、はしらの、だいが、あおくなりました。",
   "box": [
    1100,
    1060,

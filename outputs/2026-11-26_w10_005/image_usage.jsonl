@@ -12,3 +12,8 @@
 {"time": "2026-11-26T02:03:19+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 758, "output_tokens": 1120, "total_tokens": 2134}
 {"time": "2026-11-26T02:03:46+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 733, "output_tokens": 1120, "total_tokens": 2148}
 {"time": "2026-11-26T02:09:19+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 713, "output_tokens": 1120, "total_tokens": 2122}
+{"time": "2026-11-26T23:16:05+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 682, "output_tokens": 1120, "total_tokens": 2061}
+{"time": "2026-11-26T23:16:20+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 694, "output_tokens": 1120, "total_tokens": 2018}
+{"time": "2026-11-26T23:25:51+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 690, "output_tokens": 1120, "total_tokens": 2031}
+{"time": "2026-11-26T23:40:55+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 715, "output_tokens": 1120, "total_tokens": 2074}
+{"time": "2026-11-26T23:41:22+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 735, "output_tokens": 1120, "total_tokens": 2158}

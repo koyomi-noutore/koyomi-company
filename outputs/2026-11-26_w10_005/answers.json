@@ -319,8 +319,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 841,
-   "outside_box_max_distance_px": 8.0,
+   "outside_box_pixels_diff_gt15": 0,
+   "outside_box_max_distance_px": 0.0,
    "answers": [
     {
      "id": 1,
@@ -362,36 +362,36 @@
     },
     {
      "id": 2,
-     "type": "色",
-     "label": "とっくりが赤",
-     "line": "とっくりが、赤くなりました。",
+     "type": "増える",
+     "label": "枝が増える",
+     "line": "窓の外の枝が、1本、増えました。",
      "box_px": [
-      1400,
-      615,
-      1660,
-      1005
+      1075,
+      170,
+      1365,
+      330
      ],
      "box_screen": [
-      724,
-      318,
-      859,
-      520
+      556,
+      88,
+      706,
+      171
      ],
      "circle_a_screen": [
-      724,
-      318,
-      859,
-      520
+      556,
+      88,
+      706,
+      171
      ],
      "circle_b_screen": [
-      724,
-      318,
-      859,
-      520
+      556,
+      88,
+      706,
+      171
      ],
-     "object_w_px": 224,
-     "object_picture_width_pct": 12.07,
-     "object_screen_width_pct": 6.03,
+     "object_w_px": 250,
+     "object_picture_width_pct": 13.47,
+     "object_screen_width_pct": 6.73,
      "in_level_range": false,
      "in_safe_y": true,
      "edit_version": "swap",
@@ -400,36 +400,36 @@
     },
     {
      "id": 3,
-     "type": "なくなる",
-     "label": "おたまがない",
-     "line": "おたまが、なくなりました。",
+     "type": "色",
+     "label": "しいたけが紫",
+     "line": "しいたけが、紫色になりました。",
      "box_px": [
-      1160,
-      1480,
-      1730,
-      1775
+      980,
+      1110,
+      1170,
+      1220
      ],
      "box_screen": [
-      600,
-      766,
-      895,
-      918
+      507,
+      574,
+      605,
+      631
      ],
      "circle_a_screen": [
-      600,
-      766,
-      895,
-      918
+      507,
+      574,
+      605,
+      631
      ],
      "circle_b_screen": [
-      600,
-      766,
-      895,
-      918
+      507,
+      574,
+      605,
+      631
      ],
-     "object_w_px": 545,
-     "object_picture_width_pct": 29.36,
-     "object_screen_width_pct": 14.68,
+     "object_w_px": 185,
+     "object_picture_width_pct": 9.97,
+     "object_screen_width_pct": 4.98,
      "in_level_range": false,
      "in_safe_y": true,
      "edit_version": "swap",
