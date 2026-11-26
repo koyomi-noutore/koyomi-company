@@ -1,0 +1,18 @@
+[
+ {
+  "q": 4,
+  "id": 1,
+  "type": "なくなる",
+  "label": "薪が1本ない",
+  "line": "薪が、1本、なくなりました。",
+  "voice": "まきが、いっぽん、なくなりました。",
+  "box": [
+   1130,
+   1380,
+   1620,
+   1775
+  ],
+  "object_w": 200,
+  "prompt": "Edit this picture-book illustration of a tied bundle of firewood logs. Make the bundle have exactly ONE LOG FEWER. Delete completely the lowest log on the RIGHT side of the bundle: the log along the bottom-right whose long body ends at the right edge of the bundle next to the blue snow and ground. Erase it from end to end with its outline, and paint the ground and snow where it was. The rope with its knot and all the other logs stay exactly the same. The result must visibly show one log less than the input, with no ghost outline or leftover piece."
+ }
+]

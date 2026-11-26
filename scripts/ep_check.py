@@ -32,6 +32,7 @@ DIFF_TYPES = ("増える", "なくなる", "色", "形", "向き", "模様", "�
 
 
 UPPER_MAX = 4.0   # 上級（第5問）の大きさの上限（2026-11-25 CEO決定。目安 3.0〜4.0% の上を超えたら止める）
+MIN_BOX_CHANGE_PCT = 4.0   # 答えの範囲の中で変わった画素の割合の下限（合格した回の最小は約6%、見えなかった薪2.7%・つらら1.9%）
 
 
 _ATTR = ("向き", "色", "形", "数", "模様", "大きさ", "柄", "中", "上", "下", "横", "前", "後ろ", "うしろ", "奥", "手前", "左", "右", "端", "先", "底", "内側", "外側", "まわり", "そば", "場所", "位置", "しま", "しま模様", "水玉", "長さ", "高さ", "太さ", "量", "本数", "枚数", "個数", "絵", "線", "すじ")   # 2026-11-26 監査 W10-4-1「毛布のしまの場所」                 # 「〜の向き」のように、物ではなく性質を指す語
@@ -119,6 +120,19 @@ def numeric(out_dir, work):
                 gap = max(gap_x, gap_y) / cw * 100
                 if dist < MIN_CENTER_DIST_PCT or gap < MIN_GAP_PCT:
                     problems.append(f"第{Q['q']}問 違い{ia}と{ib}：近すぎる（中心の距離 {dist:.0f}%・すき間 {gap:.0f}%。目安は中心{MIN_CENTER_DIST_PCT}%以上・すき間{MIN_GAP_PCT}%以上）")
+        # 違いが絵で見えるか（2026-11-26 監査 W10-2-1 つらら・W10-5-1 薪）：答えの範囲の中で左右が変わった画素が少なすぎたら止める
+        try:
+            import numpy as _np
+            _a = _np.asarray(Image.open(out / f"q{Q['q']}_a.png").convert("RGB")).astype(int)
+            _b = _np.asarray(Image.open(out / f"q{Q['q']}_b.png").convert("RGB")).astype(int)
+            _m = _np.abs(_a - _b).max(axis=2) > 25
+            for a in Q["answers"]:
+                x0, y0, x1, y1 = a["box_px"]
+                share = _m[y0:y1, x0:x1].mean() * 100 if (x1 > x0 and y1 > y0) else 0
+                if share < MIN_BOX_CHANGE_PCT:
+                    blocking.append(f"第{Q['q']}問 違い{a['id']}：答えの範囲の中で変わった所が {share:.1f}%しかない（{MIN_BOX_CHANGE_PCT}%未満。絵で違いが見えない／答えと絵が合わない恐れ）")
+        except FileNotFoundError:
+            pass
         for a in Q["answers"]:
             p = a["object_screen_width_pct"]
             if Q["level"] == "上級" and p > UPPER_MAX:   # 2026-11-25 CEO決定：上級は4.0%以下。超えたら止める
