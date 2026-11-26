@@ -53,12 +53,42 @@
    "detail": "audio",
    "sec": 5.6,
    "at": "2026-11-26T03:24:42+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "voice q10_go q1_ans2 q1_card q2_ans2 q3_ans0 q5_go q6_card q6_go q7_ans0 q7_ans1 q7_card q8_ans0",
+   "sec": 17.3,
+   "at": "2026-11-26T03:35:14+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "voice q1_card q6_go q7_ans1",
+   "sec": 4.5,
+   "at": "2026-11-26T03:36:18+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "voice q1_card q6_go q7_ans1",
+   "sec": 5.1,
+   "at": "2026-11-26T03:36:38+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "voice q1_card q6_go",
+   "sec": 2.9,
+   "at": "2026-11-26T03:37:01+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "audio",
+   "sec": 5.3,
+   "at": "2026-11-26T03:37:30+00:00"
   }
  ],
  "total_sec_by_step": {
   "監査（数値チェック）": 34.3,
   "setup": 1.9,
-  "音声": 138.3
+  "音声": 173.4
  },
- "total_sec_all": 174.5
+ "total_sec_all": 209.6
 }
