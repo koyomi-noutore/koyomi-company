@@ -454,43 +454,43 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 808,
+   "outside_box_pixels_diff_gt15": 1002,
    "outside_box_max_distance_px": 9.0,
    "answers": [
     {
      "id": 1,
      "type": "なくなる",
-     "label": "薪が1本ない",
-     "line": "薪が、1本、なくなりました。",
+     "label": "薪の束がない",
+     "line": "薪の束が、なくなりました。",
      "box_px": [
-      1130,
-      1380,
-      1620,
-      1775
+      1100,
+      1300,
+      1660,
+      1800
      ],
      "box_screen": [
-      584,
-      714,
-      838,
-      918
+      569,
+      672,
+      859,
+      931
      ],
      "circle_a_screen": [
-      584,
-      714,
-      838,
-      918
+      569,
+      672,
+      859,
+      931
      ],
      "circle_b_screen": [
-      584,
-      714,
-      838,
-      918
+      569,
+      672,
+      859,
+      931
      ],
-     "object_w_px": 200,
-     "object_picture_width_pct": 10.78,
-     "object_screen_width_pct": 5.39,
-     "in_level_range": true,
-     "in_safe_y": true,
+     "object_w_px": 490,
+     "object_picture_width_pct": 26.4,
+     "object_screen_width_pct": 13.2,
+     "in_level_range": false,
+     "in_safe_y": false,
      "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
