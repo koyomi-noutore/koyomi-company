@@ -49,7 +49,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 551,
+   "outside_box_pixels_diff_gt15": 1468,
    "outside_box_max_distance_px": 7.0,
    "answers": [
     {
@@ -319,7 +319,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 1117,
+   "outside_box_pixels_diff_gt15": 1160,
    "outside_box_max_distance_px": 12.0,
    "answers": [
     {
@@ -366,28 +366,28 @@
      "label": "雪だるまがない",
      "line": "左の雪だるまが、なくなりました。",
      "box_px": [
-      70,
-      620,
-      345,
-      1000
+      30,
+      600,
+      385,
+      1010
      ],
      "box_screen": [
-      36,
-      321,
-      178,
-      517
+      16,
+      310,
+      199,
+      522
      ],
      "circle_a_screen": [
-      36,
-      321,
-      178,
-      517
+      16,
+      310,
+      199,
+      522
      ],
      "circle_b_screen": [
-      36,
-      321,
-      178,
-      517
+      16,
+      310,
+      199,
+      522
      ],
      "object_w_px": 215,
      "object_picture_width_pct": 11.58,
@@ -724,7 +724,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 63,
+   "outside_box_pixels_diff_gt15": 219,
    "outside_box_max_distance_px": 7.0,
    "answers": [
     {
@@ -1214,34 +1214,34 @@
      "label": "小鳥が増える",
      "line": "雪の上に、小鳥が、1羽、増えました。",
      "box_px": [
-      690,
-      1840,
-      870,
-      2010
+      1290,
+      1490,
+      1510,
+      1710
      ],
      "box_screen": [
-      357,
-      952,
-      450,
-      1040
+      667,
+      771,
+      781,
+      884
      ],
      "circle_a_screen": [
-      357,
-      952,
-      450,
-      1040
+      667,
+      771,
+      781,
+      884
      ],
      "circle_b_screen": [
-      357,
-      952,
-      450,
-      1040
+      667,
+      771,
+      781,
+      884
      ],
-     "object_w_px": 125,
-     "object_picture_width_pct": 6.73,
-     "object_screen_width_pct": 3.37,
-     "in_level_range": true,
-     "in_safe_y": false,
+     "object_w_px": 105,
+     "object_picture_width_pct": 5.66,
+     "object_screen_width_pct": 2.83,
+     "in_level_range": false,
+     "in_safe_y": true,
      "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
@@ -1264,8 +1264,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 0,
-   "outside_box_max_distance_px": 0.0,
+   "outside_box_pixels_diff_gt15": 3,
+   "outside_box_max_distance_px": 2.0,
    "answers": [
     {
      "id": 1,
@@ -1346,37 +1346,37 @@
     {
      "id": 3,
      "type": "増える",
-     "label": "リスが増える",
-     "line": "雪の上に、リスが、1匹、増えました。",
+     "label": "みかんが増える",
+     "line": "雪の石の上に、みかんが、1つ、増えました。",
      "box_px": [
-      840,
-      1850,
-      1020,
-      2030
+      670,
+      1470,
+      890,
+      1690
      ],
      "box_screen": [
-      434,
-      957,
-      528,
-      1050
+      347,
+      760,
+      460,
+      874
      ],
      "circle_a_screen": [
-      434,
-      957,
-      528,
-      1050
+      347,
+      760,
+      460,
+      874
      ],
      "circle_b_screen": [
-      434,
-      957,
-      528,
-      1050
+      347,
+      760,
+      460,
+      874
      ],
-     "object_w_px": 135,
-     "object_picture_width_pct": 7.27,
-     "object_screen_width_pct": 3.64,
-     "in_level_range": true,
-     "in_safe_y": false,
+     "object_w_px": 100,
+     "object_picture_width_pct": 5.39,
+     "object_screen_width_pct": 2.69,
+     "in_level_range": false,
+     "in_safe_y": true,
      "edit_version": "swap",
      "made_by": "gemini",
      "note": ""

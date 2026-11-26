@@ -454,44 +454,44 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 176,
+   "outside_box_pixels_diff_gt15": 94,
    "outside_box_max_distance_px": 8.0,
    "answers": [
     {
      "id": 1,
      "type": "色",
-     "label": "マグカップが緑",
-     "line": "左上のマグカップが、緑になりました。",
+     "label": "植木鉢が青",
+     "line": "棚の植木鉢が、青くなりました。",
      "box_px": [
-      199,
-      706,
-      380,
-      852
+      1450,
+      384,
+      1664,
+      564
      ],
      "box_screen": [
-      103,
-      365,
-      197,
-      441
+      750,
+      199,
+      861,
+      292
      ],
      "circle_a_screen": [
-      103,
-      365,
-      197,
-      441
+      750,
+      199,
+      861,
+      292
      ],
      "circle_b_screen": [
-      103,
-      365,
-      197,
-      441
+      750,
+      199,
+      861,
+      292
      ],
-     "object_w_px": 181,
-     "object_picture_width_pct": 9.75,
-     "object_screen_width_pct": 4.88,
-     "in_level_range": false,
+     "object_w_px": 210,
+     "object_picture_width_pct": 11.31,
+     "object_screen_width_pct": 5.66,
+     "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     },
@@ -994,44 +994,44 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 158,
-   "outside_box_max_distance_px": 7.0,
+   "outside_box_pixels_diff_gt15": 30,
+   "outside_box_max_distance_px": 2.0,
    "answers": [
     {
      "id": 1,
-     "type": "数",
-     "label": "マグカップが2個",
-     "line": "左上のカップが、2個に減りました。",
+     "type": "色",
+     "label": "お椀が緑",
+     "line": "スープのお椀が、緑になりました。",
      "box_px": [
-      780,
-      584,
-      970,
-      826
+      730,
+      1075,
+      950,
+      1225
      ],
      "box_screen": [
-      403,
-      302,
-      502,
-      427
+      378,
+      556,
+      491,
+      634
      ],
      "circle_a_screen": [
-      403,
-      302,
-      502,
-      427
+      378,
+      556,
+      491,
+      634
      ],
      "circle_b_screen": [
-      403,
-      302,
-      502,
-      427
+      378,
+      556,
+      491,
+      634
      ],
-     "object_w_px": 190,
-     "object_picture_width_pct": 10.24,
-     "object_screen_width_pct": 5.12,
+     "object_w_px": 220,
+     "object_picture_width_pct": 11.85,
+     "object_screen_width_pct": 5.93,
      "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     },
@@ -1075,39 +1075,39 @@
     },
     {
      "id": 3,
-     "type": "色",
-     "label": "腰かけが緑",
-     "line": "左下の腰かけが、緑になりました。",
+     "type": "模様",
+     "label": "パンの切れ込みが3本線",
+     "line": "パンの切れ込みが、3本の線になりました。",
      "box_px": [
-      276,
-      1481,
-      815,
-      2082
+      100,
+      830,
+      330,
+      985
      ],
      "box_screen": [
-      143,
-      766,
-      422,
-      1077
+      52,
+      429,
+      171,
+      509
      ],
      "circle_a_screen": [
-      143,
-      766,
-      422,
-      1077
+      52,
+      429,
+      171,
+      509
      ],
      "circle_b_screen": [
-      143,
-      766,
-      422,
-      1077
+      52,
+      429,
+      171,
+      509
      ],
-     "object_w_px": 520,
-     "object_picture_width_pct": 28.02,
-     "object_screen_width_pct": 14.01,
+     "object_w_px": 230,
+     "object_picture_width_pct": 12.39,
+     "object_screen_width_pct": 6.2,
      "in_level_range": false,
-     "in_safe_y": false,
-     "edit_version": "1",
+     "in_safe_y": true,
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     }
@@ -1129,8 +1129,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 176,
-   "outside_box_max_distance_px": 11.0,
+   "outside_box_pixels_diff_gt15": 72,
+   "outside_box_max_distance_px": 3.0,
    "answers": [
     {
      "id": 1,
@@ -1172,77 +1172,77 @@
     },
     {
      "id": 2,
-     "type": "なくなる",
-     "label": "おけがない",
-     "line": "右の小さなおけが、なくなりました。",
+     "type": "数",
+     "label": "積み石が1つ減る",
+     "line": "積み石が、1つ減りました。",
      "box_px": [
-      1468,
-      1237,
-      1820,
-      1458
+      1380,
+      240,
+      1520,
+      330
      ],
      "box_screen": [
-      759,
-      640,
-      941,
-      754
+      714,
+      124,
+      786,
+      171
      ],
      "circle_a_screen": [
-      759,
-      640,
-      941,
-      754
+      714,
+      124,
+      786,
+      171
      ],
      "circle_b_screen": [
-      759,
-      640,
-      941,
-      754
+      714,
+      124,
+      786,
+      171
      ],
-     "object_w_px": 330,
-     "object_picture_width_pct": 17.78,
-     "object_screen_width_pct": 8.89,
-     "in_level_range": false,
+     "object_w_px": 120,
+     "object_picture_width_pct": 6.47,
+     "object_screen_width_pct": 3.23,
+     "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     },
     {
      "id": 3,
      "type": "色",
-     "label": "かごが水色",
-     "line": "左下のかごが、水色になりました。",
+     "label": "穂がピンク",
+     "line": "手前のススキの穂が、ピンクになりました。",
      "box_px": [
-      434,
-      1708,
-      677,
-      1962
+      165,
+      1540,
+      305,
+      1705
      ],
      "box_screen": [
-      224,
-      883,
-      350,
-      1015
+      85,
+      797,
+      158,
+      882
      ],
      "circle_a_screen": [
-      224,
-      883,
-      350,
-      1015
+      85,
+      797,
+      158,
+      882
      ],
      "circle_b_screen": [
-      224,
-      883,
-      350,
-      1015
+      85,
+      797,
+      158,
+      882
      ],
-     "object_w_px": 240,
-     "object_picture_width_pct": 12.93,
-     "object_screen_width_pct": 6.47,
-     "in_level_range": false,
-     "in_safe_y": false,
-     "edit_version": "1",
+     "object_w_px": 130,
+     "object_picture_width_pct": 7.0,
+     "object_screen_width_pct": 3.5,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     }
@@ -1264,120 +1264,120 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 122,
-   "outside_box_max_distance_px": 8.0,
+   "outside_box_pixels_diff_gt15": 0,
+   "outside_box_max_distance_px": 0.0,
    "answers": [
     {
      "id": 1,
-     "type": "形",
-     "label": "提灯が四角",
-     "line": "左上の提灯が、四角になりました。",
+     "type": "色",
+     "label": "提灯のふたが赤",
+     "line": "ちょうちんのふたが、赤くなりました。",
      "box_px": [
-      269,
-      263,
-      560,
-      746
+      330,
+      680,
+      500,
+      750
      ],
      "box_screen": [
-      139,
-      136,
-      290,
-      386
+      171,
+      352,
+      259,
+      388
      ],
      "circle_a_screen": [
-      139,
-      136,
-      290,
-      386
+      171,
+      352,
+      259,
+      388
      ],
      "circle_b_screen": [
-      139,
-      136,
-      290,
-      386
+      171,
+      352,
+      259,
+      388
      ],
-     "object_w_px": 260,
-     "object_picture_width_pct": 14.01,
-     "object_screen_width_pct": 7.0,
-     "in_level_range": false,
+     "object_w_px": 140,
+     "object_picture_width_pct": 7.54,
+     "object_screen_width_pct": 3.77,
+     "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     },
     {
      "id": 2,
-     "type": "なくなる",
-     "label": "雪うさぎがない",
-     "line": "右の雪うさぎが、いなくなりました。",
+     "type": "数",
+     "label": "松ぼっくりが2つ",
+     "line": "切り株の松ぼっくりが、2つに増えました。",
      "box_px": [
-      1508,
-      1180,
-      1757,
-      1510
+      290,
+      1240,
+      520,
+      1390
      ],
      "box_screen": [
-      780,
-      610,
-      909,
-      781
+      150,
+      641,
+      269,
+      719
      ],
      "circle_a_screen": [
-      780,
-      610,
-      909,
-      781
+      150,
+      641,
+      269,
+      719
      ],
      "circle_b_screen": [
-      780,
-      610,
-      909,
-      781
+      150,
+      641,
+      269,
+      719
      ],
-     "object_w_px": 249,
-     "object_picture_width_pct": 13.42,
-     "object_screen_width_pct": 6.71,
-     "in_level_range": false,
+     "object_w_px": 120,
+     "object_picture_width_pct": 6.47,
+     "object_screen_width_pct": 3.23,
+     "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     },
     {
      "id": 3,
      "type": "色",
-     "label": "おけが水色",
-     "line": "左下のおけが、水色になりました。",
+     "label": "雪うさぎの耳の葉が赤",
+     "line": "雪うさぎの耳の葉が、赤くなりました。",
      "box_px": [
-      322,
-      1798,
-      626,
-      2012
+      1580,
+      1190,
+      1720,
+      1300
      ],
      "box_screen": [
-      167,
-      930,
-      324,
-      1041
+      817,
+      616,
+      890,
+      672
      ],
      "circle_a_screen": [
-      167,
-      930,
-      324,
-      1041
+      817,
+      616,
+      890,
+      672
      ],
      "circle_b_screen": [
-      167,
-      930,
-      324,
-      1041
+      817,
+      616,
+      890,
+      672
      ],
-     "object_w_px": 304,
-     "object_picture_width_pct": 16.38,
-     "object_screen_width_pct": 8.19,
-     "in_level_range": false,
-     "in_safe_y": false,
-     "edit_version": "1",
+     "object_w_px": 140,
+     "object_picture_width_pct": 7.54,
+     "object_screen_width_pct": 3.77,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     }

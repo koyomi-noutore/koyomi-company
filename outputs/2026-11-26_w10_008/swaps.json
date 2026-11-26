@@ -13,7 +13,7 @@
    2080
   ],
   "object_w": 240,
-  "prompt": "Edit this picture-book illustration: recolor ONLY the orange tabby cat sitting at the bottom right so that it becomes clearly WHITE (cream-white fur with light grey shading, keep its stripes only as faint light-grey lines), same shape, size, pose, thick outlines and position. The snow, the wooden box and everything else stay exactly the same."
+  "prompt": "Edit this picture-book illustration: recolor ONLY the orange tabby cat sitting at the bottom right so that its fur becomes PURE WHITE (clean white fur, with its stripes drawn only as faint light grey lines; no orange or yellow left anywhere on the fur), same shape, size, pose, thick outlines and position. The snow, the wooden box and everything else stay exactly the same."
  },
  {
   "q": 3,
@@ -23,13 +23,13 @@
   "line": "左の雪だるまが、なくなりました。",
   "voice": "ひだりの、ゆきだるまが、なくなりました。",
   "box": [
-   70,
-   620,
-   345,
-   1000
+   30,
+   600,
+   385,
+   1010
   ],
   "object_w": 215,
-  "prompt": "Edit this picture-book illustration: erase the small snowman (with carrot nose and stick arms) standing at the left, and repaint that whole area as the plain snowy ground and the wooden fence/wall behind it, matching the surroundings exactly. The result must contain NO snowman, no snow lump, no outline and no shadow where it stood. Do not change the wooden post, the broom or the stove."
+  "prompt": "Edit this picture-book illustration: erase the small snowman standing at the left, INCLUDING both of its brown twig arms (the left twig arm reaches out to the very left edge of the snowman, remove it completely), the carrot nose and the coal eyes and buttons, and repaint that whole area as the plain snowy ground and the wooden fence/wall behind it, matching the surroundings exactly. The result must contain NO snowman, no twig, no snow lump, no outline and no shadow where it stood. Do not change the wooden post, the broom or the stove."
  },
  {
   "q": 6,
@@ -87,14 +87,14 @@
   "line": "雪の上に、小鳥が、1羽、増えました。",
   "voice": "ゆきのうえに、ことりが、いちわ、ふえました。",
   "box": [
-   690,
-   1840,
-   870,
-   2010
+   1290,
+   1490,
+   1510,
+   1710
   ],
-  "object_w": 125,
+  "object_w": 105,
   "context": "雪の商店街の道に、スズメが1羽とまっているのは自然",
-  "prompt": "Edit this picture-book illustration: add ONE small brown sparrow standing on the snowy ground in the empty snow area at the bottom center of this image. Same thick dark outlines and watercolor picture-book style, about 120 pixels wide. Do not add anything else."
+  "prompt": "Edit this picture-book illustration: add ONE tiny brown sparrow standing on the snowy ground, placed at the CENTER of this image (the whole bird fully inside the picture). The sparrow must be SMALL: its total width (beak to tail) is only about one sixth of the width of this image, so most of the image stays empty snow. Same thick dark outlines and watercolor picture-book style. Do not add anything else."
  },
  {
   "q": 10,
@@ -132,17 +132,17 @@
   "q": 10,
   "id": 3,
   "type": "増える",
-  "label": "リスが増える",
-  "line": "雪の上に、リスが、1匹、増えました。",
-  "voice": "ゆきのうえに、りすが、いっぴき、ふえました。",
+  "label": "みかんが増える",
+  "line": "雪の石の上に、みかんが、1つ、増えました。",
+  "voice": "ゆきの、いしのうえに、みかんが、ひとつ、ふえました。",
   "box": [
-   840,
-   1850,
-   1020,
-   2030
+   670,
+   1470,
+   890,
+   1690
   ],
-  "object_w": 135,
-  "context": "雪の庭の地面に、小さなリスがいるのは自然",
-  "prompt": "Edit this picture-book illustration: add ONE small brown squirrel sitting on the snowy ground in the empty snow area at the bottom center of this image, in front of the stone step. Same thick dark outlines and watercolor picture-book style, about 130 pixels wide. Do not add anything else."
+  "object_w": 100,
+  "context": "雪の石段の上にみかんが1つ置いてあるのは自然（お供え・おやつ）",
+  "prompt": "Edit this picture-book illustration: add ONE single round orange mandarin (with a small green leaf on top) sitting on the flat snow-covered top of the large stone step, placed at the CENTER of this image. The mandarin is SMALL: its diameter is only about one quarter (25 percent) of the width of this image. Same thick dark outlines and watercolor picture-book style. Do not add anything else."
  }
 ]

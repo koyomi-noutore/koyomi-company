@@ -94,6 +94,46 @@ def repeat_problems():
     return out
 
 
+def _change_of(label):
+    """違いの label の「が」より後（変化の言い方。例「窓の外の木がない」→「ない」）。"""
+    lab = str(label)
+    return lab.split("が", 1)[1] if "が" in lab else lab
+
+
+def index_problems(out):
+    """差し替えた違い（swaps.json）が、過去の回（knowledge/episode-index.md）と同じ物・同じ変化になっていないか（2026-11-26 CEO指示）。
+    物が同じでも変化がちがえば重ならないと数える（組A〜Eの見方）。今の回と、元にした2回の行は比べない。"""
+    sw = out / "swaps.json"
+    idx = Path(__file__).resolve().parent.parent / "knowledge/episode-index.md"
+    if not sw.exists() or not idx.exists():
+        return []
+    try:
+        swaps = json.loads(sw.read_text(encoding="utf-8"))
+    except Exception:
+        return []
+    swaps = swaps if isinstance(swaps, list) else swaps.get("swaps", [])
+    from episode_plan import plan as _plan
+    src = [Path(x).name for x in (_plan().get("combined") or {}).get("sources", [])]
+    past = []
+    for line in idx.read_text(encoding="utf-8").splitlines():
+        if not line.startswith("| ") or out.name in line or any(n and n in line for n in src):
+            continue
+        cells = line.split("|")
+        if len(cells) < 5:
+            continue
+        for lab in re.findall(r"（([^（）]+)）", cells[4]):
+            past += [(x.strip(), cells[1].strip()) for x in lab.split("・") if x.strip()]
+    out_ = []
+    for w in swaps:
+        lab = str(w.get("label", ""))
+        objs, ch = _objects_of(lab), _change_of(lab)
+        for plab, where in past:
+            if (_objects_of(plab) & objs or any(_same_obj(a, b) for a in objs for b in _objects_of(plab))) and _change_of(plab) == ch:
+                out_.append(f"第{w.get('q')}問 違い{w.get('id')}：差し替えた「{lab}」が過去の回（{where}「{plab}」）と同じ物・同じ変化（2026-11-26 CEO指示）")
+                break
+    return out_
+
+
 def numeric(out_dir, work):
     out, work = Path(out_dir), Path(work)
     problems, info = [], {}
@@ -157,6 +197,7 @@ def numeric(out_dir, work):
         if sum(t in ("増える", "なくなる") for t in types) > 1:
             problems.append(f"第{Q['q']}問：「増える・なくなる」が{sum(t in ('増える', 'なくなる') for t in types)}つ（1つまで）")
     blocking += repeat_problems()
+    blocking += index_problems(out)
     vj = work / "voice" / "voice.json"
     import ep_timeline as T
     problems += [f"読み・間：{p}" for p in T.readings_check(out / "readings_check.md")]
