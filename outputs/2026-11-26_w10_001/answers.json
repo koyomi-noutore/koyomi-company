@@ -184,43 +184,43 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 167,
+   "outside_box_pixels_diff_gt15": 151,
    "outside_box_max_distance_px": 10.0,
    "answers": [
     {
      "id": 1,
      "type": "色",
-     "label": "かごが黒",
-     "line": "木につるしたかごが、黒くなりました。",
+     "label": "石が青",
+     "line": "左の石が、青くなりました。",
      "box_px": [
-      225,
-      35,
-      510,
-      415
+      290,
+      1200,
+      640,
+      1530
      ],
      "box_screen": [
-      116,
-      18,
-      264,
-      215
+      150,
+      621,
+      331,
+      791
      ],
      "circle_a_screen": [
-      116,
-      18,
-      264,
-      215
+      150,
+      621,
+      331,
+      791
      ],
      "circle_b_screen": [
-      116,
-      18,
-      264,
-      215
+      150,
+      621,
+      331,
+      791
      ],
-     "object_w_px": 255,
-     "object_picture_width_pct": 13.74,
-     "object_screen_width_pct": 6.87,
+     "object_w_px": 283,
+     "object_picture_width_pct": 15.25,
+     "object_screen_width_pct": 7.62,
      "in_level_range": true,
-     "in_safe_y": false,
+     "in_safe_y": true,
      "edit_version": "swap",
      "made_by": "gemini",
      "note": ""

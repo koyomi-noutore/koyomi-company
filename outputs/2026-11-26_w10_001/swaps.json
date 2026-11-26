@@ -3,17 +3,17 @@
   "q": 2,
   "id": 1,
   "type": "色",
-  "label": "かごが黒",
-  "line": "木につるしたかごが、黒くなりました。",
-  "voice": "きに、つるした、かごが、くろくなりました。",
+  "label": "石が青",
+  "line": "左の石が、青くなりました。",
+  "voice": "ひだりの、いしが、あおくなりました。",
   "box": [
-   225,
-   35,
-   510,
-   415
+   290,
+   1200,
+   640,
+   1530
   ],
-  "object_w": 255,
-  "prompt": "Edit this picture-book illustration: recolor ONLY the woven wicker basket hanging from the branch so that it becomes clearly BLACK (charcoal black wicker), keeping the same weave pattern, shape, thick outlines and position. The ginkgo leaves, the branch and everything else stay exactly the same."
+  "object_w": 283,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the rounded grey stone at the far left of the stone ring (left of the pot, standing on the pebbly ground) so that it becomes clearly BLUE (a bright blue stone), keeping the same shape, size, thick outlines and shading. The other stones, the fire, the logs and the pot stay exactly the same."
  },
  {
   "q": 5,
