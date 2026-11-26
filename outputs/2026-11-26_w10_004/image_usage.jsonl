@@ -2,3 +2,5 @@
 {"time": "2026-11-26T00:32:06+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 691, "output_tokens": 1120, "total_tokens": 2053}
 {"time": "2026-11-26T00:32:57+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 695, "output_tokens": 1120, "total_tokens": 2022}
 {"time": "2026-11-26T00:33:49+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 684, "output_tokens": 1120, "total_tokens": 2030}
+{"time": "2026-11-26T00:35:55+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 704, "output_tokens": 1120, "total_tokens": 2049}
+{"time": "2026-11-26T00:37:04+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 684, "output_tokens": 1120, "total_tokens": 2025}

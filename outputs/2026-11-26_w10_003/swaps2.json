@@ -1,0 +1,8 @@
+[
+ {"q":5,"id":1,"type":"色","label":"茶筒が青","line":"右の茶筒が、青くなりました。","voice":"みぎの、ちゃづつが、あおく、なりました。",
+  "box":[1510,700,1690,915],"object_w":146,
+  "prompt":"Edit this picture-book illustration: recolor ONLY the small brown lidded jar (tea caddy) standing on the wooden sill at the right side of this image so that it becomes clearly bright BLUE, keeping the same shape, thick outlines and shading. The wooden sill, the window and everything else stay exactly the same."},
+ {"q":9,"id":1,"type":"一部欠け","label":"松の雪がない","line":"一番上の松の雪が、なくなりました。","voice":"いちばんうえの、まつの、ゆきが、なくなりました。",
+  "box":[1080,410,1205,510],"object_w":120,
+  "prompt":"Edit this picture-book illustration: on the small pine tree in the middle of this image, remove the white snow cap that lies on the TOPMOST cluster of pine needles (the highest cluster, at the upper right of the tree) so that the green needles are fully visible without snow. The other two snow caps on the lower clusters stay. The bamboo fence, the wooden post and everything else stay exactly the same."}
+]

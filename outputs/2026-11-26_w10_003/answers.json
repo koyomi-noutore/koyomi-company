@@ -589,44 +589,44 @@
     2037
    ],
    "scale_to_screen": 0.54391,
-   "outside_box_pixels_diff_gt15": 224,
+   "outside_box_pixels_diff_gt15": 187,
    "outside_box_max_distance_px": 11.0,
    "answers": [
     {
      "id": 1,
      "type": "色",
-     "label": "植木鉢が青",
-     "line": "植木鉢が、青くなりました。",
+     "label": "茂みが赤",
+     "line": "窓の外の茂みが、赤くなりました。",
      "box_px": [
-      115,
-      490,
-      375,
-      730
+      820,
+      335,
+      995,
+      585
      ],
      "box_screen": [
-      37,
-      239,
-      178,
-      369
+      420,
+      154,
+      516,
+      290
      ],
      "circle_a_screen": [
-      37,
-      239,
-      178,
-      369
+      420,
+      154,
+      516,
+      290
      ],
      "circle_b_screen": [
-      37,
-      239,
-      178,
-      369
+      420,
+      154,
+      516,
+      290
      ],
-     "object_w_px": 213,
-     "object_picture_width_pct": 12.07,
-     "object_screen_width_pct": 6.03,
+     "object_w_px": 155,
+     "object_picture_width_pct": 8.78,
+     "object_screen_width_pct": 4.39,
      "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     },
@@ -1129,41 +1129,41 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 61,
+   "outside_box_pixels_diff_gt15": 70,
    "outside_box_max_distance_px": 7.0,
    "answers": [
     {
      "id": 1,
-     "type": "色",
-     "label": "みかんが紫",
-     "line": "一番上のみかんが、紫になりました。",
+     "type": "一部欠け",
+     "label": "松の雪がない",
+     "line": "上の松の雪が、なくなりました。",
      "box_px": [
-      795,
-      830,
-      935,
-      960
+      1080,
+      410,
+      1205,
+      510
      ],
      "box_screen": [
-      411,
-      429,
-      484,
-      497
+      559,
+      212,
+      623,
+      264
      ],
      "circle_a_screen": [
-      411,
-      429,
-      484,
-      497
+      559,
+      212,
+      623,
+      264
      ],
      "circle_b_screen": [
-      411,
-      429,
-      484,
-      497
+      559,
+      212,
+      623,
+      264
      ],
-     "object_w_px": 125,
-     "object_picture_width_pct": 6.73,
-     "object_screen_width_pct": 3.37,
+     "object_w_px": 120,
+     "object_picture_width_pct": 6.47,
+     "object_screen_width_pct": 3.23,
      "in_level_range": true,
      "in_safe_y": true,
      "edit_version": "swap",

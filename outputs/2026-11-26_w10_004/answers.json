@@ -184,8 +184,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 344,
-   "outside_box_max_distance_px": 10.0,
+   "outside_box_pixels_diff_gt15": 825,
+   "outside_box_max_distance_px": 15.0,
    "answers": [
     {
      "id": 1,
@@ -227,39 +227,39 @@
     },
     {
      "id": 2,
-     "type": "形",
-     "label": "腰かけが四角",
-     "line": "右の腰かけが、四角くなりました。",
+     "type": "色",
+     "label": "白い箱が青",
+     "line": "右の棚の、上の箱が、青くなりました。",
      "box_px": [
-      1440,
-      1210,
-      1830,
-      1650
+      1430,
+      425,
+      1800,
+      640
      ],
      "box_screen": [
-      745,
-      626,
-      947,
-      853
+      740,
+      220,
+      931,
+      331
      ],
      "circle_a_screen": [
-      745,
-      626,
-      947,
-      853
+      740,
+      220,
+      931,
+      331
      ],
      "circle_b_screen": [
-      745,
-      626,
-      947,
-      853
+      740,
+      220,
+      931,
+      331
      ],
-     "object_w_px": 300,
-     "object_picture_width_pct": 16.16,
-     "object_screen_width_pct": 8.08,
+     "object_w_px": 320,
+     "object_picture_width_pct": 17.24,
+     "object_screen_width_pct": 8.62,
      "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     },
@@ -994,44 +994,44 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 536,
+   "outside_box_pixels_diff_gt15": 519,
    "outside_box_max_distance_px": 10.0,
    "answers": [
     {
      "id": 1,
      "type": "色",
-     "label": "ふくろが緑",
-     "line": "左上のふくろが、緑になりました。",
+     "label": "ひらきが紫",
+     "line": "下のほうの干物が、紫になりました。",
      "box_px": [
-      250,
-      440,
-      520,
-      880
+      790,
+      880,
+      970,
+      1270
      ],
      "box_screen": [
-      129,
-      228,
-      269,
-      455
+      409,
+      455,
+      502,
+      657
      ],
      "circle_a_screen": [
-      129,
-      228,
-      269,
-      455
+      409,
+      455,
+      502,
+      657
      ],
      "circle_b_screen": [
-      129,
-      228,
-      269,
-      455
+      409,
+      455,
+      502,
+      657
      ],
-     "object_w_px": 210,
-     "object_picture_width_pct": 11.31,
-     "object_screen_width_pct": 5.66,
-     "in_level_range": false,
+     "object_w_px": 160,
+     "object_picture_width_pct": 8.62,
+     "object_screen_width_pct": 4.31,
+     "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     },
@@ -1129,120 +1129,120 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 348,
-   "outside_box_max_distance_px": 10.0,
+   "outside_box_pixels_diff_gt15": 127,
+   "outside_box_max_distance_px": 7.0,
    "answers": [
     {
      "id": 1,
-     "type": "向き",
-     "label": "小鳥の向き",
-     "line": "左上の小鳥が、反対を向きました。",
+     "type": "色",
+     "label": "行き先表示が黄色",
+     "line": "正面の表示が、黄色くなりました。",
      "box_px": [
-      222,
-      36,
-      451,
-      221
+      1070,
+      600,
+      1230,
+      700
      ],
      "box_screen": [
-      115,
-      19,
-      233,
-      114
+      553,
+      310,
+      636,
+      362
      ],
      "circle_a_screen": [
-      115,
-      19,
-      233,
-      114
+      553,
+      310,
+      636,
+      362
      ],
      "circle_b_screen": [
-      115,
-      19,
-      233,
-      114
+      553,
+      310,
+      636,
+      362
      ],
-     "object_w_px": 229,
-     "object_picture_width_pct": 12.34,
-     "object_screen_width_pct": 6.17,
-     "in_level_range": false,
-     "in_safe_y": false,
-     "edit_version": "1",
+     "object_w_px": 134,
+     "object_picture_width_pct": 7.22,
+     "object_screen_width_pct": 3.61,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     },
     {
      "id": 2,
-     "type": "数",
-     "label": "手ぶくろが片方",
-     "line": "ベンチの手ぶくろが、かたほうになりました。",
+     "type": "増える",
+     "label": "スコップが増える",
+     "line": "左の柱に、スコップが、1本、増えました。",
      "box_px": [
-      100,
-      1340,
-      310,
-      1540
+      470,
+      1130,
+      650,
+      1450
      ],
      "box_screen": [
-      52,
-      693,
-      160,
-      797
+      243,
+      584,
+      336,
+      750
      ],
      "circle_a_screen": [
-      52,
-      693,
-      160,
-      797
+      243,
+      584,
+      336,
+      750
      ],
      "circle_b_screen": [
-      52,
-      693,
-      160,
-      797
+      243,
+      584,
+      336,
+      750
      ],
-     "object_w_px": 210,
-     "object_picture_width_pct": 11.31,
-     "object_screen_width_pct": 5.66,
-     "in_level_range": false,
+     "object_w_px": 120,
+     "object_picture_width_pct": 6.47,
+     "object_screen_width_pct": 3.23,
+     "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     },
     {
      "id": 3,
      "type": "色",
-     "label": "バケツが黄色",
-     "line": "左下のバケツが、黄色くなりました。",
+     "label": "連結器が赤",
+     "line": "前の連結器が、赤くなりました。",
      "box_px": [
-      184,
-      1796,
-      446,
-      2082
+      1100,
+      1240,
+      1260,
+      1360
      ],
      "box_screen": [
-      95,
-      929,
-      231,
-      1077
+      569,
+      641,
+      652,
+      703
      ],
      "circle_a_screen": [
-      95,
-      929,
-      231,
-      1077
+      569,
+      641,
+      652,
+      703
      ],
      "circle_b_screen": [
-      95,
-      929,
-      231,
-      1077
+      569,
+      641,
+      652,
+      703
      ],
-     "object_w_px": 262,
-     "object_picture_width_pct": 14.12,
-     "object_screen_width_pct": 7.06,
-     "in_level_range": false,
-     "in_safe_y": false,
-     "edit_version": "1",
+     "object_w_px": 130,
+     "object_picture_width_pct": 7.0,
+     "object_screen_width_pct": 3.5,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     }
@@ -1264,7 +1264,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 505,
+   "outside_box_pixels_diff_gt15": 173,
    "outside_box_max_distance_px": 10.0,
    "answers": [
     {
@@ -1346,38 +1346,38 @@
     {
      "id": 3,
      "type": "色",
-     "label": "鉢が水色",
-     "line": "右の鉢が、水色になりました。",
+     "label": "にんじんが紫",
+     "line": "木箱のにんじんが、紫になりました。",
      "box_px": [
-      1050,
-      1220,
-      1260,
-      1410
+      715,
+      1410,
+      880,
+      1570
      ],
      "box_screen": [
-      543,
-      631,
-      652,
-      729
+      370,
+      729,
+      455,
+      812
      ],
      "circle_a_screen": [
-      543,
-      631,
-      652,
-      729
+      370,
+      729,
+      455,
+      812
      ],
      "circle_b_screen": [
-      543,
-      631,
-      652,
-      729
+      370,
+      729,
+      455,
+      812
      ],
-     "object_w_px": 150,
-     "object_picture_width_pct": 8.08,
-     "object_screen_width_pct": 4.04,
-     "in_level_range": false,
+     "object_w_px": 135,
+     "object_picture_width_pct": 7.27,
+     "object_screen_width_pct": 3.64,
+     "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "2",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     }

@@ -312,7 +312,7 @@
    "start": 7.0,
    "slot_end": 12.8,
    "subtitle": "1問目、やさしい問題。雪かきの道です。",
-   "voice_text": "いちもんめ、やさしいもんだい。ゆきかきのみちです。",
+   "voice_text": "いちもんめ、やさしい。ゆきかきのみちです。",
    "face": "normal"
   },
   {
@@ -584,7 +584,7 @@
    "start": 429.90000000000003,
    "slot_end": 434.20000000000005,
    "subtitle": "右のランタンが、なくなりました。",
-   "voice_text": "みぎのランタンが、なくなりました。",
+   "voice_text": "みぎの、らんたんが、なくなりました。",
    "face": "smile"
   },
   {
@@ -752,7 +752,7 @@
    "start": 672.0,
    "slot_end": 673.6,
    "subtitle": "答えです。",
-   "voice_text": "こたえです。",
+   "voice_text": "こたえ、です。",
    "face": "smile"
   },
   {
@@ -816,7 +816,7 @@
    "start": 770.0,
    "slot_end": 773.0,
    "subtitle": "あと10秒です。",
-   "voice_text": "あとじゅうびょうです。",
+   "voice_text": "あと、じゅうびょうです。",
    "face": "normal"
   },
   {
@@ -840,7 +840,7 @@
    "start": 785.9,
    "slot_end": 790.2,
    "subtitle": "花びんが、赤くなりました。",
-   "voice_text": "かびんが、あかくなりました。",
+   "voice_text": "かびんが、あかく、なりました。",
    "face": "smile"
   },
   {
@@ -896,7 +896,7 @@
    "start": 888.0,
    "slot_end": 889.6,
    "subtitle": "答えです。",
-   "voice_text": "こたえです。",
+   "voice_text": "こたえ、です。",
    "face": "smile"
   },
   {
@@ -968,7 +968,7 @@
    "start": 996.0,
    "slot_end": 997.6,
    "subtitle": "答えです。",
-   "voice_text": "こたえです。",
+   "voice_text": "こたえ、です。",
    "face": "smile"
   },
   {
@@ -1040,7 +1040,7 @@
    "start": 1104.0,
    "slot_end": 1105.6,
    "subtitle": "答えです。",
-   "voice_text": "こたえです。",
+   "voice_text": "こたえ、です。",
    "face": "smile"
   },
   {
