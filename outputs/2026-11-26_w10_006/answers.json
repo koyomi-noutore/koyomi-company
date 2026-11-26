@@ -454,43 +454,43 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 75,
-   "outside_box_max_distance_px": 7.0,
+   "outside_box_pixels_diff_gt15": 38,
+   "outside_box_max_distance_px": 6.0,
    "answers": [
     {
      "id": 1,
-     "type": "増える",
-     "label": "ゆずが浮かぶ",
-     "line": "お湯に、ゆずが、2つ、増えました。",
+     "type": "向き",
+     "label": "かえるの置物の向きが反対",
+     "line": "かえるの向きが、反対になりました。",
      "box_px": [
-      900,
-      1250,
-      1100,
-      1390
+      1334,
+      1680,
+      1688,
+      1991
      ],
      "box_screen": [
-      466,
-      647,
-      569,
-      719
+      690,
+      869,
+      873,
+      1030
      ],
      "circle_a_screen": [
-      466,
-      647,
-      569,
-      719
+      690,
+      869,
+      873,
+      1030
      ],
      "circle_b_screen": [
-      466,
-      647,
-      569,
-      719
+      690,
+      869,
+      873,
+      1030
      ],
-     "object_w_px": 190,
-     "object_picture_width_pct": 10.24,
-     "object_screen_width_pct": 5.12,
-     "in_level_range": true,
-     "in_safe_y": true,
+     "object_w_px": 337,
+     "object_picture_width_pct": 18.16,
+     "object_screen_width_pct": 9.08,
+     "in_level_range": false,
+     "in_safe_y": false,
      "edit_version": "swap",
      "made_by": "gemini",
      "note": ""

@@ -19,19 +19,19 @@
  {
   "q": 4,
   "id": 1,
-  "type": "増える",
-  "label": "ゆずが浮かぶ",
-  "line": "お湯に、ゆずが、2つ、増えました。",
-  "voice": "おゆに、ゆずが、ふたつ、ふえました。",
-  "context": "冬の温泉のお湯に浮かぶゆず。何個浮かんでいてもふつう",
+  "type": "向き",
+  "label": "かえるの置物の向きが反対",
+  "line": "かえるの向きが、反対になりました。",
+  "voice": "かえるの、むきが、はんたいになりました。",
+  "context": "岩の上に置いたかえるの置物。左向きでも右向きでもふつう",
   "box": [
-   900,
-   1250,
-   1100,
-   1390
+   1334,
+   1680,
+   1688,
+   1991
   ],
-  "object_w": 190,
-  "prompt": "Edit this picture-book illustration: add exactly TWO small round yellow yuzu citrus fruits floating side by side on the clear hot-spring water surface in the open water area in the middle of this image, each with a tiny green stem, same watercolor style, thin ripple lines under them. Together the pair is about one fifth of the width of this image. Do not change the rocks, steam or anything else."
+  "object_w": 337,
+  "prompt": "(画像APIは使わず、かえるの置物を左右反転して貼った)"
  },
  {
   "q": 5,
