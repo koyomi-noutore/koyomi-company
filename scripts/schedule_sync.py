@@ -168,7 +168,8 @@ def episode_map():
         n = re.search(r"_(text_)?(\d+)", rel[0])
         if not n:
             continue
-        label = (f"文字{int(n.group(2))}" if n.group(1) else f"第{int(n.group(2))}回")
+        w = re.search(r"_w10_(\d+)$", rel[0])   # 2回分をつないだ全10問の回（combine_episodes.py）
+        label = (f"10問版{int(w.group(1))}" if w else f"文字{int(n.group(2))}" if n.group(1) else f"第{int(n.group(2))}回")
         if len(rel) > 2:
             label += {"short": " ショート1", "short2": " ショート2"}.get(rel[1], " " + rel[1])
         m[vid] = label

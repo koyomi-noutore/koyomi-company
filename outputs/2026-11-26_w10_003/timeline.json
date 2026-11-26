@@ -1,0 +1,1103 @@
+{
+ "total_sec": 1156.0,
+ "fps": 30,
+ "opening": [
+  0.0,
+  7.0
+ ],
+ "rule": [
+  7.0,
+  7.0
+ ],
+ "unchiku": [
+  547.0,
+  579.0
+ ],
+ "ending": [
+  1119.0,
+  1156.0
+ ],
+ "cta": null,
+ "questions": {
+  "1": {
+   "start": 7.0,
+   "card": [
+    7.0,
+    10.0
+   ],
+   "solve": [
+    10.0,
+    100.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 90.0,
+   "answer": [
+    100.0,
+    115.0
+   ],
+   "scene": "縁側のひなた",
+   "level": "やさしい",
+   "go": "右の絵の違いを、3つ探してください。どうぞ。",
+   "hint": null,
+   "answers": [
+    "左のスリッパが、青くなりました。",
+    "右のやかんが、なくなりました。",
+    "棚の鉢植えが、小さくなりました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "2": {
+   "start": 115.0,
+   "card": [
+    115.0,
+    118.0
+   ],
+   "solve": [
+    118.0,
+    208.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 198.0,
+   "answer": [
+    208.0,
+    223.0
+   ],
+   "scene": "縁側の猫と座布団",
+   "level": "やさしい",
+   "go": "では、2問目。どうぞ。",
+   "hint": null,
+   "answers": [
+    "左上のかごが、なくなりました。",
+    "右側のおけが、青くなりました。",
+    "左下の毛糸玉が、緑になりました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "3": {
+   "start": 223.0,
+   "card": [
+    223.0,
+    226.0
+   ],
+   "solve": [
+    226.0,
+    316.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 306.0,
+   "answer": [
+    316.0,
+    331.0
+   ],
+   "scene": "こたつのみかん",
+   "level": "初級",
+   "go": "つぎは、3問目です。どうぞ。",
+   "hint": null,
+   "answers": [
+    "棚の時計が、なくなりました。",
+    "急須の向きが、反対になりました。",
+    "左の座布団が、赤くなりました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "4": {
+   "start": 331.0,
+   "card": [
+    331.0,
+    334.0
+   ],
+   "solve": [
+    334.0,
+    424.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 414.0,
+   "answer": [
+    424.0,
+    439.0
+   ],
+   "scene": "軒下の干し柿",
+   "level": "初級",
+   "go": "4問目も、3つ探してください。どうぞ。",
+   "hint": null,
+   "answers": [
+    "左上の巣箱が、なくなりました。",
+    "右下の腰かけが、木箱に変わりました。",
+    "右上の手ぬぐいが、緑になりました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "5": {
+   "start": 439.0,
+   "card": [
+    439.0,
+    442.0
+   ],
+   "solve": [
+    442.0,
+    532.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 522.0,
+   "answer": [
+    532.0,
+    547.0
+   ],
+   "scene": "縁側のお茶の時間",
+   "level": "初級",
+   "go": "さあ、5問目。どうぞ。",
+   "hint": null,
+   "answers": [
+    "植木鉢が、青くなりました。",
+    "お盆の上のめがねが、なくなりました。",
+    "皮の器が、みかんに、変わりました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "6": {
+   "start": 579.0,
+   "card": [
+    579.0,
+    582.0
+   ],
+   "solve": [
+    582.0,
+    672.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 662.0,
+   "answer": [
+    672.0,
+    687.0
+   ],
+   "scene": "ひなたの猫",
+   "level": "初級",
+   "go": "ゆっくり、6問目。どうぞ。",
+   "hint": null,
+   "answers": [
+    "左下のえさの器が、なくなりました。",
+    "右側のひざ掛けが、青くなりました。",
+    "左上の花瓶が、つぼに変わりました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "7": {
+   "start": 687.0,
+   "card": [
+    687.0,
+    690.0
+   ],
+   "solve": [
+    690.0,
+    780.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 770.0,
+   "answer": [
+    780.0,
+    795.0
+   ],
+   "scene": "みかんの木の庭",
+   "level": "中級",
+   "go": "もう少しです。7問目、どうぞ。",
+   "hint": null,
+   "answers": [
+    "石のうさぎが、ふくろうに、変わりました。",
+    "切り株の茶わんが、なくなりました。",
+    "枝の鈴が、金色になりました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "8": {
+   "start": 795.0,
+   "card": [
+    795.0,
+    798.0
+   ],
+   "solve": [
+    798.0,
+    888.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 878.0,
+   "answer": [
+    888.0,
+    903.0
+   ],
+   "scene": "火鉢のまわり",
+   "level": "中級",
+   "go": "では、8問目。どうぞ。",
+   "hint": null,
+   "answers": [
+    "左上の干し柿が、1つ減りました。",
+    "右のふろしきの模様が、変わりました。",
+    "左下の湯たんぽが、青くなりました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "9": {
+   "start": 903.0,
+   "card": [
+    903.0,
+    906.0
+   ],
+   "solve": [
+    906.0,
+    996.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 986.0,
+   "answer": [
+    996.0,
+    1011.0
+   ],
+   "scene": "みかん箱と猫",
+   "level": "上級",
+   "go": "つぎは、9問目です。どうぞ。",
+   "hint": null,
+   "answers": [
+    "一番上のみかんが、紫になりました。",
+    "湯のみが、緑色になりました。",
+    "右の雪の中の石が、なくなりました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "10": {
+   "start": 1011.0,
+   "card": [
+    1011.0,
+    1014.0
+   ],
+   "solve": [
+    1014.0,
+    1104.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 1094.0,
+   "answer": [
+    1104.0,
+    1119.0
+   ],
+   "scene": "ひるねの猫",
+   "level": "上級",
+   "go": "10問目も、3つ探してください。どうぞ。",
+   "hint": null,
+   "answers": [
+    "左上のひょうたんが、なくなりました。",
+    "右の毛糸の帽子が、緑になりました。",
+    "左下のせんべいが、2枚に減りました。"
+   ],
+   "answers_intro": "答えです。"
+  }
+ },
+ "lines": [
+  {
+   "id": "op",
+   "start": 0.0,
+   "slot_end": 3.9,
+   "subtitle": "冬の間違い探し、全10問。",
+   "voice_text": "ふゆの、まちがいさがし、じゅうもん。",
+   "face": "smile"
+  },
+  {
+   "id": "op2",
+   "start": 3.9,
+   "slot_end": 7.0,
+   "subtitle": "だんだん、難しくなります。",
+   "voice_text": "だんだん、むずかしくなります。",
+   "face": "wink"
+  },
+  {
+   "id": "q1_card",
+   "start": 7.0,
+   "slot_end": 12.8,
+   "subtitle": "1問目、やさしい問題。縁側のひなたです。",
+   "voice_text": "いちもんめ、やさしい。えんがわのひなたです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_go",
+   "start": 12.8,
+   "slot_end": 18.0,
+   "subtitle": "右の絵の違いを、3つ探してください。どうぞ。",
+   "voice_text": "みぎのえのちがいを、みっつさがしてください。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_call0",
+   "start": 40.0,
+   "slot_end": 44.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_call1",
+   "start": 70.0,
+   "slot_end": 74.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_ten",
+   "start": 90.0,
+   "slot_end": 93.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_ans0",
+   "start": 100.0,
+   "slot_end": 101.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q1_ans1",
+   "start": 101.6,
+   "slot_end": 105.89999999999999,
+   "subtitle": "左のスリッパが、青くなりました。",
+   "voice_text": "ひだりのスリッパが、あおくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q1_ans2",
+   "start": 105.89999999999999,
+   "slot_end": 110.19999999999999,
+   "subtitle": "右のやかんが、なくなりました。",
+   "voice_text": "みぎのやかんが、なくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q1_ans3",
+   "start": 110.19999999999999,
+   "slot_end": 114.5,
+   "subtitle": "棚の鉢植えが、小さくなりました。",
+   "voice_text": "たなのはちうえが、ちいさくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_card",
+   "start": 115.0,
+   "slot_end": 120.8,
+   "subtitle": "2問目、やさしい問題。縁側の猫と座布団です。",
+   "voice_text": "にもんめ、やさしいもんだい。えんがわの、ねこです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_go",
+   "start": 120.8,
+   "slot_end": 126.0,
+   "subtitle": "では、2問目。どうぞ。",
+   "voice_text": "では、にもんめ。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_call0",
+   "start": 148.0,
+   "slot_end": 152.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_call1",
+   "start": 178.0,
+   "slot_end": 182.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_ten",
+   "start": 198.0,
+   "slot_end": 201.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_ans0",
+   "start": 208.0,
+   "slot_end": 209.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_ans1",
+   "start": 209.6,
+   "slot_end": 213.9,
+   "subtitle": "左上のかごが、なくなりました。",
+   "voice_text": "ひだりうえの、かごが、なくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_ans2",
+   "start": 213.9,
+   "slot_end": 218.2,
+   "subtitle": "右側のおけが、青くなりました。",
+   "voice_text": "みぎがわの、おけが、あおく、なりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_ans3",
+   "start": 218.2,
+   "slot_end": 222.5,
+   "subtitle": "左下の毛糸玉が、緑になりました。",
+   "voice_text": "ひだりしたの、けいとだまが、みどりに、なりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_card",
+   "start": 223.0,
+   "slot_end": 228.8,
+   "subtitle": "3問目、初級。こたつのみかんです。",
+   "voice_text": "さんもんめ、しょきゅう。こたつのみかんです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_go",
+   "start": 228.8,
+   "slot_end": 234.0,
+   "subtitle": "つぎは、3問目です。どうぞ。",
+   "voice_text": "つぎは、さんもんめです。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_call0",
+   "start": 256.0,
+   "slot_end": 260.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_call1",
+   "start": 286.0,
+   "slot_end": 290.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_ten",
+   "start": 306.0,
+   "slot_end": 309.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_ans0",
+   "start": 316.0,
+   "slot_end": 317.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_ans1",
+   "start": 317.6,
+   "slot_end": 321.90000000000003,
+   "subtitle": "棚の時計が、なくなりました。",
+   "voice_text": "たなのとけいが、なくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_ans2",
+   "start": 321.90000000000003,
+   "slot_end": 326.20000000000005,
+   "subtitle": "急須の向きが、反対になりました。",
+   "voice_text": "きゅうすのむきが、はんたいになりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_ans3",
+   "start": 326.20000000000005,
+   "slot_end": 330.5,
+   "subtitle": "左の座布団が、赤くなりました。",
+   "voice_text": "ひだりの、ざぶとんが、あかくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q4_card",
+   "start": 331.0,
+   "slot_end": 336.8,
+   "subtitle": "4問目、初級。軒下の干し柿です。",
+   "voice_text": "よんもんめ、しょきゅう。のきしたの、ほしがきです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_go",
+   "start": 336.8,
+   "slot_end": 342.0,
+   "subtitle": "4問目も、3つ探してください。どうぞ。",
+   "voice_text": "よんもんめも、みっつ、さがしてください。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_call0",
+   "start": 364.0,
+   "slot_end": 368.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_call1",
+   "start": 394.0,
+   "slot_end": 398.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_ten",
+   "start": 414.0,
+   "slot_end": 417.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_ans0",
+   "start": 424.0,
+   "slot_end": 425.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q4_ans1",
+   "start": 425.6,
+   "slot_end": 429.90000000000003,
+   "subtitle": "左上の巣箱が、なくなりました。",
+   "voice_text": "ひだりうえの、すばこが、なくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q4_ans2",
+   "start": 429.90000000000003,
+   "slot_end": 434.20000000000005,
+   "subtitle": "右下の腰かけが、木箱に変わりました。",
+   "voice_text": "みぎしたの、こしかけが、きばこに、かわりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q4_ans3",
+   "start": 434.20000000000005,
+   "slot_end": 438.5,
+   "subtitle": "右上の手ぬぐいが、緑になりました。",
+   "voice_text": "みぎうえの、てぬぐいが、みどりに、なりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_card",
+   "start": 439.0,
+   "slot_end": 444.8,
+   "subtitle": "5問目、初級。縁側のお茶の時間です。",
+   "voice_text": "ごもんめ、しょきゅう。えんがわのおちゃのじかんです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_go",
+   "start": 444.8,
+   "slot_end": 450.0,
+   "subtitle": "さあ、5問目。どうぞ。",
+   "voice_text": "さあ、ごもんめ。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "c_comment",
+   "start": 454.0,
+   "slot_end": 463.0,
+   "subtitle": "半分まで来ました。見つかった数を、あとでコメントで教えてくださいね。",
+   "voice_text": "はんぶんまで、きました。みつかったかずを、あとでコメントでおしえてくださいね。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_call0",
+   "start": 472.0,
+   "slot_end": 476.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_call1",
+   "start": 502.0,
+   "slot_end": 506.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_ten",
+   "start": 522.0,
+   "slot_end": 525.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_ans0",
+   "start": 532.0,
+   "slot_end": 533.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_ans1",
+   "start": 533.6,
+   "slot_end": 537.9,
+   "subtitle": "植木鉢が、青くなりました。",
+   "voice_text": "うえきばちが、あおくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_ans2",
+   "start": 537.9,
+   "slot_end": 542.2,
+   "subtitle": "お盆の上のめがねが、なくなりました。",
+   "voice_text": "おぼんのうえのめがねが、なくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_ans3",
+   "start": 542.2,
+   "slot_end": 546.5,
+   "subtitle": "皮の器が、みかんに、変わりました。",
+   "voice_text": "かわのうつわが、みかんに、かわりました。",
+   "face": "smile"
+  },
+  {
+   "id": "u1",
+   "start": 547.0,
+   "slot_end": 554.0,
+   "subtitle": "ここでひと休み。こよみ先生の季節のお話です。",
+   "voice_text": "ここでひとやすみ。こよみせんせいの、きせつのおはなしです。",
+   "face": "smile"
+  },
+  {
+   "id": "u2",
+   "start": 554.0,
+   "slot_end": 562.0,
+   "subtitle": "「冬至」は、一年でいちばん、昼が短い日です。知っていましたか？",
+   "voice_text": "とうじは、いちねんで、いちばん、ひるがみじかい、ひです。しっていましたか？",
+   "face": "think"
+  },
+  {
+   "id": "u3",
+   "start": 562.0,
+   "slot_end": 572.0,
+   "subtitle": "冬至を過ぎると、日の出から日の入りまでが、少しずつ長くなっていきます。",
+   "voice_text": "とうじをすぎると、ひのでから、ひのいりまでが、すこしずつ、ながくなっていきます。",
+   "face": "surprise"
+  },
+  {
+   "id": "u4",
+   "start": 572.0,
+   "slot_end": 579.0,
+   "subtitle": "ゆず湯やかぼちゃで、冬至を楽しむ地域もありますね。",
+   "voice_text": "ゆずゆや、かぼちゃで、とうじをたのしむ、ちいきも、ありますね。",
+   "face": "wink"
+  },
+  {
+   "id": "q6_card",
+   "start": 579.0,
+   "slot_end": 584.8,
+   "subtitle": "6問目、初級。ひなたの猫です。",
+   "voice_text": "ろくもんめ、しょきゅう。ひなたの、ねこです。",
+   "face": "normal"
+  },
+  {
+   "id": "q6_go",
+   "start": 584.8,
+   "slot_end": 590.0,
+   "subtitle": "ゆっくり、6問目。どうぞ。",
+   "voice_text": "ゆっくり、ろくもんめ。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q6_call0",
+   "start": 612.0,
+   "slot_end": 616.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q6_call1",
+   "start": 642.0,
+   "slot_end": 646.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q6_ten",
+   "start": 662.0,
+   "slot_end": 665.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q6_ans0",
+   "start": 672.0,
+   "slot_end": 673.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q6_ans1",
+   "start": 673.6,
+   "slot_end": 677.9,
+   "subtitle": "左下のえさの器が、なくなりました。",
+   "voice_text": "ひだりしたの、えさのうつわが、なくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q6_ans2",
+   "start": 677.9,
+   "slot_end": 682.2,
+   "subtitle": "右側のひざ掛けが、青くなりました。",
+   "voice_text": "みぎがわの、ひざかけが、あおく、なりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q6_ans3",
+   "start": 682.2,
+   "slot_end": 686.5,
+   "subtitle": "左上の花瓶が、つぼに変わりました。",
+   "voice_text": "ひだりうえの、かびんが、つぼに、かわりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q7_card",
+   "start": 687.0,
+   "slot_end": 692.8,
+   "subtitle": "7問目、中級。みかんの木の庭です。",
+   "voice_text": "ななもんめ、ちゅうきゅう。みかんのきのにわです。",
+   "face": "normal"
+  },
+  {
+   "id": "q7_go",
+   "start": 692.8,
+   "slot_end": 698.0,
+   "subtitle": "もう少しです。7問目、どうぞ。",
+   "voice_text": "もうすこしです。ななもんめ、どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q7_call0",
+   "start": 720.0,
+   "slot_end": 724.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q7_call1",
+   "start": 750.0,
+   "slot_end": 754.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q7_ten",
+   "start": 770.0,
+   "slot_end": 773.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q7_ans0",
+   "start": 780.0,
+   "slot_end": 781.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q7_ans1",
+   "start": 781.6,
+   "slot_end": 785.9,
+   "subtitle": "石のうさぎが、ふくろうに、変わりました。",
+   "voice_text": "いしのうさぎが、ふくろうに、かわりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q7_ans2",
+   "start": 785.9,
+   "slot_end": 790.2,
+   "subtitle": "切り株の茶わんが、なくなりました。",
+   "voice_text": "きりかぶのちゃわんが、なくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q7_ans3",
+   "start": 790.2,
+   "slot_end": 794.5,
+   "subtitle": "枝の鈴が、金色になりました。",
+   "voice_text": "えだのすずが、きんいろになりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q8_card",
+   "start": 795.0,
+   "slot_end": 800.8,
+   "subtitle": "8問目、中級。火鉢のまわりです。",
+   "voice_text": "はちもんめ、ちゅうきゅう。ひばちの、まわりです。",
+   "face": "normal"
+  },
+  {
+   "id": "q8_go",
+   "start": 800.8,
+   "slot_end": 806.0,
+   "subtitle": "では、8問目。どうぞ。",
+   "voice_text": "では、はちもんめ。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q8_call0",
+   "start": 828.0,
+   "slot_end": 832.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q8_call1",
+   "start": 858.0,
+   "slot_end": 862.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q8_ten",
+   "start": 878.0,
+   "slot_end": 881.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q8_ans0",
+   "start": 888.0,
+   "slot_end": 889.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q8_ans1",
+   "start": 889.6,
+   "slot_end": 893.9,
+   "subtitle": "左上の干し柿が、1つ減りました。",
+   "voice_text": "ひだりうえの、ほしがき、ひとつ、へりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q8_ans2",
+   "start": 893.9,
+   "slot_end": 898.2,
+   "subtitle": "右のふろしきの模様が、変わりました。",
+   "voice_text": "みぎの、ふろしきの、もようが、かわりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q8_ans3",
+   "start": 898.2,
+   "slot_end": 902.5,
+   "subtitle": "左下の湯たんぽが、青くなりました。",
+   "voice_text": "ひだりしたの、ゆたんぽが、あおく、なりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q9_card",
+   "start": 903.0,
+   "slot_end": 908.8,
+   "subtitle": "9問目、上級。みかん箱と猫です。",
+   "voice_text": "きゅうもんめ、じょうきゅう。みかんばことねこです。",
+   "face": "normal"
+  },
+  {
+   "id": "q9_go",
+   "start": 908.8,
+   "slot_end": 914.0,
+   "subtitle": "つぎは、9問目です。どうぞ。",
+   "voice_text": "つぎは、きゅうもんめです。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q9_call0",
+   "start": 936.0,
+   "slot_end": 940.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q9_call1",
+   "start": 966.0,
+   "slot_end": 970.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q9_ten",
+   "start": 986.0,
+   "slot_end": 989.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q9_ans0",
+   "start": 996.0,
+   "slot_end": 997.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q9_ans1",
+   "start": 997.6,
+   "slot_end": 1001.9,
+   "subtitle": "一番上のみかんが、紫になりました。",
+   "voice_text": "いちばんうえの、みかんが、むらさきに、なりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q9_ans2",
+   "start": 1001.9,
+   "slot_end": 1006.2,
+   "subtitle": "湯のみが、緑色になりました。",
+   "voice_text": "ゆのみが、みどりいろになりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q9_ans3",
+   "start": 1006.2,
+   "slot_end": 1010.5,
+   "subtitle": "右の雪の中の石が、なくなりました。",
+   "voice_text": "みぎの、ゆきのなかの、いしが、なくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q10_card",
+   "start": 1011.0,
+   "slot_end": 1016.8,
+   "subtitle": "10問目、上級。ひるねの猫です。",
+   "voice_text": "じゅうもんめ、じょうきゅう。ひるねの、ねこです。",
+   "face": "normal"
+  },
+  {
+   "id": "q10_go",
+   "start": 1016.8,
+   "slot_end": 1022.0,
+   "subtitle": "10問目も、3つ探してください。どうぞ。",
+   "voice_text": "じゅうもんめも、みっつ、さがしてください。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q10_call0",
+   "start": 1044.0,
+   "slot_end": 1048.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q10_call1",
+   "start": 1074.0,
+   "slot_end": 1078.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q10_ten",
+   "start": 1094.0,
+   "slot_end": 1097.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q10_ans0",
+   "start": 1104.0,
+   "slot_end": 1105.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q10_ans1",
+   "start": 1105.6,
+   "slot_end": 1109.8999999999999,
+   "subtitle": "左上のひょうたんが、なくなりました。",
+   "voice_text": "ひだりうえの、ひょうたんが、なくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q10_ans2",
+   "start": 1109.8999999999999,
+   "slot_end": 1114.1999999999998,
+   "subtitle": "右の毛糸の帽子が、緑になりました。",
+   "voice_text": "みぎの、ぼうしが、みどりに、なりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q10_ans3",
+   "start": 1114.1999999999998,
+   "slot_end": 1118.5,
+   "subtitle": "左下のせんべいが、2枚に減りました。",
+   "voice_text": "ひだりしたの、せんべいが、にまいに、へりました。",
+   "face": "smile"
+  },
+  {
+   "id": "e1",
+   "start": 1119.0,
+   "slot_end": 1122.6,
+   "subtitle": "これで10問、おしまいです。",
+   "voice_text": "これでじゅうもん、おしまいです。",
+   "face": "yay"
+  },
+  {
+   "id": "e2",
+   "start": 1122.6,
+   "slot_end": 1129.2,
+   "subtitle": "30個の違い、いくつ見つかりましたか。今日の称号です。",
+   "voice_text": "さんじゅっこの、ちがい、いくつみつかりましたか。きょうのしょーごーです。",
+   "face": "smile"
+  },
+  {
+   "id": "e3",
+   "start": 1129.2,
+   "slot_end": 1140.0,
+   "subtitle": "チャンネル登録とベルで、毎朝8時半に問題が届きます。毎日の頭の体操にどうぞ。",
+   "voice_text": "チャンネルとうろくとベルで、まいあさはちじはんに、もんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。",
+   "face": "smile"
+  },
+  {
+   "id": "e4",
+   "start": 1140.0,
+   "slot_end": 1155.0,
+   "subtitle": "ほかにも、いろいろな間違い探しがあります。もっと難しい問題に挑戦したい方は、画面の動画をクリックしてくださいね。",
+   "voice_text": "ほかにも、いろいろな、まちがいさがしがあります。もっとむずかしいもんだいに、ちょうせんしたいかたは、がめんのどうがを、クリックしてくださいね。",
+   "face": "wink"
+  }
+ ]
+}
