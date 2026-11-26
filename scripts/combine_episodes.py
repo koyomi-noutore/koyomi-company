@@ -201,10 +201,17 @@ def main(argv):
         oq = Q["q"]
         ov = s["plan"]["voice_override"]
         card = ov.get(f"q{oq}_card")
-        m_ = re.match(r"(?:\d+問目|[ぁ-ん]+もんめ)、", card or "")     # 元は「1問目、…」か「いちもんめ、…」。番号だけ新しい番号の「N問目」に
-        if not m_:
-            raise SystemExit(f"{s['dir'].name} の q{oq}_card の読みが想定外：{card!r}")
-        vo[f"q{newq}_card"] = f"{newq}問目、" + card[m_.end():]
+        if card is None:     # 元の回が題の読みを上書きしていないとき：「N問目、<級>。<場面の読み>です。」を readings から作る
+            rd = {a_: b_ for a_, b_ in s["plan"]["readings"]}
+            if Q["scene"] not in rd:
+                raise SystemExit(f"{s['dir'].name} の場面「{Q['scene']}」の読みが readings にない")
+            lvk = {"やさしい": "やさしい", "初級": "しょきゅう", "中級": "ちゅうきゅう", "上級": "じょうきゅう"}[Q["level"]]
+            card = f"1問目、{lvk}。{rd[Q['scene']]}です。"
+        if card is not None:       # 読みの上書きが無い元の回は、ep_timeline の標準の文（「N問目、〜。場面です。」＋readings）に任せる
+            m_ = re.match(r"(?:\d+問目|[ぁ-ん]+もんめ|だい、[ぁ-ん]+もん)、", card)     # 元は「1問目、…」か「いちもんめ、…」。番号だけ新しい番号の「N問目」に
+            if not m_:
+                raise SystemExit(f"{s['dir'].name} の q{oq}_card の読みが想定外：{card!r}")
+            vo[f"q{newq}_card"] = f"{newq}問目、" + card[m_.end():]
         vo[f"q{newq}_go"] = questions[newq - 1].pop("_go_voice")
         for k in range(1, 4):                                # 答えの文は元の回のまま（読みの上書きも引き継ぐ）
             if f"q{oq}_ans{k}" in ov:
