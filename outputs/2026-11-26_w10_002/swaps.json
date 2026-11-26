@@ -1,0 +1,146 @@
+[
+ {
+  "q": 1,
+  "id": 2,
+  "type": "色",
+  "label": "シャベルの持ち手が青",
+  "line": "シャベルの持ち手が、青くなりました。",
+  "voice": "シャベルの、もちてが、あおくなりました。",
+  "box": [
+   1000,
+   270,
+   1250,
+   440
+  ],
+  "object_w": 237,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the top handle (the D-shaped wooden grip at the very top of the shovel's shaft) so that it becomes clearly bright BLUE, keeping the same shape, thick outlines and shading. The shaft, the blade, the snow and everything else stay exactly the same."
+ },
+ {
+  "q": 2,
+  "id": 2,
+  "type": "色",
+  "label": "ポットが青",
+  "line": "右下のポットが、青くなりました。",
+  "voice": "みぎしたの、ポットが、あおくなりました。",
+  "box": [
+   1386,
+   1517,
+   1726,
+   1810
+  ],
+  "object_w": 340,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the cream-colored teapot (body, lid, spout and handle) so that it becomes clearly bright BLUE, keeping the same shape, thick outlines and shading. The snow and everything else stay exactly the same."
+ },
+ {
+  "q": 5,
+  "id": 3,
+  "type": "なくなる",
+  "label": "ほうきがない",
+  "line": "壁に立てかけたほうきが、なくなりました。",
+  "voice": "かべに、たてかけた、ほうきが、なくなりました。",
+  "box": [
+   1170,
+   528,
+   1419,
+   1310
+  ],
+  "object_w": 230,
+  "prompt": "Edit this picture-book illustration: erase ONLY the straw broom leaning against the wall on the right side of the sliding door (long handle and straw bristles). Repaint that whole area exactly like the surrounding plaster wall and wooden door frame. The result must contain NO broom and no broom outline. The wooden tub next to it, the door and the snow stay exactly the same."
+ },
+ {
+  "q": 8,
+  "id": 1,
+  "type": "色",
+  "label": "右の雪だるまの腕が赤",
+  "line": "右の雪だるまの腕の枝が、赤くなりました。",
+  "voice": "みぎの、ゆきだるまの、うでのえだが、あかくなりました。",
+  "box": [
+   1335,
+   535,
+   1500,
+   675
+  ],
+  "object_w": 165,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the stick arm on the far right side of the right-hand medium-sized snowman (the twig arm that sticks out to the right) so that it becomes clearly bright RED, keeping the same shape and thick outline. The other arm, the snowmen, scarves and everything else stay exactly the same."
+ },
+ {
+  "q": 9,
+  "id": 1,
+  "type": "形",
+  "label": "つららが短い",
+  "line": "軒のつららが、短くなりました。",
+  "voice": "のきの、つららが、みじかくなりました。",
+  "box": [
+   1275,
+   190,
+   1410,
+   440
+  ],
+  "object_w": 120,
+  "prompt": "Edit this picture-book illustration: make the long icicle hanging from the wooden eaves about HALF as long (cut off its lower half), and repaint the freed area below it exactly like the pale background (soft snowy-blue sky and distant trees). The short icicle next to it and the eaves stay exactly the same. No leftover outline."
+ },
+ {
+  "q": 9,
+  "id": 3,
+  "type": "色",
+  "label": "左の葉が黄色",
+  "line": "左の雪うさぎの左の葉が、黄色くなりました。",
+  "voice": "ひだりの、ゆきうさぎの、ひだりの、はが、きいろく、なりました。",
+  "box": [
+   650,
+   1110,
+   785,
+   1245
+  ],
+  "object_w": 135,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the single green leaf on the left ear of the left-hand snow bunny (the leftmost leaf of the three bunnies) so that it becomes clearly bright YELLOW, keeping the same shape and thick outline. All other leaves stay green."
+ },
+ {
+  "q": 10,
+  "id": 1,
+  "type": "形",
+  "label": "毛糸玉の糸が短い",
+  "line": "毛糸玉の糸が、短くなりました。",
+  "voice": "けいとだまの、いとが、みじかくなりました。",
+  "box": [
+   296,
+   1430,
+   430,
+   1515
+  ],
+  "object_w": 135,
+  "prompt": "manual"
+ },
+ {
+  "q": 10,
+  "id": 2,
+  "type": "色",
+  "label": "柱の台が青",
+  "line": "右手前の柱の台が、青くなりました。",
+  "voice": "みぎてまえの、はしらの、だいが、あおくなりました。",
+  "box": [
+   1100,
+   1060,
+   1270,
+   1160
+  ],
+  "object_w": 138,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the small grey stone base block at the bottom of the front-right post of the wooden gazebo so that it becomes clearly bright BLUE, keeping the same shape, thick outline and the post above it. Everything else stays exactly the same."
+ },
+ {
+  "q": 10,
+  "id": 3,
+  "type": "色",
+  "label": "右のどんぐりが緑",
+  "line": "右のどんぐりが、緑になりました。",
+  "voice": "みぎの、どんぐりが、みどりに、なりました。",
+  "box": [
+   1640,
+   765,
+   1760,
+   885
+  ],
+  "object_w": 102,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the right-hand acorn of the two acorns (the one on the right, with its cap) so that it becomes clearly bright GREEN, keeping the same shape and thick outline. The left acorn stays brown."
+ }
+]

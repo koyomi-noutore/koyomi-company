@@ -48,7 +48,7 @@ def _object_of(label):
     while obj in _ATTR and len(parts) >= 2:     # 「かごの中」「机の上」のように位置・性質の語なら、その前の物の名前に
         parts = parts[:-1]
         obj = parts[-1]
-    if len(obj) == 1 and len(parts) >= 2:       # 「湯のみ」→「み」にしない（1字なら前とつなぐ）
+    if len(obj) == 1 and len(parts) >= 2 and "\u3041" <= obj <= "\u30ff":   # 「湯のみ」→「み」にしない（かな1字なら前とつなぐ。「カップの花」の花はそのまま）
         obj = parts[-2] + "の" + obj
     return _ALIAS.get(obj, obj)
 
@@ -60,6 +60,7 @@ def _objects_of(label):
     m = re.search(r"が(.+?)(?:に|へ)(?:なる|なった|変わる|かわる)?$", lab)
     if m:
         objs.add(_object_of(m.group(1)))
+    objs |= {k for k, v in _ALIAS.items() for o in list(objs) if v == o}   # 表記ゆれの別の書き方も持つ（ティーカップ／カップ＝コップ。2026-11-26 監査 W10-2-3）
     return {o for o in objs if o}
 
 
