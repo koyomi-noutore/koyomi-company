@@ -1,0 +1,50 @@
+[
+ {
+  "q": 3,
+  "id": 3,
+  "type": "色",
+  "label": "座布団が赤",
+  "line": "左の座布団が、赤くなりました。",
+  "voice": "ひだりの、ざぶとんが、あかくなりました。",
+  "box": [
+   90,
+   1375,
+   455,
+   1615
+  ],
+  "object_w": 355,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the round blue cushion (zabuton) lying on the tatami floor so that it becomes clearly bright RED (keeping its pattern as slightly lighter red/pink marks), same shape, thick outlines, shading and position. The tatami floor, the kotatsu blanket and everything else stay exactly the same."
+ },
+ {
+  "q": 9,
+  "id": 1,
+  "type": "色",
+  "label": "みかんが紫",
+  "line": "箱の上のみかんが、1つ、紫になりました。",
+  "voice": "はこの、うえの、みかんが、ひとつ、むらさきに、なりました。",
+  "box": [
+   795,
+   830,
+   935,
+   960
+  ],
+  "object_w": 125,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the single mandarin orange at the very top of the pile in the wooden crate (the highest one, near the middle of this image) so that it becomes clearly PURPLE (violet), keeping the same shape, highlights, thick outline and shading. All the other oranges stay orange."
+ },
+ {
+  "q": 9,
+  "id": 3,
+  "type": "なくなる",
+  "label": "雪の石がない",
+  "line": "右の雪の中の石が、なくなりました。",
+  "voice": "みぎの、ゆきのなかの、いしが、なくなりました。",
+  "box": [
+   1490,
+   855,
+   1650,
+   950
+  ],
+  "object_w": 140,
+  "prompt": "Edit this image: erase the small grey stone half buried in the snow at the right side of this image (just left of the wooden post, next to a small tuft of grass) and repaint that area as smooth white snow with the same soft blue shading as the snow around it. The result must contain NO stone and no stone outline. Keep the grass tuft, the wooden post, the bamboo fence and the wooden floor exactly as they are."
+ }
+]

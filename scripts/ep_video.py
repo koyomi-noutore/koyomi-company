@@ -198,7 +198,7 @@ def wrap(s, maxc):
 
 def chunks(text, maxc=18):
     """1行18字以内・2行以内のかたまりに分ける。"""
-    sents = [x + "。" for x in text.split("。") if x]
+    sents = [x if x.endswith(("？", "！", "?", "!")) else x + "。" for x in text.split("。") if x]   # 「？」「！」で終わる文に「。」を足さない（2026-11-26 監査 W10-3-5）
     out = []
     for s in sents:
         if len(wrap(s, maxc)) <= 2:

@@ -1,6 +1,7 @@
 """完成物の数値チェックと、目で見る確認用の一覧画像（社則7章：画像を見るのは1枚にまとめて1回）。
 結果は <回>/check.json に書き、問題があれば一覧にして返す。"""
 import json
+import re
 import subprocess
 from pathlib import Path
 
@@ -47,7 +48,24 @@ def _object_of(label):
     while obj in _ATTR and len(parts) >= 2:     # 「かごの中」「机の上」のように位置・性質の語なら、その前の物の名前に
         parts = parts[:-1]
         obj = parts[-1]
+    if len(obj) == 1 and len(parts) >= 2:       # 「湯のみ」→「み」にしない（1字なら前とつなぐ）
+        obj = parts[-2] + "の" + obj
     return _ALIAS.get(obj, obj)
+
+
+def _objects_of(label):
+    """違いに出てくる物の名前の集まり。「器がみかんに」のような入れ替えは、変わった先（みかん）も数える（2026-11-26 監査 W10-3-2）。"""
+    lab = str(label)
+    objs = {_object_of(lab)}
+    m = re.search(r"が(.+?)(?:に|へ)(?:なる|なった|変わる|かわる)?$", lab)
+    if m:
+        objs.add(_object_of(m.group(1)))
+    return {o for o in objs if o}
+
+
+def _same_obj(a, b):
+    """同じ物か。表記の一方がもう一方を含む（植木／植木鉢、みかん／みかん箱）なら同じ物と数える（2026-11-26 監査 W10-3-1）。"""
+    return a == b or (min(len(a), len(b)) >= 2 and (a in b or b in a))
 
 
 def repeat_problems():
@@ -59,16 +77,17 @@ def repeat_problems():
             lab = str(d.get("label", "")).strip()
             if not lab:
                 continue
-            obj = _object_of(lab)
+            objs = _objects_of(lab)
             key = (Q["q"], d["id"])
+            hit = next(((o, seen_obj[s_]) for o in objs for s_ in seen_obj if _same_obj(o, s_)), None)
             if lab in seen_label:
                 q0, i0 = seen_label[lab]
                 out.append(f"第{Q['q']}問 違い{d['id']}：同じ変化「{lab}」が第{q0}問 違い{i0}にもある（1回の動画で1度まで。2026-11-25 CEO決定）")
-            elif obj and obj in seen_obj:
-                q0, i0, lab0 = seen_obj[obj]
+            elif hit:
+                obj, (q0, i0, lab0) = hit
                 out.append(f"第{Q['q']}問 違い{d['id']}：同じ物「{obj}」が第{q0}問 違い{i0}（{lab0}）にもある（1回の動画で1度まで。2026-11-25 CEO決定）")
             seen_label.setdefault(lab, key)
-            if obj:
+            for obj in objs:
                 seen_obj.setdefault(obj, (Q["q"], d["id"], lab))
     return out
 

@@ -1,0 +1,6 @@
+{"time": "2026-11-26T00:04:45+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 685, "output_tokens": 1120, "total_tokens": 2043}
+{"time": "2026-11-26T00:05:01+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 680, "output_tokens": 1120, "total_tokens": 2045}
+{"time": "2026-11-26T00:05:54+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 705, "output_tokens": 1120, "total_tokens": 2062}
+{"time": "2026-11-26T00:35:14+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 679, "output_tokens": 1120, "total_tokens": 2040}
+{"time": "2026-11-26T00:39:02+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 698, "output_tokens": 1120, "total_tokens": 2088}
+{"time": "2026-11-26T00:40:16+00:00", "model": "vertex:gemini-3-pro-image", "size": "1K", "prompt_tokens": 700, "output_tokens": 1120, "total_tokens": 2101}
