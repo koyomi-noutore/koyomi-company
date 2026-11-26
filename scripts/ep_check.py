@@ -151,6 +151,24 @@ def index_problems(out):
     return out_
 
 
+def subtitle_problems(out):
+    """字幕の区切りで「？。」「！。」などが出ないか（2026-11-26 CEO指示：これから作る分に出さない）。
+    timeline.json の各セリフの字幕を、動画と同じ ep_video.chunks で切って調べる。"""
+    tj = out / "timeline.json"
+    if not tj.exists():
+        return []
+    import ep_video as _V
+    bad = []
+    for l in json.loads(tj.read_text(encoding="utf-8")).get("lines", []):
+        sub = str(l.get("subtitle", ""))
+        if not sub or str(l.get("id", "")).endswith("_card"):
+            continue
+        for c in _V.chunks(sub):
+            if re.search(r"[？！?!][。、]|。。|、。|。、", c):
+                bad.append(f"字幕 {l.get('id')}：「{c}」に句読点の重なり（「？。」など。2026-11-26 CEO指示）")
+    return bad
+
+
 def numeric(out_dir, work):
     out, work = Path(out_dir), Path(work)
     problems, info = [], {}
@@ -215,6 +233,7 @@ def numeric(out_dir, work):
             problems.append(f"第{Q['q']}問：「増える・なくなる」が{sum(t in ('増える', 'なくなる') for t in types)}つ（1つまで）")
     blocking += repeat_problems()
     blocking += index_problems(out)
+    blocking += subtitle_problems(out)
     vj = work / "voice" / "voice.json"
     import ep_timeline as T
     problems += [f"読み・間：{p}" for p in T.readings_check(out / "readings_check.md")]
