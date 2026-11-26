@@ -724,44 +724,44 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 3110,
+   "outside_box_pixels_diff_gt15": 3077,
    "outside_box_max_distance_px": 13.0,
    "answers": [
     {
      "id": 1,
-     "type": "なくなる",
-     "label": "手袋がない",
-     "line": "左上の手袋が、なくなりました。",
+     "type": "向き",
+     "label": "ドアのかんぬきが縦向き",
+     "line": "ドアのかんぬきが、縦向きになりました。",
      "box_px": [
-      248,
-      664,
-      473,
-      1030
+      545,
+      1010,
+      760,
+      1220
      ],
      "box_screen": [
-      128,
-      343,
-      245,
-      533
+      282,
+      522,
+      393,
+      631
      ],
      "circle_a_screen": [
-      128,
-      343,
-      245,
-      533
+      282,
+      522,
+      393,
+      631
      ],
      "circle_b_screen": [
-      128,
-      343,
-      245,
-      533
+      282,
+      522,
+      393,
+      631
      ],
-     "object_w_px": 225,
-     "object_picture_width_pct": 12.12,
-     "object_screen_width_pct": 6.06,
-     "in_level_range": false,
+     "object_w_px": 190,
+     "object_picture_width_pct": 10.24,
+     "object_screen_width_pct": 5.12,
+     "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     },
@@ -1173,8 +1173,8 @@
     {
      "id": 2,
      "type": "数",
-     "label": "積み石が1つ減る",
-     "line": "積み石が、1つ減りました。",
+     "label": "積み石が2つ減る",
+     "line": "積み石が、2つ減りました。",
      "box_px": [
       1380,
       240,

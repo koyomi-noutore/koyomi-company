@@ -1,5 +1,37 @@
 [
  {
+  "q": 4,
+  "id": 1,
+  "type": "色",
+  "label": "植木鉢が黄色",
+  "line": "棚の植木鉢が、黄色になりました。",
+  "voice": "たなの、うえきばちが、きいろに、なりました。",
+  "box": [
+   1450,
+   384,
+   1664,
+   564
+  ],
+  "object_w": 210,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the terracotta flower pot (holding the green plant, standing on the wall shelf at the upper right of this image) so that it becomes clearly bright YELLOW, keeping the same shape, thick outlines and shading. The green plant, the shelf and everything else stay exactly the same."
+ },
+ {
+  "q": 6,
+  "id": 1,
+  "type": "向き",
+  "label": "ドアのかんぬきが縦向き",
+  "line": "ドアのかんぬきが、縦向きになりました。",
+  "voice": "どあの、かんぬきが、たてむきに、なりました。",
+  "box": [
+   545,
+   1010,
+   760,
+   1220
+  ],
+  "object_w": 190,
+  "prompt": "Edit this picture-book illustration: the small gray metal door latch (a horizontal sliding bar held by two small bracket plates) at the center of this image on the wooden door. Rotate ONLY the latch bar so that it is VERTICAL (pointing up and down) instead of horizontal, held by the same two small bracket plates placed above and below, same gray metal color, outlines and shading. Repaint the place where the horizontal bar was as plain wood grain like the door around it, with no ghost. The door boards, the wooden door frame and everything else stay exactly the same."
+ },
+ {
   "q": 8,
   "id": 1,
   "type": "色",
@@ -35,9 +67,9 @@
   "q": 9,
   "id": 2,
   "type": "数",
-  "label": "積み石が1つ減る",
-  "line": "積み石が、1つ減りました。",
-  "voice": "つみいしが、ひとつ、へりました。",
+  "label": "積み石が2つ減る",
+  "line": "積み石が、2つ減りました。",
+  "voice": "つみいしが、ふたつ、へりました。",
   "box": [
    1380,
    240,
@@ -110,21 +142,5 @@
   ],
   "object_w": 140,
   "prompt": "Edit this picture-book illustration: redraw the two ear leaves of the little snow rabbit (center of this image) as two ROUND, plump, almost circular green leaves (like round coins, each with a short stem and one center vein), crisp thick dark outline, flat clean watercolor green, positioned where the old pointed leaves were. The old pointed leaves must be completely gone: repaint the area behind and around them as clean white snow and the pale blue background trees. No blur, no halo, no smear. The snow rabbit's white body, face and everything else stay exactly the same."
- },
- {
-  "q": 4,
-  "id": 1,
-  "type": "色",
-  "label": "植木鉢が黄色",
-  "line": "棚の植木鉢が、黄色になりました。",
-  "voice": "たなの、うえきばちが、きいろに、なりました。",
-  "box": [
-   1450,
-   384,
-   1664,
-   564
-  ],
-  "object_w": 210,
-  "prompt": "Edit this picture-book illustration: recolor ONLY the terracotta flower pot (holding the green plant, standing on the wall shelf at the upper right of this image) so that it becomes clearly bright YELLOW, keeping the same shape, thick outlines and shading. The green plant, the shelf and everything else stay exactly the same."
  }
 ]
