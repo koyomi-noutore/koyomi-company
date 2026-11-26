@@ -32,6 +32,22 @@
   "prompt": "Edit this picture-book illustration: recolor ONLY the straw bristles (the bushy yellow straw head at the bottom) of the broom leaning at the left so that they become clearly bright RED, keeping the same shape, size, thick outlines and straw texture. The wooden broom handle, the post, the snow and everything else stay exactly the same."
  },
  {
+  "q": 5,
+  "id": 2,
+  "type": "なくなる",
+  "label": "団子の串が1本ない",
+  "line": "団子の串が、1本、減りました。",
+  "voice": "だんごの、くしが、いっぽん、へりました。",
+  "box": [
+   1180,
+   1370,
+   1450,
+   1520
+  ],
+  "object_w": 195,
+  "prompt": "Edit this picture-book illustration: on the small round plate at the right of the table there are three dango sweets (a green one, a white one and a pink one) in a row. Remove ONLY the pink dango so that the plate has just two dango (the green and the white). Repaint the spot as the plain plate surface, no ghost, no outline. The plate and everything else stay exactly the same."
+ },
+ {
   "q": 6,
   "id": 3,
   "type": "色",

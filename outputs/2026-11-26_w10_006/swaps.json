@@ -17,6 +17,23 @@
   "prompt": "(画像APIは使わず、元の絵の物を複製して貼った)"
  },
  {
+  "q": 4,
+  "id": 1,
+  "type": "増える",
+  "label": "ゆずが浮かぶ",
+  "line": "お湯に、ゆずが、2つ、増えました。",
+  "voice": "おゆに、ゆずが、ふたつ、ふえました。",
+  "context": "冬の温泉のお湯に浮かぶゆず。何個浮かんでいてもふつう",
+  "box": [
+   900,
+   1250,
+   1100,
+   1390
+  ],
+  "object_w": 190,
+  "prompt": "Edit this picture-book illustration: add exactly TWO small round yellow yuzu citrus fruits floating side by side on the clear hot-spring water surface in the open water area in the middle of this image, each with a tiny green stem, same watercolor style, thin ripple lines under them. Together the pair is about one fifth of the width of this image. Do not change the rocks, steam or anything else."
+ },
+ {
   "q": 5,
   "id": 3,
   "type": "なくなる",
@@ -90,12 +107,12 @@
   "voice": "まどの、そとの、きが、なくなりました。",
   "box": [
    1170,
-   30,
+   0,
    1320,
    260
   ],
   "object_w": 120,
-  "prompt": "Edit this picture-book illustration: erase ONLY the small bare tree (thin brown trunk and branches) seen through the right-hand window pane, and repaint that area as plain snowy field and pale winter sky like the rest of the view outside. Keep the window frame and bars exactly the same."
+  "prompt": "Edit this picture-book illustration: erase ONLY the small bare tree (thin brown trunk and branches) seen through the right-hand window pane, and repaint that area as plain snowy field and pale winter sky like the rest of the view outside. Keep the window frame and bars exactly the same.（のち、上の段のガラスの枝の先は空の色でプログラムで塗り直した）"
  },
  {
   "q": 10,

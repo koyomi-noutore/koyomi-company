@@ -454,44 +454,44 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 233,
-   "outside_box_max_distance_px": 9.0,
+   "outside_box_pixels_diff_gt15": 75,
+   "outside_box_max_distance_px": 7.0,
    "answers": [
     {
      "id": 1,
-     "type": "なくなる",
-     "label": "鉢植えがない",
-     "line": "右上の鉢植えが、なくなりました。",
+     "type": "増える",
+     "label": "ゆずが浮かぶ",
+     "line": "お湯に、ゆずが、2つ、増えました。",
      "box_px": [
-      1290,
-      325,
-      1825,
-      1030
+      900,
+      1250,
+      1100,
+      1390
      ],
      "box_screen": [
-      667,
-      168,
-      944,
-      533
+      466,
+      647,
+      569,
+      719
      ],
      "circle_a_screen": [
-      667,
-      168,
-      944,
-      533
+      466,
+      647,
+      569,
+      719
      ],
      "circle_b_screen": [
-      667,
-      168,
-      944,
-      533
+      466,
+      647,
+      569,
+      719
      ],
-     "object_w_px": 320,
-     "object_picture_width_pct": 17.24,
-     "object_screen_width_pct": 8.62,
-     "in_level_range": false,
+     "object_w_px": 190,
+     "object_picture_width_pct": 10.24,
+     "object_screen_width_pct": 5.12,
+     "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     },
@@ -1129,7 +1129,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 43,
+   "outside_box_pixels_diff_gt15": 0,
    "outside_box_max_distance_px": 5.0,
    "answers": [
     {
@@ -1215,25 +1215,25 @@
      "line": "窓の外の木が、なくなりました。",
      "box_px": [
       1170,
-      30,
+      0,
       1320,
       260
      ],
      "box_screen": [
       605,
-      16,
+      0,
       683,
       134
      ],
      "circle_a_screen": [
       605,
-      16,
+      0,
       683,
       134
      ],
      "circle_b_screen": [
       605,
-      16,
+      0,
       683,
       134
      ],

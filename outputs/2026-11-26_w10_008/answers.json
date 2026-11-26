@@ -589,8 +589,8 @@
     2011
    ],
    "scale_to_screen": 0.55814,
-   "outside_box_pixels_diff_gt15": 256,
-   "outside_box_max_distance_px": 11.0,
+   "outside_box_pixels_diff_gt15": 83,
+   "outside_box_max_distance_px": 7.0,
    "answers": [
     {
      "id": 1,
@@ -632,39 +632,39 @@
     },
     {
      "id": 2,
-     "type": "色",
-     "label": "植木鉢が青",
-     "line": "窓辺の植木鉢が、青くなりました。",
+     "type": "なくなる",
+     "label": "団子の串が1本ない",
+     "line": "団子の串が、1本、減りました。",
      "box_px": [
+      1180,
+      1370,
       1450,
-      845,
-      1675,
-      1040
+      1520
      ],
      "box_screen": [
+      614,
+      722,
       765,
-      429,
-      890,
-      538
+      806
      ],
      "circle_a_screen": [
+      614,
+      722,
       765,
-      429,
-      890,
-      538
+      806
      ],
      "circle_b_screen": [
+      614,
+      722,
       765,
-      429,
-      890,
-      538
+      806
      ],
-     "object_w_px": 187,
-     "object_picture_width_pct": 10.87,
-     "object_screen_width_pct": 5.44,
+     "object_w_px": 195,
+     "object_picture_width_pct": 11.34,
+     "object_screen_width_pct": 5.67,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     },
