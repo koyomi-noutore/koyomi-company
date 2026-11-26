@@ -319,8 +319,8 @@
     2024
    ],
    "scale_to_screen": 0.55109,
-   "outside_box_pixels_diff_gt15": 194,
-   "outside_box_max_distance_px": 9.0,
+   "outside_box_pixels_diff_gt15": 34,
+   "outside_box_max_distance_px": 6.0,
    "answers": [
     {
      "id": 1,
@@ -401,38 +401,38 @@
     {
      "id": 3,
      "type": "色",
-     "label": "スリッパが緑",
-     "line": "片方のスリッパが、緑色になりました。",
+     "label": "座布団が赤",
+     "line": "左の座布団が、赤くなりました。",
      "box_px": [
-      1470,
-      1455,
-      1775,
-      1600
+      90,
+      1375,
+      455,
+      1615
      ],
      "box_screen": [
-      779,
-      767,
-      947,
-      846
+      18,
+      722,
+      219,
+      855
      ],
      "circle_a_screen": [
-      779,
-      767,
-      947,
-      846
+      18,
+      722,
+      219,
+      855
      ],
      "circle_b_screen": [
-      779,
-      767,
-      947,
-      846
+      18,
+      722,
+      219,
+      855
      ],
-     "object_w_px": 255,
-     "object_picture_width_pct": 14.64,
-     "object_screen_width_pct": 7.32,
+     "object_w_px": 355,
+     "object_picture_width_pct": 20.38,
+     "object_screen_width_pct": 10.19,
      "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     }
@@ -1129,44 +1129,44 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 265,
-   "outside_box_max_distance_px": 11.0,
+   "outside_box_pixels_diff_gt15": 61,
+   "outside_box_max_distance_px": 7.0,
    "answers": [
     {
      "id": 1,
-     "type": "向き",
-     "label": "小鳥の向き",
-     "line": "小鳥の向きが、反対になりました。",
+     "type": "色",
+     "label": "みかんが紫",
+     "line": "一番上のみかんが、紫になりました。",
      "box_px": [
-      260,
-      150,
-      690,
-      340
+      795,
+      830,
+      935,
+      960
      ],
      "box_screen": [
-      134,
-      78,
-      357,
-      176
+      411,
+      429,
+      484,
+      497
      ],
      "circle_a_screen": [
-      134,
-      78,
-      357,
-      176
+      411,
+      429,
+      484,
+      497
      ],
      "circle_b_screen": [
-      134,
-      78,
-      357,
-      176
+      411,
+      429,
+      484,
+      497
      ],
-     "object_w_px": 170,
-     "object_picture_width_pct": 9.16,
-     "object_screen_width_pct": 4.58,
-     "in_level_range": false,
+     "object_w_px": 125,
+     "object_picture_width_pct": 6.73,
+     "object_screen_width_pct": 3.37,
+     "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     },
@@ -1210,39 +1210,39 @@
     },
     {
      "id": 3,
-     "type": "数",
-     "label": "みかんが2つ",
-     "line": "みかんが、ひとつから、ふたつに、ふえました。",
+     "type": "なくなる",
+     "label": "雪の石がない",
+     "line": "右の雪の中の石が、なくなりました。",
      "box_px": [
-      1385,
-      1030,
-      1745,
-      1245
+      1490,
+      855,
+      1650,
+      950
      ],
      "box_screen": [
-      716,
-      533,
-      903,
-      644
+      771,
+      442,
+      853,
+      491
      ],
      "circle_a_screen": [
-      716,
-      533,
-      903,
-      644
+      771,
+      442,
+      853,
+      491
      ],
      "circle_b_screen": [
-      716,
-      533,
-      903,
-      644
+      771,
+      442,
+      853,
+      491
      ],
-     "object_w_px": 155,
-     "object_picture_width_pct": 8.35,
-     "object_screen_width_pct": 4.18,
-     "in_level_range": false,
+     "object_w_px": 140,
+     "object_picture_width_pct": 7.54,
+     "object_screen_width_pct": 3.77,
+     "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     }

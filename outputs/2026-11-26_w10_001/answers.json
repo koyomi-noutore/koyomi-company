@@ -859,7 +859,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 778,
+   "outside_box_pixels_diff_gt15": 306,
    "outside_box_max_distance_px": 12.0,
    "answers": [
     {

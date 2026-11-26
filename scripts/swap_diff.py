@@ -116,10 +116,41 @@ def main(argv):
         full = a.copy()
         full.paste(ed, cb[:2])
         m = feather_mask(a.size, sw["box"], sw.get("feather", 10))
+        if sw.get("smooth"):
+            # 物を消す差し替え：描き直しの色の差が、まわりの空ににじまないよう、左の絵と実際に違う所（雲）だけを入れる。葉・線（空でない所）は入れない
+            import numpy as np
+            from PIL import ImageFilter
+            ar0 = np.asarray(a).astype(int)
+            prot0 = ((ar0[..., 0] > ar0[..., 2] + 6) | (ar0.sum(-1) < 3 * 150)).astype(np.uint8) * 255
+            prot0 = Image.fromarray(prot0).filter(ImageFilter.MaxFilter(9))
+            chg = (np.abs(np.asarray(full).astype(int) - ar0).sum(-1) > 30).astype(np.uint8) * 255
+            chg = Image.fromarray(chg).filter(ImageFilter.MaxFilter(31)).filter(ImageFilter.GaussianBlur(8))
+            fr = np.asarray(full).astype(int)       # 描き直しの絵にずれて描かれた葉・線も入れない
+            protF = ((fr[..., 0] > fr[..., 2] + 6) | (fr.sum(-1) < 3 * 150)).astype(np.uint8) * 255
+            protF = Image.fromarray(protF).filter(ImageFilter.MaxFilter(9))
+            m = ImageChops.multiply(ImageChops.multiply(chg, m), ImageChops.invert(ImageChops.lighter(prot0, protF)))
         b = Image.composite(full, b, m)
         if sw.get("smooth"):    # 消したあとの薄い輪郭の跡（空・壁など平らな所）をぼかして消す。範囲 box の中に収める
             from PIL import ImageFilter
-            b = Image.composite(b.filter(ImageFilter.GaussianBlur(14)), b, feather_mask(a.size, sw["smooth"], 20))
+            import numpy as np
+            sm = feather_mask(a.size, sw["smooth"], 20)
+            # 空・壁のような平らな色でない所（左の絵で、赤が青より強い＝葉・木・物、または暗い線）は、ぼかさず左の絵のまま残す（範囲内の別の物を巻き込まない）
+            ar = np.asarray(a).astype(int)
+            prot = ((ar[..., 0] > ar[..., 2] + 6) | (ar.sum(-1) < 3 * 150)).astype(np.uint8) * 255
+            prot = Image.fromarray(prot).filter(ImageFilter.MaxFilter(9)).filter(ImageFilter.GaussianBlur(2))
+            sm = ImageChops.multiply(sm, ImageChops.invert(prot))
+            # ぼかしは「ぼかしてよい所（空など）」の色だけで平均する（葉・線の色がまわりの空ににじまないように）
+            w_ = 1.0 - np.asarray(prot).astype(float) / 255.0
+            bb = np.asarray(b).astype(float)
+            from scipy.ndimage import gaussian_filter
+            den = gaussian_filter(w_, 14)
+            chans = [np.clip(gaussian_filter(bb[..., c] * w_, 14) / np.maximum(den, 1e-3), 0, 255) for c in range(3)]
+            blurred = Image.fromarray(np.stack(chans, -1).astype(np.uint8))
+            b = Image.composite(blurred, b, sm)
+            # 消した物（雲など）の外にある別の物（葉・線）は、描き直しにも巻き込まれていないよう、範囲の中だけ左の絵に戻す
+            rect = Image.new("L", a.size, 0)
+            ImageDraw.Draw(rect).rectangle(tuple(sw["box"]), fill=255)
+            b = Image.composite(a, b, ImageChops.multiply(prot, rect))
         b.save(ep / f"q{q}_b.png")
         # 3. plan.json・answers.json・声
         new = {"id": did, "type": sw["type"], "label": sw["label"], "line": sw["line"], "box": sw["box"], "object_w": sw["object_w"], "src": "swap"}
