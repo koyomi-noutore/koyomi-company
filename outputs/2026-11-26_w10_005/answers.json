@@ -363,76 +363,76 @@
     {
      "id": 2,
      "type": "色",
-     "label": "ゆずが緑",
-     "line": "ゆずが、緑色になりました。",
+     "label": "とっくりが赤",
+     "line": "とっくりが、赤くなりました。",
      "box_px": [
-      1490,
-      1154,
-      1692,
-      1335
+      1400,
+      615,
+      1660,
+      1005
      ],
      "box_screen": [
-      771,
-      597,
-      875,
-      691
+      724,
+      318,
+      859,
+      520
      ],
      "circle_a_screen": [
-      771,
-      597,
-      875,
-      691
+      724,
+      318,
+      859,
+      520
      ],
      "circle_b_screen": [
-      771,
-      597,
-      875,
-      691
+      724,
+      318,
+      859,
+      520
      ],
-     "object_w_px": 182,
-     "object_picture_width_pct": 9.81,
-     "object_screen_width_pct": 4.9,
+     "object_w_px": 224,
+     "object_picture_width_pct": 12.07,
+     "object_screen_width_pct": 6.03,
      "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "p",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     },
     {
      "id": 3,
-     "type": "色",
-     "label": "湯のみが赤",
-     "line": "湯のみが、赤くなりました。",
+     "type": "なくなる",
+     "label": "おたまがない",
+     "line": "おたまが、なくなりました。",
      "box_px": [
-      316,
-      1478,
-      532,
+      1160,
+      1480,
+      1730,
       1775
      ],
      "box_screen": [
-      163,
-      764,
-      275,
+      600,
+      766,
+      895,
       918
      ],
      "circle_a_screen": [
-      163,
-      764,
-      275,
+      600,
+      766,
+      895,
       918
      ],
      "circle_b_screen": [
-      163,
-      764,
-      275,
+      600,
+      766,
+      895,
       918
      ],
-     "object_w_px": 196,
-     "object_picture_width_pct": 10.56,
-     "object_screen_width_pct": 5.28,
-     "in_level_range": true,
+     "object_w_px": 545,
+     "object_picture_width_pct": 29.36,
+     "object_screen_width_pct": 14.68,
+     "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "p",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     }
@@ -454,44 +454,44 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 364,
+   "outside_box_pixels_diff_gt15": 307,
    "outside_box_max_distance_px": 9.0,
    "answers": [
     {
      "id": 1,
      "type": "なくなる",
-     "label": "お椀が1つ減る",
-     "line": "左のお椀が、1つ減りました。",
+     "label": "薪が1本ない",
+     "line": "薪が、1本、なくなりました。",
      "box_px": [
-      315,
-      500,
-      555,
-      690
+      1130,
+      1380,
+      1620,
+      1775
      ],
      "box_screen": [
-      163,
-      259,
-      287,
-      357
+      584,
+      714,
+      838,
+      918
      ],
      "circle_a_screen": [
-      163,
-      259,
-      287,
-      357
+      584,
+      714,
+      838,
+      918
      ],
      "circle_b_screen": [
-      163,
-      259,
-      287,
-      357
+      584,
+      714,
+      838,
+      918
      ],
-     "object_w_px": 195,
-     "object_picture_width_pct": 10.51,
-     "object_screen_width_pct": 5.25,
+     "object_w_px": 200,
+     "object_picture_width_pct": 10.78,
+     "object_screen_width_pct": 5.39,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     },
@@ -535,39 +535,39 @@
     },
     {
      "id": 3,
-     "type": "入れ替え",
-     "label": "おけがかごに",
-     "line": "左のおけが、かごに変わりました。",
+     "type": "色",
+     "label": "ふたが緑",
+     "line": "せいろのふたが、緑色になりました。",
      "box_px": [
-      240,
-      1195,
-      640,
-      1625
+      780,
+      555,
+      1170,
+      745
      ],
      "box_screen": [
-      124,
-      618,
-      331,
-      841
+      403,
+      287,
+      605,
+      385
      ],
      "circle_a_screen": [
-      124,
-      618,
-      331,
-      841
+      403,
+      287,
+      605,
+      385
      ],
      "circle_b_screen": [
-      124,
-      618,
-      331,
-      841
+      403,
+      287,
+      605,
+      385
      ],
-     "object_w_px": 300,
-     "object_picture_width_pct": 16.16,
-     "object_screen_width_pct": 8.08,
+     "object_w_px": 400,
+     "object_picture_width_pct": 21.55,
+     "object_screen_width_pct": 10.78,
      "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "3",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     }
@@ -724,7 +724,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 138,
+   "outside_box_pixels_diff_gt15": 22,
    "outside_box_max_distance_px": 8.0,
    "answers": [
     {
@@ -767,77 +767,77 @@
     },
     {
      "id": 2,
-     "type": "入れ替え",
-     "label": "やかんがつぼに",
-     "line": "火鉢の上のやかんが、土のつぼに変わりました。",
+     "type": "色",
+     "label": "下駄が青",
+     "line": "右の下駄が、青くなりました。",
      "box_px": [
-      1445,
-      1330,
-      1770,
-      1600
+      225,
+      1650,
+      440,
+      1775
      ],
      "box_screen": [
-      747,
-      688,
-      916,
-      828
+      116,
+      853,
+      228,
+      918
      ],
      "circle_a_screen": [
-      747,
-      688,
-      916,
-      828
+      116,
+      853,
+      228,
+      918
      ],
      "circle_b_screen": [
-      747,
-      688,
-      916,
-      828
+      116,
+      853,
+      228,
+      918
      ],
-     "object_w_px": 205,
-     "object_picture_width_pct": 11.05,
-     "object_screen_width_pct": 5.52,
+     "object_w_px": 191,
+     "object_picture_width_pct": 10.29,
+     "object_screen_width_pct": 5.15,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     },
     {
      "id": 3,
-     "type": "入れ替え",
-     "label": "急須が鉄びんに",
-     "line": "左の急須が、鉄びんに変わりました。",
+     "type": "色",
+     "label": "植木鉢が白",
+     "line": "植木鉢が、白くなりました。",
      "box_px": [
-      165,
-      985,
-      455,
-      1225
+      1600,
+      755,
+      1780,
+      940
      ],
      "box_screen": [
-      85,
-      509,
-      235,
-      634
+      828,
+      391,
+      921,
+      486
      ],
      "circle_a_screen": [
-      85,
-      509,
-      235,
-      634
+      828,
+      391,
+      921,
+      486
      ],
      "circle_b_screen": [
-      85,
-      509,
-      235,
-      634
+      828,
+      391,
+      921,
+      486
      ],
-     "object_w_px": 200,
-     "object_picture_width_pct": 10.78,
-     "object_screen_width_pct": 5.39,
-     "in_level_range": true,
+     "object_w_px": 165,
+     "object_picture_width_pct": 8.89,
+     "object_screen_width_pct": 4.45,
+     "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "4",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     }
@@ -1129,90 +1129,90 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 927,
-   "outside_box_max_distance_px": 12.0,
+   "outside_box_pixels_diff_gt15": 0,
+   "outside_box_max_distance_px": 0.0,
    "answers": [
     {
      "id": 1,
      "type": "色",
-     "label": "湯のみが青",
-     "line": "右の湯のみが、青くなりました。",
+     "label": "火が赤",
+     "line": "コンロの火が、赤くなりました。",
      "box_px": [
-      1375,
-      935,
-      1503,
-      1100
+      790,
+      1040,
+      960,
+      1110
      ],
      "box_screen": [
-      711,
-      484,
-      777,
-      569
+      409,
+      538,
+      497,
+      574
      ],
      "circle_a_screen": [
-      711,
-      484,
-      777,
-      569
+      409,
+      538,
+      497,
+      574
      ],
      "circle_b_screen": [
-      711,
-      484,
-      777,
-      569
+      409,
+      538,
+      497,
+      574
      ],
-     "object_w_px": 123,
-     "object_picture_width_pct": 6.63,
-     "object_screen_width_pct": 3.31,
+     "object_w_px": 120,
+     "object_picture_width_pct": 6.47,
+     "object_screen_width_pct": 3.23,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     },
     {
      "id": 2,
-     "type": "形",
-     "label": "実が赤い花",
-     "line": "鉢植えの赤い実が、花になりました。",
+     "type": "色",
+     "label": "実が黄色",
+     "line": "赤い実が、黄色くなりました。",
      "box_px": [
-      1630,
-      160,
-      1820,
-      335
+      1540,
+      170,
+      1800,
+      340
      ],
      "box_screen": [
-      843,
-      83,
-      941,
-      173
+      797,
+      88,
+      931,
+      176
      ],
      "circle_a_screen": [
-      843,
-      83,
-      941,
-      173
+      797,
+      88,
+      931,
+      176
      ],
      "circle_b_screen": [
-      843,
-      83,
-      941,
-      173
+      797,
+      88,
+      931,
+      176
      ],
-     "object_w_px": 176,
-     "object_picture_width_pct": 9.48,
-     "object_screen_width_pct": 4.74,
-     "in_level_range": false,
+     "object_w_px": 148,
+     "object_picture_width_pct": 7.97,
+     "object_screen_width_pct": 3.99,
+     "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     },
     {
      "id": 3,
      "type": "増える",
-     "label": "窓辺に湯のみ",
-     "line": "窓辺に、湯のみがひとつ増えました。",
+     "label": "窓辺にこけし",
+     "line": "窓辺に、こけしが、増えました。",
      "box_px": [
       918,
       405,
@@ -1242,7 +1242,7 @@
      "object_screen_width_pct": 3.23,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "p",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     }
@@ -1264,8 +1264,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 67,
-   "outside_box_max_distance_px": 7.0,
+   "outside_box_pixels_diff_gt15": 22,
+   "outside_box_max_distance_px": 5.0,
    "answers": [
     {
      "id": 1,
@@ -1307,77 +1307,77 @@
     },
     {
      "id": 2,
-     "type": "なくなる",
-     "label": "すずめがいない",
-     "line": "左上のすずめが、いなくなりました。",
+     "type": "増える",
+     "label": "手すりに雪だるま",
+     "line": "手すりに、雪だるまが、増えました。",
      "box_px": [
-      270,
-      165,
-      520,
-      385
+      30,
+      200,
+      230,
+      420
      ],
      "box_screen": [
-      140,
-      85,
-      269,
-      199
+      16,
+      103,
+      119,
+      217
      ],
      "circle_a_screen": [
-      140,
-      85,
-      269,
-      199
+      16,
+      103,
+      119,
+      217
      ],
      "circle_b_screen": [
-      140,
-      85,
-      269,
-      199
+      16,
+      103,
+      119,
+      217
      ],
-     "object_w_px": 200,
-     "object_picture_width_pct": 10.78,
-     "object_screen_width_pct": 5.39,
+     "object_w_px": 150,
+     "object_picture_width_pct": 8.08,
+     "object_screen_width_pct": 4.04,
      "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "5",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     },
     {
      "id": 3,
-     "type": "色",
-     "label": "湯のみが黄色",
-     "line": "左の湯のみが、黄色くなりました。",
+     "type": "なくなる",
+     "label": "湯気がない",
+     "line": "せいろの湯気が、なくなりました。",
      "box_px": [
-      115,
-      960,
-      370,
-      1165
+      873,
+      679,
+      1044,
+      858
      ],
      "box_screen": [
-      59,
-      497,
-      191,
-      603
+      452,
+      351,
+      540,
+      444
      ],
      "circle_a_screen": [
-      59,
-      497,
-      191,
-      603
+      452,
+      351,
+      540,
+      444
      ],
      "circle_b_screen": [
-      59,
-      497,
-      191,
-      603
+      452,
+      351,
+      540,
+      444
      ],
-     "object_w_px": 143,
-     "object_picture_width_pct": 7.7,
-     "object_screen_width_pct": 3.85,
+     "object_w_px": 140,
+     "object_picture_width_pct": 7.54,
+     "object_screen_width_pct": 3.77,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "4",
+     "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
     }
