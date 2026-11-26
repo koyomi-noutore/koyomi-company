@@ -29,12 +29,18 @@
    "detail": "voice q8_ans3",
    "sec": 1.3,
    "at": "2026-11-26T01:31:06+00:00"
+  },
+  {
+   "step": "音声",
+   "detail": "voice q10_ans3 q10_go q1_ans1 q4_ans2 q6_ans0 q6_ans2 q8_card q9_ans1",
+   "sec": 10.5,
+   "at": "2026-11-26T01:37:38+00:00"
   }
  ],
  "total_sec_by_step": {
   "setup": 2.0,
   "監査（数値チェック）": 4.4,
-  "音声": 128.0
+  "音声": 138.5
  },
- "total_sec_all": 134.4
+ "total_sec_all": 144.9
 }
