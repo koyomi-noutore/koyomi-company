@@ -319,7 +319,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 1160,
+   "outside_box_pixels_diff_gt15": 1117,
    "outside_box_max_distance_px": 12.0,
    "answers": [
     {
@@ -362,38 +362,38 @@
     },
     {
      "id": 2,
-     "type": "なくなる",
-     "label": "雪だるまがない",
-     "line": "左の雪だるまが、なくなりました。",
+     "type": "色",
+     "label": "ほうきの穂が赤",
+     "line": "ほうきの穂が、赤くなりました。",
      "box_px": [
-      30,
-      600,
-      385,
-      1010
+      240,
+      1640,
+      540,
+      2080
      ],
      "box_screen": [
-      16,
-      310,
-      199,
-      522
+      124,
+      848,
+      279,
+      1076
      ],
      "circle_a_screen": [
-      16,
-      310,
-      199,
-      522
+      124,
+      848,
+      279,
+      1076
      ],
      "circle_b_screen": [
-      16,
-      310,
-      199,
-      522
+      124,
+      848,
+      279,
+      1076
      ],
-     "object_w_px": 215,
-     "object_picture_width_pct": 11.58,
-     "object_screen_width_pct": 5.79,
-     "in_level_range": true,
-     "in_safe_y": true,
+     "object_w_px": 250,
+     "object_picture_width_pct": 13.47,
+     "object_screen_width_pct": 6.73,
+     "in_level_range": false,
+     "in_safe_y": false,
      "edit_version": "swap",
      "made_by": "gemini",
      "note": ""
@@ -724,7 +724,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 219,
+   "outside_box_pixels_diff_gt15": 361,
    "outside_box_max_distance_px": 7.0,
    "answers": [
     {
@@ -806,8 +806,8 @@
     {
      "id": 3,
      "type": "色",
-     "label": "つぼが緑",
-     "line": "右下のつぼが、緑になりました。",
+     "label": "つぼが赤",
+     "line": "右下のつぼが、赤くなりました。",
      "box_px": [
       1410,
       1650,
@@ -1129,14 +1129,14 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 0,
-   "outside_box_max_distance_px": 0.0,
+   "outside_box_pixels_diff_gt15": 371,
+   "outside_box_max_distance_px": 8.0,
    "answers": [
     {
      "id": 1,
      "type": "色",
      "label": "街灯の電球が青",
-     "line": "右の街灯の、あかりが、青くなりました。",
+     "line": "街灯の灯りが、青くなりました。",
      "box_px": [
       1350,
       590,
@@ -1211,8 +1211,8 @@
     {
      "id": 3,
      "type": "増える",
-     "label": "小鳥が増える",
-     "line": "雪の上に、小鳥が、1羽、増えました。",
+     "label": "小さな雪だるまが増える",
+     "line": "雪の上に、小さな雪だるまが、1つ、増えました。",
      "box_px": [
       1290,
       1490,
@@ -1237,10 +1237,10 @@
       781,
       884
      ],
-     "object_w_px": 105,
-     "object_picture_width_pct": 5.66,
-     "object_screen_width_pct": 2.83,
-     "in_level_range": false,
+     "object_w_px": 120,
+     "object_picture_width_pct": 6.47,
+     "object_screen_width_pct": 3.23,
+     "in_level_range": true,
      "in_safe_y": true,
      "edit_version": "swap",
      "made_by": "gemini",
@@ -1271,7 +1271,7 @@
      "id": 1,
      "type": "色",
      "label": "葉っぱが赤",
-     "line": "雪うさぎの葉っぱが、赤くなりました。",
+     "line": "雪うさぎの葉が、赤くなりました。",
      "box_px": [
       340,
       1020,
@@ -1346,8 +1346,8 @@
     {
      "id": 3,
      "type": "増える",
-     "label": "みかんが増える",
-     "line": "雪の石の上に、みかんが、1つ、増えました。",
+     "label": "松ぼっくりが増える",
+     "line": "雪の石の上に、松ぼっくりが、1つ、増えました。",
      "box_px": [
       670,
       1470,
@@ -1372,9 +1372,9 @@
       460,
       874
      ],
-     "object_w_px": 100,
-     "object_picture_width_pct": 5.39,
-     "object_screen_width_pct": 2.69,
+     "object_w_px": 110,
+     "object_picture_width_pct": 5.93,
+     "object_screen_width_pct": 2.96,
      "in_level_range": false,
      "in_safe_y": true,
      "edit_version": "swap",
