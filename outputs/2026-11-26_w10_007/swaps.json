@@ -1,0 +1,146 @@
+[
+ {
+  "q": 4,
+  "id": 1,
+  "type": "色",
+  "label": "植木鉢が黄色",
+  "line": "棚の植木鉢が、黄色になりました。",
+  "voice": "たなの、うえきばちが、きいろに、なりました。",
+  "box": [
+   1450,
+   384,
+   1664,
+   564
+  ],
+  "object_w": 210,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the terracotta flower pot (holding the green plant, standing on the wall shelf at the upper right of this image) so that it becomes clearly bright YELLOW, keeping the same shape, thick outlines and shading. The green plant, the shelf and everything else stay exactly the same."
+ },
+ {
+  "q": 6,
+  "id": 1,
+  "type": "向き",
+  "label": "ドアのかんぬきが縦向き",
+  "line": "ドアのかんぬきが、縦向きになりました。",
+  "voice": "どあの、かんぬきが、たてむきに、なりました。",
+  "box": [
+   545,
+   1010,
+   760,
+   1220
+  ],
+  "object_w": 190,
+  "prompt": "Edit this picture-book illustration: the small gray metal door latch (a horizontal sliding bar held by two small bracket plates) at the center of this image on the wooden door. Rotate ONLY the latch bar so that it is VERTICAL (pointing up and down) instead of horizontal, held by the same two small bracket plates placed above and below, same gray metal color, outlines and shading. Repaint the place where the horizontal bar was as plain wood grain like the door around it, with no ghost. The door boards, the wooden door frame and everything else stay exactly the same."
+ },
+ {
+  "q": 8,
+  "id": 1,
+  "type": "色",
+  "label": "お椀が緑",
+  "line": "スープのお椀が、緑になりました。",
+  "voice": "スープの、おわんが、みどりに、なりました。",
+  "box": [
+   730,
+   1075,
+   950,
+   1225
+  ],
+  "object_w": 220,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the outside of the soup bowl standing at the center of this image (in front of the big pot) so that the bowl itself becomes clearly bright GREEN (like green glazed pottery), keeping the same shape, thick outlines, highlights and shading. The brown soup inside, the pot, the table and everything else stay exactly the same."
+ },
+ {
+  "q": 8,
+  "id": 3,
+  "type": "模様",
+  "label": "パンの切れ込みが3本線",
+  "line": "パンの切れ込みが、3本の線になりました。",
+  "voice": "パンの、きれこみが、さんぼんの、せんに、なりました。",
+  "box": [
+   100,
+   830,
+   330,
+   985
+  ],
+  "object_w": 230,
+  "prompt": "Edit this picture-book illustration: on the round loaf of bread in the center of this image, replace the cross-shaped (X) slash marks on top with THREE parallel diagonal slash lines (like three short bars) of the same cream color and style. The loaf's shape, color, outline, the cutting board and everything else stay exactly the same."
+ },
+ {
+  "q": 9,
+  "id": 2,
+  "type": "数",
+  "label": "積み石が2つ減る",
+  "line": "積み石が、2つ減りました。",
+  "voice": "つみいしが、ふたつ、へりました。",
+  "box": [
+   1380,
+   240,
+   1520,
+   330
+  ],
+  "object_w": 120,
+  "prompt": "Edit this picture-book illustration: the stack of balanced stones (cairn) in the center of this image has three stones. Remove ONLY the smallest TOP stone so that the stack has just two stones (the bottom big stone and the middle one). Repaint the area where the top stone was as plain pale blue sky exactly like the sky around it. The result must contain no third stone, no outline and no ghost. The two lower stones, the grass and everything else stay exactly the same."
+ },
+ {
+  "q": 9,
+  "id": 3,
+  "type": "色",
+  "label": "穂がピンク",
+  "line": "手前のススキの穂が、ピンクになりました。",
+  "voice": "てまえの、ススキの、ほが、ピンクに、なりました。",
+  "box": [
+   165,
+   1540,
+   305,
+   1705
+  ],
+  "object_w": 130,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the one fluffy reed plume (the third plume from the left, slanting up to the right, in the lower-left reed cluster at the center of this image) so that it becomes clearly bright PINK, keeping the same shape, thick outlines, frost and shading. The other plumes, the stalks, the leaves, the water and the basket stay exactly the same."
+ },
+ {
+  "q": 10,
+  "id": 1,
+  "type": "色",
+  "label": "提灯のふたが青",
+  "line": "ちょうちんのふたが、青くなりました。",
+  "voice": "ちょうちんの、ふたが、あおくなりました。",
+  "box": [
+   330,
+   680,
+   500,
+   750
+  ],
+  "object_w": 140,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the small dark grey/black metal cap at the very bottom of the hanging paper lantern (center-left of this image) so that it becomes clearly bright BLUE, keeping the same shape, thick outline and shading. The paper lantern body, its lines and everything else stay exactly the same."
+ },
+ {
+  "q": 10,
+  "id": 2,
+  "type": "色",
+  "label": "松ぼっくりが緑",
+  "line": "切り株の松ぼっくりが、緑になりました。",
+  "voice": "きりかぶの、まつぼっくりが、みどりに、なりました。",
+  "box": [
+   290,
+   1240,
+   420,
+   1380
+  ],
+  "object_w": 130,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the brown pine cone sitting on top of the snowy tree stump in the center of this image so that it becomes clearly GREEN (a green pine cone), keeping the same shape, scales, thick outlines and shading. The stump, its snow and everything else stay exactly the same."
+ },
+ {
+  "q": 10,
+  "id": 3,
+  "type": "形",
+  "label": "雪うさぎの耳の葉が丸い",
+  "line": "雪うさぎの耳の葉が、丸くなりました。",
+  "voice": "ゆきうさぎの、みみの、はが、まるく、なりました。",
+  "box": [
+   1550,
+   1150,
+   1750,
+   1310
+  ],
+  "object_w": 140,
+  "prompt": "Edit this picture-book illustration: redraw the two ear leaves of the little snow rabbit (center of this image) as two ROUND, plump, almost circular green leaves (like round coins, each with a short stem and one center vein), crisp thick dark outline, flat clean watercolor green, positioned where the old pointed leaves were. The old pointed leaves must be completely gone: repaint the area behind and around them as clean white snow and the pale blue background trees. No blur, no halo, no smear. The snow rabbit's white body, face and everything else stay exactly the same."
+ }
+]
