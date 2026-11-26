@@ -49,7 +49,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 313,
+   "outside_box_pixels_diff_gt15": 104,
    "outside_box_max_distance_px": 10.0,
    "answers": [
     {
@@ -93,8 +93,8 @@
     {
      "id": 2,
      "type": "色",
-     "label": "シャベルの持ち手が赤",
-     "line": "シャベルの持ち手が、赤くなりました。",
+     "label": "シャベルの持ち手が青",
+     "line": "シャベルの持ち手が、青くなりました。",
      "box_px": [
       1000,
       270,
