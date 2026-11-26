@@ -95,5 +95,21 @@
   ],
   "object_w": 320,
   "prompt": "Edit this picture-book illustration: recolor ONLY the upper (top) white styrofoam fish box, including its lid, sitting on the shelf at the right of this image, so that it becomes clearly light BLUE, keeping its shape, thick outline and shading. The lower white box under it, the shelf and everything else stay exactly the same."
+ },
+ {
+  "q": 7,
+  "id": 3,
+  "type": "色",
+  "label": "荷物のひもが赤",
+  "line": "下の荷物のひもが、赤くなりました。",
+  "voice": "したの、にもつの、ひもが、あかく、なりました。",
+  "box": [
+   290,
+   1570,
+   560,
+   1930
+  ],
+  "object_w": 170,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the brown twine (string) tied around the kraft-paper parcel in the center of this image, including the bow knot on top and the strands running down the front, so that it becomes clearly bright RED, keeping the same thickness, shape and outlines. The brown paper parcel itself, the wooden floor and everything else stay exactly the same."
  }
 ]
