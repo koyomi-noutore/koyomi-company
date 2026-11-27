@@ -2,34 +2,35 @@
  {
   "q": 3,
   "id": 2,
-  "type": "色",
-  "label": "とっくりが赤",
-  "line": "とっくりが、赤くなりました。",
-  "voice": "とっくりが、あかくなりました。",
+  "type": "増える",
+  "label": "枝が増える",
+  "line": "窓の外の枝が、1本、増えました。",
+  "voice": "まどのそとの、えだが、いっぽん、ふえました。",
   "box": [
-   1400,
-   615,
-   1660,
-   1005
+   1075,
+   170,
+   1365,
+   330
   ],
-  "object_w": 224,
-  "prompt": "Edit this picture-book illustration: recolor ONLY the white ceramic sake bottle (tokkuri) standing on the wooden table so that it becomes clearly bright RED (keep its blue dot as a lighter mark), same shape, thick outlines, position and shading. The pot, the yuzu plate, the table and everything else stay exactly the same."
+  "object_w": 250,
+  "context": "窓の外の雪の積もった枝。細い枝が木の幹から出ているのは自然。",
+  "prompt": "Edit this picture-book illustration: add ONE short extra dark brown twig growing from the middle of the snowy branch that crosses the lower right window pane, pointing UP and slightly right into the empty grey-blue sky above the branch (about 100 pixels long in a 1024 pixel crop, thick dark outline like the branch, ending in a clean sharp tip well inside the window pane, not touching the window frame or any snowflake). It must be firmly attached to the existing branch. The sky, falling snowflakes, window frame and the snow on the ledge below stay exactly the same."
  },
  {
   "q": 3,
   "id": 3,
-  "type": "なくなる",
-  "label": "おたまがない",
-  "line": "おたまが、なくなりました。",
-  "voice": "おたまが、なくなりました。",
+  "type": "色",
+  "label": "白菜が赤",
+  "line": "白菜が、赤くなりました。",
+  "voice": "はくさいが、あかくなりました。",
   "box": [
-   1160,
-   1480,
-   1730,
-   1775
+   880,
+   900,
+   1070,
+   995
   ],
-  "object_w": 545,
-  "prompt": "Edit this picture-book illustration: remove ONLY the wooden ladle (its bowl and its long handle) that rests on the small white round plate at the lower right. Leave the empty white plate exactly as it is, and repaint the area where the handle was as the same plain wooden table surface with continuing wood grain. No faint outline or ghost of the ladle may remain."
+  "object_w": 190,
+  "prompt": "Edit this picture-book illustration: recolor ONLY the large pale light-green leafy cabbage leaf at the top centre-right of the food inside the pot (to the right of the dark green spinach and above the orange carrot slice) so that it becomes clearly RED, same shape and outlines. The spinach, carrot, tofu, mushroom, other vegetables, broth and everything else stay exactly the same."
  },
  {
   "q": 4,
