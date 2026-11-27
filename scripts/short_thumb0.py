@@ -250,6 +250,31 @@ def main():
                 sys.exit(f"照合できない・不一致（差 {d}）。設定しない")
             print(set_thumb(folder))
         return
+    if a[0] == "push":   # 照合ずみの一覧（JSON：[{"folder":..}]）を順に設定。回数制限（429）で止まったら、続きは同じコマンドで
+        lst = json.loads(Path(a[1]).read_text(encoding="utf-8"))
+        prog = ROOT / "logs" / "short_thumb0_done.json"
+        done = set(json.loads(prog.read_text(encoding="utf-8"))) if prog.exists() else set()
+        from youtube_upload import access_token
+        import urllib.request, urllib.error
+        for x in lst:
+            f = ROOT / x["folder"]
+            vid = json.loads((f / "upload.json").read_text(encoding="utf-8"))["video_id"]
+            if vid in done:
+                continue
+            req = urllib.request.Request(f"https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId={vid}&uploadType=media",
+                                         data=(f / "thumb0.jpg").read_bytes(), method="POST",
+                                         headers={"Authorization": "Bearer " + access_token(), "Content-Type": "image/jpeg"})
+            try:
+                urllib.request.urlopen(req, timeout=120).read()
+            except urllib.error.HTTPError as e:
+                if e.code == 429:
+                    print(f"回数制限で止まった。済み {len(done)}／{len(lst)}。時間をおいて同じコマンドで続きから")
+                    sys.exit(3)
+                raise
+            done.add(vid)
+            prog.write_text(json.dumps(sorted(done)), encoding="utf-8")
+        print(f"全部済み {len(done)}／{len(lst)}")
+        return
     if a[0] == "all":
         dry = "--dry-run" in a
         log = []
