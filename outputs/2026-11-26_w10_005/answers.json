@@ -319,8 +319,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 0,
-   "outside_box_max_distance_px": 0.0,
+   "outside_box_pixels_diff_gt15": 38,
+   "outside_box_max_distance_px": 2.0,
    "answers": [
     {
      "id": 1,
@@ -401,36 +401,36 @@
     {
      "id": 3,
      "type": "色",
-     "label": "しいたけが紫",
-     "line": "しいたけが、紫色になりました。",
+     "label": "白菜が赤",
+     "line": "白菜が、赤くなりました。",
      "box_px": [
-      980,
-      1110,
-      1170,
-      1220
+      880,
+      900,
+      1070,
+      995
      ],
      "box_screen": [
-      507,
-      574,
-      605,
-      631
+      455,
+      466,
+      553,
+      515
      ],
      "circle_a_screen": [
-      507,
-      574,
-      605,
-      631
+      455,
+      466,
+      553,
+      515
      ],
      "circle_b_screen": [
-      507,
-      574,
-      605,
-      631
+      455,
+      466,
+      553,
+      515
      ],
-     "object_w_px": 185,
-     "object_picture_width_pct": 9.97,
-     "object_screen_width_pct": 4.98,
-     "in_level_range": false,
+     "object_w_px": 190,
+     "object_picture_width_pct": 10.24,
+     "object_screen_width_pct": 5.12,
+     "in_level_range": true,
      "in_safe_y": true,
      "edit_version": "swap",
      "made_by": "gemini",
