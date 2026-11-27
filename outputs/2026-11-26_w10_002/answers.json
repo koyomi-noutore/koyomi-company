@@ -589,7 +589,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 327,
+   "outside_box_pixels_diff_gt15": 211,
    "outside_box_max_distance_px": 8.0,
    "answers": [
     {
@@ -670,37 +670,37 @@
     },
     {
      "id": 3,
-     "type": "なくなる",
-     "label": "ほうきがない",
-     "line": "壁に立てかけたほうきが、なくなりました。",
+     "type": "数",
+     "label": "戸の格子が1本少ない",
+     "line": "戸の格子が、1本少なくなりました。",
      "box_px": [
-      1170,
-      528,
-      1419,
-      1310
+      1050,
+      140,
+      1235,
+      700
      ],
      "box_screen": [
-      605,
-      273,
-      734,
-      678
+      543,
+      72,
+      639,
+      362
      ],
      "circle_a_screen": [
-      605,
-      273,
-      734,
-      678
+      543,
+      72,
+      639,
+      362
      ],
      "circle_b_screen": [
-      605,
-      273,
-      734,
-      678
+      543,
+      72,
+      639,
+      362
      ],
-     "object_w_px": 230,
-     "object_picture_width_pct": 12.39,
-     "object_screen_width_pct": 6.2,
-     "in_level_range": false,
+     "object_w_px": 190,
+     "object_picture_width_pct": 10.24,
+     "object_screen_width_pct": 5.12,
+     "in_level_range": true,
      "in_safe_y": true,
      "edit_version": "swap",
      "made_by": "gemini",
