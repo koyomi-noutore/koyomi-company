@@ -65,12 +65,25 @@ def set_thumbnail(video_id, path, tok):
         sys.exit(f"サムネの設定に失敗: HTTP {e.code} {e.read()[:400]!r}")
 
 
+def thumb_checks(path):
+    """長尺のサムネを、thumb_same_check（左右が同じ絵か）と thumb_badge_check（右下の角に文字がないか）で確かめる。不合格なら止める。"""
+    import thumb_same_check as Tc
+    import thumb_badge_check as Tb
+    ok1, d = Tc.check(path)
+    ok2, n, why = Tb.check(path)
+    print(f"サムネの確認：左右{'合格' if ok1 else '不合格'}（差={d}）・右下の角{'合格' if ok2 else '不合格'}（文字の画素={n}） {path}")
+    if not (ok1 and ok2):
+        sys.exit("サムネが確認に通りません。作り直してからアップロードしてください（" + "／".join(why or ["左右がちがう"]) + "）")
+
+
 def upload(folder, thumbnail=None, short=False):
     """short=True はショート（<回>/short/）。ショートのサムネは動画の0秒目の画面（2026-11-27 CEO厳守）。
     アップロードのあと、空いている枠に予約する（scripts/auto_schedule.py。2026-11-27 CEO決定）。"""
     folder = Path(folder)
     if not short and (thumbnail is None or not Path(thumbnail).exists()):
         sys.exit("サムネがありません（サムネなしでアップロードしない：.claude/agents/production.md）")
+    if not short:   # 長尺のサムネの確認（左右が同じ絵：2026-11-24、右下の角に文字なし：2026-11-28 CEO決定）。どこから呼ばれても上げる前に止める
+        thumb_checks(thumbnail)
     video = folder / "video.mp4"
     title, desc, tags = read_metadata(folder / "description.md")
     body = {
