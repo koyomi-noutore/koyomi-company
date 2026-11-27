@@ -137,6 +137,8 @@ def kind(v):
     t = v["snippet"]["title"]
     if seconds(v["contentDetails"].get("duration")) > 180:
         return "長尺"
+    if re.search(r"全\d+問", t) and not re.search(r"#shorts|1問", t, re.I):   # アップ直後で長さが未処理（0秒）の長尺（2026-11-27：10問版が「文字の脳トレ」と誤って入った）
+        return "長尺"
     if "ちがう" in t and "どれ" in t:
         return "ちがうのどーれだ"
     if "1問" in t or "見つけられる" in t or t.startswith("シニアの間違い探し"):
@@ -381,7 +383,7 @@ def sync(sid, tok, videos, first):
             put(f"H{r}:I{r}", ["YouTubeになし", ""])
             continue
         st, t = state(v)
-        put(f"B{r}:D{r}", [old[1] or kind(v), old[2] or ep(v), v["snippet"]["title"]])
+        put(f"B{r}:D{r}", [kind(v) if (old[1] == "文字の脳トレ" and kind(v) == "長尺") else (old[1] or kind(v)), old[2] or ep(v), v["snippet"]["title"]])   # 長尺を「文字の脳トレ」と誤って入れた行は直す
         put(f"H{r}:I{r}", [st, serial(t) if t else ""])
         put(f"K{r}", [f"https://studio.youtube.com/video/{vid}/edit"])
     new = [v for vid, v in videos.items() if vid not in rows]
