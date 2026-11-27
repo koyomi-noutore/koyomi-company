@@ -1,0 +1,59 @@
+{
+ "style": "Y",
+ "image_size": [
+  1856,
+  2088
+ ],
+ "differences": [
+  {
+   "id": 1,
+   "label": "お団子がない",
+   "type": "なくなる",
+   "box": [
+    505,
+    125,
+    790,
+    385
+   ],
+   "object_w_px": 215,
+   "size_pct_of_screen": 5.79,
+   "in_box_change_pct": 37.6
+  },
+  {
+   "id": 2,
+   "label": "湯のみが赤",
+   "type": "色",
+   "box": [
+    900,
+    1100,
+    1175,
+    1440
+   ],
+   "object_w_px": 230,
+   "size_pct_of_screen": 6.2,
+   "in_box_change_pct": 38.7
+  },
+  {
+   "id": 3,
+   "label": "急須の向き",
+   "type": "向き",
+   "box": [
+    1350,
+    1790,
+    1720,
+    2085
+   ],
+   "object_w_px": 320,
+   "size_pct_of_screen": 8.62,
+   "in_box_change_pct": 29.3
+  }
+ ],
+ "outside_box_pixels_diff_gt15": 455,
+ "outside_box_max_distance_px": 8.0,
+ "center_distance_pct_pairs(12,13,23)": [
+  59,
+  102,
+  45
+ ],
+ "min_box_change_pct_rule": 4.0
+}

@@ -1,0 +1,59 @@
+{
+ "style": "X",
+ "image_size": [
+  1856,
+  2088
+ ],
+ "differences": [
+  {
+   "id": 1,
+   "label": "お団子がない",
+   "type": "なくなる",
+   "box": [
+    790,
+    30,
+    1075,
+    275
+   ],
+   "object_w_px": 255,
+   "size_pct_of_screen": 6.87,
+   "in_box_change_pct": 35.6
+  },
+  {
+   "id": 2,
+   "label": "マグカップが赤",
+   "type": "色",
+   "box": [
+    800,
+    1220,
+    1130,
+    1560
+   ],
+   "object_w_px": 260,
+   "size_pct_of_screen": 7.0,
+   "in_box_change_pct": 47.6
+  },
+  {
+   "id": 3,
+   "label": "急須の向き",
+   "type": "向き",
+   "box": [
+    1440,
+    1540,
+    1840,
+    1930
+   ],
+   "object_w_px": 340,
+   "size_pct_of_screen": 9.16,
+   "in_box_change_pct": 23.2
+  }
+ ],
+ "outside_box_pixels_diff_gt15": 0,
+ "outside_box_max_distance_px": 0.0,
+ "center_distance_pct_pairs(12,13,23)": [
+  67,
+  93,
+  41
+ ],
+ "min_box_change_pct_rule": 4.0
+}
