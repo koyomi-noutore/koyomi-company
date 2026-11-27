@@ -13,6 +13,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageEnhance, ImageFilter, ImageSta
 
 F = str(Path.home() / ".cache/koyomi/fonts/package/900Black/NotoSansJP_900Black.ttf")
 K, WT, Y, R = (0, 0, 0), (255, 255, 255), (255, 214, 0), (230, 30, 30)
+BADGE_W, BADGE_H = 0.25, 0.20   # 右下の角（動画の長さの表示）。ここに文字を置かない（2026-11-28 CEO決定）
 
 
 def neutral(im, target=1.45):
@@ -63,15 +64,33 @@ def make(out, ep, q, band, top_txt, bottom=("間違いさがし",)):
     for i in range(220):
         gd.line([(0, i), (1280, i)], fill=int(170 * i / 220))
     T.paste(Image.new("RGB", (1280, 220), K), (0, 500), g)
+    # 下の段：右下の角（右25%×下20%＝動画の長さの表示）に文字を置かない（2026-11-28 CEO決定。scripts/thumb_badge_check.py で確かめる）。
+    # 文字は左から 75% の幅の中に、縁取りを含めて収める。
+    BL, BR = 30, int(1280 * (1 - BADGE_W)) - 30
     f2 = ImageFont.truetype(F, 158)
     bw = sum(d.textlength(s, font=f2) for s in bottom)
-    if bw > 1080:
-        f2 = ImageFont.truetype(F, int(158 * 1080 / bw)); bw = sum(d.textlength(s, font=f2) for s in bottom)
-    x = (1280 - bw) / 2 - 40 if bw > 900 else (1280 - bw) / 2      # 右下の動画の長さを避けて少し左へ
+    if bw > BR - BL - 28:
+        f2 = ImageFont.truetype(F, int(158 * (BR - BL - 28) / bw)); bw = sum(d.textlength(s, font=f2) for s in bottom)
+    x = BL + 14 + (BR - BL - 28 - bw) / 2
+    boxes = []
     for i, s in enumerate(bottom):
         c = Y if (len(bottom) > 1 and i == 0) else WT
-        d.text((x, 618), s, font=f2, fill=c, anchor="lm", stroke_width=14, stroke_fill=K); x += d.textlength(s, font=f2)
+        d.text((x, 618), s, font=f2, fill=c, anchor="lm", stroke_width=14, stroke_fill=K)
+        bb = d.textbbox((x, 618), s, font=f2, anchor="lm", stroke_width=14); boxes.append([int(v) for v in bb])
+        x += d.textlength(s, font=f2)
     T.save(out, quality=92)
+    Path(str(out) + ".text.json").write_text(json.dumps({"size": [1280, 720], "boxes": boxes}, ensure_ascii=False))   # 文字の位置の記録（thumb_badge_check.py が読む）
+
+
+# サムネの型1（2026-11-28 CEO決定・標準）：上の黄帯「60代70代 全部見つけられる？」（60代70代を赤）、下の段は「間違いさがし」だけ。
+# チャンネル名・キャラ名は入れない。右下の角に文字を置かない。
+TYPE1_TOP = ("60代70代", " 全部見つけられる？")
+TYPE1_BOTTOM = ("間違いさがし",)
+
+
+def make_type1(out, ep, q):
+    """型1のサムネを1枚作る（左右とも元の絵）。作ったあと thumb_same_check と thumb_badge_check で確かめるのは呼んだ側（make_episode.thumb_guard）。"""
+    make(out, ep, q, Y, TYPE1_TOP, TYPE1_BOTTOM)
 
 
 def main(E, q, emph, rest, c_arg, sub="ab"):

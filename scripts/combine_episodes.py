@@ -343,8 +343,8 @@ def main(argv):
         "youtube": {"title": title, "description_file": "description.md", "publish_plan": "未定（CEOが決める）"},
         "screens": screens, "timeline": timeline, "lines": lines, "readings": readings, "voice_override": vo,
         "voice": srcs[0]["plan"]["voice"], "questions": questions, "unchiku_source": TALK["source"],
-        "thumbnail": {"style": "band", "question": tq, "band": "yellow", "top": ["60代70代", " 全部見つけられる？"],
-                      "bottom": ["間違いさがし", " 全10問"], "big_text": "間違いさがし", "highlight": "間違いさがし",
+        "thumbnail": {"style": "band", "question": tq, "band": "yellow", "type": 1, "top": ["60代70代", " 全部見つけられる？"],
+                      "bottom": ["間違いさがし"], "big_text": "間違いさがし", "highlight": "間違いさがし",
                       "note": "scripts/thumb_band.py（黄帯・左右とも元の絵＝違いゼロ）"},
     }
     (new / "plan.json").write_text(json.dumps(plan, ensure_ascii=False, indent=1), encoding="utf-8")

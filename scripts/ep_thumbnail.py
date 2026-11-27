@@ -85,4 +85,8 @@ def make(out_dir, fontp):
         if path.stat().st_size < 2_000_000:
             break
     assert path.stat().st_size < 2_000_000, "サムネが2MB以上"
+    import thumb_badge_check as Tb   # 2026-11-28 CEO決定：右下の角（動画の長さの表示）に文字を置かない。左右の確認は make_episode.thumb_guard
+    ok, n, why = Tb.check(path)
+    if not ok:
+        raise SystemExit(f"サムネの右下の角に文字があります（{'／'.join(why)}）：{path}")
     return path

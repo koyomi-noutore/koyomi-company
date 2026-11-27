@@ -811,6 +811,12 @@ def TB_make(pic, P, folder):
     TB.make(out / "thumb_A.jpg", Path(folder), 1, TB.K, (Th["emph"], Th["rest"]), tuple(Th["bottom"]))
     import shutil
     shutil.copy(out / "thumb_A.jpg", Path(folder) / "thumbnail.jpg")
+    import thumb_same_check as Tc, thumb_badge_check as Tb   # 2026-11-24 左右が同じ絵・2026-11-28 右下の角に文字なし（CEO決定）
+    for f_ in (out / "thumb_A.jpg", Path(folder) / "thumbnail.jpg"):
+        ok1, d = Tc.check(f_); ok2, n, why = Tb.check(f_)
+        print(f"サムネの確認：左右{'合格' if ok1 else '不合格'}（差={d}）・右下の角{'合格' if ok2 else '不合格'}（文字の画素={n}） {f_}")
+        if not (ok1 and ok2):
+            sys.exit("サムネが確認に通りません：" + "／".join(why or ["左右がちがう"]))
 
 
 if __name__ == "__main__":
