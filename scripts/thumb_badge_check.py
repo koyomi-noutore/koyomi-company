@@ -2,6 +2,7 @@
 使い方：python3 scripts/thumb_badge_check.py <サムネ画像> [...]
   角＝横の右25%×縦の下20%（1280×720 なら x≥960・y≥576）。
   1) 作るときの記録（<画像>.text.json の文字の箱。scripts/thumb_band.py が書く）があれば、箱が角に1画素でもかかれば不合格。
+     記録が型1（"type": 1）なら、下の段の文字が中央ぞろえで、縁取りを含めて x 320〜960（画面の半分以下）に収まっているかも確かめる（2026-11-28 CEO）。
   2) 記録の有無にかかわらず画像も見る：角の中で「白・黄・赤の文字の色」で、すぐ近く（4画素以内）に黒い縁取りがある画素を数え、
      LIMIT を超えたら不合格（文字の縁取りの形。絵の雪や線だけでは、ほとんど0になる）。
 不合格が1枚でもあれば終了コード1。make_episode.py の thumb_guard（サムネを作った直後・アップロードの前）と
@@ -47,6 +48,14 @@ def check(path):
         for b in r.get("boxes", []):
             if b[2] > x0 and b[3] > y0:
                 why.append(f"記録の文字の箱 {b} が右下の角（x≥{x0}・y≥{y0}）にかかる")
+        if r.get("type") == 1 or r.get("bottom_centered"):   # 型1（2026-11-28 CEO）：下の段は中央ぞろえ・幅は画面の半分以下（x 320〜960 の中）
+            lo, hi = sw * 0.25, sw * 0.75
+            for b in [b for b in r.get("boxes", []) if b[1] > sh / 2]:
+                c = (b[0] + b[2]) / 2
+                if b[0] < lo or b[2] > hi:
+                    why.append(f"型1の下の段の文字 {b} が x {int(lo)}〜{int(hi)}（画面の半分）からはみ出す")
+                if abs(c - sw / 2) > 4:
+                    why.append(f"型1の下の段の文字 {b} が中央ぞろえでない（中心 x={c:.0f}）")
     n = text_pixels(im)
     if n > LIMIT:
         why.append(f"右下の角に文字らしい画素が {n} 個（上限 {LIMIT}）")

@@ -47,7 +47,7 @@ def pics(ep, q, sat=1.15):
     return prep(a), prep(a), top   # 2026-11-23 CEO決定：サムネは左右とも元の絵（違いゼロ）。サムネで答えが見つからないように
 
 
-def make(out, ep, q, band, top_txt, bottom=("間違いさがし",)):
+def make(out, ep, q, band, top_txt, bottom=("間違いさがし",), bottom_center=None):
     pa, pb, top = pics(ep, q)
     T = Image.new("RGB", (1280, 720), WT); T.paste(pa, (0, top)); T.paste(pb, (644, top))
     d = ImageDraw.Draw(T); d.rectangle([636, top, 644, 720], fill=(25, 25, 25)); d.rectangle([0, 0, 1280, top], fill=band)
@@ -66,6 +66,14 @@ def make(out, ep, q, band, top_txt, bottom=("間違いさがし",)):
     T.paste(Image.new("RGB", (1280, 220), K), (0, 500), g)
     # 下の段：右下の角（右25%×下20%＝動画の長さの表示）に文字を置かない（2026-11-28 CEO決定。scripts/thumb_badge_check.py で確かめる）。
     # 文字は左から 75% の幅の中に、縁取りを含めて収める。
+    if bottom_center:   # 型1：中央ぞろえ・大きさ bottom_center（x 320〜960 に収まる大きさを make_type1 が決める）
+        f2 = ImageFont.truetype(F, bottom_center)
+        txt = "".join(bottom)
+        d.text((640, T1_CY), txt, font=f2, fill=WT, anchor="mm", stroke_width=T1_STROKE, stroke_fill=K)
+        boxes = [[int(v) for v in d.textbbox((640, T1_CY), txt, font=f2, anchor="mm", stroke_width=T1_STROKE)]]
+        T.save(out, quality=92)
+        Path(str(out) + ".text.json").write_text(json.dumps({"size": [1280, 720], "boxes": boxes, "bottom_centered": True}, ensure_ascii=False))
+        return
     BL, BR = 30, int(1280 * (1 - BADGE_W)) - 30
     f2 = ImageFont.truetype(F, 158)
     bw = sum(d.textlength(s, font=f2) for s in bottom)
@@ -88,9 +96,70 @@ TYPE1_TOP = ("60代70代", " 全部見つけられる？")
 TYPE1_BOTTOM = ("間違いさがし",)
 
 
-def make_type1(out, ep, q):
-    """型1のサムネを1枚作る（左右とも元の絵）。作ったあと thumb_same_check と thumb_badge_check で確かめるのは呼んだ側（make_episode.thumb_guard）。"""
-    make(out, ep, q, Y, TYPE1_TOP, TYPE1_BOTTOM)
+TOP_H = 170                       # 上の帯の高さ
+T1_MAXW = (320, 960)              # 型1の下の段の文字は、縁取りを含めてこの横の範囲に収める（中央ぞろえ・画面の半分以下。2026-11-28 CEO）
+T1_CY = 650                       # 下の段の文字の縦の中心
+T1_SIZE = 96                      # 下の段の文字の大きさ（幅が T1_MAXW に収まらなければ自動で小さくする）
+T1_STROKE = 12
+
+
+def subject_box(pic_path):
+    """主役（顔と手に持った物）の位置。絵を作るときの記録 <絵>.subject.json の "box": [x0,y0,x1,y1]（元の絵の画素）を読む。
+    記録が無ければ None（呼んだ側で答えの範囲から切り出す。主役が文字にかぶらないかは目で確かめる）。"""
+    rec = Path(str(pic_path) + ".subject.json")
+    if rec.exists():
+        return json.loads(rec.read_text(encoding="utf-8"))["box"]
+    return None
+
+
+def crop_for_subject(W, H, sb, text_top, pw=636, ph=720 - TOP_H):
+    """主役 sb を、上の帯の下（パネルの y=0）から下の段の文字の上（パネルの y=text_top-TOP_H）のあいだに収める切り出し（元の絵の画素の箱）。
+    絵の幅いっぱいでも収まらないときは、なるべく大きく取り、主役の上を優先して入れる（切り出しを上にずらす）。"""
+    r = pw / ph
+    avail = (text_top - TOP_H - 12) / ph          # パネルの高さのうち、文字にかぶらない割合
+    sx0, sy0, sx1, sy1 = sb
+    h = max((sy1 - sy0) / avail, (sx1 - sx0) / r / 0.95)   # 主役の高さが avail に、幅がパネルに収まる切り出しの高さ
+    h = min(max(h, 1), H, W / r); w = h * r
+    cx = min(max((sx0 + sx1) / 2, w / 2), W - w / 2)
+    y0 = sy0 - (h * avail - (sy1 - sy0)) / 2        # 主役を「帯の下〜文字の上」の中央に
+    if sy1 - sy0 > h * avail:                       # 収まらないときは主役の上（顔）を帯のすぐ下に合わせる＝切り出しを上にずらす
+        y0 = sy0 - h * 0.02
+    y0 = min(max(y0, 0), H - h)
+    return (int(cx - w / 2), int(y0), int(cx + w / 2), int(y0 + h))
+
+
+def make_type1(out, ep, q, pic_path=None, sat=1.15):
+    """型1のサムネを1枚作る（左右とも元の絵）。2026-11-28 CEO：下の段「間違いさがし」は中央ぞろえ・幅は画面の半分以下（x 320〜960）、
+    主役（顔・持っている物）は上の帯と下の段のあいだに収める。主役の位置は <絵>.subject.json（絵を作るときの記録）から。
+    pic_path を省くと <回>/q{q}_a.png。作ったあと thumb_same_check と thumb_badge_check で確かめるのは呼んだ側。"""
+    ep = Path(ep); pic_path = Path(pic_path) if pic_path else ep / f"q{q}_a.png"
+    probe = ImageDraw.Draw(Image.new("RGB", (10, 10)))
+    size = T1_SIZE
+    while True:
+        f2 = ImageFont.truetype(F, size)
+        bb = probe.textbbox((640, T1_CY), TYPE1_BOTTOM[0], font=f2, anchor="mm", stroke_width=T1_STROKE)
+        if bb[0] >= T1_MAXW[0] and bb[2] <= T1_MAXW[1]:
+            break
+        size -= 2
+    sb = subject_box(pic_path)
+    if sb is not None:
+        a = Image.open(pic_path).convert("RGB")
+        box = crop_for_subject(a.size[0], a.size[1], sb, bb[1])
+        im = neutral(a).crop(box).resize((636, 720 - TOP_H), Image.LANCZOS)
+        im = ImageEnhance.Color(im).enhance(sat); im = ImageEnhance.Contrast(im).enhance(1.15)
+        im = im.filter(ImageFilter.UnsharpMask(2, 130, 2))
+        global pics
+        keep = pics
+        pics = lambda ep_, q_, sat=1.15: (im, im, TOP_H)
+        try:
+            make(out, ep, q, Y, TYPE1_TOP, TYPE1_BOTTOM, bottom_center=size)
+        finally:
+            pics = keep
+    else:
+        make(out, ep, q, Y, TYPE1_TOP, TYPE1_BOTTOM, bottom_center=size)
+    rec = Path(str(out) + ".text.json"); r = json.loads(rec.read_text(encoding="utf-8"))
+    r.update({"type": 1, "subject_box_src": sb, "crop_src": list(box) if sb is not None else None})
+    rec.write_text(json.dumps(r, ensure_ascii=False))
 
 
 def main(E, q, emph, rest, c_arg, sub="ab"):
