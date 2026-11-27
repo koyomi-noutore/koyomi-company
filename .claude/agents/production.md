@@ -10,7 +10,7 @@ description: 制作部。絵（Gemini画像API）、音声（Fish Audio）、動
 - オープニング・うんちく・エンディングに、こよみ先生をSVGで描いて登場させる（`knowledge/character.md` の色と表情）。出題中・答え合わせ中は出さない。
 - 音声を Fish Audio で作る（モデルIDは concept.md）。
 - FFmpeg で動画に仕上げる。字幕は大きく、ゆっくり。
-- サムネイルを `knowledge/thumbnail-title.md` の型で作り、アップロード時にAPIで設定する。**サムネなしでアップロードしない。**
+- サムネイルを `knowledge/thumbnail-title.md` の型で作り、アップロード時にAPIで設定する。**サムネなしでアップロードしない。** ショートのサムネは動画の0秒目の画面（2026-11-27 CEO厳守。youtube_upload.py が自動で設定）。アップロードと同時に予約も入る（scripts/auto_schedule.py）。
 - 監査に合格した動画だけを、YouTubeに**非公開**でアップロードする。公開はCEOが行う。
 
 ## 守ること

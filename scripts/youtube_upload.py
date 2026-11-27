@@ -66,7 +66,8 @@ def set_thumbnail(video_id, path, tok):
 
 
 def upload(folder, thumbnail=None, short=False):
-    """short=True はショート（<回>/short/）。ショートはサムネを設定しない（ショートの画面ではサムネが出ないため）。"""
+    """short=True はショート（<回>/short/）。ショートのサムネは動画の0秒目の画面（2026-11-27 CEO厳守）。
+    アップロードのあと、空いている枠に予約する（scripts/auto_schedule.py。2026-11-27 CEO決定）。"""
     folder = Path(folder)
     if not short and (thumbnail is None or not Path(thumbnail).exists()):
         sys.exit("サムネがありません（サムネなしでアップロードしない：.claude/agents/production.md）")
@@ -107,7 +108,11 @@ def upload(folder, thumbnail=None, short=False):
                 f.seek(sent)
             print(f"  {sent * 100 // size}%", flush=True)
     vid = result["id"]
-    th = set_thumbnail(vid, thumbnail, access_token()) if not short else {}
+    if short:   # 2026-11-27 CEO厳守：ショートのサムネは動画の0秒目の画面（Studio の「フレームを選択」の一番左）
+        thumbnail = folder / "thumb0.jpg"
+        import subprocess
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "0", "-i", str(video), "-frames:v", "1", "-q:v", "2", str(thumbnail)], check=True)
+    th = set_thumbnail(vid, thumbnail, access_token())
     rec = {"video_id": vid, "url": f"https://youtu.be/{vid}", "studio": f"https://studio.youtube.com/video/{vid}/edit",
            "privacy": result["status"]["privacyStatus"], "title": result["snippet"]["title"],
            "thumbnail": bool(th.get("items")), "short": short, "category": result["snippet"].get("categoryId")}
@@ -116,6 +121,14 @@ def upload(folder, thumbnail=None, short=False):
         rec["playlists"] = P.add_for_upload(folder, vid, short, access_token())
     except Exception as e:   # 再生リストの失敗でアップロードの記録を失わない。あとで youtube_playlists.py backfill で入れ直せる
         rec["playlists_error"] = str(e)[:200]
+    if short:
+        rec["thumbnail_note"] = "0:00 の画面（thumb0.jpg、動画の最初の1コマ）を thumbnails.set で設定"
+    (folder / "upload.json").write_text(json.dumps(rec, ensure_ascii=False, indent=1), encoding="utf-8")
+    try:   # 2026-11-27 CEO決定：アップロードのときに予約まで済ませる（scripts/auto_schedule.py。空いている枠へ）
+        import auto_schedule
+        rec["publishAt"] = auto_schedule.book(vid, short, folder)
+    except BaseException as e:   # 予約の失敗でアップロードの記録を失わない。あとで auto_schedule.py <フォルダ> で入れ直せる
+        rec["schedule_error"] = str(e)[:200]
     (folder / "upload.json").write_text(json.dumps(rec, ensure_ascii=False, indent=1), encoding="utf-8")
     print(json.dumps(rec, ensure_ascii=False))
 
