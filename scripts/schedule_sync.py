@@ -5,7 +5,7 @@
 
   タブ「動画一覧」 A 動画ID / B 種類 / C 回 / D タイトル / E【入力】予定日 / F【入力】枠 / G 重複(式)
                    H YouTubeの状態 / I YouTubeの予約・公開時刻 / J 照合(式) / K Studioリンク / L キー(式・非表示)
-  タブ「カレンダー」 今日から60日 × 公開時刻（SLOTS。2026-11-27〜 7:30・13:00・17:00）。動画一覧の入力から式で出す（プログラムを待たない）。
+  タブ「カレンダー」 今日から60日 × 8:30・14:30・18:30。動画一覧の入力から式で出す（プログラムを待たない）。
   タブ「在庫」     予定日が空の非公開の動画を、種類ごとに式で並べる。
 
 決まり：
@@ -42,8 +42,7 @@ from credentials import vertex_service_account, rs256_sign  # noqa: E402
 
 CONF = Path(__file__).parent / "schedule_sheet.json"
 LIST, CAL, STOCK = "動画一覧", "カレンダー", "在庫"
-SLOTS = ["7:30", "13:00", "17:00"]   # 2026-11-27〜 CEO決定（旧 8:30・14:30・18:30）。公開時刻の正はここ。ショートの2枠は種類を決めない
-OLD_SLOTS = ["8:30", "14:30", "18:30"]   # 過去の行に残る値。選択肢には残す
+SLOTS = ["8:30", "14:30", "18:30"]
 DELETE = "削除"
 USED10 = "10問版"   # 2026-11-26 CEO：10問の長尺に使った5問の回。単独では出さない（削除と同じく在庫・カレンダー・注意から外す）   # 枠の選択肢。作り直して不要になった動画などに付ける（カレンダー・在庫・注意から外す。2026-11-24 CEO）
 JST = dt.timezone(dt.timedelta(hours=9))
@@ -138,6 +137,8 @@ def kind(v):
     t = v["snippet"]["title"]
     if seconds(v["contentDetails"].get("duration")) > 180:
         return "長尺"
+    if re.search(r"全\d+問", t) and not re.search(r"#shorts|1問", t, re.I):   # アップ直後で長さが未処理（0秒）の長尺（2026-11-27：10問版が「文字の脳トレ」と誤って入った）
+        return "長尺"
     if "ちがう" in t and "どれ" in t:
         return "ちがうのどーれだ"
     if "1問" in t or "見つけられる" in t or t.startswith("シニアの間違い探し"):
@@ -201,10 +202,10 @@ def stock_formulas():
 
 
 def slot_rule(sheet):
-    """枠（F列）の選択肢：今の時刻（SLOTS）・削除・10問版・旧時刻。"""
+    """枠（F列）の選択肢：8:30・14:30・18:30・削除。"""
     return {"setDataValidation": {"range": {"sheetId": sheet, "startRowIndex": 1, "endRowIndex": 1000,
                                             "startColumnIndex": 5, "endColumnIndex": 6}, "rule": {
-        "condition": {"type": "ONE_OF_LIST", "values": [{"userEnteredValue": s} for s in SLOTS + [DELETE, USED10] + OLD_SLOTS]},
+        "condition": {"type": "ONE_OF_LIST", "values": [{"userEnteredValue": s} for s in SLOTS + [DELETE, USED10]]},
         "strict": False, "showCustomUi": True}}}
 
 
@@ -225,9 +226,6 @@ def upgrade(sid, tok):
                             "format": {"backgroundColor": color("#D9D9D9"),
                                        "textFormat": {"strikethrough": True, "foregroundColor": color("#666666")}}}}}})
     call(base + ":batchUpdate", tok, {"requests": reqs})
-    if CAL in sh:   # 2026-11-27：カレンダーの見出しを今の時刻にそろえる（式は見出しの文字で枠を照らすので、見出しを直せばよい）
-        call(base + "/values:batchUpdate", tok, {"valueInputOption": "RAW",
-                                                 "data": [{"range": f"'{CAL}'!B1:D1", "values": [SLOTS]}]})
     if STOCK in sh:
         call(base + "/values:batchUpdate", tok, {"valueInputOption": "USER_ENTERED",
                                                  "data": [{"range": f"'{STOCK}'!A2:D3", "values": stock_formulas()}]})
@@ -385,7 +383,7 @@ def sync(sid, tok, videos, first):
             put(f"H{r}:I{r}", ["YouTubeになし", ""])
             continue
         st, t = state(v)
-        put(f"B{r}:D{r}", [old[1] or kind(v), old[2] or ep(v), v["snippet"]["title"]])
+        put(f"B{r}:D{r}", [kind(v) if (old[1] == "文字の脳トレ" and kind(v) == "長尺") else (old[1] or kind(v)), old[2] or ep(v), v["snippet"]["title"]])   # 長尺を「文字の脳トレ」と誤って入れた行は直す
         put(f"H{r}:I{r}", [st, serial(t) if t else ""])
         put(f"K{r}", [f"https://studio.youtube.com/video/{vid}/edit"])
     new = [v for vid, v in videos.items() if vid not in rows]
