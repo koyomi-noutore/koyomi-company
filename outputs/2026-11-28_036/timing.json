@@ -1,0 +1,205 @@
+{
+ "runs": [
+  {
+   "step": "setup",
+   "detail": "setup",
+   "sec": 2.9,
+   "at": "2026-11-28T00:32:55+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base",
+   "sec": 31.2,
+   "at": "2026-11-28T00:33:26+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base",
+   "sec": 30.9,
+   "at": "2026-11-28T00:34:59+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base",
+   "sec": 32.1,
+   "at": "2026-11-28T00:36:31+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base",
+   "sec": 28.5,
+   "at": "2026-11-28T00:38:00+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base",
+   "sec": 31.8,
+   "at": "2026-11-28T00:40:04+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch base",
+   "sec": 32.7,
+   "at": "2026-11-28T00:42:07+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures base 1",
+   "sec": 36.4,
+   "at": "2026-11-28T00:43:07+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit",
+   "sec": 44.1,
+   "at": "2026-11-28T00:44:02+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit",
+   "sec": 28.8,
+   "at": "2026-11-28T00:45:31+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit",
+   "sec": 37.3,
+   "at": "2026-11-28T00:47:08+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit",
+   "sec": 28.1,
+   "at": "2026-11-28T00:48:37+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit",
+   "sec": 32.2,
+   "at": "2026-11-28T00:51:41+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit",
+   "sec": 32.3,
+   "at": "2026-11-28T00:53:44+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit",
+   "sec": 31.4,
+   "at": "2026-11-28T00:55:45+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit 8 9 10",
+   "sec": 34.9,
+   "at": "2026-11-28T00:58:32+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit 8 9 10",
+   "sec": 29.4,
+   "at": "2026-11-28T01:00:31+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures",
+   "sec": 39.7,
+   "at": "2026-11-28T01:01:39+00:00"
+  },
+  {
+   "step": "all",
+   "detail": "all",
+   "sec": 39.6,
+   "at": "2026-11-28T01:02:23+00:00"
+  },
+  {
+   "step": "all",
+   "detail": "all",
+   "sec": 690.1,
+   "at": "2026-11-28T01:14:10+00:00"
+  },
+  {
+   "step": "書き出し",
+   "detail": "thumbnail",
+   "sec": 0.5,
+   "at": "2026-11-28T01:14:21+00:00"
+  },
+  {
+   "step": "監査（数値チェック）",
+   "detail": "check",
+   "sec": 13.8,
+   "at": "2026-11-28T01:14:35+00:00"
+  },
+  {
+   "step": "all",
+   "detail": "all",
+   "sec": 576.6,
+   "at": "2026-11-28T01:24:47+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit 1 2 3 7 8 10",
+   "sec": 32.7,
+   "at": "2026-11-28T01:32:08+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit 1 2 3 7 8 10",
+   "sec": 33.0,
+   "at": "2026-11-28T01:34:11+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit 1 2 3 7 8 10",
+   "sec": 33.2,
+   "at": "2026-11-28T01:36:15+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures",
+   "sec": 41.4,
+   "at": "2026-11-28T01:36:56+00:00"
+  },
+  {
+   "step": "all",
+   "detail": "all",
+   "sec": 591.1,
+   "at": "2026-11-28T01:46:51+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures batch edit 1 7",
+   "sec": 31.8,
+   "at": "2026-11-28T01:49:55+00:00"
+  },
+  {
+   "step": "絵",
+   "detail": "pictures",
+   "sec": 42.3,
+   "at": "2026-11-28T01:50:37+00:00"
+  },
+  {
+   "step": "all",
+   "detail": "all",
+   "sec": 601.5,
+   "at": "2026-11-28T02:00:49+00:00"
+  },
+  {
+   "step": "アップロード",
+   "detail": "upload",
+   "sec": 23.0,
+   "at": "2026-11-28T02:02:12+00:00"
+  }
+ ],
+ "total_sec_by_step": {
+  "setup": 2.9,
+  "絵": 776.2,
+  "all": 2498.9,
+  "書き出し": 0.5,
+  "監査（数値チェック）": 13.8,
+  "アップロード": 23.0
+ },
+ "total_sec_all": 3315.3
+}
