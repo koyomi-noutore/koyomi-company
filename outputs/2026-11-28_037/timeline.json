@@ -1,0 +1,1103 @@
+{
+ "total_sec": 1176.0,
+ "fps": 30,
+ "opening": [
+  0.0,
+  7.0
+ ],
+ "rule": [
+  7.0,
+  7.0
+ ],
+ "unchiku": [
+  557.0,
+  589.0
+ ],
+ "ending": [
+  1139.0,
+  1176.0
+ ],
+ "cta": null,
+ "questions": {
+  "1": {
+   "start": 7.0,
+   "card": [
+    7.0,
+    10.0
+   ],
+   "solve": [
+    10.0,
+    100.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 90.0,
+   "answer": [
+    100.0,
+    117.0
+   ],
+   "scene": "冬の漁港の岸壁",
+   "level": "やさしい",
+   "go": "右の絵の違いを、3つ探してください。どうぞ。",
+   "hint": null,
+   "answers": [
+    "左上の、バケツが、緑になりました。",
+    "左の、ゴムぐつが、片方なくなりました。",
+    "左下の、丸い腰かけが、青になりました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "2": {
+   "start": 117.0,
+   "card": [
+    117.0,
+    120.0
+   ],
+   "solve": [
+    120.0,
+    210.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 200.0,
+   "answer": [
+    210.0,
+    227.0
+   ],
+   "scene": "かにの選別小屋",
+   "level": "初級",
+   "go": "では、2問目。どうぞ。",
+   "hint": null,
+   "answers": [
+    "左上の、ざるが、緑になりました。",
+    "左の、ほうきが、なくなりました。",
+    "右上の、洗面器が、青になりました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "3": {
+   "start": 227.0,
+   "card": [
+    227.0,
+    230.0
+   ],
+   "solve": [
+    230.0,
+    320.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 310.0,
+   "answer": [
+    320.0,
+    337.0
+   ],
+   "scene": "港のかに汁の炊き出し",
+   "level": "初級",
+   "go": "つづいて、3問目。どうぞ。",
+   "hint": null,
+   "answers": [
+    "左上の、やかんが、黄色になりました。",
+    "右上の、カウンターの、おたまが、なくなりました。",
+    "左の、お椀が、3つから2つに、へりました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "4": {
+   "start": 337.0,
+   "card": [
+    337.0,
+    340.0
+   ],
+   "solve": [
+    340.0,
+    430.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 420.0,
+   "answer": [
+    430.0,
+    447.0
+   ],
+   "scene": "網つくろいの岸壁",
+   "level": "中級",
+   "go": "4問目です。じっくりどうぞ。",
+   "hint": null,
+   "answers": [
+    "左上の、つぼに、しま模様がつきました。",
+    "右上の、マグカップの、取っ手が、反対になりました。",
+    "左下の、道具箱が、なくなりました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "5": {
+   "start": 447.0,
+   "card": [
+    447.0,
+    450.0
+   ],
+   "solve": [
+    450.0,
+    540.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 530.0,
+   "answer": [
+    540.0,
+    557.0
+   ],
+   "scene": "かご漁の帰り",
+   "level": "中級",
+   "go": "5問目、どうぞ。",
+   "hint": null,
+   "answers": [
+    "左上の、びんが、青になりました。",
+    "右上の、湯のみが、なくなりました。",
+    "左下の、かばんが、緑になりました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "6": {
+   "start": 589.0,
+   "card": [
+    589.0,
+    592.0
+   ],
+   "solve": [
+    592.0,
+    682.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 672.0,
+   "answer": [
+    682.0,
+    699.0
+   ],
+   "scene": "朝の魚市場",
+   "level": "中級",
+   "go": "ゆっくり、6問目。どうぞ。",
+   "hint": null,
+   "answers": [
+    "左上の、手ぬぐいが、緑になりました。",
+    "右上の、スコップが、なくなりました。",
+    "左の、木箱が、4つから3つに、へりました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "7": {
+   "start": 699.0,
+   "card": [
+    699.0,
+    702.0
+   ],
+   "solve": [
+    702.0,
+    792.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 782.0,
+   "answer": [
+    792.0,
+    809.0
+   ],
+   "scene": "ぶりの水揚げ",
+   "level": "中級",
+   "go": "もう少しです。7問目、どうぞ。",
+   "hint": null,
+   "answers": [
+    "左上の、ゴム手ぶくろが、黄色になりました。",
+    "左の、手押し車が、なくなりました。",
+    "右下の、白い箱が、緑になりました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "8": {
+   "start": 809.0,
+   "card": [
+    809.0,
+    812.0
+   ],
+   "solve": [
+    812.0,
+    902.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 892.0,
+   "answer": [
+    902.0,
+    919.0
+   ],
+   "scene": "漁師小屋の棚",
+   "level": "上級",
+   "go": "では、8問目。どうぞ。",
+   "hint": null,
+   "answers": [
+    "右の、小鉢に、青い花が、つきました。",
+    "右下の、急須の、ふたのつまみが、なくなりました。",
+    "左の、つぼの、ふたが、青になりました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "9": {
+   "start": 919.0,
+   "card": [
+    919.0,
+    922.0
+   ],
+   "solve": [
+    922.0,
+    1012.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 1002.0,
+   "answer": [
+    1012.0,
+    1029.0
+   ],
+   "scene": "港の窓辺",
+   "level": "上級",
+   "go": "つぎは、9問目です。どうぞ。",
+   "hint": null,
+   "answers": [
+    "左上の、鉢植えの、葉が、1枚なくなりました。",
+    "右上の、ランプが、青になりました。",
+    "左の、貝がらに、水玉がつきました。"
+   ],
+   "answers_intro": "答えです。"
+  },
+  "10": {
+   "start": 1029.0,
+   "card": [
+    1029.0,
+    1032.0
+   ],
+   "solve": [
+    1032.0,
+    1122.0
+   ],
+   "hint_at": null,
+   "ten_sec_at": 1112.0,
+   "answer": [
+    1122.0,
+    1139.0
+   ],
+   "scene": "かご干し場の納屋",
+   "level": "上級",
+   "go": "さいごの、10問目。どうぞ。",
+   "hint": null,
+   "answers": [
+    "左上の、ブリキの缶が、なくなりました。",
+    "左の、ブラシの、柄が、青になりました。",
+    "右下の、ロープの、はしが、なくなりました。"
+   ],
+   "answers_intro": "答えです。"
+  }
+ },
+ "lines": [
+  {
+   "id": "op",
+   "start": 0.0,
+   "slot_end": 3.9,
+   "subtitle": "冬の漁港の間違い探し。",
+   "voice_text": "ふゆの、ぎょこうの、まちがいさがし。",
+   "face": "smile"
+  },
+  {
+   "id": "op2",
+   "start": 3.9,
+   "slot_end": 7.0,
+   "subtitle": "だんだん、難しくなります。",
+   "voice_text": "だんだん、むずかしくなります。",
+   "face": "wink"
+  },
+  {
+   "id": "q1_card",
+   "start": 7.0,
+   "slot_end": 12.8,
+   "subtitle": "1問目、やさしい問題。冬の漁港の岸壁です。",
+   "voice_text": "いちもんめ、やさしい、もんだい。ふゆの、ぎょこうの、がんぺきです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_go",
+   "start": 12.8,
+   "slot_end": 18.0,
+   "subtitle": "右の絵の違いを、3つ探してください。どうぞ。",
+   "voice_text": "みぎのえのちがいを、みっつさがしてください。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_call0",
+   "start": 40.0,
+   "slot_end": 44.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_call1",
+   "start": 70.0,
+   "slot_end": 74.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_ten",
+   "start": 90.0,
+   "slot_end": 93.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q1_ans0",
+   "start": 100.0,
+   "slot_end": 101.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q1_ans1",
+   "start": 101.6,
+   "slot_end": 106.39999999999999,
+   "subtitle": "左上の、バケツが、緑になりました。",
+   "voice_text": "ひだりうえの、バケツが、みどりに、なりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q1_ans2",
+   "start": 106.39999999999999,
+   "slot_end": 111.19999999999999,
+   "subtitle": "左の、ゴムぐつが、片方なくなりました。",
+   "voice_text": "ひだりの、ゴムぐつが、かたほう、なくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q1_ans3",
+   "start": 111.19999999999999,
+   "slot_end": 116.0,
+   "subtitle": "左下の、丸い腰かけが、青になりました。",
+   "voice_text": "ひだりしたの、まるい、こしかけが、あおく、なりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_card",
+   "start": 117.0,
+   "slot_end": 122.8,
+   "subtitle": "2問目、初級。かにの選別小屋です。",
+   "voice_text": "にもんめ、しょきゅう。かにの、せんべつごやです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_go",
+   "start": 122.8,
+   "slot_end": 128.0,
+   "subtitle": "では、2問目。どうぞ。",
+   "voice_text": "では、にもんめ。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_call0",
+   "start": 150.0,
+   "slot_end": 154.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_call1",
+   "start": 180.0,
+   "slot_end": 184.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_ten",
+   "start": 200.0,
+   "slot_end": 203.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q2_ans0",
+   "start": 210.0,
+   "slot_end": 211.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_ans1",
+   "start": 211.6,
+   "slot_end": 216.4,
+   "subtitle": "左上の、ざるが、緑になりました。",
+   "voice_text": "ひだりうえの、ざるが、みどりに、なりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_ans2",
+   "start": 216.4,
+   "slot_end": 221.2,
+   "subtitle": "左の、ほうきが、なくなりました。",
+   "voice_text": "ひだりの、ほうきが、なくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q2_ans3",
+   "start": 221.2,
+   "slot_end": 226.0,
+   "subtitle": "右上の、洗面器が、青になりました。",
+   "voice_text": "みぎうえの、せんめんきが、あおく、なりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_card",
+   "start": 227.0,
+   "slot_end": 232.8,
+   "subtitle": "3問目、初級。港のかに汁の炊き出しです。",
+   "voice_text": "さんもんめ、しょきゅう。みなとの、かにじるの、たきだしです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_go",
+   "start": 232.8,
+   "slot_end": 238.0,
+   "subtitle": "つづいて、3問目。どうぞ。",
+   "voice_text": "つづいて、さんもんめ。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_call0",
+   "start": 260.0,
+   "slot_end": 264.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_call1",
+   "start": 290.0,
+   "slot_end": 294.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_ten",
+   "start": 310.0,
+   "slot_end": 313.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q3_ans0",
+   "start": 320.0,
+   "slot_end": 321.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_ans1",
+   "start": 321.6,
+   "slot_end": 326.40000000000003,
+   "subtitle": "左上の、やかんが、黄色になりました。",
+   "voice_text": "ひだりうえの、やかんが、きいろに、なりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_ans2",
+   "start": 326.40000000000003,
+   "slot_end": 331.20000000000005,
+   "subtitle": "右上の、カウンターの、おたまが、なくなりました。",
+   "voice_text": "みぎうえの、カウンターの、おたまが、なくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q3_ans3",
+   "start": 331.20000000000005,
+   "slot_end": 336.0,
+   "subtitle": "左の、お椀が、3つから2つに、へりました。",
+   "voice_text": "ひだりの、おわんが、さんこから、にこに、へりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q4_card",
+   "start": 337.0,
+   "slot_end": 342.8,
+   "subtitle": "4問目、中級。網つくろいの岸壁です。",
+   "voice_text": "よんもんめ、ちゅうきゅう。あみつくろいの、がんぺきです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_go",
+   "start": 342.8,
+   "slot_end": 348.0,
+   "subtitle": "4問目です。じっくりどうぞ。",
+   "voice_text": "よんもんめです。じっくりどうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_call0",
+   "start": 370.0,
+   "slot_end": 374.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_call1",
+   "start": 400.0,
+   "slot_end": 404.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_ten",
+   "start": 420.0,
+   "slot_end": 423.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q4_ans0",
+   "start": 430.0,
+   "slot_end": 431.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q4_ans1",
+   "start": 431.6,
+   "slot_end": 436.40000000000003,
+   "subtitle": "左上の、つぼに、しま模様がつきました。",
+   "voice_text": "ひだりうえの、つぼに、しまもようが、つきました。",
+   "face": "smile"
+  },
+  {
+   "id": "q4_ans2",
+   "start": 436.40000000000003,
+   "slot_end": 441.20000000000005,
+   "subtitle": "右上の、マグカップの、取っ手が、反対になりました。",
+   "voice_text": "みぎの、マグの、とってが、はんたいに、なりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q4_ans3",
+   "start": 441.20000000000005,
+   "slot_end": 446.0,
+   "subtitle": "左下の、道具箱が、なくなりました。",
+   "voice_text": "ひだりしたの、どうぐばこが、なくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_card",
+   "start": 447.0,
+   "slot_end": 452.8,
+   "subtitle": "5問目、中級。かご漁の帰りです。",
+   "voice_text": "ごもんめ、ちゅうきゅう。かごりょうの、かえりです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_go",
+   "start": 452.8,
+   "slot_end": 458.0,
+   "subtitle": "5問目、どうぞ。",
+   "voice_text": "ごもんめ、どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "c_comment",
+   "start": 464.0,
+   "slot_end": 473.0,
+   "subtitle": "半分まで来ました。見つかった数を、あとでコメントで教えてくださいね。",
+   "voice_text": "はんぶんまで、きました。みつかったかずを、あとでコメントでおしえてくださいね。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_call0",
+   "start": 480.0,
+   "slot_end": 484.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_call1",
+   "start": 510.0,
+   "slot_end": 514.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_ten",
+   "start": 530.0,
+   "slot_end": 533.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q5_ans0",
+   "start": 540.0,
+   "slot_end": 541.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_ans1",
+   "start": 541.6,
+   "slot_end": 546.4,
+   "subtitle": "左上の、びんが、青になりました。",
+   "voice_text": "ひだりうえの、びんが、あおく、なりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_ans2",
+   "start": 546.4,
+   "slot_end": 551.2,
+   "subtitle": "右上の、湯のみが、なくなりました。",
+   "voice_text": "みぎうえの、ゆのみが、なくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q5_ans3",
+   "start": 551.2,
+   "slot_end": 556.0,
+   "subtitle": "左下の、かばんが、緑になりました。",
+   "voice_text": "ひだりしたの、かばんが、みどりに、なりました。",
+   "face": "smile"
+  },
+  {
+   "id": "u1",
+   "start": 557.0,
+   "slot_end": 564.0,
+   "subtitle": "ここでひと休み。こよみ先生の季節のお話です。",
+   "voice_text": "ここでひとやすみ。こよみせんせいの、きせつのおはなしです。",
+   "face": "smile"
+  },
+  {
+   "id": "u2",
+   "start": 564.0,
+   "slot_end": 572.0,
+   "subtitle": "かにの数え方「杯」、知っていますか？",
+   "voice_text": "かにの、かぞえかた、はい、しっていますか？",
+   "face": "think"
+  },
+  {
+   "id": "u3",
+   "start": 572.0,
+   "slot_end": 582.0,
+   "subtitle": "生きているかには、「1杯、2杯」と数えます。",
+   "voice_text": "いきているかには、いっぱい、にはい、と、かぞえます。",
+   "face": "surprise"
+  },
+  {
+   "id": "u4",
+   "start": 582.0,
+   "slot_end": 589.0,
+   "subtitle": "お酒を注ぐ杯に形が似ているから、という説があります。",
+   "voice_text": "おさけを、そそぐ、さかずきに、かたちが、にているから、という、せつがあります。",
+   "face": "wink"
+  },
+  {
+   "id": "q6_card",
+   "start": 589.0,
+   "slot_end": 594.8,
+   "subtitle": "6問目、中級。朝の魚市場です。",
+   "voice_text": "ろくもんめ、ちゅうきゅう。あさの、うおいちばです。",
+   "face": "normal"
+  },
+  {
+   "id": "q6_go",
+   "start": 594.8,
+   "slot_end": 600.0,
+   "subtitle": "ゆっくり、6問目。どうぞ。",
+   "voice_text": "ゆっくり、ろくもんめ。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q6_call0",
+   "start": 622.0,
+   "slot_end": 626.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q6_call1",
+   "start": 652.0,
+   "slot_end": 656.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q6_ten",
+   "start": 672.0,
+   "slot_end": 675.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q6_ans0",
+   "start": 682.0,
+   "slot_end": 683.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q6_ans1",
+   "start": 683.6,
+   "slot_end": 688.4,
+   "subtitle": "左上の、手ぬぐいが、緑になりました。",
+   "voice_text": "ひだりうえの、てぬぐいが、みどりに、なりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q6_ans2",
+   "start": 688.4,
+   "slot_end": 693.2,
+   "subtitle": "右上の、スコップが、なくなりました。",
+   "voice_text": "みぎうえの、スコップが、なくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q6_ans3",
+   "start": 693.2,
+   "slot_end": 698.0,
+   "subtitle": "左の、木箱が、4つから3つに、へりました。",
+   "voice_text": "ひだりの、きばこが、よっつから、みっつに、へりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q7_card",
+   "start": 699.0,
+   "slot_end": 704.8,
+   "subtitle": "7問目、中級。ぶりの水揚げです。",
+   "voice_text": "ななもんめ、ちゅうきゅう。ぶりの、みずあげです。",
+   "face": "normal"
+  },
+  {
+   "id": "q7_go",
+   "start": 704.8,
+   "slot_end": 710.0,
+   "subtitle": "もう少しです。7問目、どうぞ。",
+   "voice_text": "もうすこしです。ななもんめ、どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q7_call0",
+   "start": 732.0,
+   "slot_end": 736.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q7_call1",
+   "start": 762.0,
+   "slot_end": 766.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q7_ten",
+   "start": 782.0,
+   "slot_end": 785.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q7_ans0",
+   "start": 792.0,
+   "slot_end": 793.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q7_ans1",
+   "start": 793.6,
+   "slot_end": 798.4,
+   "subtitle": "左上の、ゴム手ぶくろが、黄色になりました。",
+   "voice_text": "ひだりうえの、ゴムてぶくろが、きいろに、なりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q7_ans2",
+   "start": 798.4,
+   "slot_end": 803.2,
+   "subtitle": "左の、手押し車が、なくなりました。",
+   "voice_text": "ひだりの、ておしぐるまが、なくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q7_ans3",
+   "start": 803.2,
+   "slot_end": 808.0,
+   "subtitle": "右下の、白い箱が、緑になりました。",
+   "voice_text": "みぎしたの、しろい、はこが、みどりに、なりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q8_card",
+   "start": 809.0,
+   "slot_end": 814.8,
+   "subtitle": "8問目、上級。漁師小屋の棚です。",
+   "voice_text": "はちもんめ、じょうきゅう。りょうしごやの、たなです。",
+   "face": "normal"
+  },
+  {
+   "id": "q8_go",
+   "start": 814.8,
+   "slot_end": 820.0,
+   "subtitle": "では、8問目。どうぞ。",
+   "voice_text": "では、はちもんめ。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q8_call0",
+   "start": 842.0,
+   "slot_end": 846.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q8_call1",
+   "start": 872.0,
+   "slot_end": 876.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q8_ten",
+   "start": 892.0,
+   "slot_end": 895.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q8_ans0",
+   "start": 902.0,
+   "slot_end": 903.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q8_ans1",
+   "start": 903.6,
+   "slot_end": 908.4,
+   "subtitle": "右の、小鉢に、青い花が、つきました。",
+   "voice_text": "みぎの、こばちに、あおい、はなが、つきました。",
+   "face": "smile"
+  },
+  {
+   "id": "q8_ans2",
+   "start": 908.4,
+   "slot_end": 913.2,
+   "subtitle": "右下の、急須の、ふたのつまみが、なくなりました。",
+   "voice_text": "みぎしたの、きゅうすの、つまみが、なくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q8_ans3",
+   "start": 913.7,
+   "slot_end": 918.0,
+   "subtitle": "左の、つぼの、ふたが、青になりました。",
+   "voice_text": "ひだりの、つぼの、ふたが、あおく、なりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q9_card",
+   "start": 919.0,
+   "slot_end": 924.8,
+   "subtitle": "9問目、上級。港の窓辺です。",
+   "voice_text": "きゅうもんめ、じょうきゅう。みなとの、まどべです。",
+   "face": "normal"
+  },
+  {
+   "id": "q9_go",
+   "start": 924.8,
+   "slot_end": 930.0,
+   "subtitle": "つぎは、9問目です。どうぞ。",
+   "voice_text": "つぎは、きゅうもんめです。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q9_call0",
+   "start": 952.0,
+   "slot_end": 956.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q9_call1",
+   "start": 982.0,
+   "slot_end": 986.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q9_ten",
+   "start": 1002.0,
+   "slot_end": 1005.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q9_ans0",
+   "start": 1012.0,
+   "slot_end": 1013.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q9_ans1",
+   "start": 1013.6,
+   "slot_end": 1018.4,
+   "subtitle": "左上の、鉢植えの、葉が、1枚なくなりました。",
+   "voice_text": "ひだりうえの、はちの、はが、いちまい、なくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q9_ans2",
+   "start": 1018.4,
+   "slot_end": 1023.2,
+   "subtitle": "右上の、ランプが、青になりました。",
+   "voice_text": "みぎうえの、ランプが、あおく、なりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q9_ans3",
+   "start": 1023.7,
+   "slot_end": 1028.0,
+   "subtitle": "左の、貝がらに、水玉がつきました。",
+   "voice_text": "ひだりの、かいがらに、みずたまが、つきました。",
+   "face": "smile"
+  },
+  {
+   "id": "q10_card",
+   "start": 1029.0,
+   "slot_end": 1034.8,
+   "subtitle": "10問目、上級。かご干し場の納屋です。",
+   "voice_text": "じゅうもんめ、じょうきゅう。かごぼしばの、なやです。",
+   "face": "normal"
+  },
+  {
+   "id": "q10_go",
+   "start": 1034.8,
+   "slot_end": 1040.0,
+   "subtitle": "さいごの、10問目。どうぞ。",
+   "voice_text": "さいごの、じゅうもんめ。どうぞ。",
+   "face": "normal"
+  },
+  {
+   "id": "q10_call0",
+   "start": 1062.0,
+   "slot_end": 1066.0,
+   "subtitle": "あと60秒です。",
+   "voice_text": "あとろくじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q10_call1",
+   "start": 1092.0,
+   "slot_end": 1096.0,
+   "subtitle": "あと30秒です。",
+   "voice_text": "あとさんじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q10_ten",
+   "start": 1112.0,
+   "slot_end": 1115.0,
+   "subtitle": "あと10秒です。",
+   "voice_text": "あとじゅうびょうです。",
+   "face": "normal"
+  },
+  {
+   "id": "q10_ans0",
+   "start": 1122.0,
+   "slot_end": 1123.6,
+   "subtitle": "答えです。",
+   "voice_text": "こたえです。",
+   "face": "smile"
+  },
+  {
+   "id": "q10_ans1",
+   "start": 1123.6,
+   "slot_end": 1128.3999999999999,
+   "subtitle": "左上の、ブリキの缶が、なくなりました。",
+   "voice_text": "ひだりうえの、ブリキの、かんが、なくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q10_ans2",
+   "start": 1128.3999999999999,
+   "slot_end": 1133.1999999999998,
+   "subtitle": "左の、ブラシの、柄が、青になりました。",
+   "voice_text": "ひだりの、ブラシの、えが、あおく、なりました。",
+   "face": "smile"
+  },
+  {
+   "id": "q10_ans3",
+   "start": 1133.1999999999998,
+   "slot_end": 1138.0,
+   "subtitle": "右下の、ロープの、はしが、なくなりました。",
+   "voice_text": "みぎしたの、ロープの、はしが、なくなりました。",
+   "face": "smile"
+  },
+  {
+   "id": "e1",
+   "start": 1139.0,
+   "slot_end": 1142.6,
+   "subtitle": "これで10問、おしまいです。",
+   "voice_text": "これで、じゅうもん、おしまいです。",
+   "face": "yay"
+  },
+  {
+   "id": "e2",
+   "start": 1142.6,
+   "slot_end": 1149.2,
+   "subtitle": "30個の違い、いくつ見つかりましたか。今日の称号です。",
+   "voice_text": "さんじゅっこの、ちがい、いくつみつかりましたか。きょうのしょーごーです。",
+   "face": "smile"
+  },
+  {
+   "id": "e3",
+   "start": 1149.2,
+   "slot_end": 1160.0,
+   "subtitle": "チャンネル登録とベルで、毎朝8時半に問題が届きます。毎日の頭の体操にどうぞ。",
+   "voice_text": "チャンネルとうろくとベルで、まいあさはちじはんに、もんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。",
+   "face": "smile"
+  },
+  {
+   "id": "e4",
+   "start": 1160.0,
+   "slot_end": 1175.0,
+   "subtitle": "ほかにも、いろいろな間違い探しがあります。もっと難しい問題に挑戦したい方は、画面の動画をクリックしてくださいね。",
+   "voice_text": "ほかにも、いろいろな、まちがいさがしがあります。もっとむずかしいもんだいに、ちょうせんしたいかたは、がめんのどうがを、クリックしてくださいね。",
+   "face": "wink"
+  }
+ ]
+}

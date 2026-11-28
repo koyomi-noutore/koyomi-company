@@ -1,0 +1,2499 @@
+{
+ "episode": "2026-11-28_037",
+ "season": "冬",
+ "topics": [
+  "冬の漁港",
+  "かに",
+  "ぶり"
+ ],
+ "note": "第37回（冬の漁港・かにとぶり・冬・全10問・新規）。画風は案Y（水彩・主役大きく・人物あり）。タイトルは型A（title_plan）。サムネ・タイトルは仮。ショートは作らない。",
+ "youtube": {
+  "title": "【間違い探し】高齢者の認知症予防｜冬の漁港 かにとぶり 全10問",
+  "description_file": "description.md",
+  "publish_plan": "未定（CEOが決める）"
+ },
+ "screens": {
+  "opening_title": "冬の漁港の間違い探し　全10問",
+  "opening_sub": "やさしい問題から 順番に",
+  "unchiku_header": "こよみ先生の 冬の小話",
+  "unchiku_slides": [
+   {
+    "until": 7,
+    "texts": [
+     [
+      "ひと休み",
+      960,
+      330,
+      130,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "こよみ先生の 季節のお話",
+      960,
+      520,
+      80,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 15,
+    "texts": [
+     [
+      "かにの数え方「杯」",
+      960,
+      330,
+      100,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "知っていますか？",
+      960,
+      520,
+      90,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 25,
+    "texts": [
+     [
+      "生きているかには",
+      960,
+      330,
+      100,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "「1杯、2杯」と数えます",
+      960,
+      520,
+      88,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 40,
+    "texts": [
+     [
+      "お酒を注ぐ「杯」に",
+      960,
+      330,
+      100,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "形が似ているから、という説",
+      960,
+      520,
+      80,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   }
+  ],
+  "ending_titles": [
+   [
+    "30個",
+    "漁港の達人"
+   ],
+   [
+    "22〜29個",
+    "かに名人"
+   ],
+   [
+    "11〜21個",
+    "網つくろい見習い"
+   ],
+   [
+    "0〜10個",
+    "こたつでひと休み"
+   ]
+  ],
+  "ending_note": "見習いさんも、毎日ためせば 名人です",
+  "ending_next": "ほかの間違い探しも どうぞ",
+  "owl_layout": "bottom",
+  "endscreen_at": 9.0,
+  "rule_overlay": {
+   "text": "右の絵で 違いを3つ さがそう",
+   "sub": "1問 90秒",
+   "sec": 8.0
+  }
+ },
+ "timeline": {
+  "total": 1176.0,
+  "opening": [
+   0.0,
+   7.0
+  ],
+  "rule": [
+   7.0,
+   7.0
+  ],
+  "q_start": {
+   "1": 7.0,
+   "2": 117.0,
+   "3": 227.0,
+   "4": 337.0,
+   "5": 447.0,
+   "6": 589.0,
+   "7": 699.0,
+   "8": 809.0,
+   "9": 919.0,
+   "10": 1029.0
+  },
+  "unchiku": [
+   557.0,
+   589.0
+  ],
+  "ending": [
+   1139.0,
+   1176.0
+  ],
+  "card": 3.0,
+  "solve": 90.0,
+  "answer": 17.0,
+  "hint_at": null,
+  "ten_at": 80.0,
+  "ans_first": 1.6,
+  "ans_step": 4.8,
+  "solve_calls": [
+   [
+    30,
+    "あと60秒です。"
+   ],
+   [
+    60,
+    "あと30秒です。"
+   ]
+  ],
+  "go_delay": 2.8,
+  "ans_shift": {
+   "q8_ans3": 0.5,
+   "q9_ans3": 0.5
+  }
+ },
+ "lines": {
+  "opening": [
+   {
+    "id": "op",
+    "at": 0.0,
+    "text": "冬の漁港の間違い探し。",
+    "face": "smile",
+    "until": 3.9
+   },
+   {
+    "id": "op2",
+    "at": 3.9,
+    "text": "だんだん、難しくなります。",
+    "face": "wink",
+    "until": 7.0
+   }
+  ],
+  "rule": [],
+  "unchiku": [
+   {
+    "id": "u1",
+    "at": 0.0,
+    "text": "ここでひと休み。こよみ先生の季節のお話です。",
+    "face": "smile",
+    "until": 7.0
+   },
+   {
+    "id": "u2",
+    "at": 7.0,
+    "text": "かにの数え方「杯」、知っていますか？",
+    "face": "think",
+    "until": 15.0
+   },
+   {
+    "id": "u3",
+    "at": 15.0,
+    "text": "生きているかには、「1杯、2杯」と数えます。",
+    "face": "surprise",
+    "until": 25.0
+   },
+   {
+    "id": "u4",
+    "at": 25.0,
+    "text": "お酒を注ぐ杯に形が似ているから、という説があります。",
+    "face": "wink",
+    "until": 32.0
+   }
+  ],
+  "ending": [
+   {
+    "id": "e1",
+    "at": 0.0,
+    "text": "これで10問、おしまいです。",
+    "face": "yay",
+    "until": 3.6
+   },
+   {
+    "id": "e2",
+    "at": 3.6,
+    "text": "30個の違い、いくつ見つかりましたか。今日の称号です。",
+    "face": "smile",
+    "until": 10.2
+   },
+   {
+    "id": "e3",
+    "at": 10.2,
+    "text": "チャンネル登録とベルで、毎朝8時半に問題が届きます。毎日の頭の体操にどうぞ。",
+    "face": "smile",
+    "until": 21.0
+   },
+   {
+    "id": "e4",
+    "at": 21.0,
+    "text": "ほかにも、いろいろな間違い探しがあります。もっと難しい問題に挑戦したい方は、画面の動画をクリックしてくださいね。",
+    "face": "wink",
+    "until": 36.0
+   }
+  ],
+  "extra": [
+   {
+    "id": "c_comment",
+    "at": 464.0,
+    "face": "smile",
+    "until": 473.0,
+    "text": "半分まで来ました。見つかった数を、あとでコメントで教えてくださいね。"
+   }
+  ]
+ },
+ "readings": [
+  [
+   "縁側のみかんと猫",
+   "えんがわのみかんとねこ"
+  ],
+  [
+   "縁側のお茶の時間",
+   "えんがわのおちゃのじかん"
+  ],
+  [
+   "雪うさぎの耳の葉",
+   "ゆきうさぎのみみのは"
+  ],
+  [
+   "雪だるまと冬の朝",
+   "ゆきだるまとふゆのあさ"
+  ],
+  [
+   "こたつのみかん",
+   "こたつのみかん"
+  ],
+  [
+   "みかんの木の庭",
+   "みかんのきのにわ"
+  ],
+  [
+   "雪うさぎの縁側",
+   "ゆきうさぎのえんがわ"
+  ],
+  [
+   "縁側のひなた",
+   "えんがわのひなた"
+  ],
+  [
+   "みかん箱と猫",
+   "みかんばことねこ"
+  ],
+  [
+   "雪だるまの庭",
+   "ゆきだるまのにわ"
+  ],
+  [
+   "冬の朝の窓辺",
+   "ふゆのあさのまどべ"
+  ],
+  [
+   "時計の文字盤",
+   "とけいのもじばん"
+  ],
+  [
+   "雪だるまの鼻",
+   "ゆきだるまのはな"
+  ],
+  [
+   "間違い探し",
+   "まちがいさがし"
+  ],
+  [
+   "雪かきの道",
+   "ゆきかきのみち"
+  ],
+  [
+   "雪の玄関先",
+   "ゆきのげんかんさき"
+  ],
+  [
+   "麦わら帽子",
+   "むぎわらぼうし"
+  ],
+  [
+   "色えんぴつ",
+   "いろえんぴつ"
+  ],
+  [
+   "ひょうたん",
+   "ひょうたん"
+  ],
+  [
+   "手ぶくろ",
+   "てぶくろ"
+  ],
+  [
+   "七味入れ",
+   "しちみいれ"
+  ],
+  [
+   "はし置き",
+   "はしおき"
+  ],
+  [
+   "赤とんぼ",
+   "あかとんぼ"
+  ],
+  [
+   "お月さま",
+   "おつきさま"
+  ],
+  [
+   "火ばさみ",
+   "ひばさみ"
+  ],
+  [
+   "赤いふた",
+   "あかいふた"
+  ],
+  [
+   "大学いも",
+   "だいがくいも"
+  ],
+  [
+   "反対向き",
+   "はんたいむき"
+  ],
+  [
+   "昼ごはん",
+   "ひるごはん"
+  ],
+  [
+   "続いて",
+   "つづいて"
+  ],
+  [
+   "持ち手",
+   "もちて"
+  ],
+  [
+   "休み場",
+   "やすみば"
+  ],
+  [
+   "飛ばし",
+   "とばし"
+  ],
+  [
+   "茶わん",
+   "ちゃわん"
+  ],
+  [
+   "鉢植え",
+   "はちうえ"
+  ],
+  [
+   "丸ごと",
+   "まるごと"
+  ],
+  [
+   "通り道",
+   "とおりみち"
+  ],
+  [
+   "大丈夫",
+   "だいじょうぶ"
+  ],
+  [
+   "難しい",
+   "むずかしい"
+  ],
+  [
+   "段の上",
+   "だんのうえ"
+  ],
+  [
+   "雪の上",
+   "ゆきのうえ"
+  ],
+  [
+   "植木鉢",
+   "うえきばち"
+  ],
+  [
+   "花びん",
+   "かびん"
+  ],
+  [
+   "湯のみ",
+   "ゆのみ"
+  ],
+  [
+   "赤い実",
+   "あかいみ"
+  ],
+  [
+   "長いす",
+   "ながいす"
+  ],
+  [
+   "新そば",
+   "しんそば"
+  ],
+  [
+   "干し柿",
+   "ほしがき"
+  ],
+  [
+   "鉄びん",
+   "てつびん"
+  ],
+  [
+   "酉の市",
+   "とりのいち"
+  ],
+  [
+   "飛び石",
+   "とびいし"
+  ],
+  [
+   "掛け軸",
+   "かけじく"
+  ],
+  [
+   "切り株",
+   "きりかぶ"
+  ],
+  [
+   "石灯籠",
+   "いしどうろう"
+  ],
+  [
+   "少なく",
+   "すくなく"
+  ],
+  [
+   "向いて",
+   "むいて"
+  ],
+  [
+   "まん中",
+   "まんなか"
+  ],
+  [
+   "ゆで卵",
+   "ゆでたまご"
+  ],
+  [
+   "右はし",
+   "みぎはし"
+  ],
+  [
+   "茶色い",
+   "ちゃいろい"
+  ],
+  [
+   "花びら",
+   "はなびら"
+  ],
+  [
+   "土なべ",
+   "どなべ"
+  ],
+  [
+   "玉ねぎ",
+   "たまねぎ"
+  ],
+  [
+   "変わり",
+   "かわり"
+  ],
+  [
+   "落ち葉",
+   "おちば"
+  ],
+  [
+   "黄色い",
+   "きいろい"
+  ],
+  [
+   "大きく",
+   "おおきく"
+  ],
+  [
+   "舞って",
+   "まって"
+  ],
+  [
+   "葉っぱ",
+   "はっぱ"
+  ],
+  [
+   "魔法瓶",
+   "まほうびん"
+  ],
+  [
+   "小さな",
+   "ちいさな"
+  ],
+  [
+   "第1問",
+   "だいいちもん"
+  ],
+  [
+   "第2問",
+   "だいにもん"
+  ],
+  [
+   "第3問",
+   "だいさんもん"
+  ],
+  [
+   "第4問",
+   "だいよんもん"
+  ],
+  [
+   "第5問",
+   "だいごもん"
+  ],
+  [
+   "60秒",
+   "ろくじゅうびょう"
+  ],
+  [
+   "30秒",
+   "さんじゅうびょう"
+  ],
+  [
+   "10秒",
+   "じゅうびょう"
+  ],
+  [
+   "小さく",
+   "ちいさく"
+  ],
+  [
+   "取っ手",
+   "とって"
+  ],
+  [
+   "木の札",
+   "きのふだ"
+  ],
+  [
+   "大きな",
+   "おおきな"
+  ],
+  [
+   "前かけ",
+   "まえかけ"
+  ],
+  [
+   "結び目",
+   "むすびめ"
+  ],
+  [
+   "風呂敷",
+   "ふろしき"
+  ],
+  [
+   "芋煮会",
+   "いもにかい"
+  ],
+  [
+   "秋景色",
+   "あきげしき"
+  ],
+  [
+   "地面",
+   "じめん"
+  ],
+  [
+   "里山",
+   "さとやま"
+  ],
+  [
+   "狩り",
+   "がり"
+  ],
+  [
+   "巣箱",
+   "すばこ"
+  ],
+  [
+   "長靴",
+   "ながぐつ"
+  ],
+  [
+   "毛糸",
+   "けいと"
+  ],
+  [
+   "山道",
+   "やまみち"
+  ],
+  [
+   "胞子",
+   "ほうし"
+  ],
+  [
+   "菌類",
+   "きんるい"
+  ],
+  [
+   "酵母",
+   "こうぼ"
+  ],
+  [
+   "仲間",
+   "なかま"
+  ],
+  [
+   "称号",
+   "しょうごう"
+  ],
+  [
+   "時計",
+   "とけい"
+  ],
+  [
+   "お盆",
+   "おぼん"
+  ],
+  [
+   "栄養",
+   "えいよう"
+  ],
+  [
+   "登録",
+   "とうろく"
+  ],
+  [
+   "毎朝",
+   "まいあさ"
+  ],
+  [
+   "動画",
+   "どうが"
+  ],
+  [
+   "画面",
+   "がめん"
+  ],
+  [
+   "挑戦",
+   "ちょうせん"
+  ],
+  [
+   "違い",
+   "ちがい"
+  ],
+  [
+   "1羽",
+   "いちわ"
+  ],
+  [
+   "小鳥",
+   "ことり"
+  ],
+  [
+   "左の",
+   "ひだりの"
+  ],
+  [
+   "急須",
+   "きゅうす"
+  ],
+  [
+   "屋根",
+   "やね"
+  ],
+  [
+   "小屋",
+   "こや"
+  ],
+  [
+   "縁側",
+   "えんがわ"
+  ],
+  [
+   "朝市",
+   "あさいち"
+  ],
+  [
+   "お皿",
+   "おさら"
+  ],
+  [
+   "1匹",
+   "いっぴき"
+  ],
+  [
+   "お茶",
+   "おちゃ"
+  ],
+  [
+   "金色",
+   "きんいろ"
+  ],
+  [
+   "熊手",
+   "くまで"
+  ],
+  [
+   "飾り",
+   "かざり"
+  ],
+  [
+   "白く",
+   "しろく"
+  ],
+  [
+   "掛け",
+   "かけ"
+  ],
+  [
+   "漬物",
+   "つけもの"
+  ],
+  [
+   "軍手",
+   "ぐんて"
+  ],
+  [
+   "茶色",
+   "ちゃいろ"
+  ],
+  [
+   "風鈴",
+   "ふうりん"
+  ],
+  [
+   "黒板",
+   "こくばん"
+  ],
+  [
+   "反対",
+   "はんたい"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "黄色",
+   "きいろ"
+  ],
+  [
+   "赤く",
+   "あかく"
+  ],
+  [
+   "青く",
+   "あおく"
+  ],
+  [
+   "赤い",
+   "あかい"
+  ],
+  [
+   "筆箱",
+   "ふでばこ"
+  ],
+  [
+   "木箱",
+   "きばこ"
+  ],
+  [
+   "湯気",
+   "ゆげ"
+  ],
+  [
+   "紙袋",
+   "かみぶくろ"
+  ],
+  [
+   "消え",
+   "きえ"
+  ],
+  [
+   "付き",
+   "つき"
+  ],
+  [
+   "水筒",
+   "すいとう"
+  ],
+  [
+   "帽子",
+   "ぼうし"
+  ],
+  [
+   "上級",
+   "じょうきゅう"
+  ],
+  [
+   "中級",
+   "ちゅうきゅう"
+  ],
+  [
+   "初級",
+   "しょきゅう"
+  ],
+  [
+   "黒い",
+   "くろい"
+  ],
+  [
+   "一本",
+   "いっぽん"
+  ],
+  [
+   "高く",
+   "たかく"
+  ],
+  [
+   "短く",
+   "みじかく"
+  ],
+  [
+   "青い",
+   "あおい"
+  ],
+  [
+   "白い",
+   "しろい"
+  ],
+  [
+   "後半",
+   "こうはん"
+  ],
+  [
+   "最後",
+   "さいご"
+  ],
+  [
+   "難問",
+   "なんもん"
+  ],
+  [
+   "問題",
+   "もんだい"
+  ],
+  [
+   "答え",
+   "こたえ"
+  ],
+  [
+   "少し",
+   "すこし"
+  ],
+  [
+   "大根",
+   "だいこん"
+  ],
+  [
+   "小皿",
+   "こざら"
+  ],
+  [
+   "向き",
+   "むき"
+  ],
+  [
+   "一つ",
+   "ひとつ"
+  ],
+  [
+   "模様",
+   "もよう"
+  ],
+  [
+   "下駄",
+   "げた"
+  ],
+  [
+   "金属",
+   "きんぞく"
+  ],
+  [
+   "無く",
+   "なく"
+  ],
+  [
+   "増え",
+   "ふえ"
+  ],
+  [
+   "向い",
+   "むい"
+  ],
+  [
+   "金具",
+   "かなぐ"
+  ],
+  [
+   "一枚",
+   "いちまい"
+  ],
+  [
+   "真上",
+   "まうえ"
+  ],
+  [
+   "屋台",
+   "やたい"
+  ],
+  [
+   "銭湯",
+   "せんとう"
+  ],
+  [
+   "今日",
+   "きょう"
+  ],
+  [
+   "一緒",
+   "いっしょ"
+  ],
+  [
+   "山門",
+   "さんもん"
+  ],
+  [
+   "川辺",
+   "かわべ"
+  ],
+  [
+   "お面",
+   "おめん"
+  ],
+  [
+   "銀色",
+   "ぎんいろ"
+  ],
+  [
+   "丸い",
+   "まるい"
+  ],
+  [
+   "手前",
+   "てまえ"
+  ],
+  [
+   "座る",
+   "すわる"
+  ],
+  [
+   "重ね",
+   "かさね"
+  ],
+  [
+   "減り",
+   "へり"
+  ],
+  [
+   "芋煮",
+   "いもに"
+  ],
+  [
+   "川原",
+   "かわら"
+  ],
+  [
+   "里芋",
+   "さといも"
+  ],
+  [
+   "夕方",
+   "ゆうがた"
+  ],
+  [
+   "山形",
+   "やまがた"
+  ],
+  [
+   "宮城",
+   "みやぎ"
+  ],
+  [
+   "牛肉",
+   "ぎゅうにく"
+  ],
+  [
+   "豚肉",
+   "ぶたにく"
+  ],
+  [
+   "土地",
+   "とち"
+  ],
+  [
+   "家庭",
+   "かてい"
+  ],
+  [
+   "岩",
+   "いわ"
+  ],
+  [
+   "栗",
+   "くり"
+  ],
+  [
+   "裏",
+   "うら"
+  ],
+  [
+   "皮",
+   "かわ"
+  ],
+  [
+   "石",
+   "いし"
+  ],
+  [
+   "木",
+   "き"
+  ],
+  [
+   "庭",
+   "にわ"
+  ],
+  [
+   "猫",
+   "ねこ"
+  ],
+  [
+   "実",
+   "み"
+  ],
+  [
+   "番",
+   "ばん"
+  ],
+  [
+   "柱",
+   "はしら"
+  ],
+  [
+   "棚",
+   "たな"
+  ],
+  [
+   "鈴",
+   "すず"
+  ],
+  [
+   "菊",
+   "きく"
+  ],
+  [
+   "器",
+   "うつわ"
+  ],
+  [
+   "花",
+   "はな"
+  ],
+  [
+   "前",
+   "まえ"
+  ],
+  [
+   "笠",
+   "かさ"
+  ],
+  [
+   "鉢",
+   "はち"
+  ],
+  [
+   "柿",
+   "かき"
+  ],
+  [
+   "台",
+   "だい"
+  ],
+  [
+   "軒",
+   "のき"
+  ],
+  [
+   "鐘",
+   "かね"
+  ],
+  [
+   "竹",
+   "たけ"
+  ],
+  [
+   "枝",
+   "えだ"
+  ],
+  [
+   "絵",
+   "え"
+  ],
+  [
+   "上",
+   "うえ"
+  ],
+  [
+   "緑",
+   "みどり"
+  ],
+  [
+   "机",
+   "つくえ"
+  ],
+  [
+   "数",
+   "かず"
+  ],
+  [
+   "形",
+   "かたち"
+  ],
+  [
+   "先",
+   "さき"
+  ],
+  [
+   "下",
+   "した"
+  ],
+  [
+   "輪",
+   "わ"
+  ],
+  [
+   "針",
+   "はり"
+  ],
+  [
+   "牛",
+   "うし"
+  ],
+  [
+   "左",
+   "ひだり"
+  ],
+  [
+   "右",
+   "みぎ"
+  ],
+  [
+   "頭",
+   "あたま"
+  ],
+  [
+   "刃",
+   "は"
+  ],
+  [
+   "量",
+   "りょう"
+  ],
+  [
+   "苗",
+   "なえ"
+  ],
+  [
+   "丸",
+   "まる"
+  ],
+  [
+   "桶",
+   "おけ"
+  ],
+  [
+   "火",
+   "ひ"
+  ],
+  [
+   "葉",
+   "は"
+  ],
+  [
+   "色",
+   "いろ"
+  ],
+  [
+   "鍋",
+   "なべ"
+  ],
+  [
+   "畑",
+   "はたけ"
+  ],
+  [
+   "壁",
+   "かべ"
+  ],
+  [
+   "紋",
+   "もん"
+  ],
+  [
+   "星",
+   "ほし"
+  ],
+  [
+   "銀",
+   "ぎん"
+  ],
+  [
+   "味",
+   "あじ"
+  ],
+  [
+   "近い",
+   "ちかい"
+  ],
+  [
+   "細長",
+   "ほそなが"
+  ],
+  [
+   "松ぼっくり",
+   "まつぼっくり"
+  ],
+  [
+   "毛糸玉",
+   "けいとだま"
+  ],
+  [
+   "水玉",
+   "みずたま"
+  ],
+  [
+   "耳あて",
+   "みみあて"
+  ],
+  [
+   "細長い",
+   "ほそながい"
+  ],
+  [
+   "缶",
+   "かん"
+  ],
+  [
+   "紙ぶくろ",
+   "かみぶくろ"
+  ],
+  [
+   "雪玉",
+   "ゆきだま"
+  ],
+  [
+   "雪だるま",
+   "ゆきだるま"
+  ],
+  [
+   "雪の公園",
+   "ゆきのこうえん"
+  ],
+  [
+   "公園",
+   "こうえん"
+  ],
+  [
+   "丘",
+   "おか"
+  ],
+  [
+   "親子",
+   "おやこ"
+  ],
+  [
+   "由来",
+   "ゆらい"
+  ],
+  [
+   "東屋",
+   "あずまや"
+  ],
+  [
+   "玉が",
+   "たまが"
+  ],
+  [
+   "日本",
+   "にほん"
+  ],
+  [
+   "名前",
+   "なまえ"
+  ],
+  [
+   "似て",
+   "にて"
+  ],
+  [
+   "説",
+   "せつ"
+  ],
+  [
+   "多い",
+   "おおい"
+  ],
+  [
+   "腰かけ",
+   "こしかけ"
+  ],
+  [
+   "雪見障子",
+   "ゆきみしょうじ"
+  ],
+  [
+   "露天風呂",
+   "ろてんぶろ"
+  ],
+  [
+   "雪見",
+   "ゆきみ"
+  ],
+  [
+   "障子",
+   "しょうじ"
+  ],
+  [
+   "縁台",
+   "えんだい"
+  ],
+  [
+   "湯上がり",
+   "ゆあがり"
+  ],
+  [
+   "水差し",
+   "みずさし"
+  ],
+  [
+   "水色",
+   "みずいろ"
+  ],
+  [
+   "手ぬぐい",
+   "てぬぐい"
+  ],
+  [
+   "置物",
+   "おきもの"
+  ],
+  [
+   "雪景色",
+   "ゆきげしき"
+  ],
+  [
+   "景色",
+   "けしき"
+  ],
+  [
+   "部屋",
+   "へや"
+  ],
+  [
+   "座った",
+   "すわった"
+  ],
+  [
+   "上げる",
+   "あげる"
+  ],
+  [
+   "半分",
+   "はんぶん"
+  ],
+  [
+   "雪の庭",
+   "ゆきのにわ"
+  ],
+  [
+   "竹垣",
+   "たけがき"
+  ],
+  [
+   "2つ",
+   "ふたつ"
+  ],
+  [
+   "柄",
+   "え"
+  ],
+  [
+   "串",
+   "くし"
+  ],
+  [
+   "2本",
+   "にほん"
+  ],
+  [
+   "富士山",
+   "ふじさん"
+  ],
+  [
+   "湯船",
+   "ゆぶね"
+  ],
+  [
+   "脱衣所",
+   "だついじょ"
+  ],
+  [
+   "下駄箱",
+   "げたばこ"
+  ],
+  [
+   "洗い場",
+   "あらいば"
+  ],
+  [
+   "番台",
+   "ばんだい"
+  ],
+  [
+   "牛乳",
+   "ぎゅうにゅう"
+  ],
+  [
+   "玄関",
+   "げんかん"
+  ],
+  [
+   "東京",
+   "とうきょう"
+  ],
+  [
+   "描か",
+   "えがか"
+  ],
+  [
+   "百年以上前",
+   "ひゃくねんいじょうまえ"
+  ],
+  [
+   "100年以上前",
+   "ひゃくねんいじょうまえ"
+  ],
+  [
+   "真ん中",
+   "まんなか"
+  ],
+  [
+   "真中",
+   "まんなか"
+  ],
+  [
+   "線",
+   "せん"
+  ],
+  [
+   "餅つき",
+   "もちつき"
+  ],
+  [
+   "餅",
+   "もち"
+  ],
+  [
+   "結果発表",
+   "けっかはっぴょう"
+  ],
+  [
+   "お椀",
+   "おわん"
+  ],
+  [
+   "椀",
+   "わん"
+  ],
+  [
+   "土間",
+   "どま"
+  ],
+  [
+   "軒下",
+   "のきした"
+  ],
+  [
+   "道具だな",
+   "どうぐだな"
+  ],
+  [
+   "もち米",
+   "もちごめ"
+  ],
+  [
+   "ご存じ",
+   "ごぞんじ"
+  ],
+  [
+   "強い",
+   "つよい"
+  ],
+  [
+   "釜",
+   "かま"
+  ],
+  [
+   "土のつぼ",
+   "つちのつぼ"
+  ],
+  [
+   "大根おろし",
+   "だいこんおろし"
+  ],
+  [
+   "ひしゃく",
+   "ひしゃく"
+  ],
+  [
+   "本",
+   "ほん"
+  ],
+  [
+   "きな粉",
+   "きなこ"
+  ],
+  [
+   "紫",
+   "むらさき"
+  ],
+  [
+   "すずめ",
+   "すずめ"
+  ],
+  [
+   "凧",
+   "たこ"
+  ],
+  [
+   "河原",
+   "かわら"
+  ],
+  [
+   "杭",
+   "くい"
+  ],
+  [
+   "土手",
+   "どて"
+  ],
+  [
+   "枯れすすき",
+   "かれすすき"
+  ],
+  [
+   "作業台",
+   "さぎょうだい"
+  ],
+  [
+   "橋",
+   "はし"
+  ],
+  [
+   "糸巻き",
+   "いとまき"
+  ],
+  [
+   "左上",
+   "ひだりうえ"
+  ],
+  [
+   "木づち",
+   "きづち"
+  ],
+  [
+   "長ぐつ",
+   "ながぐつ"
+  ],
+  [
+   "2枚",
+   "にまい"
+  ],
+  [
+   "減りました",
+   "へりました"
+  ],
+  [
+   "呼ばれ",
+   "よばれ"
+  ],
+  [
+   "似ている",
+   "にている"
+  ],
+  [
+   "上がる",
+   "あがる"
+  ],
+  [
+   "見上げる",
+   "みあげる"
+  ],
+  [
+   "楽しい",
+   "たのしい"
+  ],
+  [
+   "全5問",
+   "ぜんごもん"
+  ],
+  [
+   "右向き",
+   "みぎむき"
+  ],
+  [
+   "かご",
+   "かご"
+  ],
+  [
+   "おけ",
+   "おけ"
+  ],
+  [
+   "スズメ",
+   "スズメ"
+  ],
+  [
+   "向きを変え",
+   "むきを、かえ"
+  ],
+  [
+   "左向き",
+   "ひだりむき"
+  ],
+  [
+   "マフラー",
+   "マフラー"
+  ],
+  [
+   "雪国",
+   "ゆきぐに"
+  ],
+  [
+   "古民家",
+   "こみんか"
+  ],
+  [
+   "囲炉裏",
+   "いろり"
+  ],
+  [
+   "自在鉤",
+   "じざいかぎ"
+  ],
+  [
+   "鉄瓶",
+   "てつびん"
+  ],
+  [
+   "火加減",
+   "ひかげん"
+  ],
+  [
+   "知恵",
+   "ちえ"
+  ],
+  [
+   "昔の",
+   "むかしの"
+  ],
+  [
+   "冬の漁港の岸壁",
+   "ふゆのぎょこうのがんぺき"
+  ],
+  [
+   "かにの選別小屋",
+   "かにのせんべつごや"
+  ],
+  [
+   "港のかに汁の炊き出し",
+   "みなとのかにじるのたきだし"
+  ],
+  [
+   "網つくろいの岸壁",
+   "あみつくろいのがんぺき"
+  ],
+  [
+   "かご漁の帰り",
+   "かごりょうのかえり"
+  ],
+  [
+   "朝の魚市場",
+   "あさのうおいちば"
+  ],
+  [
+   "ぶりの水揚げ",
+   "ぶりのみずあげ"
+  ],
+  [
+   "漁師小屋の棚",
+   "りょうしごやのたな"
+  ],
+  [
+   "港の窓辺",
+   "みなとのまどべ"
+  ],
+  [
+   "かご干し場の納屋",
+   "かごぼしばのなや"
+  ]
+ ],
+ "voice_override": {
+  "op": "ふゆの、ぎょこうの、まちがいさがし。",
+  "op2": "だんだん、むずかしくなります。",
+  "u1": "ここでひとやすみ。こよみせんせいの、きせつのおはなしです。",
+  "u2": "かにの、かぞえかた、はい、しっていますか？",
+  "u3": "いきているかには、いっぱい、にはい、と、かぞえます。",
+  "u4": "おさけを、そそぐ、さかずきに、かたちが、にているから、という、せつがあります。",
+  "e1": "これで、じゅうもん、おしまいです。",
+  "e2": "さんじゅっこの、ちがい、いくつみつかりましたか。きょうのしょーごーです。",
+  "e3": "チャンネルとうろくとベルで、まいあさはちじはんに、もんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。",
+  "e4": "ほかにも、いろいろな、まちがいさがしがあります。もっとむずかしいもんだいに、ちょうせんしたいかたは、がめんのどうがを、クリックしてくださいね。",
+  "c_comment": "はんぶんまで、きました。みつかったかずを、あとでコメントでおしえてくださいね。",
+  "q1_card": "いちもんめ、やさしい、もんだい。ふゆの、ぎょこうの、がんぺきです。",
+  "q1_go": "みぎのえのちがいを、みっつさがしてください。どうぞ。",
+  "q1_ans1": "ひだりうえの、バケツが、みどりに、なりました。",
+  "q1_ans2": "ひだりの、ゴムぐつが、かたほう、なくなりました。",
+  "q1_ans3": "ひだりしたの、まるい、こしかけが、あおく、なりました。",
+  "q2_card": "にもんめ、しょきゅう。かにの、せんべつごやです。",
+  "q2_go": "では、にもんめ。どうぞ。",
+  "q2_ans1": "ひだりうえの、ざるが、みどりに、なりました。",
+  "q2_ans2": "ひだりの、ほうきが、なくなりました。",
+  "q2_ans3": "みぎうえの、せんめんきが、あおく、なりました。",
+  "q3_card": "さんもんめ、しょきゅう。みなとの、かにじるの、たきだしです。",
+  "q3_go": "つづいて、さんもんめ。どうぞ。",
+  "q3_ans1": "ひだりうえの、やかんが、きいろに、なりました。",
+  "q3_ans2": "みぎうえの、カウンターの、おたまが、なくなりました。",
+  "q3_ans3": "ひだりの、おわんが、さんこから、にこに、へりました。",
+  "q4_card": "よんもんめ、ちゅうきゅう。あみつくろいの、がんぺきです。",
+  "q4_go": "よんもんめです。じっくりどうぞ。",
+  "q4_ans1": "ひだりうえの、つぼに、しまもようが、つきました。",
+  "q4_ans2": "みぎの、マグの、とってが、はんたいに、なりました。",
+  "q4_ans3": "ひだりしたの、どうぐばこが、なくなりました。",
+  "q5_card": "ごもんめ、ちゅうきゅう。かごりょうの、かえりです。",
+  "q5_go": "ごもんめ、どうぞ。",
+  "q5_ans1": "ひだりうえの、びんが、あおく、なりました。",
+  "q5_ans2": "みぎうえの、ゆのみが、なくなりました。",
+  "q5_ans3": "ひだりしたの、かばんが、みどりに、なりました。",
+  "q6_card": "ろくもんめ、ちゅうきゅう。あさの、うおいちばです。",
+  "q6_go": "ゆっくり、ろくもんめ。どうぞ。",
+  "q6_ans1": "ひだりうえの、てぬぐいが、みどりに、なりました。",
+  "q6_ans2": "みぎうえの、スコップが、なくなりました。",
+  "q6_ans3": "ひだりの、きばこが、よっつから、みっつに、へりました。",
+  "q7_card": "ななもんめ、ちゅうきゅう。ぶりの、みずあげです。",
+  "q7_go": "もうすこしです。ななもんめ、どうぞ。",
+  "q7_ans1": "ひだりうえの、ゴムてぶくろが、きいろに、なりました。",
+  "q7_ans2": "ひだりの、ておしぐるまが、なくなりました。",
+  "q7_ans3": "みぎしたの、しろい、はこが、みどりに、なりました。",
+  "q8_card": "はちもんめ、じょうきゅう。りょうしごやの、たなです。",
+  "q8_go": "では、はちもんめ。どうぞ。",
+  "q8_ans1": "みぎの、こばちに、あおい、はなが、つきました。",
+  "q8_ans2": "みぎしたの、きゅうすの、つまみが、なくなりました。",
+  "q8_ans3": "ひだりの、つぼの、ふたが、あおく、なりました。",
+  "q9_card": "きゅうもんめ、じょうきゅう。みなとの、まどべです。",
+  "q9_go": "つぎは、きゅうもんめです。どうぞ。",
+  "q9_ans1": "ひだりうえの、はちの、はが、いちまい、なくなりました。",
+  "q9_ans2": "みぎうえの、ランプが、あおく、なりました。",
+  "q9_ans3": "ひだりの、かいがらに、みずたまが、つきました。",
+  "q10_card": "じゅうもんめ、じょうきゅう。かごぼしばの、なやです。",
+  "q10_go": "さいごの、じゅうもんめ。どうぞ。",
+  "q10_ans1": "ひだりうえの、ブリキの、かんが、なくなりました。",
+  "q10_ans2": "ひだりの、ブラシの、えが、あおく、なりました。",
+  "q10_ans3": "みぎしたの、ロープの、はしが、なくなりました。"
+ },
+ "voice": {
+  "provider": "fish",
+  "reference_id": "63819275ce38440ea245ca988abf976e",
+  "model": "s1",
+  "speed": 0.88,
+  "credit": "音声：Fish Audio（AIで合成した音声です）"
+ },
+ "images": {
+  "model": "gemini-3-pro-image",
+  "size": "2K",
+  "aspect": "4:5",
+  "style": "A Japanese picture-book illustration in watercolor with clear dark ink outlines and CLEAR, warm, natural colors (not pale). Bright, clean background. Natural, hand-drawn, slightly rounded shapes; not geometric, not flat vector, not photorealistic. PORTRAIT-ISH composition, about 8:9. The painting fills the entire canvas edge to edge: no white border. The MAIN SUBJECT (a gentle elderly person with the main thing described) is drawn BIG and takes more than half of the picture. Around it, only a few other objects, each clearly separated with space around it, fully visible. ",
+  "keep_alt": " Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text.",
+  "keep_remove": " Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object.",
+  "batch": true,
+  "neutral_target": 1.4
+ },
+ "questions": [
+  {
+   "q": 1,
+   "scene": "冬の漁港の岸壁",
+   "level": "やさしい",
+   "go": "右の絵の違いを、3つ探してください。どうぞ。",
+   "prompt": "Scene: an elderly Japanese fisherman with a gentle smile (navy padded jacket, gray wool cap, black rubber apron) standing in the CENTER holding a big round bamboo basket full of fresh brown snow crabs in both hands, on a snowy stone quay of a small harbor; the quay, seen from slightly above, fills the lower four fifths of the picture, and the sea with a small fishing boat is only a thin strip at the top; the man, the basket and the boat together fill more than half of the picture; his feet firmly on the quay. The boat hull and sail are plain: no name, no writing, no marks, no symbols on the boat. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf or sill (or hangs from a visible hook, beam or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: about one fifteenth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No birds, no cats, no dogs, no other animals (except the crabs or fish that are part of the main subject). Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, lying on the snowy stone quay surface, well below the sea strip, never in the sky) a small wooden bucket; (upper right, lying on the snowy stone quay surface, well below the sea strip, never in the sky) a small steel thermos flask; (middle left, on the quay) a pair of small black rubber boots standing side by side; (middle right, on the quay) a small wooden crate; (lower left, on the quay) a small round wooden stool; (lower right, on the quay) a small iron anchor.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small wooden bucket at the upper left becomes bright green (same shape, same place); (b) the pair of small black rubber boots at the middle left now has only one boot (one boot removed, show plain stone, no leftover outline); (c) the small round wooden stool at the lower left becomes bright blue (same shape, same place).",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "バケツが緑",
+     "line": "左上の、バケツが、緑になりました。",
+     "box": [
+      160,
+      380,
+      400,
+      620
+     ],
+     "object_w": 224,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "ゴムぐつが片方ない",
+     "line": "左の、ゴムぐつが、片方なくなりました。",
+     "box": [
+      190,
+      960,
+      420,
+      1230
+     ],
+     "object_w": 220,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "丸い腰かけが青",
+     "line": "左下の、丸い腰かけが、青になりました。",
+     "box": [
+      150,
+      1700,
+      420,
+      1990
+     ],
+     "object_w": 240,
+     "src": "1"
+    }
+   ],
+   "answers_intro": "答えです。",
+   "retries": {},
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
+  },
+  {
+   "q": 2,
+   "scene": "かにの選別小屋",
+   "level": "初級",
+   "go": "では、2問目。どうぞ。",
+   "prompt": "Scene: an elderly Japanese woman with a gentle smile (indigo padded jacket, white head towel, white rubber boots) kneeling at the CENTER on the wooden plank floor of a harbor work hut, sorting fresh brown snow crabs from a large wooden tray into baskets; the woman, the tray and the crabs fill more than half of the picture; the hut walls and a window with a snowy harbor behind. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf or sill (or hangs from a visible hook, beam or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: about one eighteenth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No birds, no cats, no dogs, no other animals (except the crabs or fish that are part of the main subject). Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, on a wooden shelf) a small round bamboo colander basket; (upper right, on a wooden shelf) a small white enamel basin; (middle left, leaning against the wall) a small straw broom; (middle right, on the floor) a small kerosene lantern; (lower left, on the floor) a small wooden toolbox; (lower right, on the floor) a small clay teapot.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small round bamboo colander basket at the upper left becomes bright green (same shape, same place); (b) the small straw broom at the middle left is gone (show plain wall and floor, no leftover outline); (c) the small white enamel basin at the upper right becomes bright blue (same shape, same place).",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "ざるが緑",
+     "line": "左上の、ざるが、緑になりました。",
+     "box": [
+      80,
+      160,
+      340,
+      330
+     ],
+     "object_w": 230,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "ほうきがない",
+     "line": "左の、ほうきが、なくなりました。",
+     "box": [
+      80,
+      540,
+      370,
+      1410
+     ],
+     "object_w": 250,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "洗面器が青",
+     "line": "右上の、洗面器が、青になりました。",
+     "box": [
+      1500,
+      170,
+      1800,
+      330
+     ],
+     "object_w": 256,
+     "src": "1"
+    }
+   ],
+   "answers_intro": "答えです。",
+   "retries": {},
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
+  },
+  {
+   "q": 3,
+   "scene": "港のかに汁の炊き出し",
+   "level": "初級",
+   "go": "つづいて、3問目。どうぞ。",
+   "prompt": "Scene: an elderly Japanese woman with a gentle smile (green wool hat, gray scarf, navy apron over a coat) standing at the CENTER behind a wooden counter, ladling hot crab soup from a big steaming iron pot into a bowl; a small harbor with a boat is behind her; the woman, the counter and the pot fill more than half of the picture; her feet firmly on the ground. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf or sill (or hangs from a visible hook, beam or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: about one eighteenth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No birds, no cats, no dogs, no other animals (except the crabs or fish that are part of the main subject). Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, on the counter) a small enamel kettle; (upper right, on the counter) a small ladle lying flat; (middle left, on the counter) a small stack of three plain wooden bowls; (middle right, on the ground) a small wooden bench; (lower left, on the ground) a small round charcoal brazier; (lower right, on the ground) a small plain cloth sack.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small enamel kettle at the upper left becomes bright yellow (same shape, same place); (b) the small ladle at the upper right is gone (show plain counter, no leftover outline); (c) the small stack of three wooden bowls at the middle left now has only two bowls (one bowl removed).",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "やかんが黄色",
+     "line": "左上の、やかんが、黄色になりました。",
+     "box": [
+      110,
+      540,
+      420,
+      830
+     ],
+     "object_w": 270,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "おたまがない",
+     "line": "右上の、カウンターの、おたまが、なくなりました。",
+     "box": [
+      1330,
+      860,
+      1650,
+      1010
+     ],
+     "object_w": 280,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "数",
+     "label": "お椀が1つ減る",
+     "line": "左の、お椀が、3つから2つに、へりました。",
+     "box": [
+      96,
+      910,
+      350,
+      1070
+     ],
+     "object_w": 225,
+     "src": "1"
+    }
+   ],
+   "answers_intro": "答えです。",
+   "retries": {},
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
+  },
+  {
+   "q": 4,
+   "scene": "網つくろいの岸壁",
+   "level": "中級",
+   "go": "4問目です。じっくりどうぞ。",
+   "prompt": "Scene: an elderly Japanese man with a towel on his head (dark green padded jacket) sitting at the CENTER on a low wooden stool on the quay, mending a big gray fishing net spread over his knees and the ground with a wooden net needle; man and net fill more than half of the picture; the sea and a boat are far behind. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf or sill (or hangs from a visible hook, beam or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: about one twentieth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No birds, no cats, no dogs, no other animals (except the crabs or fish that are part of the main subject). Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, on the quay) a small plain clay jar; (upper right, on the quay) a small enamel mug with one handle on its right side; (middle left, on the quay) a small rolled straw mat; (middle right, on the quay) a small oil can; (lower left, on the quay) a small wooden toolbox; (lower right, on the quay) a small straw hat.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small plain clay jar at the upper left gets bold dark stripes around it (same shape); (b) the handle of the small enamel mug at the upper right is now on its left side instead (mug otherwise identical); (c) the small wooden toolbox at the lower left is gone (show plain quay, no leftover outline).",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "模様",
+     "label": "つぼに縞模様",
+     "line": "左上の、つぼに、しま模様がつきました。",
+     "box": [
+      130,
+      560,
+      350,
+      740
+     ],
+     "object_w": 190,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "向き",
+     "label": "マグカップの取っ手が反対",
+     "line": "右上の、マグカップの、取っ手が、反対になりました。",
+     "box": [
+      1480,
+      590,
+      1750,
+      725
+     ],
+     "object_w": 200,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "道具箱がない",
+     "line": "左下の、道具箱が、なくなりました。",
+     "box": [
+      96,
+      1760,
+      560,
+      2088
+     ],
+     "object_w": 430,
+     "src": "1"
+    }
+   ],
+   "answers_intro": "答えです。",
+   "retries": {},
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
+  },
+  {
+   "q": 5,
+   "scene": "かご漁の帰り",
+   "level": "中級",
+   "go": "5問目、どうぞ。",
+   "prompt": "Scene: an elderly Japanese woman with a gentle smile (yellow rain jacket, gray wool scarf) at the CENTER kneeling beside a big round crab pot (a cone-shaped wire and net trap) on the quay, mending its net; woman and crab pot fill more than half of the picture; the harbor sea is behind. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf or sill (or hangs from a visible hook, beam or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: about one twentieth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No birds, no cats, no dogs, no other animals (except the crabs or fish that are part of the main subject). Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, on a wooden box) a small plain glass bottle; (upper right, on the quay) a small ceramic cup; (middle left, on the quay) a small bundle of three round beach stones; (middle right, on the quay) a small wooden mallet with the handle pointing to the right; (lower left, on the quay) a small canvas bag; (lower right, on the quay) a small tin can.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small plain glass bottle at the upper left becomes bright blue (same shape, same place); (b) the small ceramic cup at the upper right is gone (show plain quay, no leftover outline); (c) the small canvas bag at the lower left becomes bright green (same shape, same place).",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "びんが青",
+     "line": "左上の、びんが、青になりました。",
+     "box": [
+      140,
+      320,
+      280,
+      580
+     ],
+     "object_w": 100,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "湯のみがない",
+     "line": "右上の、湯のみが、なくなりました。",
+     "box": [
+      1580,
+      810,
+      1770,
+      1050
+     ],
+     "object_w": 140,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "かばんが緑",
+     "line": "左下の、かばんが、緑になりました。",
+     "box": [
+      140,
+      1810,
+      480,
+      2070
+     ],
+     "object_w": 300,
+     "src": "1"
+    }
+   ],
+   "answers_intro": "答えです。",
+   "retries": {},
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
+  },
+  {
+   "q": 6,
+   "scene": "朝の魚市場",
+   "level": "中級",
+   "go": "ゆっくり、6問目。どうぞ。",
+   "prompt": "Scene: an elderly Japanese man with a gentle smile (white cap, navy waterproof apron, white rubber boots) standing at the CENTER of a harbor fish market hall holding a large fresh snow crab in one hand, beside wooden boxes of crushed ice and crabs; man and boxes fill more than half of the picture; his feet firmly on the concrete floor. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf or sill (or hangs from a visible hook, beam or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: about one twentieth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No birds, no cats, no dogs, no other animals (except the crabs or fish that are part of the main subject). Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, hanging from a visible hook on a wooden post) a small hand towel; (upper right, on a shelf) a small metal scoop; (middle left, on the floor) a neat stack of four small wooden fish boxes; (middle right, on the floor) a small plain bucket-shaped ice box; (lower left, on the floor) a small plastic stool; (lower right, on the floor) a small coil of garden hose.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small hand towel hanging at the upper left becomes bright green (same shape, same place); (b) the small metal scoop at the upper right is gone (show plain shelf, no leftover outline); (c) the neat stack of four small wooden fish boxes at the middle left now has only three boxes (top box removed).",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "手ぬぐいが緑",
+     "line": "左上の、手ぬぐいが、緑になりました。",
+     "box": [
+      300,
+      190,
+      480,
+      600
+     ],
+     "object_w": 150,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "スコップがない",
+     "line": "右上の、スコップが、なくなりました。",
+     "box": [
+      1500,
+      250,
+      1800,
+      350
+     ],
+     "object_w": 250,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "数",
+     "label": "木箱が1つ減る",
+     "line": "左の、木箱が、4つから3つに、へりました。",
+     "box": [
+      90,
+      740,
+      420,
+      1080
+     ],
+     "object_w": 300,
+     "src": "1"
+    }
+   ],
+   "answers_intro": "答えです。",
+   "retries": {},
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
+  },
+  {
+   "q": 7,
+   "scene": "ぶりの水揚げ",
+   "level": "中級",
+   "go": "もう少しです。7問目、どうぞ。",
+   "prompt": "Scene: an elderly Japanese fisherman with a gentle smile (navy padded jacket, gray wool cap) at the CENTER carrying a big fresh yellowtail (a large silver fish with a yellow stripe) in both arms, in front of a fishing boat moored at the quay; the stone quay seen from slightly above fills the lower three quarters of the picture and the sea is only a thin strip at the top; man, fish and boat fill more than half of the picture; his feet firmly on the quay. The boat hull and sail are plain: no name, no writing, no marks, no symbols on the boat. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf or sill (or hangs from a visible hook, beam or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: about one twentieth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No birds, no cats, no dogs, no other animals (except the crabs or fish that are part of the main subject). Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, lying on the stone quay surface, well below the sea strip) a small pair of rubber gloves lying side by side; (upper right, lying on the stone quay surface, well below the sea strip) a small stack of two plain plastic crates; (middle left, on the quay) a small hand cart with two wheels; (middle right, on the quay) a small steel bucket; (lower left, on the quay) a small wooden stool; (lower right, on the quay) a small white foam box.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small pair of rubber gloves at the upper left becomes bright yellow (same shape, same place); (b) the small hand cart at the middle left is gone (show plain quay, no leftover outline); (c) the small white foam box at the lower right becomes bright green (same shape, same place).",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "ゴム手ぶくろが黄色",
+     "line": "左上の、ゴム手ぶくろが、黄色になりました。",
+     "box": [
+      80,
+      540,
+      400,
+      820
+     ],
+     "object_w": 290,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "手押し車がない",
+     "line": "左の、手押し車が、なくなりました。",
+     "box": [
+      30,
+      990,
+      450,
+      1470
+     ],
+     "object_w": 380,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "発泡の箱が緑",
+     "line": "右下の、白い箱が、緑になりました。",
+     "box": [
+      1360,
+      1710,
+      1830,
+      2050
+     ],
+     "object_w": 430,
+     "src": "1"
+    }
+   ],
+   "answers_intro": "答えです。",
+   "retries": {},
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
+  },
+  {
+   "q": 8,
+   "scene": "漁師小屋の棚",
+   "level": "上級",
+   "go": "では、8問目。どうぞ。",
+   "prompt": "Scene: a big old wooden shelf of a fishermen hut seen from the front, filling the whole picture, with three open shelves and a small framed window of a snowy harbor in the middle; no person; the six listed objects sit on its shelves. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf or sill (or hangs from a visible hook, beam or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: VERY SMALL, about one thirty-fifth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No birds, no cats, no dogs, no other animals (except the crabs or fish that are part of the main subject). Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, on the wooden shelves) a small white mug with one handle; (upper right, on the wooden shelves) a small plain round plate standing on its rim; (middle left, on the wooden shelves) a small ceramic jar with a lid; (middle right, on the wooden shelves) a small plain bowl; (lower left, on the wooden shelves) a small wooden box with a sliding lid; (lower right, on the wooden shelves) a small clay teapot.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) a small round bright-blue flower emblem appears on the front of the small plain bowl at the middle right (bowl otherwise identical, same color); (b) the small round knob on the lid of the clay teapot at the lower right is gone (flat lid, teapot otherwise identical); (c) the lid of the small ceramic jar at the middle left becomes bright blue (jar otherwise identical).",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "模様",
+     "label": "小鉢に青い花",
+     "line": "右の、小鉢に、青い花が、つきました。",
+     "box": [
+      1330,
+      1000,
+      1540,
+      1135
+     ],
+     "object_w": 70,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "急須のつまみがない",
+     "line": "右下の、急須の、ふたのつまみが、なくなりました。",
+     "box": [
+      1290,
+      1465,
+      1450,
+      1550
+     ],
+     "object_w": 70,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "つぼのふたが青",
+     "line": "左の、つぼの、ふたが、青になりました。",
+     "box": [
+      350,
+      910,
+      530,
+      1040
+     ],
+     "object_w": 144,
+     "src": "1"
+    }
+   ],
+   "answers_intro": "答えです。",
+   "retries": {},
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
+  },
+  {
+   "q": 9,
+   "scene": "港の窓辺",
+   "level": "上級",
+   "go": "つぎは、9問目です。どうぞ。",
+   "prompt": "Scene: a big window of a harbor hut half open onto a snowy harbor with a small boat, with a wooden window sill, filling the whole picture; no person; objects are on the wooden window sill (the two upper rows) and on the wooden floor (the lower rows). Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf or sill (or hangs from a visible hook, beam or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: VERY SMALL, about one thirty-fifth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No birds, no cats, no dogs, no other animals (except the crabs or fish that are part of the main subject). Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, on the window sill) a small potted plant with five green leaves; (upper right, on the window sill) a small clear glass oil lamp; (middle left, on the window sill) a small plain seashell; (middle right, on the window sill) a small smooth gray stone; (lower left, on the floor) a small wooden box; (lower right, on the floor) a small clay teapot.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) one leaf of the small potted plant at the upper left is gone (four leaves remain, the rest unchanged); (b) the glass of the small oil lamp at the upper right becomes light blue (same shape); (c) small dark dots appear on the small seashell at the middle left (shell otherwise identical).",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "鉢の葉が1枚ない",
+     "line": "左上の、鉢植えの、葉が、1枚なくなりました。",
+     "box": [
+      230,
+      250,
+      550,
+      470
+     ],
+     "object_w": 100,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "ランプが青",
+     "line": "右上の、ランプが、青になりました。",
+     "box": [
+      1490,
+      250,
+      1670,
+      570
+     ],
+     "object_w": 140,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "模様",
+     "label": "貝がらに水玉",
+     "line": "左の、貝がらに、水玉がつきました。",
+     "box": [
+      350,
+      1370,
+      500,
+      1490
+     ],
+     "object_w": 110,
+     "src": "1"
+    }
+   ],
+   "answers_intro": "答えです。",
+   "retries": {},
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
+  },
+  {
+   "q": 10,
+   "scene": "かご干し場の納屋",
+   "level": "上級",
+   "go": "さいごの、10問目。どうぞ。",
+   "prompt": "Scene: an elderly Japanese man (gray padded jacket, wool cap) at the CENTER holding a long wooden pole with a hook upright, in front of a big old wooden boathouse with a sliding door, stacked crab pots at its side and a snow-covered roof; man and boathouse fill more than half of the picture; his feet firmly on the snow. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf or sill (or hangs from a visible hook, beam or rope): nothing floats in the air. IMPORTANT LAYOUT: put the five listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: VERY SMALL, about one thirty-fifth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No birds, no cats, no dogs, no other animals (except the crabs or fish that are part of the main subject). Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (middle left, on the snow) a small scrubbing brush with a wooden handle lying flat; (lower right, on the snow) a small coil of thin rope; (upper left, on the snow) a small tin pail; (middle right, on the snow) a small wooden crate; (lower left, on the snow) a small pair of gloves.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small tin pail at the upper left is gone (show plain snow, no leftover outline); (b) the wooden handle of the small scrubbing brush at the middle left becomes bright blue (brush otherwise identical); (c) the loose end of the small coil of thin rope at the lower right is gone (the rest of the coil unchanged).",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "なくなる",
+     "label": "ブリキ缶がない",
+     "line": "左上の、ブリキの缶が、なくなりました。",
+     "box": [
+      160,
+      1200,
+      390,
+      1430
+     ],
+     "object_w": 140,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "ブラシの柄が青",
+     "line": "左の、ブラシの、柄が、青になりました。",
+     "box": [
+      160,
+      1490,
+      470,
+      1700
+     ],
+     "object_w": 100,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "ロープの端がない",
+     "line": "右下の、ロープの、はしが、なくなりました。",
+     "box": [
+      1400,
+      1800,
+      1690,
+      2060
+     ],
+     "object_w": 100,
+     "src": "1"
+    }
+   ],
+   "answers_intro": "答えです。",
+   "retries": {},
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
+  }
+ ],
+ "thumbnail": {
+  "style": "band",
+  "type": 1,
+  "question": 1,
+  "note": "型1（thumb_band.make_type1・左右とも元の絵）"
+ },
+ "unchiku_source": "かには、「1杯、2杯」と数える。酒を注ぐ杯に形が似ているから、という説がある（諸説あり・一般的な知識。効果をうたうものではない）。"
+}
