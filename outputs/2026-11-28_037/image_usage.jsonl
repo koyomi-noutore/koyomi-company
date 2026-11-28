@@ -32,3 +32,14 @@
 {"time": "2026-11-28T06:54:33+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 754, "output_tokens": 1120, "total_tokens": 2048}
 {"time": "2026-11-28T07:30:33+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 750, "output_tokens": 1120, "total_tokens": 2124}
 {"time": "2026-11-28T07:31:58+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 761, "output_tokens": 1120, "total_tokens": 2098}
+{"time": "2026-11-28T07:49:07+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 700, "output_tokens": 1120, "total_tokens": 2042}
+{"time": "2026-11-28T07:49:35+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 701, "output_tokens": 1120, "total_tokens": 2016}
+{"time": "2026-11-28T07:50:04+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 701, "output_tokens": 1120, "total_tokens": 2024}
+{"time": "2026-11-28T07:50:33+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 701, "output_tokens": 1120, "total_tokens": 2061}
+{"time": "2026-11-28T07:51:09+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 705, "output_tokens": 1120, "total_tokens": 2036}
+{"time": "2026-11-28T07:51:42+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 704, "output_tokens": 1120, "total_tokens": 2030}
+{"time": "2026-11-28T07:52:12+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 706, "output_tokens": 1120, "total_tokens": 2039}
+{"time": "2026-11-28T07:52:48+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 739, "output_tokens": 1120, "total_tokens": 2117}
+{"time": "2026-11-28T07:53:54+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 701, "output_tokens": 1120, "total_tokens": 2028}
+{"time": "2026-11-28T08:07:08+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 709, "output_tokens": 1120, "total_tokens": 2034}
+{"time": "2026-11-28T08:07:35+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 714, "output_tokens": 1120, "total_tokens": 2048}

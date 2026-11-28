@@ -79,7 +79,7 @@
     "until": 25,
     "texts": [
      [
-      "生きているかには",
+      "生きているときは「1匹」",
       960,
       330,
       100,
@@ -91,7 +91,7 @@
       6
      ],
      [
-      "「1杯、2杯」と数えます",
+      "食べ物になると「1杯、2杯」",
       960,
       520,
       88,
@@ -251,7 +251,7 @@
    {
     "id": "u3",
     "at": 15.0,
-    "text": "生きているかには、「1杯、2杯」と数えます。",
+    "text": "生きているときは「1匹」、食べ物になると「1杯、2杯」と数えます。",
     "face": "surprise",
     "until": 25.0
    },
@@ -1802,7 +1802,7 @@
   "op2": "だんだん、むずかしくなります。",
   "u1": "ここでひとやすみ。こよみせんせいの、きせつのおはなしです。",
   "u2": "かにの、かぞえかた、はい、しっていますか？",
-  "u3": "いきているかには、いっぱい、にはい、と、かぞえます。",
+  "u3": "いきているときは、いっぴき、たべものになると、いっぱい、にはい、とかぞえます。",
   "u4": "おさけを、そそぐ、さかずきに、かたちが、にているから、という、せつがあります。",
   "e1": "これで、じゅうもん、おしまいです。",
   "e2": "さんじゅっこの、ちがい、いくつみつかりましたか。きょうのしょーごーです。",
@@ -1817,26 +1817,26 @@
   "q2_card": "にもんめ、しょきゅう。かにの、せんべつごやです。",
   "q2_go": "では、にもんめ。どうぞ。",
   "q2_ans1": "ひだりうえの、ざるが、みどりに、なりました。",
-  "q2_ans2": "ひだりの、ほうきが、なくなりました。",
+  "q2_ans2": "ひだりの、ほうきの、えが、あおく、なりました。",
   "q2_ans3": "みぎうえの、せんめんきが、あおく、なりました。",
   "q3_card": "さんもんめ、しょきゅう。みなとの、かにじるの、たきだしです。",
   "q3_go": "つづいて、さんもんめ。どうぞ。",
   "q3_ans1": "ひだりうえの、やかんが、きいろに、なりました。",
-  "q3_ans2": "みぎうえの、カウンターの、おたまが、なくなりました。",
-  "q3_ans3": "ひだりの、おわんが、さんこから、にこに、へりました。",
+  "q3_ans2": "みぎの、カウンターの、おたまが、なくなりました。",
+  "q3_ans3": "みぎしたの、ふくろが、あおく、なりました。",
   "q4_card": "よんもんめ、ちゅうきゅう。あみつくろいの、がんぺきです。",
   "q4_go": "よんもんめです。じっくりどうぞ。",
-  "q4_ans1": "ひだりうえの、つぼに、しまもようが、つきました。",
+  "q4_ans1": "ひだりの、むしろが、あおく、なりました。",
   "q4_ans2": "みぎの、マグの、とってが、はんたいに、なりました。",
   "q4_ans3": "ひだりしたの、どうぐばこが、なくなりました。",
   "q5_card": "ごもんめ、ちゅうきゅう。かごりょうの、かえりです。",
   "q5_go": "ごもんめ、どうぞ。",
   "q5_ans1": "ひだりうえの、びんが、あおく、なりました。",
-  "q5_ans2": "みぎうえの、ゆのみが、なくなりました。",
+  "q5_ans2": "みぎしたの、かんが、みずいろに、なりました。",
   "q5_ans3": "ひだりしたの、かばんが、みどりに、なりました。",
   "q6_card": "ろくもんめ、ちゅうきゅう。あさの、うおいちばです。",
   "q6_go": "ゆっくり、ろくもんめ。どうぞ。",
-  "q6_ans1": "ひだりうえの、てぬぐいが、みどりに、なりました。",
+  "q6_ans1": "ひだりうえの、てぬぐいに、みずたまが、つきました。",
   "q6_ans2": "みぎうえの、スコップが、なくなりました。",
   "q6_ans3": "ひだりの、きばこが、よっつから、みっつに、へりました。",
   "q7_card": "ななもんめ、ちゅうきゅう。ぶりの、みずあげです。",
@@ -1847,18 +1847,18 @@
   "q8_card": "はちもんめ、じょうきゅう。りょうしごやの、たなです。",
   "q8_go": "では、はちもんめ。どうぞ。",
   "q8_ans1": "みぎの、こばちに、あおい、はなが、つきました。",
-  "q8_ans2": "みぎしたの、きゅうすの、つまみが、なくなりました。",
+  "q8_ans2": "みぎしたの、きゅうすに、きんの、まるが、つきました。",
   "q8_ans3": "ひだりの、つぼの、ふたが、あおく、なりました。",
   "q9_card": "きゅうもんめ、じょうきゅう。みなとの、まどべです。",
   "q9_go": "つぎは、きゅうもんめです。どうぞ。",
-  "q9_ans1": "ひだりうえの、はちの、はが、いちまい、なくなりました。",
+  "q9_ans1": "みぎの、いしが、きいろに、なりました。",
   "q9_ans2": "みぎうえの、ランプが、あおく、なりました。",
   "q9_ans3": "ひだりの、かいがらに、みずたまが、つきました。",
   "q10_card": "じゅうもんめ、じょうきゅう。かごぼしばの、なやです。",
   "q10_go": "さいごの、じゅうもんめ。どうぞ。",
   "q10_ans1": "ひだりうえの、ブリキの、かんが、なくなりました。",
-  "q10_ans2": "ひだりの、ブラシの、えが、あおく、なりました。",
-  "q10_ans3": "みぎしたの、ロープの、はしが、なくなりました。"
+  "q10_ans2": "みぎの、かごの、やまに、あおい、ひもが、つきました。",
+  "q10_ans3": "みぎしたの、ロープの、はしに、むすびめが、できました。"
  },
  "voice": {
   "provider": "fish",
@@ -1963,17 +1963,17 @@
     },
     {
      "id": 2,
-     "type": "なくなる",
-     "label": "ほうきがない",
-     "line": "左の、ほうきが、なくなりました。",
+     "type": "色",
+     "label": "ほうきの柄が青",
+     "line": "左の、ほうきの柄が、青になりました。",
      "box": [
-      80,
+      90,
       540,
-      370,
-      1410
+      260,
+      1100
      ],
-     "object_w": 250,
-     "src": "1"
+     "object_w": 80,
+     "src": "3"
     },
     {
      "id": 3,
@@ -1998,7 +1998,11 @@
     0,
     1856,
     2088
-   ]
+   ],
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small kerosene lantern at the middle right becomes bright green (same shape, same place).",
+    "3": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the wooden handle of the small straw broom at the middle left becomes bright blue (same shape, same place; the straw head unchanged)."
+   }
   },
   {
    "q": 3,
@@ -2026,7 +2030,7 @@
      "id": 2,
      "type": "なくなる",
      "label": "おたまがない",
-     "line": "右上の、カウンターの、おたまが、なくなりました。",
+     "line": "右の、カウンターの、おたまが、なくなりました。",
      "box": [
       1330,
       860,
@@ -2038,17 +2042,17 @@
     },
     {
      "id": 3,
-     "type": "数",
-     "label": "お椀が1つ減る",
-     "line": "左の、お椀が、3つから2つに、へりました。",
+     "type": "色",
+     "label": "袋が青",
+     "line": "右下の、袋が、青になりました。",
      "box": [
-      96,
-      910,
-      350,
-      1070
+      1460,
+      1750,
+      1740,
+      2088
      ],
-     "object_w": 225,
-     "src": "1"
+     "object_w": 256,
+     "src": "2"
     }
    ],
    "answers_intro": "答えです。",
@@ -2059,7 +2063,10 @@
     0,
     1856,
     2088
-   ]
+   ],
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small plain cloth sack at the lower right becomes bright blue (same shape, same place)."
+   }
   },
   {
    "q": 4,
@@ -2071,17 +2078,17 @@
    "diffs": [
     {
      "id": 1,
-     "type": "模様",
-     "label": "つぼに縞模様",
-     "line": "左上の、つぼに、しま模様がつきました。",
+     "type": "色",
+     "label": "むしろが青",
+     "line": "左の、むしろが、青になりました。",
      "box": [
-      130,
-      560,
-      350,
-      740
+      70,
+      1010,
+      450,
+      1280
      ],
-     "object_w": 190,
-     "src": "1"
+     "object_w": 350,
+     "src": "2"
     },
     {
      "id": 2,
@@ -2120,7 +2127,10 @@
     0,
     1856,
     2088
-   ]
+   ],
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small rolled straw mat at the middle left becomes bright blue (same shape, same place)."
+   }
   },
   {
    "q": 5,
@@ -2146,17 +2156,17 @@
     },
     {
      "id": 2,
-     "type": "なくなる",
-     "label": "湯のみがない",
-     "line": "右上の、湯のみが、なくなりました。",
+     "type": "色",
+     "label": "缶が水色",
+     "line": "右下の、缶が、水色になりました。",
      "box": [
-      1580,
-      810,
-      1770,
-      1050
+      1530,
+      1840,
+      1710,
+      2060
      ],
      "object_w": 140,
-     "src": "1"
+     "src": "2"
     },
     {
      "id": 3,
@@ -2181,7 +2191,10 @@
     0,
     1856,
     2088
-   ]
+   ],
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small tin can at the lower right becomes light sky blue (same shape, same place)."
+   }
   },
   {
    "q": 6,
@@ -2193,17 +2206,17 @@
    "diffs": [
     {
      "id": 1,
-     "type": "色",
-     "label": "手ぬぐいが緑",
-     "line": "左上の、手ぬぐいが、緑になりました。",
+     "type": "模様",
+     "label": "手ぬぐいに水玉",
+     "line": "左上の、手ぬぐいに、水玉がつきました。",
      "box": [
       300,
-      190,
+      170,
       480,
       600
      ],
-     "object_w": 150,
-     "src": "1"
+     "object_w": 144,
+     "src": "2"
     },
     {
      "id": 2,
@@ -2242,7 +2255,10 @@
     0,
     1856,
     2088
-   ]
+   ],
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) small dark-blue polka dots appear on the small hand towel hanging at the upper left (towel otherwise identical)."
+   }
   },
   {
    "q": 7,
@@ -2329,17 +2345,17 @@
     },
     {
      "id": 2,
-     "type": "なくなる",
-     "label": "急須のつまみがない",
-     "line": "右下の、急須の、ふたのつまみが、なくなりました。",
+     "type": "模様",
+     "label": "急須に金の飾り",
+     "line": "右下の、急須に、金の丸い飾りが、つきました。",
      "box": [
-      1290,
-      1465,
-      1450,
-      1550
+      1310,
+      1540,
+      1460,
+      1690
      ],
      "object_w": 70,
-     "src": "1"
+     "src": "2"
     },
     {
      "id": 3,
@@ -2364,7 +2380,10 @@
     0,
     1856,
     2088
-   ]
+   ],
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) a small round golden emblem appears on the side of the clay teapot at the lower right (teapot otherwise identical)."
+   }
   },
   {
    "q": 9,
@@ -2376,17 +2395,17 @@
    "diffs": [
     {
      "id": 1,
-     "type": "なくなる",
-     "label": "鉢の葉が1枚ない",
-     "line": "左上の、鉢植えの、葉が、1枚なくなりました。",
+     "type": "色",
+     "label": "石が黄色",
+     "line": "右の、石が、黄色になりました。",
      "box": [
-      230,
-      250,
-      550,
-      470
+      1480,
+      1355,
+      1670,
+      1485
      ],
-     "object_w": 100,
-     "src": "1"
+     "object_w": 140,
+     "src": "2"
     },
     {
      "id": 2,
@@ -2425,7 +2444,10 @@
     0,
     1856,
     2088
-   ]
+   ],
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small smooth gray stone at the middle right becomes bright yellow (same shape, same place)."
+   }
   },
   {
    "q": 10,
@@ -2451,31 +2473,31 @@
     },
     {
      "id": 2,
-     "type": "色",
-     "label": "ブラシの柄が青",
-     "line": "左の、ブラシの、柄が、青になりました。",
+     "type": "模様",
+     "label": "かごの山に青いひも",
+     "line": "右の、かごの山に、青いひもが、つきました。",
      "box": [
-      160,
-      1490,
-      470,
-      1700
+      1330,
+      700,
+      1700,
+      1230
      ],
-     "object_w": 100,
-     "src": "1"
+     "object_w": 140,
+     "src": "3"
     },
     {
      "id": 3,
-     "type": "なくなる",
-     "label": "ロープの端がない",
-     "line": "右下の、ロープの、はしが、なくなりました。",
+     "type": "形",
+     "label": "ロープに結び目",
+     "line": "右下の、ロープの端に、結び目ができました。",
      "box": [
-      1400,
-      1800,
-      1690,
+      1430,
+      1970,
+      1560,
       2060
      ],
-     "object_w": 100,
-     "src": "1"
+     "object_w": 80,
+     "src": "2"
     }
    ],
    "answers_intro": "答えです。",
@@ -2486,7 +2508,11 @@
     0,
     1856,
     2088
-   ]
+   ],
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) a small bright-blue round mark appears on the front of the small wooden crate at the middle right (crate otherwise identical); (b) a small thick knot is tied at the loose end of the small coil of thin rope at the lower right (the rest of the coil unchanged).",
+    "3": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) a short bright-blue rope is tied around the top crab pot of the stack of crab pots at the right side of the picture (the pots otherwise unchanged)."
+   }
   }
  ],
  "thumbnail": {
@@ -2495,5 +2521,5 @@
   "question": 1,
   "note": "型1（thumb_band.make_type1・左右とも元の絵）"
  },
- "unchiku_source": "かには、「1杯、2杯」と数える。酒を注ぐ杯に形が似ているから、という説がある（諸説あり・一般的な知識。効果をうたうものではない）。"
+ "unchiku_source": "出典：飯田朝子『数え方の辞典』（小学館）。かには、生きているときは「匹」、食べ物としては「杯」と数える。「杯」はお酒を注ぐ杯に形が似ているから、という説がある（諸説あり。効果はうたわない）。"
 }

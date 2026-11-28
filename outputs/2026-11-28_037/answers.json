@@ -184,7 +184,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 163,
+   "outside_box_pixels_diff_gt15": 177,
    "outside_box_max_distance_px": 10.0,
    "answers": [
     {
@@ -227,39 +227,39 @@
     },
     {
      "id": 2,
-     "type": "なくなる",
-     "label": "ほうきがない",
-     "line": "左の、ほうきが、なくなりました。",
+     "type": "色",
+     "label": "ほうきの柄が青",
+     "line": "左の、ほうきの柄が、青になりました。",
      "box_px": [
-      80,
+      90,
       540,
-      370,
-      1410
+      260,
+      1100
      ],
      "box_screen": [
-      41,
+      47,
       279,
-      191,
-      729
+      134,
+      569
      ],
      "circle_a_screen": [
-      41,
+      47,
       279,
-      191,
-      729
+      134,
+      569
      ],
      "circle_b_screen": [
-      41,
+      47,
       279,
-      191,
-      729
+      134,
+      569
      ],
-     "object_w_px": 250,
-     "object_picture_width_pct": 13.47,
-     "object_screen_width_pct": 6.73,
+     "object_w_px": 80,
+     "object_picture_width_pct": 4.31,
+     "object_screen_width_pct": 2.16,
      "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "3",
      "made_by": "gemini",
      "note": ""
     },
@@ -319,7 +319,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 361,
+   "outside_box_pixels_diff_gt15": 328,
    "outside_box_max_distance_px": 9.0,
    "answers": [
     {
@@ -364,7 +364,7 @@
      "id": 2,
      "type": "なくなる",
      "label": "おたまがない",
-     "line": "右上の、カウンターの、おたまが、なくなりました。",
+     "line": "右の、カウンターの、おたまが、なくなりました。",
      "box_px": [
       1330,
       860,
@@ -400,39 +400,39 @@
     },
     {
      "id": 3,
-     "type": "数",
-     "label": "お椀が1つ減る",
-     "line": "左の、お椀が、3つから2つに、へりました。",
+     "type": "色",
+     "label": "袋が青",
+     "line": "右下の、袋が、青になりました。",
      "box_px": [
-      96,
-      910,
-      350,
-      1070
+      1460,
+      1750,
+      1740,
+      2088
      ],
      "box_screen": [
-      50,
-      471,
-      181,
-      553
+      755,
+      905,
+      900,
+      1080
      ],
      "circle_a_screen": [
-      50,
-      471,
-      181,
-      553
+      755,
+      905,
+      900,
+      1080
      ],
      "circle_b_screen": [
-      50,
-      471,
-      181,
-      553
+      755,
+      905,
+      900,
+      1080
      ],
-     "object_w_px": 225,
-     "object_picture_width_pct": 12.12,
-     "object_screen_width_pct": 6.06,
+     "object_w_px": 256,
+     "object_picture_width_pct": 13.79,
+     "object_screen_width_pct": 6.9,
      "in_level_range": false,
-     "in_safe_y": true,
-     "edit_version": "1",
+     "in_safe_y": false,
+     "edit_version": "2",
      "made_by": "gemini",
      "note": ""
     }
@@ -454,44 +454,44 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 161,
+   "outside_box_pixels_diff_gt15": 155,
    "outside_box_max_distance_px": 10.0,
    "answers": [
     {
      "id": 1,
-     "type": "模様",
-     "label": "つぼに縞模様",
-     "line": "左上の、つぼに、しま模様がつきました。",
+     "type": "色",
+     "label": "むしろが青",
+     "line": "左の、むしろが、青になりました。",
      "box_px": [
-      130,
-      560,
-      350,
-      740
+      70,
+      1010,
+      450,
+      1280
      ],
      "box_screen": [
-      67,
-      290,
-      181,
-      383
+      36,
+      522,
+      233,
+      662
      ],
      "circle_a_screen": [
-      67,
-      290,
-      181,
-      383
+      36,
+      522,
+      233,
+      662
      ],
      "circle_b_screen": [
-      67,
-      290,
-      181,
-      383
+      36,
+      522,
+      233,
+      662
      ],
-     "object_w_px": 190,
-     "object_picture_width_pct": 10.24,
-     "object_screen_width_pct": 5.12,
+     "object_w_px": 350,
+     "object_picture_width_pct": 18.86,
+     "object_screen_width_pct": 9.43,
      "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "2",
      "made_by": "gemini",
      "note": ""
     },
@@ -589,8 +589,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 305,
-   "outside_box_max_distance_px": 10.0,
+   "outside_box_pixels_diff_gt15": 400,
+   "outside_box_max_distance_px": 11.0,
    "answers": [
     {
      "id": 1,
@@ -632,39 +632,39 @@
     },
     {
      "id": 2,
-     "type": "なくなる",
-     "label": "湯のみがない",
-     "line": "右上の、湯のみが、なくなりました。",
+     "type": "色",
+     "label": "缶が水色",
+     "line": "右下の、缶が、水色になりました。",
      "box_px": [
-      1580,
-      810,
-      1770,
-      1050
+      1530,
+      1840,
+      1710,
+      2060
      ],
      "box_screen": [
-      817,
-      419,
-      916,
-      543
+      791,
+      952,
+      884,
+      1066
      ],
      "circle_a_screen": [
-      817,
-      419,
-      916,
-      543
+      791,
+      952,
+      884,
+      1066
      ],
      "circle_b_screen": [
-      817,
-      419,
-      916,
-      543
+      791,
+      952,
+      884,
+      1066
      ],
      "object_w_px": 140,
      "object_picture_width_pct": 7.54,
      "object_screen_width_pct": 3.77,
      "in_level_range": false,
-     "in_safe_y": true,
-     "edit_version": "1",
+     "in_safe_y": false,
+     "edit_version": "2",
      "made_by": "gemini",
      "note": ""
     },
@@ -724,44 +724,44 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 177,
+   "outside_box_pixels_diff_gt15": 190,
    "outside_box_max_distance_px": 9.0,
    "answers": [
     {
      "id": 1,
-     "type": "色",
-     "label": "手ぬぐいが緑",
-     "line": "左上の、手ぬぐいが、緑になりました。",
+     "type": "模様",
+     "label": "手ぬぐいに水玉",
+     "line": "左上の、手ぬぐいに、水玉がつきました。",
      "box_px": [
       300,
-      190,
+      170,
       480,
       600
      ],
      "box_screen": [
       155,
-      98,
+      88,
       248,
       310
      ],
      "circle_a_screen": [
       155,
-      98,
+      88,
       248,
       310
      ],
      "circle_b_screen": [
       155,
-      98,
+      88,
       248,
       310
      ],
-     "object_w_px": 150,
-     "object_picture_width_pct": 8.08,
-     "object_screen_width_pct": 4.04,
-     "in_level_range": true,
+     "object_w_px": 144,
+     "object_picture_width_pct": 7.76,
+     "object_screen_width_pct": 3.88,
+     "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "2",
      "made_by": "gemini",
      "note": ""
     },
@@ -994,8 +994,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 293,
-   "outside_box_max_distance_px": 7.0,
+   "outside_box_pixels_diff_gt15": 304,
+   "outside_box_max_distance_px": 9.0,
    "answers": [
     {
      "id": 1,
@@ -1037,39 +1037,39 @@
     },
     {
      "id": 2,
-     "type": "なくなる",
-     "label": "急須のつまみがない",
-     "line": "右下の、急須の、ふたのつまみが、なくなりました。",
+     "type": "模様",
+     "label": "急須に金の飾り",
+     "line": "右下の、急須に、金の丸い飾りが、つきました。",
      "box_px": [
-      1290,
-      1465,
-      1450,
-      1550
+      1310,
+      1540,
+      1460,
+      1690
      ],
      "box_screen": [
-      667,
-      758,
-      750,
-      802
+      678,
+      797,
+      755,
+      874
      ],
      "circle_a_screen": [
-      667,
-      758,
-      750,
-      802
+      678,
+      797,
+      755,
+      874
      ],
      "circle_b_screen": [
-      667,
-      758,
-      750,
-      802
+      678,
+      797,
+      755,
+      874
      ],
      "object_w_px": 70,
      "object_picture_width_pct": 3.77,
      "object_screen_width_pct": 1.89,
      "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "2",
      "made_by": "gemini",
      "note": ""
     },
@@ -1129,44 +1129,44 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 183,
+   "outside_box_pixels_diff_gt15": 127,
    "outside_box_max_distance_px": 8.0,
    "answers": [
     {
      "id": 1,
-     "type": "なくなる",
-     "label": "鉢の葉が1枚ない",
-     "line": "左上の、鉢植えの、葉が、1枚なくなりました。",
+     "type": "色",
+     "label": "石が黄色",
+     "line": "右の、石が、黄色になりました。",
      "box_px": [
-      230,
-      250,
-      550,
-      470
+      1480,
+      1355,
+      1670,
+      1485
      ],
      "box_screen": [
-      119,
-      129,
-      284,
-      243
+      766,
+      701,
+      864,
+      768
      ],
      "circle_a_screen": [
-      119,
-      129,
-      284,
-      243
+      766,
+      701,
+      864,
+      768
      ],
      "circle_b_screen": [
-      119,
-      129,
-      284,
-      243
+      766,
+      701,
+      864,
+      768
      ],
-     "object_w_px": 100,
-     "object_picture_width_pct": 5.39,
-     "object_screen_width_pct": 2.69,
-     "in_level_range": false,
+     "object_w_px": 140,
+     "object_picture_width_pct": 7.54,
+     "object_screen_width_pct": 3.77,
+     "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "2",
      "made_by": "gemini",
      "note": ""
     },
@@ -1264,8 +1264,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 4,
-   "outside_box_max_distance_px": 2.0,
+   "outside_box_pixels_diff_gt15": 775,
+   "outside_box_max_distance_px": 12.0,
    "answers": [
     {
      "id": 1,
@@ -1307,77 +1307,77 @@
     },
     {
      "id": 2,
-     "type": "色",
-     "label": "ブラシの柄が青",
-     "line": "左の、ブラシの、柄が、青になりました。",
+     "type": "模様",
+     "label": "かごの山に青いひも",
+     "line": "右の、かごの山に、青いひもが、つきました。",
      "box_px": [
-      160,
-      1490,
-      470,
-      1700
+      1330,
+      700,
+      1700,
+      1230
      ],
      "box_screen": [
-      83,
-      771,
-      243,
-      879
+      688,
+      362,
+      879,
+      636
      ],
      "circle_a_screen": [
-      83,
-      771,
-      243,
-      879
+      688,
+      362,
+      879,
+      636
      ],
      "circle_b_screen": [
-      83,
-      771,
-      243,
-      879
+      688,
+      362,
+      879,
+      636
      ],
-     "object_w_px": 100,
-     "object_picture_width_pct": 5.39,
-     "object_screen_width_pct": 2.69,
-     "in_level_range": false,
+     "object_w_px": 140,
+     "object_picture_width_pct": 7.54,
+     "object_screen_width_pct": 3.77,
+     "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "3",
      "made_by": "gemini",
      "note": ""
     },
     {
      "id": 3,
-     "type": "なくなる",
-     "label": "ロープの端がない",
-     "line": "右下の、ロープの、はしが、なくなりました。",
+     "type": "形",
+     "label": "ロープに結び目",
+     "line": "右下の、ロープの端に、結び目ができました。",
      "box_px": [
-      1400,
-      1800,
-      1690,
+      1430,
+      1970,
+      1560,
       2060
      ],
      "box_screen": [
-      724,
-      931,
-      874,
+      740,
+      1019,
+      807,
       1066
      ],
      "circle_a_screen": [
-      724,
-      931,
-      874,
+      740,
+      1019,
+      807,
       1066
      ],
      "circle_b_screen": [
-      724,
-      931,
-      874,
+      740,
+      1019,
+      807,
       1066
      ],
-     "object_w_px": 100,
-     "object_picture_width_pct": 5.39,
-     "object_screen_width_pct": 2.69,
+     "object_w_px": 80,
+     "object_picture_width_pct": 4.31,
+     "object_screen_width_pct": 2.16,
      "in_level_range": false,
      "in_safe_y": false,
-     "edit_version": "1",
+     "edit_version": "2",
      "made_by": "gemini",
      "note": ""
     }
