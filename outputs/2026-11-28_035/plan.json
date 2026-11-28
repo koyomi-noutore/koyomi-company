@@ -344,13 +344,13 @@
   "u3": "おゆを、わかす、ひの、けむりを、たかいところから、にがすための、ものです。",
   "u4": "とおくからも、よくみえて、まちの、めじるしにも、なってきました。",
   "q1_ans1": "ひだりうえの、とうろうが、まるく、なりました。",
-  "q1_ans2": "みぎの、ぼんさいが、なくなりました。",
-  "q1_ans3": "ひだりしたの、ながぐつが、きいろく、なりました。",
-  "q2_ans1": "ひだりうえの、スリッパが、みどりに、なりました。",
+  "q1_ans2": "みぎうえの、シャベルの、えが、みじかく、なりました。",
+  "q1_ans3": "みぎしたの、わらたばが、ひとつ、ふえました。",
+  "q2_ans1": "みぎうえの、せんたくいれが、きいろく、なりました。",
   "q2_ans2": "みぎの、タオルが、いちまい、ふえました。",
-  "q2_ans3": "ひだりしたの、こしかけが、しかくく、なりました。",
+  "q2_ans3": "ひだりの、つぼが、ほそながく、なりました。",
   "q3_ans1": "みぎうえの、かびんが、みずいろに、なりました。",
-  "q3_ans2": "ひだりの、ぎゅうにゅうびんが、なくなりました。",
+  "q3_ans2": "ひだりうえの、スタンドが、さんかくに、なりました。",
   "q3_ans3": "みぎしたの、まほうびんが、ふとく、なりました。",
   "q4_ans1": "ひだりの、ラジオが、なくなりました。",
   "q4_ans2": "みぎうえの、ひばちが、むらさきに、なりました。",
@@ -360,15 +360,15 @@
   "q5_ans3": "ひだりしたの、かごが、ほそながく、なりました。",
   "q6_ans1": "ひだりうえの、ぼうしが、あおく、なりました。",
   "q6_ans2": "ひだりの、いしの、はちに、ひしゃくが、ふえました。",
-  "q6_ans3": "みぎしたの、たるが、ちいさく、なりました。",
+  "q6_ans3": "ひだりしたの、ベンチが、みどりに、なりました。",
   "q7_ans1": "ひだりうえの、マグカップが、くろく、なりました。",
-  "q7_ans2": "ひだりの、ぞうりの、むきが、はんたいに、なりました。",
+  "q7_ans2": "みぎの、ぬのに、しまもようが、つきました。",
   "q7_ans3": "ひだりしたの、はこが、なくなりました。",
   "q8_ans1": "みぎうえの、ゆたんぽが、ピンクに、なりました。",
-  "q8_ans2": "ひだりの、そろばんの、むきが、かわりました。",
-  "q8_ans3": "ひだりしたの、とけいが、なくなりました。",
+  "q8_ans2": "ひだりうえの、ほんが、いっさつ、ふえました。",
+  "q8_ans3": "ひだりしたの、とけいが、きんいろに、なりました。",
   "q9_ans1": "ひだりうえの、まつかさが、はいいろに、なりました。",
-  "q9_ans2": "ひだりの、ちゃわんに、あおい、せんが、つきました。",
+  "q9_ans2": "ひだりの、ちゃわんに、あおい、もようが、つきました。",
   "q9_ans3": "みぎうえの、どんぐりが、ひとつ、へりました。",
   "q10_ans1": "ひだりうえの、ぼたんが、ふたつあなに、なりました。",
   "q10_ans2": "みぎうえの、かぎの、むきが、はんたいに、なりました。",
@@ -406,36 +406,39 @@
     },
     {
      "id": 2,
-     "type": "なくなる",
-     "label": "盆栽がない",
-     "line": "右の盆栽が、なくなりました。",
+     "type": "形",
+     "label": "シャベルの柄が短い",
+     "line": "右上のシャベルの柄が、短くなりました。",
      "box": [
-      1448,
-      848,
-      1768,
-      1361
+      1465,
+      181,
+      1801,
+      618
      ],
-     "object_w": 250,
-     "src": "1"
+     "object_w": 266,
+     "src": "2"
     },
     {
      "id": 3,
-     "type": "色",
-     "label": "長靴が黄色",
-     "line": "左下の長ぐつが、黄色になりました。",
+     "type": "増える",
+     "label": "わらたばが増える",
+     "line": "右下のわらたばが、1つ増えました。",
      "box": [
-      91,
-      1675,
-      418,
-      1978
+      1408,
+      1698,
+      1768,
+      2051
      ],
-     "object_w": 256,
-     "src": "1"
+     "object_w": 290,
+     "src": "2",
+     "context": "雪の上に置いたわらたば。2つ並んでいても自然（同じ置き方）"
     }
    ],
    "answers_intro": "答えです。",
    "retries": {},
-   "edit_prompts": {},
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same watercolor style, outlines and colors. Every change must be clearly visible. Do not move any object. Changes: (a) the handle of the small snow shovel lying at the upper right becomes much shorter (same shovel blade, same place); (b) a second small tied bundle of rice straw now lies on the snow right next to the bundle at the lower right (same size, nothing else changes);"
+   },
    "hint_diff": null,
    "content_box": [
     0,
@@ -455,16 +458,16 @@
     {
      "id": 1,
      "type": "色",
-     "label": "スリッパが緑",
-     "line": "左上のスリッパが、緑になりました。",
+     "label": "洗たく入れが黄色",
+     "line": "右上の洗たく入れが、黄色になりました。",
      "box": [
-      121,
-      515,
-      521,
-      785
+      1338,
+      288,
+      1701,
+      691
      ],
-     "object_w": 330,
-     "src": "1"
+     "object_w": 293,
+     "src": "2"
     },
     {
      "id": 2,
@@ -484,21 +487,23 @@
     {
      "id": 3,
      "type": "形",
-     "label": "腰かけが四角い",
-     "line": "左下の丸い腰かけが、四角くなりました。",
+     "label": "つぼが細長い",
+     "line": "左のつぼが、細長くなりました。",
      "box": [
-      85,
-      1505,
-      431,
-      2068
+      151,
+      975,
+      448,
+      1301
      ],
-     "object_w": 276,
-     "src": "1"
+     "object_w": 226,
+     "src": "2"
     }
    ],
    "answers_intro": "答えです。",
    "retries": {},
-   "edit_prompts": {},
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same watercolor style, outlines and colors. Every change must be clearly visible. Do not move any object. Changes: (a) the small round wicker laundry hamper with a lid at the upper right becomes bright yellow (same shape, same place); (b) the small round ceramic jar with a lid at the middle left becomes tall and narrow (same color, same place);"
+   },
    "hint_diff": null,
    "content_box": [
     0,
@@ -531,17 +536,17 @@
     },
     {
      "id": 2,
-     "type": "なくなる",
-     "label": "牛乳びんがない",
-     "line": "左の牛乳びんが、なくなりました。",
+     "type": "形",
+     "label": "スタンドが三角",
+     "line": "左上のスタンドが、三角になりました。",
      "box": [
-      198,
-      1015,
-      401,
-      1318
+      208,
+      341,
+      435,
+      675
      ],
-     "object_w": 133,
-     "src": "1"
+     "object_w": 156,
+     "src": "2"
     },
     {
      "id": 3,
@@ -560,7 +565,9 @@
    ],
    "answers_intro": "答えです。",
    "retries": {},
-   "edit_prompts": {},
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same watercolor style, outlines and colors. Every change must be clearly visible. Do not move any object. Changes: (a) the cylinder-shaped plain cream lampshade of the small floor lamp at the upper left becomes triangular, like a cone (same lamp, same place);"
+   },
    "hint_diff": null,
    "content_box": [
     0,
@@ -732,22 +739,24 @@
     },
     {
      "id": 3,
-     "type": "形",
-     "label": "たるが小さい",
-     "line": "右下のたるが、小さくなりました。",
+     "type": "色",
+     "label": "ベンチが緑",
+     "line": "左下のベンチが、緑になりました。",
      "box": [
-      1418,
+      75,
       1565,
-      1728,
-      1918
+      501,
+      1835
      ],
-     "object_w": 240,
-     "src": "1"
+     "object_w": 356,
+     "src": "2"
     }
    ],
    "answers_intro": "答えです。",
    "retries": {},
-   "edit_prompts": {},
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same watercolor style, outlines and colors. Every change must be clearly visible. Do not move any object. Changes: (a) the small plain wooden bench without a back at the lower left becomes bright green (same shape, same place);"
+   },
    "hint_diff": null,
    "content_box": [
     0,
@@ -780,17 +789,17 @@
     },
     {
      "id": 2,
-     "type": "向き",
-     "label": "ぞうりの向きが反対",
-     "line": "左のぞうりの向きが、反対になりました。",
+     "type": "模様",
+     "label": "布がしま模様",
+     "line": "右の布に、しま模様がつきました。",
      "box": [
-      48,
-      1005,
-      441,
-      1295
+      1421,
+      991,
+      1818,
+      1268
      ],
-     "object_w": 323,
-     "src": "1"
+     "object_w": 326,
+     "src": "2"
     },
     {
      "id": 3,
@@ -809,7 +818,9 @@
    ],
    "answers_intro": "答えです。",
    "retries": {},
-   "edit_prompts": {},
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same watercolor style, outlines and colors. Every change must be clearly visible. Do not move any object. Changes: (a) the small folded plain grey cloth at the right in the middle now has horizontal dark-blue stripes (same cloth, same place);"
+   },
    "hint_diff": null,
    "content_box": [
     0,
@@ -842,23 +853,24 @@
     },
     {
      "id": 2,
-     "type": "向き",
-     "label": "そろばんの向きが反対",
-     "line": "左のそろばんの向きが、変わりました。",
+     "type": "増える",
+     "label": "本が増える",
+     "line": "左上の本が、1冊増えました。",
      "box": [
-      5,
-      921,
-      355,
-      1291
+      121,
+      375,
+      458,
+      695
      ],
-     "object_w": 280,
-     "src": "1"
+     "object_w": 266,
+     "src": "2",
+     "context": "たたみに積んだ本。3冊でも4冊でも自然（同じ積み方）"
     },
     {
      "id": 3,
-     "type": "なくなる",
-     "label": "時計がない",
-     "line": "左下の時計が、なくなりました。",
+     "type": "色",
+     "label": "時計が金色",
+     "line": "左下の時計が、金色になりました。",
      "box": [
       201,
       1681,
@@ -866,12 +878,14 @@
       2018
      ],
      "object_w": 210,
-     "src": "1"
+     "src": "2"
     }
    ],
    "answers_intro": "答えです。",
    "retries": {},
-   "edit_prompts": {},
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same watercolor style, outlines and colors. Every change must be clearly visible. Do not move any object. Changes: (a) the small stack of three books at the upper left now has four books (one more book added on top, same place); (b) the small round alarm clock at the lower left becomes gold colored (same shape, same place);"
+   },
    "hint_diff": null,
    "content_box": [
     0,
@@ -905,8 +919,8 @@
     {
      "id": 2,
      "type": "模様",
-     "label": "茶わんが線つき",
-     "line": "左の茶わんに、青い線がつきました。",
+     "label": "茶わんが青い模様",
+     "line": "左の茶わんに、青い模様がつきました。",
      "box": [
       95,
       955,

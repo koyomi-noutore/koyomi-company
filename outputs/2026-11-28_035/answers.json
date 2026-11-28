@@ -49,7 +49,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 1174,
+   "outside_box_pixels_diff_gt15": 2179,
    "outside_box_max_distance_px": 12.0,
    "answers": [
     {
@@ -92,77 +92,77 @@
     },
     {
      "id": 2,
-     "type": "なくなる",
-     "label": "盆栽がない",
-     "line": "右の盆栽が、なくなりました。",
+     "type": "形",
+     "label": "シャベルの柄が短い",
+     "line": "右上のシャベルの柄が、短くなりました。",
      "box_px": [
-      1448,
-      848,
-      1768,
-      1361
+      1465,
+      181,
+      1801,
+      618
      ],
      "box_screen": [
-      749,
-      439,
-      914,
-      704
+      758,
+      94,
+      932,
+      320
      ],
      "circle_a_screen": [
-      749,
-      439,
-      914,
-      704
+      758,
+      94,
+      932,
+      320
      ],
      "circle_b_screen": [
-      749,
-      439,
-      914,
-      704
+      758,
+      94,
+      932,
+      320
      ],
-     "object_w_px": 250,
-     "object_picture_width_pct": 13.47,
-     "object_screen_width_pct": 6.73,
+     "object_w_px": 266,
+     "object_picture_width_pct": 14.33,
+     "object_screen_width_pct": 7.17,
      "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "2",
      "made_by": "gemini",
      "note": ""
     },
     {
      "id": 3,
-     "type": "色",
-     "label": "長靴が黄色",
-     "line": "左下の長ぐつが、黄色になりました。",
+     "type": "増える",
+     "label": "わらたばが増える",
+     "line": "右下のわらたばが、1つ増えました。",
      "box_px": [
-      91,
-      1675,
-      418,
-      1978
+      1408,
+      1698,
+      1768,
+      2051
      ],
      "box_screen": [
-      47,
-      866,
-      216,
-      1023
+      728,
+      878,
+      914,
+      1061
      ],
      "circle_a_screen": [
-      47,
-      866,
-      216,
-      1023
+      728,
+      878,
+      914,
+      1061
      ],
      "circle_b_screen": [
-      47,
-      866,
-      216,
-      1023
+      728,
+      878,
+      914,
+      1061
      ],
-     "object_w_px": 256,
-     "object_picture_width_pct": 13.79,
-     "object_screen_width_pct": 6.9,
+     "object_w_px": 290,
+     "object_picture_width_pct": 15.62,
+     "object_screen_width_pct": 7.81,
      "in_level_range": true,
      "in_safe_y": false,
-     "edit_version": "1",
+     "edit_version": "2",
      "made_by": "gemini",
      "note": ""
     }
@@ -184,44 +184,44 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 2790,
+   "outside_box_pixels_diff_gt15": 1709,
    "outside_box_max_distance_px": 12.0,
    "answers": [
     {
      "id": 1,
      "type": "色",
-     "label": "スリッパが緑",
-     "line": "左上のスリッパが、緑になりました。",
+     "label": "洗濯かごが黄色",
+     "line": "右上の洗濯かごが、黄色になりました。",
      "box_px": [
-      121,
-      515,
-      521,
-      785
+      1338,
+      288,
+      1701,
+      691
      ],
      "box_screen": [
-      63,
-      266,
-      269,
-      406
+      692,
+      149,
+      880,
+      357
      ],
      "circle_a_screen": [
-      63,
-      266,
-      269,
-      406
+      692,
+      149,
+      880,
+      357
      ],
      "circle_b_screen": [
-      63,
-      266,
-      269,
-      406
+      692,
+      149,
+      880,
+      357
      ],
-     "object_w_px": 330,
-     "object_picture_width_pct": 17.78,
-     "object_screen_width_pct": 8.89,
-     "in_level_range": false,
+     "object_w_px": 293,
+     "object_picture_width_pct": 15.79,
+     "object_screen_width_pct": 7.89,
+     "in_level_range": true,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "2",
      "made_by": "gemini",
      "note": ""
     },
@@ -266,38 +266,38 @@
     {
      "id": 3,
      "type": "形",
-     "label": "腰かけが四角い",
-     "line": "左下の丸い腰かけが、四角くなりました。",
+     "label": "つぼが細長い",
+     "line": "左のつぼが、細長くなりました。",
      "box_px": [
-      85,
-      1505,
-      431,
-      2068
+      151,
+      975,
+      448,
+      1301
      ],
      "box_screen": [
-      44,
-      778,
-      223,
-      1070
+      78,
+      504,
+      232,
+      673
      ],
      "circle_a_screen": [
-      44,
-      778,
-      223,
-      1070
+      78,
+      504,
+      232,
+      673
      ],
      "circle_b_screen": [
-      44,
-      778,
-      223,
-      1070
+      78,
+      504,
+      232,
+      673
      ],
-     "object_w_px": 276,
-     "object_picture_width_pct": 14.87,
-     "object_screen_width_pct": 7.44,
+     "object_w_px": 226,
+     "object_picture_width_pct": 12.18,
+     "object_screen_width_pct": 6.09,
      "in_level_range": true,
-     "in_safe_y": false,
-     "edit_version": "1",
+     "in_safe_y": true,
+     "edit_version": "2",
      "made_by": "gemini",
      "note": ""
     }
@@ -319,8 +319,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 79,
-   "outside_box_max_distance_px": 7.0,
+   "outside_box_pixels_diff_gt15": 306,
+   "outside_box_max_distance_px": 12.0,
    "answers": [
     {
      "id": 1,
@@ -362,39 +362,39 @@
     },
     {
      "id": 2,
-     "type": "なくなる",
-     "label": "牛乳びんがない",
-     "line": "左の牛乳びんが、なくなりました。",
+     "type": "形",
+     "label": "スタンドの笠が三角",
+     "line": "左上のスタンドの笠が、三角になりました。",
      "box_px": [
-      198,
-      1015,
-      401,
-      1318
+      208,
+      341,
+      435,
+      675
      ],
      "box_screen": [
-      102,
-      525,
-      207,
-      682
+      108,
+      176,
+      225,
+      349
      ],
      "circle_a_screen": [
-      102,
-      525,
-      207,
-      682
+      108,
+      176,
+      225,
+      349
      ],
      "circle_b_screen": [
-      102,
-      525,
-      207,
-      682
+      108,
+      176,
+      225,
+      349
      ],
-     "object_w_px": 133,
-     "object_picture_width_pct": 7.17,
-     "object_screen_width_pct": 3.58,
+     "object_w_px": 156,
+     "object_picture_width_pct": 8.41,
+     "object_screen_width_pct": 4.2,
      "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "2",
      "made_by": "gemini",
      "note": ""
     },
@@ -724,7 +724,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 105,
+   "outside_box_pixels_diff_gt15": 113,
    "outside_box_max_distance_px": 10.0,
    "answers": [
     {
@@ -805,39 +805,39 @@
     },
     {
      "id": 3,
-     "type": "形",
-     "label": "たるが小さい",
-     "line": "右下のたるが、小さくなりました。",
+     "type": "色",
+     "label": "ベンチが緑",
+     "line": "左下のベンチが、緑になりました。",
      "box_px": [
-      1418,
+      75,
       1565,
-      1728,
-      1918
+      501,
+      1835
      ],
      "box_screen": [
-      733,
+      39,
       809,
-      894,
-      992
+      259,
+      949
      ],
      "circle_a_screen": [
-      733,
+      39,
       809,
-      894,
-      992
+      259,
+      949
      ],
      "circle_b_screen": [
-      733,
+      39,
       809,
-      894,
-      992
+      259,
+      949
      ],
-     "object_w_px": 240,
-     "object_picture_width_pct": 12.93,
-     "object_screen_width_pct": 6.47,
+     "object_w_px": 356,
+     "object_picture_width_pct": 19.18,
+     "object_screen_width_pct": 9.59,
      "in_level_range": false,
      "in_safe_y": false,
-     "edit_version": "1",
+     "edit_version": "2",
      "made_by": "gemini",
      "note": ""
     }
@@ -845,7 +845,7 @@
   },
   {
    "q": 7,
-   "scene": "脱衣所のロッカー",
+   "scene": "着がえの部屋のロッカー",
    "level": "中級",
    "hint_diff": null,
    "image_size": [
@@ -859,7 +859,7 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 320,
+   "outside_box_pixels_diff_gt15": 345,
    "outside_box_max_distance_px": 8.0,
    "answers": [
     {
@@ -902,39 +902,39 @@
     },
     {
      "id": 2,
-     "type": "向き",
-     "label": "ぞうりの向きが反対",
-     "line": "左のぞうりの向きが、反対になりました。",
+     "type": "模様",
+     "label": "布がしま模様",
+     "line": "右の布に、しま模様がつきました。",
      "box_px": [
-      48,
-      1005,
-      441,
-      1295
+      1421,
+      991,
+      1818,
+      1268
      ],
      "box_screen": [
-      25,
-      520,
-      228,
-      670
+      735,
+      513,
+      940,
+      656
      ],
      "circle_a_screen": [
-      25,
-      520,
-      228,
-      670
+      735,
+      513,
+      940,
+      656
      ],
      "circle_b_screen": [
-      25,
-      520,
-      228,
-      670
+      735,
+      513,
+      940,
+      656
      ],
-     "object_w_px": 323,
-     "object_picture_width_pct": 17.4,
-     "object_screen_width_pct": 8.7,
+     "object_w_px": 326,
+     "object_picture_width_pct": 17.56,
+     "object_screen_width_pct": 8.78,
      "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "2",
      "made_by": "gemini",
      "note": ""
     },
@@ -994,8 +994,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 87,
-   "outside_box_max_distance_px": 7.0,
+   "outside_box_pixels_diff_gt15": 423,
+   "outside_box_max_distance_px": 11.0,
    "answers": [
     {
      "id": 1,
@@ -1037,47 +1037,47 @@
     },
     {
      "id": 2,
-     "type": "向き",
-     "label": "そろばんの向きが反対",
-     "line": "左のそろばんの向きが、変わりました。",
+     "type": "増える",
+     "label": "本が増える",
+     "line": "左上の本が、1冊増えました。",
      "box_px": [
-      5,
-      921,
-      355,
-      1291
+      121,
+      375,
+      458,
+      695
      ],
      "box_screen": [
-      3,
-      476,
-      184,
-      668
+      63,
+      194,
+      237,
+      359
      ],
      "circle_a_screen": [
-      3,
-      476,
-      184,
-      668
+      63,
+      194,
+      237,
+      359
      ],
      "circle_b_screen": [
-      3,
-      476,
-      184,
-      668
+      63,
+      194,
+      237,
+      359
      ],
-     "object_w_px": 280,
-     "object_picture_width_pct": 15.09,
-     "object_screen_width_pct": 7.54,
+     "object_w_px": 266,
+     "object_picture_width_pct": 14.33,
+     "object_screen_width_pct": 7.17,
      "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "1",
+     "edit_version": "2",
      "made_by": "gemini",
      "note": ""
     },
     {
      "id": 3,
-     "type": "なくなる",
-     "label": "時計がない",
-     "line": "左下の時計が、なくなりました。",
+     "type": "色",
+     "label": "時計が金色",
+     "line": "左下の時計が、金色になりました。",
      "box_px": [
       201,
       1681,
@@ -1107,7 +1107,7 @@
      "object_screen_width_pct": 5.66,
      "in_level_range": false,
      "in_safe_y": false,
-     "edit_version": "1",
+     "edit_version": "2",
      "made_by": "gemini",
      "note": ""
     }
@@ -1173,8 +1173,8 @@
     {
      "id": 2,
      "type": "模様",
-     "label": "茶わんが線つき",
-     "line": "左の茶わんに、青い線がつきました。",
+     "label": "茶わんが青い模様",
+     "line": "左の茶わんに、青い模様がつきました。",
      "box_px": [
       95,
       955,
