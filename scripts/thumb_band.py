@@ -68,6 +68,10 @@ def make(out, ep, q, band, top_txt, bottom=("間違いさがし",)):
     if bw > 1080:
         f2 = ImageFont.truetype(F, int(158 * 1080 / bw)); bw = sum(d.textlength(s, font=f2) for s in bottom)
     x = (1280 - bw) / 2 - 40 if bw > 900 else (1280 - bw) / 2      # 右下の動画の長さを避けて少し左へ
+    if len(bottom) == 1:   # 型1（2026-11-28）：下の段は「間違いさがし」だけ。右25%（x>960）の外に収める
+        if bw > 880:
+            f2 = ImageFont.truetype(F, int(158 * 880 / bw)); bw = d.textlength(bottom[0], font=f2)
+        x = (960 - bw) / 2
     for i, s in enumerate(bottom):
         c = Y if (len(bottom) > 1 and i == 0) else WT
         d.text((x, 618), s, font=f2, fill=c, anchor="lm", stroke_width=14, stroke_fill=K); x += d.textlength(s, font=f2)
