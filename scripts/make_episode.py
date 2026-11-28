@@ -36,7 +36,7 @@
   log-time <工程> <秒>        スクリプトの外の工程（監査など）の時間を outputs/<回>/timing.json に足す
   short-upload                ショートを非公開でアップロード（<回>/short/audit_passed と、長尺の <回>/upload.json が必要）
 
-サムネの確認（2026-11-24 CEO厳守）：scripts/thumb_same_check.py（左右が同じ絵か）を、thumbnail の直後と、upload・retitle・short-upload の前に自動で行う。
+サムネの確認（2026-11-24 CEO厳守・2026-11-28 右下の角を追加）：scripts/thumb_same_check.py（左右が同じ絵か）と scripts/thumb_badge_check.py（右下の角に文字がないか）を、thumbnail の直後と、upload・retitle・short-upload の前に自動で行う。
   対象は <回>/ab/thumb_*.jpg と <回>/thumbnail.jpg。1枚でも不合格なら止まる（終了コード1）。サムネが1枚もなくても止まる。
   ショート自身のサムネは0:00の画面（左右に並べた絵ではない）なので確認の対象外。かわりに、short-upload では元の長尺のサムネが全部合格でなければ上げない。
   既存の在庫（第10〜19回など）は作り直さない（CEO判断）。それらの回で止まっても作り直さず、報告する。
@@ -168,6 +168,7 @@ def thumb_guard(ep, what="サムネ", files=None, need=True):
     サムネを作った直後と、アップロードの前（upload・retitle・short-upload）で呼ぶ。files を省くと thumb_files(ep)。
     need が True でサムネが1枚も無いときも止める（サムネなしでアップロードしない）。"""
     import thumb_same_check as Tc
+    import thumb_badge_check as Tb   # 2026-11-28 CEO決定：右下の角（右25%×下20%）に文字を置かない
     files = thumb_files(ep) if files is None else files
     if not files:
         if need:
@@ -177,11 +178,13 @@ def thumb_guard(ep, what="サムネ", files=None, need=True):
     for f_ in files:
         ok, dd = Tc.check(f_)
         log(f"{what}の確認：{'合格' if ok else '不合格（左右がちがう）'} {f_}  差={dd}")
-        if not ok:
+        ok2, n, why = Tb.check(f_)
+        log(f"{what}の確認（右下の角）：{'合格' if ok2 else '不合格（右下の角に文字）'} {f_}  文字の画素={n}" + ("" if ok2 else "  " + "／".join(why)))
+        if not (ok and ok2):
             bad.append(f_.name)
     if bad:
-        log(f"{what}の確認：{len(bad)}枚が不合格です（{', '.join(bad)}）。サムネは、違いを作る前の元の絵を左右に2枚並べる決まりです（knowledge/episode-checklist.md【厳守】）。"
-            "作り直してから進めてください。")
+        log(f"{what}の確認：{len(bad)}枚が不合格です（{', '.join(bad)}）。サムネは、違いを作る前の元の絵を左右に2枚並べ、右下の角（動画の長さの表示）に文字を置かない決まりです"
+            "（knowledge/episode-checklist.md【厳守】・【最新・優先】2026-11-28）。作り直してから進めてください。")
         sys.exit(1)
 
 
@@ -197,7 +200,10 @@ def thumbnail(ep, font):
     elif plan_thumb(ep).get("style") == "band":     # 2026-11-26 つないだ長尺：サムネの標準（黄帯・左右とも元の絵）
         import thumb_band as B
         c = plan_thumb(ep)
-        B.make(ep / "thumbnail.jpg", ep, c["question"], B.Y if c.get("band") == "yellow" else B.K, tuple(c["top"]), tuple(c["bottom"]))
+        if c.get("type", 1) == 1:      # 2026-11-28 CEO決定：型1が標準（上の黄帯「60代70代 全部見つけられる？」・下は「間違いさがし」だけ）
+            B.make_type1(ep / "thumbnail.jpg", ep, c["question"])
+        else:
+            B.make(ep / "thumbnail.jpg", ep, c["question"], B.Y if c.get("band") == "yellow" else B.K, tuple(c["top"]), tuple(c["bottom"]))
         log(f"サムネ：{ep / 'thumbnail.jpg'}（thumb_band.py）")
     else:
         import ep_thumbnail as Th
