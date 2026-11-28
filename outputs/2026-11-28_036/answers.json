@@ -49,8 +49,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 7,
-   "outside_box_max_distance_px": 6.0,
+   "outside_box_pixels_diff_gt15": 155,
+   "outside_box_max_distance_px": 11.0,
    "answers": [
     {
      "id": 1,
@@ -131,37 +131,37 @@
     {
      "id": 3,
      "type": "色",
-     "label": "植木鉢が黄色",
-     "line": "右下の植木鉢が、黄色になりました。",
+     "label": "屋根の板戸が緑",
+     "line": "屋根の三角の板戸が、緑になりました。",
      "box_px": [
-      1410,
-      1520,
-      1720,
-      2060
+      1220,
+      180,
+      1500,
+      490
      ],
      "box_screen": [
-      729,
-      786,
-      890,
-      1066
+      631,
+      93,
+      776,
+      253
      ],
      "circle_a_screen": [
-      729,
-      786,
-      890,
-      1066
+      631,
+      93,
+      776,
+      253
      ],
      "circle_b_screen": [
-      729,
-      786,
-      890,
-      1066
+      631,
+      93,
+      776,
+      253
      ],
-     "object_w_px": 250,
-     "object_picture_width_pct": 13.47,
-     "object_screen_width_pct": 6.73,
-     "in_level_range": true,
-     "in_safe_y": false,
+     "object_w_px": 220,
+     "object_picture_width_pct": 11.85,
+     "object_screen_width_pct": 5.93,
+     "in_level_range": false,
+     "in_safe_y": true,
      "edit_version": "1",
      "made_by": "gemini",
      "note": ""
@@ -859,8 +859,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 49,
-   "outside_box_max_distance_px": 3.0,
+   "outside_box_pixels_diff_gt15": 186,
+   "outside_box_max_distance_px": 5.0,
    "answers": [
     {
      "id": 1,
@@ -903,8 +903,8 @@
     {
      "id": 2,
      "type": "色",
-     "label": "軍手が黄色",
-     "line": "左の軍手が、黄色になりました。",
+     "label": "軍手が茶色",
+     "line": "左の軍手が、茶色になりました。",
      "box_px": [
       128,
       1453,

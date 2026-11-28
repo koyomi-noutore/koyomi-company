@@ -1772,7 +1772,7 @@
   "q1_go": "みぎのえのちがいを、みっつさがしてください。どうぞ。",
   "q1_ans1": "ひだりの、かごが、みどりに、なりました。",
   "q1_ans2": "みぎの、わらぐつが、かたほう、なくなりました。",
-  "q1_ans3": "みぎしたの、うえきばちが、きいろに、なりました。",
+  "q1_ans3": "やねの、さんかくの、いたどが、みどりに、なりました。",
   "q2_card": "にもんめ、しょきゅう。いろりばたの、おばあさんです。",
   "q2_go": "では、にもんめ。どうぞ。",
   "q2_ans1": "ひだりうえの、ざぶとんが、みどりになりました。",
@@ -1801,7 +1801,7 @@
   "q7_card": "ななもんめ、ちゅうきゅう。まきごやの、まきはこびです。",
   "q7_go": "もうすこしです。ななもんめ、どうぞ。",
   "q7_ans1": "みぎうえの、ぼうしが、みどりに、なりました。",
-  "q7_ans2": "ひだりの、ぐんてが、きいろに、なりました。",
+  "q7_ans2": "ひだりの、ぐんてが、ちゃいろに、なりました。",
   "q7_ans3": "みぎしたの、やかんが、なくなりました。",
   "q8_card": "はちもんめ、じょうきゅう。ふるい、ちゃだんすです。",
   "q8_go": "では、はちもんめ。どうぞ。",
@@ -1843,7 +1843,7 @@
    "level": "やさしい",
    "go": "右の絵の違いを、3つ探してください。どうぞ。",
    "prompt": "Scene: an elderly Japanese man with a gentle smile (navy padded jacket, gray wool cap) standing in the CENTER holding a wooden snow shovel upright in his hands, in front of a big old thatched-roof farmhouse (kominka) with thick snow on the roof; the man and the house together fill more than half of the picture; his feet firmly on the snow. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf or sill (or hangs from a visible hook, beam or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: about one fifteenth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No animals, no birds. Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, on the snow) a small natural-wood children's sled; (upper right, on the snow) a small plain wooden bucket; (middle left, on the snow) a small round woven basket; (middle right, on the snow) a pair of small straw boots; (lower left, on the snow) a small neat stack of four firewood logs; (lower right, on the snow) a small clay flowerpot with a small evergreen shrub.",
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small round woven basket at the middle left becomes bright green (same shape, same place); (b) the pair of small straw boots at the middle right now has only one boot (one boot removed, show plain snow, no leftover outline); (c) the clay flowerpot at the lower right becomes bright yellow (the pot painted yellow, same shape; the shrub in it unchanged).",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small round woven basket at the middle left becomes bright green (same shape, same place); (b) the pair of small straw boots at the middle right now has only one boot (one boot removed, show plain snow, no leftover outline); (c) the wooden louvered panel inside the triangular gable opening of the thatched roof becomes bright green (same shape; the thatch and snow around it unchanged).",
    "diffs": [
     {
      "id": 1,
@@ -1876,15 +1876,15 @@
     {
      "id": 3,
      "type": "色",
-     "label": "植木鉢が黄色",
-     "line": "右下の植木鉢が、黄色になりました。",
+     "label": "屋根の板戸が緑",
+     "line": "屋根の三角の板戸が、緑になりました。",
      "box": [
-      1410,
-      1520,
-      1720,
-      2060
+      1220,
+      180,
+      1500,
+      490
      ],
-     "object_w": 250,
+     "object_w": 220,
      "src": "1"
     }
    ],
@@ -2210,7 +2210,7 @@
    "level": "中級",
    "go": "では、7問目。どうぞ。",
    "prompt": "Scene: an elderly Japanese man with a gentle smile (navy padded jacket) at the CENTER carrying an armful of split firewood, in front of a wooden woodshed filled with neatly stacked firewood and snow on its roof; man and woodshed fill more than half of the picture; his feet firmly on the snow. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf or sill (or hangs from a visible hook, beam or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: about one twentieth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No animals, no birds. Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, on the snow) a small round tree stump; (upper right, on the snow) a small gray knitted wool cap; (middle left, on the snow) a pair of small gray work gloves lying flat; (middle right, on the snow) a small bundle of kindling twigs tied with string; (lower left, on the snow) a small plain wooden crate; (lower right, on the snow) a small iron kettle.",
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small gray knitted wool cap at the upper right becomes bright green (same shape); (b) the pair of small gray work gloves at the middle left becomes bright yellow (same shape); (c) the small iron kettle at the lower right is gone (plain snow, no leftover outline).",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small gray knitted wool cap at the upper right becomes bright green (same shape); (b) the pair of small gray work gloves at the middle left becomes dark brown leather gloves (same shape, same place); (c) the small iron kettle at the lower right is gone (plain snow, no leftover outline).",
    "diffs": [
     {
      "id": 1,
@@ -2229,8 +2229,8 @@
     {
      "id": 2,
      "type": "色",
-     "label": "軍手が黄色",
-     "line": "左の軍手が、黄色になりました。",
+     "label": "軍手が茶色",
+     "line": "左の軍手が、茶色になりました。",
      "box": [
       128,
       1453,

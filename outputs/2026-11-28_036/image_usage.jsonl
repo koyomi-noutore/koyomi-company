@@ -28,3 +28,5 @@
 {"time": "2026-11-28T01:34:05+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 749, "output_tokens": 1120, "total_tokens": 2149}
 {"time": "2026-11-28T01:36:06+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 755, "output_tokens": 1120, "total_tokens": 2101}
 {"time": "2026-11-28T01:36:08+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 761, "output_tokens": 1120, "total_tokens": 2121}
+{"time": "2026-11-28T01:49:47+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 746, "output_tokens": 1120, "total_tokens": 2059}
+{"time": "2026-11-28T01:49:49+00:00", "model": "vertex:gemini-3-pro-image", "size": "2K", "prompt_tokens": 765, "output_tokens": 1120, "total_tokens": 2157}
