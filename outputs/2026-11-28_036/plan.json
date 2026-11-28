@@ -208,7 +208,11 @@
     "あと30秒です。"
    ]
   ],
-  "go_delay": 2.8
+  "go_delay": 2.8,
+  "ans_shift": {
+   "q8_ans3": 0.5,
+   "q9_ans3": 0.5
+  }
  },
  "lines": {
   "opening": [
@@ -1766,18 +1770,18 @@
   "c_comment": "はんぶんまで、きました。みつかったかずを、あとでコメントでおしえてくださいね。",
   "q1_card": "いちもんめ、やさしい、もんだい。ゆきの、こみんかの、げんかんさきです。",
   "q1_go": "みぎのえのちがいを、みっつさがしてください。どうぞ。",
-  "q1_ans1": "ひだりうえの、そりが、あおくなりました。",
+  "q1_ans1": "ひだりの、かごが、みどりに、なりました。",
   "q1_ans2": "みぎの、わらぐつが、かたほう、なくなりました。",
-  "q1_ans3": "ひだりしたの、まきが、いっぽん、ふえました。",
+  "q1_ans3": "みぎしたの、うえきばちが、きいろに、なりました。",
   "q2_card": "にもんめ、しょきゅう。いろりばたの、おばあさんです。",
   "q2_go": "では、にもんめ。どうぞ。",
   "q2_ans1": "ひだりうえの、ざぶとんが、みどりになりました。",
-  "q2_ans2": "みぎの、おぼんの、コップが、ひとつ、ふえました。",
+  "q2_ans2": "みぎの、おぼんが、あおく、なりました。",
   "q2_ans3": "ひだりしたの、まるい、こしかけが、なくなりました。",
   "q3_card": "さんもんめ、しょきゅう。かまくらの、ひとときです。",
   "q3_go": "つづいて、さんもんめ。どうぞ。",
   "q3_ans1": "ひだりしたの、かんじきが、かたほう、きえました。",
-  "q3_ans2": "みぎの、おさらの、みかんが、ひとつ、ふえました。",
+  "q3_ans2": "みぎの、おさらが、あおく、なりました。",
   "q3_ans3": "ひだりうえの、ミトンが、きいろになりました。",
   "q4_card": "よんもんめ、ちゅうきゅう。のきしたの、つららです。",
   "q4_go": "よんもんめです。じっくりどうぞ。",
@@ -1797,12 +1801,12 @@
   "q7_card": "ななもんめ、ちゅうきゅう。まきごやの、まきはこびです。",
   "q7_go": "もうすこしです。ななもんめ、どうぞ。",
   "q7_ans1": "みぎうえの、ぼうしが、みどりに、なりました。",
-  "q7_ans2": "ひだりの、ぐんてが、みずいろに、なりました。",
+  "q7_ans2": "ひだりの、ぐんてが、きいろに、なりました。",
   "q7_ans3": "みぎしたの、やかんが、なくなりました。",
   "q8_card": "はちもんめ、じょうきゅう。ふるい、ちゃだんすです。",
   "q8_go": "では、はちもんめ。どうぞ。",
   "q8_ans1": "ひだりうえの、きゅうすの、つまみが、きえました。",
-  "q8_ans2": "ひだりの、つぼの、ふたの、たまが、あおくなりました。",
+  "q8_ans2": "みぎの、くろい、わんに、きんの、もようが、つきました。",
   "q8_ans3": "みぎしたの、ゆのみが、みずたまに、なりました。",
   "q9_card": "きゅうもんめ、じょうきゅう。ゆきの、まどべです。",
   "q9_go": "つぎは、きゅうもんめです。どうぞ。",
@@ -1813,7 +1817,7 @@
   "q10_go": "さいごの、じゅうもんめ。どうぞ。",
   "q10_ans1": "みぎうえの、カップの、もちてが、なくなりました。",
   "q10_ans2": "ひだりの、ブラシの、えが、あおく、なりました。",
-  "q10_ans3": "ひだりしたの、ふくろの、ひもが、なくなりました。"
+  "q10_ans3": "みぎしたの、なわの、はしが、なくなりました。"
  },
  "voice": {
   "provider": "fish",
@@ -1839,20 +1843,20 @@
    "level": "やさしい",
    "go": "右の絵の違いを、3つ探してください。どうぞ。",
    "prompt": "Scene: an elderly Japanese man with a gentle smile (navy padded jacket, gray wool cap) standing in the CENTER holding a wooden snow shovel upright in his hands, in front of a big old thatched-roof farmhouse (kominka) with thick snow on the roof; the man and the house together fill more than half of the picture; his feet firmly on the snow. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf or sill (or hangs from a visible hook, beam or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: about one fifteenth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No animals, no birds. Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, on the snow) a small natural-wood children's sled; (upper right, on the snow) a small plain wooden bucket; (middle left, on the snow) a small round woven basket; (middle right, on the snow) a pair of small straw boots; (lower left, on the snow) a small neat stack of four firewood logs; (lower right, on the snow) a small clay flowerpot with a small evergreen shrub.",
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small natural-wood sled at the upper left becomes bright blue (same shape, same place); (b) the pair of small straw boots at the middle right now has only one boot (one boot removed, show plain snow, no leftover outline); (c) the small stack of four firewood logs at the lower left has exactly one more log than before (one extra log added to the stack, same neat stack).",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small round woven basket at the middle left becomes bright green (same shape, same place); (b) the pair of small straw boots at the middle right now has only one boot (one boot removed, show plain snow, no leftover outline); (c) the clay flowerpot at the lower right becomes bright yellow (the pot painted yellow, same shape; the shrub in it unchanged).",
    "diffs": [
     {
      "id": 1,
      "type": "色",
-     "label": "そりが青",
-     "line": "左上のそりが、青くなりました。",
+     "label": "かごが緑",
+     "line": "左のかごが、緑になりました。",
      "box": [
-      59,
-      38,
-      610,
-      328
+      130,
+      1190,
+      480,
+      1440
      ],
-     "object_w": 480,
+     "object_w": 300,
      "src": "1"
     },
     {
@@ -1871,18 +1875,17 @@
     },
     {
      "id": 3,
-     "type": "増える",
-     "label": "薪が増える",
-     "line": "左下の薪が、1本増えました。",
+     "type": "色",
+     "label": "植木鉢が黄色",
+     "line": "右下の植木鉢が、黄色になりました。",
      "box": [
-      110,
-      1650,
-      560,
+      1410,
+      1520,
+      1720,
       2060
      ],
-     "object_w": 320,
-     "src": "1",
-     "context": "雪の上に積んだ薪。4本でも5本でも自然（同じ場所・同じ積み方）"
+     "object_w": 250,
+     "src": "1"
     }
    ],
    "answers_intro": "答えです。",
@@ -1901,7 +1904,7 @@
    "level": "初級",
    "go": "では、2問目。どうぞ。",
    "prompt": "Scene: an elderly Japanese woman with a gentle smile (indigo jacket, white head towel) sitting on her knees at the CENTER beside a big sunken hearth (irori) with a small calm fire and gray ash, warming her hands; above the hearth an iron kettle hangs from a hook and chain attached to a dark wooden ceiling beam; seen from slightly above, the wooden plank floor fills the picture; woman and hearth fill more than half of the picture. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf or sill (or hangs from a visible hook, beam or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: about one eighteenth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No animals, no birds. Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, on the wooden floor) a small square cream cushion; (upper right, on the wooden floor) a small bamboo basket; (middle left, on the wooden floor) a small clay teapot; (middle right, on the wooden floor) a small round wooden tray with three plain white cups; (lower left, on the wooden floor) a small round wooden stool; (lower right, on the wooden floor) a small folded gray blanket.",
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small square cream cushion at the upper left becomes bright green (same shape, same place); (b) the small round wooden tray at the middle right has exactly one more plain white cup than before (one extra cup added); (c) the small round wooden stool at the lower left is gone (show the plain wooden floor, no leftover outline).",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small square cream cushion at the upper left becomes bright green (same shape, same place); (b) the small round wooden tray at the middle right becomes bright blue (the three plain white cups on it unchanged); (c) the small round wooden stool at the lower left is gone (show the plain wooden floor, no leftover outline).",
    "diffs": [
     {
      "id": 1,
@@ -1919,18 +1922,17 @@
     },
     {
      "id": 2,
-     "type": "増える",
-     "label": "コップが増える",
-     "line": "右のお盆のコップが、1つ増えました。",
+     "type": "色",
+     "label": "お盆が青",
+     "line": "右のお盆が、青くなりました。",
      "box": [
-      1420,
-      920,
-      1760,
-      1160
+      1400,
+      900,
+      1780,
+      1180
      ],
-     "object_w": 110,
-     "src": "1",
-     "context": "お盆の上のコップ。3つでも4つでも自然（同じお盆の上）"
+     "object_w": 300,
+     "src": "1"
     },
     {
      "id": 3,
@@ -1963,7 +1965,7 @@
    "level": "初級",
    "go": "では、3問目。どうぞ。",
    "prompt": "Scene: an elderly Japanese woman with a gentle smile (green wool hat, gray scarf, navy coat) sitting on a small mat at the entrance of a big round snow house (kamakura), holding a steaming bowl of hot tea in both hands; the kamakura is large and fills the picture behind her; woman and kamakura fill more than half of the picture. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf or sill (or hangs from a visible hook, beam or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: about one eighteenth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No animals, no birds. Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, on the snow) a pair of small wooden snowshoes (kanjiki) lying flat; (upper right, on the snow) a small round wooden stool; (middle left, on the snow) a small clay brazier; (middle right, on the snow) a small plain plate with three mandarin oranges; (lower left, on the snow) a pair of small gray knitted mittens; (lower right, on the snow) a small snow lantern made of snow.",
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the pair of small wooden snowshoes at the lower left now has only one snowshoe (one removed, plain snow, no leftover outline); (b) the small plate at the middle right has exactly one more mandarin orange than before (one extra added); (c) the pair of small gray knitted mittens at the upper left becomes bright yellow (same shape, same place).",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the pair of small wooden snowshoes at the lower left now has only one snowshoe (one removed, plain snow, no leftover outline); (b) the small plain plate at the middle right becomes blue (the mandarin oranges on it unchanged); (c) the pair of small gray knitted mittens at the upper left becomes bright yellow (same shape, same place).",
    "diffs": [
     {
      "id": 1,
@@ -1981,18 +1983,17 @@
     },
     {
      "id": 2,
-     "type": "増える",
-     "label": "みかんが増える",
-     "line": "右のお皿のみかんが、1つ増えました。",
+     "type": "色",
+     "label": "お皿が青",
+     "line": "右のお皿が、青くなりました。",
      "box": [
-      1330,
-      1340,
-      1620,
-      1560
+      1300,
+      1380,
+      1630,
+      1580
      ],
-     "object_w": 183,
-     "src": "1",
-     "context": "お皿の上のみかん。3つでも4つでも自然（同じお皿の上）"
+     "object_w": 280,
+     "src": "1"
     },
     {
      "id": 3,
@@ -2209,7 +2210,7 @@
    "level": "中級",
    "go": "では、7問目。どうぞ。",
    "prompt": "Scene: an elderly Japanese man with a gentle smile (navy padded jacket) at the CENTER carrying an armful of split firewood, in front of a wooden woodshed filled with neatly stacked firewood and snow on its roof; man and woodshed fill more than half of the picture; his feet firmly on the snow. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf or sill (or hangs from a visible hook, beam or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: about one twentieth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No animals, no birds. Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, on the snow) a small round tree stump; (upper right, on the snow) a small gray knitted wool cap; (middle left, on the snow) a pair of small gray work gloves lying flat; (middle right, on the snow) a small bundle of kindling twigs tied with string; (lower left, on the snow) a small plain wooden crate; (lower right, on the snow) a small iron kettle.",
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small gray knitted wool cap at the upper right becomes bright green (same shape); (b) the pair of small gray work gloves at the middle left becomes light blue (same shape); (c) the small iron kettle at the lower right is gone (plain snow, no leftover outline).",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small gray knitted wool cap at the upper right becomes bright green (same shape); (b) the pair of small gray work gloves at the middle left becomes bright yellow (same shape); (c) the small iron kettle at the lower right is gone (plain snow, no leftover outline).",
    "diffs": [
     {
      "id": 1,
@@ -2228,8 +2229,8 @@
     {
      "id": 2,
      "type": "色",
-     "label": "軍手が水色",
-     "line": "左の軍手が、水色になりました。",
+     "label": "軍手が黄色",
+     "line": "左の軍手が、黄色になりました。",
      "box": [
       128,
       1453,
@@ -2270,7 +2271,7 @@
    "level": "上級",
    "go": "では、8問目。どうぞ。",
    "prompt": "Scene: a big old wooden Japanese cupboard (chadansu) with three open shelves seen from the front, filling the whole picture, in a farmhouse; no person; the six listed objects sit on its shelves. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf or sill (or hangs from a visible hook, beam or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: VERY SMALL, about one thirty-fifth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No animals, no birds. Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, on the wooden shelves) a small clay teapot; (upper right, on the wooden shelves) a stack of three small plain plates; (middle left, on the wooden shelves) a small ceramic jar with a lid; (middle right, on the wooden shelves) a small black lacquered bowl; (lower left, on the wooden shelves) a small wooden box with a sliding lid; (lower right, on the wooden shelves) a small ceramic teacup with a plain pattern.",
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small round knob on the lid of the small clay teapot at the upper left is gone (flat lid, teapot otherwise identical); (b) the small knob on the lid of the small ceramic jar at the middle left becomes blue (everything else unchanged); (c) the small ceramic teacup at the lower right gets small blue polka dots (same shape).",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small round knob on the lid of the small clay teapot at the upper left is gone (flat lid, teapot otherwise identical); (b) a small round golden flower emblem appears on the side of the small black lacquered bowl at the middle right (bowl otherwise identical); (c) the small ceramic teacup at the lower right gets small blue polka dots (same shape).",
    "diffs": [
     {
      "id": 1,
@@ -2288,16 +2289,16 @@
     },
     {
      "id": 2,
-     "type": "色",
-     "label": "つぼのふたの玉が青",
-     "line": "左の、つぼのふたの玉が、青くなりました。",
+     "type": "模様",
+     "label": "椀に金の模様",
+     "line": "右の黒い椀に、金の模様がつきました。",
      "box": [
-      680,
-      1060,
-      895,
-      1190
+      1130,
+      1090,
+      1420,
+      1330
      ],
-     "object_w": 80,
+     "object_w": 100,
      "src": "1"
     },
     {
@@ -2392,7 +2393,7 @@
    "level": "上級",
    "go": "では、10問目。どうぞ。",
    "prompt": "Scene: an elderly Japanese man (gray padded jacket, wool cap) at the CENTER holding a wooden rake upright, in front of a big old wooden barn with a sliding door and a snow-covered roof; man and barn fill more than half of the picture; his feet firmly on the snow. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf or sill (or hangs from a visible hook, beam or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: VERY SMALL, about one thirty-fifth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only). No animals, no birds. Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, on the snow) a small wooden toolbox; (upper right, on the snow) a small tin cup; (middle left, on the snow) a small brush with a wooden handle; (middle right, on the snow) a small ceramic jar; (lower left, on the snow) a small cloth sack tied at the top with a string; (lower right, on the snow) a small bundle of rope.",
-   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the handle of the small tin cup at the upper right is gone (cup otherwise identical); (b) the wooden handle of the small brush at the middle left becomes blue (brush head unchanged); (c) the string tying the small cloth sack at the lower left is gone (sack opening just loosely folded).",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the handle of the small tin cup at the upper right is gone (cup otherwise identical); (b) the wooden handle of the small brush at the middle left becomes blue (brush head unchanged); (c) the loose end of the small coil of rope at the lower right is gone (a neat round coil with no loose end).",
    "diffs": [
     {
      "id": 1,
@@ -2425,15 +2426,15 @@
     {
      "id": 3,
      "type": "なくなる",
-     "label": "袋のひもがない",
-     "line": "左下の袋のひもが、なくなりました。",
+     "label": "縄の端がない",
+     "line": "右下の縄の端が、なくなりました。",
      "box": [
-      170,
-      1740,
-      430,
-      2010
+      1400,
+      1820,
+      1760,
+      2030
      ],
-     "object_w": 100,
+     "object_w": 90,
      "src": "1"
     }
    ],
