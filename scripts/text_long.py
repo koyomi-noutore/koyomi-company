@@ -725,7 +725,7 @@ def write_description(P, folder, chapters, total):
     desc = f"""# {P['id']} YouTube 投稿用メタデータ（文字の脳トレ 長尺）
 
 - 作り方：python3 scripts/text_long.py build {Path(folder).name}（定義は problem.json）。長さ {mmss(total)}（{total:.0f}秒）。
-- タイトル {len(D['title'])}文字（32字以内）。説明欄とタグに「レクリエーション」「デイサービス」。効果の約束はしていない。カテゴリは教育。再生リストは「文字の脳トレ｜毎日1分」（フォルダ名の _tlong_NNN で自動）。
+- タイトル {len(D['title'])}文字（42字以内）。説明欄とタグに「レクリエーション」「デイサービス」。効果の約束はしていない。カテゴリは教育。再生リストは「文字の脳トレ｜毎日1分」（フォルダ名の _tlong_NNN で自動）。
 - サムネ：thumbnail.jpg（ab/thumb_A.jpg と同じ）。左右とも同じ絵（問題の画面を2枚並べた）。thumb_same_check 合格。
 - 終了画面の動画の枠は、YouTube のおすすめ（視聴者に適したコンテンツ＋最新のアップロード）に任せる（エンディングの声の案内は汎用）。
 
