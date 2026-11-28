@@ -1788,7 +1788,7 @@
   "q5_go": "ごもんめ、どうぞ。",
   "q5_ans1": "ひだりうえの、かみコップが、みどりに、なりました。",
   "q5_ans2": "みぎの、かごの、まんじゅうが、ひとつ、へりました。",
-  "q5_ans3": "ひだりしたの、ぬのが、しまもように、なりました。",
+  "q5_ans3": "ひだりしたの、ぬのが、しろく、なりました。",
   "q6_card": "ろくもんめ、ちゅうきゅう。うみのさちの、ろてんです。",
   "q6_go": "ゆっくり、ろくもんめ。どうぞ。",
   "q6_ans1": "ひだりうえの、あみぶくろが、あおく、なりました。",
@@ -1796,19 +1796,19 @@
   "q6_ans3": "ひだりの、こんぶの、おびが、みどりに、なりました。",
   "q7_card": "ななもんめ、ちゅうきゅう。つけものの、ろてんです。",
   "q7_go": "もうすこしです。ななもんめ、どうぞ。",
-  "q7_ans1": "ひだりの、ぬかぶくろの、ひもが、あおく、なりました。",
+  "q7_ans1": "うえの、ずきんが、きいろく、なりました。",
   "q7_ans2": "みぎの、ちゃわんの、さじが、なくなりました。",
   "q7_ans3": "ひだりしたの、つけものの、いしが、しかくに、なりました。",
   "q8_card": "はちもんめ、じょうきゅう。あさいちの、ひとやすみです。",
   "q8_go": "では、はちもんめ。どうぞ。",
   "q8_ans1": "みぎの、びんの、うめぼしが、ひとつ、へりました。",
-  "q8_ans2": "みぎの、まるいはこに、せんの、もようが、つきました。",
+  "q8_ans2": "ひだりの、こしかけの、よこぎが、なくなりました。",
   "q8_ans3": "みぎしたの、ふくろに、まるい、つぎあてが、つきました。",
   "q9_card": "きゅうもんめ、じょうきゅう。やきいもやさんです。",
   "q9_go": "つぎは、きゅうもんめです。どうぞ。",
   "q9_ans1": "ひだりの、つつみが、あおく、なりました。",
   "q9_ans2": "ひだりうえの、かんの、キャップが、あかく、なりました。",
-  "q9_ans3": "ひだりしたの、バケツの、ゆきが、なくなりました。",
+  "q9_ans3": "みぎしたの、きばこに、もちての、あなが、あきました。",
   "q10_card": "じゅうもんめ、じょうきゅう。あさいちの、かえりみちです。",
   "q10_go": "さいごの、じゅうもんめ。どうぞ。",
   "q10_ans1": "ひだりの、いしどうろうの、あなが、しかくに、なりました。",
@@ -2118,9 +2118,9 @@
     },
     {
      "id": 3,
-     "type": "模様",
-     "label": "布がしま模様",
-     "line": "左下の、布が、しま模様になりました。",
+     "type": "色",
+     "label": "布が白",
+     "line": "左下の、布が、白くなりました。",
      "box": [
       125,
       1770,
@@ -2128,7 +2128,7 @@
       2070
      ],
      "object_w": 300,
-     "src": "1"
+     "src": "2"
     }
    ],
    "answers_intro": "答えです。",
@@ -2139,7 +2139,10 @@
     0,
     1856,
     2088
-   ]
+   ],
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the folded blue cloth on the small wooden box at the lower left becomes a plain white folded cloth (same shape; the box unchanged);"
+   }
   },
   {
    "q": 6,
@@ -2216,16 +2219,16 @@
     {
      "id": 1,
      "type": "色",
-     "label": "ぬか袋のひもが青",
-     "line": "左の、ぬか袋の、ひもが、青くなりました。",
+     "label": "頭巾が黄色",
+     "line": "上の、頭巾が、黄色くなりました。",
      "box": [
-      135,
-      1290,
-      415,
-      1620
+      730,
+      110,
+      1110,
+      400
      ],
-     "object_w": 270,
-     "src": "1"
+     "object_w": 380,
+     "src": "3"
     },
     {
      "id": 2,
@@ -2266,7 +2269,8 @@
     2088
    ],
    "edit_prompts": {
-    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small wooden spoon in the small ceramic bowl at the middle right is completely gone, including its handle tip; the bowl is empty and no part of the spoon remains anywhere;"
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small wooden spoon in the small ceramic bowl at the middle right is completely gone, including its handle tip; the bowl is empty and no part of the spoon remains anywhere;",
+    "3": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the white head towel on the woman's head becomes bright yellow (same shape; her face and hair unchanged);"
    }
   },
   {
@@ -2293,17 +2297,17 @@
     },
     {
      "id": 2,
-     "type": "模様",
-     "label": "丸い箱に線の模様",
-     "line": "右の、丸い箱に、線の模様が、つきました。",
+     "type": "なくなる",
+     "label": "腰かけの横木がない",
+     "line": "左の、腰かけの、横木が、なくなりました。",
      "box": [
-      1145,
-      1380,
-      1375,
-      1575
+      178,
+      1578,
+      372,
+      1745
      ],
-     "object_w": 140,
-     "src": "1"
+     "object_w": 145,
+     "src": "3"
     },
     {
      "id": 3,
@@ -2330,7 +2334,8 @@
     2088
    ],
    "edit_prompts": {
-    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) a small round brown patch (a sewn-on patch) appears on the front of the small cloth bag at the lower right (bag otherwise identical);"
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) a small round brown patch (a sewn-on patch) appears on the front of the small cloth bag at the lower right (bag otherwise identical);",
+    "3": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the horizontal wooden crossbar between the legs of the wooden stool at the left is gone (stool otherwise identical, plain snow behind);"
    }
   },
   {
@@ -2371,17 +2376,17 @@
     },
     {
      "id": 3,
-     "type": "なくなる",
-     "label": "バケツの雪がない",
-     "line": "左下の、バケツの、雪が、なくなりました。",
+     "type": "模様",
+     "label": "木箱に切り込み",
+     "line": "右下の、木箱に、持ち手の穴が、あきました。",
      "box": [
-      187,
-      1797,
-      395,
-      2033
+      1470,
+      1740,
+      1760,
+      2000
      ],
-     "object_w": 130,
-     "src": "1"
+     "object_w": 140,
+     "src": "4"
     }
    ],
    "answers_intro": "答えです。",
@@ -2395,7 +2400,8 @@
    ],
    "edit_prompts": {
     "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) only the small screw cap on top of the green jerrycan at the upper left becomes bright red; the jerrycan body stays exactly the same green;",
-    "3": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the brown wrapping paper of the small paper-wrapped bundle at the middle left becomes bright blue paper (same shape, string unchanged);"
+    "3": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the brown wrapping paper of the small paper-wrapped bundle at the middle left becomes bright blue paper (same shape, string unchanged);",
+    "4": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) a small oval hand-hole appears in the front face of the small wooden crate at the lower right (crate and the broom otherwise identical);"
    }
   },
   {
