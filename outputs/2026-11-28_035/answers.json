@@ -190,8 +190,8 @@
     {
      "id": 1,
      "type": "色",
-     "label": "洗濯かごが黄色",
-     "line": "右上の洗濯かごが、黄色になりました。",
+     "label": "洗たく入れが黄色",
+     "line": "右上の洗たく入れが、黄色になりました。",
      "box_px": [
       1338,
       288,
@@ -319,8 +319,8 @@
     2088
    ],
    "scale_to_screen": 0.51724,
-   "outside_box_pixels_diff_gt15": 306,
-   "outside_box_max_distance_px": 12.0,
+   "outside_box_pixels_diff_gt15": 68,
+   "outside_box_max_distance_px": 7.0,
    "answers": [
     {
      "id": 1,
@@ -362,9 +362,9 @@
     },
     {
      "id": 2,
-     "type": "形",
-     "label": "スタンドの笠が三角",
-     "line": "左上のスタンドの笠が、三角になりました。",
+     "type": "色",
+     "label": "スタンドが赤",
+     "line": "左上のスタンドが、赤くなりました。",
      "box_px": [
       208,
       341,
@@ -394,7 +394,7 @@
      "object_screen_width_pct": 4.2,
      "in_level_range": false,
      "in_safe_y": true,
-     "edit_version": "2",
+     "edit_version": "3",
      "made_by": "gemini",
      "note": ""
     },

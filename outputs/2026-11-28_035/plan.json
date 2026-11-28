@@ -350,7 +350,7 @@
   "q2_ans2": "みぎの、タオルが、いちまい、ふえました。",
   "q2_ans3": "ひだりの、つぼが、ほそながく、なりました。",
   "q3_ans1": "みぎうえの、かびんが、みずいろに、なりました。",
-  "q3_ans2": "ひだりうえの、スタンドが、さんかくに、なりました。",
+  "q3_ans2": "ひだりうえの、スタンドが、あかく、なりました。",
   "q3_ans3": "みぎしたの、まほうびんが、ふとく、なりました。",
   "q4_ans1": "ひだりの、ラジオが、なくなりました。",
   "q4_ans2": "みぎうえの、ひばちが、むらさきに、なりました。",
@@ -536,9 +536,9 @@
     },
     {
      "id": 2,
-     "type": "形",
-     "label": "スタンドが三角",
-     "line": "左上のスタンドが、三角になりました。",
+     "type": "色",
+     "label": "スタンドが赤",
+     "line": "左上のスタンドが、赤くなりました。",
      "box": [
       208,
       341,
@@ -546,7 +546,7 @@
       675
      ],
      "object_w": 156,
-     "src": "2"
+     "src": "3"
     },
     {
      "id": 3,
@@ -566,7 +566,8 @@
    "answers_intro": "答えです。",
    "retries": {},
    "edit_prompts": {
-    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same watercolor style, outlines and colors. Every change must be clearly visible. Do not move any object. Changes: (a) the cylinder-shaped plain cream lampshade of the small floor lamp at the upper left becomes triangular, like a cone (same lamp, same place);"
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same watercolor style, outlines and colors. Every change must be clearly visible. Do not move any object. Changes: (a) the cylinder-shaped plain cream lampshade of the small floor lamp at the upper left becomes triangular, like a cone (same lamp, same place);",
+    "3": "Edit this illustration and make exactly this change, and nothing else. Keep the same watercolor style, outlines and colors. The change must be clearly visible. Do not move any object. Change: the plain cream cylinder-shaped lampshade of the small floor lamp at the upper left becomes bright red (the whole lampshade painted bright red, exactly the same shape, same size, same place; the pole, base and pull cord stay exactly as they are)."
    },
    "hint_diff": null,
    "content_box": [
