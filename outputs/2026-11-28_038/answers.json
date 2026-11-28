@@ -1,0 +1,1387 @@
+{
+ "screen": {
+  "size": [
+   1920,
+   1080
+  ],
+  "picture_size_on_screen": [
+   960,
+   1080
+  ],
+  "safe_y_on_screen": [
+   54,
+   918
+  ],
+  "level_range_pct_of_screen_width": {
+   "やさしい": [
+    6.0,
+    8.0
+   ],
+   "初級": [
+    5.0,
+    6.0
+   ],
+   "中級": [
+    4.0,
+    5.0
+   ],
+   "上級": [
+    3.0,
+    4.0
+   ]
+  }
+ },
+ "note": "box_px・circle_px は 8:9 に切り抜いた高解像度の絵（qN_a.png、1856×2088）のピクセル。content_px はそのうち画面に出す範囲（白いふちを除いた8:9）。*_screen は画面の上での座標（右の絵は x に960を足す）。object_screen_width_pct は、変わる物そのものの幅を画面幅で割った値（難易度の基準）。object_picture_width_pct は片方の絵の幅で割った値（参考）。",
+ "questions": [
+  {
+   "q": 1,
+   "scene": "雪の朝市の入り口",
+   "level": "やさしい",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 20,
+   "outside_box_max_distance_px": 4.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "背負いかごが赤",
+     "line": "左の、かごが、赤くなりました。",
+     "box_px": [
+      100,
+      980,
+      420,
+      1340
+     ],
+     "box_screen": [
+      52,
+      507,
+      217,
+      693
+     ],
+     "circle_a_screen": [
+      52,
+      507,
+      217,
+      693
+     ],
+     "circle_b_screen": [
+      52,
+      507,
+      217,
+      693
+     ],
+     "object_w_px": 290,
+     "object_picture_width_pct": 15.62,
+     "object_screen_width_pct": 7.81,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "蒸籠のふたが青",
+     "line": "右の、せいろの、ふたが、青くなりました。",
+     "box_px": [
+      1415,
+      1360,
+      1740,
+      1710
+     ],
+     "box_screen": [
+      732,
+      703,
+      900,
+      884
+     ],
+     "circle_a_screen": [
+      732,
+      703,
+      900,
+      884
+     ],
+     "circle_b_screen": [
+      732,
+      703,
+      900,
+      884
+     ],
+     "object_w_px": 320,
+     "object_picture_width_pct": 17.24,
+     "object_screen_width_pct": 8.62,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "かぼちゃが緑",
+     "line": "左下の、かぼちゃが、緑になりました。",
+     "box_px": [
+      110,
+      1740,
+      520,
+      2070
+     ],
+     "box_screen": [
+      57,
+      900,
+      269,
+      1071
+     ],
+     "circle_a_screen": [
+      57,
+      900,
+      269,
+      1071
+     ],
+     "circle_b_screen": [
+      57,
+      900,
+      269,
+      1071
+     ],
+     "object_w_px": 410,
+     "object_picture_width_pct": 22.09,
+     "object_screen_width_pct": 11.05,
+     "in_level_range": false,
+     "in_safe_y": false,
+     "edit_version": "2",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 2,
+   "scene": "干物の露店",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 126,
+   "outside_box_max_distance_px": 9.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "樽が緑",
+     "line": "左の、たるが、緑になりました。",
+     "box_px": [
+      100,
+      920,
+      390,
+      1260
+     ],
+     "box_screen": [
+      52,
+      476,
+      202,
+      652
+     ],
+     "circle_a_screen": [
+      52,
+      476,
+      202,
+      652
+     ],
+     "circle_b_screen": [
+      52,
+      476,
+      202,
+      652
+     ],
+     "object_w_px": 290,
+     "object_picture_width_pct": 15.62,
+     "object_screen_width_pct": 7.81,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "はかりの皿が赤",
+     "line": "右の、はかりの、お皿が、赤くなりました。",
+     "box_px": [
+      1470,
+      1260,
+      1730,
+      1360
+     ],
+     "box_screen": [
+      760,
+      652,
+      895,
+      703
+     ],
+     "circle_a_screen": [
+      760,
+      652,
+      895,
+      703
+     ],
+     "circle_b_screen": [
+      760,
+      652,
+      895,
+      703
+     ],
+     "object_w_px": 250,
+     "object_picture_width_pct": 13.47,
+     "object_screen_width_pct": 6.73,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "焼き網がない",
+     "line": "左下の、七輪の、あみが、なくなりました。",
+     "box_px": [
+      100,
+      1650,
+      430,
+      1960
+     ],
+     "box_screen": [
+      52,
+      853,
+      222,
+      1014
+     ],
+     "circle_a_screen": [
+      52,
+      853,
+      222,
+      1014
+     ],
+     "circle_b_screen": [
+      52,
+      853,
+      222,
+      1014
+     ],
+     "object_w_px": 330,
+     "object_picture_width_pct": 17.78,
+     "object_screen_width_pct": 8.89,
+     "in_level_range": false,
+     "in_safe_y": false,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 3,
+   "scene": "餅の露店",
+   "level": "初級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 724,
+   "outside_box_max_distance_px": 12.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "形",
+     "label": "お餅が四角い",
+     "line": "左上の、お餅が、四角になりました。",
+     "box_px": [
+      100,
+      170,
+      400,
+      340
+     ],
+     "box_screen": [
+      52,
+      88,
+      207,
+      176
+     ],
+     "circle_a_screen": [
+      52,
+      88,
+      207,
+      176
+     ],
+     "circle_b_screen": [
+      52,
+      88,
+      207,
+      176
+     ],
+     "object_w_px": 250,
+     "object_picture_width_pct": 13.47,
+     "object_screen_width_pct": 6.73,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "茶筒が青",
+     "line": "右の、茶筒が、青くなりました。",
+     "box_px": [
+      1520,
+      920,
+      1700,
+      1190
+     ],
+     "box_screen": [
+      786,
+      476,
+      879,
+      616
+     ],
+     "circle_a_screen": [
+      786,
+      476,
+      879,
+      616
+     ],
+     "circle_b_screen": [
+      786,
+      476,
+      879,
+      616
+     ],
+     "object_w_px": 180,
+     "object_picture_width_pct": 9.7,
+     "object_screen_width_pct": 4.85,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "向き",
+     "label": "缶が開いている",
+     "line": "左下の、缶の、ふたが、あきました。",
+     "box_px": [
+      130,
+      1680,
+      360,
+      1890
+     ],
+     "box_screen": [
+      67,
+      869,
+      186,
+      978
+     ],
+     "circle_a_screen": [
+      67,
+      869,
+      186,
+      978
+     ],
+     "circle_b_screen": [
+      67,
+      869,
+      186,
+      978
+     ],
+     "object_w_px": 230,
+     "object_picture_width_pct": 12.39,
+     "object_screen_width_pct": 6.2,
+     "in_level_range": false,
+     "in_safe_y": false,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 4,
+   "scene": "野菜の露店",
+   "level": "中級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 340,
+   "outside_box_max_distance_px": 9.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "向き",
+     "label": "包丁の向きが反対",
+     "line": "右下の、包丁の、向きが、反対になりました。",
+     "box_px": [
+      1330,
+      1850,
+      1720,
+      1965
+     ],
+     "box_screen": [
+      688,
+      957,
+      890,
+      1016
+     ],
+     "circle_a_screen": [
+      688,
+      957,
+      890,
+      1016
+     ],
+     "circle_b_screen": [
+      688,
+      957,
+      890,
+      1016
+     ],
+     "object_w_px": 390,
+     "object_picture_width_pct": 21.01,
+     "object_screen_width_pct": 10.51,
+     "in_level_range": false,
+     "in_safe_y": false,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "にんじんが白",
+     "line": "右の、かごの、にんじんが、白くなりました。",
+     "box_px": [
+      1440,
+      920,
+      1770,
+      1150
+     ],
+     "box_screen": [
+      745,
+      476,
+      916,
+      595
+     ],
+     "circle_a_screen": [
+      745,
+      476,
+      916,
+      595
+     ],
+     "circle_b_screen": [
+      745,
+      476,
+      916,
+      595
+     ],
+     "object_w_px": 180,
+     "object_picture_width_pct": 9.7,
+     "object_screen_width_pct": 4.85,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "ごぼうが1本ない",
+     "line": "左下の、ごぼうが、1本なくなりました。",
+     "box_px": [
+      115,
+      1770,
+      510,
+      2030
+     ],
+     "box_screen": [
+      59,
+      916,
+      264,
+      1050
+     ],
+     "circle_a_screen": [
+      59,
+      916,
+      264,
+      1050
+     ],
+     "circle_b_screen": [
+      59,
+      916,
+      264,
+      1050
+     ],
+     "object_w_px": 200,
+     "object_picture_width_pct": 10.78,
+     "object_screen_width_pct": 5.39,
+     "in_level_range": false,
+     "in_safe_y": false,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 5,
+   "scene": "あったか甘酒の屋台",
+   "level": "中級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 245,
+   "outside_box_max_distance_px": 11.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "紙コップが緑",
+     "line": "左上の、紙コップが、緑になりました。",
+     "box_px": [
+      180,
+      20,
+      380,
+      310
+     ],
+     "box_screen": [
+      93,
+      10,
+      197,
+      160
+     ],
+     "circle_a_screen": [
+      93,
+      10,
+      197,
+      160
+     ],
+     "circle_b_screen": [
+      93,
+      10,
+      197,
+      160
+     ],
+     "object_w_px": 190,
+     "object_picture_width_pct": 10.24,
+     "object_screen_width_pct": 5.12,
+     "in_level_range": false,
+     "in_safe_y": false,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "数",
+     "label": "まんじゅうが1つ減る",
+     "line": "右の、かごの、まんじゅうが、1つ減りました。",
+     "box_px": [
+      1450,
+      940,
+      1760,
+      1180
+     ],
+     "box_screen": [
+      750,
+      486,
+      910,
+      610
+     ],
+     "circle_a_screen": [
+      750,
+      486,
+      910,
+      610
+     ],
+     "circle_b_screen": [
+      750,
+      486,
+      910,
+      610
+     ],
+     "object_w_px": 200,
+     "object_picture_width_pct": 10.78,
+     "object_screen_width_pct": 5.39,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "模様",
+     "label": "布がしま模様",
+     "line": "左下の、布が、しま模様になりました。",
+     "box_px": [
+      125,
+      1770,
+      490,
+      2070
+     ],
+     "box_screen": [
+      65,
+      916,
+      253,
+      1071
+     ],
+     "circle_a_screen": [
+      65,
+      916,
+      253,
+      1071
+     ],
+     "circle_b_screen": [
+      65,
+      916,
+      253,
+      1071
+     ],
+     "object_w_px": 300,
+     "object_picture_width_pct": 16.16,
+     "object_screen_width_pct": 8.08,
+     "in_level_range": false,
+     "in_safe_y": false,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 6,
+   "scene": "海の幸の露店",
+   "level": "中級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 250,
+   "outside_box_max_distance_px": 6.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "あみ袋が青",
+     "line": "左上の、あみ袋が、青くなりました。",
+     "box_px": [
+      170,
+      450,
+      490,
+      720
+     ],
+     "box_screen": [
+      88,
+      233,
+      253,
+      372
+     ],
+     "circle_a_screen": [
+      88,
+      233,
+      253,
+      372
+     ],
+     "circle_b_screen": [
+      88,
+      233,
+      253,
+      372
+     ],
+     "object_w_px": 300,
+     "object_picture_width_pct": 16.16,
+     "object_screen_width_pct": 8.08,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "数",
+     "label": "するめが1枚減る",
+     "line": "右の、お皿の、するめが、1枚減りました。",
+     "box_px": [
+      1410,
+      1220,
+      1780,
+      1460
+     ],
+     "box_screen": [
+      729,
+      631,
+      921,
+      755
+     ],
+     "circle_a_screen": [
+      729,
+      631,
+      921,
+      755
+     ],
+     "circle_b_screen": [
+      729,
+      631,
+      921,
+      755
+     ],
+     "object_w_px": 340,
+     "object_picture_width_pct": 18.32,
+     "object_screen_width_pct": 9.16,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "2",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "昆布の帯が緑",
+     "line": "左の、こんぶの、帯が、緑になりました。",
+     "box_px": [
+      50,
+      1150,
+      460,
+      1440
+     ],
+     "box_screen": [
+      26,
+      595,
+      238,
+      745
+     ],
+     "circle_a_screen": [
+      26,
+      595,
+      238,
+      745
+     ],
+     "circle_b_screen": [
+      26,
+      595,
+      238,
+      745
+     ],
+     "object_w_px": 380,
+     "object_picture_width_pct": 20.47,
+     "object_screen_width_pct": 10.24,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "2",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 7,
+   "scene": "漬物の露店",
+   "level": "中級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 1,
+   "outside_box_max_distance_px": 5.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "ぬか袋のひもが青",
+     "line": "左の、ぬか袋の、ひもが、青くなりました。",
+     "box_px": [
+      135,
+      1290,
+      415,
+      1620
+     ],
+     "box_screen": [
+      70,
+      667,
+      215,
+      838
+     ],
+     "circle_a_screen": [
+      70,
+      667,
+      215,
+      838
+     ],
+     "circle_b_screen": [
+      70,
+      667,
+      215,
+      838
+     ],
+     "object_w_px": 270,
+     "object_picture_width_pct": 14.55,
+     "object_screen_width_pct": 7.27,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "さじがない",
+     "line": "右の、茶わんの、さじが、なくなりました。",
+     "box_px": [
+      1440,
+      1300,
+      1780,
+      1620
+     ],
+     "box_screen": [
+      745,
+      672,
+      921,
+      838
+     ],
+     "circle_a_screen": [
+      745,
+      672,
+      921,
+      838
+     ],
+     "circle_b_screen": [
+      745,
+      672,
+      921,
+      838
+     ],
+     "object_w_px": 270,
+     "object_picture_width_pct": 14.55,
+     "object_screen_width_pct": 7.27,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "2",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "形",
+     "label": "石が四角い",
+     "line": "左下の、つけものの、石が、四角になりました。",
+     "box_px": [
+      110,
+      1820,
+      480,
+      2040
+     ],
+     "box_screen": [
+      57,
+      941,
+      248,
+      1055
+     ],
+     "circle_a_screen": [
+      57,
+      941,
+      248,
+      1055
+     ],
+     "circle_b_screen": [
+      57,
+      941,
+      248,
+      1055
+     ],
+     "object_w_px": 370,
+     "object_picture_width_pct": 19.94,
+     "object_screen_width_pct": 9.97,
+     "in_level_range": false,
+     "in_safe_y": false,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 8,
+   "scene": "朝市のひと休み",
+   "level": "上級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 204,
+   "outside_box_max_distance_px": 10.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "数",
+     "label": "梅干しが1つ減る",
+     "line": "右の、びんの、梅干しが、1つ減りました。",
+     "box_px": [
+      1178,
+      920,
+      1345,
+      1170
+     ],
+     "box_screen": [
+      609,
+      476,
+      696,
+      605
+     ],
+     "circle_a_screen": [
+      609,
+      476,
+      696,
+      605
+     ],
+     "circle_b_screen": [
+      609,
+      476,
+      696,
+      605
+     ],
+     "object_w_px": 120,
+     "object_picture_width_pct": 6.47,
+     "object_screen_width_pct": 3.23,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "模様",
+     "label": "丸い箱に線の模様",
+     "line": "右の、丸い箱に、線の模様が、つきました。",
+     "box_px": [
+      1145,
+      1380,
+      1375,
+      1575
+     ],
+     "box_screen": [
+      592,
+      714,
+      711,
+      815
+     ],
+     "circle_a_screen": [
+      592,
+      714,
+      711,
+      815
+     ],
+     "circle_b_screen": [
+      592,
+      714,
+      711,
+      815
+     ],
+     "object_w_px": 140,
+     "object_picture_width_pct": 7.54,
+     "object_screen_width_pct": 3.77,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "模様",
+     "label": "袋に丸い継ぎ当て",
+     "line": "右下の、袋に、丸い継ぎ当てが、つきました。",
+     "box_px": [
+      1485,
+      1770,
+      1710,
+      2005
+     ],
+     "box_screen": [
+      768,
+      916,
+      884,
+      1037
+     ],
+     "circle_a_screen": [
+      768,
+      916,
+      884,
+      1037
+     ],
+     "circle_b_screen": [
+      768,
+      916,
+      884,
+      1037
+     ],
+     "object_w_px": 140,
+     "object_picture_width_pct": 7.54,
+     "object_screen_width_pct": 3.77,
+     "in_level_range": true,
+     "in_safe_y": false,
+     "edit_version": "2",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 9,
+   "scene": "焼きいも屋さん",
+   "level": "上級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 263,
+   "outside_box_max_distance_px": 9.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "包み紙が青",
+     "line": "左の、包みが、青くなりました。",
+     "box_px": [
+      159,
+      975,
+      382,
+      1142
+     ],
+     "box_screen": [
+      82,
+      504,
+      198,
+      591
+     ],
+     "circle_a_screen": [
+      82,
+      504,
+      198,
+      591
+     ],
+     "circle_b_screen": [
+      82,
+      504,
+      198,
+      591
+     ],
+     "object_w_px": 130,
+     "object_picture_width_pct": 7.0,
+     "object_screen_width_pct": 3.5,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "3",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "缶のキャップが赤",
+     "line": "左上の、缶の、キャップが、赤くなりました。",
+     "box_px": [
+      185,
+      112,
+      262,
+      182
+     ],
+     "box_screen": [
+      96,
+      58,
+      136,
+      94
+     ],
+     "circle_a_screen": [
+      96,
+      58,
+      136,
+      94
+     ],
+     "circle_b_screen": [
+      96,
+      58,
+      136,
+      94
+     ],
+     "object_w_px": 70,
+     "object_picture_width_pct": 3.77,
+     "object_screen_width_pct": 1.89,
+     "in_level_range": false,
+     "in_safe_y": true,
+     "edit_version": "2",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "バケツの雪がない",
+     "line": "左下の、バケツの、雪が、なくなりました。",
+     "box_px": [
+      187,
+      1797,
+      395,
+      2033
+     ],
+     "box_screen": [
+      97,
+      929,
+      204,
+      1052
+     ],
+     "circle_a_screen": [
+      97,
+      929,
+      204,
+      1052
+     ],
+     "circle_b_screen": [
+      97,
+      929,
+      204,
+      1052
+     ],
+     "object_w_px": 130,
+     "object_picture_width_pct": 7.0,
+     "object_screen_width_pct": 3.5,
+     "in_level_range": true,
+     "in_safe_y": false,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "q": 10,
+   "scene": "朝市の帰り道",
+   "level": "上級",
+   "hint_diff": null,
+   "image_size": [
+    1856,
+    2088
+   ],
+   "content_px": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "scale_to_screen": 0.51724,
+   "outside_box_pixels_diff_gt15": 278,
+   "outside_box_max_distance_px": 9.0,
+   "answers": [
+    {
+     "id": 1,
+     "type": "形",
+     "label": "灯籠の穴が四角",
+     "line": "左の、石灯籠の、穴が、四角になりました。",
+     "box_px": [
+      465,
+      1100,
+      675,
+      1345
+     ],
+     "box_screen": [
+      241,
+      569,
+      349,
+      696
+     ],
+     "circle_a_screen": [
+      241,
+      569,
+      349,
+      696
+     ],
+     "circle_b_screen": [
+      241,
+      569,
+      349,
+      696
+     ],
+     "object_w_px": 140,
+     "object_picture_width_pct": 7.54,
+     "object_screen_width_pct": 3.77,
+     "in_level_range": true,
+     "in_safe_y": true,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "傘の持ち手がない",
+     "line": "右下の、傘の、持ち手が、なくなりました。",
+     "box_px": [
+      1520,
+      1620,
+      1856,
+      2030
+     ],
+     "box_screen": [
+      786,
+      838,
+      960,
+      1050
+     ],
+     "circle_a_screen": [
+      786,
+      838,
+      960,
+      1050
+     ],
+     "circle_b_screen": [
+      786,
+      838,
+      960,
+      1050
+     ],
+     "object_w_px": 140,
+     "object_picture_width_pct": 7.54,
+     "object_screen_width_pct": 3.77,
+     "in_level_range": true,
+     "in_safe_y": false,
+     "edit_version": "1",
+     "made_by": "gemini",
+     "note": ""
+    },
+    {
+     "id": 3,
+     "type": "形",
+     "label": "わら束が短い",
+     "line": "左下の、わらの束が、短くなりました。",
+     "box_px": [
+      116,
+      1800,
+      360,
+      2020
+     ],
+     "box_screen": [
+      60,
+      931,
+      186,
+      1045
+     ],
+     "circle_a_screen": [
+      60,
+      931,
+      186,
+      1045
+     ],
+     "circle_b_screen": [
+      60,
+      931,
+      186,
+      1045
+     ],
+     "object_w_px": 130,
+     "object_picture_width_pct": 7.0,
+     "object_screen_width_pct": 3.5,
+     "in_level_range": true,
+     "in_safe_y": false,
+     "edit_version": "2",
+     "made_by": "gemini",
+     "note": ""
+    }
+   ]
+  }
+ ]
+}

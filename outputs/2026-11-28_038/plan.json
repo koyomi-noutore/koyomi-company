@@ -1,0 +1,2473 @@
+{
+ "episode": "2026-11-28_038",
+ "season": "冬",
+ "topics": [
+  "冬の朝市"
+ ],
+ "note": "第38回（冬の朝市・冬・全10問・新規）。画風は案Y（水彩・主役大きく・人物あり）。タイトルは型A（title_plan）。サムネ・タイトルは仮。ショートは作らない。",
+ "youtube": {
+  "title": "【間違い探し】高齢者の認知症予防｜冬の朝市 全10問",
+  "description_file": "description.md",
+  "publish_plan": "未定（CEOが決める）"
+ },
+ "screens": {
+  "opening_title": "冬の朝市の間違い探し　全10問",
+  "opening_sub": "やさしい問題から 順番に",
+  "unchiku_header": "こよみ先生の 冬の小話",
+  "unchiku_slides": [
+   {
+    "until": 7,
+    "texts": [
+     [
+      "ひと休み",
+      960,
+      330,
+      130,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "こよみ先生の 季節のお話",
+      960,
+      520,
+      80,
+      [
+       110,
+       84,
+       60
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 15,
+    "texts": [
+     [
+      "千葉の「勝浦朝市」",
+      960,
+      330,
+      100,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "知っていますか？",
+      960,
+      520,
+      90,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 25,
+    "texts": [
+     [
+      "400年以上前から",
+      960,
+      330,
+      100,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "続くといわれる朝市",
+      960,
+      520,
+      88,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   },
+   {
+    "until": 40,
+    "texts": [
+     [
+      "畑の物と 海の物を",
+      960,
+      330,
+      100,
+      [
+       180,
+       70,
+       40
+      ],
+      6
+     ],
+     [
+      "持ち寄る市でした",
+      960,
+      520,
+      100,
+      [
+       59,
+       47,
+       37
+      ],
+      0
+     ]
+    ]
+   }
+  ],
+  "ending_titles": [
+   [
+    "30個",
+    "朝市の達人"
+   ],
+   [
+    "22〜29個",
+    "露店の名人"
+   ],
+   [
+    "11〜21個",
+    "買い物見習い"
+   ],
+   [
+    "0〜10個",
+    "こたつでひと休み"
+   ]
+  ],
+  "ending_note": "見習いさんも、毎日ためせば 名人です",
+  "ending_next": "ほかの間違い探しも どうぞ",
+  "owl_layout": "bottom",
+  "endscreen_at": 9.0,
+  "rule_overlay": {
+   "text": "右の絵で 違いを3つ さがそう",
+   "sub": "1問 90秒",
+   "sec": 8.0
+  }
+ },
+ "timeline": {
+  "total": 1176.0,
+  "opening": [
+   0.0,
+   7.0
+  ],
+  "rule": [
+   7.0,
+   7.0
+  ],
+  "q_start": {
+   "1": 7.0,
+   "2": 117.0,
+   "3": 227.0,
+   "4": 337.0,
+   "5": 447.0,
+   "6": 589.0,
+   "7": 699.0,
+   "8": 809.0,
+   "9": 919.0,
+   "10": 1029.0
+  },
+  "unchiku": [
+   557.0,
+   589.0
+  ],
+  "ending": [
+   1139.0,
+   1176.0
+  ],
+  "card": 3.0,
+  "solve": 90.0,
+  "answer": 17.0,
+  "hint_at": null,
+  "ten_at": 80.0,
+  "ans_first": 1.6,
+  "ans_step": 4.8,
+  "solve_calls": [
+   [
+    30,
+    "あと60秒です。"
+   ],
+   [
+    60,
+    "あと30秒です。"
+   ]
+  ],
+  "go_delay": 2.8,
+  "ans_shift": {}
+ },
+ "lines": {
+  "opening": [
+   {
+    "id": "op",
+    "at": 0.0,
+    "text": "朝市の間違い探し、10問。",
+    "face": "smile",
+    "until": 3.9
+   },
+   {
+    "id": "op2",
+    "at": 3.9,
+    "text": "だんだん、難しくなります。",
+    "face": "wink",
+    "until": 7.0
+   }
+  ],
+  "rule": [],
+  "unchiku": [
+   {
+    "id": "u1",
+    "at": 0.0,
+    "text": "ここでひと休み。こよみ先生の季節のお話です。",
+    "face": "smile",
+    "until": 7.0
+   },
+   {
+    "id": "u2",
+    "at": 7.0,
+    "text": "千葉県の、勝浦の朝市、知っていますか？",
+    "face": "think",
+    "until": 15.0
+   },
+   {
+    "id": "u3",
+    "at": 15.0,
+    "text": "400年以上前から続くと言われる、朝市です。",
+    "face": "surprise",
+    "until": 25.0
+   },
+   {
+    "id": "u4",
+    "at": 25.0,
+    "text": "畑の物と、海の物を、持ち寄る市でした。",
+    "face": "wink",
+    "until": 32.0
+   }
+  ],
+  "ending": [
+   {
+    "id": "e1",
+    "at": 0.0,
+    "text": "これで10問、おしまいです。",
+    "face": "yay",
+    "until": 3.6
+   },
+   {
+    "id": "e2",
+    "at": 3.6,
+    "text": "30個の違い、いくつ見つかりましたか。今日の称号です。",
+    "face": "smile",
+    "until": 10.2
+   },
+   {
+    "id": "e3",
+    "at": 10.2,
+    "text": "チャンネル登録とベルで、毎朝8時半に問題が届きます。毎日の頭の体操にどうぞ。",
+    "face": "smile",
+    "until": 21.0
+   },
+   {
+    "id": "e4",
+    "at": 21.0,
+    "text": "ほかにも、いろいろな間違い探しがあります。もっと難しい問題に挑戦したい方は、画面の動画をクリックしてくださいね。",
+    "face": "wink",
+    "until": 36.0
+   }
+  ],
+  "extra": [
+   {
+    "id": "c_comment",
+    "at": 464.0,
+    "face": "smile",
+    "until": 473.0,
+    "text": "半分まで来ました。見つかった数を、あとでコメントで教えてくださいね。"
+   }
+  ]
+ },
+ "readings": [
+  [
+   "縁側のみかんと猫",
+   "えんがわのみかんとねこ"
+  ],
+  [
+   "縁側のお茶の時間",
+   "えんがわのおちゃのじかん"
+  ],
+  [
+   "雪うさぎの耳の葉",
+   "ゆきうさぎのみみのは"
+  ],
+  [
+   "雪だるまと冬の朝",
+   "ゆきだるまとふゆのあさ"
+  ],
+  [
+   "こたつのみかん",
+   "こたつのみかん"
+  ],
+  [
+   "みかんの木の庭",
+   "みかんのきのにわ"
+  ],
+  [
+   "雪うさぎの縁側",
+   "ゆきうさぎのえんがわ"
+  ],
+  [
+   "縁側のひなた",
+   "えんがわのひなた"
+  ],
+  [
+   "みかん箱と猫",
+   "みかんばことねこ"
+  ],
+  [
+   "雪だるまの庭",
+   "ゆきだるまのにわ"
+  ],
+  [
+   "冬の朝の窓辺",
+   "ふゆのあさのまどべ"
+  ],
+  [
+   "時計の文字盤",
+   "とけいのもじばん"
+  ],
+  [
+   "雪だるまの鼻",
+   "ゆきだるまのはな"
+  ],
+  [
+   "間違い探し",
+   "まちがいさがし"
+  ],
+  [
+   "雪かきの道",
+   "ゆきかきのみち"
+  ],
+  [
+   "雪の玄関先",
+   "ゆきのげんかんさき"
+  ],
+  [
+   "麦わら帽子",
+   "むぎわらぼうし"
+  ],
+  [
+   "色えんぴつ",
+   "いろえんぴつ"
+  ],
+  [
+   "ひょうたん",
+   "ひょうたん"
+  ],
+  [
+   "手ぶくろ",
+   "てぶくろ"
+  ],
+  [
+   "七味入れ",
+   "しちみいれ"
+  ],
+  [
+   "はし置き",
+   "はしおき"
+  ],
+  [
+   "赤とんぼ",
+   "あかとんぼ"
+  ],
+  [
+   "お月さま",
+   "おつきさま"
+  ],
+  [
+   "火ばさみ",
+   "ひばさみ"
+  ],
+  [
+   "赤いふた",
+   "あかいふた"
+  ],
+  [
+   "大学いも",
+   "だいがくいも"
+  ],
+  [
+   "反対向き",
+   "はんたいむき"
+  ],
+  [
+   "昼ごはん",
+   "ひるごはん"
+  ],
+  [
+   "続いて",
+   "つづいて"
+  ],
+  [
+   "持ち手",
+   "もちて"
+  ],
+  [
+   "休み場",
+   "やすみば"
+  ],
+  [
+   "飛ばし",
+   "とばし"
+  ],
+  [
+   "茶わん",
+   "ちゃわん"
+  ],
+  [
+   "鉢植え",
+   "はちうえ"
+  ],
+  [
+   "丸ごと",
+   "まるごと"
+  ],
+  [
+   "通り道",
+   "とおりみち"
+  ],
+  [
+   "大丈夫",
+   "だいじょうぶ"
+  ],
+  [
+   "難しい",
+   "むずかしい"
+  ],
+  [
+   "段の上",
+   "だんのうえ"
+  ],
+  [
+   "雪の上",
+   "ゆきのうえ"
+  ],
+  [
+   "植木鉢",
+   "うえきばち"
+  ],
+  [
+   "花びん",
+   "かびん"
+  ],
+  [
+   "湯のみ",
+   "ゆのみ"
+  ],
+  [
+   "赤い実",
+   "あかいみ"
+  ],
+  [
+   "長いす",
+   "ながいす"
+  ],
+  [
+   "新そば",
+   "しんそば"
+  ],
+  [
+   "干し柿",
+   "ほしがき"
+  ],
+  [
+   "鉄びん",
+   "てつびん"
+  ],
+  [
+   "酉の市",
+   "とりのいち"
+  ],
+  [
+   "飛び石",
+   "とびいし"
+  ],
+  [
+   "掛け軸",
+   "かけじく"
+  ],
+  [
+   "切り株",
+   "きりかぶ"
+  ],
+  [
+   "石灯籠",
+   "いしどうろう"
+  ],
+  [
+   "少なく",
+   "すくなく"
+  ],
+  [
+   "向いて",
+   "むいて"
+  ],
+  [
+   "まん中",
+   "まんなか"
+  ],
+  [
+   "ゆで卵",
+   "ゆでたまご"
+  ],
+  [
+   "右はし",
+   "みぎはし"
+  ],
+  [
+   "茶色い",
+   "ちゃいろい"
+  ],
+  [
+   "花びら",
+   "はなびら"
+  ],
+  [
+   "土なべ",
+   "どなべ"
+  ],
+  [
+   "玉ねぎ",
+   "たまねぎ"
+  ],
+  [
+   "変わり",
+   "かわり"
+  ],
+  [
+   "落ち葉",
+   "おちば"
+  ],
+  [
+   "黄色い",
+   "きいろい"
+  ],
+  [
+   "大きく",
+   "おおきく"
+  ],
+  [
+   "舞って",
+   "まって"
+  ],
+  [
+   "葉っぱ",
+   "はっぱ"
+  ],
+  [
+   "魔法瓶",
+   "まほうびん"
+  ],
+  [
+   "小さな",
+   "ちいさな"
+  ],
+  [
+   "第1問",
+   "だいいちもん"
+  ],
+  [
+   "第2問",
+   "だいにもん"
+  ],
+  [
+   "第3問",
+   "だいさんもん"
+  ],
+  [
+   "第4問",
+   "だいよんもん"
+  ],
+  [
+   "第5問",
+   "だいごもん"
+  ],
+  [
+   "60秒",
+   "ろくじゅうびょう"
+  ],
+  [
+   "30秒",
+   "さんじゅうびょう"
+  ],
+  [
+   "10秒",
+   "じゅうびょう"
+  ],
+  [
+   "小さく",
+   "ちいさく"
+  ],
+  [
+   "取っ手",
+   "とって"
+  ],
+  [
+   "木の札",
+   "きのふだ"
+  ],
+  [
+   "大きな",
+   "おおきな"
+  ],
+  [
+   "前かけ",
+   "まえかけ"
+  ],
+  [
+   "結び目",
+   "むすびめ"
+  ],
+  [
+   "風呂敷",
+   "ふろしき"
+  ],
+  [
+   "芋煮会",
+   "いもにかい"
+  ],
+  [
+   "秋景色",
+   "あきげしき"
+  ],
+  [
+   "地面",
+   "じめん"
+  ],
+  [
+   "里山",
+   "さとやま"
+  ],
+  [
+   "狩り",
+   "がり"
+  ],
+  [
+   "巣箱",
+   "すばこ"
+  ],
+  [
+   "長靴",
+   "ながぐつ"
+  ],
+  [
+   "毛糸",
+   "けいと"
+  ],
+  [
+   "山道",
+   "やまみち"
+  ],
+  [
+   "胞子",
+   "ほうし"
+  ],
+  [
+   "菌類",
+   "きんるい"
+  ],
+  [
+   "酵母",
+   "こうぼ"
+  ],
+  [
+   "仲間",
+   "なかま"
+  ],
+  [
+   "称号",
+   "しょうごう"
+  ],
+  [
+   "時計",
+   "とけい"
+  ],
+  [
+   "お盆",
+   "おぼん"
+  ],
+  [
+   "栄養",
+   "えいよう"
+  ],
+  [
+   "登録",
+   "とうろく"
+  ],
+  [
+   "毎朝",
+   "まいあさ"
+  ],
+  [
+   "動画",
+   "どうが"
+  ],
+  [
+   "画面",
+   "がめん"
+  ],
+  [
+   "挑戦",
+   "ちょうせん"
+  ],
+  [
+   "違い",
+   "ちがい"
+  ],
+  [
+   "1羽",
+   "いちわ"
+  ],
+  [
+   "小鳥",
+   "ことり"
+  ],
+  [
+   "左の",
+   "ひだりの"
+  ],
+  [
+   "急須",
+   "きゅうす"
+  ],
+  [
+   "屋根",
+   "やね"
+  ],
+  [
+   "小屋",
+   "こや"
+  ],
+  [
+   "縁側",
+   "えんがわ"
+  ],
+  [
+   "朝市",
+   "あさいち"
+  ],
+  [
+   "お皿",
+   "おさら"
+  ],
+  [
+   "1匹",
+   "いっぴき"
+  ],
+  [
+   "お茶",
+   "おちゃ"
+  ],
+  [
+   "金色",
+   "きんいろ"
+  ],
+  [
+   "熊手",
+   "くまで"
+  ],
+  [
+   "飾り",
+   "かざり"
+  ],
+  [
+   "白く",
+   "しろく"
+  ],
+  [
+   "掛け",
+   "かけ"
+  ],
+  [
+   "漬物",
+   "つけもの"
+  ],
+  [
+   "軍手",
+   "ぐんて"
+  ],
+  [
+   "茶色",
+   "ちゃいろ"
+  ],
+  [
+   "風鈴",
+   "ふうりん"
+  ],
+  [
+   "黒板",
+   "こくばん"
+  ],
+  [
+   "反対",
+   "はんたい"
+  ],
+  [
+   "片方",
+   "かたほう"
+  ],
+  [
+   "黄色",
+   "きいろ"
+  ],
+  [
+   "赤く",
+   "あかく"
+  ],
+  [
+   "青く",
+   "あおく"
+  ],
+  [
+   "赤い",
+   "あかい"
+  ],
+  [
+   "筆箱",
+   "ふでばこ"
+  ],
+  [
+   "木箱",
+   "きばこ"
+  ],
+  [
+   "湯気",
+   "ゆげ"
+  ],
+  [
+   "紙袋",
+   "かみぶくろ"
+  ],
+  [
+   "消え",
+   "きえ"
+  ],
+  [
+   "付き",
+   "つき"
+  ],
+  [
+   "水筒",
+   "すいとう"
+  ],
+  [
+   "帽子",
+   "ぼうし"
+  ],
+  [
+   "上級",
+   "じょうきゅう"
+  ],
+  [
+   "中級",
+   "ちゅうきゅう"
+  ],
+  [
+   "初級",
+   "しょきゅう"
+  ],
+  [
+   "黒い",
+   "くろい"
+  ],
+  [
+   "一本",
+   "いっぽん"
+  ],
+  [
+   "高く",
+   "たかく"
+  ],
+  [
+   "短く",
+   "みじかく"
+  ],
+  [
+   "青い",
+   "あおい"
+  ],
+  [
+   "白い",
+   "しろい"
+  ],
+  [
+   "後半",
+   "こうはん"
+  ],
+  [
+   "最後",
+   "さいご"
+  ],
+  [
+   "難問",
+   "なんもん"
+  ],
+  [
+   "問題",
+   "もんだい"
+  ],
+  [
+   "答え",
+   "こたえ"
+  ],
+  [
+   "少し",
+   "すこし"
+  ],
+  [
+   "大根",
+   "だいこん"
+  ],
+  [
+   "小皿",
+   "こざら"
+  ],
+  [
+   "向き",
+   "むき"
+  ],
+  [
+   "一つ",
+   "ひとつ"
+  ],
+  [
+   "模様",
+   "もよう"
+  ],
+  [
+   "下駄",
+   "げた"
+  ],
+  [
+   "金属",
+   "きんぞく"
+  ],
+  [
+   "無く",
+   "なく"
+  ],
+  [
+   "増え",
+   "ふえ"
+  ],
+  [
+   "向い",
+   "むい"
+  ],
+  [
+   "金具",
+   "かなぐ"
+  ],
+  [
+   "一枚",
+   "いちまい"
+  ],
+  [
+   "真上",
+   "まうえ"
+  ],
+  [
+   "屋台",
+   "やたい"
+  ],
+  [
+   "銭湯",
+   "せんとう"
+  ],
+  [
+   "今日",
+   "きょう"
+  ],
+  [
+   "一緒",
+   "いっしょ"
+  ],
+  [
+   "山門",
+   "さんもん"
+  ],
+  [
+   "川辺",
+   "かわべ"
+  ],
+  [
+   "お面",
+   "おめん"
+  ],
+  [
+   "銀色",
+   "ぎんいろ"
+  ],
+  [
+   "丸い",
+   "まるい"
+  ],
+  [
+   "手前",
+   "てまえ"
+  ],
+  [
+   "座る",
+   "すわる"
+  ],
+  [
+   "重ね",
+   "かさね"
+  ],
+  [
+   "減り",
+   "へり"
+  ],
+  [
+   "芋煮",
+   "いもに"
+  ],
+  [
+   "川原",
+   "かわら"
+  ],
+  [
+   "里芋",
+   "さといも"
+  ],
+  [
+   "夕方",
+   "ゆうがた"
+  ],
+  [
+   "山形",
+   "やまがた"
+  ],
+  [
+   "宮城",
+   "みやぎ"
+  ],
+  [
+   "牛肉",
+   "ぎゅうにく"
+  ],
+  [
+   "豚肉",
+   "ぶたにく"
+  ],
+  [
+   "土地",
+   "とち"
+  ],
+  [
+   "家庭",
+   "かてい"
+  ],
+  [
+   "岩",
+   "いわ"
+  ],
+  [
+   "栗",
+   "くり"
+  ],
+  [
+   "裏",
+   "うら"
+  ],
+  [
+   "皮",
+   "かわ"
+  ],
+  [
+   "石",
+   "いし"
+  ],
+  [
+   "木",
+   "き"
+  ],
+  [
+   "庭",
+   "にわ"
+  ],
+  [
+   "猫",
+   "ねこ"
+  ],
+  [
+   "実",
+   "み"
+  ],
+  [
+   "番",
+   "ばん"
+  ],
+  [
+   "柱",
+   "はしら"
+  ],
+  [
+   "棚",
+   "たな"
+  ],
+  [
+   "鈴",
+   "すず"
+  ],
+  [
+   "菊",
+   "きく"
+  ],
+  [
+   "器",
+   "うつわ"
+  ],
+  [
+   "花",
+   "はな"
+  ],
+  [
+   "前",
+   "まえ"
+  ],
+  [
+   "笠",
+   "かさ"
+  ],
+  [
+   "鉢",
+   "はち"
+  ],
+  [
+   "柿",
+   "かき"
+  ],
+  [
+   "台",
+   "だい"
+  ],
+  [
+   "軒",
+   "のき"
+  ],
+  [
+   "鐘",
+   "かね"
+  ],
+  [
+   "竹",
+   "たけ"
+  ],
+  [
+   "枝",
+   "えだ"
+  ],
+  [
+   "絵",
+   "え"
+  ],
+  [
+   "上",
+   "うえ"
+  ],
+  [
+   "緑",
+   "みどり"
+  ],
+  [
+   "机",
+   "つくえ"
+  ],
+  [
+   "数",
+   "かず"
+  ],
+  [
+   "形",
+   "かたち"
+  ],
+  [
+   "先",
+   "さき"
+  ],
+  [
+   "下",
+   "した"
+  ],
+  [
+   "輪",
+   "わ"
+  ],
+  [
+   "針",
+   "はり"
+  ],
+  [
+   "牛",
+   "うし"
+  ],
+  [
+   "左",
+   "ひだり"
+  ],
+  [
+   "右",
+   "みぎ"
+  ],
+  [
+   "頭",
+   "あたま"
+  ],
+  [
+   "刃",
+   "は"
+  ],
+  [
+   "量",
+   "りょう"
+  ],
+  [
+   "苗",
+   "なえ"
+  ],
+  [
+   "丸",
+   "まる"
+  ],
+  [
+   "桶",
+   "おけ"
+  ],
+  [
+   "火",
+   "ひ"
+  ],
+  [
+   "葉",
+   "は"
+  ],
+  [
+   "色",
+   "いろ"
+  ],
+  [
+   "鍋",
+   "なべ"
+  ],
+  [
+   "畑",
+   "はたけ"
+  ],
+  [
+   "壁",
+   "かべ"
+  ],
+  [
+   "紋",
+   "もん"
+  ],
+  [
+   "星",
+   "ほし"
+  ],
+  [
+   "銀",
+   "ぎん"
+  ],
+  [
+   "味",
+   "あじ"
+  ],
+  [
+   "近い",
+   "ちかい"
+  ],
+  [
+   "細長",
+   "ほそなが"
+  ],
+  [
+   "松ぼっくり",
+   "まつぼっくり"
+  ],
+  [
+   "毛糸玉",
+   "けいとだま"
+  ],
+  [
+   "水玉",
+   "みずたま"
+  ],
+  [
+   "耳あて",
+   "みみあて"
+  ],
+  [
+   "細長い",
+   "ほそながい"
+  ],
+  [
+   "缶",
+   "かん"
+  ],
+  [
+   "紙ぶくろ",
+   "かみぶくろ"
+  ],
+  [
+   "雪玉",
+   "ゆきだま"
+  ],
+  [
+   "雪だるま",
+   "ゆきだるま"
+  ],
+  [
+   "雪の公園",
+   "ゆきのこうえん"
+  ],
+  [
+   "公園",
+   "こうえん"
+  ],
+  [
+   "丘",
+   "おか"
+  ],
+  [
+   "親子",
+   "おやこ"
+  ],
+  [
+   "由来",
+   "ゆらい"
+  ],
+  [
+   "東屋",
+   "あずまや"
+  ],
+  [
+   "玉が",
+   "たまが"
+  ],
+  [
+   "日本",
+   "にほん"
+  ],
+  [
+   "名前",
+   "なまえ"
+  ],
+  [
+   "似て",
+   "にて"
+  ],
+  [
+   "説",
+   "せつ"
+  ],
+  [
+   "多い",
+   "おおい"
+  ],
+  [
+   "腰かけ",
+   "こしかけ"
+  ],
+  [
+   "雪見障子",
+   "ゆきみしょうじ"
+  ],
+  [
+   "露天風呂",
+   "ろてんぶろ"
+  ],
+  [
+   "雪見",
+   "ゆきみ"
+  ],
+  [
+   "障子",
+   "しょうじ"
+  ],
+  [
+   "縁台",
+   "えんだい"
+  ],
+  [
+   "湯上がり",
+   "ゆあがり"
+  ],
+  [
+   "水差し",
+   "みずさし"
+  ],
+  [
+   "水色",
+   "みずいろ"
+  ],
+  [
+   "手ぬぐい",
+   "てぬぐい"
+  ],
+  [
+   "置物",
+   "おきもの"
+  ],
+  [
+   "雪景色",
+   "ゆきげしき"
+  ],
+  [
+   "景色",
+   "けしき"
+  ],
+  [
+   "部屋",
+   "へや"
+  ],
+  [
+   "座った",
+   "すわった"
+  ],
+  [
+   "上げる",
+   "あげる"
+  ],
+  [
+   "半分",
+   "はんぶん"
+  ],
+  [
+   "雪の庭",
+   "ゆきのにわ"
+  ],
+  [
+   "竹垣",
+   "たけがき"
+  ],
+  [
+   "2つ",
+   "ふたつ"
+  ],
+  [
+   "柄",
+   "え"
+  ],
+  [
+   "串",
+   "くし"
+  ],
+  [
+   "2本",
+   "にほん"
+  ],
+  [
+   "富士山",
+   "ふじさん"
+  ],
+  [
+   "湯船",
+   "ゆぶね"
+  ],
+  [
+   "脱衣所",
+   "だついじょ"
+  ],
+  [
+   "下駄箱",
+   "げたばこ"
+  ],
+  [
+   "洗い場",
+   "あらいば"
+  ],
+  [
+   "番台",
+   "ばんだい"
+  ],
+  [
+   "牛乳",
+   "ぎゅうにゅう"
+  ],
+  [
+   "玄関",
+   "げんかん"
+  ],
+  [
+   "東京",
+   "とうきょう"
+  ],
+  [
+   "描か",
+   "えがか"
+  ],
+  [
+   "百年以上前",
+   "ひゃくねんいじょうまえ"
+  ],
+  [
+   "100年以上前",
+   "ひゃくねんいじょうまえ"
+  ],
+  [
+   "真ん中",
+   "まんなか"
+  ],
+  [
+   "真中",
+   "まんなか"
+  ],
+  [
+   "線",
+   "せん"
+  ],
+  [
+   "餅つき",
+   "もちつき"
+  ],
+  [
+   "餅",
+   "もち"
+  ],
+  [
+   "結果発表",
+   "けっかはっぴょう"
+  ],
+  [
+   "お椀",
+   "おわん"
+  ],
+  [
+   "椀",
+   "わん"
+  ],
+  [
+   "土間",
+   "どま"
+  ],
+  [
+   "軒下",
+   "のきした"
+  ],
+  [
+   "道具だな",
+   "どうぐだな"
+  ],
+  [
+   "もち米",
+   "もちごめ"
+  ],
+  [
+   "ご存じ",
+   "ごぞんじ"
+  ],
+  [
+   "強い",
+   "つよい"
+  ],
+  [
+   "釜",
+   "かま"
+  ],
+  [
+   "土のつぼ",
+   "つちのつぼ"
+  ],
+  [
+   "大根おろし",
+   "だいこんおろし"
+  ],
+  [
+   "ひしゃく",
+   "ひしゃく"
+  ],
+  [
+   "本",
+   "ほん"
+  ],
+  [
+   "きな粉",
+   "きなこ"
+  ],
+  [
+   "紫",
+   "むらさき"
+  ],
+  [
+   "すずめ",
+   "すずめ"
+  ],
+  [
+   "凧",
+   "たこ"
+  ],
+  [
+   "河原",
+   "かわら"
+  ],
+  [
+   "杭",
+   "くい"
+  ],
+  [
+   "土手",
+   "どて"
+  ],
+  [
+   "枯れすすき",
+   "かれすすき"
+  ],
+  [
+   "作業台",
+   "さぎょうだい"
+  ],
+  [
+   "橋",
+   "はし"
+  ],
+  [
+   "糸巻き",
+   "いとまき"
+  ],
+  [
+   "左上",
+   "ひだりうえ"
+  ],
+  [
+   "木づち",
+   "きづち"
+  ],
+  [
+   "長ぐつ",
+   "ながぐつ"
+  ],
+  [
+   "2枚",
+   "にまい"
+  ],
+  [
+   "減りました",
+   "へりました"
+  ],
+  [
+   "呼ばれ",
+   "よばれ"
+  ],
+  [
+   "似ている",
+   "にている"
+  ],
+  [
+   "上がる",
+   "あがる"
+  ],
+  [
+   "見上げる",
+   "みあげる"
+  ],
+  [
+   "楽しい",
+   "たのしい"
+  ],
+  [
+   "全5問",
+   "ぜんごもん"
+  ],
+  [
+   "右向き",
+   "みぎむき"
+  ],
+  [
+   "かご",
+   "かご"
+  ],
+  [
+   "おけ",
+   "おけ"
+  ],
+  [
+   "スズメ",
+   "スズメ"
+  ],
+  [
+   "向きを変え",
+   "むきを、かえ"
+  ],
+  [
+   "左向き",
+   "ひだりむき"
+  ],
+  [
+   "マフラー",
+   "マフラー"
+  ],
+  [
+   "雪国",
+   "ゆきぐに"
+  ],
+  [
+   "古民家",
+   "こみんか"
+  ],
+  [
+   "囲炉裏",
+   "いろり"
+  ],
+  [
+   "自在鉤",
+   "じざいかぎ"
+  ],
+  [
+   "鉄瓶",
+   "てつびん"
+  ],
+  [
+   "火加減",
+   "ひかげん"
+  ],
+  [
+   "知恵",
+   "ちえ"
+  ],
+  [
+   "昔の",
+   "むかしの"
+  ]
+ ],
+ "voice_override": {
+  "op": "あさいちの、まちがいさがし、じゅうもん。",
+  "op2": "だんだん、むずかしくなります。",
+  "u1": "ここでひとやすみ。こよみせんせいの、きせつのおはなしです。",
+  "u2": "ちばけんの、かつうらの、あさいち、しっていますか？",
+  "u3": "よんひゃくねんいじょうまえから、つづくと、いわれる、あさいちです。",
+  "u4": "はたけのものと、うみのものを、もちよる、いちでした。",
+  "e1": "これで、じゅうもん、おしまいです。",
+  "e2": "さんじゅっこの、ちがい、いくつみつかりましたか。きょうの、しょうごうです。",
+  "e3": "チャンネルとうろくとベルで、まいあさはちじはんに、もんだいがとどきます。まいにちの、あたまのたいそうにどうぞ。",
+  "e4": "ほかにも、いろいろな、まちがいさがしがあります。もっとむずかしいもんだいに、ちょうせんしたいかたは、がめんのどうがを、クリックしてくださいね。",
+  "c_comment": "はんぶんまで、きました。みつかったかずを、あとでコメントでおしえてくださいね。",
+  "q1_card": "いちもんめ、やさしい、もんだい。あさいちの、いりぐちです。",
+  "q1_go": "みぎのえのちがいを、みっつさがしてください。どうぞ。",
+  "q1_ans1": "ひだりの、かごが、あかく、なりました。",
+  "q1_ans2": "みぎの、せいろの、ふたが、あおく、なりました。",
+  "q1_ans3": "ひだりしたの、かぼちゃが、みどりに、なりました。",
+  "q2_card": "にもんめ、しょきゅう。ひものの、ろてんです。",
+  "q2_go": "では、にもんめ。どうぞ。",
+  "q2_ans1": "ひだりの、たるが、みどりに、なりました。",
+  "q2_ans2": "みぎの、はかりの、おさらが、あかく、なりました。",
+  "q2_ans3": "ひだりしたの、しちりんの、あみが、なくなりました。",
+  "q3_card": "さんもんめ、しょきゅう。おもちの、ろてんです。",
+  "q3_go": "つづいて、さんもんめ。どうぞ。",
+  "q3_ans1": "ひだりうえの、おもちが、しかくに、なりました。",
+  "q3_ans2": "みぎの、ちゃづつが、あおく、なりました。",
+  "q3_ans3": "ひだりしたの、かんの、ふたが、あきました。",
+  "q4_card": "よんもんめ、ちゅうきゅう。やさいの、ろてんです。",
+  "q4_go": "よんもんめです。じっくりどうぞ。",
+  "q4_ans1": "みぎしたの、ほうちょうの、むきが、はんたいに、なりました。",
+  "q4_ans2": "みぎの、かごの、にんじんが、しろく、なりました。",
+  "q4_ans3": "ひだりしたの、ごぼうが、いっぽん、なくなりました。",
+  "q5_card": "ごもんめ、ちゅうきゅう。あったか、あまざけの、やたいです。",
+  "q5_go": "ごもんめ、どうぞ。",
+  "q5_ans1": "ひだりうえの、かみコップが、みどりに、なりました。",
+  "q5_ans2": "みぎの、かごの、まんじゅうが、ひとつ、へりました。",
+  "q5_ans3": "ひだりしたの、ぬのが、しまもように、なりました。",
+  "q6_card": "ろくもんめ、ちゅうきゅう。うみのさちの、ろてんです。",
+  "q6_go": "ゆっくり、ろくもんめ。どうぞ。",
+  "q6_ans1": "ひだりうえの、あみぶくろが、あおく、なりました。",
+  "q6_ans2": "みぎの、おさらの、するめが、いちまい、へりました。",
+  "q6_ans3": "ひだりの、こんぶの、おびが、みどりに、なりました。",
+  "q7_card": "ななもんめ、ちゅうきゅう。つけものの、ろてんです。",
+  "q7_go": "もうすこしです。ななもんめ、どうぞ。",
+  "q7_ans1": "ひだりの、ぬかぶくろの、ひもが、あおく、なりました。",
+  "q7_ans2": "みぎの、ちゃわんの、さじが、なくなりました。",
+  "q7_ans3": "ひだりしたの、つけものの、いしが、しかくに、なりました。",
+  "q8_card": "はちもんめ、じょうきゅう。あさいちの、ひとやすみです。",
+  "q8_go": "では、はちもんめ。どうぞ。",
+  "q8_ans1": "みぎの、びんの、うめぼしが、ひとつ、へりました。",
+  "q8_ans2": "みぎの、まるいはこに、せんの、もようが、つきました。",
+  "q8_ans3": "みぎしたの、ふくろに、まるい、つぎあてが、つきました。",
+  "q9_card": "きゅうもんめ、じょうきゅう。やきいもやさんです。",
+  "q9_go": "つぎは、きゅうもんめです。どうぞ。",
+  "q9_ans1": "ひだりの、つつみが、あおく、なりました。",
+  "q9_ans2": "ひだりうえの、かんの、キャップが、あかく、なりました。",
+  "q9_ans3": "ひだりしたの、バケツの、ゆきが、なくなりました。",
+  "q10_card": "じゅうもんめ、じょうきゅう。あさいちの、かえりみちです。",
+  "q10_go": "さいごの、じゅうもんめ。どうぞ。",
+  "q10_ans1": "ひだりの、いしどうろうの、あなが、しかくに、なりました。",
+  "q10_ans2": "みぎしたの、かさの、もちてが、なくなりました。",
+  "q10_ans3": "ひだりしたの、わらのたばが、みじかく、なりました。"
+ },
+ "voice": {
+  "provider": "fish",
+  "reference_id": "63819275ce38440ea245ca988abf976e",
+  "model": "s1",
+  "speed": 0.88,
+  "credit": "音声：Fish Audio（AIで合成した音声です）"
+ },
+ "images": {
+  "model": "gemini-3-pro-image",
+  "size": "2K",
+  "aspect": "4:5",
+  "style": "A Japanese picture-book illustration in watercolor with clear dark ink outlines and CLEAR, warm, natural colors (not pale). Bright, clean background. Natural, hand-drawn, slightly rounded shapes; not geometric, not flat vector, not photorealistic. PORTRAIT-ISH composition, about 8:9. The painting fills the entire canvas edge to edge: no white border. The MAIN SUBJECT (a gentle elderly person with the main thing described) is drawn BIG and takes more than half of the picture. Around it, only a few other objects, each clearly separated with space around it, fully visible. ",
+  "keep_alt": " Keep everything else in the picture exactly the same: same composition, same position of every object, same colors, same style. Do not add or remove anything else. Leave no faint outline, ghost or smudge. No text.",
+  "keep_remove": " Where an object is removed, fill the area naturally with what would be behind it, and leave no faint outline, ghost or smudge of the removed object.",
+  "batch": true,
+  "neutral_target": 1.4
+ },
+ "questions": [
+  {
+   "q": 1,
+   "scene": "雪の朝市の入り口",
+   "level": "やさしい",
+   "go": "右の絵の違いを、3つ探してください。どうぞ。",
+   "prompt": "Scene: an elderly Japanese woman with a gentle smile (navy padded coat, gray knitted hat, brown apron) standing in the CENTER holding a big bundle of white daikon radishes with green leaves in her arms, in front of a wooden morning-market stall with a blank cloth awning and snow on its roof; the woman and the stall together fill more than half of the picture; her feet firmly on the snow. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf, table or sill (or hangs from a visible hook, beam, rack or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: about one fifteenth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only; cloth banners and awnings are blank). No animals, no birds. Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, on the snow) a small bamboo backpack basket (seoi-kago) standing upright; (upper right, on the snow) a small tied burlap sack; (middle left, on the snow) a small bundle of three green leeks lying on a wooden board; (middle right, on the snow) a small two-tier bamboo steamer with a lid, standing on a small wooden box; (lower left, on the snow) a small neat pile of three round orange pumpkins; (lower right, on the snow) a small coil of straw rope; The whole canvas is ONE continuous full-bleed painting: snowy ground with soft blue shadows covers the entire lower two thirds edge to edge and the market street with stalls fills the background; NO blank white paper areas and no hard straight edges. Every small listed object sits directly on this snowy ground with a small blue shadow under it (or on a small wooden box or table), including the upper ones, which sit on the snow further back, in front of the far stalls, never in the sky.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small bamboo backpack basket at the middle left becomes bright red (same shape, same place); (b) the lid of the small bamboo steamer at the middle right becomes bright blue (steamer and box otherwise unchanged); (c) one more orange pumpkin is added on top of the small pile of pumpkins at the lower left (the pile now has one more pumpkin);",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "背負いかごが赤",
+     "line": "左の、かごが、赤くなりました。",
+     "box": [
+      100,
+      980,
+      420,
+      1340
+     ],
+     "object_w": 290,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "蒸籠のふたが青",
+     "line": "右の、せいろの、ふたが、青くなりました。",
+     "box": [
+      1415,
+      1360,
+      1740,
+      1710
+     ],
+     "object_w": 320,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "かぼちゃが緑",
+     "line": "左下の、かぼちゃが、緑になりました。",
+     "box": [
+      110,
+      1740,
+      520,
+      2070
+     ],
+     "object_w": 410,
+     "src": "2"
+    }
+   ],
+   "answers_intro": "答えです。",
+   "retries": {},
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) all the orange pumpkins in the small pile of pumpkins at the lower left become bright green (same shapes, same places, same number);"
+   }
+  },
+  {
+   "q": 2,
+   "scene": "干物の露店",
+   "level": "初級",
+   "go": "では、2問目。どうぞ。",
+   "prompt": "Scene: an elderly Japanese woman with a gentle smile (blue apron, brown scarf, white head towel) standing at the CENTER behind a big wooden rack from which many dried fish (himono) hang by strings, at a snowy morning market; woman and rack fill more than half of the picture; her feet firmly on the snow. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf, table or sill (or hangs from a visible hook, beam, rack or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: about one eighteenth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only; cloth banners and awnings are blank). No animals, no birds. Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, on the snow) a small wooden barrel with a flat lid; (upper right, on the snow) a small plain bamboo basket; (middle left, on the snow) a small round straw cushion; (middle right, on the snow) a small old-fashioned hand scale with one pan, resting on a small wooden box; (lower left, on the snow) a small round charcoal brazier (shichirin) with a wire grill net on top; (lower right, on the snow) a small wooden mallet lying flat; The whole canvas is ONE continuous full-bleed painting: snowy ground with soft blue shadows covers the entire lower two thirds edge to edge and the market street with stalls fills the background; NO blank white paper areas and no hard straight edges. Every small listed object sits directly on this snowy ground with a small blue shadow under it (or on a small wooden box or table), including the upper ones, which sit on the snow further back, in front of the far stalls, never in the sky.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small wooden barrel at the middle left becomes bright green (same shape, same place); (b) the round pan on top of the small hand scale at the middle right becomes bright red (scale and box otherwise unchanged); (c) the wire grill net on top of the small charcoal brazier at the lower left is gone (the open top shows dark charcoal, brazier otherwise identical);",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "樽が緑",
+     "line": "左の、たるが、緑になりました。",
+     "box": [
+      100,
+      920,
+      390,
+      1260
+     ],
+     "object_w": 290,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "はかりの皿が赤",
+     "line": "右の、はかりの、お皿が、赤くなりました。",
+     "box": [
+      1470,
+      1260,
+      1730,
+      1360
+     ],
+     "object_w": 250,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "焼き網がない",
+     "line": "左下の、七輪の、あみが、なくなりました。",
+     "box": [
+      100,
+      1650,
+      430,
+      1960
+     ],
+     "object_w": 330,
+     "src": "1"
+    }
+   ],
+   "answers_intro": "答えです。",
+   "retries": {},
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
+  },
+  {
+   "q": 3,
+   "scene": "餅の露店",
+   "level": "初級",
+   "go": "では、3問目。どうぞ。",
+   "prompt": "Scene: an elderly Japanese man with a gentle smile (white cap, navy apron, gray sweater) standing at the CENTER holding a wooden tray of white rice cakes (mochi), behind a wooden stall counter with a little steam rising, at a snowy morning market; man and stall fill more than half of the picture; his feet firmly on the snow. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf, table or sill (or hangs from a visible hook, beam, rack or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: about one eighteenth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only; cloth banners and awnings are blank). No animals, no birds. Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, on the snow) a small wooden box holding a small plain tray with three round white rice cakes; (upper right, on the snow) a small bundle of rice straw; (middle left, on the snow) a small tied sack of beans; (middle right, on the snow) a small round green tea caddy with a lid; (lower left, on the snow) a small round metal tin with a lid; (lower right, on the snow) a small wooden rice paddle (shamoji) leaning on a box; The whole canvas is ONE continuous full-bleed painting: snowy ground with soft blue shadows covers the entire lower two thirds edge to edge and the market street with stalls fills the background; NO blank white paper areas and no hard straight edges. Every small listed object sits directly on this snowy ground with a small blue shadow under it (or on a small wooden box or table), including the upper ones, which sit on the snow further back, in front of the far stalls, never in the sky. IMPORTANT: there is NO white or blank background anywhere: the sky is pale blue and the ground is white snow with blue shadows over the WHOLE canvas including all four corners and edges. The two upper objects sit on the snow ground at about 35 to 40 percent of the picture height, in front of the far stalls (lower than the stall awnings), and never against a blank area.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the three round white rice cakes on the small tray inside the small wooden box at the upper left become square white rice cakes (same size, same place); (b) the small round green tea caddy at the middle right becomes bright blue (same shape, same place); (c) the lid of the small round metal tin at the lower left is slid open and rests tilted on the rim (tin otherwise identical);",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "形",
+     "label": "お餅が四角い",
+     "line": "左上の、お餅が、四角になりました。",
+     "box": [
+      100,
+      170,
+      400,
+      340
+     ],
+     "object_w": 250,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "茶筒が青",
+     "line": "右の、茶筒が、青くなりました。",
+     "box": [
+      1520,
+      920,
+      1700,
+      1190
+     ],
+     "object_w": 180,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "向き",
+     "label": "缶が開いている",
+     "line": "左下の、缶の、ふたが、あきました。",
+     "box": [
+      130,
+      1680,
+      360,
+      1890
+     ],
+     "object_w": 230,
+     "src": "1"
+    }
+   ],
+   "answers_intro": "答えです。",
+   "retries": {},
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
+  },
+  {
+   "q": 4,
+   "scene": "野菜の露店",
+   "level": "中級",
+   "go": "では、4問目。どうぞ。",
+   "prompt": "Scene: an elderly Japanese woman with a gentle smile (dark green apron, white towel on her head, gray coat) standing at the CENTER holding a big round white Chinese cabbage in both hands, behind a low wooden crate display full of fresh winter vegetables, at a snowy morning market; woman and display fill more than half of the picture; her feet firmly on the snow. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf, table or sill (or hangs from a visible hook, beam, rack or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: about one twentieth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only; cloth banners and awnings are blank). No animals, no birds. Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, on the snow) a small bundle of three daikon radishes with green leaves, tied with a string; (upper right, on the snow) a small bundle of spinach tied with a string; (middle left, on the snow) a small striped straw mat (goza) laid flat; (middle right, on the snow) a small round bamboo basket with carrots; (lower left, on the snow) a small neat bundle of burdock roots; (lower right, on the snow) a small wooden cutting board with a kitchen knife on it; The whole canvas is ONE continuous full-bleed painting: snowy ground with soft blue shadows covers the entire lower two thirds edge to edge and the market street with stalls fills the background; NO blank white paper areas and no hard straight edges. Every small listed object sits directly on this snowy ground with a small blue shadow under it (or on a small wooden box or table), including the upper ones, which sit on the snow further back, in front of the far stalls, never in the sky. IMPORTANT: there is NO white or blank background anywhere: the sky is pale blue and the ground is white snow with blue shadows over the WHOLE canvas including all four corners and edges. The two upper objects sit on the snow ground at about 35 to 40 percent of the picture height, in front of the far stalls (lower than the stall awnings), and never against a blank area.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the kitchen knife on the small wooden cutting board at the lower right now points the opposite way (handle on the right, blade on the left); the board is unchanged; (b) the carrots in the small round bamboo basket at the middle right become white (same shape); (c) the small bundle of burdock roots at the lower left has one root fewer (one removed, the bundle otherwise neat);",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "向き",
+     "label": "包丁の向きが反対",
+     "line": "右下の、包丁の、向きが、反対になりました。",
+     "box": [
+      1330,
+      1850,
+      1720,
+      1965
+     ],
+     "object_w": 390,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "にんじんが白",
+     "line": "右の、かごの、にんじんが、白くなりました。",
+     "box": [
+      1440,
+      920,
+      1770,
+      1150
+     ],
+     "object_w": 180,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "ごぼうが1本ない",
+     "line": "左下の、ごぼうが、1本なくなりました。",
+     "box": [
+      115,
+      1770,
+      510,
+      2030
+     ],
+     "object_w": 200,
+     "src": "1"
+    }
+   ],
+   "answers_intro": "答えです。",
+   "retries": {},
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
+  },
+  {
+   "q": 5,
+   "scene": "あったか甘酒の屋台",
+   "level": "中級",
+   "go": "では、5問目。どうぞ。",
+   "prompt": "Scene: an elderly Japanese man with a gentle smile (brown padded coat, wool cap) standing at the CENTER ladling hot amazake from a big iron pot on a charcoal stove, steam rising, at a snowy morning market stall; man, pot and stall fill more than half of the picture; his feet firmly on the snow. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf, table or sill (or hangs from a visible hook, beam, rack or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: about one twentieth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only; cloth banners and awnings are blank). No animals, no birds. Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, on the snow) a small stack of three white paper cups on a small wooden box; (upper right, on the snow) a small wooden ladle resting in a small wooden bucket; (middle left, on the snow) a small sack of charcoal; (middle right, on the snow) a small bamboo basket holding four round steamed buns; (lower left, on the snow) a small folded blue cloth on a wooden box; (lower right, on the snow) a small wooden pot lid lying flat; The whole canvas is ONE continuous full-bleed painting: snowy ground with soft blue shadows covers the entire lower two thirds edge to edge and the market street with stalls fills the background; NO blank white paper areas and no hard straight edges. Every small listed object sits directly on this snowy ground with a small blue shadow under it (or on a small wooden box or table), including the upper ones, which sit on the snow further back, in front of the far stalls, never in the sky.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the stack of three white paper cups on the small wooden box at the upper left becomes bright green (same shape; the box unchanged); (b) the small bamboo basket at the middle right now holds three round steamed buns instead of four (one bun removed, show the inside of the basket); (c) the folded blue cloth on the small wooden box at the lower left gets thin white horizontal stripes (same shape; the box unchanged);",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "紙コップが緑",
+     "line": "左上の、紙コップが、緑になりました。",
+     "box": [
+      180,
+      20,
+      380,
+      310
+     ],
+     "object_w": 190,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "数",
+     "label": "まんじゅうが1つ減る",
+     "line": "右の、かごの、まんじゅうが、1つ減りました。",
+     "box": [
+      1450,
+      940,
+      1760,
+      1180
+     ],
+     "object_w": 200,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "模様",
+     "label": "布がしま模様",
+     "line": "左下の、布が、しま模様になりました。",
+     "box": [
+      125,
+      1770,
+      490,
+      2070
+     ],
+     "object_w": 300,
+     "src": "1"
+    }
+   ],
+   "answers_intro": "答えです。",
+   "retries": {},
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ]
+  },
+  {
+   "q": 6,
+   "scene": "海の幸の露店",
+   "level": "中級",
+   "go": "では、6問目。どうぞ。",
+   "prompt": "Scene: an elderly Japanese woman with a gentle smile (blue apron, gray scarf, navy coat) standing at the CENTER holding a long strip of dried kelp, behind a wooden table with dried seafood at a snowy morning market; woman and table fill more than half of the picture; her feet firmly on the snow. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf, table or sill (or hangs from a visible hook, beam, rack or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: about one twentieth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only; cloth banners and awnings are blank). No animals, no birds. Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, on the snow) a small net bag holding clams; (upper right, on the snow) a small wooden tub of dried small fish; (middle left, on the snow) a small straw-wrapped bundle of dried kelp; (middle right, on the snow) a small ceramic plate with three small dried squid pieces; (lower left, on the snow) a small bamboo colander with scallop shells; (lower right, on the snow) a small wooden mallet; The whole canvas is ONE continuous full-bleed painting: snowy ground with soft blue shadows covers the entire lower two thirds edge to edge and the market street with stalls fills the background; NO blank white paper areas and no hard straight edges. Every small listed object sits directly on this snowy ground with a small blue shadow under it (or on a small wooden box or table), including the upper ones, which sit on the snow further back, in front of the far stalls, never in the sky.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the net of the small net bag at the upper left becomes bright blue (the clams inside unchanged); (b) the small ceramic plate at the middle right now has two small dried squid pieces instead of three (one removed, show the plate); (c) the string tied around the small straw-wrapped bundle of dried kelp at the middle left is gone (the kelp stays in a neat bundle);",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "あみ袋が青",
+     "line": "左上の、あみ袋が、青くなりました。",
+     "box": [
+      170,
+      450,
+      490,
+      720
+     ],
+     "object_w": 300,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "数",
+     "label": "するめが1枚減る",
+     "line": "右の、お皿の、するめが、1枚減りました。",
+     "box": [
+      1410,
+      1220,
+      1780,
+      1460
+     ],
+     "object_w": 340,
+     "src": "2"
+    },
+    {
+     "id": 3,
+     "type": "色",
+     "label": "昆布の帯が緑",
+     "line": "左の、こんぶの、帯が、緑になりました。",
+     "box": [
+      50,
+      1150,
+      460,
+      1440
+     ],
+     "object_w": 380,
+     "src": "2"
+    }
+   ],
+   "answers_intro": "答えです。",
+   "retries": {},
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small ceramic plate at the middle right (below the table) now has two small dried squid instead of three (one squid removed, show the plate and snow, no leftover); (b) the straw wrapping around the small bundle of dried kelp at the left (below the table) becomes bright green straw (same shape, kelp stays dark);"
+   }
+  },
+  {
+   "q": 7,
+   "scene": "漬物の露店",
+   "level": "中級",
+   "go": "では、7問目。どうぞ。",
+   "prompt": "Scene: an elderly Japanese woman with a gentle smile (green apron, white head towel, brown cardigan) standing at the CENTER scooping yellow pickled radish from a big wooden pickling barrel into a bowl, at a snowy morning market; woman and barrel fill more than half of the picture; her feet firmly on the snow. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf, table or sill (or hangs from a visible hook, beam, rack or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: about one twentieth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only; cloth banners and awnings are blank). No animals, no birds. Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, on the snow) a small ceramic plate of yellow pickled radish slices; (upper right, on the snow) a small round wooden lid with a handle leaning against the barrel; (middle left, on the snow) a small tied cloth bag of rice bran; (middle right, on the snow) a small ceramic bowl with a spoon; (lower left, on the snow) a small round pickling stone on a plate; (lower right, on the snow) a small folded white cloth; The whole canvas is ONE continuous full-bleed painting: snowy ground with soft blue shadows covers the entire lower two thirds edge to edge and the market street with stalls fills the background; NO blank white paper areas and no hard straight edges. Every small listed object sits directly on this snowy ground with a small blue shadow under it (or on a small wooden box or table), including the upper ones, which sit on the snow further back, in front of the far stalls, never in the sky.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the string tied around the small cloth bag at the middle left becomes bright blue (bag unchanged); (b) the small wooden spoon in the small ceramic bowl at the middle right is gone (empty bowl); (c) the round gray pickling stone on the plate at the lower left becomes a square gray stone (same size, plate unchanged);",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "ぬか袋のひもが青",
+     "line": "左の、ぬか袋の、ひもが、青くなりました。",
+     "box": [
+      135,
+      1290,
+      415,
+      1620
+     ],
+     "object_w": 270,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "さじがない",
+     "line": "右の、茶わんの、さじが、なくなりました。",
+     "box": [
+      1440,
+      1300,
+      1780,
+      1620
+     ],
+     "object_w": 270,
+     "src": "2"
+    },
+    {
+     "id": 3,
+     "type": "形",
+     "label": "石が四角い",
+     "line": "左下の、つけものの、石が、四角になりました。",
+     "box": [
+      110,
+      1820,
+      480,
+      2040
+     ],
+     "object_w": 370,
+     "src": "1"
+    }
+   ],
+   "answers_intro": "答えです。",
+   "retries": {},
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small wooden spoon in the small ceramic bowl at the middle right is completely gone, including its handle tip; the bowl is empty and no part of the spoon remains anywhere;"
+   }
+  },
+  {
+   "q": 8,
+   "scene": "朝市のひと休み",
+   "level": "上級",
+   "go": "では、8問目。どうぞ。",
+   "prompt": "Scene: a big wooden market-stall display shelf with three open shelves seen from the front, filling the whole picture, with snow on the awning above; no person; the six listed objects sit on its shelves. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf, table or sill (or hangs from a visible hook, beam, rack or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: VERY SMALL, about one thirty-fifth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only; cloth banners and awnings are blank). No animals, no birds. Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, on the wooden shelves) a small glass jar with a lid, with pickled plums; (upper right, on the wooden shelves) a stack of three small plain plates; (middle left, on the wooden shelves) a small round wooden box with a lid; (middle right, on the wooden shelves) a small ceramic bowl with a spoon; (lower left, on the wooden shelves) a small bamboo basket with two rice balls; (lower right, on the wooden shelves) a small cloth bag tied with a string; The whole canvas is ONE continuous full-bleed painting: snowy ground with soft blue shadows covers the entire lower two thirds edge to edge and the market street with stalls fills the background; NO blank white paper areas and no hard straight edges. Every small listed object sits directly on this snowy ground with a small blue shadow under it (or on a small wooden box or table), including the upper ones, which sit on the snow further back, in front of the far stalls, never in the sky.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small glass jar with pickled plums at the upper right has one pickled plum fewer inside (jar otherwise identical); (b) two thin dark brown horizontal stripes appear around the side of the small round wooden box at the middle right (same shape); (c) the string tied around the neck of the small cloth bag at the lower right is gone (bag otherwise identical);",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "数",
+     "label": "梅干しが1つ減る",
+     "line": "右の、びんの、梅干しが、1つ減りました。",
+     "box": [
+      1178,
+      920,
+      1345,
+      1170
+     ],
+     "object_w": 120,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "模様",
+     "label": "丸い箱に線の模様",
+     "line": "右の、丸い箱に、線の模様が、つきました。",
+     "box": [
+      1145,
+      1380,
+      1375,
+      1575
+     ],
+     "object_w": 140,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "模様",
+     "label": "袋に丸い継ぎ当て",
+     "line": "右下の、袋に、丸い継ぎ当てが、つきました。",
+     "box": [
+      1485,
+      1770,
+      1710,
+      2005
+     ],
+     "object_w": 140,
+     "src": "2"
+    }
+   ],
+   "answers_intro": "答えです。",
+   "retries": {},
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) a small round brown patch (a sewn-on patch) appears on the front of the small cloth bag at the lower right (bag otherwise identical);"
+   }
+  },
+  {
+   "q": 9,
+   "scene": "焼きいも屋さん",
+   "level": "上級",
+   "go": "では、9問目。どうぞ。",
+   "prompt": "Scene: an elderly Japanese man with a gentle smile (navy coat, gray scarf, wool cap) standing at the CENTER next to a big black iron roasting drum stove with a chimney and a little steam, at a snowy morning market; man and stove fill more than half of the picture; his feet firmly on the snow. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf, table or sill (or hangs from a visible hook, beam, rack or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: VERY SMALL, about one thirty-fifth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only; cloth banners and awnings are blank). No animals, no birds. Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, on the snow) a small kerosene can; (upper right, on the snow) a small wooden stool with a folded cloth; (middle left, on the snow) a small paper-wrapped bundle tied with a string; (middle right, on the snow) a small iron poker lying flat; (lower left, on the snow) a small blue enamel bucket; (lower right, on the snow) a small bamboo broom leaning on a box; The whole canvas is ONE continuous full-bleed painting: snowy ground with soft blue shadows covers the entire lower two thirds edge to edge and the market street with stalls fills the background; NO blank white paper areas and no hard straight edges. Every small listed object sits directly on this snowy ground with a small blue shadow under it (or on a small wooden box or table), including the upper ones, which sit on the snow further back, in front of the far stalls, never in the sky. IMPORTANT: there is NO white or blank background anywhere: the sky is pale blue and the ground is white snow with blue shadows over the WHOLE canvas including all four corners and edges. The two upper objects sit on the snow ground at about 35 to 40 percent of the picture height, in front of the far stalls (lower than the stall awnings), and never against a blank area.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the string tied around the small paper-wrapped bundle at the middle left becomes bright blue (paper unchanged); (b) the small screw cap on top of the blue jerrycan at the upper left becomes bright red (jerrycan otherwise identical); (c) the snow inside the small blue enamel bucket at the lower left is gone (empty bucket);",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "色",
+     "label": "包み紙が青",
+     "line": "左の、包みが、青くなりました。",
+     "box": [
+      159,
+      975,
+      382,
+      1142
+     ],
+     "object_w": 130,
+     "src": "3"
+    },
+    {
+     "id": 2,
+     "type": "色",
+     "label": "缶のキャップが赤",
+     "line": "左上の、缶の、キャップが、赤くなりました。",
+     "box": [
+      185,
+      112,
+      262,
+      182
+     ],
+     "object_w": 70,
+     "src": "2"
+    },
+    {
+     "id": 3,
+     "type": "なくなる",
+     "label": "バケツの雪がない",
+     "line": "左下の、バケツの、雪が、なくなりました。",
+     "box": [
+      187,
+      1797,
+      395,
+      2033
+     ],
+     "object_w": 130,
+     "src": "1"
+    }
+   ],
+   "answers_intro": "答えです。",
+   "retries": {},
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) only the small screw cap on top of the green jerrycan at the upper left becomes bright red; the jerrycan body stays exactly the same green;",
+    "3": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the brown wrapping paper of the small paper-wrapped bundle at the middle left becomes bright blue paper (same shape, string unchanged);"
+   }
+  },
+  {
+   "q": 10,
+   "scene": "朝市の帰り道",
+   "level": "上級",
+   "go": "では、10問目。どうぞ。",
+   "prompt": "Scene: an elderly Japanese woman with a gentle smile (green coat, brown knitted scarf) at the CENTER pulling a small wooden sled loaded with a tied burlap sack and vegetables along a snowy road lined with morning-market stalls, her feet firmly on the snow; woman, sled and stalls fill more than half of the picture. Winter only, bright snowy daylight: no Christmas, New Year's Eve or New Year decorations (no Christmas tree, no wreath, no kagami-mochi, no shimenawa, no kadomatsu), no summer items, no flowers. Every person and every object stands or rests firmly on the ground, floor, shelf, table or sill (or hangs from a visible hook, beam, rack or rope): nothing floats in the air. IMPORTANT LAYOUT: put the six listed objects in two columns (left and right) and three rows (upper, middle and lower part of the picture), far apart, never clustered, never touching the main subject, never overlapping the person. Each listed object is SMALL: VERY SMALL, about one thirty-fifth of the picture width. No letters, labels, numbers or writing anywhere (everything is plain, with simple patterns only; cloth banners and awnings are blank). No animals, no birds. Never draw any percentage signs, numbers or labels. Do not use much red or orange: keep the light natural bright daylight-white and the whites ordinary white; clothes are blue, navy, gray, green or brown. Objects: (upper left, on the snow) a small snow-covered wooden signpost with no writing; (upper right, on the snow) a small round stone lantern; (middle left, on the snow) a small wooden cart wheel leaning on a wall; (middle right, on the snow) a small wooden bucket with a rope handle; (lower left, on the snow) a small straw bundle; (lower right, on the snow) a small plain umbrella closed and leaning on a box; The whole canvas is ONE continuous full-bleed painting: snowy ground with soft blue shadows covers the entire lower two thirds edge to edge and the market street with stalls fills the background; NO blank white paper areas and no hard straight edges. Every small listed object sits directly on this snowy ground with a small blue shadow under it (or on a small wooden box or table), including the upper ones, which sit on the snow further back, in front of the far stalls, never in the sky.",
+   "edit_prompt": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the round hole in the small stone lantern at the middle left becomes a square hole (lantern otherwise identical); (b) the curved handle of the closed umbrella leaning on the crate at the lower right is gone (plain straight end); (c) the string tied around the small straw bundle at the lower left becomes bright blue (straw unchanged);",
+   "diffs": [
+    {
+     "id": 1,
+     "type": "形",
+     "label": "灯籠の穴が四角",
+     "line": "左の、石灯籠の、穴が、四角になりました。",
+     "box": [
+      465,
+      1100,
+      675,
+      1345
+     ],
+     "object_w": 140,
+     "src": "1"
+    },
+    {
+     "id": 2,
+     "type": "なくなる",
+     "label": "傘の持ち手がない",
+     "line": "右下の、傘の、持ち手が、なくなりました。",
+     "box": [
+      1520,
+      1620,
+      1856,
+      2030
+     ],
+     "object_w": 140,
+     "src": "1"
+    },
+    {
+     "id": 3,
+     "type": "形",
+     "label": "わら束が短い",
+     "line": "左下の、わらの束が、短くなりました。",
+     "box": [
+      116,
+      1800,
+      360,
+      2020
+     ],
+     "object_w": 130,
+     "src": "2"
+    }
+   ],
+   "answers_intro": "答えです。",
+   "retries": {},
+   "hint_diff": null,
+   "content_box": [
+    0,
+    0,
+    1856,
+    2088
+   ],
+   "edit_prompts": {
+    "2": "Edit this illustration and make exactly these changes, each in its own place, and nothing else. Keep the same outlines, colors and style. Every change must be clearly visible. Do not move any object. Changes: (a) the small bundle of straw at the lower left is shorter (the straw ends are cut shorter, same tie, same place);"
+   }
+  }
+ ],
+ "thumbnail": {
+  "style": "band",
+  "type": 1,
+  "question": 1,
+  "note": "型1（thumb_band.make_type1・左右とも元の絵）"
+ },
+ "unchiku_source": "千葉県勝浦市観光協会『勝浦朝市ヒストリー』（https://www.katsuura-kankou.net/asaichihistory/）：勝浦朝市は天正19年（1591年）に始まったと伝えられ、農業と漁業を奨励するため、農水産物を交換する場を開いたとされる。"
+}
